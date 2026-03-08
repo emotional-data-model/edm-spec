@@ -47,6 +47,10 @@ A Sealed artifact is encapsulated in a `.ddna` envelope with a W3C Data Integrit
 
 **Eligible Profiles:** Core, Extended, Full
 
+**VitaPass Binding:**
+
+Sealed artifacts at any profile are eligible for VitaPass binding. The `meta.owner_user_id` field carries the `vp_id` address, making the artifact discoverable and presentable across vendor boundaries via the VitaPass consent rail. Profile depth does not affect VitaPass eligibility — a Core Profile Sealed artifact is equally addressable as a Full Profile Sealed artifact.
+
 **Use Cases:**
 - Platforms storing emotional data beyond session boundaries
 - Enterprise B2B data exchange
@@ -83,12 +87,13 @@ Core and Extended profiles are NOT eligible for Certified conformance. This rest
 - Regulated therapy and clinical platforms
 - Enterprise procurement requiring third-party audit trail
 - Insurance and liability contexts
-- VitaPass registry entry
+- VitaPass longitudinal registry entry (trajectory state layer — future capability)
 
 **Notes:**
 - Certification is a commercial service provided by DeepaData
 - Certified artifacts carry third-party attestation of conformance
 - The certification proof chain is independently verifiable
+- VitaPass binding (cross-vendor portability) is available at Sealed level for all profiles. Certified conformance is required only for registry-level longitudinal trajectory — a planned future capability.
 
 ## 3.8.3 Profile × Conformance Matrix
 
