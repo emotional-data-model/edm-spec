@@ -17,7 +17,7 @@ meta • core • constellation • milky_way • gravity • impulse • govern
 - **Normative definition:** `schema/edm.v0.6.schema.json`
 - **License:** Released under MIT License. See [LICENSE](../LICENSE).
 
-**New in v0.6.0:** Implementation Profiles (Core/Extended/Full) and Conformance Levels (Compliant/Sealed/Certified). See [PROFILES.md](PROFILES.md) and [CONFORMANCE.md](CONFORMANCE.md).
+**New in v0.6.0:** Implementation Profiles (Essential/Extended/Full) and Conformance Levels (Compliant/Sealed/Certified). See [PROFILES.md](PROFILES.md) and [CONFORMANCE.md](CONFORMANCE.md).
 
 ## Normalization (contract)
 1. Include **all keys** (use `null`/empty arrays if unknown).

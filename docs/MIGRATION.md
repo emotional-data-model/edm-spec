@@ -4,6 +4,70 @@ This guide explains how to migrate EDM data and code between schema versions.
 
 ---
 
+## v0.5.1 → v0.6.0
+
+**Normative schema:** [`schema/edm.v0.6.schema.json`](../schema/edm.v0.6.schema.json)
+
+### Breaking Changes
+
+**New required field: `meta.profile`**
+
+EDM v0.6.0 introduces Implementation Profiles. The `meta.profile` field is now required for conformance.
+
+- **Field:** `meta.profile`
+- **Type:** string (required)
+- **Valid values:** `"essential"`, `"extended"`, `"full"`
+- **Impact:** Artifacts without `meta.profile` are non-conforming to v0.6.0
+
+### Migration Steps
+
+1. **Add `meta.profile` to all artifacts**
+   ```json
+   {
+     "meta": {
+       "profile": "full",
+       ...
+     }
+   }
+   ```
+
+2. **Choose the appropriate profile:**
+   - `"essential"` — Minimal footprint (~20 fields). Memory platforms, agent frameworks.
+   - `"extended"` — Narrative depth (~45 fields). Journaling, companion AI.
+   - `"full"` — Complete manifold (96 fields). Regulated contexts, certification.
+
+3. **Ensure domain completeness**
+   All ten domains MUST be structurally present, even if fields are null:
+   ```json
+   {
+     "meta": { ... },
+     "core": { ... },
+     "constellation": { ... },
+     "milky_way": { ... },
+     "gravity": { ... },
+     "impulse": { ... },
+     "governance": { ... },
+     "telemetry": { ... },
+     "system": { ... },
+     "crosswalks": { ... }
+   }
+   ```
+
+4. **Explicit null requirement**
+   Fields not required by a profile MUST be set to explicit `null` values. Field omission is prohibited.
+
+### Profile Selection Guide
+
+| Use Case | Profile |
+|----------|---------|
+| Memory platform / Agent framework | `essential` |
+| Journaling / Companion AI | `extended` |
+| Therapy platform / Clinical / Compliance | `full` |
+
+See [PROFILES.md](PROFILES.md) and [CONFORMANCE.md](CONFORMANCE.md) for full details.
+
+---
+
 ## v0.3 → v0.4
 
 **Canonical crosswalk:** [`schema/crosswalks/v0.3_to_v0.4.json`](../schema/crosswalks/v0.3_to_v0.4.json)  

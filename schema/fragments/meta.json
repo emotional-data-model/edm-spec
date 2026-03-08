@@ -14,7 +14,7 @@
     "version": {
       "description": "Declares which EDM schema this artifact conforms to and enables safe validation and migration",
       "type": "string",
-      "x_constraints": "MUST match \"0.4.x\"."
+      "x_constraints": "MUST match \"0.6.x\"."
     },
     "created_at": {
       "description": "Marks when the artifact was extracted. Anchors temporal provenance",
@@ -133,6 +133,20 @@
       "items": {
         "type": "string"
       }
+    },
+    "profile": {
+      "description": "Implementation profile declaration. Determines minimum required fields per EDM v0.6.0 Section 3.7",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "essential",
+        "extended",
+        "full",
+        null
+      ],
+      "x_constraints": "essential, extended, full. Required for v0.6.0 conformance"
     }
   },
   "additionalProperties": false,
