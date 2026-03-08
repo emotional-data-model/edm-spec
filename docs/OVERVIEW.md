@@ -7,15 +7,15 @@
   These exist to help humans understand and implement the model but do not replace the canonical schema.
 
 
-# EDM v0.4.0 — Overview
+# EDM v0.5.1 — Overview
 
-EDM v0.3 converges DeepaData’s emotional architecture into a modular JSON object with coordinated domains:
+EDM defines a modular JSON object with coordinated domains for representing affective context:
 
 meta • core • constellation • milky_way • gravity • impulse • governance • telemetry • system • crosswalks
 
 
 - **Normative definition:** `schema/edm.v0.5.schema.json`
-- **Closed provenance:** This spec is private and proprietary until v1.0 commercial release.
+- **License:** Released under MIT License. See [LICENSE](../LICENSE).
 
 ## Normalization (contract)
 1. Include **all keys** (use `null`/empty arrays if unknown).  
@@ -29,4 +29,4 @@ meta • core • constellation • milky_way • gravity • impulse • govern
 - **DeepaData-v2** (EDM v0.2, April 29, 2025): Milky Way + Gravity.  
 - **DeepaData-v2** (Oct–Nov 2025): Impulse + outer layers (Meta, Governance, Telemetry, System, Crosswalks).
 
-© 2025 DeepaData Pty Ltd — All Rights Reserved.
+© 2025–2026 DeepaData Pty Ltd — Released under MIT License.
