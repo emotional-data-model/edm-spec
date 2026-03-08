@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://deepadata.com/schemas/edm/v0.4.0/edm.schema.json",
-  "title": "Emotional Data Model (EDM) v0.4.0",
-  "description": "A protocol-level representation and persistence architecture for governed emotional data. EDM v0.4.0 defines a domain-complete manifold for encoding affective context as a stable, machine-interpretable, and sovereignty-preserving data object.",
+  "$id": "https://deepadata.com/schemas/edm/v0.6.0/edm.schema.json",
+  "title": "Emotional Data Model (EDM) v0.6.0",
+  "description": "A protocol-level representation and persistence architecture for governed emotional data. EDM v0.6.0 defines a domain-complete manifold for encoding affective context as a stable, machine-interpretable, and sovereignty-preserving data object.",
   "type": "object",
   "required": [
     "meta",
@@ -30,7 +30,7 @@
         "version": {
           "type": "string",
           "description": "Declares which EDM schema this artifact conforms to and enables safe validation and migration.",
-          "pattern": "^0\\.4\\.[0-9]+$"
+          "pattern": "^0\\.6\\.[0-9]+$"
         },
         "created_at": {
           "type": "string",
@@ -95,6 +95,11 @@
           "items": {
             "type": "string"
           }
+        },
+        "profile": {
+          "type": ["string", "null"],
+          "enum": ["core", "extended", "full", null],
+          "description": "Implementation profile declaration. Determines minimum required fields per EDM v0.6.0 Section 3.7."
         }
       },
       "additionalProperties": false
@@ -130,15 +135,14 @@
   "additionalProperties": false,
   "definitions": {
     "version_info": {
-      "version": "0.4.0",
-      "released": "2025-12-04",
+      "version": "0.6.0",
+      "released": "2026-03-08",
       "status": "stable",
-      "breaking_changes_from_v03": [
-        "Removed 6 fields: session_id, media_context, affective_clarity, memory_layers, tether_target, active_motivational_state",
-        "Split META domain: moved 6 fields to new GOVERNANCE domain",
-        "Updated field descriptions to concise format with examples",
-        "GOVERNANCE domain is now a required top-level domain (was scattered in META)",
-        "SYSTEM domain is now explicitly required (was implicit)"
+      "changes_from_v05": [
+        "Added meta.profile field for implementation profile declaration",
+        "Introduced Implementation Profiles: Core (~20 fields), Extended (~45 fields), Full (96 fields)",
+        "Introduced Conformance Levels: Compliant, Sealed, Certified",
+        "Only Full Profile is eligible for Certified conformance"
       ]
     }
   }
