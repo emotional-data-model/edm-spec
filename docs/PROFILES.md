@@ -117,8 +117,10 @@ All ten domains MUST be fully populated. No field may be null unless the source 
 - Clinical documentation
 - EU AI Act Article 5(1)(f) compliance documentation
 - Enterprise audit and compliance
-- VitaPass registry entry
+- VitaPass longitudinal registry entry (Full + Certified, future capability)
 - DeepaData Certified conformance (see Section 3.8)
+
+Note: VitaPass binding — cross-vendor portability of sealed artifacts — is available at Sealed conformance for all profiles, not Full only. Full Profile is required only for the longitudinal registry layer.
 
 ## 3.7.6 Profile Invariants
 
@@ -145,4 +147,4 @@ The following invariants apply to all profiles:
 | Workplace wellness | Extended | Coaching context with relational dynamics |
 | Therapy platform | Full | Regulatory compliance, clinical completeness |
 | Clinical tool | Full | Full manifold required |
-| VitaPass issuance | Full | Registry entry requires complete profile |
+| VitaPass binding | Any (Sealed) | Binding requires Sealed conformance, not a specific profile |
