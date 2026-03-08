@@ -5,12 +5,12 @@ authors:
     given-names: "Jason"
     affiliation: "DeepaData Pty Ltd"
     email: "jason@deepadata.com"
-title: "Emotional Data Model (EDM) v0.5.0"
-version: v0.5.0
-doi: 10.5281/zenodo.18541956
-date-released: 2026-02-09
+title: "Emotional Data Model (EDM) v0.6.0"
+version: v0.6.0
+doi: 10.5281/zenodo.PENDING
+date-released: 2026-03-08
 url: "https://github.com/deepadata/deepadata-edm-spec"
-license: "LicenseRef-Closed-Provenance-Pre-v1.0"
+license: MIT
 repository-code: "https://github.com/deepadata/deepadata-edm-spec"
 type: software
 keywords:
@@ -26,13 +26,15 @@ keywords:
   - emotional data model
   - AI emotional memory
   - affective AI
+  - implementation profiles
+  - conformance levels
 references:
   - type: article
     authors:
       - family-names: "Harvey"
         given-names: "Jason"
-    title: "Emotional Data Model (EDM) v0.5.0: A protocol-level representation and persistence architecture for governed emotional data"
+    title: "Emotional Data Model (EDM) v0.6.0: A protocol-level representation and persistence architecture for governed emotional data"
     year: 2026
     publisher: "Zenodo"
-    doi: "10.5281/zenodo.18541956"
-    url: "https://zenodo.org/records/18541956"
+    doi: "10.5281/zenodo.PENDING"
+    url: "https://zenodo.org/records/PENDING"
