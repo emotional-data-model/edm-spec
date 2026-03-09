@@ -2,7 +2,7 @@
 
 **Version:** 1.0
 **Last Updated:** January 2026
-**Status:** Normative guidance for EDM v0.4.x
+**Status:** Normative guidance for EDM v0.6.0
 
 ---
 
@@ -22,16 +22,16 @@ EDM is a JSON Schema specification that defines how emotional context should be 
 
 **Architectural classification:** EDM operates at the **representation layer**. It defines data structure and semantics. It does not define persistence mechanisms, computation logic, or runtime behavior.
 
-### Domain-Complete Structure
+### Profile-Conditional Structure
 
-EDM v0.4.0 defines **10 mandatory domains** containing **96 fields**:
+EDM v0.6.0 defines **profile-conditional domain sets**: Essential (25 fields), Extended (50 fields), Full (96 fields across all 10 domains):
 
 | Layer | Domains | Field Count | Purpose |
 |-------|---------|-------------|---------|
 | **Representational** | CORE, CONSTELLATION, MILKY_WAY, GRAVITY, IMPULSE | 57 | Encode emotional content |
 | **Infrastructure** | META, GOVERNANCE, TELEMETRY, SYSTEM, CROSSWALKS | 39 | Enable governance and interoperability |
 
-All 10 domains are required in every EDM artifact. Fields within domains may be null, but the domain structure must be present. This ensures:
+An artifact contains only the domains defined for its declared profile. See PROFILES.md Section 3.7 for exact domain sets per profile. This ensures:
 - Predictable validation
 - Consistent tooling interfaces
 - Explicit handling of unknown values
@@ -249,7 +249,7 @@ The `attachment_style` field must be null unless the user explicitly describes t
 
 ### The Canonical Source of Truth
 
-The JSON Schema file `schema/edm.v0.5.schema.json` is the sole normative definition of EDM.
+The JSON Schema file `schema/edm.v0.6.schema.json` is the sole normative definition of EDM.
 
 - All validation MUST use this schema or a conformant implementation
 - Documentation, examples, and tooling are informative
@@ -338,6 +338,6 @@ EDM defines how emotional data should be structured and governed. Everything els
 
 ---
 
-**Normative Reference:** `schema/edm.v0.5.schema.json`
+**Normative Reference:** `schema/edm.v0.6.schema.json`
 **Contact:** jason@deepadata.com
 **Repository:** https://github.com/deepadata/deepadata-edm-spec
