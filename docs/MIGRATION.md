@@ -36,25 +36,11 @@ EDM v0.6.0 introduces Implementation Profiles. The `meta.profile` field is now r
    - `"extended"` — Narrative depth (~45 fields). Journaling, companion AI.
    - `"full"` — Complete manifold (96 fields). Regulated contexts, certification.
 
-3. **Ensure domain completeness**
-   All ten domains MUST be structurally present, even if fields are null:
-   ```json
-   {
-     "meta": { ... },
-     "core": { ... },
-     "constellation": { ... },
-     "milky_way": { ... },
-     "gravity": { ... },
-     "impulse": { ... },
-     "governance": { ... },
-     "telemetry": { ... },
-     "system": { ... },
-     "crosswalks": { ... }
-   }
-   ```
+3. **Ensure profile completeness**
+   Include only the domains defined for your declared profile. Domains outside the profile MUST be omitted.
 
-4. **Explicit null requirement**
-   Fields not required by a profile MUST be set to explicit `null` values. Field omission is prohibited.
+4. **Exact field set**
+   Include only the fields defined for your declared profile. Fields outside the profile MUST be omitted.
 
 ### Profile Selection Guide
 
@@ -154,8 +140,8 @@ See the detailed migration guide: [`docs/V04_MIGRATION_GUIDE.md`](V04_MIGRATION_
 3. **Watch transforms**  
    Any lossy conversion (e.g., retyping `compliance_mask`) should emit warnings in your migration tooling and be captured in logs.
 
-4. **Re-validate**  
-   Run validation again after migration. All top-level domains must exist even if values are `null`.
+4. **Re-validate**
+   Run validation again after migration. Include only the domains defined for your declared profile.
 
 ---
 

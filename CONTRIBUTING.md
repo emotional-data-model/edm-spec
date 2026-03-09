@@ -47,7 +47,7 @@ Build something with EDM and share your experience:
 ### Schema Changes
 
 - **Backward compatibility**: Breaking changes require strong justification
-- **Domain completeness**: All 10 domains must remain present
+- **Profile completeness**: Artifacts must contain only the domains defined for the declared profile
 - **Non-inferential**: No fields for psychological inference or behavioral prediction
 - **Governance-first**: Changes should support compliance, not hinder it
 
