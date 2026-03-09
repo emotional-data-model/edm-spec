@@ -18,7 +18,7 @@ A conforming artifact MUST declare its profile in the `meta.profile` field. Vali
 
 The `meta.profile` field MUST be present and MUST contain one of the above values. Omission of this field renders the artifact non-conforming to EDM v0.6.0 and later.
 
-## 3.7.3 Essential Profile
+## 3.7.3 Essential Profile (25 fields)
 
 The Essential Profile defines the minimum viable artifact for session coherence and real-time retrieval. It is designed for memory platforms, agent frameworks, and AI assistants that require affective context without therapeutic depth.
 
@@ -45,7 +45,7 @@ The Essential Profile defines the minimum viable artifact for session coherence 
 - Agent framework emotional grounding
 - Memory compression and summarisation
 
-## 3.7.4 Extended Profile
+## 3.7.4 Extended Profile (50 fields)
 
 The Extended Profile provides full narrative and emotional topology without the complete salience geometry of the Full Profile. It is designed for journaling applications, companion AI with longitudinal context, and workplace wellness platforms.
 
@@ -53,10 +53,7 @@ The Extended Profile provides full narrative and emotional topology without the 
 
 All Essential Profile fields, plus:
 
-**Constellation**
-- `relational_dynamics` — relational classification
-- `temporal_context` — temporal context
-- `memory_type` — memory classification
+**Constellation** — all 18 fields required
 
 **Milky_Way**
 - `event_type` — event classification
