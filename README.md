@@ -114,6 +114,24 @@ ajv validate -s schema/edm.v0.6.full.schema.json -d examples/example-full-profil
 ajv validate -s schema/edm.v0.6.essential.schema.json -d examples/example-essential-profile.json
 ```
 
+### Canonical Schema URLs
+
+Profile schemas are hosted at their canonical `$id` URLs:
+
+```
+https://deepadata.com/schemas/edm/v0.6.0/edm.essential.schema.json
+https://deepadata.com/schemas/edm/v0.6.0/edm.extended.schema.json
+https://deepadata.com/schemas/edm/v0.6.0/edm.full.schema.json
+```
+
+For always-latest versions, use `/current/` (redirects to latest stable):
+
+```
+https://deepadata.com/schemas/edm/current/edm.essential.schema.json
+https://deepadata.com/schemas/edm/current/edm.extended.schema.json
+https://deepadata.com/schemas/edm/current/edm.full.schema.json
+```
+
 ### Using in Your Project
 
 **JavaScript/TypeScript:**

@@ -5,6 +5,21 @@ The normative schemas are profile-specific:
 - `schema/edm.v0.6.extended.schema.json` — Extended profile (7 domains, 50 fields)
 - `schema/edm.v0.6.full.schema.json` — Full profile (10 domains, 96 fields)
 
+## Canonical Schema URLs
+
+Profile schemas are hosted at their canonical `$id` URLs and can be fetched directly:
+
+| Profile | URL |
+|---------|-----|
+| Essential | `https://deepadata.com/schemas/edm/v0.6.0/edm.essential.schema.json` |
+| Extended | `https://deepadata.com/schemas/edm/v0.6.0/edm.extended.schema.json` |
+| Full | `https://deepadata.com/schemas/edm/v0.6.0/edm.full.schema.json` |
+
+For always-latest versions, use `/current/` which redirects to the latest stable version:
+- `https://deepadata.com/schemas/edm/current/edm.{profile}.schema.json`
+
+The `$id` field in each schema matches its canonical URL, enabling proper JSON Schema resolution.
+
 ## Quick checks
 - All domains and fields defined for the declared profile are present.
 - Strings normalized; timestamps ISO-8601; floats in [0.0,1.0].
