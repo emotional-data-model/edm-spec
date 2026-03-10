@@ -93,31 +93,31 @@
       }
     },
     "core": {
-      "$ref": "fragments/core.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/core.json"
     },
     "constellation": {
-      "$ref": "fragments/constellation.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/constellation.json"
     },
     "milky_way": {
-      "$ref": "fragments/milky_way.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/milky_way.json"
     },
     "gravity": {
-      "$ref": "fragments/gravity.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/gravity.json"
     },
     "impulse": {
-      "$ref": "fragments/impulse.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/impulse.json"
     },
     "governance": {
-      "$ref": "fragments/governance.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/governance.json"
     },
     "telemetry": {
-      "$ref": "fragments/telemetry.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/telemetry.json"
     },
     "system": {
-      "$ref": "fragments/system.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/system.json"
     },
     "crosswalks": {
-      "$ref": "fragments/crosswalks.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/crosswalks.json"
     }
   },
   "definitions": {

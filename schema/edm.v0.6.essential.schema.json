@@ -127,10 +127,10 @@
       }
     },
     "governance": {
-      "$ref": "fragments/governance.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/governance.json"
     },
     "telemetry": {
-      "$ref": "fragments/telemetry.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/telemetry.json"
     }
   },
   "definitions": {
