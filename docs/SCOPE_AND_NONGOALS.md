@@ -24,7 +24,7 @@ EDM is a JSON Schema specification that defines how emotional context should be 
 
 ### Profile-Conditional Structure
 
-EDM v0.6.0 defines **profile-conditional domain sets**: Essential (25 fields), Extended (50 fields), Full (96 fields across all 10 domains):
+EDM v0.6.0 defines **profile-conditional domain sets**: Essential (24 fields), Extended (50 fields), Full (96 fields across all 10 domains):
 
 | Layer | Domains | Field Count | Purpose |
 |-------|---------|-------------|---------|

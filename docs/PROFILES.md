@@ -18,7 +18,7 @@ A conforming artifact MUST declare its profile in the `meta.profile` field. Vali
 
 The `meta.profile` field MUST be present and MUST contain one of the above values. Omission of this field renders the artifact non-conforming to EDM v0.6.0 and later.
 
-## 3.7.3 Essential Profile (25 fields)
+## 3.7.3 Essential Profile (24 fields)
 
 The Essential Profile defines the minimum viable artifact for session coherence and real-time retrieval. It is designed for memory platforms, agent frameworks, and AI assistants that require affective context without therapeutic depth.
 
