@@ -4,45 +4,76 @@
   "type": "object",
   "properties": {
     "embeddings": {
-      "description": "Embedding references associated with this artifact. Provides stable pointers without embedding raw data",
-      "type": "array",
-      "enum": [
-        "Each object must include: provider",
-        "sector",
-        "dim",
-        "quantized",
-        "vector_ref. No inline vectors permitted"
+      "description": "Embedding references associated with this artifact",
+      "type": [
+        "array",
+        "null"
       ],
-      "x_constraints": "Each object must include: provider, sector, dim, quantized, vector_ref. No inline vectors permitted",
       "items": {
-        "type": "string"
+        "type": "object",
+        "properties": {
+          "provider": {
+            "type": "string"
+          },
+          "sector": {
+            "type": "string"
+          },
+          "dim": {
+            "type": "number"
+          },
+          "quantized": {
+            "type": "boolean"
+          },
+          "vector_ref": {
+            "type": "string"
+          }
+        }
       }
     },
-    "indices.waypoint_ids": {
-      "description": "Identifiers for retrieval or resonance \"waypoints\" associated with this artifact",
-      "type": "array",
-      "x_constraints": "Strings only; no null entries",
-      "items": {
-        "type": "string"
-      }
-    },
-    "indices.sector_weights": {
-      "description": "Weight distribution across memory sectors used by recall engines",
-      "type": "object",
-      "enum": [
-        "Must include keys: episodic",
-        "semantic",
-        "procedural",
-        "emotional",
-        "reflective. Values 0.0\u20131.0"
+    "indices": {
+      "type": [
+        "object",
+        "null"
       ],
-      "x_constraints": "Must include keys: episodic, semantic, procedural, emotional, reflective. Values 0.0\u20131.0"
+      "properties": {
+        "waypoint_ids": {
+          "description": "Identifiers for retrieval waypoints",
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          }
+        },
+        "sector_weights": {
+          "description": "Weight distribution across memory sectors",
+          "type": [
+            "object",
+            "null"
+          ],
+          "properties": {
+            "episodic": {
+              "type": "number"
+            },
+            "semantic": {
+              "type": "number"
+            },
+            "procedural": {
+              "type": "number"
+            },
+            "emotional": {
+              "type": "number"
+            },
+            "reflective": {
+              "type": "number"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
-  "additionalProperties": false,
-  "required": [
-    "embeddings",
-    "indices.waypoint_ids",
-    "indices.sector_weights"
-  ]
+  "additionalProperties": false
 }

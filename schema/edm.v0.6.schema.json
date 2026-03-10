@@ -5,25 +5,26 @@
   "description": "A protocol-level representation and persistence architecture for governed emotional data. EDM v0.6.0 defines a domain-complete manifold for encoding affective context as a stable, machine-interpretable, and sovereignty-preserving data object.",
   "type": "object",
   "required": [
-    "meta",
-    "core",
-    "constellation",
-    "milky_way",
-    "gravity",
-    "impulse",
-    "governance",
-    "telemetry",
-    "system",
-    "crosswalks"
+    "meta"
   ],
   "properties": {
     "meta": {
       "description": "Identity, provenance, and consent metadata. Establishes artifact origin, ownership, and legal basis.",
       "type": "object",
-      "required": ["version", "created_at", "visibility", "pii_tier", "source_type", "consent_basis"],
+      "required": [
+        "version",
+        "profile",
+        "created_at",
+        "visibility",
+        "pii_tier",
+        "consent_basis"
+      ],
       "properties": {
         "id": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Unique identifier for the EDM artifact. Required for provenance, linking, auditing, and .ddna envelope binding.",
           "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
         },
@@ -32,74 +33,127 @@
           "description": "Declares which EDM schema this artifact conforms to and enables safe validation and migration.",
           "pattern": "^0\\.6\\.[0-9]+$"
         },
+        "profile": {
+          "type": "string",
+          "enum": [
+            "essential",
+            "extended",
+            "full"
+          ],
+          "description": "Implementation profile declaration. Determines required domains per EDM v0.6.0 Section 3.7."
+        },
         "created_at": {
           "type": "string",
           "description": "Marks when the artifact was extracted. Anchors temporal provenance.",
           "format": "date-time"
         },
         "updated_at": {
-          "type": ["string", "null"],
-          "description": "Optional timestamp for post-extraction updates. Never replaces created_at.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional timestamp for post-extraction updates.",
           "format": "date-time"
         },
         "locale": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Linguistic and cultural context of the source content.",
           "pattern": "^[a-z]{2}(-[a-z]{2})?$"
         },
         "owner_user_id": {
-          "type": ["string", "null"],
-          "description": "The artifact owner identifier. VitaPass enables cross-vendor identity resolution; vendor-specific IDs limit portability. MUST be null in stateless mode."
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The artifact owner identifier."
         },
         "parent_id": {
-          "type": ["string", "null"],
-          "description": "Links this artifact to its parent in multi-step extractions or threaded sequences.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Links this artifact to its parent.",
           "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
         },
         "visibility": {
           "type": "string",
           "description": "Determines who may view or process the artifact.",
-          "enum": ["private", "shared", "public"]
+          "enum": [
+            "private",
+            "shared",
+            "public"
+          ]
         },
         "pii_tier": {
           "type": "string",
-          "description": "Classification of personal or sensitive content. Controls retention, masking, and export rules.",
-          "enum": ["none", "low", "moderate", "high", "extreme"]
+          "description": "Classification of personal or sensitive content.",
+          "enum": [
+            "none",
+            "low",
+            "moderate",
+            "high",
+            "extreme"
+          ]
         },
         "source_type": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "The medium from which the artifact was extracted.",
-          "enum": ["text", "audio", "image", "video", "mixed"]
+          "enum": [
+            "text",
+            "audio",
+            "image",
+            "video",
+            "mixed",
+            null
+          ]
         },
         "source_context": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "Optional narrative describing the input scenario."
         },
         "consent_basis": {
           "type": "string",
           "description": "Legal basis for storing and processing emotional data.",
-          "enum": ["consent", "contract", "legitimate_interest", "none"]
+          "enum": [
+            "consent",
+            "contract",
+            "legitimate_interest",
+            "none"
+          ]
         },
         "consent_scope": {
-          "type": ["string", "null"],
+          "type": [
+            "string",
+            "null"
+          ],
           "description": "What the user consented to."
         },
         "consent_revoked_at": {
-          "type": ["string", "null"],
-          "description": "If populated, the artifact becomes non-retrievable and non-exportable, except minimal audit form.",
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "If populated, artifact becomes non-retrievable.",
           "format": "date-time"
         },
         "tags": {
-          "type": "array",
-          "description": "Optional user-defined labels for organizing or filtering artifacts.",
+          "type": [
+            "array",
+            "null"
+          ],
+          "description": "Optional user-defined labels.",
           "items": {
             "type": "string"
           }
-        },
-        "profile": {
-          "type": ["string", "null"],
-          "enum": ["essential", "extended", "full", null],
-          "description": "Implementation profile declaration. Determines minimum required fields per EDM v0.6.0 Section 3.7."
         }
       },
       "additionalProperties": false
@@ -132,7 +186,115 @@
       "$ref": "fragments/crosswalks.json"
     }
   },
-  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "meta": {
+            "properties": {
+              "profile": {
+                "const": "essential"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "meta",
+          "core",
+          "constellation",
+          "governance",
+          "telemetry"
+        ],
+        "propertyNames": {
+          "enum": [
+            "meta",
+            "core",
+            "constellation",
+            "governance",
+            "telemetry"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "meta": {
+            "properties": {
+              "profile": {
+                "const": "extended"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "meta",
+          "core",
+          "constellation",
+          "milky_way",
+          "gravity",
+          "governance",
+          "telemetry"
+        ],
+        "propertyNames": {
+          "enum": [
+            "meta",
+            "core",
+            "constellation",
+            "milky_way",
+            "gravity",
+            "governance",
+            "telemetry"
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "meta": {
+            "properties": {
+              "profile": {
+                "const": "full"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "meta",
+          "core",
+          "constellation",
+          "milky_way",
+          "gravity",
+          "impulse",
+          "governance",
+          "telemetry",
+          "system",
+          "crosswalks"
+        ],
+        "propertyNames": {
+          "enum": [
+            "meta",
+            "core",
+            "constellation",
+            "milky_way",
+            "gravity",
+            "impulse",
+            "governance",
+            "telemetry",
+            "system",
+            "crosswalks"
+          ]
+        }
+      }
+    }
+  ],
   "definitions": {
     "version_info": {
       "version": "0.6.0",
@@ -140,9 +302,7 @@
       "status": "stable",
       "changes_from_v05": [
         "Added meta.profile field for implementation profile declaration",
-        "Introduced Implementation Profiles: Essential (~20 fields), Extended (~45 fields), Full (96 fields)",
-        "Introduced Conformance Levels: Compliant, Sealed, Certified",
-        "Only Full Profile is eligible for Certified conformance"
+        "Profile-based conditional validation: artifacts must contain exactly the domains for their declared profile"
       ]
     }
   }

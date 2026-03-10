@@ -4,42 +4,50 @@
   "type": "object",
   "properties": {
     "entry_confidence": {
-      "description": "Confidence score assigned by the extractor for the accuracy of the EDM representation",
-      "type": "number",
-      "x_constraints": "0.0\u20131.0"
-    },
-    "extraction_model": {
-      "description": "Identifier of the model or engine used for extraction",
-      "type": [
-        "string",
-        "null"
-      ],
-      "x_constraints": "Free text (e.g., \"DeepaTagger-v0.4\", \"GPT-4\")"
-    },
-    "extraction_notes": {
-      "description": "Optional notes about extraction quality or contextual factors",
-      "type": [
-        "string",
-        "null"
-      ],
-      "x_constraints": "Free text"
-    },
-    "alignment_delta": {
-      "description": "Measured deviation between the artifact's encoded affective state and the system's response coherence, used to regulate resonance weighting",
+      "description": "Confidence score for extraction accuracy",
       "type": [
         "number",
         "null"
+      ]
+    },
+    "extraction_model": {
+      "description": "Model identifier used for extraction",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extraction_provider": {
+      "description": "Provider of the extraction model",
+      "type": [
+        "string",
+        "null"
       ],
       "enum": [
-        "-1.0 to +1.0; positive indicates over-alignment",
-        "negative indicates under-alignment",
-        "near-zero indicates equilibrium"
-      ],
-      "x_constraints": "-1.0 to +1.0; positive indicates over-alignment, negative indicates under-alignment, near-zero indicates equilibrium"
+        "anthropic",
+        "openai",
+        "kimi",
+        null
+      ]
+    },
+    "extraction_notes": {
+      "description": "Optional notes about extraction quality",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "alignment_delta": {
+      "description": "Deviation between encoded affective state and response coherence (-1.0 to +1.0)",
+      "type": [
+        "number",
+        "null"
+      ]
     }
   },
   "additionalProperties": false,
   "required": [
-    "entry_confidence"
+    "entry_confidence",
+    "extraction_model"
   ]
 }

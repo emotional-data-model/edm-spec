@@ -9,7 +9,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")"
+      "x_constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")"
     },
     "spark": {
       "description": "What triggered or initiated the emotional response",
@@ -17,7 +17,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")"
+      "x_constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")"
     },
     "wound": {
       "description": "Emotional pain, loss, or vulnerability present in the experience",
@@ -25,7 +25,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")"
+      "x_constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")"
     },
     "fuel": {
       "description": "What energized or motivated the experience",
@@ -33,7 +33,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")"
+      "x_constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")"
     },
     "bridge": {
       "description": "Connection or shift between past and present understanding",
@@ -41,7 +41,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")"
+      "x_constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")"
     },
     "echo": {
       "description": "What continues to resonate or recur from the experience",
@@ -49,7 +49,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "1\u20135 words (e.g., \"her laugh\", \"smell of rain\", \"city lights\")"
+      "x_constraints": "1–5 words (e.g., \"her laugh\", \"smell of rain\", \"city lights\")"
     },
     "narrative": {
       "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
@@ -57,8 +57,16 @@
         "string",
         "null"
       ],
-      "x_constraints": "3\u20135 sentences"
+      "x_constraints": "3–5 sentences"
     }
   },
-  "additionalProperties": false
+  "additionalProperties": false,
+  "required": [
+    "anchor",
+    "spark",
+    "wound",
+    "fuel",
+    "bridge",
+    "echo"
+  ]
 }

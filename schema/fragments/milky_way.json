@@ -49,8 +49,5 @@
       "x_constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")"
     }
   },
-  "additionalProperties": false,
-  "required": [
-    "associated_people"
-  ]
+  "additionalProperties": false
 }

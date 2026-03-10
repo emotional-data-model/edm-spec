@@ -29,7 +29,7 @@
     "emotion_subtone": {
       "description": "Secondary emotional nuances that add depth to the primary emotion",
       "type": "array",
-      "x_constraints": "0\u20134 items (e.g., \"bittersweet\", \"grateful\", \"nostalgic\")",
+      "x_constraints": "0–4 items (e.g., \"bittersweet\", \"grateful\", \"nostalgic\")",
       "items": {
         "type": "string"
       },
@@ -246,7 +246,8 @@
   },
   "additionalProperties": false,
   "required": [
+    "emotion_primary",
     "emotion_subtone",
-    "transformational_pivot"
+    "narrative_arc"
   ]
 }
