@@ -1,0 +1,466 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://deepadata.com/schema/edm.v0.4.schema.json",
+  "title": "DeepaData Emotional Data Model (EDM v0.4)",
+  "description": "Canonical specification of the DeepaData Emotional Data Model (EDM v0.4). Introduces GOVERNANCE domain split from META. 10 domains, 96 fields.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "meta",
+    "core",
+    "constellation",
+    "milky_way",
+    "gravity",
+    "impulse",
+    "governance",
+    "telemetry",
+    "system",
+    "crosswalks"
+  ],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "description": "Identity, consent, and provenance envelope.",
+      "additionalProperties": false,
+      "required": ["version", "created_at", "consent_basis"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "pattern": "^0\\.4\\.[0-9]+$",
+          "description": "Schema version identifier."
+        },
+        "id": {
+          "type": ["string", "null"],
+          "description": "UUID for this artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "parent_id": {
+          "type": ["string", "null"],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "locale": {
+          "type": ["string", "null"],
+          "description": "BCP-47 locale code.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "created_at": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Artifact creation timestamp."
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "format": "date-time",
+          "description": "Last update timestamp."
+        },
+        "owner_user_id": {
+          "type": ["string", "null"],
+          "description": "Artifact owner identifier."
+        },
+        "aura_id": {
+          "type": ["string", "null"],
+          "description": "AuraID subject identifier."
+        },
+        "visibility": {
+          "type": ["string", "null"],
+          "enum": ["private", "shared", "public", null],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": ["string", "null"],
+          "enum": ["none", "low", "moderate", "high", "extreme", null],
+          "description": "PII classification level."
+        },
+        "source_type": {
+          "type": ["string", "null"],
+          "enum": ["text", "audio", "image", "video", "mixed", null],
+          "description": "Source medium."
+        },
+        "source_context": {
+          "type": ["string", "null"],
+          "description": "Input scenario description."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": ["consent", "contract", "legitimate_interest", "none"],
+          "description": "Legal basis for processing."
+        },
+        "consent_scope": {
+          "type": ["string", "null"],
+          "description": "Consent scope description."
+        },
+        "tags": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "User-defined labels."
+        }
+      }
+    },
+
+    "core": {
+      "type": "object",
+      "description": "Narrative spine - emotional primitives.",
+      "additionalProperties": false,
+      "required": ["anchor", "spark", "wound", "fuel", "bridge", "echo"],
+      "properties": {
+        "anchor": { "type": ["string", "null"], "description": "Central person, object, or theme." },
+        "spark": { "type": ["string", "null"], "description": "Trigger of emotional response." },
+        "wound": { "type": ["string", "null"], "description": "Emotional pain or vulnerability." },
+        "fuel": { "type": ["string", "null"], "description": "What energized the experience." },
+        "bridge": { "type": ["string", "null"], "description": "Connection between past and present." },
+        "echo": { "type": ["string", "null"], "description": "What continues to resonate." },
+        "narrative": { "type": ["string", "null"], "description": "Compressed account of the experience." }
+      }
+    },
+
+    "constellation": {
+      "type": "object",
+      "description": "Emotional interpretation and relational context.",
+      "additionalProperties": false,
+      "required": ["emotion_primary", "emotion_subtone", "narrative_arc"],
+      "properties": {
+        "emotion_primary": {
+          "type": ["string", "null"],
+          "enum": ["joy", "sadness", "fear", "anger", "wonder", "peace", "tenderness", "reverence", null],
+          "description": "Dominant emotional quality."
+        },
+        "emotion_subtone": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 0,
+          "maxItems": 4,
+          "description": "Secondary emotional nuances."
+        },
+        "higher_order_emotion": { "type": ["string", "null"], "description": "Complex or layered emotional state." },
+        "meta_emotional_state": { "type": ["string", "null"], "description": "How the person relates to their emotional state." },
+        "interpersonal_affect": { "type": ["string", "null"], "description": "Emotional posture in relational context." },
+        "narrative_arc": {
+          "type": ["string", "null"],
+          "enum": ["overcoming", "transformation", "connection", "reflection", "closure", null],
+          "description": "Story trajectory."
+        },
+        "relational_dynamics": {
+          "type": ["string", "null"],
+          "enum": ["parent_child", "romantic_partnership", "sibling_bond", "friendship", "companionship", "mentorship", "reunion", "community_ritual", "grief", "self_reflection", null],
+          "description": "Relational configuration."
+        },
+        "temporal_context": {
+          "type": ["string", "null"],
+          "enum": ["childhood", "early_adulthood", "midlife", "late_life", "recent", "future", "timeless", null],
+          "description": "Life-stage or temporal frame."
+        },
+        "memory_type": {
+          "type": ["string", "null"],
+          "enum": ["legacy_artifact", "fleeting_moment", "milestone", "reflection", "formative_experience", null],
+          "description": "Memory classification."
+        },
+        "media_format": {
+          "type": ["string", "null"],
+          "enum": ["photo", "video", "audio", "text", "photo_with_story", null],
+          "description": "Capture format."
+        },
+        "narrative_archetype": {
+          "type": ["string", "null"],
+          "enum": ["hero", "caregiver", "seeker", "sage", "lover", "outlaw", "innocent", "magician", "creator", "everyman", "jester", "ruler", "mentor", null],
+          "description": "Structural role in narrative."
+        },
+        "symbolic_anchor": { "type": ["string", "null"], "description": "Symbolic element concentrating meaning." },
+        "relational_perspective": {
+          "type": ["string", "null"],
+          "enum": ["self", "partner", "family", "friends", "community", "humanity", null],
+          "description": "Perspective of narration."
+        },
+        "temporal_rhythm": {
+          "type": ["string", "null"],
+          "enum": ["still", "sudden", "rising", "fading", "recurring", "spiraling", "dragging", "suspended", "looping", "cyclic", null],
+          "description": "Temporal movement or cadence."
+        },
+        "identity_thread": { "type": ["string", "null"], "description": "Connection to personal identity." },
+        "expressed_insight": { "type": ["string", "null"], "description": "Explicit realization stated by subject." },
+        "transformational_pivot": { "type": ["boolean", "null"], "description": "Life-changing or trajectory-altering." },
+        "somatic_signature": { "type": ["string", "null"], "description": "Bodily sensations described." }
+      }
+    },
+
+    "milky_way": {
+      "type": "object",
+      "description": "Context and participants.",
+      "additionalProperties": false,
+      "properties": {
+        "event_type": { "type": ["string", "null"], "description": "Type of event or situation." },
+        "location_context": { "type": ["string", "null"], "description": "Place or spatial context." },
+        "associated_people": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Individuals connected to the experience."
+        },
+        "visibility_context": {
+          "type": ["string", "null"],
+          "enum": ["private", "family_only", "shared_publicly", null],
+          "description": "Intended sharing scope."
+        },
+        "tone_shift": { "type": ["string", "null"], "description": "Directional emotional change." }
+      }
+    },
+
+    "gravity": {
+      "type": "object",
+      "description": "Resonance fields and retrieval hooks.",
+      "additionalProperties": false,
+      "properties": {
+        "emotional_weight": { "type": ["number", "null"], "minimum": 0.0, "maximum": 1.0, "description": "Felt intensity." },
+        "emotional_density": {
+          "type": ["string", "null"],
+          "enum": ["low", "medium", "high", null],
+          "description": "Concentration of emotional content."
+        },
+        "valence": {
+          "type": ["string", "null"],
+          "enum": ["positive", "negative", "mixed", null],
+          "description": "Emotional direction."
+        },
+        "viscosity": {
+          "type": ["string", "null"],
+          "enum": ["low", "medium", "high", "enduring", "fluid", null],
+          "description": "Persistence of emotion."
+        },
+        "gravity_type": { "type": ["string", "null"], "description": "Category of emotional pull." },
+        "tether_type": {
+          "type": ["string", "null"],
+          "enum": ["person", "symbol", "event", "place", "ritual", "object", "tradition", "identity", null],
+          "description": "Emotional anchor type."
+        },
+        "recall_triggers": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Sensory cues reactivating memory."
+        },
+        "retrieval_keys": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Compact hooks for retrieval."
+        },
+        "nearby_themes": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Adjacent themes or motifs."
+        },
+        "legacy_embed": { "type": ["boolean", "null"], "description": "Contributes to long-term identity." },
+        "recurrence_pattern": {
+          "type": ["string", "null"],
+          "enum": ["cyclical", "isolated", "chronic", "emerging", null],
+          "description": "Temporal recurrence structure."
+        },
+        "strength_score": { "type": ["number", "null"], "minimum": 0.0, "maximum": 1.0, "description": "Binding strength." },
+        "temporal_decay": {
+          "type": ["string", "null"],
+          "enum": ["fast", "moderate", "slow", null],
+          "description": "Expected intensity diminishment."
+        },
+        "resilience_markers": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "minItems": 1,
+          "maxItems": 3,
+          "description": "Stabilizing indicators."
+        },
+        "adaptation_trajectory": {
+          "type": ["string", "null"],
+          "enum": ["improving", "stable", "declining", "integrative", null],
+          "description": "Emotional state evolution."
+        }
+      }
+    },
+
+    "impulse": {
+      "type": "object",
+      "description": "Motivational and drive state.",
+      "additionalProperties": false,
+      "properties": {
+        "primary_energy": { "type": ["string", "null"], "description": "Dominant motivational energy." },
+        "drive_state": {
+          "type": ["string", "null"],
+          "enum": ["explore", "approach", "avoid", "repair", "persevere", "share", null],
+          "description": "Behavioral direction."
+        },
+        "motivational_orientation": {
+          "type": ["string", "null"],
+          "enum": ["belonging", "safety", "mastery", "meaning", "autonomy", null],
+          "description": "Foundational motivational domain."
+        },
+        "temporal_focus": {
+          "type": ["string", "null"],
+          "enum": ["past", "present", "future", null],
+          "description": "Temporal orientation."
+        },
+        "directionality": {
+          "type": ["string", "null"],
+          "enum": ["inward", "outward", "transcendent", null],
+          "description": "Self-directed, relational, or expansive."
+        },
+        "social_visibility": {
+          "type": ["string", "null"],
+          "enum": ["private", "relational", "collective", null],
+          "description": "Social scope of expression."
+        },
+        "urgency": {
+          "type": ["string", "null"],
+          "enum": ["calm", "elevated", "pressing", "acute", null],
+          "description": "Intensity or immediacy."
+        },
+        "risk_posture": {
+          "type": ["string", "null"],
+          "enum": ["cautious", "balanced", "bold", null],
+          "description": "Stance toward uncertainty."
+        },
+        "agency_level": {
+          "type": ["string", "null"],
+          "enum": ["low", "medium", "high", null],
+          "description": "Perceived ability to act."
+        },
+        "regulation_state": {
+          "type": ["string", "null"],
+          "enum": ["regulated", "wavering", "dysregulated", null],
+          "description": "Emotional self-regulation stability."
+        },
+        "attachment_style": {
+          "type": ["string", "null"],
+          "enum": ["secure", "anxious", "avoidant", "disorganized", null],
+          "description": "Relational attachment pattern."
+        },
+        "coping_style": {
+          "type": ["string", "null"],
+          "enum": ["reframe_meaning", "seek_support", "distract", "ritualize", "confront", "detach", null],
+          "description": "Strategy for managing emotions."
+        }
+      }
+    },
+
+    "governance": {
+      "type": "object",
+      "description": "Compliance, retention, and rights. Split from META in v0.4.",
+      "additionalProperties": false,
+      "required": ["jurisdiction", "retention_policy", "subject_rights"],
+      "properties": {
+        "jurisdiction": {
+          "type": ["string", "null"],
+          "enum": ["GDPR", "CCPA", "HIPAA", "PIPEDA", "LGPD", "None", "Mixed", null],
+          "description": "Regulatory regime."
+        },
+        "retention_policy": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "basis": { "type": ["string", "null"], "enum": ["user_defined", "legal", "business_need", null] },
+            "ttl_days": { "type": ["number", "null"] },
+            "on_expiry": { "type": ["string", "null"], "enum": ["soft_delete", "hard_delete", "anonymize", null] }
+          }
+        },
+        "subject_rights": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "portable": { "type": ["boolean", "null"] },
+            "erasable": { "type": ["boolean", "null"] },
+            "explainable": { "type": ["boolean", "null"] }
+          }
+        },
+        "exportability": {
+          "type": ["string", "null"],
+          "enum": ["allowed", "restricted", "forbidden", null],
+          "description": "Export permission."
+        },
+        "k_anonymity": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "k": { "type": ["number", "null"] },
+            "groups": { "type": ["array", "null"], "items": { "type": "string" } }
+          }
+        },
+        "policy_labels": {
+          "type": ["array", "null"],
+          "items": { "type": "string" }
+        },
+        "masking_rules": {
+          "type": ["array", "null"],
+          "items": { "type": "string" }
+        },
+        "domain_completeness": {
+          "type": ["object", "null"],
+          "description": "Domain population tracking."
+        }
+      }
+    },
+
+    "telemetry": {
+      "type": "object",
+      "description": "Extraction confidence and model tracking.",
+      "additionalProperties": false,
+      "required": ["entry_confidence", "extraction_model"],
+      "properties": {
+        "entry_confidence": { "type": ["number", "null"], "minimum": 0.0, "maximum": 1.0, "description": "Extraction accuracy confidence." },
+        "extraction_model": { "type": ["string", "null"], "description": "Model identifier." },
+        "extraction_provider": {
+          "type": ["string", "null"],
+          "enum": ["anthropic", "openai", "kimi", null],
+          "description": "Provider of extraction model."
+        },
+        "extraction_notes": { "type": ["string", "null"], "description": "Notes about extraction quality." },
+        "alignment_delta": { "type": ["number", "null"], "description": "Deviation between affective state and response coherence." }
+      }
+    },
+
+    "system": {
+      "type": "object",
+      "description": "Embeddings and indices.",
+      "additionalProperties": false,
+      "properties": {
+        "embeddings": {
+          "type": ["array", "null"],
+          "items": {
+            "type": "object",
+            "properties": {
+              "provider": { "type": "string" },
+              "sector": { "type": "string" },
+              "dim": { "type": "number" },
+              "quantized": { "type": "boolean" },
+              "vector_ref": { "type": "string" }
+            }
+          }
+        },
+        "indices": {
+          "type": ["object", "null"],
+          "properties": {
+            "waypoint_ids": { "type": ["array", "null"], "items": { "type": "string" } },
+            "sector_weights": {
+              "type": ["object", "null"],
+              "properties": {
+                "episodic": { "type": "number" },
+                "semantic": { "type": "number" },
+                "procedural": { "type": "number" },
+                "emotional": { "type": "number" },
+                "reflective": { "type": "number" }
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "crosswalks": {
+      "type": "object",
+      "description": "Interoperability mappings to external taxonomies.",
+      "additionalProperties": false,
+      "properties": {
+        "plutchik_primary": { "type": ["string", "null"], "description": "Plutchik emotion mapping." },
+        "geneva_emotion_wheel": { "type": ["string", "null"], "description": "Geneva Emotion Wheel mapping." },
+        "DSM5_specifiers": { "type": ["string", "null"], "description": "DSM-5 affective specifiers." },
+        "HMD_v2_memory_type": { "type": ["string", "null"], "description": "Human Memory Dynamics v2 mapping." },
+        "ISO_27557_labels": { "type": ["string", "null"], "description": "ISO emotional data classification." }
+      }
+    }
+  },
+  "$comment": "© 2025 DeepaData Pty Ltd — MIT License"
+}
