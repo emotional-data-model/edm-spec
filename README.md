@@ -2,13 +2,13 @@
 
 **Current Version:** v0.6.0
 **Released:** March 2026
-**DOI:** [10.5281/zenodo.PENDING](https://doi.org/10.5281/zenodo.PENDING)
+**DOI:** [10.5281/zenodo.18951891](https://doi.org/10.5281/zenodo.18951891)
 
 ## 📄 Official Whitepaper
 
 The complete EDM v0.6.0 specification is published on Zenodo:
-- **Download:** [EDM v0.6.0 Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.PENDING)
-- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.PENDING
+- **Download:** [EDM v0.6.0 Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.18951891)
+- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.18951891
 
 ## 🔧 Implementation
 
@@ -19,7 +19,7 @@ This repository contains:
 - Release notes
 
 Reference implementations:
-- [deepadata-ddna-tools](https://github.com/emotional-data-model/ddna-tools) - Sealing and verification
+- [ddna-tools](https://github.com/emotional-data-model/ddna-tools) - Sealing and verification
 - [deepadata-edm-sdk](https://github.com/deepadata/deepadata-edm-sdk) - Artifact extraction
 - [deepadata-edm-mcp-server](https://github.com/deepadata/deepadata-edm-mcp-server) - MCP adapter
 
@@ -27,7 +27,7 @@ Reference implementations:
 
 # DeepaData — EDM v0.6 (Specification)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PENDING.svg)](https://doi.org/10.5281/zenodo.PENDING)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18951891.svg)](https://doi.org/10.5281/zenodo.18951891)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.6.0-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.6.0)
 [![Status](https://img.shields.io/badge/status-Stable-brightgreen.svg)]()
@@ -71,9 +71,9 @@ EDM fills this gap by providing:
 The EDM v0.6.0 whitepaper is published on Zenodo:
 
 **Citation:**
-> Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.PENDING
+> Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.18951891
 
-**Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.PENDING)
+**Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.18951891)
 
 ---
 
@@ -250,7 +250,8 @@ deepadata-edm-spec/
 │   │   └── ... (10 total)
 │   └── crosswalks/
 │       ├── v0.3_to_v0.4.json         # Migration mapping
-│       └── v0.4_to_v0.5.json         # Migration mapping
+│       ├── v0.4_to_v0.5.json         # Migration mapping
+│       └── v0.5.1_to_v0.6.0.json     # Migration mapping
 ├── examples/
 │   ├── simple_memory.ddna.json       # Basic example
 │   └── multimodal_image_example.ddna.json
@@ -259,10 +260,9 @@ deepadata-edm-spec/
 │   ├── SCOPE_AND_NONGOALS.md         # What EDM is and is not
 │   ├── EDM_DDNA_BOUNDARY.md          # Transient vs persistent
 │   ├── EU_AI_ACT_COMPLIANCE.md       # Regulatory compliance guide
-│   ├── V04_MIGRATION_GUIDE.md        # v0.3 → v0.4 migration
-│   ├── V05_MIGRATION_GUIDE.md        # v0.4 → v0.5 migration
 │   ├── VALIDATION.md                 # Validation guide
-│   └── RELEASE-NOTES.md
+│   ├── RELEASE-NOTES.md
+│   └── archive/                      # Historical migration guides
 ├── scripts/
 │   └── validate-examples.mjs         # Validation utilities
 ├── CITATION.cff                      # Citation metadata
@@ -280,8 +280,8 @@ deepadata-edm-spec/
 **Breaking change:** `meta.profile` is now required.
 
 EDM v0.6.0 introduces Implementation Profiles. All artifacts must declare their profile:
-- `"essential"` — Minimal footprint (~20 fields)
-- `"extended"` — Narrative depth (~45 fields)
+- `"essential"` — Minimal footprint (24 fields)
+- `"extended"` — Narrative depth (50 fields)
 - `"full"` — Complete manifold (96 fields)
 
 See [MIGRATION.md](docs/MIGRATION.md) for full migration steps.
@@ -292,12 +292,12 @@ Backwards-compatible enum additions. No breaking changes.
 
 ### v0.4.x → v0.5.0 (February 2026)
 
-See [V05_MIGRATION_GUIDE.md](docs/V05_MIGRATION_GUIDE.md) for full details.
+See [docs/archive/V05_MIGRATION_GUIDE.md](docs/archive/V05_MIGRATION_GUIDE.md) for full details.
 
 ### v0.3.x → v0.4.x
 
 1. **Review changes:** 6 fields removed, GOVERNANCE domain added
-2. **Migration guide:** [V04_MIGRATION_GUIDE.md](docs/V04_MIGRATION_GUIDE.md)
+2. **Migration guide:** [docs/archive/V04_MIGRATION_GUIDE.md](docs/archive/V04_MIGRATION_GUIDE.md)
 3. **Use crosswalk:** `schema/crosswalks/v0.3_to_v0.4.json`
 4. **Test thoroughly:** Validate migrated artifacts against v0.4 schema
 
@@ -330,7 +330,7 @@ If you use EDM in your research, please cite:
   year = {2026},
   publisher = {Zenodo},
   version = {v0.6.0},
-  doi = {10.5281/zenodo.PENDING},
+  doi = {10.5281/zenodo.18951891},
   url = {https://github.com/emotional-data-model/edm-spec}
 }
 ```
@@ -356,15 +356,15 @@ EDM is maintained by DeepaData and the emotionaldatamodel.org standards body.
 **Mission:** Make emotional AI safe, governed, and user-sovereign.
 
 Website: [emotionaldatamodel.org](https://emotionaldatamodel.org) | [deepadata.com](https://deepadata.com)
-GitHub: [@deepadata](https://github.com/deepadata)
+GitHub: [@emotional-data-model](https://github.com/emotional-data-model)
 Contact: jason@emotionaldatamodel.org
 
 ---
 
 ## Links
 
-- **Whitepaper:** [Zenodo Record](https://doi.org/10.5281/zenodo.PENDING)
-- **DOI:** [10.5281/zenodo.PENDING](https://doi.org/10.5281/zenodo.PENDING)
+- **Whitepaper:** [Zenodo Record](https://doi.org/10.5281/zenodo.18951891)
+- **DOI:** [10.5281/zenodo.18951891](https://doi.org/10.5281/zenodo.18951891)
 - **Parent DOI (all versions):** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
 - **Repository:** https://github.com/emotional-data-model/edm-spec
 - **Issues:** https://github.com/emotional-data-model/edm-spec/issues
