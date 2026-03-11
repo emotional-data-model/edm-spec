@@ -136,7 +136,7 @@ An EDM artifact is a JSON object conforming to the EDM v0.4 schema. It represent
 
 ### Characteristics
 
-**Structural completeness:** All 10 domains must be present. Fields may be null, but domain structure is required.
+**Structural completeness:** Domains present are determined by the declared profile: Essential (5), Extended (8), Full (10)
 
 **Schema validation:** Validity is determined by conformance to the profile-specific schema (e.g., `schema/edm.v0.6.full.schema.json`). No cryptographic verification.
 
