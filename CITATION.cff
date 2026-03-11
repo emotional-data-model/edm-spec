@@ -7,8 +7,8 @@ authors:
     email: "jason@deepadata.com"
 title: "Emotional Data Model (EDM) v0.6.0"
 version: v0.6.0
-doi: 10.5281/zenodo.PENDING
-date-released: 2026-03-08
+doi: 10.5281/zenodo.18951891
+date-released: 2026-03-11
 url: "https://github.com/emotional-data-model/edm-spec"
 license: MIT
 repository-code: "https://github.com/emotional-data-model/edm-spec"
@@ -36,5 +36,5 @@ references:
     title: "Emotional Data Model (EDM) v0.6.0: A protocol-level representation and persistence architecture for governed emotional data"
     year: 2026
     publisher: "Zenodo"
-    doi: "10.5281/zenodo.PENDING"
-    url: "https://zenodo.org/records/PENDING"
+    doi: "10.5281/zenodo.18951891"
+    url: "https://zenodo.org/records/18951891"
