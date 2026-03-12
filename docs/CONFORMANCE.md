@@ -61,6 +61,10 @@ Sealed artifacts at any profile are eligible for cross-vendor subject binding. T
 
 Unsealed artifacts containing populated sensitive domains (Milky_Way and Gravity) MUST be either nulled or sealed within 24 hours of creation. This maximum retention period applies regardless of session state. Systems MAY enforce a shorter window. The 24-hour limit is a regulatory backstop aligned with data minimisation principles.
 
+**Registry Distinction:**
+
+Self-sealed artifacts are valid Level 2 without a registry entry. DeepaData-issued seals additionally receive a registry entry — discoverable and verifiable via the DeepaData verification API.
+
 **Notes:**
 - Self-signed proofs establish tamper-evidence, not third-party trust
 - Sealed artifacts may be verified by any party with access to the verification method
@@ -73,14 +77,14 @@ A Certified artifact is a Sealed artifact that has been countersigned by DeepaDa
 **Requirements:**
 
 1. All Level 2 (Sealed) requirements MUST be satisfied
-2. The artifact MUST use the Full Profile (`meta.profile = "full"`)
+2. The artifact MUST use the Extended or Full Profile (`meta.profile = "extended"` or `"full"`)
 3. The `.ddna` envelope MUST contain a DeepaData Certification Proof
 4. The certification proof MUST be issued by a DeepaData certification endpoint
 5. ESAA (Emotional Safety Attestation) MUST be included for Full Profile artifacts
 
-**Eligible Profiles:** Full only
+**Eligible Profiles:** Extended and Full only
 
-Essential and Extended profiles are NOT eligible for Certified conformance. This restriction ensures that regulatory compliance claims are backed by complete representational depth.
+Essential profile is NOT eligible for Certified conformance. The 24-field Essential profile does not carry sufficient representational depth for a defensible compliance claim. Extended (50 fields) and Full (96 fields) profiles provide the governance and contextual depth required for regulatory attestation.
 
 **Use Cases:**
 - EU AI Act Article 5(1)(f) compliance documentation
@@ -102,12 +106,12 @@ The following matrix shows all valid combinations of profile and conformance lev
 | Profile | Compliant | Sealed | Certified |
 |---------|-----------|--------|-----------|
 | Essential | ✓ | ✓ | ✗ |
-| Extended | ✓ | ✓ | ✗ |
+| Extended | ✓ | ✓ | ✓ |
 | Full | ✓ | ✓ | ✓ |
 
 **Key:**
 - ✓ — Valid combination
-- ✗ — Invalid combination (Essential and Extended are ineligible for Certified)
+- ✗ — Invalid combination (Essential is ineligible for Certified)
 
 ## 3.8.4 Conformance Verification
 
@@ -149,8 +153,8 @@ Artifacts may progress through conformance levels but not regress:
 | From | To | Permitted |
 |------|-----|-----------|
 | Compliant | Sealed | ✓ |
-| Compliant | Certified | ✓ (Full Profile only) |
-| Sealed | Certified | ✓ (Full Profile only) |
+| Compliant | Certified | ✓ (Extended or Full Profile) |
+| Sealed | Certified | ✓ (Extended or Full Profile) |
 | Sealed | Compliant | ✗ |
 | Certified | Sealed | ✗ |
 | Certified | Compliant | ✗ |
