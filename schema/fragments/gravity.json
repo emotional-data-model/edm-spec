@@ -112,14 +112,6 @@
         "type": "string"
       }
     },
-    "legacy_embed": {
-      "description": "Whether the moment contributes to long-term identity or life-story continuity",
-      "type": [
-        "boolean",
-        "null"
-      ],
-      "x_constraints": "true or false"
-    },
     "recurrence_pattern": {
       "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
       "type": [

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://deepadata.com/schemas/edm/v0.6.0/edm.full.schema.json",
-  "title": "EDM v0.6.0 Full Profile",
+  "$id": "https://deepadata.com/schemas/edm/v0.7.0/edm.full.schema.json",
+  "title": "EDM v0.7.0 Full Profile",
   "description": "Complete profile for maximum emotional fidelity. 10 domains, 96 fields. Suitable for clinical applications, research, and scenarios requiring full affective context with interoperability crosswalks.",
   "type": "object",
   "required": ["meta", "core", "constellation", "milky_way", "gravity", "impulse", "governance", "telemetry", "system", "crosswalks"],
@@ -21,7 +21,7 @@
         "version": {
           "type": "string",
           "description": "EDM schema version.",
-          "pattern": "^0\\.6\\.[0-9]+$"
+          "pattern": "^0\\.7\\.[0-9]+$"
         },
         "profile": {
           "type": "string",
@@ -93,31 +93,31 @@
       }
     },
     "core": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/core.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/core.json"
     },
     "constellation": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/constellation.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/constellation.json"
     },
     "milky_way": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/milky_way.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/milky_way.json"
     },
     "gravity": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/gravity.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/gravity.json"
     },
     "impulse": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/impulse.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/impulse.json"
     },
     "governance": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/governance.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/governance.json"
     },
     "telemetry": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/telemetry.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/telemetry.json"
     },
     "system": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/system.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/system.json"
     },
     "crosswalks": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/crosswalks.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/crosswalks.json"
     }
   },
   "definitions": {

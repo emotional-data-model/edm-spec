@@ -21,6 +21,14 @@
       "type": "string",
       "x_constraints": "ISO-8601 UTC timestamp. Required"
     },
+    "source_timestamp": {
+      "description": "The timestamp of the original source content, distinct from created_at which marks extraction time",
+      "type": [
+        "string",
+        "null"
+      ],
+      "x_constraints": "ISO-8601 UTC timestamp"
+    },
     "updated_at": {
       "description": "Optional timestamp for post-extraction updates. Never replaces created_at",
       "type": [
