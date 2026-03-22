@@ -66,18 +66,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "person",
-        "symbol",
-        "event",
-        "place",
-        "ritual",
-        "object",
-        "tradition",
-        "identity",
-        null
-      ],
-      "x_constraints": "person, symbol, event, place, ritual, object, tradition"
+      "x_constraints": "Canonical: person, symbol, event, place, ritual, object, tradition, identity, self. Free text accepted."
     },
     "recall_triggers": {
       "description": "Sensory or symbolic cues that reactivate the memory",
@@ -118,13 +107,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "cyclical",
-        "isolated",
-        "chronic",
-        "emerging"
-      ],
-      "x_constraints": "cyclical, isolated, chronic, emerging; NULL when pattern cannot be determined"
+      "x_constraints": "Canonical: cyclical, isolated, chronic, emerging. Free text accepted. NULL when pattern cannot be determined."
     },
     "strength_score": {
       "description": "The binding strength of the emotion within the broader emotional network",
