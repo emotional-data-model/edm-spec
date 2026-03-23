@@ -4,7 +4,7 @@
   "type": "object",
   "properties": {
     "embeddings": {
-      "description": "Embedding references associated with this artifact",
+      "description": "Embedding references associated with this artifact. Platform-managed. Not populated at extraction time. Excluded from seal hash.",
       "type": [
         "array",
         "null"
@@ -45,31 +45,6 @@
           "items": {
             "type": "string"
           }
-        },
-        "sector_weights": {
-          "description": "Weight distribution across memory sectors",
-          "type": [
-            "object",
-            "null"
-          ],
-          "properties": {
-            "episodic": {
-              "type": "number"
-            },
-            "semantic": {
-              "type": "number"
-            },
-            "procedural": {
-              "type": "number"
-            },
-            "emotional": {
-              "type": "number"
-            },
-            "reflective": {
-              "type": "number"
-            }
-          },
-          "additionalProperties": false
         }
       },
       "additionalProperties": false

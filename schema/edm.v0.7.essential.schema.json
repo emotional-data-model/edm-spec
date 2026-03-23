@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://deepadata.com/schemas/edm/v0.6.0/edm.essential.schema.json",
-  "title": "EDM v0.6.0 Essential Profile",
+  "$id": "https://deepadata.com/schemas/edm/v0.7.0/edm.essential.schema.json",
+  "title": "EDM v0.7.0 Essential Profile",
   "description": "Lightweight profile for basic emotional context capture. 5 domains, 24 fields. Suitable for journaling apps, companion AI, and scenarios requiring minimal memory footprint.",
   "type": "object",
   "required": ["meta", "core", "constellation", "governance", "telemetry"],
@@ -21,7 +21,7 @@
         "version": {
           "type": "string",
           "description": "EDM schema version.",
-          "pattern": "^0\\.6\\.[0-9]+$"
+          "pattern": "^0\\.7\\.[0-9]+$"
         },
         "profile": {
           "type": "string",
@@ -109,8 +109,8 @@
       "properties": {
         "emotion_primary": {
           "type": ["string", "null"],
-          "enum": ["joy", "sadness", "fear", "anger", "wonder", "peace", "tenderness", "reverence", "pride", "anxiety", "gratitude", "longing", "hope"],
-          "description": "Dominant emotional quality."
+          "description": "Dominant emotional quality.",
+          "x_constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted."
         },
         "emotion_subtone": {
           "type": "array",
@@ -121,16 +121,16 @@
         },
         "narrative_arc": {
           "type": ["string", "null"],
-          "enum": ["overcoming", "transformation", "connection", "reflection", "closure"],
-          "description": "Story trajectory."
+          "description": "Story trajectory.",
+          "x_constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted."
         }
       }
     },
     "governance": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/governance.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/governance.json"
     },
     "telemetry": {
-      "$ref": "https://deepadata.com/schemas/edm/v0.6.0/fragments/telemetry.json"
+      "$ref": "https://deepadata.com/schemas/edm/v0.7.0/fragments/telemetry.json"
     }
   },
   "definitions": {

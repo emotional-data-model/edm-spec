@@ -9,22 +9,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "joy",
-        "sadness",
-        "fear",
-        "anger",
-        "wonder",
-        "peace",
-        "tenderness",
-        "reverence",
-        "pride",
-        "anxiety",
-        "gratitude",
-        "longing",
-        "hope"
-      ],
-      "x_constraints": "joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope"
+      "x_constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted."
     },
     "emotion_subtone": {
       "description": "Secondary emotional nuances that add depth to the primary emotion",
@@ -66,14 +51,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "overcoming",
-        "transformation",
-        "connection",
-        "reflection",
-        "closure"
-      ],
-      "x_constraints": "overcoming, transformation, connection, reflection, closure"
+      "x_constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted."
     },
     "relational_dynamics": {
       "description": "The dominant relational configuration influencing the experience",
@@ -81,24 +59,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "parent_child",
-        "romantic_partnership",
-        "sibling_bond",
-        "family",
-        "friendship",
-        "companionship",
-        "mentorship",
-        "reunion",
-        "community_ritual",
-        "grief",
-        "self_reflection",
-        "professional",
-        "therapeutic",
-        "service",
-        "adversarial"
-      ],
-      "x_constraints": "parent_child, romantic_partnership, sibling_bond, family, friendship, companionship, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial"
+      "x_constraints": "Canonical values: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. Free text accepted."
     },
     "temporal_context": {
       "description": "The life-stage or temporal frame associated with the experience",
@@ -242,6 +203,14 @@
         "null"
       ],
       "x_constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned"
+    },
+    "arc_type": {
+      "description": "The structural emotional arc pattern of the experience, encoded at capture time",
+      "type": [
+        "string",
+        "null"
+      ],
+      "x_constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile — or free text if no canonical value fits"
     }
   },
   "additionalProperties": false,

@@ -27,14 +27,6 @@
       ],
       "x_constraints": "Free text or null"
     },
-    "HMD_v2_memory_type": {
-      "description": "Crosswalk anchor for \"Human Memory Dynamics v2\" or equivalent memory-type classification frameworks",
-      "type": [
-        "string",
-        "null"
-      ],
-      "x_constraints": "Free text or null"
-    },
     "ISO_27557_labels": {
       "description": "Alignment point for emerging or future ISO standards relating to emotional or affective data classification",
       "type": [

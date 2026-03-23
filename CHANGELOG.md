@@ -5,6 +5,65 @@ All notable changes to the Emotional Data Model (EDM) specification are document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.7.0] - 2026-03-22
+
+### Added
+
+- **`arc_type` field** (constellation domain, Extended and Full profiles):
+  Structural emotional arc pattern encoded at capture time.
+  Canonical values: betrayal, liberation, grief, discovery, resistance, bond,
+  moral_awakening, transformation, reconciliation, reckoning, threshold, exile.
+  Free text accepted for novel arc types.
+
+- **`extensions` domain** (optional, all profiles):
+  Partner-namespaced semantic enrichments. Each key is a partner or platform
+  identifier. Values are partner-defined objects. Extensions containing semantic
+  enrichment are included in the seal hash when present at seal time.
+
+- **`meta.source_timestamp` field**:
+  Timestamp of the original source content, distinct from `created_at` which
+  marks extraction time. Enables accurate temporal graph traversal.
+
+- **`telemetry.extraction_chunking_strategy` field**:
+  Segmentation strategy used to determine artifact boundaries before extraction.
+  Canonical values: natural_unit, exchange_boundary, emotional_pivot,
+  semantic_shift, session.
+
+- **3 `emotion_primary` canonical values**: disappointment, relief, frustration
+
+- **2 `narrative_arc` canonical values**: loss, confrontation
+
+### Changed
+
+- **Enum fields now accept free text**: Canonical values preferred for
+  cross-artifact comparability, but accuracy takes precedence over canonical
+  conformance. SDK enforces preferred values via Zod union pattern.
+
+- **`system.embeddings` description**: Clarified as platform-managed, not
+  populated at extraction time, excluded from seal hash.
+
+- **Crosswalk fields**: Clarified as optional professional mapping hooks,
+  null valid in all profiles.
+
+### Removed
+
+- **`gravity.legacy_embed`**: Signal captured by `transformational_pivot` +
+  `strength_score` + `recurrence_pattern`. Field was redundant.
+
+- **`telemetry.alignment_delta`**: Platform feedback signal, not an artifact
+  field. Moved to platform layer.
+
+- **`system.indices.sector_weights`**: Platform-managed, always zero at
+  extraction time, excluded from seal hash. Kept `waypoint_ids` only.
+
+- **`crosswalks.HMD_v2_memory_type`**: Redundant with `memory_type` in
+  constellation domain.
+
+### Migration
+
+- Artifacts using version 0.6.x remain valid. Fields removed in v0.7.0 are
+  ignored by v0.7.0 validators. New fields are optional. No breaking changes.
+
 ## [0.6.0] - 2026-03-11
 
 ### Added
@@ -109,6 +168,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 10 domains, 102 fields
 - Closed provenance pre-release
 
+[0.7.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.4.0...v0.5.0

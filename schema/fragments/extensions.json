@@ -1,0 +1,9 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM EXTENSIONS Domain",
+  "description": "Optional partner-namespaced semantic enrichments. Each key is a partner or platform identifier. Values are partner-defined objects. Extensions containing semantic enrichment are included in the seal hash when present at seal time. Operational or pipeline metadata belongs in the system domain, not here.",
+  "type": "object",
+  "additionalProperties": {
+    "type": "object"
+  }
+}

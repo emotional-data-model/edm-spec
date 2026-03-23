@@ -157,16 +157,7 @@
         "string",
         "null"
       ],
-      "enum": [
-        "reframe_meaning",
-        "seek_support",
-        "distract",
-        "ritualize",
-        "confront",
-        "detach",
-        "process"
-      ],
-      "x_constraints": "reframe_meaning, seek_support, distract, ritualize, confront, detach, process"
+      "x_constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process. Free text accepted."
     }
   },
   "additionalProperties": false
