@@ -36,14 +36,6 @@
         "string",
         "null"
       ]
-    },
-    "extraction_chunking_strategy": {
-      "description": "The segmentation strategy used to determine artifact boundaries before extraction",
-      "type": [
-        "string",
-        "null"
-      ],
-      "x_constraints": "natural_unit, exchange_boundary, emotional_pivot, semantic_shift, session"
     }
   },
   "additionalProperties": false,

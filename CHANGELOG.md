@@ -24,11 +24,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   Timestamp of the original source content, distinct from `created_at` which
   marks extraction time. Enables accurate temporal graph traversal.
 
-- **`telemetry.extraction_chunking_strategy` field**:
-  Segmentation strategy used to determine artifact boundaries before extraction.
-  Canonical values: natural_unit, exchange_boundary, emotional_pivot,
-  semantic_shift, session.
-
 - **3 `emotion_primary` canonical values**: disappointment, relief, frustration
 
 - **2 `narrative_arc` canonical values**: loss, confrontation
@@ -58,6 +53,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **`crosswalks.HMD_v2_memory_type`**: Redundant with `memory_type` in
   constellation domain.
+
+- **`telemetry.extraction_chunking_strategy`**: Vendor pipeline concern, not
+  representational. Belongs in Extensions or vendor infrastructure.
 
 ### Migration
 
