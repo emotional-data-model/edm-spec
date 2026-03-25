@@ -196,7 +196,7 @@ spec, contributors should frame their proposals in
 relation to the published standard.
 
 **Current version:** EDM v0.6.0
-**DOI:** 10.5281/zenodo.18951891
+**DOI:** 10.5281/zenodo.19211903
 **Previous version DOI:** 10.5281/zenodo.18883392
 
 ---

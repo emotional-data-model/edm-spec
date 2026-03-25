@@ -313,7 +313,7 @@ For long-term emotional memory storage (beyond EDM's 24-hour session window), th
 - [EU AI Act Full Text](https://artificialintelligenceact.eu/)
 - [Article 5: Prohibited Practices](https://artificialintelligenceact.eu/article/5/)
 - [European Commission Guidelines (Feb 2025)](https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai)
-- [EDM v0.6.0 Whitepaper](https://zenodo.org/records/18951891)
+- [EDM v0.7.0 Whitepaper](https://zenodo.org/records/19211903)
 
 ---
 

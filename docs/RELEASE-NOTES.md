@@ -2,7 +2,7 @@
 
 ## EDM v0.6.0 (March 2026) — Current
 
-**DOI:** [10.5281/zenodo.18951891](https://doi.org/10.5281/zenodo.18951891)
+**DOI:** [10.5281/zenodo.19211903](https://doi.org/10.5281/zenodo.19211903)
 
 - Implementation Profiles: Essential (24 fields), Extended (50 fields), Full (96 fields)
 - Conformance Levels: Compliant, Sealed, Certified
