@@ -1,4 +1,4 @@
-# EDM v0.6.0 — Implementation Profiles
+# EDM v0.7.0 — Implementation Profiles
 
 ## 3.7.1 Overview
 

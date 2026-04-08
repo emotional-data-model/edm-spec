@@ -1,19 +1,19 @@
 # Emotional Data Model (EDM) Specification
 
-**Current Version:** v0.6.0
-**Released:** March 2026
+**Current Version:** v0.7.0
+**Released:** April 2026
 **DOI:** [10.5281/zenodo.19211903](https://doi.org/10.5281/zenodo.19211903)
 
 ## 📄 Official Whitepaper
 
-The complete EDM v0.6.0 specification is published on Zenodo:
-- **Download:** [EDM v0.6.0 Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.19211903)
-- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.19211903
+The complete EDM v0.7.0 specification is published on Zenodo:
+- **Download:** [EDM v0.7.0 Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.19211903)
+- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.7.0. Zenodo. https://doi.org/10.5281/zenodo.19211903
 
 ## 🔧 Implementation
 
 This repository contains:
-- Profile-based JSON Schemas (`schema/edm.v0.6.{essential,extended,full}.schema.json`)
+- Profile-based JSON Schemas (`schema/edm.v0.7.{essential,extended,full}.schema.json`)
 - Example artifacts (`examples/`)
 - Implementation documentation (`docs/`)
 - Release notes
@@ -29,10 +29,10 @@ Reference implementations:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19211903.svg)](https://doi.org/10.5281/zenodo.19211903)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.6.0-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.6.0)
+[![Version](https://img.shields.io/badge/version-0.7.0-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.7.0)
 [![Status](https://img.shields.io/badge/status-Stable-brightgreen.svg)]()
 
-**Status:** Stable (v0.6.0) — Production ready
+**Status:** Stable (v0.7.0) — Production ready
 
 ---
 
@@ -68,10 +68,10 @@ EDM fills this gap by providing:
 
 ## Official Publication
 
-The EDM v0.6.0 whitepaper is published on Zenodo:
+The EDM v0.7.0 whitepaper is published on Zenodo:
 
 **Citation:**
-> Harvey, J. (2026). Emotional Data Model (EDM) v0.6.0. Zenodo. https://doi.org/10.5281/zenodo.19211903
+> Harvey, J. (2026). Emotional Data Model (EDM) v0.7.0. Zenodo. https://doi.org/10.5281/zenodo.19211903
 
 **Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.19211903)
 
@@ -79,9 +79,9 @@ The EDM v0.6.0 whitepaper is published on Zenodo:
 
 ## Overview
 
-The **Emotional Data Model (EDM) v0.6.0** is a governance-first schema for representing emotional context in AI systems. It defines a domain-complete, schema-bound format that externalizes affective context as a deterministic, model-agnostic data object.
+The **Emotional Data Model (EDM) v0.7.0** is a governance-first schema for representing emotional context in AI systems. It defines a domain-complete, schema-bound format that externalizes affective context as a deterministic, model-agnostic data object.
 
-**New in v0.6.0:** Implementation Profiles (Essential/Extended/Full) and Conformance Levels (Compliant/Sealed/Certified). See [PROFILES.md](docs/PROFILES.md) and [CONFORMANCE.md](docs/CONFORMANCE.md).
+**New in v0.7.0:** Extensions domain, arc_type field, expanded enums, and field deprecations. See [PROFILES.md](docs/PROFILES.md) and [CONFORMANCE.md](docs/CONFORMANCE.md).
 
 **Key principles:**
 - **Transient by default** — EDM artifacts should not persist beyond session windows (24 hours max) unless explicitly sealed in a .ddna envelope
@@ -91,7 +91,7 @@ The **Emotional Data Model (EDM) v0.6.0** is a governance-first schema for repre
 
 This repository contains:
 
-- Canonical JSON Schema for EDM v0.6.0
+- Canonical JSON Schema for EDM v0.7.0
 - Domain Fragment Schemas (10 domains, 96 fields)
 - Implementation Profiles and Conformance documentation
 - Migration Crosswalks and Guides
@@ -110,8 +110,8 @@ cd deepadata-edm-spec
 
 # Validate an artifact (choose profile schema)
 npm install -g ajv-cli
-ajv validate -s schema/edm.v0.6.full.schema.json -d examples/example-full-profile.json
-ajv validate -s schema/edm.v0.6.essential.schema.json -d examples/example-essential-profile.json
+ajv validate -s schema/edm.v0.7.full.schema.json -d examples/example-full-profile.json
+ajv validate -s schema/edm.v0.7.essential.schema.json -d examples/example-essential-profile.json
 ```
 
 ### Canonical Schema URLs
@@ -119,9 +119,9 @@ ajv validate -s schema/edm.v0.6.essential.schema.json -d examples/example-essent
 Profile schemas are hosted at their canonical `$id` URLs:
 
 ```
-https://deepadata.com/schemas/edm/v0.6.0/edm.essential.schema.json
-https://deepadata.com/schemas/edm/v0.6.0/edm.extended.schema.json
-https://deepadata.com/schemas/edm/v0.6.0/edm.full.schema.json
+https://deepadata.com/schemas/edm/v0.7.0/edm.essential.schema.json
+https://deepadata.com/schemas/edm/v0.7.0/edm.extended.schema.json
+https://deepadata.com/schemas/edm/v0.7.0/edm.full.schema.json
 ```
 
 For always-latest versions, use `/current/` (redirects to latest stable):
@@ -137,16 +137,16 @@ https://deepadata.com/schemas/edm/current/edm.full.schema.json
 **JavaScript/TypeScript:**
 ```javascript
 // Import the profile schema matching your artifact's meta.profile
-import essentialSchema from 'deepadata-edm-spec/schema/edm.v0.6.essential.schema.json';
-import extendedSchema from 'deepadata-edm-spec/schema/edm.v0.6.extended.schema.json';
-import fullSchema from 'deepadata-edm-spec/schema/edm.v0.6.full.schema.json';
+import essentialSchema from 'deepadata-edm-spec/schema/edm.v0.7.essential.schema.json';
+import extendedSchema from 'deepadata-edm-spec/schema/edm.v0.7.extended.schema.json';
+import fullSchema from 'deepadata-edm-spec/schema/edm.v0.7.full.schema.json';
 import Ajv from 'ajv';
 
 const ajv = new Ajv();
 const validate = ajv.compile(fullSchema); // or essentialSchema, extendedSchema
 
 if (validate(artifact)) {
-  console.log('Valid EDM v0.6.0 artifact');
+  console.log('Valid EDM v0.7.0 artifact');
 } else {
   console.error('Validation failed:', validate.errors);
 }
@@ -158,21 +158,21 @@ import json
 import jsonschema
 
 # Choose profile schema matching artifact's meta.profile
-with open('schema/edm.v0.6.full.schema.json') as f:
+with open('schema/edm.v0.7.full.schema.json') as f:
     schema = json.load(f)
 
 with open('artifact.json') as f:
     artifact = json.load(f)
 
 jsonschema.validate(instance=artifact, schema=schema)
-print("Valid EDM v0.6.0 artifact")
+print("Valid EDM v0.7.0 artifact")
 ```
 
 ---
 
 ## Schema Structure
 
-EDM v0.6.0 defines **10 mandatory domains** (96 fields total):
+EDM v0.7.0 defines **10 mandatory domains** (96 fields total):
 
 ### Representational Layer (57 fields)
 
@@ -194,7 +194,15 @@ EDM v0.6.0 defines **10 mandatory domains** (96 fields total):
 
 ---
 
-## Key Enum Values (v0.6.0)
+## Significance Wiki Format
+
+EDM artifacts can be rendered as a navigable markdown wiki using the [EDM Significance Wiki Format](docs/WIKI_FORMAT.md). The two-file pattern (`wiki_article.md` + `significance_article.md`) enables agents and individuals to build personal knowledge bases weighted by what mattered.
+
+Reference implementation: [deepadata-edm-mcp-server](https://github.com/deepadata/deepadata-edm-mcp-server)
+
+---
+
+## Key Enum Values (v0.7.0)
 
 ### emotion_primary
 `joy`, `sadness`, `fear`, `anger`, `wonder`, `peace`, `tenderness`, `reverence`, `pride`, `anxiety`, `gratitude`, `longing`, `hope`, `shame`
@@ -240,9 +248,9 @@ The GOVERNANCE domain provides explicit fields for:
 ```
 deepadata-edm-spec/
 ├── schema/
-│   ├── edm.v0.6.essential.schema.json # Essential profile (5 domains, 24 fields)
-│   ├── edm.v0.6.extended.schema.json  # Extended profile (7 domains, 50 fields)
-│   ├── edm.v0.6.full.schema.json      # Full profile (10 domains, 96 fields)
+│   ├── edm.v0.7.essential.schema.json # Essential profile (5 domains, 24 fields)
+│   ├── edm.v0.7.extended.schema.json  # Extended profile (8 domains, 50 fields)
+│   ├── edm.v0.7.full.schema.json      # Full profile (10 domains, 96 fields)
 │   ├── fragments/                     # Shared domain schemas
 │   │   ├── core.json
 │   │   ├── constellation.json
@@ -276,16 +284,20 @@ deepadata-edm-spec/
 
 ## Migration Guide
 
+### v0.6.0 → v0.7.0 (April 2026)
+
+**New features:** Extensions domain, `arc_type` field, expanded enums, field deprecations.
+
+See [RELEASE-NOTES.md](docs/RELEASE-NOTES.md) for full details.
+
 ### v0.5.1 → v0.6.0 (March 2026)
 
 **Breaking change:** `meta.profile` is now required.
 
-EDM v0.6.0 introduces Implementation Profiles. All artifacts must declare their profile:
+EDM v0.6.0 introduced Implementation Profiles. All artifacts must declare their profile:
 - `"essential"` — Minimal footprint (24 fields)
 - `"extended"` — Narrative depth (50 fields)
 - `"full"` — Complete manifold (96 fields)
-
-See [MIGRATION.md](docs/MIGRATION.md) for full migration steps.
 
 ### v0.5.0 → v0.5.1 (March 2026)
 
@@ -327,10 +339,10 @@ If you use EDM in your research, please cite:
 ```bibtex
 @software{harvey2026edm,
   author = {Harvey, Jason},
-  title = {Emotional Data Model (EDM) v0.6.0},
+  title = {Emotional Data Model (EDM) v0.7.0},
   year = {2026},
   publisher = {Zenodo},
-  version = {v0.6.0},
+  version = {v0.7.0},
   doi = {10.5281/zenodo.19211903},
   url = {https://github.com/emotional-data-model/edm-spec}
 }
@@ -372,6 +384,6 @@ Contact: jason@emotionaldatamodel.org
 
 ---
 
-**Last Updated:** March 2026
-**Version:** 0.6.0
+**Last Updated:** April 2026
+**Version:** 0.7.0
 **License:** MIT
