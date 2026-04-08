@@ -260,6 +260,7 @@ deepadata-edm-spec/
 │   ├── SCOPE_AND_NONGOALS.md         # What EDM is and is not
 │   ├── EDM_DDNA_BOUNDARY.md          # Transient vs persistent
 │   ├── EU_AI_ACT_COMPLIANCE.md       # Regulatory compliance guide
+│   ├── WIKI_FORMAT.md                # Significance Wiki two-file format
 │   ├── VALIDATION.md                 # Validation guide
 │   ├── RELEASE-NOTES.md
 │   └── archive/                      # Historical migration guides
