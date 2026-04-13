@@ -80,7 +80,6 @@ captured_at: {ISO 8601 date}
 ## Identity
 - **identity_thread:** {value}
 - **tether_type:** {value}
-- **tether_target:** {value if present}
 
 ## Recall
 - **recall_triggers:** {list if present}

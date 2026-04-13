@@ -1,4 +1,4 @@
-# EDM v0.7.0 — Implementation Profiles
+# EDM v0.8.0 — Implementation Profiles
 
 ## 3.7.1 Overview
 
@@ -95,7 +95,80 @@ All ten domains MUST be fully populated. No field may be null unless the source 
 
 Note: Cross-vendor subject binding — portability of sealed artifacts across system boundaries — is available at Sealed conformance for all profiles, not Full only. Full Profile is required only for the longitudinal registry layer.
 
-## 3.7.6 Profile Invariants
+## 3.7.6 Partner Profiles
+
+A Partner Profile is a named, versioned schema declaration that enables vertical-specific field selection within the EDM profile system.
+
+### Profile ID Format
+
+Partner profile IDs use reverse-DNS notation:
+
+```
+com.example.profilename.v1
+```
+
+Examples:
+- `com.deepadata.journaling.v1`
+- `com.deepadata.therapy.v1`
+- `com.deepadata.companion.v1`
+- `com.deepadata.wiki.v1`
+
+### Relationship to Canonical Profiles
+
+A partner profile declares:
+- A base canonical profile (essential | extended | full)
+- A subset of included_fields from that base profile
+- An optional extensions_schema with a partner namespace
+
+Extraction always runs to the declared base canonical profile. Profile Completeness invariant applies at extraction time. The partner profile filters the API response, not the extraction. The full artifact is stored server-side.
+
+### meta.profile Field
+
+In v0.8.0, meta.profile accepts:
+- Canonical values: `essential`, `extended`, `full`
+- Partner profile IDs: any string not matching a canonical value triggers registry resolution
+
+This follows the same two-tier pattern as arc_type: canonical enum values remain valid; non-canonical values are accepted as strings and resolved via registry.
+
+### Certification Minimum Bar
+
+Partner profile artifacts are certification eligible when they contain a minimum of 10 populated affective fields from the 57-field affective set.
+
+The 57 affective fields are those within the Core, Constellation, Milky_Way, Gravity, and Impulse domains.
+
+Meta, Governance, Telemetry, System, and Extensions fields do not count toward the certification minimum.
+
+### Interoperability
+
+Canonical fields in a partner profile artifact are fully interoperable. Any EDM v0.8.0+ conforming reader can interpret canonical fields without knowing the partner profile.
+
+Extensions fields require bilateral agreement per Section 3.9. Readers without the partner extensions schema MUST ignore those fields gracefully.
+
+VitaPass portability is unaffected. Portable domains (Core, Constellation, Gravity, Impulse, Milky_Way) remain portable regardless of partner profile.
+
+### Registry Resolution
+
+Conforming readers encountering an unknown meta.profile value MUST:
+1. Query the partner profile registry
+2. Resolve to base profile + included_fields manifest
+3. Validate against resolved schema
+
+Canonical profiles remain valid without registry lookup.
+
+### Reference Profiles
+
+The following reference partner profiles are maintained by DeepaData:
+
+| Profile ID | Base | Fields | Use Case |
+|---|---|---|---|
+| `com.deepadata.journaling.v1` | extended | 16 | Journaling AI, identity continuity |
+| `com.deepadata.therapy.v1` | full | 24 | Therapy AI, session continuity |
+| `com.deepadata.companion.v1` | extended | 18 | Companion AI, relational depth |
+| `com.deepadata.wiki.v1` | extended | 17 | Significance wiki generation |
+
+---
+
+## 3.7.7 Profile Invariants
 
 The following invariants apply to all profiles:
 
@@ -109,7 +182,7 @@ The following invariants apply to all profiles:
 
 5. **Governance Independence**: Profile selection does not affect governance treatment. A Essential Profile artifact is subject to the same governance rules as a Full Profile artifact. Governance is determined by the Governance domain fields, not by profile.
 
-## 3.7.7 Profile Selection Guidance
+## 3.7.8 Profile Selection Guidance
 
 | Use Case | Recommended Profile | Rationale |
 |----------|---------------------|-----------|

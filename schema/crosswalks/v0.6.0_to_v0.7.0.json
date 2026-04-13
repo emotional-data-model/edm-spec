@@ -1,0 +1,187 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.6.0 to v0.7.0 Migration Crosswalk",
+  "description": "Documents changes from EDM v0.6.0 to v0.7.0 including arc_type field, extensions domain, enum expansions, field removals, and free-text enum pattern.",
+  "status": "final",
+  "version_from": "0.6.0",
+  "version_to": "0.7.0",
+  "release_date": "2026-03-22",
+  "breaking_changes": false,
+
+  "summary": {
+    "fields_added": 3,
+    "fields_removed": 5,
+    "fields_renamed": 0,
+    "enum_expansions": 2,
+    "domains_added": 1
+  },
+
+  "fields_added": [
+    {
+      "field": "constellation.arc_type",
+      "domain": "constellation",
+      "type": "string",
+      "required": false,
+      "profiles": ["extended", "full"],
+      "description": "Structural emotional arc pattern encoded at capture time. Canonical values: betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile. Free text accepted for novel arc types.",
+      "migration_action": "ADD - optional field, absence is valid"
+    },
+    {
+      "field": "extensions",
+      "domain": "extensions",
+      "type": "object",
+      "required": false,
+      "profiles": ["essential", "extended", "full"],
+      "description": "Partner-namespaced semantic enrichments. Each key is a partner or platform identifier. Values are partner-defined objects. Extensions containing semantic enrichment are included in the seal hash when present at seal time.",
+      "migration_action": "ADD - optional domain, absence is valid"
+    },
+    {
+      "field": "meta.source_timestamp",
+      "domain": "meta",
+      "type": "string",
+      "format": "date-time",
+      "required": false,
+      "profiles": ["essential", "extended", "full"],
+      "description": "Timestamp of the original source content, distinct from created_at which marks extraction time. Enables accurate temporal graph traversal.",
+      "migration_action": "ADD - optional field, absence is valid"
+    }
+  ],
+
+  "fields_removed": [
+    {
+      "field": "gravity.legacy_embed",
+      "domain": "gravity",
+      "reason": "Signal captured by transformational_pivot + strength_score + recurrence_pattern. Field was redundant.",
+      "migration_action": "DROP - no replacement needed, signal preserved in other fields"
+    },
+    {
+      "field": "telemetry.alignment_delta",
+      "domain": "telemetry",
+      "reason": "Platform feedback signal, not an artifact field. Moved to platform layer.",
+      "migration_action": "DROP - field moved to platform infrastructure"
+    },
+    {
+      "field": "system.indices.sector_weights",
+      "domain": "system",
+      "reason": "Platform-managed, always zero at extraction time, excluded from seal hash. Kept waypoint_ids only.",
+      "migration_action": "DROP - platform-managed field removed from spec"
+    },
+    {
+      "field": "crosswalks.HMD_v2_memory_type",
+      "domain": "crosswalks",
+      "reason": "Redundant with memory_type in constellation domain.",
+      "migration_action": "DROP - use constellation.memory_type instead"
+    },
+    {
+      "field": "telemetry.extraction_chunking_strategy",
+      "domain": "telemetry",
+      "reason": "Vendor pipeline concern, not representational. Belongs in Extensions or vendor infrastructure.",
+      "migration_action": "DROP - move to extensions domain if needed"
+    }
+  ],
+
+  "enum_expansions": [
+    {
+      "field": "constellation.emotion_primary",
+      "domain": "constellation",
+      "values_before": ["joy", "sadness", "fear", "anger", "wonder", "peace", "tenderness", "reverence", "pride", "anxiety", "gratitude", "longing", "hope", "shame"],
+      "values_added": ["disappointment", "relief", "frustration"],
+      "values_after": ["joy", "sadness", "fear", "anger", "wonder", "peace", "tenderness", "reverence", "pride", "anxiety", "gratitude", "longing", "hope", "shame", "disappointment", "relief", "frustration"],
+      "count_before": 14,
+      "count_after": 17,
+      "rationale": "SDK evaluation: disappointment captures unmet expectation distinct from sadness, relief captures tension release distinct from peace, frustration captures blocked goal distinct from anger."
+    },
+    {
+      "field": "constellation.narrative_arc",
+      "domain": "constellation",
+      "values_before": ["rise", "fall", "overcoming", "healing", "discovery"],
+      "values_added": ["loss", "confrontation"],
+      "values_after": ["rise", "fall", "overcoming", "healing", "discovery", "loss", "confrontation"],
+      "count_before": 5,
+      "count_after": 7,
+      "rationale": "SDK evaluation: loss captures decline without recovery arc, confrontation captures direct conflict engagement."
+    }
+  ],
+
+  "schema_changes": {
+    "enum_pattern": {
+      "description": "All enum fields now accept free text via z.union([z.enum([...]), z.string()]) pattern",
+      "affected_fields": [
+        "constellation.emotion_primary",
+        "constellation.narrative_arc",
+        "constellation.relational_dynamics",
+        "constellation.arc_type",
+        "gravity.tether_type",
+        "gravity.recurrence_pattern",
+        "impulse.coping_style",
+        "impulse.drive_state",
+        "impulse.motivational_orientation"
+      ],
+      "rationale": "Canonical values preferred for cross-artifact comparability, but accuracy takes precedence over canonical conformance. SDK enforces preferred values via Zod union pattern.",
+      "breaking_change": false
+    },
+    "system_embeddings": {
+      "field": "system.embeddings",
+      "change": "Clarified as platform-managed, not populated at extraction time, excluded from seal hash"
+    },
+    "crosswalk_fields": {
+      "change": "Clarified as optional professional mapping hooks, null valid in all profiles"
+    }
+  },
+
+  "schema_hosting": {
+    "description": "v0.7.0 schemas hosted at canonical URLs",
+    "base_url": "https://deepadata.com/schemas/edm/v0.7.0/",
+    "schemas": [
+      "edm.essential.schema.json",
+      "edm.extended.schema.json",
+      "edm.full.schema.json"
+    ],
+    "fragments_url": "https://deepadata.com/schemas/edm/v0.7.0/fragments/"
+  },
+
+  "backward_compatibility": {
+    "v06_to_v07": "v0.6.0 artifacts remain valid under v0.7.0. Fields removed in v0.7.0 are ignored by v0.7.0 validators. New fields are optional.",
+    "v07_to_v06": "v0.7.0 artifacts using new fields (arc_type, extensions, source_timestamp) or new enum values will fail v0.6.0 strict validation."
+  },
+
+  "forward_compatibility": {
+    "existing_artifacts": "No migration required for existing v0.6.0 artifacts",
+    "new_extractions": "New extractions may use arc_type, extensions, source_timestamp, and expanded enum values",
+    "validation": "v0.7.0 validators accept all v0.6.0 values plus new fields and enum values"
+  },
+
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none",
+    "steps": [
+      "1. Update meta.version to '0.7.0'",
+      "2. Remove deprecated fields if present (legacy_embed, alignment_delta, sector_weights, HMD_v2_memory_type, extraction_chunking_strategy)",
+      "3. Optionally add arc_type if extractable from source content",
+      "4. Optionally add extensions domain for partner-specific data",
+      "5. Optionally add meta.source_timestamp if original content timestamp known",
+      "6. Update schema $ref URLs to v0.7.0 canonical URLs",
+      "7. Validate against appropriate v0.7.0 profile schema"
+    ]
+  },
+
+  "migration_script_template": {
+    "description": "Pseudocode for migrating v0.6.0 artifacts to v0.7.0",
+    "code": [
+      "// Update version",
+      "artifact.meta.version = '0.7.0';",
+      "",
+      "// Remove deprecated fields",
+      "delete artifact.gravity?.legacy_embed;",
+      "delete artifact.telemetry?.alignment_delta;",
+      "delete artifact.telemetry?.extraction_chunking_strategy;",
+      "delete artifact.system?.indices?.sector_weights;",
+      "delete artifact.crosswalks?.HMD_v2_memory_type;",
+      "",
+      "// New fields are optional - add if data available",
+      "// artifact.constellation.arc_type = detectArcType(sourceContent);",
+      "// artifact.meta.source_timestamp = originalContentTimestamp;",
+      "// artifact.extensions = { 'com.partner': { ... } };"
+    ]
+  }
+}

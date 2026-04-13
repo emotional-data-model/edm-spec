@@ -1,0 +1,144 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.8.0/edm.essential.schema.json",
+  "title": "EDM v0.8.0 Essential Profile",
+  "description": "Lightweight profile for basic emotional context capture. 5 domains, 24 fields. Suitable for journaling apps, companion AI, and scenarios requiring minimal memory footprint.",
+  "type": "object",
+  "required": ["meta", "core", "constellation", "governance", "telemetry"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "description": "Identity, provenance, and consent metadata. Essential profile requires minimal governance fields.",
+      "type": "object",
+      "required": ["version", "profile", "created_at", "visibility", "pii_tier", "consent_basis"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["string", "null"],
+          "description": "Unique identifier for the EDM artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "version": {
+          "type": "string",
+          "description": "EDM schema version.",
+          "pattern": "^0\\.8\\.[0-9]+$"
+        },
+        "profile": {
+          "type": "string",
+          "description": "Canonical profile name or partner profile ID. Canonical values: essential, extended, full. Non-canonical values trigger partner profile registry resolution.",
+          "examples": ["essential", "extended", "full", "com.deepadata.journaling.v1"]
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Artifact extraction timestamp.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "description": "Optional post-extraction update timestamp.",
+          "format": "date-time"
+        },
+        "locale": {
+          "type": ["string", "null"],
+          "description": "Linguistic and cultural context.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "owner_user_id": {
+          "type": ["string", "null"],
+          "description": "Artifact owner identifier."
+        },
+        "parent_id": {
+          "type": ["string", "null"],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["private", "shared", "public"],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": "string",
+          "enum": ["none", "low", "moderate", "high", "extreme"],
+          "description": "PII classification level."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": ["consent", "contract", "legitimate_interest", "none"],
+          "description": "Legal basis for processing."
+        }
+      }
+    },
+    "core": {
+      "description": "Essential emotional primitives. 6 fields for Essential profile (narrative excluded).",
+      "type": "object",
+      "required": ["anchor", "spark", "wound", "fuel", "bridge", "echo"],
+      "additionalProperties": false,
+      "properties": {
+        "anchor": {
+          "type": ["string", "null"],
+          "description": "Central person, object, or theme."
+        },
+        "spark": {
+          "type": ["string", "null"],
+          "description": "Trigger of emotional response."
+        },
+        "wound": {
+          "type": ["string", "null"],
+          "description": "Emotional pain or vulnerability."
+        },
+        "fuel": {
+          "type": ["string", "null"],
+          "description": "What energized the experience."
+        },
+        "bridge": {
+          "type": ["string", "null"],
+          "description": "Connection between past and present."
+        },
+        "echo": {
+          "type": ["string", "null"],
+          "description": "What continues to resonate."
+        }
+      }
+    },
+    "constellation": {
+      "description": "Emotional classification. Essential profile requires primary emotion, subtones, and narrative arc.",
+      "type": "object",
+      "required": ["emotion_primary", "emotion_subtone", "narrative_arc"],
+      "additionalProperties": false,
+      "properties": {
+        "emotion_primary": {
+          "type": ["string", "null"],
+          "description": "Dominant emotional quality.",
+          "x_constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted."
+        },
+        "emotion_subtone": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 0,
+          "maxItems": 4,
+          "description": "Secondary emotional nuances."
+        },
+        "narrative_arc": {
+          "type": ["string", "null"],
+          "description": "Story trajectory.",
+          "x_constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted."
+        }
+      }
+    },
+    "governance": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
+    },
+    "telemetry": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/telemetry.json"
+    }
+  },
+  "definitions": {
+    "profile_info": {
+      "name": "essential",
+      "domains": ["meta", "core", "constellation", "governance", "telemetry"],
+      "field_count": 24,
+      "use_cases": ["journaling", "companion_ai", "lightweight_memory"]
+    }
+  }
+}

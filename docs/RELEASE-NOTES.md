@@ -1,8 +1,35 @@
 # Release Notes — Emotional Data Model (EDM)
 
-## EDM v0.6.0 (March 2026) — Current
+## EDM v0.8.0 (April 2026) — In Progress
+
+**Branch:** `feat/v0.8.0`
+
+- Partner Profiles (Section 3.7.6): Named, versioned schema declarations for vertical-specific field selection
+- `meta.profile` two-tier enum: Canonical values plus partner profile ID support
+- `arc_type` canonical values: +gratitude, +authenticity (14 total, was 12)
+- Reference partner profiles: journaling, therapy, companion, wiki
+- Schema files: `edm.v0.8.{essential,extended,full}.schema.json`
+
+See [PROFILES.md](PROFILES.md) Section 3.7.6 for Partner Profiles details.
+
+---
+
+## EDM v0.7.0 (March 2026) — Current
 
 **DOI:** [10.5281/zenodo.19211903](https://doi.org/10.5281/zenodo.19211903)
+
+- `arc_type` field: Structural emotional arc pattern (12 canonical values)
+- `extensions` domain: Partner-namespaced semantic enrichments
+- `meta.source_timestamp`: Original content timestamp
+- Enum expansions: emotion_primary (+3), narrative_arc (+2)
+- Free-text enum pattern: All enum fields accept canonical OR free text
+- Schema files: `edm.v0.7.{essential,extended,full}.schema.json`
+
+See [CHANGELOG.md](../CHANGELOG.md) for full v0.7.0 details.
+
+---
+
+## EDM v0.6.0 (March 2026)
 
 - Implementation Profiles: Essential (24 fields), Extended (50 fields), Full (96 fields)
 - Conformance Levels: Compliant, Sealed, Certified
@@ -71,7 +98,9 @@ Additive patch release with nine canonical enumeration values across five fields
 
 | Version | Date | Status |
 |---------|------|--------|
-| v0.6.0 | March 2026 | **Current** |
+| v0.8.0 | April 2026 | **In Progress** |
+| v0.7.0 | March 2026 | **Current** |
+| v0.6.0 | March 2026 | Published |
 | v0.5.1 | March 2026 | Published |
 | v0.5.0 | February 2026 | Published |
 | v0.4.0 | December 2025 | Published |

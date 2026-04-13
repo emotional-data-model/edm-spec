@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.7.0 to v0.8.0 Migration Crosswalk",
+  "description": "Documents changes from EDM v0.7.0 to v0.8.0 including Partner Profiles, meta.profile two-tier enum, and arc_type enum expansions.",
+  "status": "final",
+  "version_from": "0.7.0",
+  "version_to": "0.8.0",
+  "release_date": "2026-04-13",
+  "breaking_changes": false,
+
+  "summary": {
+    "fields_added": 0,
+    "fields_removed": 0,
+    "fields_renamed": 0,
+    "enum_expansions": 1,
+    "new_features": 1
+  },
+
+  "schema_changes": {
+    "meta_profile_two_tier": {
+      "field": "meta.profile",
+      "description": "meta.profile now accepts partner profile IDs in addition to canonical values. Canonical values (essential, extended, full) remain valid. Non-canonical values trigger partner profile registry resolution.",
+      "pattern": "Canonical enum values OR partner profile ID string (reverse-DNS notation)",
+      "examples": [
+        "essential",
+        "extended",
+        "full",
+        "com.deepadata.journaling.v1",
+        "com.deepadata.therapy.v1",
+        "com.deepadata.companion.v1",
+        "com.deepadata.wiki.v1"
+      ],
+      "breaking_change": false,
+      "migration_action": "No migration required. Existing canonical values remain valid."
+    }
+  },
+
+  "enum_expansions": [
+    {
+      "field": "constellation.arc_type",
+      "domain": "constellation",
+      "values_before": ["betrayal", "liberation", "grief", "discovery", "resistance", "bond", "moral_awakening", "transformation", "reconciliation", "reckoning", "threshold", "exile"],
+      "values_added": ["gratitude", "authenticity"],
+      "values_after": ["betrayal", "liberation", "grief", "discovery", "resistance", "bond", "moral_awakening", "transformation", "reconciliation", "reckoning", "threshold", "exile", "gratitude", "authenticity"],
+      "count_before": 12,
+      "count_after": 14,
+      "rationale": "WhatMattered benchmark miss analysis (Q7, Q13). Both values were in production use (Supabase arc_signatures table) and are semantically distinct arc patterns. Gratitude: moments of thankfulness and appreciation. Authenticity: self-alignment, identity congruence."
+    }
+  ],
+
+  "new_features": {
+    "partner_profiles": {
+      "description": "Partner Profiles (Section 3.7.6) enable vertical-specific field selection within the EDM profile system. A partner profile is a named, versioned schema declaration with a base canonical profile and a subset of included fields.",
+      "specification_section": "3.7.6",
+      "profile_id_format": "Reverse-DNS notation (e.g., com.deepadata.journaling.v1)",
+      "relationship_to_canonical": "Partner profile declares a base profile (essential/extended/full) and a subset of included_fields. Extraction runs to base profile; filtering at response time.",
+      "certification_minimum_bar": "10+ populated affective fields from the 57-field affective set (Core, Constellation, Milky_Way, Gravity, Impulse domains)",
+      "reference_profiles": [
+        {
+          "profile_id": "com.deepadata.journaling.v1",
+          "base_profile": "extended",
+          "field_count": 16,
+          "use_case": "Journaling AI, identity continuity"
+        },
+        {
+          "profile_id": "com.deepadata.therapy.v1",
+          "base_profile": "full",
+          "field_count": 24,
+          "use_case": "Therapy AI, session continuity"
+        },
+        {
+          "profile_id": "com.deepadata.companion.v1",
+          "base_profile": "extended",
+          "field_count": 18,
+          "use_case": "Companion AI, relational depth"
+        },
+        {
+          "profile_id": "com.deepadata.wiki.v1",
+          "base_profile": "extended",
+          "field_count": 17,
+          "use_case": "Significance wiki generation"
+        }
+      ]
+    }
+  },
+
+  "schema_hosting": {
+    "description": "v0.8.0 schemas hosted at canonical URLs",
+    "base_url": "https://deepadata.com/schemas/edm/v0.8.0/",
+    "schemas": [
+      "edm.essential.schema.json",
+      "edm.extended.schema.json",
+      "edm.full.schema.json"
+    ],
+    "fragments_url": "https://deepadata.com/schemas/edm/v0.8.0/fragments/"
+  },
+
+  "backward_compatibility": {
+    "v07_to_v08": "v0.7.0 artifacts remain valid under v0.8.0. No fields removed. New arc_type values are additive. Partner profiles are optional.",
+    "v08_to_v07": "v0.8.0 artifacts using new arc_type values (gratitude, authenticity) will fail v0.7.0 strict validation. v0.8.0 artifacts using partner profile IDs in meta.profile will fail v0.7.0 strict validation."
+  },
+
+  "forward_compatibility": {
+    "existing_artifacts": "No migration required for existing v0.7.0 artifacts",
+    "new_extractions": "New extractions may use partner profile IDs in meta.profile and new arc_type values",
+    "validation": "v0.8.0 validators accept all v0.7.0 values plus new arc_type values and partner profile IDs"
+  },
+
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none",
+    "steps": [
+      "1. Update meta.version to '0.8.0'",
+      "2. Optionally update meta.profile to a partner profile ID if field filtering is desired",
+      "3. Optionally use new arc_type values (gratitude, authenticity) where appropriate",
+      "4. Update schema $ref URLs to v0.8.0 canonical URLs",
+      "5. Validate against appropriate v0.8.0 profile schema"
+    ]
+  },
+
+  "migration_script_template": {
+    "description": "Pseudocode for migrating v0.7.0 artifacts to v0.8.0",
+    "code": [
+      "// Update version",
+      "artifact.meta.version = '0.8.0';",
+      "",
+      "// Partner profiles are optional - existing canonical profiles remain valid",
+      "// artifact.meta.profile remains 'essential', 'extended', or 'full'",
+      "// OR use partner profile ID:",
+      "// artifact.meta.profile = 'com.deepadata.journaling.v1';",
+      "",
+      "// New arc_type values available",
+      "// artifact.constellation.arc_type may now be 'gratitude' or 'authenticity'"
+    ]
+  }
+}

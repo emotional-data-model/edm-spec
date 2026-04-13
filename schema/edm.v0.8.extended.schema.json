@@ -1,0 +1,177 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.8.0/edm.extended.schema.json",
+  "title": "EDM v0.8.0 Extended Profile",
+  "description": "Mid-tier profile for rich emotional context with contextual and gravity domains. 7 domains, 50 fields. Suitable for therapy apps, memory platforms, and scenarios requiring relational context.",
+  "type": "object",
+  "required": ["meta", "core", "constellation", "milky_way", "gravity", "governance", "telemetry"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "description": "Identity, provenance, and consent metadata. Extended profile includes optional source tracking.",
+      "type": "object",
+      "required": ["version", "profile", "created_at", "visibility", "pii_tier", "consent_basis"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["string", "null"],
+          "description": "Unique identifier for the EDM artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "version": {
+          "type": "string",
+          "description": "EDM schema version.",
+          "pattern": "^0\\.8\\.[0-9]+$"
+        },
+        "profile": {
+          "type": "string",
+          "description": "Canonical profile name or partner profile ID. Canonical values: essential, extended, full. Non-canonical values trigger partner profile registry resolution.",
+          "examples": ["essential", "extended", "full", "com.deepadata.journaling.v1"]
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Artifact extraction timestamp.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "description": "Optional post-extraction update timestamp.",
+          "format": "date-time"
+        },
+        "locale": {
+          "type": ["string", "null"],
+          "description": "Linguistic and cultural context.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "owner_user_id": {
+          "type": ["string", "null"],
+          "description": "Artifact owner identifier."
+        },
+        "parent_id": {
+          "type": ["string", "null"],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["private", "shared", "public"],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": "string",
+          "enum": ["none", "low", "moderate", "high", "extreme"],
+          "description": "PII classification level."
+        },
+        "source_type": {
+          "type": ["string", "null"],
+          "enum": ["text", "audio", "image", "video", "mixed", null],
+          "description": "Source medium."
+        },
+        "source_context": {
+          "type": ["string", "null"],
+          "description": "Optional input scenario description."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": ["consent", "contract", "legitimate_interest", "none"],
+          "description": "Legal basis for processing."
+        },
+        "consent_scope": {
+          "type": ["string", "null"],
+          "description": "Consent scope description."
+        },
+        "tags": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "User-defined labels."
+        }
+      }
+    },
+    "core": {
+      "description": "Emotional primitives with narrative. 7 fields for Extended profile.",
+      "type": "object",
+      "required": ["anchor", "spark", "wound", "fuel", "bridge", "echo"],
+      "additionalProperties": false,
+      "properties": {
+        "anchor": {
+          "type": ["string", "null"],
+          "description": "Central person, object, or theme."
+        },
+        "spark": {
+          "type": ["string", "null"],
+          "description": "Trigger of emotional response."
+        },
+        "wound": {
+          "type": ["string", "null"],
+          "description": "Emotional pain or vulnerability."
+        },
+        "fuel": {
+          "type": ["string", "null"],
+          "description": "What energized the experience."
+        },
+        "bridge": {
+          "type": ["string", "null"],
+          "description": "Connection between past and present."
+        },
+        "echo": {
+          "type": ["string", "null"],
+          "description": "What continues to resonate."
+        },
+        "narrative": {
+          "type": ["string", "null"],
+          "description": "Compressed account of the experience."
+        }
+      }
+    },
+    "constellation": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/constellation.json"
+    },
+    "milky_way": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/milky_way.json"
+    },
+    "gravity": {
+      "description": "Emotional weight and binding. Extended profile uses core gravity fields.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "emotional_weight": {
+          "type": ["number", "null"],
+          "description": "Felt intensity (0.0-1.0)."
+        },
+        "valence": {
+          "type": ["string", "null"],
+          "enum": ["positive", "negative", "mixed"],
+          "description": "Emotional direction."
+        },
+        "tether_type": {
+          "type": ["string", "null"],
+          "enum": ["person", "symbol", "event", "place", "ritual", "object", "tradition", "identity", null],
+          "description": "Emotional anchor type."
+        },
+        "recurrence_pattern": {
+          "type": ["string", "null"],
+          "enum": ["cyclical", "isolated", "chronic", "emerging"],
+          "description": "Temporal recurrence structure."
+        },
+        "strength_score": {
+          "type": ["number", "null"],
+          "description": "Binding strength (0.0-1.0)."
+        }
+      }
+    },
+    "governance": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
+    },
+    "telemetry": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/telemetry.json"
+    }
+  },
+  "definitions": {
+    "profile_info": {
+      "name": "extended",
+      "domains": ["meta", "core", "constellation", "milky_way", "gravity", "governance", "telemetry"],
+      "field_count": 50,
+      "use_cases": ["therapy_apps", "memory_platforms", "relational_context"]
+    }
+  }
+}
