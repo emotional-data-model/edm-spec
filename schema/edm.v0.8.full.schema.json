@@ -24,12 +24,18 @@
           "pattern": "^0\\.8\\.[0-9]+$"
         },
         "profile": {
-          "anyOf": [
-            { "enum": ["essential", "extended", "full"] },
-            { "type": "string", "pattern": "^partner:.+" }
-          ],
-          "description": "Canonical profile name or partner profile ID with partner: prefix per Section 3.7.2",
-          "examples": ["essential", "extended", "full", "partner:com.deepadata.journaling.v1"]
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": ["essential", "extended", "full"],
+              "description": "Canonical extraction profile"
+            },
+            {
+              "type": "string",
+              "pattern": "^partner:.+$",
+              "description": "Partner profile ID with namespace prefix per EDM v0.8.0 Section 3.7.2 and ADR-0017 — e.g. partner:com.deepadata.journaling.v1"
+            }
+          ]
         },
         "created_at": {
           "type": "string",
