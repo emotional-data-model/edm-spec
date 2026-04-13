@@ -1,0 +1,131 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.8.0/edm.full.schema.json",
+  "title": "EDM v0.8.0 Full Profile",
+  "description": "Complete profile for maximum emotional fidelity. 10 domains, 96 fields. Suitable for clinical applications, research, and scenarios requiring full affective context with interoperability crosswalks.",
+  "type": "object",
+  "required": ["meta", "core", "constellation", "milky_way", "gravity", "impulse", "governance", "telemetry", "system", "crosswalks"],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "description": "Full identity, provenance, and consent metadata with all tracking fields.",
+      "type": "object",
+      "required": ["version", "profile", "created_at", "visibility", "pii_tier", "consent_basis"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": ["string", "null"],
+          "description": "Unique identifier for the EDM artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "version": {
+          "type": "string",
+          "description": "EDM schema version.",
+          "pattern": "^0\\.8\\.[0-9]+$"
+        },
+        "profile": {
+          "type": "string",
+          "description": "Canonical profile name or partner profile ID. Canonical values: essential, extended, full. Non-canonical values trigger partner profile registry resolution.",
+          "examples": ["essential", "extended", "full", "com.deepadata.journaling.v1"]
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Artifact extraction timestamp.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": ["string", "null"],
+          "description": "Post-extraction update timestamp.",
+          "format": "date-time"
+        },
+        "locale": {
+          "type": ["string", "null"],
+          "description": "Linguistic and cultural context.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "owner_user_id": {
+          "type": ["string", "null"],
+          "description": "Artifact owner identifier."
+        },
+        "parent_id": {
+          "type": ["string", "null"],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": ["private", "shared", "public"],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": "string",
+          "enum": ["none", "low", "moderate", "high", "extreme"],
+          "description": "PII classification level."
+        },
+        "source_type": {
+          "type": ["string", "null"],
+          "enum": ["text", "audio", "image", "video", "mixed", null],
+          "description": "Source medium."
+        },
+        "source_context": {
+          "type": ["string", "null"],
+          "description": "Input scenario description."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": ["consent", "contract", "legitimate_interest", "none"],
+          "description": "Legal basis for processing."
+        },
+        "consent_scope": {
+          "type": ["string", "null"],
+          "description": "Consent scope description."
+        },
+        "consent_revoked_at": {
+          "type": ["string", "null"],
+          "description": "Consent revocation timestamp.",
+          "format": "date-time"
+        },
+        "tags": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "User-defined labels."
+        }
+      }
+    },
+    "core": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/core.json"
+    },
+    "constellation": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/constellation.json"
+    },
+    "milky_way": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/milky_way.json"
+    },
+    "gravity": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/gravity.json"
+    },
+    "impulse": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/impulse.json"
+    },
+    "governance": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
+    },
+    "telemetry": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/telemetry.json"
+    },
+    "system": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/system.json"
+    },
+    "crosswalks": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/crosswalks.json"
+    }
+  },
+  "definitions": {
+    "profile_info": {
+      "name": "full",
+      "domains": ["meta", "core", "constellation", "milky_way", "gravity", "impulse", "governance", "telemetry", "system", "crosswalks"],
+      "field_count": 96,
+      "use_cases": ["clinical_applications", "research", "full_affective_context", "interoperability"]
+    }
+  }
+}
