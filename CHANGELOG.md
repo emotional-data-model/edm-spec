@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **Partner Profiles (Section 3.7.6)**: Named, versioned schema declarations
   for vertical-specific field selection. Partner profile IDs use reverse-DNS
-  notation (e.g., `com.deepadata.journaling.v1`). Minimum 10 affective fields
+  notation (e.g., `partner:com.deepadata.journaling.v1`). Minimum 10 affective fields
   from the 57-field affective set required for certification eligibility.
 
 - **`meta.profile` two-tier enum**: Canonical values (`essential`, `extended`,

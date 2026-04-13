@@ -108,10 +108,10 @@ com.example.profilename.v1
 ```
 
 Examples:
-- `com.deepadata.journaling.v1`
-- `com.deepadata.therapy.v1`
-- `com.deepadata.companion.v1`
-- `com.deepadata.wiki.v1`
+- `partner:com.deepadata.journaling.v1`
+- `partner:com.deepadata.therapy.v1`
+- `partner:com.deepadata.companion.v1`
+- `partner:com.deepadata.wiki.v1`
 
 ### Relationship to Canonical Profiles
 
@@ -161,10 +161,10 @@ The following reference partner profiles are maintained by DeepaData:
 
 | Profile ID | Base | Fields | Use Case |
 |---|---|---|---|
-| `com.deepadata.journaling.v1` | extended | 16 | Journaling AI, identity continuity |
-| `com.deepadata.therapy.v1` | full | 24 | Therapy AI, session continuity |
-| `com.deepadata.companion.v1` | extended | 18 | Companion AI, relational depth |
-| `com.deepadata.wiki.v1` | extended | 17 | Significance wiki generation |
+| `partner:com.deepadata.journaling.v1` | extended | 16 | Journaling AI, identity continuity |
+| `partner:com.deepadata.therapy.v1` | full | 24 | Therapy AI, session continuity |
+| `partner:com.deepadata.companion.v1` | extended | 18 | Companion AI, relational depth |
+| `partner:com.deepadata.wiki.v1` | extended | 17 | Significance wiki generation |
 
 ---
 

@@ -25,10 +25,10 @@
         "essential",
         "extended",
         "full",
-        "com.deepadata.journaling.v1",
-        "com.deepadata.therapy.v1",
-        "com.deepadata.companion.v1",
-        "com.deepadata.wiki.v1"
+        "partner:com.deepadata.journaling.v1",
+        "partner:com.deepadata.therapy.v1",
+        "partner:com.deepadata.companion.v1",
+        "partner:com.deepadata.wiki.v1"
       ],
       "breaking_change": false,
       "migration_action": "No migration required. Existing canonical values remain valid."
@@ -52,30 +52,30 @@
     "partner_profiles": {
       "description": "Partner Profiles (Section 3.7.6) enable vertical-specific field selection within the EDM profile system. A partner profile is a named, versioned schema declaration with a base canonical profile and a subset of included fields.",
       "specification_section": "3.7.6",
-      "profile_id_format": "Reverse-DNS notation (e.g., com.deepadata.journaling.v1)",
+      "profile_id_format": "Reverse-DNS notation with partner: prefix (e.g., partner:com.deepadata.journaling.v1)",
       "relationship_to_canonical": "Partner profile declares a base profile (essential/extended/full) and a subset of included_fields. Extraction runs to base profile; filtering at response time.",
       "certification_minimum_bar": "10+ populated affective fields from the 57-field affective set (Core, Constellation, Milky_Way, Gravity, Impulse domains)",
       "reference_profiles": [
         {
-          "profile_id": "com.deepadata.journaling.v1",
+          "profile_id": "partner:com.deepadata.journaling.v1",
           "base_profile": "extended",
           "field_count": 16,
           "use_case": "Journaling AI, identity continuity"
         },
         {
-          "profile_id": "com.deepadata.therapy.v1",
+          "profile_id": "partner:com.deepadata.therapy.v1",
           "base_profile": "full",
           "field_count": 24,
           "use_case": "Therapy AI, session continuity"
         },
         {
-          "profile_id": "com.deepadata.companion.v1",
+          "profile_id": "partner:com.deepadata.companion.v1",
           "base_profile": "extended",
           "field_count": 18,
           "use_case": "Companion AI, relational depth"
         },
         {
-          "profile_id": "com.deepadata.wiki.v1",
+          "profile_id": "partner:com.deepadata.wiki.v1",
           "base_profile": "extended",
           "field_count": 17,
           "use_case": "Significance wiki generation"
@@ -127,7 +127,7 @@
       "// Partner profiles are optional - existing canonical profiles remain valid",
       "// artifact.meta.profile remains 'essential', 'extended', or 'full'",
       "// OR use partner profile ID:",
-      "// artifact.meta.profile = 'com.deepadata.journaling.v1';",
+      "// artifact.meta.profile = 'partner:com.deepadata.journaling.v1';",
       "",
       "// New arc_type values available",
       "// artifact.constellation.arc_type may now be 'gratitude' or 'authenticity'"
