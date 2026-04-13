@@ -210,7 +210,7 @@
         "string",
         "null"
       ],
-      "x_constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile — or free text if no canonical value fits"
+      "x_constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile, gratitude, authenticity — or free text if no canonical value fits"
     }
   },
   "additionalProperties": false,

@@ -5,6 +5,38 @@ All notable changes to the Emotional Data Model (EDM) specification are document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.0] - 2026-04-13
+
+### Added
+
+- **Partner Profiles (Section 3.7.6)**: Named, versioned schema declarations
+  for vertical-specific field selection. Partner profile IDs use reverse-DNS
+  notation (e.g., `com.deepadata.journaling.v1`). Minimum 10 affective fields
+  from the 57-field affective set required for certification eligibility.
+
+- **`meta.profile` two-tier enum**: Canonical values (`essential`, `extended`,
+  `full`) remain valid. Non-canonical values accepted as strings and trigger
+  partner profile registry resolution. Same pattern as `arc_type`.
+
+- **2 `arc_type` canonical values**: gratitude, authenticity (14 total, was 12)
+
+- **Reference partner profiles**: journaling, therapy, companion, wiki
+  (maintained by DeepaData as implementation examples)
+
+### Changed
+
+- **docs/PROFILES.md sections renumbered**:
+  - 3.7.6: Partner Profiles (new)
+  - 3.7.7: Profile Invariants (was 3.7.6)
+  - 3.7.8: Profile Selection Guidance (was 3.7.7)
+
+### Migration
+
+- No breaking changes. v0.7.x artifacts remain valid.
+- New `arc_type` values (gratitude, authenticity) are additive only.
+- Partner profiles are optional — canonical profiles remain the default.
+- See `schema/crosswalks/v0.7.0_to_v0.8.0.json` for detailed migration mapping.
+
 ## [0.7.0] - 2026-03-22
 
 ### Added
@@ -166,6 +198,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 10 domains, 102 fields
 - Closed provenance pre-release
 
+[0.8.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.0...v0.5.1
