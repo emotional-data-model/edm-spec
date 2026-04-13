@@ -6,6 +6,7 @@
 
 - Partner Profiles (Section 3.7.6): Named, versioned schema declarations for vertical-specific field selection
 - `meta.profile` two-tier enum: Canonical values plus partner profile ID support
+- `meta.profile` namespace model: Partner profile IDs now declared with `partner:` prefix per ADR-0016
 - `arc_type` canonical values: +gratitude, +authenticity (14 total, was 12)
 - Reference partner profiles: journaling, therapy, companion, wiki
 - Schema files: `edm.v0.8.{essential,extended,full}.schema.json`

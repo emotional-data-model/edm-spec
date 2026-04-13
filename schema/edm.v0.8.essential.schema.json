@@ -24,9 +24,12 @@
           "pattern": "^0\\.8\\.[0-9]+$"
         },
         "profile": {
-          "type": "string",
-          "description": "Canonical profile name or partner profile ID. Canonical values: essential, extended, full. Non-canonical values trigger partner profile registry resolution.",
-          "examples": ["essential", "extended", "full", "com.deepadata.journaling.v1"]
+          "anyOf": [
+            { "enum": ["essential", "extended", "full"] },
+            { "type": "string", "pattern": "^partner:.+" }
+          ],
+          "description": "Canonical profile name or partner profile ID with partner: prefix per Section 3.7.2",
+          "examples": ["essential", "extended", "full", "partner:com.deepadata.journaling.v1"]
         },
         "created_at": {
           "type": "string",
