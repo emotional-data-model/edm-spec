@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "id": "a1b2c3d4-e5f6-4789-abcd-ef0123456789",
+    "version": "0.8.0",
+    "profile": "com.deepadata.journaling.v1",
+    "created_at": "2026-04-13T08:30:00.000Z",
+    "owner_user_id": "vp-03KZ5HLXQ8YUKZ0RO8CO",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "core": {
+    "anchor": "morning writing practice",
+    "spark": "dream about grandmother's garden",
+    "echo": "sense of roots and belonging",
+    "narrative": "Woke from a vivid dream set in my grandmother's garden — the one she tended for forty years before she passed. I was helping her weed the tomatoes while she told stories about her own mother. The smell of dirt and sun-warmed leaves felt real. Three years since she died and I still reach for the phone to tell her things. Started journaling because she said writing keeps memories alive. Maybe this is how I talk to her now."
+  },
+  "constellation": {
+    "emotion_primary": "longing",
+    "emotion_subtone": [
+      "tenderness",
+      "gratitude",
+      "peace"
+    ],
+    "narrative_arc": "reflection",
+    "identity_thread": "keeper of family stories",
+    "arc_type": "grief",
+    "temporal_context": "midlife",
+    "memory_type": "legacy_artifact"
+  },
+  "gravity": {
+    "emotional_weight": 0.78,
+    "valence": "mixed",
+    "recurrence_pattern": "cyclical",
+    "temporal_decay": "slow",
+    "retrieval_keys": [
+      "grandmother",
+      "garden",
+      "dream",
+      "tomatoes",
+      "family stories"
+    ]
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.92,
+    "extraction_model": "claude-sonnet-4-20250514"
+  }
+}
