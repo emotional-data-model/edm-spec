@@ -9,9 +9,9 @@ the structured artifact format that encodes what mattered at
 capture time. This is the open standard. Everything else in
 the DeepaData ecosystem implements or consumes this spec.
 
-- **Current version:** v0.7.0
+- **Current version:** v0.8.0
 - **License:** MIT (open standard)
-- **Zenodo DOI:** 10.5281/zenodo.19211903
+- **Zenodo DOI:** 10.5281/zenodo.19555166
 - **Remote:** github.com/emotional-data-model/edm-spec
 
 ## Role in the DeepaData System
@@ -31,9 +31,9 @@ seal, or verify — those happen downstream.
 
 ## What This Repo Contains
 
-- `schema/edm.v0.7.essential.schema.json` — Essential profile (5 domains, 24 fields)
-- `schema/edm.v0.7.extended.schema.json` — Extended profile (8 domains, 50 fields)
-- `schema/edm.v0.7.full.schema.json` — Full profile (10 domains, 96 fields)
+- `schema/edm.v0.8.essential.schema.json` — Essential profile (5 domains, 24 fields)
+- `schema/edm.v0.8.extended.schema.json` — Extended profile (8 domains, 50 fields)
+- `schema/edm.v0.8.full.schema.json` — Full profile (10 domains, 96 fields)
 - `schema/fragments/*.json` — Shared domain schemas
 - `docs/` — Normative documentation
 - `examples/*.ddna.json` — Validated example artifacts
