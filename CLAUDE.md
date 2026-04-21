@@ -64,6 +64,33 @@ Infrastructure:   META, GOVERNANCE, TELEMETRY, SYSTEM, CROSSWALKS, EXTENSIONS
 | Extended | 8 | 50 | Compliant, Sealed, Certified |
 | Full | 10 | 96 | Compliant, Sealed, Certified |
 
+## Partner Profiles (v0.8.0, §3.7.6)
+
+Named, versioned field manifests against a canonical base profile.
+`meta.profile` uses `partner:` prefix per ADR-0017.
+
+Four canonical partner profiles per whitepaper §3.7.6.6 and
+examples/example-partner-*.json:5:
+
+| Profile ID | Base | Fields |
+|---|---|---|
+| `partner:com.deepadata.journaling.v1` | Extended | 16 |
+| `partner:com.deepadata.therapy.v1` | Full | 24 |
+| `partner:com.deepadata.companion.v1` | Extended | 18 |
+| `partner:com.deepadata.wiki.v1` | Extended | 17 |
+
+## Arc Types (v0.8.0)
+
+14 canonical arc_types per edm-schema.ts:189-196. v0.8.0 added
+`gratitude` and `authenticity`:
+
+```
+betrayal, liberation, grief, discovery, resistance, bond,
+moral_awakening, transformation, reconciliation, reckoning,
+threshold, exile,
+gratitude, authenticity
+```
+
 ## Source of Truth
 
 For full project context, cross-repo state, and architectural decisions:
