@@ -1,0 +1,6 @@
+{
+  "verified": false,
+  "verificationMethod": "did:web:example.com#key-1",
+  "created": "2026-04-22T00:00:00Z",
+  "expectedReason": "DID_WEB_NO_RESOLVER"
+}

@@ -1,0 +1,6 @@
+{
+  "verified": false,
+  "verificationMethod": "did:key:z6MktwupdmLXVVqTzCw4i46r4uGyosGXRnR3XjN4Zq7oMMsw",
+  "created": "2020-01-01T00:00:00Z",
+  "expectedReason": "PROOF_EXPIRED"
+}
