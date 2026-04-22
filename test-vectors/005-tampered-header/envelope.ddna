@@ -1,0 +1,77 @@
+{
+  "ddna_header": {
+    "ddna_version": "1.1",
+    "created_at": "2026-04-22T00:00:00Z",
+    "edm_version": "0.8.0",
+    "owner_user_id": "test-user-001",
+    "exportability": "allowed",
+    "jurisdiction": "TAMPERED",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "consent_basis": "consent",
+    "masking_rules": [],
+    "payload_type": "edm.v0.8.0",
+    "audit_chain": [
+      {
+        "at": "2026-04-22T00:00:00Z",
+        "event": "created",
+        "agent": "test-vector-generator"
+      }
+    ]
+  },
+  "edm_payload": {
+    "meta": {
+      "id": "test-vector-001-essential",
+      "version": "0.8.0",
+      "profile": "essential",
+      "created_at": "2026-04-22T00:00:00Z",
+      "owner_user_id": "test-user-001",
+      "consent_basis": "consent",
+      "visibility": "private",
+      "pii_tier": "moderate"
+    },
+    "core": {
+      "anchor": "test anchor",
+      "spark": "test spark",
+      "wound": null,
+      "fuel": "test fuel",
+      "bridge": null,
+      "echo": "test echo"
+    },
+    "constellation": {
+      "emotion_primary": "joy",
+      "emotion_subtone": [
+        "grateful"
+      ],
+      "narrative_arc": "overcoming"
+    },
+    "governance": {
+      "jurisdiction": "AU",
+      "retention_policy": {
+        "basis": "user_defined",
+        "ttl_days": null,
+        "on_expiry": "soft_delete"
+      },
+      "subject_rights": {
+        "portable": true,
+        "erasable": true,
+        "explainable": false
+      }
+    },
+    "telemetry": {
+      "entry_confidence": 1,
+      "extraction_model": "test-model"
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-jcs-2022",
+    "created": "2026-04-22T00:00:00Z",
+    "verificationMethod": "did:key:z6MktwupdmLXVVqTzCw4i46r4uGyosGXRnR3XjN4Zq7oMMsw",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z5NzgjzUNjHeKFKwFih9M7HRUKkHi6SSYS5jmrenxQkY7exrQ2X99NLtMLpGoVeLPZXovWty9e9p9HTiBrQtzWrbq"
+  }
+}
