@@ -5,10 +5,11 @@ authors:
     given-names: "Jason"
     affiliation: "DeepaData Pty Ltd"
     email: "jason@deepadata.com"
-title: "Emotional Data Model (EDM) v0.8.0"
-version: "0.8.0"
+title: "Emotional Data Model (EDM) v0.8.1"
+version: "0.8.1"
+# TODO(release): replace with the v0.8.1 version DOI once Zenodo assigns it
 doi: 10.5281/zenodo.19555166
-date-released: "2026-04-13"
+date-released: "2026-06-12"
 url: "https://github.com/emotional-data-model/edm-spec"
 license: MIT
 repository-code: "https://github.com/emotional-data-model/edm-spec"
@@ -33,8 +34,9 @@ references:
     authors:
       - family-names: "Harvey"
         given-names: "Jason"
-    title: "Emotional Data Model (EDM) v0.8.0: A protocol-level representation and persistence architecture for governed emotional data"
+    title: "Emotional Data Model (EDM) v0.8.1: A protocol-level representation and persistence architecture for governed emotional data"
     year: 2026
     publisher: "Zenodo"
+    # TODO(release): replace with the v0.8.1 version DOI once Zenodo assigns it
     doi: "10.5281/zenodo.19555166"
     url: "https://zenodo.org/records/19555166"

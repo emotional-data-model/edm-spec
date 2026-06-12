@@ -1,6 +1,6 @@
 {
   "name": "edm-spec",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Emotional Data Model (EDM) Specification",
   "type": "module",
   "scripts": {
