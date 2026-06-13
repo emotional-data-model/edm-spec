@@ -2,7 +2,7 @@
 
 ## EDM v0.8.1 (June 2026) — Current
 
-**DOI:** pending Zenodo publication <!-- TODO(release): add v0.8.1 version DOI -->
+**DOI:** 10.5281/zenodo.20678017
 
 Patch release — references and errata only, zero semantic change per §11.
 
@@ -134,7 +134,7 @@ Additive patch release with nine canonical enumeration values across five fields
 
 | Version | Date | Status | Zenodo DOI |
 |---------|------|--------|------------|
-| v0.8.1 | June 2026 | **Current** | pending <!-- TODO(release) --> |
+| v0.8.1 | June 2026 | **Current** | 10.5281/zenodo.20678017 |
 | v0.8.0 | April 2026 | Published | 10.5281/zenodo.19555166 |
 | v0.7.0 | March 2026 | Published | 10.5281/zenodo.19211903 |
 | v0.6.0 | March 2026 | Published | 10.5281/zenodo.18951891 |

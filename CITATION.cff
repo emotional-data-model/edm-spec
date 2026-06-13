@@ -7,8 +7,8 @@ authors:
     email: "jason@deepadata.com"
 title: "Emotional Data Model (EDM) v0.8.1"
 version: "0.8.1"
-# TODO(release): replace with the v0.8.1 version DOI once Zenodo assigns it
-doi: 10.5281/zenodo.19555166
+
+doi: 10.5281/zenodo.20678017
 date-released: "2026-06-12"
 url: "https://github.com/emotional-data-model/edm-spec"
 license: MIT
@@ -37,6 +37,6 @@ references:
     title: "Emotional Data Model (EDM) v0.8.1: A protocol-level representation and persistence architecture for governed emotional data"
     year: 2026
     publisher: "Zenodo"
-    # TODO(release): replace with the v0.8.1 version DOI once Zenodo assigns it
-    doi: "10.5281/zenodo.19555166"
-    url: "https://zenodo.org/records/19555166"
+    
+    doi: "10.5281/zenodo.20678017"
+    url: "https://zenodo.org/records/20678017"

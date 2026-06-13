@@ -2,14 +2,14 @@
 
 **Current Version:** v0.8.1
 **Released:** June 2026
-**DOI:** [10.5281/zenodo.19555166](https://doi.org/10.5281/zenodo.19555166) <!-- TODO(release): replace with v0.8.1 version DOI once Zenodo assigns it -->
+**DOI:** [10.5281/zenodo.20678017](https://doi.org/10.5281/zenodo.20678017)
 
 ## 📄 Official Whitepaper
 
 The complete EDM v0.8.1 specification is published on Zenodo and archived
 in-repo under [`releases/`](releases/):
-- **Download:** [EDM Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.19555166) <!-- TODO(release): v0.8.1 DOI -->
-- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.19555166 <!-- TODO(release): v0.8.1 DOI -->
+- **Download:** [EDM Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.20678017)
+- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.20678017
 
 ## 🔧 Implementation
 
@@ -28,7 +28,7 @@ Reference implementations:
 
 # Emotional Data Model — EDM (Specification)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19555166.svg)](https://doi.org/10.5281/zenodo.19555166)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20678017.svg)](https://doi.org/10.5281/zenodo.20678017)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.8.1-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.8.1)
 [![Status](https://img.shields.io/badge/status-Stable-brightgreen.svg)]()
@@ -72,9 +72,9 @@ EDM fills this gap by providing:
 The EDM whitepaper is published on Zenodo:
 
 **Citation:**
-> Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.19555166 <!-- TODO(release): v0.8.1 DOI -->
+> Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.20678017
 
-**Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.19555166) <!-- TODO(release): v0.8.1 DOI -->
+**Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.20678017)
 
 ---
 
@@ -365,10 +365,10 @@ If you use EDM in your research, please cite:
   year = {2026},
   publisher = {Zenodo},
   version = {v0.8.1},
-  doi = {10.5281/zenodo.19555166},
+  doi = {10.5281/zenodo.20678017},
   url = {https://github.com/emotional-data-model/edm-spec}
 }
-% TODO(release): replace doi with the v0.8.1 version DOI once Zenodo assigns it
+
 ```
 
 ---
@@ -399,10 +399,10 @@ Contact: jason@emotionaldatamodel.org
 
 ## Links
 
-- **Whitepaper:** [Zenodo Record](https://doi.org/10.5281/zenodo.19555166) <!-- TODO(release): v0.8.1 DOI -->
-- **DOI:** [10.5281/zenodo.19555166](https://doi.org/10.5281/zenodo.19555166) <!-- TODO(release): v0.8.1 DOI -->
+- **Whitepaper:** [Zenodo Record](https://doi.org/10.5281/zenodo.20678017)
+- **DOI:** [10.5281/zenodo.20678017](https://doi.org/10.5281/zenodo.20678017)
 - **Concept DOI (all versions):** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
-- *Note:* The v0.8.0 deposit (10.5281/zenodo.19555166) exists outside the main version chain, cross-linked via related identifiers. v0.8.1 reunifies the lineage under concept 17808652.
+- *Note:* The v0.8.0 deposit (10.5281/zenodo.20678017) exists outside the main version chain, cross-linked via related identifiers. v0.8.1 reunifies the lineage under concept 17808652.
 - **Repository:** https://github.com/emotional-data-model/edm-spec
 - **Issues:** https://github.com/emotional-data-model/edm-spec/issues
 
