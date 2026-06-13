@@ -36,7 +36,8 @@
       "enum": [
         "private",
         "family_only",
-        "shared_publicly"
+        "shared_publicly",
+        null
       ],
       "x_constraints": "private, family_only, shared_publicly"
     },

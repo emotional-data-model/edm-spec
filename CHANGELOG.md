@@ -8,7 +8,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.8.1] - 2026-06-12
 
 Patch release. References and errata only — zero semantic change per §11.
-No schema files, field definitions, enumerations, or crosswalks are modified.
+Reference-schema enum lists corrected for nullable-enum conformance (§5.2);
+no field definitions, enumerations, or crosswalks are semantically modified.
 
 ### Added
 
@@ -47,9 +48,10 @@ No schema files, field definitions, enumerations, or crosswalks are modified.
   artifacts with explicit-null enum fields to fail validation. Corrected in
   the ddna-tools vendored schemas (ddna-tools `fix/schema-nullable-enums`
   @ `db2c449`, 2026-06-12). Spec text unchanged — this records an
-  implementation conformance correction. The matching correction to this
-  repository's reference schemas is staged for maintainer approval (see
-  `planning/2026-06-12-v0.8.1-consolidation/`).
+  implementation conformance correction. Reference schemas in this
+  repository corrected to match (`schema/fragments/constellation.json`,
+  `gravity.json`, `impulse.json`, `milky_way.json`, and inlined gravity
+  fields in `edm.v0.8.extended.schema.json`).
 
 ### Changed
 
