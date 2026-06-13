@@ -1,8 +1,43 @@
 # Release Notes — Emotional Data Model (EDM)
 
-## EDM v0.8.0 (April 2026) — In Progress
+## EDM v0.8.1 (June 2026) — Current
 
-**Branch:** `feat/v0.8.0`
+**DOI:** pending Zenodo publication <!-- TODO(release): add v0.8.1 version DOI -->
+
+Patch release — references and errata only, zero semantic change per §11.
+
+### References added
+
+- Whitepaper §14.6: Sofroniew, N., Kauvar, I., Saunders, W., Chen, R.,
+  et al. (2026). *Emotion Concepts and their Function in a Large Language
+  Model.* Anthropic, Transformer Circuits. arXiv:2604.07729
+- Whitepaper §14.6: Wen, D., Sun, K., & Wang, Y. (2026). *A-MBER: Affective
+  Memory Benchmark for Emotion Recognition.* arXiv:2604.07017
+- Whitepaper §2.2: one closing sentence citing Sofroniew et al. as mechanistic
+  evidence that affective context cannot be governed at the output layer
+
+### Errata
+
+- **§11.1 lineage attribution**: "v0.8.0 introduces Implementation Profiles"
+  corrected to "v0.6.0 introduces Implementation Profiles" (v0.6.0 is the
+  release that introduced Essential/Extended/Full profiles)
+- **Appendix A `meta.version` constraint**: corrected from `"0.7.x"` to
+  `"0.8.x"`
+- **Reference-schema nullable-enum correction** (24 fields; implementation
+  conformance to §5.2 — spec text unchanged; schema fix staged)
+
+### Other
+
+- Repository metadata refreshed (README, CITATION.cff, package.json)
+- No schema changes; no crosswalk required
+
+See [CHANGELOG.md](../CHANGELOG.md) for the enumerated change list.
+
+---
+
+## EDM v0.8.0 (April 2026)
+
+**DOI:** [10.5281/zenodo.19555166](https://doi.org/10.5281/zenodo.19555166)
 
 - Partner Profiles (Section 3.7.6): Named, versioned schema declarations for vertical-specific field selection
 - `meta.profile` two-tier enum: Canonical values plus partner profile ID support
@@ -15,7 +50,7 @@ See [PROFILES.md](PROFILES.md) Section 3.7.6 for Partner Profiles details.
 
 ---
 
-## EDM v0.7.0 (March 2026) — Current
+## EDM v0.7.0 (March 2026)
 
 **DOI:** [10.5281/zenodo.19211903](https://doi.org/10.5281/zenodo.19211903)
 
@@ -97,15 +132,25 @@ Additive patch release with nine canonical enumeration values across five fields
 
 ## Version Lineage
 
-| Version | Date | Status |
-|---------|------|--------|
-| v0.8.0 | April 2026 | **In Progress** |
-| v0.7.0 | March 2026 | **Current** |
-| v0.6.0 | March 2026 | Published |
-| v0.5.1 | March 2026 | Published |
-| v0.5.0 | February 2026 | Published |
-| v0.4.0 | December 2025 | Published |
-| v0.3-pre | November 2025 | Pre-release |
+| Version | Date | Status | Zenodo DOI |
+|---------|------|--------|------------|
+| v0.8.1 | June 2026 | **Current** | pending <!-- TODO(release) --> |
+| v0.8.0 | April 2026 | Published | 10.5281/zenodo.19555166 |
+| v0.7.0 | March 2026 | Published | 10.5281/zenodo.19211903 |
+| v0.6.0 | March 2026 | Published | 10.5281/zenodo.18951891 |
+| v0.5.1 | March 2026 | Published | 10.5281/zenodo.18883392 |
+| v0.5.0 | February 2026 | Published | 10.5281/zenodo.18541956 |
+| v0.4.1 | January 2026 | Published (no separate Zenodo deposit) | — |
+| v0.4.0 | December 2025 | Published | 10.5281/zenodo.17808653 |
+| v0.3-pre | November 2025 | Pre-release | — |
+
+**Concept DOI (all versions):** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
+
+Note: the v0.8.0 deposit (10.5281/zenodo.19555166) was created as a separate
+Zenodo concept (19555165) rather than as a new version under 17808652. The
+v0.8.1 deposit reunifies the lineage by publishing as a new version of record
+19211903 (v0.7.0) within concept 17808652. The orphaned v0.8.0 record is
+cross-linked via related identifiers.
 
 ---
 

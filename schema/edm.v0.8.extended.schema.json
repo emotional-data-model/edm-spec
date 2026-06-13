@@ -149,7 +149,7 @@
         },
         "valence": {
           "type": ["string", "null"],
-          "enum": ["positive", "negative", "mixed"],
+          "enum": ["positive", "negative", "mixed", null],
           "description": "Emotional direction."
         },
         "tether_type": {
@@ -159,7 +159,7 @@
         },
         "recurrence_pattern": {
           "type": ["string", "null"],
-          "enum": ["cyclical", "isolated", "chronic", "emerging"],
+          "enum": ["cyclical", "isolated", "chronic", "emerging", null],
           "description": "Temporal recurrence structure."
         },
         "strength_score": {

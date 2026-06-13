@@ -5,6 +5,64 @@ All notable changes to the Emotional Data Model (EDM) specification are document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.1] - 2026-06-12
+
+Patch release. References and errata only — zero semantic change per §11.
+Reference-schema enum lists corrected for nullable-enum conformance (§5.2);
+no field definitions, enumerations, or crosswalks are semantically modified.
+
+### Added
+
+- **Whitepaper §14.6 reference**: Sofroniew, N., Kauvar, I., Saunders, W.,
+  Chen, R., et al. (2026). *Emotion Concepts and their Function in a Large
+  Language Model.* Anthropic, Transformer Circuits. arXiv:2604.07729.
+  (Mechanistic evidence that affective context causally influences model
+  behaviour while remaining invisible in outputs.)
+- **Whitepaper §14.6 reference**: Wen, D., Sun, K., & Wang, Y. (2026).
+  *A-MBER: Affective Memory Benchmark for Emotion Recognition.*
+  arXiv:2604.07017. (Benchmark for evaluating affective/emotional memory
+  in AI systems.)
+- **Whitepaper §2.2 closing sentence**: one sentence citing Sofroniew et al.
+  (2026) as direct mechanistic evidence that model-internal emotion
+  representations are real, causally influence behaviour, and leave no trace
+  in output text — confirming affective context cannot be governed at the
+  output layer.
+- **Whitepaper §11.1**: version-lineage entry for v0.8.1 (patch; references
+  and errata only).
+- **`releases/` directory convention**: versioned whitepaper documents now
+  archived in-repo (`releases/v0.8.0/`, `releases/v0.8.1/`).
+
+### Errata
+
+- **Whitepaper §11.1 lineage attribution**: the paragraph incorrectly
+  stated "v0.8.0 introduces Implementation Profiles"; corrected to
+  "v0.6.0 introduces Implementation Profiles". Implementation Profiles
+  (Essential, Extended, Full) were introduced in v0.6.0 (March 2026).
+- **Whitepaper Appendix A `meta.version` constraint**: corrected from
+  `MUST match "0.7.x"` to `MUST match "0.8.x"`.
+- **Reference-schema nullable-enum correction (implementation conformance)**:
+  24 enumerated fields across the constellation, gravity, impulse, and
+  milky_way domains are nullable (`type: ["string","null"]`) per whitepaper
+  §5.2 (*Population Invariants: No Omission, No Inference*), but reference
+  schema enum lists did not include explicit `null`, causing spec-conformant
+  artifacts with explicit-null enum fields to fail validation. Corrected in
+  the ddna-tools vendored schemas (ddna-tools `fix/schema-nullable-enums`
+  @ `db2c449`, 2026-06-12). Spec text unchanged — this records an
+  implementation conformance correction. Reference schemas in this
+  repository corrected to match (`schema/fragments/constellation.json`,
+  `gravity.json`, `impulse.json`, `milky_way.json`, and inlined gravity
+  fields in `edm.v0.8.extended.schema.json`).
+
+### Changed
+
+- **Repository metadata refreshed to v0.8.1**: README.md (was still citing
+  v0.7.0 and DOI 10.5281/zenodo.19211903 throughout), CITATION.cff,
+  package.json, docs/RELEASE-NOTES.md.
+
+### Migration
+
+- None required. v0.8.0 artifacts are v0.8.1 artifacts; no structural change.
+
 ## [0.8.0] - 2026-04-13
 
 ### Added
@@ -168,6 +226,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additive enum expansion only — no breaking changes
 - v0.4.0 artifacts remain valid under v0.5.0
 
+## [0.4.1] - 2026-01-17
+
+*(Entry reconstructed 2026-06-12 from the `v0.4.1` git tag message and
+docs/RELEASE-NOTES.md; no contemporaneous CHANGELOG entry existed.)*
+
+### Changed
+
+- **Envelope cryptographic model updated to W3C Data Integrity Proofs**
+  (`eddsa-jcs-2022`) for the .ddna envelope.
+- Schema unchanged — remains v0.4.0 (backward compatible).
+
+### Notes
+
+- The tag message cites DOI 10.5281/zenodo.17808652 (the concept DOI).
+  No version-specific v0.4.1 Zenodo deposit exists in the concept lineage.
+
 ## [0.4.0] - 2025-12-04
 
 ### Changed
@@ -198,10 +272,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - 10 domains, 102 fields
 - Closed provenance pre-release
 
+[0.8.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.6.0...v0.7.0
 [0.6.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.1...v0.6.0
 [0.5.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.4.0...v0.5.0
+[0.4.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.4.0...v0.4.1
 [0.4.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/emotional-data-model/edm-spec/releases/tag/v0.3.0

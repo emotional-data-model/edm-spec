@@ -20,7 +20,8 @@
       "enum": [
         "low",
         "medium",
-        "high"
+        "high",
+        null
       ],
       "x_constraints": "low, medium, high"
     },
@@ -33,7 +34,8 @@
       "enum": [
         "positive",
         "negative",
-        "mixed"
+        "mixed",
+        null
       ],
       "x_constraints": "positive, negative, mixed"
     },
@@ -48,7 +50,8 @@
         "medium",
         "high",
         "enduring",
-        "fluid"
+        "fluid",
+        null
       ],
       "x_constraints": "low, medium, high, enduring, fluid"
     },
@@ -126,7 +129,8 @@
       "enum": [
         "fast",
         "moderate",
-        "slow"
+        "slow",
+        null
       ],
       "x_constraints": "fast, moderate, slow"
     },
@@ -154,7 +158,8 @@
         "stable",
         "declining",
         "integrative",
-        "emerging"
+        "emerging",
+        null
       ],
       "x_constraints": "improving, stable, declining, integrative, emerging"
     }

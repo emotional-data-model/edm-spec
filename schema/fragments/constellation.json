@@ -74,7 +74,8 @@
         "late_life",
         "recent",
         "future",
-        "timeless"
+        "timeless",
+        null
       ],
       "x_constraints": "childhood, early_adulthood, midlife, late_life, recent, future, timeless"
     },
@@ -89,7 +90,8 @@
         "fleeting_moment",
         "milestone",
         "reflection",
-        "formative_experience"
+        "formative_experience",
+        null
       ],
       "x_constraints": "legacy_artifact, fleeting_moment, milestone, reflection, formative_experience"
     },
@@ -104,7 +106,8 @@
         "video",
         "audio",
         "text",
-        "photo_with_story"
+        "photo_with_story",
+        null
       ],
       "x_constraints": "photo, video, audio, text, photo_with_story"
     },
@@ -127,7 +130,8 @@
         "everyman",
         "jester",
         "ruler",
-        "mentor"
+        "mentor",
+        null
       ],
       "x_constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler, mentor"
     },
@@ -151,7 +155,8 @@
         "family",
         "friends",
         "community",
-        "humanity"
+        "humanity",
+        null
       ],
       "x_constraints": "self, partner, family, friends, community, humanity"
     },
@@ -171,7 +176,8 @@
         "dragging",
         "suspended",
         "looping",
-        "cyclic"
+        "cyclic",
+        null
       ],
       "x_constraints": "still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic"
     },

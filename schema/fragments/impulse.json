@@ -26,7 +26,8 @@
         "share",
         "confront",
         "protect",
-        "process"
+        "process",
+        null
       ],
       "x_constraints": "explore, approach, avoid, repair, persevere, share, confront, protect, process"
     },
@@ -41,7 +42,8 @@
         "safety",
         "mastery",
         "meaning",
-        "autonomy"
+        "autonomy",
+        null
       ],
       "x_constraints": "belonging, safety, mastery, meaning, autonomy"
     },
@@ -54,7 +56,8 @@
       "enum": [
         "past",
         "present",
-        "future"
+        "future",
+        null
       ],
       "x_constraints": "past, present, future"
     },
@@ -67,7 +70,8 @@
       "enum": [
         "inward",
         "outward",
-        "transcendent"
+        "transcendent",
+        null
       ],
       "x_constraints": "inward, outward, transcendent"
     },
@@ -80,7 +84,8 @@
       "enum": [
         "private",
         "relational",
-        "collective"
+        "collective",
+        null
       ],
       "x_constraints": "private, relational, collective"
     },
@@ -94,7 +99,8 @@
         "calm",
         "elevated",
         "pressing",
-        "acute"
+        "acute",
+        null
       ],
       "x_constraints": "calm, elevated, pressing, acute"
     },
@@ -107,7 +113,8 @@
       "enum": [
         "cautious",
         "balanced",
-        "bold"
+        "bold",
+        null
       ],
       "x_constraints": "cautious, balanced, bold"
     },
@@ -120,7 +127,8 @@
       "enum": [
         "low",
         "medium",
-        "high"
+        "high",
+        null
       ],
       "x_constraints": "low, medium, high"
     },
@@ -133,7 +141,8 @@
       "enum": [
         "regulated",
         "wavering",
-        "dysregulated"
+        "dysregulated",
+        null
       ],
       "x_constraints": "regulated, wavering, dysregulated"
     },
@@ -147,7 +156,8 @@
         "secure",
         "anxious",
         "avoidant",
-        "disorganized"
+        "disorganized",
+        null
       ],
       "x_constraints": "secure, anxious, avoidant, disorganized"
     },

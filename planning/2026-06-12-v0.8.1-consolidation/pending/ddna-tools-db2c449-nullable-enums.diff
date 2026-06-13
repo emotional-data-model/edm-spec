@@ -1,0 +1,639 @@
+commit db2c449f188e1f6981ad6a1f074d0730f1793abf
+Author: Jason Harvey <jason@deepadata.com>
+Date:   Fri Jun 12 11:42:10 2026 +1000
+
+    fix(schemas): accept explicit null on nullable enum fields (conformance fix, v0.8.1 errata candidate)
+    
+    Implementation-conformance fix, NOT a spec change. The EDM whitepaper
+    section 5.2 (Population Invariants: No Omission, No Inference) REQUIRES
+    every field to be present with an explicit null when unsupported by the
+    input - and the extraction prompts say "pick ONE or null". But 24 enum
+    fields in the reference JSON schemas declared type ["string","null"]
+    while omitting null from the adjacent enum list, which JSON Schema
+    evaluates independently of type. The schemas were rejecting exactly what
+    the spec text mandates: seal() failed on every low-signal artifact whose
+    extraction correctly returned null (23/60 in the 2026-06-10
+    archive-sample run; 20 of those now validate, remaining 3 are separate
+    extraction-output defects).
+    
+    Fields corrected (24):
+    - constellation: temporal_context, memory_type, media_format,
+      narrative_archetype, relational_perspective, temporal_rhythm
+    - gravity: emotional_density, valence, viscosity, temporal_decay,
+      adaptation_trajectory
+    - impulse: drive_state, motivational_orientation, temporal_focus,
+      directionality, social_visibility, urgency, risk_posture, agency_level,
+      regulation_state, attachment_style
+    - milky_way: visibility_context
+    - edm.v0.8.extended.schema.json (inlined gravity): valence,
+      recurrence_pattern
+    
+    Upstream: flag for edm-spec v0.8.1 changelog/errata - "reference schemas
+    corrected to accept explicit null per section 5.2". No field semantics
+    change; v0.8.0 artifacts are unaffected except that spec-conformant ones
+    now validate.
+    
+    Co-Authored-By: Claude Fable 5 <noreply@anthropic.com>
+
+diff --git a/schemas/edm.v0.8.extended.schema.json b/schemas/edm.v0.8.extended.schema.json
+index 091d14d..980737a 100644
+--- a/schemas/edm.v0.8.extended.schema.json
++++ b/schemas/edm.v0.8.extended.schema.json
+@@ -4,17 +4,35 @@
+   "title": "EDM v0.8.0 Extended Profile",
+   "description": "Mid-tier profile for rich emotional context with contextual and gravity domains. 7 domains, 50 fields. Suitable for therapy apps, memory platforms, and scenarios requiring relational context.",
+   "type": "object",
+-  "required": ["meta", "core", "constellation", "milky_way", "gravity", "governance", "telemetry"],
++  "required": [
++    "meta",
++    "core",
++    "constellation",
++    "milky_way",
++    "gravity",
++    "governance",
++    "telemetry"
++  ],
+   "additionalProperties": false,
+   "properties": {
+     "meta": {
+       "description": "Identity, provenance, and consent metadata. Extended profile includes optional source tracking.",
+       "type": "object",
+-      "required": ["version", "profile", "created_at", "visibility", "pii_tier", "consent_basis"],
++      "required": [
++        "version",
++        "profile",
++        "created_at",
++        "visibility",
++        "pii_tier",
++        "consent_basis"
++      ],
+       "additionalProperties": false,
+       "properties": {
+         "id": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Unique identifier for the EDM artifact.",
+           "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+         },
+@@ -27,7 +45,11 @@
+           "oneOf": [
+             {
+               "type": "string",
+-              "enum": ["essential", "extended", "full"],
++              "enum": [
++                "essential",
++                "extended",
++                "full"
++              ],
+               "description": "Canonical extraction profile"
+             },
+             {
+@@ -43,55 +65,103 @@
+           "format": "date-time"
+         },
+         "updated_at": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Optional post-extraction update timestamp.",
+           "format": "date-time"
+         },
+         "locale": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Linguistic and cultural context.",
+           "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+         },
+         "owner_user_id": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Artifact owner identifier."
+         },
+         "parent_id": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Parent artifact link.",
+           "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+         },
+         "visibility": {
+           "type": "string",
+-          "enum": ["private", "shared", "public"],
++          "enum": [
++            "private",
++            "shared",
++            "public"
++          ],
+           "description": "Artifact visibility scope."
+         },
+         "pii_tier": {
+           "type": "string",
+-          "enum": ["none", "low", "moderate", "high", "extreme"],
++          "enum": [
++            "none",
++            "low",
++            "moderate",
++            "high",
++            "extreme"
++          ],
+           "description": "PII classification level."
+         },
+         "source_type": {
+-          "type": ["string", "null"],
+-          "enum": ["text", "audio", "image", "video", "mixed", null],
++          "type": [
++            "string",
++            "null"
++          ],
++          "enum": [
++            "text",
++            "audio",
++            "image",
++            "video",
++            "mixed",
++            null
++          ],
+           "description": "Source medium."
+         },
+         "source_context": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Optional input scenario description."
+         },
+         "consent_basis": {
+           "type": "string",
+-          "enum": ["consent", "contract", "legitimate_interest", "none"],
++          "enum": [
++            "consent",
++            "contract",
++            "legitimate_interest",
++            "none"
++          ],
+           "description": "Legal basis for processing."
+         },
+         "consent_scope": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Consent scope description."
+         },
+         "tags": {
+-          "type": ["array", "null"],
+-          "items": { "type": "string" },
++          "type": [
++            "array",
++            "null"
++          ],
++          "items": {
++            "type": "string"
++          },
+           "description": "User-defined labels."
+         }
+       }
+@@ -99,35 +169,63 @@
+     "core": {
+       "description": "Emotional primitives with narrative. 7 fields for Extended profile.",
+       "type": "object",
+-      "required": ["anchor", "spark", "wound", "fuel", "bridge", "echo"],
++      "required": [
++        "anchor",
++        "spark",
++        "wound",
++        "fuel",
++        "bridge",
++        "echo"
++      ],
+       "additionalProperties": false,
+       "properties": {
+         "anchor": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Central person, object, or theme."
+         },
+         "spark": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Trigger of emotional response."
+         },
+         "wound": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Emotional pain or vulnerability."
+         },
+         "fuel": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "What energized the experience."
+         },
+         "bridge": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Connection between past and present."
+         },
+         "echo": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "What continues to resonate."
+         },
+         "narrative": {
+-          "type": ["string", "null"],
++          "type": [
++            "string",
++            "null"
++          ],
+           "description": "Compressed account of the experience."
+         }
+       }
+@@ -144,26 +242,62 @@
+       "additionalProperties": false,
+       "properties": {
+         "emotional_weight": {
+-          "type": ["number", "null"],
++          "type": [
++            "number",
++            "null"
++          ],
+           "description": "Felt intensity (0.0-1.0)."
+         },
+         "valence": {
+-          "type": ["string", "null"],
+-          "enum": ["positive", "negative", "mixed"],
++          "type": [
++            "string",
++            "null"
++          ],
++          "enum": [
++            "positive",
++            "negative",
++            "mixed",
++            null
++          ],
+           "description": "Emotional direction."
+         },
+         "tether_type": {
+-          "type": ["string", "null"],
+-          "enum": ["person", "symbol", "event", "place", "ritual", "object", "tradition", "identity", null],
++          "type": [
++            "string",
++            "null"
++          ],
++          "enum": [
++            "person",
++            "symbol",
++            "event",
++            "place",
++            "ritual",
++            "object",
++            "tradition",
++            "identity",
++            null
++          ],
+           "description": "Emotional anchor type."
+         },
+         "recurrence_pattern": {
+-          "type": ["string", "null"],
+-          "enum": ["cyclical", "isolated", "chronic", "emerging"],
++          "type": [
++            "string",
++            "null"
++          ],
++          "enum": [
++            "cyclical",
++            "isolated",
++            "chronic",
++            "emerging",
++            null
++          ],
+           "description": "Temporal recurrence structure."
+         },
+         "strength_score": {
+-          "type": ["number", "null"],
++          "type": [
++            "number",
++            "null"
++          ],
+           "description": "Binding strength (0.0-1.0)."
+         }
+       }
+@@ -178,9 +312,21 @@
+   "definitions": {
+     "profile_info": {
+       "name": "extended",
+-      "domains": ["meta", "core", "constellation", "milky_way", "gravity", "governance", "telemetry"],
++      "domains": [
++        "meta",
++        "core",
++        "constellation",
++        "milky_way",
++        "gravity",
++        "governance",
++        "telemetry"
++      ],
+       "field_count": 50,
+-      "use_cases": ["therapy_apps", "memory_platforms", "relational_context"]
++      "use_cases": [
++        "therapy_apps",
++        "memory_platforms",
++        "relational_context"
++      ]
+     }
+   }
+ }
+diff --git a/schemas/fragments/constellation.json b/schemas/fragments/constellation.json
+index cffb700..d146803 100644
+--- a/schemas/fragments/constellation.json
++++ b/schemas/fragments/constellation.json
+@@ -74,7 +74,8 @@
+         "late_life",
+         "recent",
+         "future",
+-        "timeless"
++        "timeless",
++        null
+       ],
+       "x_constraints": "childhood, early_adulthood, midlife, late_life, recent, future, timeless"
+     },
+@@ -89,7 +90,8 @@
+         "fleeting_moment",
+         "milestone",
+         "reflection",
+-        "formative_experience"
++        "formative_experience",
++        null
+       ],
+       "x_constraints": "legacy_artifact, fleeting_moment, milestone, reflection, formative_experience"
+     },
+@@ -104,7 +106,8 @@
+         "video",
+         "audio",
+         "text",
+-        "photo_with_story"
++        "photo_with_story",
++        null
+       ],
+       "x_constraints": "photo, video, audio, text, photo_with_story"
+     },
+@@ -127,7 +130,8 @@
+         "everyman",
+         "jester",
+         "ruler",
+-        "mentor"
++        "mentor",
++        null
+       ],
+       "x_constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler, mentor"
+     },
+@@ -151,7 +155,8 @@
+         "family",
+         "friends",
+         "community",
+-        "humanity"
++        "humanity",
++        null
+       ],
+       "x_constraints": "self, partner, family, friends, community, humanity"
+     },
+@@ -171,7 +176,8 @@
+         "dragging",
+         "suspended",
+         "looping",
+-        "cyclic"
++        "cyclic",
++        null
+       ],
+       "x_constraints": "still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic"
+     },
+@@ -219,4 +225,4 @@
+     "emotion_subtone",
+     "narrative_arc"
+   ]
+-}
+\ No newline at end of file
++}
+diff --git a/schemas/fragments/gravity.json b/schemas/fragments/gravity.json
+index 280d438..3333bd8 100644
+--- a/schemas/fragments/gravity.json
++++ b/schemas/fragments/gravity.json
+@@ -20,7 +20,8 @@
+       "enum": [
+         "low",
+         "medium",
+-        "high"
++        "high",
++        null
+       ],
+       "x_constraints": "low, medium, high"
+     },
+@@ -33,7 +34,8 @@
+       "enum": [
+         "positive",
+         "negative",
+-        "mixed"
++        "mixed",
++        null
+       ],
+       "x_constraints": "positive, negative, mixed"
+     },
+@@ -48,7 +50,8 @@
+         "medium",
+         "high",
+         "enduring",
+-        "fluid"
++        "fluid",
++        null
+       ],
+       "x_constraints": "low, medium, high, enduring, fluid"
+     },
+@@ -126,7 +129,8 @@
+       "enum": [
+         "fast",
+         "moderate",
+-        "slow"
++        "slow",
++        null
+       ],
+       "x_constraints": "fast, moderate, slow"
+     },
+@@ -154,10 +158,11 @@
+         "stable",
+         "declining",
+         "integrative",
+-        "emerging"
++        "emerging",
++        null
+       ],
+       "x_constraints": "improving, stable, declining, integrative, emerging"
+     }
+   },
+   "additionalProperties": false
+-}
+\ No newline at end of file
++}
+diff --git a/schemas/fragments/impulse.json b/schemas/fragments/impulse.json
+index 5f6a7b3..300e5a5 100644
+--- a/schemas/fragments/impulse.json
++++ b/schemas/fragments/impulse.json
+@@ -26,7 +26,8 @@
+         "share",
+         "confront",
+         "protect",
+-        "process"
++        "process",
++        null
+       ],
+       "x_constraints": "explore, approach, avoid, repair, persevere, share, confront, protect, process"
+     },
+@@ -41,7 +42,8 @@
+         "safety",
+         "mastery",
+         "meaning",
+-        "autonomy"
++        "autonomy",
++        null
+       ],
+       "x_constraints": "belonging, safety, mastery, meaning, autonomy"
+     },
+@@ -54,7 +56,8 @@
+       "enum": [
+         "past",
+         "present",
+-        "future"
++        "future",
++        null
+       ],
+       "x_constraints": "past, present, future"
+     },
+@@ -67,7 +70,8 @@
+       "enum": [
+         "inward",
+         "outward",
+-        "transcendent"
++        "transcendent",
++        null
+       ],
+       "x_constraints": "inward, outward, transcendent"
+     },
+@@ -80,7 +84,8 @@
+       "enum": [
+         "private",
+         "relational",
+-        "collective"
++        "collective",
++        null
+       ],
+       "x_constraints": "private, relational, collective"
+     },
+@@ -94,7 +99,8 @@
+         "calm",
+         "elevated",
+         "pressing",
+-        "acute"
++        "acute",
++        null
+       ],
+       "x_constraints": "calm, elevated, pressing, acute"
+     },
+@@ -107,7 +113,8 @@
+       "enum": [
+         "cautious",
+         "balanced",
+-        "bold"
++        "bold",
++        null
+       ],
+       "x_constraints": "cautious, balanced, bold"
+     },
+@@ -120,7 +127,8 @@
+       "enum": [
+         "low",
+         "medium",
+-        "high"
++        "high",
++        null
+       ],
+       "x_constraints": "low, medium, high"
+     },
+@@ -133,7 +141,8 @@
+       "enum": [
+         "regulated",
+         "wavering",
+-        "dysregulated"
++        "dysregulated",
++        null
+       ],
+       "x_constraints": "regulated, wavering, dysregulated"
+     },
+@@ -147,7 +156,8 @@
+         "secure",
+         "anxious",
+         "avoidant",
+-        "disorganized"
++        "disorganized",
++        null
+       ],
+       "x_constraints": "secure, anxious, avoidant, disorganized"
+     },
+@@ -161,4 +171,4 @@
+     }
+   },
+   "additionalProperties": false
+-}
+\ No newline at end of file
++}
+diff --git a/schemas/fragments/milky_way.json b/schemas/fragments/milky_way.json
+index c1ae6af..9ef6e55 100644
+--- a/schemas/fragments/milky_way.json
++++ b/schemas/fragments/milky_way.json
+@@ -36,7 +36,8 @@
+       "enum": [
+         "private",
+         "family_only",
+-        "shared_publicly"
++        "shared_publicly",
++        null
+       ],
+       "x_constraints": "private, family_only, shared_publicly"
+     },
+@@ -50,4 +51,4 @@
+     }
+   },
+   "additionalProperties": false
+-}
+\ No newline at end of file
++}
