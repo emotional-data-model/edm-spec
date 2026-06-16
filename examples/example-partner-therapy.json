@@ -1,7 +1,7 @@
 {
   "meta": {
     "id": "b2c3d4e5-f6a7-4890-bcde-f01234567890",
-    "version": "0.8.0",
+    "version": "0.8.2",
     "profile": "partner:com.deepadata.therapy.v1",
     "created_at": "2026-04-13T14:30:00.000Z",
     "owner_user_id": "vp-04LZ6IMYR9ZVLA1SP9DP",
@@ -11,9 +11,11 @@
   },
   "core": {
     "anchor": "father's criticism pattern",
-    "spark": "performance review at work triggered old feelings",
+    "spark": "performance review at work",
     "wound": "never good enough for dad",
-    "bridge": "boss's words echoed father's disappointment",
+    "fuel": "therapeutic insight",
+    "bridge": "connecting work anxiety to family origin",
+    "echo": "waiting for approval",
     "narrative": "Session focused on how last week's performance review triggered childhood memories. Client recognized their boss's neutral feedback as objectively positive, yet experienced it as criticism. Traced the reaction to father's pattern of dismissing achievements. Breakthrough moment when client said 'I've been waiting for my boss's approval like I waited for my father's.' First time explicitly connecting workplace anxiety to family origin."
   },
   "constellation": {
@@ -30,9 +32,36 @@
     "transformational_pivot": true,
     "somatic_signature": "chest tightness when describing father"
   },
+  "milky_way": {
+    "event_type": "therapy session",
+    "location_context": "therapist's office",
+    "associated_people": [
+      "father",
+      "boss"
+    ],
+    "visibility_context": "private",
+    "tone_shift": "criticism to insight"
+  },
   "gravity": {
     "emotional_weight": 0.88,
     "tether_type": "person",
+    "recall_triggers": [
+      "performance reviews",
+      "authority figures",
+      "father's tone of voice"
+    ],
+    "retrieval_keys": [
+      "father",
+      "criticism",
+      "approval",
+      "work anxiety"
+    ],
+    "nearby_themes": [
+      "self-worth",
+      "perfectionism",
+      "intergenerational patterns",
+      "validation"
+    ],
     "recurrence_pattern": "chronic",
     "strength_score": 0.85,
     "temporal_decay": "slow",
@@ -45,16 +74,16 @@
   },
   "impulse": {
     "regulation_state": "regulated",
-    "agency_level": "moderate",
+    "agency_level": "medium",
     "coping_style": "process",
     "attachment_style": "anxious"
   },
   "governance": {
-    "jurisdiction": "AU",
+    "jurisdiction": null,
     "retention_policy": {
-      "basis": "professional_guidelines",
+      "basis": "legal",
       "ttl_days": 2555,
-      "on_expiry": "archive"
+      "on_expiry": "anonymize"
     },
     "subject_rights": {
       "portable": true,
@@ -65,5 +94,15 @@
   "telemetry": {
     "entry_confidence": 0.95,
     "extraction_model": "claude-sonnet-4-20250514"
+  },
+  "system": {
+    "embeddings": null,
+    "indices": null
+  },
+  "crosswalks": {
+    "plutchik_primary": "sadness",
+    "geneva_emotion_wheel": "disappointment",
+    "DSM5_specifiers": null,
+    "ISO_27557_labels": null
   }
 }

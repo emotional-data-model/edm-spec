@@ -30,10 +30,35 @@ const PROFILE_SCHEMAS = Object.fromEntries(
 );
 
 // Example files with their expected profile values.
+//
+// `expectedProfile` must equal the artifact's meta.profile. For partner
+// profiles (meta.profile starts with "partner:"), `baseProfile` names the
+// canonical profile schema (essential/extended/full) the artifact is validated
+// against, per ADR-0017 — a partner profile is a field manifest over a base.
 const EXAMPLES = [
   { file: "example-essential-profile.json", expectedProfile: "essential" },
   { file: "example-extended-profile.json", expectedProfile: "extended" },
   { file: "example-full-profile.json", expectedProfile: "full" },
+  {
+    file: "example-partner-journaling.json",
+    expectedProfile: "partner:com.deepadata.journaling.v1",
+    baseProfile: "extended",
+  },
+  {
+    file: "example-partner-therapy.json",
+    expectedProfile: "partner:com.deepadata.therapy.v1",
+    baseProfile: "full",
+  },
+  {
+    file: "example-partner-companion.json",
+    expectedProfile: "partner:com.deepadata.companion.v1",
+    baseProfile: "extended",
+  },
+  {
+    file: "example-partner-wiki.json",
+    expectedProfile: "partner:com.deepadata.wiki.v1",
+    baseProfile: "extended",
+  },
 ];
 
 // Fail fast with a clear error if the derived schema files are not present.
@@ -114,7 +139,7 @@ async function main() {
   let failures = 0;
   const examplesDir = join(ROOT_DIR, "examples");
 
-  for (const { file, expectedProfile } of EXAMPLES) {
+  for (const { file, expectedProfile, baseProfile } of EXAMPLES) {
     const filePath = join(examplesDir, file);
     const data = JSON.parse(await readFile(filePath, "utf8"));
 
@@ -128,6 +153,10 @@ async function main() {
       continue;
     }
 
+    // For partner profiles, validate against the canonical base profile schema.
+    // For canonical profiles, the profile value is also the schema key.
+    const schemaProfile = baseProfile || actualProfile;
+
     // Enforce the single-source principle: example version derives from (must
     // equal) the package version. This catches drift the schema pattern alone
     // (^0\.<minor>\.[0-9]+$) would let through.
@@ -140,11 +169,11 @@ async function main() {
       continue;
     }
 
-    // Get the validator for this profile
-    const validate = validators[actualProfile];
+    // Get the validator for the (base) profile schema
+    const validate = validators[schemaProfile];
     if (!validate) {
       failures++;
-      console.log(`No validator for profile: ${actualProfile} in ${file}`);
+      console.log(`No validator for profile: ${schemaProfile} in ${file}`);
       continue;
     }
 
@@ -158,9 +187,11 @@ async function main() {
       continue;
     }
 
-    console.log(
-      `Valid: ${file} (profile: ${actualProfile}, schema: ${PROFILE_SCHEMAS[actualProfile]})`
-    );
+    const schemaNote =
+      schemaProfile === actualProfile
+        ? `schema: ${PROFILE_SCHEMAS[schemaProfile]}`
+        : `base: ${schemaProfile}, schema: ${PROFILE_SCHEMAS[schemaProfile]}`;
+    console.log(`Valid: ${file} (profile: ${actualProfile}, ${schemaNote})`);
   }
 
   if (failures > 0) {
