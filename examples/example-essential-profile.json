@@ -1,10 +1,10 @@
 {
   "meta": {
     "id": "226d1ab2-741e-480a-b656-32d14717f268",
-    "version": "0.6.0",
+    "version": "0.8.1",
     "profile": "essential",
     "created_at": "2026-03-09T11:44:45.796Z",
-    "owner_user_id": " vp-02HZ4GKWP7XTJY9QN7BN",
+    "owner_user_id": "vp-02HZ4GKWP7XTJY9QN7BN",
     "consent_basis": "consent",
     "visibility": "private",
     "pii_tier": "moderate"
@@ -12,9 +12,9 @@
   "core": {
     "anchor": "physie competition",
     "spark": "weekend competition photos",
-    "wound": "body betrayal through arthritis",
-    "fuel": "supportive women community",
-    "bridge": "dancing through physical limits",
+    "wound": "arthritis",
+    "fuel": "women's dance community",
+    "bridge": "dancing through limits",
     "echo": "feeling twenty again"
   },
   "constellation": {
@@ -22,13 +22,13 @@
     "emotion_subtone": [
       "empowered",
       "grateful",
-      "vitality",
+      "nostalgic",
       "supported"
     ],
     "narrative_arc": "overcoming"
   },
   "governance": {
-    "jurisdiction": null,
+    "jurisdiction": "GDPR",
     "retention_policy": {
       "basis": "user_defined",
       "ttl_days": null,
@@ -41,7 +41,8 @@
     }
   },
   "telemetry": {
-    "entry_confidence": 1,
-    "extraction_model": "claude-sonnet-4-20250514"
+    "entry_confidence": 0.94,
+    "extraction_model": "claude-sonnet-4-6",
+    "extraction_provider": "anthropic"
   }
 }

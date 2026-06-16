@@ -1,8 +1,46 @@
 {
   "name": "edm-spec",
   "version": "0.8.1",
-  "description": "Emotional Data Model (EDM) Specification",
+  "description": "Emotional Data Model (EDM) Specification — canonical JSON Schemas, example artifacts, and conformance test vectors.",
   "type": "module",
+  "keywords": [
+    "edm",
+    "emotional-data-model",
+    "json-schema",
+    "schema",
+    "specification",
+    "ddna",
+    "deepadata"
+  ],
+  "license": "MIT",
+  "author": "Jason Harvey",
+  "homepage": "https://github.com/emotional-data-model/edm-spec#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emotional-data-model/edm-spec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emotional-data-model/edm-spec/issues"
+  },
+  "exports": {
+    ".": "./schema/edm.v0.8.full.schema.json",
+    "./essential": "./schema/edm.v0.8.essential.schema.json",
+    "./extended": "./schema/edm.v0.8.extended.schema.json",
+    "./full": "./schema/edm.v0.8.full.schema.json",
+    "./schema/*": "./schema/*",
+    "./examples/*": "./examples/*",
+    "./test-vectors/*": "./test-vectors/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "schema/",
+    "examples/",
+    "test-vectors/",
+    "docs/",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ],
   "scripts": {
     "validate": "node scripts/validate-examples.mjs",
     "generate-vectors": "node test-vectors/scripts/generate-vectors.mjs"
@@ -14,6 +52,5 @@
     "ajv-formats": "^2.1.1",
     "canonicalize": "^2.0.0",
     "multiformats": "^13.1.0"
-  },
-  "license": "MIT"
+  }
 }

@@ -1,21 +1,25 @@
 {
   "meta": {
     "id": "c41c7878-48f4-40f2-a7ee-9817a2a837de",
-    "version": "0.6.0",
+    "version": "0.8.1",
     "profile": "full",
     "created_at": "2026-03-09T11:45:09.455Z",
     "updated_at": null,
-    "locale": null,
-    "owner_user_id": " vp-02HZ4GKWP7XTJY9QN7BN",
+    "locale": "en-au",
+    "owner_user_id": "vp-02HZ4GKWP7XTJY9QN7BN",
     "parent_id": null,
     "visibility": "private",
     "pii_tier": "moderate",
     "source_type": "text",
-    "source_context": null,
+    "source_context": "journal entry written after competition photos arrived",
     "consent_basis": "consent",
-    "consent_scope": null,
+    "consent_scope": "personal memory archive",
     "consent_revoked_at": null,
-    "tags": []
+    "tags": [
+      "dance",
+      "resilience",
+      "community"
+    ]
   },
   "core": {
     "anchor": "physie competition",
@@ -24,7 +28,7 @@
     "fuel": "supportive women community",
     "bridge": "dance connecting past performer to present self",
     "echo": "feeling young on stage",
-    "narrative": "Weekend physie competition photos arrived, capturing the joy of performing despite psoriatic arthritis diagnosis eight years ago. The supportive community of women and weekly classes keep both joints mobile and spirits high. Dancing in front of crowds resurrects the professional dancer within, defying physical limitations. What began as Jason's encouragement four years ago has become essential self-care for this working single mum."
+    "narrative": "Weekend physie competition photos arrived, capturing the joy of performing despite a psoriatic arthritis diagnosis eight years ago. The supportive community of women and weekly classes keep both joints mobile and spirits high. Dancing in front of crowds resurrects the professional dancer within, defying physical limitations. What began as Jason's encouragement four years ago has become essential self-care for this working single mum."
   },
   "constellation": {
     "emotion_primary": "joy",
@@ -49,42 +53,14 @@
     "identity_thread": "dancer despite physical limitations",
     "expressed_insight": "we all need something in our lives that we can do just for us",
     "transformational_pivot": true,
-    "somatic_signature": "mobile joints"
-  },
-  "governance": {
-    "jurisdiction": null,
-    "retention_policy": {
-      "basis": "user_defined",
-      "ttl_days": null,
-      "on_expiry": "soft_delete"
-    },
-    "subject_rights": {
-      "portable": true,
-      "erasable": true,
-      "explainable": false
-    },
-    "exportability": "allowed",
-    "k_anonymity": {
-      "k": null,
-      "groups": []
-    },
-    "policy_labels": [],
-    "masking_rules": []
-  },
-  "telemetry": {
-    "entry_confidence": 1,
-    "extraction_model": "claude-sonnet-4-20250514",
-    "extraction_provider": "anthropic",
-    "extraction_notes": null,
-    "alignment_delta": null
+    "somatic_signature": "mobile joints",
+    "arc_type": "authenticity"
   },
   "milky_way": {
     "event_type": "competition",
     "location_context": "physie competition venue",
     "associated_people": [
       "Jason",
-      "xt Physie Club",
-      "Bxx Physie",
       "dance sisters"
     ],
     "visibility_context": "shared_publicly",
@@ -114,7 +90,6 @@
       "self-care",
       "community support"
     ],
-    "legacy_embed": true,
     "recurrence_pattern": "cyclical",
     "strength_score": 0.9,
     "temporal_decay": "slow",
@@ -139,24 +114,45 @@
     "attachment_style": "secure",
     "coping_style": "seek_support"
   },
+  "governance": {
+    "jurisdiction": "GDPR",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    },
+    "exportability": "allowed",
+    "k_anonymity": {
+      "k": null,
+      "groups": []
+    },
+    "policy_labels": [
+      "personal",
+      "health-adjacent"
+    ],
+    "masking_rules": []
+  },
+  "telemetry": {
+    "entry_confidence": 0.93,
+    "extraction_model": "claude-sonnet-4-6",
+    "extraction_provider": "anthropic",
+    "extraction_notes": "Full-profile extraction; interpretive fields grounded in stated content, no inference applied."
+  },
   "system": {
     "embeddings": [],
     "indices": {
-      "waypoint_ids": [],
-      "sector_weights": {
-        "episodic": 0,
-        "semantic": 0,
-        "procedural": 0,
-        "emotional": 0,
-        "reflective": 0
-      }
+      "waypoint_ids": []
     }
   },
   "crosswalks": {
     "plutchik_primary": "joy",
-    "geneva_emotion_wheel": null,
+    "geneva_emotion_wheel": "Pride / Elation",
     "DSM5_specifiers": null,
-    "HMD_v2_memory_type": "flashbulb",
     "ISO_27557_labels": null
   }
 }

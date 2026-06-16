@@ -1,22 +1,32 @@
 {
   "meta": {
     "id": "22fe76b6-06fe-419d-b682-340d2abd3b61",
-    "version": "0.6.0",
+    "version": "0.8.1",
     "profile": "extended",
     "created_at": "2026-03-09T11:44:57.132Z",
-    "owner_user_id": " vp-02HZ4GKWP7XTJY9QN7BN",
-    "consent_basis": "consent",
+    "updated_at": null,
+    "locale": "en-au",
+    "owner_user_id": "vp-02HZ4GKWP7XTJY9QN7BN",
     "visibility": "private",
-    "pii_tier": "moderate"
+    "pii_tier": "moderate",
+    "source_type": "text",
+    "source_context": "journal entry written after competition photos arrived",
+    "consent_basis": "consent",
+    "consent_scope": "personal memory archive",
+    "tags": [
+      "dance",
+      "resilience",
+      "community"
+    ]
   },
   "core": {
     "anchor": "physie competition",
     "spark": "receiving competition photos",
     "wound": "body betrayed by arthritis",
     "fuel": "supportive women community",
-    "bridge": "still performing despite limitations",
+    "bridge": "still performing despite limits",
     "echo": "feeling twenty again",
-    "narrative": "Weekend physie competition photos arrived, capturing the joy of performing despite psoriatic arthritis diagnosis eight years ago. The supportive community of women and weekly classes keep both joints mobile and spirits high. Dancing in front of crowds resurrects the professional dancer within, defying physical limitations. What began as Jason's encouragement four years ago has become essential self-care for this working single mum."
+    "narrative": "Weekend physie competition photos arrived, capturing the joy of performing despite a psoriatic arthritis diagnosis eight years ago. The supportive community of women and weekly classes keep both joints mobile and spirits high. Dancing in front of crowds resurrects the professional dancer within, defying physical limitations. What began as Jason's encouragement four years ago has become essential self-care for this working single mum."
   },
   "constellation": {
     "emotion_primary": "joy",
@@ -40,10 +50,28 @@
     "identity_thread": "dancer despite limits",
     "expressed_insight": "we all need something in our lives that we can do just for us",
     "transformational_pivot": true,
-    "somatic_signature": "mobile joints"
+    "somatic_signature": "mobile joints",
+    "arc_type": "authenticity"
+  },
+  "milky_way": {
+    "event_type": "competition performance",
+    "location_context": "physie competition venue",
+    "associated_people": [
+      "Jason",
+      "physie classmates"
+    ],
+    "visibility_context": "shared_publicly",
+    "tone_shift": "struggle to celebration"
+  },
+  "gravity": {
+    "emotional_weight": 0.82,
+    "valence": "positive",
+    "tether_type": "identity",
+    "recurrence_pattern": "cyclical",
+    "strength_score": 0.9
   },
   "governance": {
-    "jurisdiction": null,
+    "jurisdiction": "GDPR",
     "retention_policy": {
       "basis": "user_defined",
       "ttl_days": null,
@@ -53,27 +81,17 @@
       "portable": true,
       "erasable": true,
       "explainable": false
-    }
+    },
+    "exportability": "restricted",
+    "policy_labels": [
+      "personal",
+      "health-adjacent"
+    ]
   },
   "telemetry": {
-    "entry_confidence": 1,
-    "extraction_model": "claude-sonnet-4-20250514"
-  },
-  "milky_way": {
-    "event_type": "competition performance",
-    "location_context": "physie competition venue",
-    "associated_people": [
-      "jason",
-      "physie classmates"
-    ],
-    "visibility_context": "shared_publicly",
-    "tone_shift": "celebratory reflection"
-  },
-  "gravity": {
-    "emotional_weight": 0.8,
-    "valence": "positive",
-    "tether_type": "identity",
-    "recurrence_pattern": "cyclical",
-    "strength_score": 0.9
+    "entry_confidence": 0.91,
+    "extraction_model": "claude-sonnet-4-6",
+    "extraction_provider": "anthropic",
+    "extraction_notes": "High confidence; all interpretive fields grounded in stated content."
   }
 }

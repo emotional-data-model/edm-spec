@@ -1,29 +1,64 @@
 // scripts/validate-examples.mjs
-import { readFile, readdir } from "node:fs/promises";
+import { readFile, readdir, access } from "node:fs/promises";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import Ajv from "ajv";
 import addFormats from "ajv-formats";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const SCHEMA_DIR = join(__dirname, "../schema");
+const ROOT_DIR = join(__dirname, "..");
+const SCHEMA_DIR = join(ROOT_DIR, "schema");
 
-// Base URL used in schemas' $id
-const SCHEMA_BASE_URL = "https://deepadata.com/schemas/edm/v0.6.0";
+// ---------------------------------------------------------------------------
+// Single source of truth: package.json version. Everything below derives from
+// it — no hardcoded schema version strings anywhere in this script.
+// ---------------------------------------------------------------------------
+const pkg = JSON.parse(await readFile(join(ROOT_DIR, "package.json"), "utf8"));
+const PKG_VERSION = pkg.version;                       // e.g. "0.8.1"
+const [MAJOR, MINOR] = PKG_VERSION.split(".");          // "0", "8"
+const VERSION_LINE = `${MAJOR}.${MINOR}`;               // "0.8"
 
-// Profile schema mapping
-const PROFILE_SCHEMAS = {
-  essential: "edm.v0.6.essential.schema.json",
-  extended: "edm.v0.6.extended.schema.json",
-  full: "edm.v0.6.full.schema.json",
-};
+// Schema $id base uses the major.minor line pinned at patch .0 (per the $id
+// convention in schema/edm.v*.schema.json and schema/fragments/*).
+const SCHEMA_BASE_URL = `https://deepadata.com/schemas/edm/v${VERSION_LINE}.0`;
 
-// Example files with their expected profile values
+// Profile schema filenames derive from the version line:
+//   edm.v<major>.<minor>.<profile>.schema.json
+const PROFILES = ["essential", "extended", "full"];
+const PROFILE_SCHEMAS = Object.fromEntries(
+  PROFILES.map((p) => [p, `edm.v${VERSION_LINE}.${p}.schema.json`])
+);
+
+// Example files with their expected profile values.
 const EXAMPLES = [
   { file: "example-essential-profile.json", expectedProfile: "essential" },
   { file: "example-extended-profile.json", expectedProfile: "extended" },
   { file: "example-full-profile.json", expectedProfile: "full" },
 ];
+
+// Fail fast with a clear error if the derived schema files are not present.
+async function assertSchemasExist() {
+  const missing = [];
+  for (const [profile, schemaFile] of Object.entries(PROFILE_SCHEMAS)) {
+    const schemaPath = join(SCHEMA_DIR, schemaFile);
+    try {
+      await access(schemaPath);
+    } catch {
+      missing.push({ profile, schemaFile, schemaPath });
+    }
+  }
+  if (missing.length > 0) {
+    const lines = missing.map(
+      (m) => `  - ${m.profile}: ${m.schemaFile} (expected at ${m.schemaPath})`
+    );
+    throw new Error(
+      `Derived schema file(s) not found:\n${lines.join("\n")}\n` +
+        `Derived from package.json version "${PKG_VERSION}" (line v${VERSION_LINE}).\n` +
+        `Verify schema/ contains edm.v${VERSION_LINE}.{${PROFILES.join(",")}}.schema.json, ` +
+        `or correct the version in package.json.`
+    );
+  }
+}
 
 async function loadFragments(ajv) {
   const fragmentsDir = join(SCHEMA_DIR, "fragments");
@@ -33,7 +68,7 @@ async function loadFragments(ajv) {
     if (file.endsWith(".json")) {
       const fragmentPath = join(fragmentsDir, file);
       const fragment = JSON.parse(await readFile(fragmentPath, "utf8"));
-      // Register with absolute URI matching how schemas reference them
+      // Register with absolute URI matching how the profile schemas $ref them.
       const absoluteUri = `${SCHEMA_BASE_URL}/fragments/${file}`;
       ajv.addSchema(fragment, absoluteUri);
     }
@@ -46,9 +81,9 @@ async function loadProfileSchemas(ajv) {
   for (const [profile, schemaFile] of Object.entries(PROFILE_SCHEMAS)) {
     const schemaPath = join(SCHEMA_DIR, schemaFile);
     const schema = JSON.parse(await readFile(schemaPath, "utf8"));
-    // Register with absolute URI
-    const absoluteUri = `${SCHEMA_BASE_URL}/${schemaFile.replace('.json', '.schema.json').replace('.schema.schema', '.schema')}`;
-    ajv.addSchema(schema, schema.$id || absoluteUri);
+    // Register under the schema's own $id (falling back to a derived URI).
+    const fallbackUri = `${SCHEMA_BASE_URL}/${schemaFile}`;
+    ajv.addSchema(schema, schema.$id || fallbackUri);
     validators[profile] = ajv.compile(schema);
   }
 
@@ -56,10 +91,12 @@ async function loadProfileSchemas(ajv) {
 }
 
 async function main() {
+  await assertSchemasExist();
+
   const ajv = new Ajv({
     allErrors: true,
-    strict: false,  // Allow x_* extension keywords
-    allowUnionTypes: true
+    strict: false, // Allow x_* extension keywords
+    allowUnionTypes: true,
   });
   addFormats(ajv);
 
@@ -75,7 +112,7 @@ async function main() {
   }
 
   let failures = 0;
-  const examplesDir = join(__dirname, "../examples");
+  const examplesDir = join(ROOT_DIR, "examples");
 
   for (const { file, expectedProfile } of EXAMPLES) {
     const filePath = join(examplesDir, file);
@@ -88,6 +125,18 @@ async function main() {
       console.log(`Profile mismatch: ${file}`);
       console.log(`   Expected meta.profile: "${expectedProfile}"`);
       console.log(`   Actual meta.profile: "${actualProfile}"`);
+      continue;
+    }
+
+    // Enforce the single-source principle: example version derives from (must
+    // equal) the package version. This catches drift the schema pattern alone
+    // (^0\.<minor>\.[0-9]+$) would let through.
+    const actualVersion = data?.meta?.version;
+    if (actualVersion !== PKG_VERSION) {
+      failures++;
+      console.log(`Version drift: ${file}`);
+      console.log(`   Expected meta.version: "${PKG_VERSION}" (from package.json)`);
+      console.log(`   Actual meta.version: "${actualVersion}"`);
       continue;
     }
 
@@ -105,20 +154,22 @@ async function main() {
     if (!schemaValid) {
       failures++;
       console.log(`Schema invalid: ${file} (profile: ${actualProfile})`);
-      console.log(
-        ajv.errorsText(validate.errors, { separator: "\n  - " })
-      );
+      console.log(ajv.errorsText(validate.errors, { separator: "\n  - " }));
       continue;
     }
 
-    console.log(`Valid: ${file} (profile: ${actualProfile}, schema: ${PROFILE_SCHEMAS[actualProfile]})`);
+    console.log(
+      `Valid: ${file} (profile: ${actualProfile}, schema: ${PROFILE_SCHEMAS[actualProfile]})`
+    );
   }
 
   if (failures > 0) {
     console.error(`\n${failures} file(s) failed validation.`);
     process.exit(1);
   } else {
-    console.log("\nAll example files are valid against their profile-specific schemas.");
+    console.log(
+      `\nAll example files are valid against the v${VERSION_LINE} profile schemas (package version ${PKG_VERSION}).`
+    );
   }
 }
 
