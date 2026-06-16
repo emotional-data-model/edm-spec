@@ -1,6 +1,6 @@
 {
   "name": "edm-spec",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "Emotional Data Model (EDM) Specification — canonical JSON Schemas, example artifacts, and conformance test vectors.",
   "type": "module",
   "keywords": [

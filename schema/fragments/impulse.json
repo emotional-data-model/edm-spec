@@ -43,9 +43,10 @@
         "mastery",
         "meaning",
         "autonomy",
+        "authenticity",
         null
       ],
-      "x_constraints": "belonging, safety, mastery, meaning, autonomy"
+      "x_constraints": "belonging, safety, mastery, meaning, autonomy, authenticity"
     },
     "temporal_focus": {
       "description": "The temporal direction toward which the motivational energy is oriented",
@@ -166,6 +167,15 @@
       "type": [
         "string",
         "null"
+      ],
+      "x-edm-canonical": [
+        "reframe_meaning",
+        "seek_support",
+        "distract",
+        "ritualize",
+        "confront",
+        "detach",
+        "process"
       ],
       "x_constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process. Free text accepted."
     }

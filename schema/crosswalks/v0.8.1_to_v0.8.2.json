@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.8.1 to v0.8.2 Migration Crosswalk",
+  "description": "Documents changes from EDM v0.8.1 to v0.8.2: a schema-reconciliation release bringing the published JSON Schema fragments into alignment with the canonical SDK zod (ADR-0030, edm-spec as source of truth). Includes one enum reduction (narrative_archetype drops mentor), one enum expansion (motivational_orientation adds authenticity), the meta.profile two-tier reconciliation in the shared fragment, two meta annotation corrections, and the new x-edm-canonical extension property on seven two-tier free-text fields.",
+  "status": "draft",
+  "version_from": "0.8.1",
+  "version_to": "0.8.2",
+  "release_date": "2026-06-16",
+  "breaking_changes": false,
+  "release_class": "patch",
+
+  "summary": {
+    "fields_added": 0,
+    "fields_removed": 0,
+    "fields_renamed": 0,
+    "enum_reductions": 1,
+    "enum_expansions": 1,
+    "fragment_structure_corrections": 2,
+    "annotation_corrections": 1,
+    "new_extension_property": "x-edm-canonical",
+    "new_features": 0
+  },
+
+  "overview": "v0.8.2 reconciles the published edm-spec JSON Schema fragments with the canonical SDK zod definitions. Per ADR-0030 (amended 2026-06-16) the published edm-spec JSON Schema is the source of truth and downstream artifacts (SDK zod, prompt blocks, whitepaper Appendix A) are generated from it; this release brings the fragments up to the SDK's already-tested canonical state so that generation chain starts from a correct baseline. All changes are reconciliations of pre-existing drift; none alters field meaning.",
+
+  "enum_reductions": [
+    {
+      "field": "constellation.narrative_archetype",
+      "domain": "constellation",
+      "values_before": ["hero", "caregiver", "seeker", "sage", "lover", "outlaw", "innocent", "magician", "creator", "everyman", "jester", "ruler", "mentor"],
+      "values_removed": ["mentor"],
+      "values_after": ["hero", "caregiver", "seeker", "sage", "lover", "outlaw", "innocent", "magician", "creator", "everyman", "jester", "ruler"],
+      "count_before": 13,
+      "count_after": 12,
+      "rationale": "narrative_archetype encodes archetypal IDENTITY (which archetype the subject embodies), not story role. 'mentor' is a role, not an identity, so it does not belong in the identity set. The canonical SDK zod was already at the 12-archetype set; the published fragment lagged at 13. This reconciliation aligns the fragment to the canonical 12.",
+      "breaking_change": false,
+      "compatibility_note": "Strictly, removing an enum value can invalidate an artifact that used it. However 'mentor' was never part of the canonical extraction set (the SDK zod did not emit it), so no pipeline-conformant v0.8.1 artifact carries narrative_archetype = 'mentor'. Artifacts that set this non-canonical value by other means would fail v0.8.2 strict validation."
+    }
+  ],
+
+  "enum_expansions": [
+    {
+      "field": "impulse.motivational_orientation",
+      "domain": "impulse",
+      "values_before": ["belonging", "safety", "mastery", "meaning", "autonomy"],
+      "values_added": ["authenticity"],
+      "values_after": ["belonging", "safety", "mastery", "meaning", "autonomy", "authenticity"],
+      "count_before": 5,
+      "count_after": 6,
+      "rationale": "'authenticity' (self-alignment, identity congruence as a foundational motivation) is present in the canonical SDK zod and the whitepaper, but was missing from the published fragment. Additive reconciliation.",
+      "breaking_change": false
+    }
+  ],
+
+  "schema_changes": {
+    "meta_profile_two_tier_fragment": {
+      "field": "meta.profile",
+      "domain": "meta",
+      "description": "The shared meta.json fragment's profile field was reconciled from a strict enum (essential | extended | full | null) to oneOf(canonical enum, partner: pattern), matching the composite profile schemas (which already supported partner IDs since v0.8.0) and ADR-0017. An x-edm-canonical array was added listing the three canonical profile names. The stale 'null' member and the v0.6.0 prose in the description/constraint were removed.",
+      "before": {
+        "type": ["string", "null"],
+        "enum": ["essential", "extended", "full", null]
+      },
+      "after": {
+        "oneOf": [
+          { "type": "string", "enum": ["essential", "extended", "full"] },
+          { "type": "string", "pattern": "^partner:.+$" }
+        ],
+        "x-edm-canonical": ["essential", "extended", "full"]
+      },
+      "breaking_change": false,
+      "migration_action": "None. Canonical profile values remain valid; partner: IDs were already accepted by the composite profile schemas.",
+      "note": "This corrects fragment-vs-composite drift introduced at v0.8.0: the composite edm.v0.8.*.schema.json already modeled meta.profile as oneOf, but the shared fragment lagged at a strict enum."
+    },
+    "meta_tags_spurious_enum_removed": {
+      "field": "meta.tags",
+      "domain": "meta",
+      "description": "meta.tags carried a bogus enum, [\"Short tokens\", \"lowercase recommended\"], that erroneously constrained tag string values to those two literal phrases (the human-readable constraint hint had been mis-encoded as an enum). The enum was removed; tags remains an unconstrained array of strings. The human guidance survives in x_constraints.",
+      "before": {
+        "type": "array",
+        "enum": ["Short tokens", "lowercase recommended"],
+        "items": { "type": "string" }
+      },
+      "after": {
+        "type": "array",
+        "items": { "type": "string" }
+      },
+      "breaking_change": false,
+      "migration_action": "None. The removed enum only ever rejected valid tags; removing it widens acceptance."
+    },
+    "meta_version_annotation_corrected": {
+      "field": "meta.version",
+      "domain": "meta",
+      "description": "The meta.version constraint annotation in the shared fragment was updated from the stale \"0.6.x\" text to the v0.8 line. Annotation-only correction; the version field validation behavior is unchanged.",
+      "before": "MUST match \"0.6.x\".",
+      "after": "MUST match the v0.8 line (e.g. \"0.8.2\").",
+      "breaking_change": false,
+      "migration_action": "None."
+    }
+  },
+
+  "new_extension_property": {
+    "name": "x-edm-canonical",
+    "description": "A new, non-validating extension property added to seven two-tier free-text fields. These fields are type [\"string\", \"null\"] with no enum (free text is accepted), but each has a preferred canonical vocabulary that the SDK zod expresses as union(enum, string). x-edm-canonical is the machine-readable list of those preferred values; a generator reads it to emit two-tier prompt comments and reconstruct the zod union. Because the property is x- prefixed, JSON Schema validators ignore it — it adds no constraint and does not change validation behavior. The existing x_constraints prose is retained as complementary human-readable context.",
+    "breaking_change": false,
+    "fields": [
+      {
+        "field": "constellation.emotion_primary",
+        "x-edm-canonical": ["joy", "sadness", "fear", "anger", "wonder", "peace", "tenderness", "reverence", "pride", "anxiety", "gratitude", "longing", "hope", "shame", "disappointment", "relief", "frustration"]
+      },
+      {
+        "field": "constellation.narrative_arc",
+        "x-edm-canonical": ["overcoming", "transformation", "connection", "reflection", "closure", "loss", "confrontation"]
+      },
+      {
+        "field": "constellation.relational_dynamics",
+        "x-edm-canonical": ["parent_child", "grandparent_grandchild", "romantic_partnership", "couple", "sibling_bond", "family", "friendship", "friend", "companionship", "colleague", "mentorship", "reunion", "community_ritual", "grief", "self_reflection", "professional", "therapeutic", "service", "adversarial"]
+      },
+      {
+        "field": "constellation.arc_type",
+        "x-edm-canonical": ["betrayal", "liberation", "grief", "discovery", "resistance", "bond", "moral_awakening", "transformation", "reconciliation", "reckoning", "threshold", "exile", "gratitude", "authenticity"]
+      },
+      {
+        "field": "gravity.tether_type",
+        "x-edm-canonical": ["person", "symbol", "event", "place", "ritual", "object", "tradition", "identity", "self"]
+      },
+      {
+        "field": "gravity.recurrence_pattern",
+        "x-edm-canonical": ["cyclical", "isolated", "chronic", "emerging"]
+      },
+      {
+        "field": "impulse.coping_style",
+        "x-edm-canonical": ["reframe_meaning", "seek_support", "distract", "ritualize", "confront", "detach", "process"]
+      }
+    ]
+  },
+
+  "backward_compatibility": {
+    "v081_to_v082": "v0.8.1 artifacts remain valid under v0.8.2 with one exception: an artifact carrying the non-canonical narrative_archetype value 'mentor' would fail v0.8.2 strict validation (see enum_reductions). All other changes are additive or widening: motivational_orientation gains 'authenticity', meta.tags drops a spurious enum, meta.profile formally accepts partner: IDs, and x-edm-canonical is a non-validating annotation.",
+    "v082_to_v081": "v0.8.2 artifacts are valid under v0.8.1 EXCEPT artifacts using motivational_orientation = 'authenticity' (not in the v0.8.1 fragment enum) or meta.profile partner: IDs against the strict v0.8.1 shared fragment."
+  },
+
+  "forward_compatibility": {
+    "existing_artifacts": "No migration required for existing v0.8.1 artifacts unless they used narrative_archetype = 'mentor'.",
+    "new_extractions": "New extractions may use motivational_orientation = 'authenticity' and partner: profile IDs, and must use the canonical 12 narrative_archetype values.",
+    "validation": "v0.8.2 validators accept all v0.8.1 values except narrative_archetype = 'mentor', plus motivational_orientation = 'authenticity'."
+  },
+
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none",
+    "steps": [
+      "1. Update meta.version to '0.8.2'.",
+      "2. If any artifact set narrative_archetype = 'mentor', remap it to a canonical identity archetype (or null).",
+      "3. No other changes required; remaining edits are additive, widening, or non-validating annotations."
+    ]
+  },
+
+  "migration_script_template": {
+    "description": "Pseudocode for migrating v0.8.1 artifacts to v0.8.2",
+    "code": [
+      "// Update version",
+      "artifact.meta.version = '0.8.2';",
+      "",
+      "// Reconcile the one removed enum value",
+      "if (artifact.constellation && artifact.constellation.narrative_archetype === 'mentor') {",
+      "  artifact.constellation.narrative_archetype = null; // or a canonical identity archetype",
+      "}",
+      "",
+      "// New value available: impulse.motivational_orientation may now be 'authenticity'",
+      "// meta.profile may now be a 'partner:<id>' string in the shared fragment"
+    ]
+  }
+}

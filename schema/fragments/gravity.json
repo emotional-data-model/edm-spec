@@ -69,6 +69,17 @@
         "string",
         "null"
       ],
+      "x-edm-canonical": [
+        "person",
+        "symbol",
+        "event",
+        "place",
+        "ritual",
+        "object",
+        "tradition",
+        "identity",
+        "self"
+      ],
       "x_constraints": "Canonical: person, symbol, event, place, ritual, object, tradition, identity, self. Free text accepted."
     },
     "recall_triggers": {
@@ -109,6 +120,12 @@
       "type": [
         "string",
         "null"
+      ],
+      "x-edm-canonical": [
+        "cyclical",
+        "isolated",
+        "chronic",
+        "emerging"
       ],
       "x_constraints": "Canonical: cyclical, isolated, chronic, emerging. Free text accepted. NULL when pattern cannot be determined."
     },

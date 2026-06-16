@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.8.0 to v0.8.1 Migration Crosswalk",
+  "description": "Documents changes from EDM v0.8.0 to v0.8.1: a references-and-errata patch release with zero semantic change per whitepaper §11. Includes the meta.version constraint correction (0.7.x to 0.8.x), the reference-schema nullable-enum conformance correction (24 fields, implementation conformance to §5.2), and two added references.",
+  "status": "final",
+  "version_from": "0.8.0",
+  "version_to": "0.8.1",
+  "release_date": "2026-06-13",
+  "doi": "10.5281/zenodo.20678017",
+  "breaking_changes": false,
+  "release_class": "patch",
+
+  "summary": {
+    "fields_added": 0,
+    "fields_removed": 0,
+    "fields_renamed": 0,
+    "enum_expansions": 0,
+    "enum_nullability_corrections": 24,
+    "new_features": 0,
+    "references_added": 2,
+    "semantic_change": false
+  },
+
+  "overview": "v0.8.1 is a patch release. No field semantics change and no field is added, removed, or renamed. The only schema-level edits are conformance corrections that make the reference JSON Schemas accept exactly what the specification text already mandated. v0.8.0 artifacts remain valid under v0.8.1; in addition, spec-conformant artifacts that returned explicit null on unsupported enum fields — and were incorrectly rejected by the v0.8.0 reference schemas — now validate.",
+
+  "schema_changes": {
+    "meta_version_constraint": {
+      "field": "meta.version",
+      "description": "The meta.version constraint annotation (Appendix A and the fragment x_constraints) was corrected from the stale \"0.7.x\" pattern to the \"0.8.x\" pattern matching the v0.8 line. Documentation/constraint-annotation correction only; no validation behavior change for in-line v0.8 artifacts.",
+      "before": "MUST match \"0.7.x\".",
+      "after": "MUST match the v0.8 line (e.g. \"0.8.x\").",
+      "breaking_change": false,
+      "migration_action": "None. v0.8 artifacts already declared a 0.8.x version."
+    },
+    "nullable_enum_conformance": {
+      "description": "Reference-schema nullable-enum correction. 24 enum fields were declared type [\"string\", \"null\"] (or [\"number\", \"null\"]) but omitted null from the adjacent enum array. JSON Schema evaluates enum independently of type, so these schemas rejected explicit null — exactly the value whitepaper §5.2 (Population Invariants: No Omission, No Inference) REQUIRES when a field is unsupported by the input and the extraction prompts say \"pick ONE or null\". Each affected enum had null appended so the schema accepts the spec-mandated explicit null. This is an implementation-conformance fix, NOT a spec change: no field semantics change, and v0.8.0 artifacts are unaffected except that spec-conformant ones now validate.",
+      "specification_section": "5.2",
+      "correction": "Append null to the enum array of each affected nullable enum field.",
+      "evidence": "ddna-tools branch fix/schema-nullable-enums @ db2c449 (2026-06-12); 20 of 23 previously-failing sample artifacts (2026-06-10 archive-sample run) now validate; remaining 3 are separate extraction-output defects.",
+      "breaking_change": false,
+      "migration_action": "None. The correction only widens acceptance to include explicit null.",
+      "fields_corrected": {
+        "count": 24,
+        "constellation": [
+          "temporal_context",
+          "memory_type",
+          "media_format",
+          "narrative_archetype",
+          "relational_perspective",
+          "temporal_rhythm"
+        ],
+        "gravity": [
+          "emotional_density",
+          "valence",
+          "viscosity",
+          "temporal_decay",
+          "adaptation_trajectory"
+        ],
+        "impulse": [
+          "drive_state",
+          "motivational_orientation",
+          "temporal_focus",
+          "directionality",
+          "social_visibility",
+          "urgency",
+          "risk_posture",
+          "agency_level",
+          "regulation_state",
+          "attachment_style"
+        ],
+        "milky_way": [
+          "visibility_context"
+        ],
+        "inlined_in_extended_schema": [
+          "gravity.valence",
+          "gravity.recurrence_pattern"
+        ]
+      }
+    }
+  },
+
+  "enum_expansions": [],
+
+  "errata": [
+    {
+      "location": "Whitepaper §11.1 (lineage attribution)",
+      "description": "\"v0.8.0 introduces Implementation Profiles\" corrected to \"v0.6.0 introduces Implementation Profiles\". v0.6.0 is the release that introduced the Essential/Extended/Full profile system. Text correction, zero semantic change."
+    },
+    {
+      "location": "Whitepaper Appendix A (meta.version constraint)",
+      "description": "meta.version constraint corrected from \"0.7.x\" to \"0.8.x\". Text correction, zero semantic change."
+    },
+    {
+      "location": "Reference JSON Schemas (24 nullable enum fields)",
+      "description": "Schemas corrected to accept explicit null per §5.2 (No Omission). See schema_changes.nullable_enum_conformance. Implementation conformance; spec text unchanged."
+    }
+  ],
+
+  "references_added": [
+    {
+      "location": "Whitepaper §14.6",
+      "citation": "Sofroniew, N., Kauvar, I., Saunders, W., Chen, R., et al. (2026). Emotion Concepts and their Function in a Large Language Model. Anthropic, Transformer Circuits.",
+      "identifier": "arXiv:2604.07729",
+      "role": "Cited (also in §2.2) as mechanistic evidence that affective context cannot be governed at the output layer."
+    },
+    {
+      "location": "Whitepaper §14.6",
+      "citation": "Wen, D., Sun, K., & Wang, Y. (2026). A-MBER: Affective Memory Benchmark for Emotion Recognition.",
+      "identifier": "arXiv:2604.07017",
+      "role": "Affective memory benchmark reference."
+    }
+  ],
+
+  "backward_compatibility": {
+    "v080_to_v081": "v0.8.0 artifacts remain valid under v0.8.1. The nullable-enum correction only widens acceptance (adds explicit null); no previously-valid artifact becomes invalid.",
+    "v081_to_v080": "v0.8.1 artifacts are valid under v0.8.0 EXCEPT that an artifact returning explicit null on one of the 24 corrected enum fields would fail v0.8.0 strict validation (the v0.8.0 reference schema's defect). Such artifacts are nonetheless spec-conformant per §5.2."
+  },
+
+  "forward_compatibility": {
+    "existing_artifacts": "No migration required for existing v0.8.0 artifacts.",
+    "new_extractions": "New extractions correctly emit explicit null on unsupported enum fields and now validate against the corrected reference schemas.",
+    "validation": "v0.8.1 validators accept all v0.8.0 values plus explicit null on the 24 corrected enum fields."
+  },
+
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none",
+    "steps": [
+      "1. Update meta.version to '0.8.1'.",
+      "2. No structural changes required; no field semantics change.",
+      "3. Optionally re-validate against the corrected v0.8.1 reference schemas (artifacts with explicit-null enum fields now pass)."
+    ]
+  },
+
+  "migration_script_template": {
+    "description": "Pseudocode for migrating v0.8.0 artifacts to v0.8.1",
+    "code": [
+      "// Update version",
+      "artifact.meta.version = '0.8.1';",
+      "",
+      "// No semantic change. Explicit null on nullable enum fields is now accepted",
+      "// by the reference schemas (it was always spec-conformant per §5.2)."
+    ]
+  }
+}

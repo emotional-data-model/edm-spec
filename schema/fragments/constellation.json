@@ -9,6 +9,25 @@
         "string",
         "null"
       ],
+      "x-edm-canonical": [
+        "joy",
+        "sadness",
+        "fear",
+        "anger",
+        "wonder",
+        "peace",
+        "tenderness",
+        "reverence",
+        "pride",
+        "anxiety",
+        "gratitude",
+        "longing",
+        "hope",
+        "shame",
+        "disappointment",
+        "relief",
+        "frustration"
+      ],
       "x_constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted."
     },
     "emotion_subtone": {
@@ -51,6 +70,15 @@
         "string",
         "null"
       ],
+      "x-edm-canonical": [
+        "overcoming",
+        "transformation",
+        "connection",
+        "reflection",
+        "closure",
+        "loss",
+        "confrontation"
+      ],
       "x_constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted."
     },
     "relational_dynamics": {
@@ -58,6 +86,27 @@
       "type": [
         "string",
         "null"
+      ],
+      "x-edm-canonical": [
+        "parent_child",
+        "grandparent_grandchild",
+        "romantic_partnership",
+        "couple",
+        "sibling_bond",
+        "family",
+        "friendship",
+        "friend",
+        "companionship",
+        "colleague",
+        "mentorship",
+        "reunion",
+        "community_ritual",
+        "grief",
+        "self_reflection",
+        "professional",
+        "therapeutic",
+        "service",
+        "adversarial"
       ],
       "x_constraints": "Canonical values: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. Free text accepted."
     },
@@ -130,10 +179,9 @@
         "everyman",
         "jester",
         "ruler",
-        "mentor",
         null
       ],
-      "x_constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler, mentor"
+      "x_constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler"
     },
     "symbolic_anchor": {
       "description": "A symbolic or material object, place, or element that concentrates meaning",
@@ -215,6 +263,22 @@
       "type": [
         "string",
         "null"
+      ],
+      "x-edm-canonical": [
+        "betrayal",
+        "liberation",
+        "grief",
+        "discovery",
+        "resistance",
+        "bond",
+        "moral_awakening",
+        "transformation",
+        "reconciliation",
+        "reckoning",
+        "threshold",
+        "exile",
+        "gratitude",
+        "authenticity"
       ],
       "x_constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile, gratitude, authenticity — or free text if no canonical value fits"
     }

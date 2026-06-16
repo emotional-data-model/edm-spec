@@ -14,7 +14,7 @@
     "version": {
       "description": "Declares which EDM schema this artifact conforms to and enables safe validation and migration",
       "type": "string",
-      "x_constraints": "MUST match \"0.6.x\"."
+      "x_constraints": "MUST match the v0.8 line (e.g. \"0.8.2\")."
     },
     "created_at": {
       "description": "Marks when the artifact was extracted. Anchors temporal provenance",
@@ -133,28 +133,33 @@
     "tags": {
       "description": "Optional user-defined labels for organizing or filtering artifacts",
       "type": "array",
-      "enum": [
-        "Short tokens",
-        "lowercase recommended"
-      ],
       "x_constraints": "Short tokens, lowercase recommended",
       "items": {
         "type": "string"
       }
     },
     "profile": {
-      "description": "Implementation profile declaration. Determines minimum required fields per EDM v0.6.0 Section 3.7",
-      "type": [
-        "string",
-        "null"
+      "description": "Implementation profile declaration. Canonical profile (essential/extended/full) or partner profile ID with 'partner:' prefix per EDM v0.8.0 Section 3.7.2 and ADR-0017. Determines minimum required fields.",
+      "oneOf": [
+        {
+          "type": "string",
+          "enum": [
+            "essential",
+            "extended",
+            "full"
+          ]
+        },
+        {
+          "type": "string",
+          "pattern": "^partner:.+$"
+        }
       ],
-      "enum": [
+      "x-edm-canonical": [
         "essential",
         "extended",
-        "full",
-        null
+        "full"
       ],
-      "x_constraints": "essential, extended, full. Required for v0.6.0 conformance"
+      "x_constraints": "essential, extended, full, or partner:<id> per ADR-0017. Required for v0.8.0 conformance"
     }
   },
   "additionalProperties": false,
