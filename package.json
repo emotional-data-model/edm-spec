@@ -43,6 +43,7 @@
   ],
   "scripts": {
     "validate": "node scripts/validate-examples.mjs",
+    "generate-field-blocks": "node scripts/generate-field-blocks.mjs",
     "generate-vectors": "node test-vectors/scripts/generate-vectors.mjs"
   },
   "devDependencies": {
