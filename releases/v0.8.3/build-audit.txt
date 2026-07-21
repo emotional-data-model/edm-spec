@@ -1,0 +1,202 @@
+﻿WROTE releases/v0.8.3/EDM_v0_8_3_Whitepaper_Harvey_2026.docx
+HEADER: 'EDM v0.8.1' -> 'EDM v0.8.3'
+
+--- para 0 [REPLACE] ---
+BEFORE: Emotional Data Model (EDM) v0.8.1
+AFTER : Emotional Data Model (EDM) v0.8.3
+
+--- para 2 [REPLACE] ---
+BEFORE: Version: v0.8.1
+AFTER : Version: v0.8.3
+
+--- para 3 [REPLACE] ---
+BEFORE: Date: June 2026
+AFTER : Date: July 2026
+
+--- para 6 [REPLACE] ---
+BEFORE: DOI: 10.5281/zenodo.20678017
+AFTER : DOI: pending — assigned on Zenodo publication (v0.8.1: 10.5281/zenodo.20678017)
+
+--- para 8 [REPLACE] ---
+BEFORE: Artificial intelligence systems currently lack a stable, interoperable substrate for representing affective context. While contemporary large language models internalise emotional, narrative, and motivational cues transiently within latent activations, these signals remain non-portable, non-inspecta
+AFTER : Artificial intelligence systems currently lack a stable, interoperable substrate for representing affective context. While contemporary large language models internalise emotional, narrative, and motivational cues transiently within latent activations, these signals remain non-portable, non-inspecta
+
+--- para 19 [REPLACE] ---
+BEFORE: The Emotional Data Model (EDM) v0.8.1 defines a governed, schema-bound representational architecture for encoding affective context as a stable, machine-interpretable data object. The architecture specifies the complete set of structural domains, serialisation rules, versioning guarantees, and in-ba
+AFTER : The Emotional Data Model (EDM) v0.8.3 defines a governed, schema-bound representational architecture for encoding affective context as a stable, machine-interpretable data object. The architecture specifies the complete set of structural domains, serialisation rules, versioning guarantees, and in-ba
+
+--- para 25 [REPLACE] ---
+BEFORE: 1. Architectural Foundations of EDM v0.8.1
+AFTER : 1. Architectural Foundations of EDM v0.8.3
+
+--- para 34 [REPLACE] ---
+BEFORE: Strict Layer Separation: Representation, persistence, and computation act as distinct architectural layers. EDM v0.8.1 defines representational structure only; the .ddna envelope defines persistence and sovereignty only; external systems define computational behaviour only. No layer may redefine the
+AFTER : Strict Layer Separation: Representation, persistence, and computation act as distinct architectural layers. EDM v0.8.3 defines representational structure only; the .ddna envelope defines persistence and sovereignty only; external systems define computational behaviour only. No layer may redefine the
+
+--- para 37 [REPLACE] ---
+BEFORE: EDM v0.8.1: The governed, domain-complete representational schema for affective context.
+AFTER : EDM v0.8.3: The governed, domain-complete representational schema for affective context.
+
+--- para 41 [REPLACE] ---
+BEFORE: The Emotional Data Architecture Stack addresses the absence of an explicit, governed, and structurally stable representation of affective context in contemporary AI systems. Existing architectures provide mechanisms for linguistic transformation, pattern modelling, and multimodal inference, but they
+AFTER : The Emotional Data Architecture Stack addresses the absence of an explicit, governed, and structurally stable representation of affective context in contemporary AI systems. Existing architectures provide mechanisms for linguistic transformation, pattern modelling, and multimodal inference, but they
+
+--- para 44 [REPLACE] ---
+BEFORE: Contemporary AI architectures invert this priority. They attempt to derive affective context as a transient byproduct of semantic processing, rather than establishing it as a foundational input. By treating emotion as a latent output rather than a structural input, current systems suffer from a repr
+AFTER : Contemporary AI architectures invert this priority. They attempt to derive affective context as a transient byproduct of semantic processing, rather than establishing it as a foundational input. By treating emotion as a latent output rather than a structural input, current systems suffer from a repr
+
+--- para 50 [REPLACE] ---
+BEFORE: EDM v0.8.1 draws architectural precedent from established representational systems without inheriting their specific semantics. It builds upon the tradition of structured augmentation systems established by Bush, Engelbart, and Berners-Lee, which demonstrated the necessity of addressable, governed d
+AFTER : EDM v0.8.3 draws architectural precedent from established representational systems without inheriting their specific semantics. It builds upon the tradition of structured augmentation systems established by Bush, Engelbart, and Berners-Lee, which demonstrated the necessity of addressable, governed d
+
+--- para 120 [REPLACE] ---
+BEFORE: edm_version — The EDM schema version this partner profile is built on (e.g., 0.8.1). Partner profiles referencing deprecated fields are marked invalid at the next EDM minor version increment in which those fields are deprecated.
+AFTER : edm_version — The EDM schema version this partner profile is built on (e.g., 0.8.3). Partner profiles referencing deprecated fields are marked invalid at the next EDM minor version increment in which those fields are deprecated.
+
+--- para 128 [REPLACE] ---
+BEFORE: Canonical fields present in a partner profile artifact are fully interoperable. Any EDM v0.8.1-conforming reader can interpret canonical field values without knowledge of the specific partner profile. Extension fields declared in a partner profile’s extensions_schema require bilateral schema agreeme
+AFTER : Canonical fields present in a partner profile artifact are fully interoperable. Any EDM v0.8.3-conforming reader can interpret canonical field values without knowledge of the specific partner profile. Extension fields declared in a partner profile’s extensions_schema require bilateral schema agreeme
+
+--- para 196 [REPLACE] ---
+BEFORE: 4. EDM v0.8.1 Schema Architecture
+AFTER : 4. EDM v0.8.3 Schema Architecture
+
+--- para 197 [REPLACE] ---
+BEFORE: The EDM v0.8.1 schema defines the representational substrate through which affective context is encoded as a structured, governed, model-agnostic data object. EDM treats affective context as a structured manifold where each domain contributes a distinct coordinate dimension essential for representat
+AFTER : The EDM v0.8.3 schema defines the representational substrate through which affective context is encoded as a structured, governed, model-agnostic data object. EDM treats affective context as a structured manifold where each domain contributes a distinct coordinate dimension essential for representat
+
+--- para 213 [REPLACE] ---
+BEFORE: The Constellation domain maps the qualitative landscape of the affect. It captures the emotion_primary and emotion_subtone using canonical vocabularies, providing a stable categorical reference that persists across model versions. It records the subject's structural role via the narrative_archetype,
+AFTER : The Constellation domain maps the qualitative landscape of the affect. It captures the emotion_primary and emotion_subtone using canonical vocabularies, providing a stable categorical reference that persists across model versions. It records the subject's archetypal identity via the narrative_archet
+
+--- para 226 [REPLACE] ---
+BEFORE: The EDM v0.8.1 schema is governed by a set of structural invariants that define the representational boundaries of the architecture. These invariants regulate how artifacts are formed, preserved, and interpreted across systems and temporal horizons. They apply exclusively to the EDM representational
+AFTER : The EDM v0.8.3 schema is governed by a set of structural invariants that define the representational boundaries of the architecture. These invariants regulate how artifacts are formed, preserved, and interpreted across systems and temporal horizons. They apply exclusively to the EDM representational
+
+--- para 234 [REPLACE] ---
+BEFORE: Enumerated fields, including affect classes, subtones, relational stance identifiers, structural markers, consent bases, and jurisdiction tags MUST use the canonical enumerations defined by the v0.8.1 schema. Enumerations MUST NOT be extended, reinterpreted, or replaced by vendor-specific alternativ
+AFTER : Enumerated fields, including affect classes, subtones, relational stance identifiers, structural markers, consent bases, and jurisdiction tags MUST use the canonical enumerations defined by the v0.8.3 schema. Enumerations MUST NOT be extended, reinterpreted, or replaced by vendor-specific alternativ
+
+--- para 310 [REPLACE] ---
+BEFORE: The Emotional Data Model (EDM) and the .ddna envelope define a representational and persistence architecture designed to remain stable across computational, regulatory, and archival environments. Evolution of the architecture MUST preserve established semantics, maintain domain geometry, and uphold 
+AFTER : The Emotional Data Model (EDM) and the .ddna envelope define a representational and persistence architecture designed to remain stable across computational, regulatory, and archival environments. Evolution of the architecture MUST preserve established semantics, maintain domain geometry, and uphold 
+
+--- para 327 [REPLACE] ---
+BEFORE: The security architecture defines the structural guarantees required to preserve the integrity, sovereignty, and interpretability of EDM v0.8.1 artifacts and .ddna v1.1 envelopes across storage, transport, and multi-vendor computational environments. Because EDM externalises affective context as exp
+AFTER : The security architecture defines the structural guarantees required to preserve the integrity, sovereignty, and interpretability of EDM v0.8.3 artifacts and .ddna v1.1 envelopes across storage, transport, and multi-vendor computational environments. Because EDM externalises affective context as exp
+
+--- para 343 [REPLACE] ---
+BEFORE: The .ddna envelope ensures provenance integrity through W3C Data Integrity Proofs. The proof block cryptographically binds both header and payload, with the `created` timestamp providing temporal anchoring. Version identifiers define the interpretive frame under which the artifact must be read. Audi
+AFTER : The .ddna envelope ensures provenance integrity through W3C Data Integrity Proofs. The proof block cryptographically binds both header and payload, with the `created` timestamp providing temporal anchoring. Version identifiers define the interpretive frame under which the artifact must be read. Audi
+
+--- para 355 [REPLACE] ---
+BEFORE: EDM v0.8.1 supports linkage to external taxonomies through referential identifiers. This linkage is structural and non-semantic. External systems—such as categorical affect schemes, structured intensity identifiers, contextual classifications, and international metadata standards—MAY be referenced t
+AFTER : EDM v0.8.3 supports linkage to external taxonomies through referential identifiers. This linkage is structural and non-semantic. External systems—such as categorical affect schemes, structured intensity identifiers, contextual classifications, and international metadata standards—MAY be referenced t
+
+--- para 361 [REPLACE] ---
+BEFORE: 11.1 Version Lineage (v0.1 → v0.2 → v0.3 → v0.4.0→ v0.5.0 → v0.6.0 → v0.7.0 → v0.8.0 → v0.8.1)
+AFTER : 11.1 Version Lineage (v0.1 → v0.2 → v0.3 → v0.4.0→ v0.5.0 → v0.6.0 → v0.7.0 → v0.8.0 → v0.8.1 → v0.8.2 → v0.8.3)
+
+--- para 362 [REPLACE] ---
+BEFORE: The EDM version lineage reflects the incremental expansion of representational structure while maintaining all prior semantics. v0.1 introduced the initial domain layout and core governance constructs. v0.2 stabilised domain boundaries, normalised narrative primitives, and formalised governance inva
+AFTER : The EDM version lineage reflects the incremental expansion of representational structure while maintaining all prior semantics. v0.1 introduced the initial domain layout and core governance constructs. v0.2 stabilised domain boundaries, normalised narrative primitives, and formalised governance inva
+
+--- para 365 [INSERT-AFTER] ---
+BEFORE: (n/a)
+AFTER : v0.8.2 is a schema-reconciliation patch that brings the published JSON Schema fragments into alignment with the canonical vocabulary (ADR-0030: the published specification is the source of truth and downstream implementations generate from it). The narrative_archetype enumeration is corrected to the twelve canonical identity archetypes — hero, caregiver, seeker, sage, lover, outlaw, innocent, magi
+
+--- para 365 [INSERT-AFTER] ---
+BEFORE: (n/a)
+AFTER : v0.8.3 is a truth-only patch release. The Full Profile composite schema gains meta.source_timestamp in its inline meta block, conforming to the canonical meta fragment: the field, added in v0.7.0, had been strict-rejected by the composite's additionalProperties constraint since v0.8.0. The change is strictly widening — every artifact valid under v0.8.2 remains valid, and Full Profile artifacts car
+
+--- para 382 [REPLACE] ---
+BEFORE: EDM v0.8.1 defines affective context as a structured, governed, and portable data object. It establishes the representational conditions under which emotional state can exist independently of any model, vendor, or computational environment, and remain interpretable across systems and time. By extern
+AFTER : EDM v0.8.3 defines affective context as a structured, governed, and portable data object. It establishes the representational conditions under which emotional state can exist independently of any model, vendor, or computational environment, and remain interpretable across systems and time. By extern
+
+--- para 433 [REPLACE] ---
+BEFORE: Appendix A — Canonical EDM v0.8.1 Schema
+AFTER : Appendix A — Canonical EDM v0.8.3 Schema
+
+--- para 501 [REPLACE] ---
+BEFORE: Description: The timestamp of the source content being extracted, where known. Anchors the artifact temporally to the original experience rather than the extraction event. Distinct from created_at, which records the extraction timestamp. Added in v0.8.0.
+AFTER : Description: The timestamp of the source content being extracted, where known. Anchors the artifact temporally to the original experience rather than the extraction event. Distinct from created_at, which records the extraction timestamp. Added in v0.7.0.
+
+--- para 575 [REPLACE] ---
+BEFORE: Description: The structural role or literary trope the subject occupies within the narrative.
+AFTER : Description: The archetypal identity the subject embodies — which of the 12 canonical identity archetypes the subject expresses, not a structural role or story function.
+
+--- para 576 [REPLACE] ---
+BEFORE: Constraints: hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler, mentor, orphan.
+AFTER : Constraints: hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler.
+
+--- para 607 [REPLACE] ---
+BEFORE: Description: The dominant narrative arc pattern of the experience. Captures the overarching structural shape of the emotional trajectory. Added in v0.8.0.
+AFTER : Description: The dominant narrative arc pattern of the experience. Captures the overarching structural shape of the emotional trajectory. Added in v0.7.0.
+
+--- para 807 [REPLACE] ---
+BEFORE: [extraction_chunking_strategy removed from Telemetry in v0.8.1. Chunking strategy is a vendor pipeline concern, not a representational field. If needed, record via the Extensions domain as a partner-namespaced field.]
+AFTER : [extraction_chunking_strategy removed from Telemetry in v0.7.0. Chunking strategy is a vendor pipeline concern, not a representational field. If needed, record via the Extensions domain as a partner-namespaced field.]
+
+--- para 823 [REPLACE] ---
+BEFORE: Description: Open object containing partner-namespaced semantic enrichments added post-extraction by integrating systems. Each top-level key is a reverse-DNS namespace identifier. Added in v0.8.0.
+AFTER : Description: Open object containing partner-namespaced semantic enrichments added post-extraction by integrating systems. Each top-level key is a reverse-DNS namespace identifier. Added in v0.7.0.
+
+--- para 846 [REPLACE] ---
+BEFORE: Appendix B — Example EDM v0.8.1 Artifacts
+AFTER : Appendix B — Example EDM v0.8.3 Artifacts
+
+--- para 855 [REPLACE] ---
+BEFORE:     "version": "0.6.0",
+AFTER :     "version": "0.8.3",
+
+--- para 904 [REPLACE] ---
+BEFORE:     "version": "0.6.0",
+AFTER :     "version": "0.8.3",
+
+--- para 985 [REPLACE] ---
+BEFORE:     "version": "0.6.0",
+AFTER :     "version": "0.8.3",
+
+--- para 1147 [REPLACE] ---
+BEFORE: This artifact is extracted from the same source input as Artifacts B1–B3, under the partner:com.deepadata.therapy.v1 partner profile. The base profile is Full (96 fields extracted and stored). The partner profile’s included_fields manifest filters the API response to 24 clinically-focused affective 
+AFTER : This artifact is extracted from the same source input as Artifacts B1–B3, under the partner:com.deepadata.therapy.v1 partner profile. The base profile is Full (91 fields extracted and stored). The partner profile’s included_fields manifest filters the API response to 24 clinically-focused affective 
+
+--- para 1151 [REPLACE] ---
+BEFORE:     "version": "0.8.1",
+AFTER :     "version": "0.8.3",
+
+--- para 1201 [REPLACE] ---
+BEFORE: Below is the minimal valid structure for a compliant .ddna v1.1 envelope containing an EDM v0.8.1 artifact.
+AFTER : Below is the minimal valid structure for a compliant .ddna v1.1 envelope containing an EDM v0.8.3 artifact.
+
+--- para 1206 [REPLACE] ---
+BEFORE:     "edm_version": "0.6.0",
+AFTER :     "edm_version": "0.8.3",
+
+--- para 1217 [REPLACE] ---
+BEFORE:     "payload_type": "edm.v0.8.1",
+AFTER :     "payload_type": "edm.v0.8.3",
+
+--- para 1229 [REPLACE] ---
+BEFORE:       "version": "0.6.0",
+AFTER :       "version": "0.8.3",
+
+--- para 1265 [REPLACE] ---
+BEFORE: EDM schema version (e.g., "0.6.0").
+AFTER : EDM schema version (e.g., "0.8.3").
+
+--- para 1286 [REPLACE] ---
+BEFORE: Type identifier for the payload (e.g., "edm.v0.8.1").
+AFTER : Type identifier for the payload (e.g., "edm.v0.8.3").
+
+--- para 1456 [REPLACE] ---
+BEFORE: This appendix defines the minimal normative validation contract for EDM v0.8.1. Extended validator profiles, reference implementations, and operational guidelines MAY be maintained in separate companion documentation.
+AFTER : This appendix defines the minimal normative validation contract for EDM v0.8.3. Extended validator profiles, reference implementations, and operational guidelines MAY be maintained in separate companion documentation.
+
+--- para 1462 [REPLACE] ---
+BEFORE: This glossary defines all terms used in the EDM v0.8.1 representational schema, the .ddna persistence layer, and the Emotional Data Architecture Stack. All definitions are sourced directly from the specification and are free of behavioural or inferential semantics.
+AFTER : This glossary defines all terms used in the EDM v0.8.3 representational schema, the .ddna persistence layer, and the Emotional Data Architecture Stack. All definitions are sourced directly from the specification and are free of behavioural or inferential semantics.
+
+--- para 1522 [REPLACE] ---
+BEFORE: Narrative Archetype A Constellation descriptor assigning structural role (hero, seeker, caregiver, sage, etc.).
+AFTER : Narrative Archetype A Constellation descriptor assigning the archetypal identity the subject embodies (hero, seeker, caregiver, sage, etc.); an identity, not a structural role.
