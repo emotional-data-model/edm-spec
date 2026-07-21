@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.8.0/edm.full.schema.json",
   "title": "EDM v0.8.0 Full Profile",
-  "description": "Complete profile for maximum emotional fidelity. 10 domains, 96 fields. Suitable for clinical applications, research, and scenarios requiring full affective context with interoperability crosswalks.",
+  "description": "Complete profile for maximum emotional fidelity. 10 domains, 91 fields. Suitable for clinical applications, research, and scenarios requiring full affective context with interoperability crosswalks.",
   "type": "object",
   "required": ["meta", "core", "constellation", "milky_way", "gravity", "impulse", "governance", "telemetry", "system", "crosswalks"],
   "additionalProperties": false,
@@ -41,6 +41,14 @@
           "type": "string",
           "description": "Artifact extraction timestamp.",
           "format": "date-time"
+        },
+        "source_timestamp": {
+          "description": "The timestamp of the original source content, distinct from created_at which marks extraction time",
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_constraints": "ISO-8601 UTC timestamp"
         },
         "updated_at": {
           "type": ["string", "null"],
@@ -133,7 +141,7 @@
     "profile_info": {
       "name": "full",
       "domains": ["meta", "core", "constellation", "milky_way", "gravity", "impulse", "governance", "telemetry", "system", "crosswalks"],
-      "field_count": 96,
+      "field_count": 91,
       "use_cases": ["clinical_applications", "research", "full_affective_context", "interoperability"]
     }
   }

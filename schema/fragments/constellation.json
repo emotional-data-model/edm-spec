@@ -161,7 +161,7 @@
       "x_constraints": "photo, video, audio, text, photo_with_story"
     },
     "narrative_archetype": {
-      "description": "The structural role or literary trope the subject occupies within the narrative",
+      "description": "The archetypal identity the subject embodies — which of the 12 canonical identity archetypes the subject expresses, not a structural role or story function (ADR-0030)",
       "type": [
         "string",
         "null"
