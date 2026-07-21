@@ -1,15 +1,16 @@
 # Emotional Data Model (EDM) Specification
 
-**Current Version:** v0.8.1
-**Released:** June 2026
-**DOI:** [10.5281/zenodo.20678017](https://doi.org/10.5281/zenodo.20678017)
+**Current Version:** v0.8.3
+**Released:** July 2026
+**DOI:** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652) (concept DOI — resolves to the latest published deposit; v0.8.3 deposit pending)
 
 ## 📄 Official Whitepaper
 
-The complete EDM v0.8.1 specification is published on Zenodo and archived
-in-repo under [`releases/`](releases/):
+The EDM whitepaper is archived in-repo under [`releases/`](releases/)
+(v0.8.3 document in `releases/v0.8.3/`; Zenodo deposit pending). The
+latest published Zenodo deposit is v0.8.1:
 - **Download:** [EDM Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.20678017)
-- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.20678017
+- **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM). Zenodo. https://doi.org/10.5281/zenodo.17808652
 
 ## 🔧 Implementation
 
@@ -30,10 +31,10 @@ Reference implementations:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20678017.svg)](https://doi.org/10.5281/zenodo.20678017)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Version](https://img.shields.io/badge/version-0.8.1-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.8.1)
+[![Version](https://img.shields.io/badge/version-0.8.3-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.8.3)
 [![Status](https://img.shields.io/badge/status-Stable-brightgreen.svg)]()
 
-**Status:** Stable (v0.8.1) — Production ready
+**Status:** Stable (v0.8.3) — Production ready
 
 ---
 
@@ -69,10 +70,12 @@ EDM fills this gap by providing:
 
 ## Official Publication
 
-The EDM whitepaper is published on Zenodo:
+The EDM whitepaper is published on Zenodo (latest published deposit:
+v0.8.1; the v0.8.3 document is regenerated in-repo under
+`releases/v0.8.3/` and its Zenodo deposit is pending):
 
 **Citation:**
-> Harvey, J. (2026). Emotional Data Model (EDM) v0.8.1. Zenodo. https://doi.org/10.5281/zenodo.20678017
+> Harvey, J. (2026). Emotional Data Model (EDM). Zenodo. https://doi.org/10.5281/zenodo.17808652
 
 **Full Whitepaper:** [Download from Zenodo](https://doi.org/10.5281/zenodo.20678017)
 
@@ -80,9 +83,9 @@ The EDM whitepaper is published on Zenodo:
 
 ## Overview
 
-The **Emotional Data Model (EDM) v0.8.1** is a governance-first schema for representing emotional context in AI systems. It defines a domain-complete, schema-bound format that externalizes affective context as a deterministic, model-agnostic data object.
+The **Emotional Data Model (EDM) v0.8.3** is a governance-first schema for representing emotional context in AI systems. It defines a domain-complete, schema-bound format that externalizes affective context as a deterministic, model-agnostic data object.
 
-**New in v0.8.x:** Partner Profiles (§3.7.6), `meta.profile` two-tier model with `partner:` prefix, two new arc_type values, certification minimum bar. v0.8.1 is a references/errata patch — no schema change. See [PROFILES.md](docs/PROFILES.md), [CONFORMANCE.md](docs/CONFORMANCE.md), and [CHANGELOG.md](CHANGELOG.md).
+**New in v0.8.x:** Partner Profiles (§3.7.6), `meta.profile` two-tier model with `partner:` prefix, two new arc_type values, certification minimum bar. v0.8.1 is a references/errata patch; v0.8.2 reconciles the published fragments with the canonical vocabulary (ADR-0030 — `narrative_archetype` at 12 identity archetypes); v0.8.3 is a truth-only patch (Full composite `source_timestamp` conformance, field count 91, document regeneration). See [PROFILES.md](docs/PROFILES.md), [CONFORMANCE.md](docs/CONFORMANCE.md), and [CHANGELOG.md](CHANGELOG.md).
 
 **Key principles:**
 - **Transient by default** — EDM artifacts should not persist beyond session windows (24 hours max) unless explicitly sealed in a .ddna envelope
@@ -93,7 +96,7 @@ The **Emotional Data Model (EDM) v0.8.1** is a governance-first schema for repre
 This repository contains:
 
 - Canonical JSON Schema for EDM v0.8
-- Domain Fragment Schemas (10 domains, 96 fields)
+- Domain Fragment Schemas (10 domains, 91 fields, Full profile)
 - Implementation Profiles and Conformance documentation
 - Migration Crosswalks and Guides
 - Validation Tools & Examples
@@ -173,23 +176,23 @@ print("Valid EDM v0.8 artifact")
 
 ## Schema Structure
 
-EDM v0.8 defines **10 mandatory domains** (96 fields total, Full profile) plus the optional `extensions` domain:
+EDM v0.8 defines **10 mandatory domains** (91 fields total, Full profile) plus the optional `extensions` domain:
 
 ### Representational Layer (57 fields)
 
 - **CORE** (7 fields) - Narrative anchors: anchor, spark, wound, fuel, bridge, echo, narrative
-- **CONSTELLATION** (18 fields) - Affective topology: emotions, narrative arcs, relational dynamics
+- **CONSTELLATION** (19 fields) - Affective topology: emotions, narrative arcs, relational dynamics
 - **MILKY_WAY** (5 fields) - Contextual framing: event type, location, people, tone shifts
-- **GRAVITY** (15 fields) - Salience geometry: emotional weight, density, recall triggers
+- **GRAVITY** (14 fields) - Salience geometry: emotional weight, density, recall triggers
 - **IMPULSE** (12 fields) - Motivational state: energy, drive, orientation, regulation
 
-### Infrastructure Layer (39 fields)
+### Infrastructure Layer (34 fields)
 
-- **META** (15 fields) - Identity & provenance: id, version, timestamps, consent, visibility
-- **GOVERNANCE** (12 fields) - Rights & compliance: jurisdiction, retention, subject rights, k-anonymity
-- **TELEMETRY** (4 fields) - Extraction metadata: model, confidence, alignment delta
-- **SYSTEM** (3 fields) - Compute boundary: embeddings, indices, sector weights
-- **CROSSWALKS** (5 fields) - Interoperability: Plutchik, Geneva Emotion Wheel, DSM-5, ISO mappings
+- **META** (17 fields) - Identity & provenance: id, version, timestamps, consent, visibility
+- **GOVERNANCE** (7 fields) - Rights & compliance: jurisdiction, retention, subject rights, k-anonymity
+- **TELEMETRY** (4 fields) - Extraction metadata: model, confidence, extraction context
+- **SYSTEM** (2 fields) - Compute boundary: embeddings, indices
+- **CROSSWALKS** (4 fields) - Interoperability: Plutchik, Geneva Emotion Wheel, DSM-5, ISO mappings
 
 [Complete Field Reference](docs/OVERVIEW.md)
 
@@ -218,7 +221,11 @@ accurately represents the extracted content (two-tier enum model, v0.7.0+).
 `parent_child`, `grandparent_grandchild`, `romantic_partnership`, `couple`, `sibling_bond`, `family`, `friendship`, `friend`, `companionship`, `colleague`, `mentorship`, `reunion`, `community_ritual`, `grief`, `self_reflection`, `professional`, `therapeutic`, `service`, `adversarial`
 
 ### narrative_archetype
-`hero`, `caregiver`, `seeker`, `sage`, `lover`, `outlaw`, `innocent`, `orphan`, `magician`, `creator`, `everyman`, `jester`, `ruler`, `mentor`
+`hero`, `caregiver`, `seeker`, `sage`, `lover`, `outlaw`, `innocent`, `magician`, `creator`, `everyman`, `jester`, `ruler`
+
+The 12 canonical **identity** archetypes — which archetype the subject
+embodies, not a story role (ADR-0030; `orphan` and `mentor` are excluded
+as roles, not identities).
 
 ### tether_type
 `person`, `symbol`, `event`, `place`, `ritual`, `object`, `tradition`, `identity`, `self`
@@ -257,21 +264,22 @@ edm-spec/
 ├── schema/
 │   ├── edm.v0.8.essential.schema.json # Essential profile (5 domains, 24 fields)
 │   ├── edm.v0.8.extended.schema.json  # Extended profile (8 domains, 50 fields)
-│   ├── edm.v0.8.full.schema.json      # Full profile (10 domains, 96 fields)
+│   ├── edm.v0.8.full.schema.json      # Full profile (10 domains, 91 fields)
 │   ├── fragments/                     # Shared domain schemas
 │   │   ├── core.json
 │   │   ├── constellation.json
 │   │   ├── governance.json           # Compliance & rights
 │   │   └── ... (11 total)
 │   └── crosswalks/                   # Migration mappings
-│       ├── v0.2_to_v0.3.json … v0.7.0_to_v0.8.0.json
+│       ├── v0.2_to_v0.3.json … v0.8.2_to_v0.8.3.json
 ├── examples/
 │   ├── example-{essential,extended,full}-profile.json
 │   └── example-partner-{journaling,therapy,companion,wiki}.json
 ├── test-vectors/                     # Canonical .ddna verification vectors
 ├── releases/                         # Versioned whitepaper documents
 │   ├── v0.8.0/
-│   └── v0.8.1/
+│   ├── v0.8.1/
+│   └── v0.8.3/
 ├── docs/
 │   ├── OVERVIEW.md                   # Schema architecture
 │   ├── PROFILES.md                   # Implementation & partner profiles
@@ -295,6 +303,23 @@ edm-spec/
 ---
 
 ## Migration Guide
+
+### v0.8.2 → v0.8.3 (July 2026)
+
+Truth-only patch: the Full composite meta block gains `source_timestamp`
+(conformance to the canonical fragment — widening only), field count
+corrected to 91, `narrative_archetype` description corrected to the
+identity definition. No migration required.
+See `schema/crosswalks/v0.8.2_to_v0.8.3.json`.
+
+### v0.8.1 → v0.8.2 (June 2026)
+
+Fragment reconciliation to the canonical vocabulary: `narrative_archetype`
+13 → 12 (`mentor` removed), `motivational_orientation` +`authenticity`,
+`meta.profile` two-tier fragment fix, `meta.tags` spurious enum removed.
+Migration needed only for artifacts carrying
+`narrative_archetype = "mentor"`.
+See `schema/crosswalks/v0.8.1_to_v0.8.2.json`.
 
 ### v0.8.0 → v0.8.1 (June 2026)
 
@@ -361,15 +386,19 @@ If you use EDM in your research, please cite:
 ```bibtex
 @software{harvey2026edm,
   author = {Harvey, Jason},
-  title = {Emotional Data Model (EDM) v0.8.1},
+  title = {Emotional Data Model (EDM)},
   year = {2026},
   publisher = {Zenodo},
-  version = {v0.8.1},
-  doi = {10.5281/zenodo.20678017},
+  version = {v0.8.3},
+  doi = {10.5281/zenodo.17808652},
   url = {https://github.com/emotional-data-model/edm-spec}
 }
 
 ```
+
+*(10.5281/zenodo.17808652 is the concept DOI and resolves to the latest
+published deposit; a version-specific v0.8.3 DOI will replace it once the
+v0.8.3 Zenodo deposit is published.)*
 
 ---
 
@@ -399,15 +428,14 @@ Contact: jason@emotionaldatamodel.org
 
 ## Links
 
-- **Whitepaper:** [Zenodo Record](https://doi.org/10.5281/zenodo.20678017)
-- **DOI:** [10.5281/zenodo.20678017](https://doi.org/10.5281/zenodo.20678017)
+- **Whitepaper (latest published deposit, v0.8.1):** [Zenodo Record](https://doi.org/10.5281/zenodo.20678017)
 - **Concept DOI (all versions):** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
-- *Note:* The v0.8.0 deposit (10.5281/zenodo.20678017) exists outside the main version chain, cross-linked via related identifiers. v0.8.1 reunifies the lineage under concept 17808652.
+- *Note:* The v0.8.0 deposit (10.5281/zenodo.19555166) exists outside the main version chain, cross-linked via related identifiers. v0.8.1 reunifies the lineage under concept 17808652. v0.8.2 was npm-only (no deposit); the v0.8.3 deposit is pending.
 - **Repository:** https://github.com/emotional-data-model/edm-spec
 - **Issues:** https://github.com/emotional-data-model/edm-spec/issues
 
 ---
 
-**Last Updated:** June 2026
-**Version:** 0.8.1
+**Last Updated:** July 2026
+**Version:** 0.8.3
 **License:** MIT

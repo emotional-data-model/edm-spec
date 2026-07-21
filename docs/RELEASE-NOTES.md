@@ -1,6 +1,70 @@
 # Release Notes — Emotional Data Model (EDM)
 
-## EDM v0.8.1 (June 2026) — Current
+## EDM v0.8.3 (July 2026) — Current
+
+**DOI:** pending — new Zenodo deposit is a founder action; the latest
+published deposit remains v0.8.1 (10.5281/zenodo.20678017), and the
+concept DOI [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
+always resolves to the latest published version.
+
+Truth-only patch release (founder decision, 2026-07-21). No enum changes,
+no semantic changes; field-relevance review deferred to 0.9.
+
+### Fixed
+
+- **Full composite `meta.source_timestamp` conformance**: the Full
+  composite's inline meta block omitted `source_timestamp` (canonical since
+  v0.7.0) under `additionalProperties: false`, strict-rejecting a legal
+  field since v0.8.0. Now mirrored from the canonical meta fragment
+  (optional, nullable). Widening only — everything that validated before
+  still validates.
+- **Full profile field count: 96 → 91** (machine count of the composite's
+  top-level fields; "96" was hand-arithmetic that never matched a shipped
+  v0.8 schema).
+- **`narrative_archetype` description**: corrected to the
+  identity-archetype definition per ADR-0030 (identity, not structural
+  role). Enum untouched at 12.
+
+### Added
+
+- `schema/crosswalks/v0.8.2_to_v0.8.3.json` (machine changelog)
+- `docs/RELEASE-POLICY.md` — the one-story release gate
+
+### Changed
+
+- Whitepaper regenerated (`releases/v0.8.3/`): Appendix A from the v0.8.3
+  spec (12 identity archetypes, identity-not-role definition), field count
+  91 throughout, `source_timestamp` attribution corrected to v0.7.0
+- Repository metadata refreshed (README, CITATION.cff, package.json)
+
+See [CHANGELOG.md](../CHANGELOG.md) for the enumerated change list.
+
+---
+
+## EDM v0.8.2 (June 2026)
+
+**DOI:** none — npm-only release; no Zenodo deposit and no standalone
+document shipped (gap recorded and closed by the 0.8.3 release and
+`docs/RELEASE-POLICY.md`).
+
+Schema-reconciliation patch aligning the published fragments with the
+canonical SDK zod state (ADR-0030, amended 2026-06-16):
+
+- `narrative_archetype` enum 13 → 12 (`mentor` removed; identity, not role)
+- `motivational_orientation` enum 5 → 6 (`authenticity` added)
+- `meta.profile` fragment reconciled to the two-tier model
+  (canonical enum | `partner:` pattern; stale `null` dropped)
+- `meta.tags` spurious enum removed (bug fix — it rejected all real tags)
+- `x-edm-canonical` preferred-vocabulary annotation added to 7 two-tier
+  fields (non-validating)
+- Spec-level field-block generator; machine crosswalks; first npm
+  publications (0.8.1, 0.8.2)
+
+Machine changelog: `schema/crosswalks/v0.8.1_to_v0.8.2.json`.
+
+---
+
+## EDM v0.8.1 (June 2026)
 
 **DOI:** 10.5281/zenodo.20678017
 
@@ -134,7 +198,9 @@ Additive patch release with nine canonical enumeration values across five fields
 
 | Version | Date | Status | Zenodo DOI |
 |---------|------|--------|------------|
-| v0.8.1 | June 2026 | **Current** | 10.5281/zenodo.20678017 |
+| v0.8.3 | July 2026 | **Current** | pending (founder deposit) |
+| v0.8.2 | June 2026 | Published (npm only; no Zenodo deposit) | — |
+| v0.8.1 | June 2026 | Published | 10.5281/zenodo.20678017 |
 | v0.8.0 | April 2026 | Published | 10.5281/zenodo.19555166 |
 | v0.7.0 | March 2026 | Published | 10.5281/zenodo.19211903 |
 | v0.6.0 | March 2026 | Published | 10.5281/zenodo.18951891 |

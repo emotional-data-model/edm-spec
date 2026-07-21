@@ -5,6 +5,128 @@ All notable changes to the Emotional Data Model (EDM) specification are document
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.8.3] - 2026-07-21
+
+Truth-only patch release (founder decision, 2026-07-21). Composite
+conformance to the canonical fragments, one description correction, and
+document regeneration. No field additions/removals beyond the composite
+conformance fix, no enum changes, no semantic changes. Field-relevance
+review is deferred to 0.9 with usage evidence.
+
+### Fixed
+
+- **Full composite `meta.source_timestamp` conformance**: the inline meta
+  block in `edm.v0.8.full.schema.json` omitted `source_timestamp` (a legal
+  field since v0.7.0, present in the canonical `schema/fragments/meta.json`)
+  while declaring `additionalProperties: false` — so a full-profile artifact
+  carrying `meta.source_timestamp` was strict-rejected by the composite
+  since v0.8.0. The field is now mirrored from the fragment definition
+  (optional, nullable). Artifacts that validated before still validate;
+  artifacts carrying `source_timestamp` now validate as the fragment always
+  intended.
+- **Full profile field count corrected: 96 → 91.** 91 is the machine count
+  of top-level fields across the 10 domains of the v0.8.3 Full composite
+  (including the restored `source_timestamp`). The long-standing "96" was
+  hand-arithmetic that never matched a shipped v0.8 schema (see
+  deepadata-com `planning/EDM_SPEC_0.8.2_LINEAGE_FINDINGS.md`).
+- **`narrative_archetype` description corrected** (description only; enum
+  untouched at 12): "the structural role or literary trope" → the
+  identity-archetype definition per ADR-0030. The field encodes which of
+  the 12 canonical identity archetypes the subject embodies — an identity,
+  not a story role.
+
+### Added
+
+- **`schema/crosswalks/v0.8.2_to_v0.8.3.json`** — machine changelog
+  (`breaking_changes: false`, `release_class: "patch"`).
+- **`docs/RELEASE-POLICY.md`** — the one-story release gate: every npm
+  release must have its document candidate staged; npm + Zenodo publish
+  together; no certification claim may cite a version whose document is
+  not published.
+
+### Changed
+
+- **Whitepaper regenerated** (`releases/v0.8.3/`): Appendix A regenerated
+  from the v0.8.3 spec — 12 identity archetypes with the identity-not-role
+  definition; Full profile field count 91 throughout; `source_timestamp`
+  attribution corrected to v0.7.0 per the crosswalk record.
+- Repository metadata refreshed to v0.8.3: README.md, CITATION.cff,
+  package.json, docs/RELEASE-NOTES.md.
+
+### Migration
+
+- None required. v0.8.2 artifacts are v0.8.3 artifacts; the composite fix
+  only widens acceptance (artifacts using `meta.source_timestamp` in the
+  Full profile now validate).
+
+## [0.8.2] - 2026-06-16
+
+*(Entry backfilled 2026-07-21 from the machine crosswalk
+`schema/crosswalks/v0.8.1_to_v0.8.2.json` — v0.8.2 shipped to npm with no
+human-facing changelog entry.)*
+
+Schema-reconciliation patch: brings the published JSON Schema fragments
+into alignment with the canonical SDK zod state (ADR-0030, amended
+2026-06-16: the published spec is the source of truth; this release fixes
+the baseline the generation chain starts from). No fields added, removed,
+or renamed.
+
+### Changed
+
+- **`constellation.narrative_archetype` enum reduced 13 → 12**: `mentor`
+  removed. The field encodes archetypal identity, not story role; `mentor`
+  is a role. The SDK was already at 12; the published fragment lagged.
+  Strictly, an artifact carrying `narrative_archetype = "mentor"` fails
+  v0.8.2 validation — but no pipeline-conformant v0.8.1 artifact emitted
+  it.
+- **`impulse.motivational_orientation` enum expanded 5 → 6**:
+  `authenticity` added (present in the SDK and whitepaper; missing from
+  the published fragment). Additive.
+- **`meta.profile` fragment reconciled to the two-tier model**: the shared
+  `meta.json` fragment moved from a strict enum
+  (`essential | extended | full | null`) to
+  `oneOf(canonical enum, "partner:" pattern)`, matching what the composite
+  profile schemas had already accepted since v0.8.0 (ADR-0017). The stale
+  `null` member was dropped.
+- **`meta.tags` spurious enum removed**: the fragment carried a bogus
+  `enum: ["Short tokens", "lowercase recommended"]` (a human hint
+  mis-encoded as a machine constraint) that rejected all real tags. Tags
+  are again a free string array; the guidance survives in `x_constraints`.
+
+### Added
+
+- **`x-edm-canonical` extension property** on seven two-tier free-text
+  fields (`emotion_primary`, `narrative_arc`, `relational_dynamics`,
+  `arc_type`, `tether_type`, `recurrence_pattern`, `coping_style`) — the
+  machine-readable preferred-vocabulary list read by the field-block
+  generator. `x-` prefixed: validators ignore it; no validation change.
+- **Spec-level field-block generator**
+  (`scripts/generate-field-blocks.mjs`), ported from the SDK — downstream
+  prompt field-blocks now generate from the spec.
+- **Machine crosswalks** `v0.8.0_to_v0.8.1.json` and
+  `v0.8.1_to_v0.8.2.json`.
+- **npm publication**: `edm-spec` published to npm (0.8.1, then 0.8.2) —
+  downstream repos consume the spec as a versioned dependency instead of
+  manual copies.
+
+### Errata
+
+- `meta.version` constraint annotation corrected from the stale "0.6.x"
+  text to the v0.8 line (annotation-only; no validation change).
+- Partner example artifacts migrated to v0.8.2 stamps.
+- **Known gap, resolved in 0.8.3**: v0.8.2 shipped with no human-facing
+  document — CHANGELOG/RELEASE-NOTES/README stopped at 0.8.1, and the
+  published v0.8.1 whitepaper describes a 14-value `narrative_archetype`
+  ("structural role") that the 0.8.2 machine rejects. Certification
+  language was directed to cite 0.8.1 until a documented release shipped.
+
+### Migration
+
+- v0.8.1 artifacts remain valid under v0.8.2 unless they carried
+  `narrative_archetype = "mentor"` (remap to a canonical identity
+  archetype or null). All other changes are additive, widening, or
+  non-validating.
+
 ## [0.8.1] - 2026-06-12
 
 Patch release. References and errata only — zero semantic change per §11.
@@ -272,6 +394,8 @@ docs/RELEASE-NOTES.md; no contemporaneous CHANGELOG entry existed.)*
 - 10 domains, 102 fields
 - Closed provenance pre-release
 
+[0.8.3]: https://github.com/emotional-data-model/edm-spec/compare/v0.8.2...v0.8.3
+[0.8.2]: https://github.com/emotional-data-model/edm-spec/compare/v0.8.1...v0.8.2
 [0.8.1]: https://github.com/emotional-data-model/edm-spec/compare/v0.8.0...v0.8.1
 [0.8.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.7.0...v0.8.0
 [0.7.0]: https://github.com/emotional-data-model/edm-spec/compare/v0.6.0...v0.7.0

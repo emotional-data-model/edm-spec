@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.8.2 to v0.8.3 Migration Crosswalk",
+  "description": "Documents changes from EDM v0.8.2 to v0.8.3: a truth-only patch release (founder decision, 2026-07-21). The Full composite's inline meta block gains source_timestamp, conforming to the canonical meta fragment; the Full profile field count is corrected from the hand-arithmetic 96 to the machine-counted 91; the narrative_archetype description is corrected to the identity-archetype definition (enum untouched at 12); repository documents are regenerated. No enum changes, no field removals, no semantic changes.",
+  "status": "draft",
+  "version_from": "0.8.2",
+  "version_to": "0.8.3",
+  "release_date": "2026-07-21",
+  "breaking_changes": false,
+  "release_class": "patch",
+
+  "summary": {
+    "fields_added": 0,
+    "fields_removed": 0,
+    "fields_renamed": 0,
+    "enum_reductions": 0,
+    "enum_expansions": 0,
+    "composite_conformance_corrections": 1,
+    "field_count_corrections": 1,
+    "annotation_corrections": 1,
+    "new_features": 0
+  },
+
+  "overview": "v0.8.3 is a truth-only release: it makes the shipped machine and documents agree with each other and with the canonical fragments. The one validation-affecting change is a widening conformance fix — the Full composite schema had omitted meta.source_timestamp (canonical since v0.7.0) from its inline meta block while declaring additionalProperties:false, strict-rejecting a legal field since v0.8.0. Field-relevance review is deferred to 0.9 with usage evidence; new state/compliance record types go via partner profiles and Extensions, never base fragments.",
+
+  "schema_changes": {
+    "full_composite_source_timestamp_conformance": {
+      "field": "meta.source_timestamp",
+      "domain": "meta",
+      "schema_file": "edm.v0.8.full.schema.json",
+      "description": "The Full composite's inline meta block omitted source_timestamp under additionalProperties:false, so a full-profile artifact carrying the field failed composite validation even though the canonical shared fragment (schema/fragments/meta.json) has defined it since v0.7.0. The field is now present in the composite, mirroring the fragment definition verbatim (optional, nullable, ISO-8601 UTC).",
+      "before": "meta.source_timestamp absent from the composite meta properties; artifacts carrying it rejected by additionalProperties:false",
+      "after": {
+        "description": "The timestamp of the original source content, distinct from created_at which marks extraction time",
+        "type": ["string", "null"],
+        "x_constraints": "ISO-8601 UTC timestamp"
+      },
+      "breaking_change": false,
+      "migration_action": "None. Widening only — every artifact that validated under v0.8.2 still validates; artifacts carrying meta.source_timestamp in the Full profile now validate as the fragment always intended.",
+      "note": "A fragment $ref was considered and rejected for this release: the shared fragment's required set (source_type, tags; not profile) and nullability differ from the composite's, so replacing the inline block with a $ref would change the pass/fail set. Mirroring keeps the change strictly widening."
+    },
+    "full_profile_field_count_corrected": {
+      "schema_file": "edm.v0.8.full.schema.json",
+      "description": "definitions.profile_info.field_count and the schema description corrected from 96 to 91. 91 is the machine count of top-level fields across the 10 domains of the v0.8.3 Full composite (meta 17, core 7, constellation 19, milky_way 5, gravity 14, impulse 12, governance 7, telemetry 4, system 2, crosswalks 4). The long-standing 96 was hand-arithmetic that never matched a shipped v0.8 schema.",
+      "before": 96,
+      "after": 91,
+      "breaking_change": false,
+      "migration_action": "None. Annotation-only; field_count sits in a non-validating definitions block."
+    },
+    "narrative_archetype_description_corrected": {
+      "field": "constellation.narrative_archetype",
+      "domain": "constellation",
+      "schema_file": "fragments/constellation.json",
+      "description": "Description corrected from the role framing ('the structural role or literary trope the subject occupies within the narrative') to the identity-archetype definition per ADR-0030: which of the 12 canonical identity archetypes the subject embodies — an identity, not a structural role or story function. Description only; the enum is untouched at the canonical 12.",
+      "before": "The structural role or literary trope the subject occupies within the narrative",
+      "after": "The archetypal identity the subject embodies — which of the 12 canonical identity archetypes the subject expresses, not a structural role or story function (ADR-0030)",
+      "breaking_change": false,
+      "migration_action": "None. Annotation-only."
+    }
+  },
+
+  "document_changes": {
+    "description": "Non-schema changes shipped with v0.8.3, listed for lineage completeness.",
+    "items": [
+      "CHANGELOG.md: [0.8.2] entry backfilled from schema/crosswalks/v0.8.1_to_v0.8.2.json (v0.8.2 had shipped to npm with no human-facing changelog entry); [0.8.3] entry added",
+      "docs/RELEASE-NOTES.md: v0.8.2 and v0.8.3 entries added; version lineage table updated",
+      "README.md: version/badge/status to 0.8.3; Full field count 91; per-domain field counts corrected to machine truth; narrative_archetype list corrected to the canonical 12",
+      "CITATION.cff: version 0.8.3; DOI points at the concept DOI pending the v0.8.3 Zenodo deposit",
+      "Whitepaper regenerated in releases/v0.8.3/: Appendix A from the v0.8.3 spec (12 identity archetypes, identity-not-role definition), field count 91 throughout, source_timestamp attribution corrected to v0.7.0 per crosswalk record",
+      "docs/RELEASE-POLICY.md added: one-story release gate (npm + Zenodo publish together; document candidate staged before any npm release; certification claims only cite documented versions)"
+    ]
+  },
+
+  "backward_compatibility": {
+    "v082_to_v083": "All v0.8.2 artifacts are valid v0.8.3 artifacts. The only validation-affecting change widens acceptance (Full-profile artifacts carrying meta.source_timestamp now pass the composite).",
+    "v083_to_v082": "v0.8.3 artifacts are valid under v0.8.2 UNLESS a Full-profile artifact carries meta.source_timestamp, which the v0.8.2 composite strict-rejects (the defect this release fixes)."
+  },
+
+  "forward_compatibility": {
+    "existing_artifacts": "No migration required.",
+    "new_extractions": "New Full-profile extractions may populate meta.source_timestamp and have it validate against the composite.",
+    "validation": "v0.8.3 validators accept every artifact v0.8.2 validators accept, plus Full-profile artifacts carrying meta.source_timestamp."
+  },
+
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none",
+    "steps": [
+      "1. Update meta.version to '0.8.3'.",
+      "2. No other changes required."
+    ]
+  }
+}
