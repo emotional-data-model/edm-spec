@@ -2,10 +2,7 @@
 
 ## EDM v0.8.3 (July 2026) — Current
 
-**DOI:** pending — new Zenodo deposit is a founder action; the latest
-published deposit remains v0.8.1 (10.5281/zenodo.20678017), and the
-concept DOI [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652)
-always resolves to the latest published version.
+**DOI:** 10.5281/zenodo.21490478 — concept DOI 10.5281/zenodo.17808652 always resolves to the latest published version.
 
 Truth-only patch release (founder decision, 2026-07-21). No enum changes,
 no semantic changes; field-relevance review deferred to 0.9.

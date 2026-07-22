@@ -2,14 +2,12 @@
 
 **Current Version:** v0.8.3
 **Released:** July 2026
-**DOI:** [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652) (concept DOI — resolves to the latest published deposit; v0.8.3 deposit pending)
+**DOI:** [10.5281/zenodo.21490478](https://doi.org/10.5281/zenodo.21490478) (this version) · [10.5281/zenodo.17808652](https://doi.org/10.5281/zenodo.17808652) (concept — resolves to latest)
 
 ## 📄 Official Whitepaper
 
-The EDM whitepaper is archived in-repo under [`releases/`](releases/)
-(v0.8.3 document in `releases/v0.8.3/`; Zenodo deposit pending). The
-latest published Zenodo deposit is v0.8.1:
-- **Download:** [EDM Whitepaper (DOCX)](https://doi.org/10.5281/zenodo.20678017)
+The EDM whitepaper is archived in-repo under [`releases/`](releases/) and published on Zenodo:
+- **Download:** [EDM v0.8.3 Whitepaper (PDF)](https://doi.org/10.5281/zenodo.21490478)
 - **Cite as:** Harvey, J. (2026). Emotional Data Model (EDM). Zenodo. https://doi.org/10.5281/zenodo.17808652
 
 ## 🔧 Implementation
@@ -29,7 +27,7 @@ Reference implementations:
 
 # Emotional Data Model — EDM (Specification)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20678017.svg)](https://doi.org/10.5281/zenodo.20678017)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21490478.svg)](https://doi.org/10.5281/zenodo.21490478)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-0.8.3-green.svg)](https://github.com/emotional-data-model/edm-spec/releases/tag/v0.8.3)
 [![Status](https://img.shields.io/badge/status-Stable-brightgreen.svg)]()
