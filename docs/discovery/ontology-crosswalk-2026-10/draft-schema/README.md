@@ -48,3 +48,10 @@ Rulings applied 2026-10-17 (founder direction; `../experiment-plan.md` §10):
 3. `extensions` is allowed in all three composites.
 
 Still open: 4. whether the partner opt-in for `trait` is expressed as composition at validation time (as here) or as a fourth published composite.
+
+Rulings applied 2026-10-18 (`../rulings-2026-10-18.md`; **annotations only**: no profile membership change, no field removed, no shape changed; 7/7 still valid, 6/7 strict):
+
+- Every scored unit carries `x_run1` (pooled run-1 statistics: outcome, repeatability per extractor, cross-model, populated-only cross, null rate, flags; source `experiments/2026-10-17/RESULTS.md` §1.1).
+- R4: the 23 pooled-cut units outside the six core slots carry `x_comparability: "extractor-bound"`; the four interpretive units `"interpretive"`; `narrative.integration` and `narrative.identity_link` `"null-driven"` (their pooled pass is carried by agreement on null).
+- R2 / R3: the six core slots (`narrative.subject`, `trigger`, `harm`, `drive`, `integration`, `salience.retrieval_cues`) carry `x_status: "pending run 2 (prompt test)"` and stay in Essential.
+- R5: the `value` member of `emotion.valence`, `emotion.arousal`, `emotion.appraisal.urgency` and `emotion.appraisal.control` carries `x_status: "removed by R5 …"` (never populated in run 1); the member is deleted when the v0.9 schema is cut, so run-1 outputs still validate until then. `emotion.intensity.value` and `salience.linkage_strength` are marked kept.

@@ -78,7 +78,27 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.subject": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.7,
+                "gpt-6.1-sol": 0.71,
+                "kimi-k2.6": 0.67
+              },
+              "cross": 0.4,
+              "cross_populated_only": 0.45,
+              "null_rate": 0.05,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "anchor",
@@ -125,7 +145,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.trigger": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.87,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.76,
+                "kimi-k2.6": 0.65
+              },
+              "cross": 0.53,
+              "cross_populated_only": 0.56,
+              "null_rate": 0.09,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "spark",
@@ -173,7 +215,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.harm": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.54,
+              "cross_populated_only": 0.42,
+              "null_rate": 0.36,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "wound",
@@ -222,7 +286,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.drive": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.8,
+                "claude-haiku-5-5": 0.6,
+                "gpt-6.1-sol": 0.68,
+                "kimi-k2.6": 0.55
+              },
+              "cross": 0.38,
+              "cross_populated_only": 0.41,
+              "null_rate": 0.19,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "fuel",
@@ -270,7 +356,31 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.integration": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.88,
+                "claude-haiku-5-5": 0.83,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.87
+              },
+              "cross": 0.72,
+              "cross_populated_only": 0.4,
+              "null_rate": 0.67,
+              "flags": [
+                "borderline",
+                "null-driven"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "null-driven",
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "bridge",
@@ -317,7 +427,27 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.retrieval_cues": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.58,
+                "claude-haiku-5-5": 0.36,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.42
+              },
+              "cross": 0.18,
+              "cross_populated_only": 0.12,
+              "null_rate": 0.29,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "run2_arm_a": {
         "name": "echo",
@@ -358,7 +488,28 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.summary": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.79,
+                "gpt-6.1-sol": 1.0,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.78,
+              "cross_populated_only": 0.84,
+              "null_rate": 0.04,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -407,7 +558,26 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.primary": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.76,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.78
+              },
+              "cross": 0.57,
+              "cross_populated_only": null,
+              "null_rate": 0.11,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -562,7 +732,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.secondary": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.57,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.64
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -597,7 +789,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.secondary": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.57,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.64
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -631,7 +845,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.meta": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.87,
+                "claude-haiku-5-5": 0.74,
+                "gpt-6.1-sol": 0.91,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.65,
+              "cross_populated_only": 0.34,
+              "null_rate": 0.63,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -700,7 +936,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.arc": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.74,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.48,
+              "cross_populated_only": null,
+              "null_rate": 0.22,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -800,7 +1058,28 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.relationship": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.72,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.6,
+              "cross_populated_only": null,
+              "null_rate": 0.24,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -987,7 +1266,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.life_stage": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.79,
+                "claude-haiku-5-5": 0.47,
+                "gpt-6.1-sol": 0.91,
+                "kimi-k2.6": 0.56
+              },
+              "cross": 0.44,
+              "cross_populated_only": null,
+              "null_rate": 0.39,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -1072,7 +1373,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.memory_type": {
+            "x_run1": {
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.73,
+                "gpt-6.1-sol": 0.8,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.26,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "interpretive",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -1320,7 +1643,66 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.tether.type": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.referent": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.stake": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1356,7 +1738,48 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.scope.text": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.82,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.47,
+              "cross_populated_only": null,
+              "null_rate": 0.06,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "context.scope.direction": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.84,
+                "claude-haiku-5-5": 0.6,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.68
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.18,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -1439,7 +1862,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.temporal_profile": {
+            "x_run1": {
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.8,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.56,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "interpretive",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -1547,7 +1992,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.identity_link": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.91,
+                "claude-haiku-5-5": 0.85,
+                "gpt-6.1-sol": 0.92,
+                "kimi-k2.6": 0.9
+              },
+              "cross": 0.82,
+              "cross_populated_only": 0.59,
+              "null_rate": 0.72,
+              "flags": [
+                "null-driven"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "null-driven",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1576,7 +2043,28 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.meaning": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.93,
+                "claude-haiku-5-5": 0.83,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.91
+              },
+              "cross": 0.71,
+              "cross_populated_only": 0.67,
+              "null_rate": 0.54,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1605,7 +2093,26 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.turning_point": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.83,
+                "claude-haiku-5-5": 0.84,
+                "gpt-6.1-sol": 0.96,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.58,
+              "cross_populated_only": null,
+              "null_rate": 0.89,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1634,7 +2141,26 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.bodily_sensation": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.95,
+                "gpt-6.1-sol": 0.97,
+                "kimi-k2.6": 0.95
+              },
+              "cross": 0.94,
+              "cross_populated_only": 0.84,
+              "null_rate": 0.79,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1679,7 +2205,29 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.arc": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.74,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.48,
+              "cross_populated_only": null,
+              "null_rate": 0.22,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -1813,7 +2361,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.event": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.79,
+                "claude-haiku-5-5": 0.65,
+                "gpt-6.1-sol": 0.85,
+                "kimi-k2.6": 0.67
+              },
+              "cross": 0.41,
+              "cross_populated_only": 0.44,
+              "null_rate": 0.03,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1846,7 +2416,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.place": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.73,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.56,
+              "cross_populated_only": 0.5,
+              "null_rate": 0.26,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1879,7 +2471,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.people": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.87,
+                "kimi-k2.6": 0.79
+              },
+              "cross": 0.55,
+              "cross_populated_only": 0.52,
+              "null_rate": 0.15,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1961,7 +2575,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.valence_shift": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.83,
+                "claude-haiku-5-5": 0.65,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.58,
+              "cross_populated_only": 0.38,
+              "null_rate": 0.45,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -1991,7 +2627,46 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.intensity.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.54,
+                "gpt-6.1-sol": 0.59,
+                "kimi-k2.6": 0.49
+              },
+              "cross": 0.16,
+              "cross_populated_only": null,
+              "null_rate": 0.33,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "emotion.intensity.value": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.91,
+                "gpt-6.1-sol": 0.0,
+                "kimi-k2.6": 0.98
+              },
+              "cross": 0.77,
+              "cross_populated_only": null,
+              "null_rate": 0.46,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        },
+        "value_member": "kept (R5 2026-10-18)"
       },
       "values": []
     },
@@ -2049,8 +2724,8 @@
       "disposition": "reshaped",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension",
-      "shape": "dimension",
+      "shape_to": "dimension (value removed, R5)",
+      "shape": "dimension (value removed, R5)",
       "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence",
       "v083": {
         "description": "The qualitative direction of the emotional experience",
@@ -2073,7 +2748,48 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.valence.text": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.95,
+                "claude-haiku-5-5": 0.84,
+                "gpt-6.1-sol": 0.95,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.74,
+              "cross_populated_only": null,
+              "null_rate": 0.11,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "emotion.valence.value": {
+            "x_run1": {
+              "outcome": "pending",
+              "repeat": {
+                "claude-sonnet-5-5": null,
+                "claude-haiku-5-5": null,
+                "gpt-6.1-sol": null,
+                "kimi-k2.6": null
+              },
+              "cross": null,
+              "cross_populated_only": null,
+              "null_rate": 0.99,
+              "flags": [
+                "sparse",
+                "value never populated"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        },
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
       },
       "values": [
         {
@@ -2128,7 +2844,49 @@
         "constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.persistence.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.53,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.68,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.persistence.decay": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.52,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.25,
+              "cross_populated_only": null,
+              "null_rate": 0.72,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2200,7 +2958,66 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.tether.type": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.referent": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.stake": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2239,7 +3056,66 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.tether.type": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.referent": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.tether.stake": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2336,7 +3212,27 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.retrieval_cues": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.58,
+                "claude-haiku-5-5": 0.36,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.42
+              },
+              "cross": 0.18,
+              "cross_populated_only": 0.12,
+              "null_rate": 0.29,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2370,7 +3266,27 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.retrieval_cues": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.58,
+                "claude-haiku-5-5": 0.36,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.42
+              },
+              "cross": 0.18,
+              "cross_populated_only": 0.12,
+              "null_rate": 0.29,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "pending run 2 (prompt test)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2402,7 +3318,27 @@
         "constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.themes": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.53,
+                "claude-haiku-5-5": 0.32,
+                "gpt-6.1-sol": 0.59,
+                "kimi-k2.6": 0.41
+              },
+              "cross": 0.06,
+              "cross_populated_only": 0.05,
+              "null_rate": 0.05,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2436,7 +3372,29 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.recurrence": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.72,
+                "claude-haiku-5-5": 0.51,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.67
+              },
+              "cross": 0.2,
+              "cross_populated_only": null,
+              "null_rate": 0.63,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2498,7 +3456,30 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.linkage_strength": {
+            "x_run1": {
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.96,
+                "claude-haiku-5-5": 0.88,
+                "gpt-6.1-sol": 0.09,
+                "kimi-k2.6": 0.94
+              },
+              "cross": 0.5,
+              "cross_populated_only": null,
+              "null_rate": 0.43,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "interpretive",
+            "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2529,7 +3510,49 @@
         "constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.persistence.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.53,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.68,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "salience.persistence.decay": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.52,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.25,
+              "cross_populated_only": null,
+              "null_rate": 0.72,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2585,7 +3608,27 @@
         "constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.resilience": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.7,
+                "claude-haiku-5-5": 0.62,
+                "gpt-6.1-sol": 0.71,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.38,
+              "cross_populated_only": 0.11,
+              "null_rate": 0.39,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": []
     },
@@ -2618,7 +3661,29 @@
         "constraints": "Canonical: improving, stable, declining, integrative; emerging is deprecated",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.trajectory": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.65
+              },
+              "cross": 0.42,
+              "cross_populated_only": null,
+              "null_rate": 0.54,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2725,7 +3790,28 @@
         "constraints": "Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "motivation.action_tendency": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.66,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.4,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2823,7 +3909,28 @@
         "constraints": "Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "motivation.need": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.8,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.5,
+              "cross_populated_only": null,
+              "null_rate": 0.43,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2897,7 +4004,26 @@
         "constraints": "past / present / future",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "motivation.temporal_focus": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.61,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.82
+              },
+              "cross": 0.56,
+              "cross_populated_only": null,
+              "null_rate": 0.12,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -2951,7 +4077,48 @@
         "profiles": [
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.scope.text": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.82,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.47,
+              "cross_populated_only": null,
+              "null_rate": 0.06,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "context.scope.direction": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.84,
+                "claude-haiku-5-5": 0.6,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.68
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.18,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -3034,8 +4201,8 @@
       "disposition": "reshaped",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension",
-      "shape": "dimension",
+      "shape_to": "dimension (value removed, R5)",
+      "shape": "dimension (value removed, R5)",
       "note": "EmotionML ema-appraisals#urgency; MFOEM:000089/000090",
       "v083": {
         "description": "The intensity or immediacy of the motivational state",
@@ -3056,7 +4223,51 @@
         "constraints": "text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.appraisal.urgency.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.76,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.36
+              },
+              "cross": 0.15,
+              "cross_populated_only": null,
+              "null_rate": 0.8,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "emotion.appraisal.urgency.value": {
+            "x_run1": {
+              "outcome": "pending",
+              "repeat": {
+                "claude-sonnet-5-5": null,
+                "claude-haiku-5-5": null,
+                "gpt-6.1-sol": null,
+                "kimi-k2.6": null
+              },
+              "cross": null,
+              "cross_populated_only": null,
+              "null_rate": 1.0,
+              "flags": [
+                "sparse",
+                "value never populated"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        },
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
       },
       "values": [
         {
@@ -3116,7 +4327,29 @@
         "constraints": "cautious / balanced / bold",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "motivation.risk_posture": {
+            "x_run1": {
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.8,
+                "claude-haiku-5-5": 0.46,
+                "gpt-6.1-sol": 0.83,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.18,
+              "cross_populated_only": null,
+              "null_rate": 0.62,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "interpretive",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -3148,8 +4381,8 @@
       "disposition": "reshaped",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension",
-      "shape": "dimension",
+      "shape_to": "dimension (value removed, R5)",
+      "shape": "dimension (value removed, R5)",
       "note": "EmotionML scherer-appraisals#control; MFOEM:000110/000116",
       "v083": {
         "description": "The perceived ability to act or influence the situation",
@@ -3169,7 +4402,51 @@
         "constraints": "text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.appraisal.control.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.55,
+                "gpt-6.1-sol": 0.68,
+                "kimi-k2.6": 0.42
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.79,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "emotion.appraisal.control.value": {
+            "x_run1": {
+              "outcome": "pending",
+              "repeat": {
+                "claude-sonnet-5-5": null,
+                "claude-haiku-5-5": null,
+                "gpt-6.1-sol": null,
+                "kimi-k2.6": null
+              },
+              "cross": null,
+              "cross_populated_only": null,
+              "null_rate": 1.0,
+              "flags": [
+                "sparse",
+                "value never populated"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        },
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
       },
       "values": [
         {
@@ -3340,7 +4617,28 @@
         "constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "motivation.coping": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.74
+              },
+              "cross": 0.54,
+              "cross_populated_only": null,
+              "null_rate": 0.45,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       },
       "values": [
         {
@@ -3409,7 +4707,26 @@
           "essential",
           "extended",
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "narrative.self_position": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.96,
+                "claude-haiku-5-5": 0.9,
+                "gpt-6.1-sol": 0.93,
+                "kimi-k2.6": 0.96
+              },
+              "cross": 0.87,
+              "cross_populated_only": 0.81,
+              "null_rate": 0.79,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
@@ -3423,12 +4740,34 @@
         "constraints": "emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.kind": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 1.0,
+                "claude-haiku-5-5": 0.61,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.6
+              },
+              "cross": 0.24,
+              "cross_populated_only": null,
+              "null_rate": 0.98,
+              "flags": [
+                "sparse"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
       "path": "emotion.arousal",
-      "shape": "dimension",
+      "shape": "dimension (value removed, R5)",
       "disposition": "added",
       "note": "Russell; PAD; GRID; EmotionML pad-dimensions#arousal",
       "populated_by_migration": false,
@@ -3437,7 +4776,51 @@
         "constraints": "text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.arousal.text": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.7,
+                "claude-haiku-5-5": 0.59,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.91,
+              "flags": [
+                "borderline",
+                "sparse"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          },
+          "emotion.arousal.value": {
+            "x_run1": {
+              "outcome": "pending",
+              "repeat": {
+                "claude-sonnet-5-5": null,
+                "claude-haiku-5-5": null,
+                "gpt-6.1-sol": null,
+                "kimi-k2.6": null
+              },
+              "cross": null,
+              "cross_populated_only": null,
+              "null_rate": 0.99,
+              "flags": [
+                "sparse",
+                "value never populated"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
@@ -3451,7 +4834,26 @@
         "constraints": "self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "emotion.appraisal.attribution": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.8,
+                "gpt-6.1-sol": 0.77,
+                "kimi-k2.6": 0.78
+              },
+              "cross": 0.55,
+              "cross_populated_only": null,
+              "null_rate": 0.78,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
@@ -3465,7 +4867,28 @@
         "constraints": "Singer & Blagov / Thorne & McLean categories: relationships, life_threatening_events, recreation_exploration, achievement_mastery, guilt_shame, drug_alcohol_tobacco_use, not_classifiable (labels knowledge-reconstructed; REPORT.md section 9)",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.event_category": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.79,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.74
+              },
+              "cross": 0.6,
+              "cross_populated_only": null,
+              "null_rate": 0.05,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
@@ -3479,7 +4902,29 @@
         "constraints": "communal_sharing, authority_ranking, equality_matching, market_pricing, null_relation",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "context.relationship_model": {
+            "x_run1": {
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.48,
+                "gpt-6.1-sol": 0.63,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.2,
+              "cross_populated_only": null,
+              "null_rate": 0.73,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {
@@ -3493,7 +4938,28 @@
         "constraints": "Pillemer 1992 / Bluck 2003 memory functions",
         "profiles": [
           "full"
-        ]
+        ],
+        "run1_annotations": {
+          "salience.function": {
+            "x_run1": {
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.92,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.87,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.52,
+              "cross_populated_only": null,
+              "null_rate": 0.73,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          }
+        }
       }
     },
     {

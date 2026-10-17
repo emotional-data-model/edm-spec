@@ -61,7 +61,25 @@
           "replaced_by": null,
           "reason": "an object tether, not a memory type (coded tether/v1#object, related)"
         }
-      ]
+      ],
+      "x_run1": {
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.73,
+          "gpt-6.1-sol": 0.8,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.36,
+        "cross_populated_only": null,
+        "null_rate": 0.26,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "interpretive",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "tether": {
       "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
@@ -119,14 +137,49 @@
                 }
               }
             }
-          ]
+          ],
+          "x_run1": {
+            "outcome": "pass",
+            "repeat": {
+              "claude-sonnet-5-5": 0.81,
+              "claude-haiku-5-5": 0.71,
+              "gpt-6.1-sol": 0.81,
+              "kimi-k2.6": 0.71
+            },
+            "cross": 0.53,
+            "cross_populated_only": null,
+            "null_rate": 0.14,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "referent": {
           "type": [
             "string",
             "null"
           ],
-          "description": "The concrete object, place or element that concentrates the meaning (v0.8.3 symbolic_anchor)"
+          "description": "The concrete object, place or element that concentrates the meaning (v0.8.3 symbolic_anchor)",
+          "x_run1": {
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.81,
+              "claude-haiku-5-5": 0.71,
+              "gpt-6.1-sol": 0.79,
+              "kimi-k2.6": 0.66
+            },
+            "cross": 0.52,
+            "cross_populated_only": 0.51,
+            "null_rate": 0.14,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_comparability": "extractor-bound",
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "stake": {
           "type": [
@@ -136,7 +189,23 @@
           "description": "What is at stake in the tether (v0.8.3 gravity_type; Lazarus ego-involvement)",
           "x_profiles": [
             "full"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.67,
+              "claude-haiku-5-5": 0.5,
+              "gpt-6.1-sol": 0.7,
+              "kimi-k2.6": 0.47
+            },
+            "cross": 0.33,
+            "cross_populated_only": 0.18,
+            "null_rate": 0.27,
+            "flags": [],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_comparability": "extractor-bound",
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         }
       },
       "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/tether/v1",
@@ -166,7 +235,23 @@
       ],
       "items": {
         "type": "string"
-      }
+      },
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.58,
+          "claude-haiku-5-5": 0.36,
+          "gpt-6.1-sol": 0.86,
+          "kimi-k2.6": 0.42
+        },
+        "cross": 0.18,
+        "cross_populated_only": 0.12,
+        "null_rate": 0.29,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "themes": {
       "description": "Adjacent themes or motifs connected to the experience",
@@ -180,7 +265,23 @@
       ],
       "items": {
         "type": "string"
-      }
+      },
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.53,
+          "claude-haiku-5-5": 0.32,
+          "gpt-6.1-sol": 0.59,
+          "kimi-k2.6": 0.41
+        },
+        "cross": 0.06,
+        "cross_populated_only": 0.05,
+        "null_rate": 0.05,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "recurrence": {
       "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
@@ -236,7 +337,25 @@
           "replaced_by": null,
           "reason": "not a recurrence structure"
         }
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.72,
+          "claude-haiku-5-5": 0.51,
+          "gpt-6.1-sol": 0.55,
+          "kimi-k2.6": 0.67
+        },
+        "cross": 0.2,
+        "cross_populated_only": null,
+        "null_rate": 0.63,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "persistence": {
       "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
@@ -263,7 +382,25 @@
             "medium",
             "high",
             "enduring"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.71,
+              "claude-haiku-5-5": 0.53,
+              "gpt-6.1-sol": 0.55,
+              "kimi-k2.6": 0.57
+            },
+            "cross": 0.26,
+            "cross_populated_only": null,
+            "null_rate": 0.68,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_comparability": "extractor-bound",
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "decay": {
           "type": [
@@ -274,7 +411,25 @@
             "fast",
             "moderate",
             "slow"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.75,
+              "claude-haiku-5-5": 0.52,
+              "gpt-6.1-sol": 0.86,
+              "kimi-k2.6": 0.59
+            },
+            "cross": 0.25,
+            "cross_populated_only": null,
+            "null_rate": 0.72,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_comparability": "extractor-bound",
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "codings": {
           "type": "array",
@@ -345,7 +500,26 @@
         "null"
       ],
       "minimum": 0,
-      "maximum": 1
+      "maximum": 1,
+      "x_run1": {
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.96,
+          "claude-haiku-5-5": 0.88,
+          "gpt-6.1-sol": 0.09,
+          "kimi-k2.6": 0.94
+        },
+        "cross": 0.5,
+        "cross_populated_only": null,
+        "null_rate": 0.43,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "interpretive",
+      "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "function": {
       "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
@@ -399,7 +573,24 @@
         "directive",
         "self",
         "social"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.92,
+          "claude-haiku-5-5": 0.68,
+          "gpt-6.1-sol": 0.87,
+          "kimi-k2.6": 0.76
+        },
+        "cross": 0.52,
+        "cross_populated_only": null,
+        "null_rate": 0.73,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "resilience": {
       "description": "Indicators of stabilizing or constructive emotional processing",
@@ -413,7 +604,23 @@
       ],
       "items": {
         "type": "string"
-      }
+      },
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.7,
+          "claude-haiku-5-5": 0.62,
+          "gpt-6.1-sol": 0.71,
+          "kimi-k2.6": 0.57
+        },
+        "cross": 0.38,
+        "cross_populated_only": 0.11,
+        "null_rate": 0.39,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "trajectory": {
       "description": "How the emotional state is evolving across time",
@@ -470,7 +677,25 @@
           "replaced_by": null,
           "reason": "not a trajectory direction"
         }
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.81,
+          "claude-haiku-5-5": 0.67,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.65
+        },
+        "cross": 0.42,
+        "cross_populated_only": null,
+        "null_rate": 0.54,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     }
   },
   "additionalProperties": false

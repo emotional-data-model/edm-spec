@@ -62,7 +62,24 @@
         "protect",
         "repair",
         "share"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "claude-haiku-5-5": 0.66,
+          "gpt-6.1-sol": 0.73,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.4,
+        "cross_populated_only": null,
+        "null_rate": 0.2,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "need": {
       "description": "The foundational motivational domain guiding the individual's internal stance",
@@ -115,7 +132,24 @@
         "mastery",
         "meaning",
         "safety"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.68,
+          "gpt-6.1-sol": 0.8,
+          "kimi-k2.6": 0.73
+        },
+        "cross": 0.5,
+        "cross_populated_only": null,
+        "null_rate": 0.43,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "temporal_focus": {
       "description": "The temporal direction toward which the motivational energy is oriented",
@@ -162,7 +196,22 @@
         "future",
         "past",
         "present"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.61,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.82
+        },
+        "cross": 0.56,
+        "cross_populated_only": null,
+        "null_rate": 0.12,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "risk_posture": {
       "description": "The stance toward uncertainty or potential risk embedded in the moment",
@@ -209,7 +258,25 @@
         "balanced",
         "bold",
         "cautious"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.8,
+          "claude-haiku-5-5": 0.46,
+          "gpt-6.1-sol": 0.83,
+          "kimi-k2.6": 0.73
+        },
+        "cross": 0.18,
+        "cross_populated_only": null,
+        "null_rate": 0.62,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "interpretive",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "coping": {
       "description": "The primary strategy used to manage or integrate the emotional experience",
@@ -264,7 +331,24 @@
         "reframe_meaning",
         "ritualize",
         "seek_support"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "claude-haiku-5-5": 0.69,
+          "gpt-6.1-sol": 0.73,
+          "kimi-k2.6": 0.74
+        },
+        "cross": 0.54,
+        "cross_populated_only": null,
+        "null_rate": 0.45,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     }
   },
   "additionalProperties": false

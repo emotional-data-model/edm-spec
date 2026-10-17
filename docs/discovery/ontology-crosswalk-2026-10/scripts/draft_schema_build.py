@@ -17,6 +17,11 @@ Rule 1 of v0.9-proposal.md section 4 is enforced: a coding is only allowed when 
 Rule 3 (ruling 2026-10-17): canonical values are a recommended vocabulary (x_recommended_values), not an enum on text; the EDM
 code on https://emotionaldatamodel.org/vocab/<field>/v1 IS enumerated, so a canonical claim is checkable while free text stays
 legal. Rulings 2026-10-17 also fix: Essential = 12 fields (+ salience.retrieval_cues); extensions allowed in all three composites.
+Rulings 2026-10-18 (rulings-2026-10-18.md; annotations only, nothing removed, no profile change): every scored unit carries x_run1
+(pooled run-1 statistics); pooled-cut units outside the six core slots x_comparability "extractor-bound", the four interpretive
+units "interpretive", narrative.integration / identity_link "null-driven" (R4); the six core slots x_status "pending run 2
+(prompt test)" (R2 / R3); the value member of valence / arousal / urgency / control x_status "removed by R5", kept on
+intensity and linkage_strength (R5).
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -60,6 +65,7 @@ def annotate(schema, path, extra=None):
         rec = sorted(L.CANONICAL[v] - {x['value'] for x in DEP.get(path, [])})
         schema['x_recommended_values'] = rec
         if DEP.get(path): schema['x_deprecated_values'] = DEP[path]
+    schema.update(L.run1_annotations(path))  # rulings 2026-10-18 R2 / R4 / R5: annotations only
     if extra: schema.update(extra)
     return schema
 
@@ -73,7 +79,7 @@ def coded_list(path, max_items=None):
     return annotate(s, path)
 def dimension(path):
     lo, hi = RANGE[path]
-    branches = [ref('dimension'), {'properties': {'value': {'minimum': lo, 'maximum': hi}}}]
+    branches = [ref('dimension'), {'properties': {'text': L.run1_annotations(path + '.text'), 'value': {'minimum': lo, 'maximum': hi, **L.run1_annotations(path + '.value')}}}]
     if path in VOCAB_OF: branches.append({'properties': {'codings': {'items': edm_codes(VOCAB_OF[path])}}})
     return annotate({'allOf': branches}, path)
 def text(path): return annotate(nullable('string'), path)
@@ -116,7 +122,7 @@ narrative = fragment('narrative', {
 
 emotion = fragment('emotion', {
  'primary': coded('emotion.primary'), 'secondary': coded_list('emotion.secondary', 5), 'kind': coded('emotion.kind'),
- 'valence': dimension('emotion.valence'), 'arousal': dimension('emotion.arousal'), 'intensity': annotate({'allOf': [ref('dimension'), {'properties': {'value': {'minimum': 0, 'maximum': 1}}}]}, 'emotion.intensity'),
+ 'valence': dimension('emotion.valence'), 'arousal': dimension('emotion.arousal'), 'intensity': annotate({'allOf': [ref('dimension'), {'properties': {'text': L.run1_annotations('emotion.intensity.text'), 'value': {'minimum': 0, 'maximum': 1, **L.run1_annotations('emotion.intensity.value')}}}]}, 'emotion.intensity'),
  'meta': text('emotion.meta'), 'bodily_sensation': text('emotion.bodily_sensation'), 'temporal_profile': coded('emotion.temporal_profile'),
  'appraisal': {'description': 'Appraisal dimensions stated by the subject (Scherer / EmotionML appraisal vocabularies)', 'type': ['object', 'null'], 'additionalProperties': False,
                'x_profiles': ['full'],
@@ -127,21 +133,21 @@ context = fragment('context', {
  'event': text('context.event'), 'event_category': coded('context.event_category'), 'place': text('context.place'), 'people': text_list('context.people'),
  'relationship': coded('context.relationship'), 'relationship_model': coded('context.relationship_model'), 'life_stage': coded('context.life_stage'),
  'scope': annotate({'type': ['object', 'null'], 'additionalProperties': False, 'required': ['text'],
-                    'properties': {'text': {'type': ['string', 'null'], 'x_recommended_values': D083['constellation.relational_perspective']['canonical_values']},
-                                   'direction': {'type': ['string', 'null'], 'x_recommended_values': D083['impulse.directionality']['canonical_values'], 'x_profiles': ['full']},
+                    'properties': {'text': {'type': ['string', 'null'], 'x_recommended_values': D083['constellation.relational_perspective']['canonical_values'], **L.run1_annotations('context.scope.text')},
+                                   'direction': {'type': ['string', 'null'], 'x_recommended_values': D083['impulse.directionality']['canonical_values'], 'x_profiles': ['full'], **L.run1_annotations('context.scope.direction')},
                                    'codings': {'type': 'array', 'items': {'allOf': [ref('coding'), edm_codes('scope')]}}}}, 'context.scope'),
 }, 'Where, when, with whom and in what relational frame (v0.8.3 milky_way + the relational fields of constellation).')
 
 salience = fragment('salience', {
  'memory_type': coded('salience.memory_type'),
  'tether': annotate({'type': ['object', 'null'], 'additionalProperties': False, 'required': ['type'],
-                     'properties': {'type': {'allOf': [ref('coded'), {'properties': {'codings': {'items': edm_codes('tether')}}}]},
-                                    'referent': {'type': ['string', 'null'], 'description': 'The concrete object, place or element that concentrates the meaning (v0.8.3 symbolic_anchor)'},
-                                    'stake': {'type': ['string', 'null'], 'description': 'What is at stake in the tether (v0.8.3 gravity_type; Lazarus ego-involvement)', 'x_profiles': ['full']}}}, 'salience.tether'),
+                     'properties': {'type': {'allOf': [ref('coded'), {'properties': {'codings': {'items': edm_codes('tether')}}}], **L.run1_annotations('salience.tether.type')},
+                                    'referent': {'type': ['string', 'null'], 'description': 'The concrete object, place or element that concentrates the meaning (v0.8.3 symbolic_anchor)', **L.run1_annotations('salience.tether.referent')},
+                                    'stake': {'type': ['string', 'null'], 'description': 'What is at stake in the tether (v0.8.3 gravity_type; Lazarus ego-involvement)', 'x_profiles': ['full'], **L.run1_annotations('salience.tether.stake')}}}, 'salience.tether'),
  'retrieval_cues': text_list('salience.retrieval_cues'), 'themes': text_list('salience.themes'), 'recurrence': coded('salience.recurrence'),
  'persistence': annotate({'type': ['object', 'null'], 'additionalProperties': False, 'required': ['text'],
-                          'properties': {'text': {'type': ['string', 'null'], 'x_recommended_values': [v for v in D083['gravity.viscosity']['canonical_values'] if v != 'fluid']},
-                                         'decay': {'type': ['string', 'null'], 'x_recommended_values': D083['gravity.temporal_decay']['canonical_values']},
+                          'properties': {'text': {'type': ['string', 'null'], 'x_recommended_values': [v for v in D083['gravity.viscosity']['canonical_values'] if v != 'fluid'], **L.run1_annotations('salience.persistence.text')},
+                                         'decay': {'type': ['string', 'null'], 'x_recommended_values': D083['gravity.temporal_decay']['canonical_values'], **L.run1_annotations('salience.persistence.decay')},
                                          'codings': {'type': 'array', 'items': {'allOf': [ref('coding'), edm_codes('persistence')]}}}}, 'salience.persistence'),
  'linkage_strength': annotate({'type': ['number', 'null'], 'minimum': 0, 'maximum': 1}, 'salience.linkage_strength'),
  'function': coded_list('salience.function', 3), 'resilience': text_list('salience.resilience'), 'trajectory': coded('salience.trajectory'),

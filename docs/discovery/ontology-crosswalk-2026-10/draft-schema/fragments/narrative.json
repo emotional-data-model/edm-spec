@@ -16,7 +16,23 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.7,
+          "gpt-6.1-sol": 0.71,
+          "kimi-k2.6": 0.67
+        },
+        "cross": 0.4,
+        "cross_populated_only": 0.45,
+        "null_rate": 0.05,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "trigger": {
       "description": "What triggered or initiated the emotional response",
@@ -29,7 +45,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.87,
+          "claude-haiku-5-5": 0.67,
+          "gpt-6.1-sol": 0.76,
+          "kimi-k2.6": 0.65
+        },
+        "cross": 0.53,
+        "cross_populated_only": 0.56,
+        "null_rate": 0.09,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "harm": {
       "description": "Emotional pain, loss, or vulnerability present in the experience",
@@ -42,7 +76,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.69,
+          "gpt-6.1-sol": 0.75,
+          "kimi-k2.6": 0.71
+        },
+        "cross": 0.54,
+        "cross_populated_only": 0.42,
+        "null_rate": 0.36,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "drive": {
       "description": "What energized or motivated the experience",
@@ -55,7 +107,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.8,
+          "claude-haiku-5-5": 0.6,
+          "gpt-6.1-sol": 0.68,
+          "kimi-k2.6": 0.55
+        },
+        "cross": 0.38,
+        "cross_populated_only": 0.41,
+        "null_rate": 0.19,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "integration": {
       "description": "Connection or shift between past and present understanding",
@@ -68,7 +138,27 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.88,
+          "claude-haiku-5-5": 0.83,
+          "gpt-6.1-sol": 0.86,
+          "kimi-k2.6": 0.87
+        },
+        "cross": 0.72,
+        "cross_populated_only": 0.4,
+        "null_rate": 0.67,
+        "flags": [
+          "borderline",
+          "null-driven"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "null-driven",
+      "x_status": "pending run 2 (prompt test)",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "summary": {
       "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
@@ -80,7 +170,24 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.98,
+          "claude-haiku-5-5": 0.79,
+          "gpt-6.1-sol": 1.0,
+          "kimi-k2.6": 0.83
+        },
+        "cross": 0.78,
+        "cross_populated_only": 0.84,
+        "null_rate": 0.04,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "meaning": {
       "description": "The explicit realization or conclusion stated by the subject",
@@ -92,7 +199,24 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.93,
+          "claude-haiku-5-5": 0.83,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.91
+        },
+        "cross": 0.71,
+        "cross_populated_only": 0.67,
+        "null_rate": 0.54,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "identity_link": {
       "description": "A succinct expression of how the experience connects to personal identity",
@@ -104,7 +228,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.91,
+          "claude-haiku-5-5": 0.85,
+          "gpt-6.1-sol": 0.92,
+          "kimi-k2.6": 0.9
+        },
+        "cross": 0.82,
+        "cross_populated_only": 0.59,
+        "null_rate": 0.72,
+        "flags": [
+          "null-driven"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "null-driven",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "turning_point": {
       "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
@@ -116,7 +258,22 @@
       "type": [
         "boolean",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.83,
+          "claude-haiku-5-5": 0.84,
+          "gpt-6.1-sol": 0.96,
+          "kimi-k2.6": 0.76
+        },
+        "cross": 0.58,
+        "cross_populated_only": null,
+        "null_rate": 0.89,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "arc": {
       "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
@@ -206,7 +363,25 @@
         "resistance",
         "threshold",
         "transformation"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.78,
+          "claude-haiku-5-5": 0.68,
+          "gpt-6.1-sol": 0.74,
+          "kimi-k2.6": 0.66
+        },
+        "cross": 0.48,
+        "cross_populated_only": null,
+        "null_rate": 0.22,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "valence_shift": {
       "description": "Directional emotional change during the experience",
@@ -218,7 +393,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.83,
+          "claude-haiku-5-5": 0.65,
+          "gpt-6.1-sol": 0.86,
+          "kimi-k2.6": 0.76
+        },
+        "cross": 0.58,
+        "cross_populated_only": 0.38,
+        "null_rate": 0.45,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "self_position": {
       "description": "The subject's own expressed lens on themselves within the story: the position they say they occupy (e.g. \"the one who holds it together\", \"the person who finally said no\"). STATED-ONLY: recorded only when the subject says it or paraphrases it unmistakably; never assigned from the plot, the emotion or an archetype catalogue.",
@@ -231,7 +424,22 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.96,
+          "claude-haiku-5-5": 0.9,
+          "gpt-6.1-sol": 0.93,
+          "kimi-k2.6": 0.96
+        },
+        "cross": 0.87,
+        "cross_populated_only": 0.81,
+        "null_rate": 0.79,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     }
   },
   "additionalProperties": false

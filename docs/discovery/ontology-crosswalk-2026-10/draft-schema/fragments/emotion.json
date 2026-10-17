@@ -80,7 +80,22 @@
         "shame",
         "tenderness",
         "wonder"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.76,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.78
+        },
+        "cross": 0.57,
+        "cross_populated_only": null,
+        "null_rate": 0.11,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "secondary": {
       "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
@@ -164,7 +179,25 @@
         "shame",
         "tenderness",
         "wonder"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.71,
+          "claude-haiku-5-5": 0.57,
+          "gpt-6.1-sol": 0.75,
+          "kimi-k2.6": 0.64
+        },
+        "cross": 0.36,
+        "cross_populated_only": null,
+        "null_rate": 0.2,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "kind": {
       "description": "Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.",
@@ -213,7 +246,25 @@
         "emotion",
         "feeling",
         "mood"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 1.0,
+          "claude-haiku-5-5": 0.61,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.6
+        },
+        "cross": 0.24,
+        "cross_populated_only": null,
+        "null_rate": 0.98,
+        "flags": [
+          "sparse"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "valence": {
       "description": "The qualitative direction of the emotional experience",
@@ -229,9 +280,45 @@
         },
         {
           "properties": {
+            "text": {
+              "x_run1": {
+                "outcome": "pass",
+                "repeat": {
+                  "claude-sonnet-5-5": 0.95,
+                  "claude-haiku-5-5": 0.84,
+                  "gpt-6.1-sol": 0.95,
+                  "kimi-k2.6": 0.83
+                },
+                "cross": 0.74,
+                "cross_populated_only": null,
+                "null_rate": 0.11,
+                "flags": [],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+            },
             "value": {
               "minimum": -1,
-              "maximum": 1
+              "maximum": 1,
+              "x_run1": {
+                "outcome": "pending",
+                "repeat": {
+                  "claude-sonnet-5-5": null,
+                  "claude-haiku-5-5": null,
+                  "gpt-6.1-sol": null,
+                  "kimi-k2.6": null
+                },
+                "cross": null,
+                "cross_populated_only": null,
+                "null_rate": 0.99,
+                "flags": [
+                  "sparse",
+                  "value never populated"
+                ],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
             }
           }
         },
@@ -284,9 +371,49 @@
         },
         {
           "properties": {
+            "text": {
+              "x_run1": {
+                "outcome": "cut",
+                "repeat": {
+                  "claude-sonnet-5-5": 0.7,
+                  "claude-haiku-5-5": 0.59,
+                  "gpt-6.1-sol": 0.73,
+                  "kimi-k2.6": 0.47
+                },
+                "cross": 0.26,
+                "cross_populated_only": null,
+                "null_rate": 0.91,
+                "flags": [
+                  "borderline",
+                  "sparse"
+                ],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_comparability": "extractor-bound",
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+            },
             "value": {
               "minimum": 0,
-              "maximum": 1
+              "maximum": 1,
+              "x_run1": {
+                "outcome": "pending",
+                "repeat": {
+                  "claude-sonnet-5-5": null,
+                  "claude-haiku-5-5": null,
+                  "gpt-6.1-sol": null,
+                  "kimi-k2.6": null
+                },
+                "cross": null,
+                "cross_populated_only": null,
+                "null_rate": 0.99,
+                "flags": [
+                  "sparse",
+                  "value never populated"
+                ],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
             }
           }
         },
@@ -341,9 +468,43 @@
         },
         {
           "properties": {
+            "text": {
+              "x_run1": {
+                "outcome": "cut",
+                "repeat": {
+                  "claude-sonnet-5-5": 0.85,
+                  "claude-haiku-5-5": 0.54,
+                  "gpt-6.1-sol": 0.59,
+                  "kimi-k2.6": 0.49
+                },
+                "cross": 0.16,
+                "cross_populated_only": null,
+                "null_rate": 0.33,
+                "flags": [],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_comparability": "extractor-bound",
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+            },
             "value": {
               "minimum": 0,
-              "maximum": 1
+              "maximum": 1,
+              "x_run1": {
+                "outcome": "pass",
+                "repeat": {
+                  "claude-sonnet-5-5": 0.98,
+                  "claude-haiku-5-5": 0.91,
+                  "gpt-6.1-sol": 0.0,
+                  "kimi-k2.6": 0.98
+                },
+                "cross": 0.77,
+                "cross_populated_only": null,
+                "null_rate": 0.46,
+                "flags": [],
+                "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+              },
+              "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
+              "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
             }
           }
         }
@@ -359,7 +520,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.87,
+          "claude-haiku-5-5": 0.74,
+          "gpt-6.1-sol": 0.91,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.65,
+        "cross_populated_only": 0.34,
+        "null_rate": 0.63,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "bodily_sensation": {
       "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
@@ -371,7 +550,22 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.98,
+          "claude-haiku-5-5": 0.95,
+          "gpt-6.1-sol": 0.97,
+          "kimi-k2.6": 0.95
+        },
+        "cross": 0.94,
+        "cross_populated_only": 0.84,
+        "null_rate": 0.79,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "temporal_profile": {
       "description": "The perceived temporal movement or cadence of the emotional event",
@@ -443,7 +637,25 @@
           "replaced_by": "recurring",
           "reason": "overlaps recurring / salience.recurrence=cyclical"
         }
-      ]
+      ],
+      "x_run1": {
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.8,
+          "claude-haiku-5-5": 0.67,
+          "gpt-6.1-sol": 0.75,
+          "kimi-k2.6": 0.73
+        },
+        "cross": 0.37,
+        "cross_populated_only": null,
+        "null_rate": 0.56,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "interpretive",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "appraisal": {
       "description": "Appraisal dimensions stated by the subject (Scherer / EmotionML appraisal vocabularies)",
@@ -468,9 +680,48 @@
             },
             {
               "properties": {
+                "text": {
+                  "x_run1": {
+                    "outcome": "cut",
+                    "repeat": {
+                      "claude-sonnet-5-5": 0.76,
+                      "claude-haiku-5-5": 0.5,
+                      "gpt-6.1-sol": 0.7,
+                      "kimi-k2.6": 0.36
+                    },
+                    "cross": 0.15,
+                    "cross_populated_only": null,
+                    "null_rate": 0.8,
+                    "flags": [
+                      "borderline"
+                    ],
+                    "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+                  },
+                  "x_comparability": "extractor-bound",
+                  "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+                },
                 "value": {
                   "minimum": 0,
-                  "maximum": 1
+                  "maximum": 1,
+                  "x_run1": {
+                    "outcome": "pending",
+                    "repeat": {
+                      "claude-sonnet-5-5": null,
+                      "claude-haiku-5-5": null,
+                      "gpt-6.1-sol": null,
+                      "kimi-k2.6": null
+                    },
+                    "cross": null,
+                    "cross_populated_only": null,
+                    "null_rate": 1.0,
+                    "flags": [
+                      "sparse",
+                      "value never populated"
+                    ],
+                    "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+                  },
+                  "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+                  "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
                 }
               }
             },
@@ -525,9 +776,48 @@
             },
             {
               "properties": {
+                "text": {
+                  "x_run1": {
+                    "outcome": "cut",
+                    "repeat": {
+                      "claude-sonnet-5-5": 0.78,
+                      "claude-haiku-5-5": 0.55,
+                      "gpt-6.1-sol": 0.68,
+                      "kimi-k2.6": 0.42
+                    },
+                    "cross": 0.36,
+                    "cross_populated_only": null,
+                    "null_rate": 0.79,
+                    "flags": [
+                      "borderline"
+                    ],
+                    "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+                  },
+                  "x_comparability": "extractor-bound",
+                  "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+                },
                 "value": {
                   "minimum": 0,
-                  "maximum": 1
+                  "maximum": 1,
+                  "x_run1": {
+                    "outcome": "pending",
+                    "repeat": {
+                      "claude-sonnet-5-5": null,
+                      "claude-haiku-5-5": null,
+                      "gpt-6.1-sol": null,
+                      "kimi-k2.6": null
+                    },
+                    "cross": null,
+                    "cross_populated_only": null,
+                    "null_rate": 1.0,
+                    "flags": [
+                      "sparse",
+                      "value never populated"
+                    ],
+                    "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+                  },
+                  "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+                  "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
                 }
               }
             },
@@ -613,7 +903,22 @@
             "chance",
             "other",
             "self"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "pass",
+            "repeat": {
+              "claude-sonnet-5-5": 0.98,
+              "claude-haiku-5-5": 0.8,
+              "gpt-6.1-sol": 0.77,
+              "kimi-k2.6": 0.78
+            },
+            "cross": 0.55,
+            "cross_populated_only": null,
+            "null_rate": 0.78,
+            "flags": [],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         }
       }
     }

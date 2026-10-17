@@ -15,7 +15,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.79,
+          "claude-haiku-5-5": 0.65,
+          "gpt-6.1-sol": 0.85,
+          "kimi-k2.6": 0.67
+        },
+        "cross": 0.41,
+        "cross_populated_only": 0.44,
+        "null_rate": 0.03,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "event_category": {
       "description": "Coded companion to context.event: the content category of the event as the subject describes it.",
@@ -70,7 +88,24 @@
         "not_classifiable",
         "recreation_exploration",
         "relationships"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.79,
+          "gpt-6.1-sol": 0.81,
+          "kimi-k2.6": 0.74
+        },
+        "cross": 0.6,
+        "cross_populated_only": null,
+        "null_rate": 0.05,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "place": {
       "description": "Place or spatial context of the experience",
@@ -82,7 +117,25 @@
       "type": [
         "string",
         "null"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.73,
+          "gpt-6.1-sol": 0.86,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.56,
+        "cross_populated_only": 0.5,
+        "null_rate": 0.26,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "people": {
       "description": "Individuals referenced in or connected to the experience",
@@ -97,7 +150,25 @@
       ],
       "items": {
         "type": "string"
-      }
+      },
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "claude-haiku-5-5": 0.67,
+          "gpt-6.1-sol": 0.87,
+          "kimi-k2.6": 0.79
+        },
+        "cross": 0.55,
+        "cross_populated_only": 0.52,
+        "null_rate": 0.15,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "relationship": {
       "description": "The dominant relational configuration influencing the experience",
@@ -195,7 +266,24 @@
           "replaced_by": null,
           "reason": "a narrative mode, not a relational configuration"
         }
-      ]
+      ],
+      "x_run1": {
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.72,
+          "gpt-6.1-sol": 0.78,
+          "kimi-k2.6": 0.83
+        },
+        "cross": 0.6,
+        "cross_populated_only": null,
+        "null_rate": 0.24,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "relationship_model": {
       "description": "Coded companion to context.relationship: the relational model the subject's account of the relationship instantiates (Fiske).",
@@ -246,7 +334,25 @@
         "equality_matching",
         "market_pricing",
         "null_relation"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.75,
+          "claude-haiku-5-5": 0.48,
+          "gpt-6.1-sol": 0.63,
+          "kimi-k2.6": 0.59
+        },
+        "cross": 0.2,
+        "cross_populated_only": null,
+        "null_rate": 0.73,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "life_stage": {
       "description": "The life-stage or temporal frame associated with the experience",
@@ -302,7 +408,25 @@
         "midlife",
         "recent",
         "timeless"
-      ]
+      ],
+      "x_run1": {
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.79,
+          "claude-haiku-5-5": 0.47,
+          "gpt-6.1-sol": 0.91,
+          "kimi-k2.6": 0.56
+        },
+        "cross": 0.44,
+        "cross_populated_only": null,
+        "null_rate": 0.39,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "scope": {
       "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
@@ -332,7 +456,24 @@
             "friends",
             "community",
             "humanity"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "pass",
+            "repeat": {
+              "claude-sonnet-5-5": 0.86,
+              "claude-haiku-5-5": 0.69,
+              "gpt-6.1-sol": 0.82,
+              "kimi-k2.6": 0.73
+            },
+            "cross": 0.47,
+            "cross_populated_only": null,
+            "null_rate": 0.06,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "direction": {
           "type": [
@@ -346,7 +487,25 @@
           ],
           "x_profiles": [
             "full"
-          ]
+          ],
+          "x_run1": {
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.84,
+              "claude-haiku-5-5": 0.6,
+              "gpt-6.1-sol": 0.78,
+              "kimi-k2.6": 0.68
+            },
+            "cross": 0.37,
+            "cross_populated_only": null,
+            "null_rate": 0.18,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+          },
+          "x_comparability": "extractor-bound",
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
         },
         "codings": {
           "type": "array",
