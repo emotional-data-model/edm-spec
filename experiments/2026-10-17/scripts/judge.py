@@ -75,7 +75,7 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, ck_path
             try:
                 async with sem:
                     r = await prov.client.messages.create(model=prov.model, max_tokens=16000, output_config={'effort': 'low'},
-                                                          system=[{'type': 'text', 'text': SYS, 'cache_control': {'type': 'ephemeral', 'ttl': '1h'}}],
+                                                          system=[{'type': 'text', 'text': SYS, 'cache_control': {'type': 'ephemeral'}}],
                                                           messages=[{'role': 'user', 'content': user}])
                 raw = ''.join(b.text for b in r.content if b.type == 'text'); u = r.usage
                 usage = {'input_tokens': u.input_tokens, 'output_tokens': u.output_tokens, 'cached_input_tokens': getattr(u, 'cache_read_input_tokens', 0) or 0, 'cache_write_tokens': getattr(u, 'cache_creation_input_tokens', 0) or 0}

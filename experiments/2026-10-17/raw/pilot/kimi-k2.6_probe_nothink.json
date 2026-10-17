@@ -1,0 +1,25 @@
+{
+ "probe": "kimi-k2.6 thinking disabled, max_tokens 12000",
+ "usage": {
+  "completion_tokens": 989,
+  "prompt_tokens": 4618,
+  "total_tokens": 5607,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 1,
+   "rejected_prediction_tokens": null,
+   "text_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cache_write_tokens": null,
+   "cached_tokens": 4096,
+   "image_tokens": null,
+   "text_tokens": null
+  },
+  "cached_tokens": 4096
+ },
+ "finish": "stop",
+ "content": "{\"narrative.subject\":\"solitary walking trip\",\"narrative.trigger\":\"booking and taking a three-day walking trip alone\",\"narrative.harm\":\"anxiety and isolation\",\"narrative.drive\":\"need to prove self-sufficiency\",\"narrative.integration\":\"self-acceptance\",\"narrative.summary\":\"Client took a three-day walking trip alone over a long weekend, which they had considered cancelling. The first evening in a hostel was marked by intense anxiety: stomach knotted, unable to eat, jaw clenched while hearing others socialize. On the second day, the anxiety loosened and did not return. At the summit, client cried for about ten minutes, experiencing the place as quiet and enormous. Client concluded that they can be alone and be \\\"all right,\\\" not necessarily happy. They want to keep this memory as evidence for future moments of dreading solitude.\",\"narrative.meaning\":\"I can be on my own and be all right. Not happy, necessarily. All right.\",\"narrative.identity_link\":\"evidence that I can be alone and be fine\",\"narrative.turning_point\":null,\"narrative.arc\":[\"threshold\",\"overcoming\",\"discovery\"],\"narrative.valence_shift\":\"anxiety to peace\",\"narrative.self_position\":null,\"emotion.primary\":\"anxiety\",\"emotion.secondary\":[\"grief\",\"pride\",\"peace\"],\"emotion.kind\":null,\"emotion.valence\":{\"text\":\"mixed\",\"value\":null},\"emotion.arousal\":{\"text\":null,\"value\":null},\"emotion.intensity\":{\"text\":\"high\",\"value\":0.8},\"emotion.meta\":\"acceptance\",\"emotion.bodily_sensation\":\"stomach knotted up, couldn't eat, jaw clenched; knot loosening\",\"emotion.temporal_profile\":\"rising\",\"emotion.appraisal.urgency\":{\"text\":null,\"value\":null},\"emotion.appraisal.control\":{\"text\":\"low\",\"value\":null},\"emotion.appraisal.attribution\":null,\"context.event\":\"solitary walking trip\",\"context.event_category\":\"recreation_exploration\",\"context.place\":\"hostel, hill, summit\",\"context.people\":[],\"context.relationship\":\"self_reflection\",\"context.relationship_model\":null,\"context.life_stage\":\"recent\",\"context.scope\":{\"text\":\"self\",\"direction\":\"inward\"},\"salience.memory_type\":\"milestone\",\"salience.tether\":{\"type\":\"event\",\"referent\":\"three-day walking trip alone\",\"stake\":\"proof of capacity for solitude\"},\"salience.retrieval_cues\":[\"empty weekend\",\"dreading solitude\",\"three days alone\"],\"salience.themes\":[\"solitude\",\"self-sufficiency\",\"evidence\",\"overcoming anxiety\"],\"salience.recurrence\":\"isolated\",\"salience.persistence\":{\"text\":\"enduring\",\"decay\":\"slow\"},\"salience.linkage_strength\":0.7,\"salience.function\":[\"directive\",\"self\"],\"salience.resilience\":[\"acceptance\",\"continuity\"],\"salience.trajectory\":\"improving\",\"motivation.action_tendency\":\"persevere\",\"motivation.need\":\"autonomy\",\"motivation.temporal_focus\":\"future\",\"motivation.risk_posture\":\"bold\",\"motivation.coping\":\"confront\",\"field_confidence\":{\"narrative.subject\":0.9,\"narrative.trigger\":0.9,\"narrative.harm\":0.8,\"narrative.drive\":0.7,\"narrative.integration\":0.8,\"narrative.summary\":0.9,\"narrative.meaning\":1.0,\"narrative.identity_link\":0.9,\"narrative.arc\":0.7,\"narrative.valence_shift\":0.8,\"emotion.primary\":0.9,\"emotion.secondary\":0.8,\"emotion.intensity\":0.8,\"emotion.meta\":0.8,\"emotion.bodily_sensation\":1.0,\"emotion.temporal_profile\":0.7,\"emotion.appraisal.control\":0.6,\"context.event\":0.9,\"context.event_category\":0.7,\"context.place\":0.9,\"context.relationship\":0.7,\"context.life_stage\":0.8,\"context.scope\":0.8,\"salience.memory_type\":0.8,\"salience.tether\":0.9,\"salience.retrieval_cues\":0.9,\"salience.themes\":0.8,\"salience.recurrence\":0.7,\"salience.persistence\":0.7,\"salience.linkage_strength\":0.7,\"salience.function\":0.9,\"salience.resilience\":0.7,\"salience.trajectory\":0.8,\"motivation.action_tendency\":0.7,\"motivation.need\":0.7,\"motivation.temporal_focus\":0.9,\"motivation.risk_posture\":0.7,\"motivation.coping\":0.7}}"
+}

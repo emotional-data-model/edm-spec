@@ -56,7 +56,7 @@ class Provider:
         if self.kind == 'anthropic':
             r = await self.client.messages.create(
                 model=self.model, max_tokens=16000,
-                system=[{'type': 'text', 'text': system, 'cache_control': {'type': 'ephemeral', 'ttl': '1h'}}],
+                system=[{'type': 'text', 'text': system, 'cache_control': {'type': 'ephemeral'}}],  # 5-minute TTL: write 1.25 x input, matches models.json
                 messages=[{'role': 'user', 'content': user}])
             text = ''.join(b.text for b in r.content if b.type == 'text')
             u = r.usage
@@ -66,7 +66,12 @@ class Provider:
         kwargs = dict(model=self.model, messages=[{'role': 'system', 'content': system}, {'role': 'user', 'content': user}],
                       response_format={'type': 'json_object'})
         if self.kind == 'openai': kwargs['max_completion_tokens'] = 16000
-        else: kwargs['max_tokens'] = 8000
+        else:
+            kwargs['max_tokens'] = 12000
+            # Deviation D1 (experiment-plan.md section 10, logged before the main run): kimi-k2.6 is a reasoning model whose
+            # default reasoning (~10k tokens, 126 s per call in the pilot probe) exceeded the output cap and pushed the projected
+            # total above USD 80; thinking is disabled for this extractor. Sampling parameters remain provider defaults.
+            kwargs['extra_body'] = {'thinking': {'type': 'disabled'}}
         r = await self.client.chat.completions.create(**kwargs)
         ch = r.choices[0]
         text = ch.message.content or ''
