@@ -1,0 +1,142 @@
+projection before run: {"spent_usd": 0.0, "completed_calls": 0, "remaining_calls": 3000, "mean_cost_per_call_usd": 0.0, "projected_extraction_usd": 0.0, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 21.0, "budget_usd": 80}
+claude-sonnet-5-5 / synthetic: 250 planned, 250 to do
+claude-sonnet-5-5 / conversational: 250 planned, 250 to do
+claude-sonnet-5-5 / pepys: 250 planned, 250 to do
+claude-haiku-5-5 / synthetic: 250 planned, 250 to do
+claude-haiku-5-5 / conversational: 250 planned, 250 to do
+claude-haiku-5-5 / pepys: 250 planned, 250 to do
+gpt-6.1-sol / synthetic: 250 planned, 250 to do
+gpt-6.1-sol / conversational: 250 planned, 250 to do
+gpt-6.1-sol / pepys: 250 planned, 250 to do
+kimi-k2.6 / synthetic: 250 planned, 250 to do
+kimi-k2.6 / conversational: 250 planned, 250 to do
+kimi-k2.6 / pepys: 250 planned, 250 to do
+  [claude-sonnet-5-5/pepys] 25 calls, $0.27 this run, total $0.27, parse_fail=0
+  [claude-haiku-5-5/pepys] 50 calls, $0.51 this run, total $0.51, parse_fail=0
+  [kimi-k2.6/conversational] 75 calls, $0.76 this run, total $0.76, parse_fail=0
+  [claude-haiku-5-5/conversational] 100 calls, $1.00 this run, total $1.00, parse_fail=0
+  [claude-haiku-5-5/pepys] 125 calls, $1.27 this run, total $1.27, parse_fail=0
+  [kimi-k2.6/synthetic] 150 calls, $1.54 this run, total $1.54, parse_fail=0
+  [claude-haiku-5-5/pepys] 175 calls, $1.78 this run, total $1.78, parse_fail=0
+  [kimi-k2.6/conversational] 200 calls, $2.03 this run, total $2.03, parse_fail=0
+  [claude-haiku-5-5/conversational] 225 calls, $2.31 this run, total $2.31, parse_fail=0
+  [claude-sonnet-5-5/synthetic] 250 calls, $2.54 this run, total $2.54, parse_fail=0
+  [claude-haiku-5-5/pepys] 275 calls, $2.82 this run, total $2.82, parse_fail=0
+  [claude-haiku-5-5/conversational] 300 calls, $3.06 this run, total $3.06, parse_fail=0
+  [claude-sonnet-5-5/pepys] 325 calls, $3.35 this run, total $3.35, parse_fail=0
+  [claude-haiku-5-5/pepys] 350 calls, $3.59 this run, total $3.59, parse_fail=0
+  [claude-sonnet-5-5/pepys] 375 calls, $3.86 this run, total $3.86, parse_fail=0
+  [claude-haiku-5-5/conversational] 400 calls, $4.13 this run, total $4.13, parse_fail=0
+  [claude-haiku-5-5/pepys] 425 calls, $4.38 this run, total $4.38, parse_fail=0
+  [kimi-k2.6/conversational] 450 calls, $4.65 this run, total $4.65, parse_fail=0
+  [claude-haiku-5-5/pepys] 475 calls, $4.92 this run, total $4.92, parse_fail=0
+  [claude-sonnet-5-5/pepys] 500 calls, $5.21 this run, total $5.21, parse_fail=0
+  projection after 500 calls: {"spent_usd": 5.21, "completed_calls": 500, "remaining_calls": 2500, "mean_cost_per_call_usd": 0.0104, "projected_extraction_usd": 31.25, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 52.25, "budget_usd": 80}
+  [gpt-6.1-sol/pepys] 525 calls, $5.50 this run, total $5.50, parse_fail=0
+  [gpt-6.1-sol/synthetic] 550 calls, $5.74 this run, total $5.74, parse_fail=0
+  [claude-sonnet-5-5/pepys] 575 calls, $6.00 this run, total $6.00, parse_fail=0
+  [claude-sonnet-5-5/pepys] 600 calls, $6.27 this run, total $6.27, parse_fail=0
+  [claude-sonnet-5-5/conversational] 625 calls, $6.55 this run, total $6.55, parse_fail=0
+  [gpt-6.1-sol/pepys] 650 calls, $6.79 this run, total $6.79, parse_fail=0
+  [claude-haiku-5-5/conversational] 675 calls, $7.04 this run, total $7.04, parse_fail=0
+  [kimi-k2.6/pepys] 700 calls, $7.29 this run, total $7.29, parse_fail=0
+  [gpt-6.1-sol/conversational] 725 calls, $7.56 this run, total $7.56, parse_fail=0
+  [claude-sonnet-5-5/conversational] 750 calls, $7.82 this run, total $7.82, parse_fail=0
+  [kimi-k2.6/conversational] 775 calls, $8.06 this run, total $8.06, parse_fail=0
+  [gpt-6.1-sol/synthetic] 800 calls, $8.30 this run, total $8.30, parse_fail=0
+  [claude-sonnet-5-5/conversational] 825 calls, $8.55 this run, total $8.55, parse_fail=0
+  [gpt-6.1-sol/conversational] 850 calls, $8.83 this run, total $8.83, parse_fail=0
+  [claude-sonnet-5-5/pepys] 875 calls, $9.08 this run, total $9.08, parse_fail=0
+  [claude-haiku-5-5/synthetic] 900 calls, $9.32 this run, total $9.32, parse_fail=0
+  [claude-haiku-5-5/conversational] 925 calls, $9.57 this run, total $9.57, parse_fail=0
+  [claude-sonnet-5-5/pepys] 950 calls, $9.82 this run, total $9.82, parse_fail=0
+  [claude-sonnet-5-5/conversational] 975 calls, $10.06 this run, total $10.06, parse_fail=0
+  [kimi-k2.6/synthetic] 1000 calls, $10.31 this run, total $10.31, parse_fail=0
+  projection after 1000 calls: {"spent_usd": 10.31, "completed_calls": 1000, "remaining_calls": 2000, "mean_cost_per_call_usd": 0.0103, "projected_extraction_usd": 30.93, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 51.93, "budget_usd": 80}
+  [claude-haiku-5-5/synthetic] 1025 calls, $10.57 this run, total $10.57, parse_fail=0
+  [claude-haiku-5-5/conversational] 1050 calls, $10.82 this run, total $10.82, parse_fail=0
+  [kimi-k2.6/pepys] 1075 calls, $11.08 this run, total $11.08, parse_fail=0
+  [claude-sonnet-5-5/synthetic] 1100 calls, $11.32 this run, total $11.32, parse_fail=0
+  [claude-haiku-5-5/pepys] 1125 calls, $11.54 this run, total $11.54, parse_fail=0
+  [kimi-k2.6/synthetic] 1150 calls, $11.81 this run, total $11.81, parse_fail=0
+  [claude-haiku-5-5/pepys] 1175 calls, $12.06 this run, total $12.06, parse_fail=0
+  [kimi-k2.6/pepys] 1200 calls, $12.31 this run, total $12.31, parse_fail=0
+  [gpt-6.1-sol/synthetic] 1225 calls, $12.54 this run, total $12.54, parse_fail=0
+  [claude-sonnet-5-5/synthetic] 1250 calls, $12.81 this run, total $12.81, parse_fail=0
+  [gpt-6.1-sol/conversational] 1275 calls, $13.08 this run, total $13.08, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1300 calls, $13.33 this run, total $13.33, parse_fail=0
+  [claude-haiku-5-5/conversational] 1325 calls, $13.58 this run, total $13.58, parse_fail=0
+  [claude-sonnet-5-5/pepys] 1350 calls, $13.83 this run, total $13.83, parse_fail=0
+  [claude-haiku-5-5/conversational] 1375 calls, $14.06 this run, total $14.06, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1400 calls, $14.31 this run, total $14.31, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1425 calls, $14.54 this run, total $14.54, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1450 calls, $14.76 this run, total $14.76, parse_fail=0
+  [claude-haiku-5-5/conversational] 1475 calls, $15.01 this run, total $15.01, parse_fail=0
+  [claude-sonnet-5-5/pepys] 1500 calls, $15.25 this run, total $15.25, parse_fail=0
+  projection after 1500 calls: {"spent_usd": 15.25, "completed_calls": 1500, "remaining_calls": 1500, "mean_cost_per_call_usd": 0.0102, "projected_extraction_usd": 30.5, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 51.5, "budget_usd": 80}
+  [claude-sonnet-5-5/conversational] 1525 calls, $15.52 this run, total $15.52, parse_fail=0
+  [claude-sonnet-5-5/synthetic] 1550 calls, $15.76 this run, total $15.76, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1575 calls, $16.02 this run, total $16.02, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1600 calls, $16.27 this run, total $16.27, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1625 calls, $16.51 this run, total $16.51, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1650 calls, $16.78 this run, total $16.78, parse_fail=0
+  [claude-sonnet-5-5/conversational] 1675 calls, $17.03 this run, total $17.03, parse_fail=0
+  [kimi-k2.6/synthetic] 1700 calls, $17.29 this run, total $17.29, parse_fail=0
+  [gpt-6.1-sol/conversational] 1725 calls, $17.56 this run, total $17.56, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1750 calls, $17.69 this run, total $17.69, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1775 calls, $17.83 this run, total $17.83, parse_fail=0
+  [kimi-k2.6/synthetic] 1800 calls, $17.98 this run, total $17.98, parse_fail=0
+  [kimi-k2.6/conversational] 1825 calls, $18.12 this run, total $18.12, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1850 calls, $18.27 this run, total $18.27, parse_fail=0
+  [claude-haiku-5-5/conversational] 1875 calls, $18.40 this run, total $18.40, parse_fail=0
+  [gpt-6.1-sol/synthetic] 1900 calls, $18.54 this run, total $18.54, parse_fail=0
+  [claude-haiku-5-5/synthetic] 1925 calls, $18.65 this run, total $18.65, parse_fail=0
+  [gpt-6.1-sol/pepys] 1950 calls, $18.79 this run, total $18.79, parse_fail=0
+  [kimi-k2.6/synthetic] 1975 calls, $18.93 this run, total $18.93, parse_fail=0
+  [claude-haiku-5-5/pepys] 2000 calls, $19.07 this run, total $19.07, parse_fail=0
+  projection after 2000 calls: {"spent_usd": 19.07, "completed_calls": 2000, "remaining_calls": 1000, "mean_cost_per_call_usd": 0.0095, "projected_extraction_usd": 28.6, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 49.6, "budget_usd": 80}
+  [claude-haiku-5-5/synthetic] 2025 calls, $19.18 this run, total $19.18, parse_fail=0
+  [claude-haiku-5-5/pepys] 2050 calls, $19.31 this run, total $19.31, parse_fail=0
+  [claude-haiku-5-5/conversational] 2075 calls, $19.45 this run, total $19.45, parse_fail=0
+  [kimi-k2.6/conversational] 2100 calls, $19.59 this run, total $19.59, parse_fail=0
+  [gpt-6.1-sol/pepys] 2125 calls, $19.73 this run, total $19.73, parse_fail=0
+  [gpt-6.1-sol/conversational] 2150 calls, $19.87 this run, total $19.87, parse_fail=0
+  [claude-haiku-5-5/synthetic] 2175 calls, $19.99 this run, total $19.99, parse_fail=0
+  [gpt-6.1-sol/conversational] 2200 calls, $20.24 this run, total $20.24, parse_fail=0
+  [kimi-k2.6/pepys] 2225 calls, $20.48 this run, total $20.48, parse_fail=0
+  [kimi-k2.6/pepys] 2250 calls, $20.71 this run, total $20.71, parse_fail=0
+  [kimi-k2.6/conversational] 2275 calls, $20.94 this run, total $20.94, parse_fail=0
+  [gpt-6.1-sol/conversational] 2300 calls, $21.18 this run, total $21.18, parse_fail=0
+  [gpt-6.1-sol/conversational] 2325 calls, $21.41 this run, total $21.41, parse_fail=0
+  [kimi-k2.6/synthetic] 2350 calls, $21.62 this run, total $21.62, parse_fail=0
+  [kimi-k2.6/conversational] 2375 calls, $21.85 this run, total $21.85, parse_fail=0
+  [gpt-6.1-sol/conversational] 2400 calls, $22.08 this run, total $22.08, parse_fail=0
+  [gpt-6.1-sol/pepys] 2425 calls, $22.31 this run, total $22.31, parse_fail=0
+  [gpt-6.1-sol/conversational] 2450 calls, $22.54 this run, total $22.54, parse_fail=0
+  [kimi-k2.6/pepys] 2475 calls, $22.77 this run, total $22.77, parse_fail=0
+  [gpt-6.1-sol/synthetic] 2500 calls, $23.01 this run, total $23.01, parse_fail=0
+  projection after 2500 calls: {"spent_usd": 23.01, "completed_calls": 2500, "remaining_calls": 500, "mean_cost_per_call_usd": 0.0092, "projected_extraction_usd": 27.61, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 48.61, "budget_usd": 80}
+  [gpt-6.1-sol/synthetic] 2525 calls, $23.24 this run, total $23.24, parse_fail=0
+  [kimi-k2.6/conversational] 2550 calls, $23.47 this run, total $23.47, parse_fail=0
+  [gpt-6.1-sol/pepys] 2575 calls, $23.70 this run, total $23.70, parse_fail=0
+  [kimi-k2.6/conversational] 2600 calls, $23.94 this run, total $23.94, parse_fail=0
+  [gpt-6.1-sol/conversational] 2625 calls, $24.18 this run, total $24.18, parse_fail=0
+  [gpt-6.1-sol/pepys] 2650 calls, $24.41 this run, total $24.41, parse_fail=0
+  [gpt-6.1-sol/conversational] 2675 calls, $24.62 this run, total $24.62, parse_fail=0
+  [gpt-6.1-sol/conversational] 2700 calls, $24.89 this run, total $24.89, parse_fail=0
+  [kimi-k2.6/synthetic] 2725 calls, $25.12 this run, total $25.12, parse_fail=0
+  [gpt-6.1-sol/synthetic] 2750 calls, $25.34 this run, total $25.34, parse_fail=0
+  [gpt-6.1-sol/conversational] 2775 calls, $25.58 this run, total $25.58, parse_fail=0
+  [gpt-6.1-sol/conversational] 2800 calls, $25.81 this run, total $25.81, parse_fail=0
+  [kimi-k2.6/pepys] 2825 calls, $26.05 this run, total $26.05, parse_fail=0
+  [kimi-k2.6/conversational] 2850 calls, $26.27 this run, total $26.27, parse_fail=0
+  [kimi-k2.6/synthetic] 2875 calls, $26.50 this run, total $26.50, parse_fail=0
+  [gpt-6.1-sol/synthetic] 2900 calls, $26.75 this run, total $26.75, parse_fail=0
+  [kimi-k2.6/pepys] 2925 calls, $26.95 this run, total $26.95, parse_fail=0
+  [gpt-6.1-sol/synthetic] 2950 calls, $27.19 this run, total $27.19, parse_fail=0
+  [kimi-k2.6/pepys] 2975 calls, $27.45 this run, total $27.45, parse_fail=0
+  [gpt-6.1-sol/pepys] 3000 calls, $27.84 this run, total $27.84, parse_fail=0
+  projection after 3000 calls: {"spent_usd": 27.84, "completed_calls": 3000, "remaining_calls": 0, "mean_cost_per_call_usd": 0.0093, "projected_extraction_usd": 27.84, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 48.84, "budget_usd": 80}
+done in 3341s: 3000 calls, $27.84 this run; cumulative $27.84; parse_fail=0 transport_fail=0
+final projection: {"spent_usd": 27.84, "completed_calls": 3000, "remaining_calls": 0, "mean_cost_per_call_usd": 0.0093, "projected_extraction_usd": 27.84, "reserves_usd": {"judge": 16.0, "rater": 5.0}, "projected_total_usd": 48.84, "budget_usd": 80}
+exit=0
