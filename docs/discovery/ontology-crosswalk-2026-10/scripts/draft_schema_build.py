@@ -14,8 +14,9 @@ Shapes (fragments/common.json):
   dimension  {text, value, codings[]}     ordinal label beside a number; neither is derived from the other
   coding     {system, version, code, display, relation, confidence}   FHIR R4 Coding + EDM relation
 Rule 1 of v0.9-proposal.md section 4 is enforced: a coding is only allowed when text (or, for a dimension, value) is present.
-Rule 3: canonical values are a recommended vocabulary (x_recommended_values), not an enum on text; the EDM code on
-https://emotionaldatamodel.org/vocab/<field>/v1 IS enumerated, so a canonical claim is checkable while free text stays legal.
+Rule 3 (ruling 2026-10-17): canonical values are a recommended vocabulary (x_recommended_values), not an enum on text; the EDM
+code on https://emotionaldatamodel.org/vocab/<field>/v1 IS enumerated, so a canonical claim is checkable while free text stays
+legal. Rulings 2026-10-17 also fix: Essential = 12 fields (+ salience.retrieval_cues); extensions allowed in all three composites.
 """
 import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -234,13 +235,13 @@ def composite(profile):
     props = {'meta': meta, **domains, 'governance': {'$ref': INFRA['governance']}, 'telemetry': {'$ref': f'{FRAG}/telemetry.json'}}
     if profile == 'full':
         props['system'] = {'$ref': INFRA['system']}; props['crosswalks'] = {'$ref': INFRA['crosswalks']}
-    props['extensions'] = {'$ref': INFRA['extensions'], 'x_draft_note': 'Optional in every profile so that migration can preserve cut and out-of-profile text (the v0.8 composites do not list extensions).'}
+    props['extensions'] = {'$ref': INFRA['extensions'], 'x_note': 'Allowed (optional) in every profile by ruling 2026-10-17, so that migration can preserve cut and out-of-profile text. The v0.8 composites do not list extensions (README known limitation).'}
     required = ['meta', *domains.keys(), 'governance', 'telemetry'] + (['system', 'crosswalks'] if profile == 'full' else [])
     n_aff = len(fields)
     return {
      '$schema': 'http://json-schema.org/draft-07/schema#', '$id': f'{BASE}/edm.{profile}.schema.json',
      'title': f'EDM v0.9.0 {profile.capitalize()} Profile (DRAFT, discovery)',
-     'description': f'DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. {n_aff} affective fields over {len(domains)} affective domains; the trait block is not included (opt-in via partner manifest). Not normative; not under VERSIONING_POLICY until adopted.',
+     'description': f'DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. {n_aff} affective fields over {len(domains)} affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.',
      'x_affective_field_count': n_aff, 'x_affective_fields': fields,
      'type': 'object', 'required': required, 'additionalProperties': False, 'properties': props,
     }

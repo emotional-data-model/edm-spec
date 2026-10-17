@@ -13,3 +13,8 @@ Thumbs.db
 CLAUDE.md
 .claude/
 nul
+
+# Secrets and local caches (never commit)
+.env
+.env.*
+__pycache__/

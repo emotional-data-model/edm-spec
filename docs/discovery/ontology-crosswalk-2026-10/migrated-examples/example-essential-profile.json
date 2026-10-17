@@ -93,6 +93,11 @@
       "codings": []
     }
   },
+  "salience": {
+    "retrieval_cues": [
+      "the hall going quiet"
+    ]
+  },
   "governance": {
     "jurisdiction": "GDPR",
     "retention_policy": {
@@ -111,14 +116,5 @@
     "extraction_model": "synthetic-hand-written",
     "extraction_provider": null,
     "field_confidence": {}
-  },
-  "extensions": {
-    "org.emotionaldatamodel.migration": {
-      "out_of_profile_fields": {
-        "salience.retrieval_cues": [
-          "the hall going quiet"
-        ]
-      }
-    }
   }
 }

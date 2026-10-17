@@ -207,12 +207,14 @@ CANONICAL['persistence'] |= {'transient', 'short', 'enduring', 'chronic'}
 for _k, _vals in NEW_VOCAB.items(): CANONICAL[_k] = set(_vals)
 
 # ---------------------------------------------------------------------------
-# 3b. Profile manifests for the v0.9 draft. Essential is fixed by direction (7 narrative + 4 emotion); Extended and Full
+# 3b. Profile manifests for the v0.9 draft. Essential is fixed by direction (7 narrative + 4 emotion + salience.retrieval_cues,
+#     ruling 2026-10-17 so that core.echo survives an Essential migration without the legacy extension); Extended and Full
 #     are derived: a carried field is in a profile when any of its v0.8.3 sources was; the six new coded fields are
 #     Full-only; self_position is Essential. trait.* belongs to no canonical profile (opt-in via partner manifest).
 # ---------------------------------------------------------------------------
 ESSENTIAL_09 = ['narrative.subject', 'narrative.trigger', 'narrative.harm', 'narrative.drive', 'narrative.integration', 'narrative.arc',
-                'narrative.self_position', 'emotion.primary', 'emotion.secondary', 'emotion.valence', 'emotion.intensity']
+                'narrative.self_position', 'emotion.primary', 'emotion.secondary', 'emotion.valence', 'emotion.intensity',
+                'salience.retrieval_cues']
 _P083 = {x['path']: set(x['profiles']) for x in FIELDS_083}
 def _derived(profile):
     keep = set(ESSENTIAL_09)
@@ -403,7 +405,7 @@ def crosswalk():
         'migration': 'A v0.8.3 artifact carrying attachment_style or regulation_state keeps them in trait.* only when the target profile opts in; otherwise they are preserved verbatim in extensions.' + LEGACY_EXT + '.out_of_profile_fields.',
      },
      'profiles': {'essential': PROFILES_09['essential'], 'extended': PROFILES_09['extended'], 'full': PROFILES_09['full'], 'trait_opt_in_partner_profiles': sorted(TRAIT_OPT_IN),
-                  'rule': 'Essential = 7 narrative + 4 emotion fields (fixed by direction). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/.'},
+                  'rule': 'Essential = 7 narrative + 4 emotion + salience.retrieval_cues (12; ruling 2026-10-17). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/.'},
      'coding_shape': {
         'coded': {'text': 'string (the interpretation; mandatory when the field is populated)', 'codings': [{'system': 'URI', 'version': 'string', 'code': 'string', 'display': 'string', 'relation': 'exact | broader | narrower | related (default exact)'}]},
         'dimension': {'text': 'ordinal label or null', 'value': 'number or null (never derived from text by migration)', 'codings': '[...]'},
@@ -417,7 +419,7 @@ def crosswalk():
      },
      'migration_notes': {
         'automatic_upgrade': True, 'data_loss_risk': 'none (cut-field text preserved in extensions)',
-        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.', '4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.v0_8_3_cut_fields.', '7. Prune to the target profile manifest; any populated field outside it goes to extensions.' + LEGACY_EXT + '.out_of_profile_fields (Essential: core.echo, which has no Essential home in v0.9).', '8. Set meta.version.'],
+        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.', '4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.v0_8_3_cut_fields.', '7. Prune to the target profile manifest; any populated field outside it goes to extensions.' + LEGACY_EXT + '.out_of_profile_fields (nothing for the seven synthetic examples once Essential carries salience.retrieval_cues).', '8. Set meta.version.'],
         'reference_implementation': 'docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py',
      },
     }

@@ -156,6 +156,7 @@
       "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
       "x_constraints": "Short phrases; order carries no meaning",
       "x_profiles": [
+        "essential",
         "extended",
         "full"
       ],

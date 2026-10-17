@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.extended.schema.json",
   "title": "EDM v0.9.0 Extended Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 30 affective fields over 4 affective domains; the trait block is not included (opt-in via partner manifest). Not normative; not under VERSIONING_POLICY until adopted.",
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 30 affective fields over 4 affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
   "x_affective_field_count": 30,
   "x_affective_fields": [
     "narrative.subject",
@@ -327,7 +327,10 @@
               "recurrence",
               "linkage_strength"
             ]
-          }
+          },
+          "required": [
+            "retrieval_cues"
+          ]
         }
       ],
       "x_fields": [
@@ -346,7 +349,7 @@
     },
     "extensions": {
       "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/extensions.json",
-      "x_draft_note": "Optional in every profile so that migration can preserve cut and out-of-profile text (the v0.8 composites do not list extensions)."
+      "x_note": "Allowed (optional) in every profile by ruling 2026-10-17, so that migration can preserve cut and out-of-profile text. The v0.8 composites do not list extensions (README known limitation)."
     }
   }
 }

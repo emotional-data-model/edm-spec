@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.essential.schema.json",
   "title": "EDM v0.9.0 Essential Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 11 affective fields over 2 affective domains; the trait block is not included (opt-in via partner manifest). Not normative; not under VERSIONING_POLICY until adopted.",
-  "x_affective_field_count": 11,
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 12 affective fields over 3 affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 12,
   "x_affective_fields": [
     "narrative.subject",
     "narrative.trigger",
@@ -15,13 +15,15 @@
     "emotion.primary",
     "emotion.secondary",
     "emotion.valence",
-    "emotion.intensity"
+    "emotion.intensity",
+    "salience.retrieval_cues"
   ],
   "type": "object",
   "required": [
     "meta",
     "narrative",
     "emotion",
+    "salience",
     "governance",
     "telemetry"
   ],
@@ -208,6 +210,27 @@
         "emotion.intensity"
       ]
     },
+    "salience": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/salience.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "retrieval_cues"
+            ]
+          },
+          "required": [
+            "retrieval_cues"
+          ]
+        }
+      ],
+      "x_fields": [
+        "salience.retrieval_cues"
+      ]
+    },
     "governance": {
       "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
     },
@@ -216,7 +239,7 @@
     },
     "extensions": {
       "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/extensions.json",
-      "x_draft_note": "Optional in every profile so that migration can preserve cut and out-of-profile text (the v0.8 composites do not list extensions)."
+      "x_note": "Allowed (optional) in every profile by ruling 2026-10-17, so that migration can preserve cut and out-of-profile text. The v0.8 composites do not list extensions (README known limitation)."
     }
   }
 }

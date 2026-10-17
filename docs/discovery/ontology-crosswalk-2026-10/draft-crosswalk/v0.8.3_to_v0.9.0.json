@@ -501,7 +501,8 @@
       "emotion.primary",
       "emotion.secondary",
       "emotion.valence",
-      "emotion.intensity"
+      "emotion.intensity",
+      "salience.retrieval_cues"
     ],
     "extended": [
       "narrative.subject",
@@ -587,7 +588,7 @@
     "trait_opt_in_partner_profiles": [
       "partner:com.deepadata.therapy.v1"
     ],
-    "rule": "Essential = 7 narrative + 4 emotion fields (fixed by direction). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
+    "rule": "Essential = 7 narrative + 4 emotion + salience.retrieval_cues (12; ruling 2026-10-17). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
   },
   "coding_shape": {
     "coded": {
@@ -696,7 +697,7 @@
       "4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].",
       "5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.",
       "6. Copy cut-field values into extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields.",
-      "7. Prune to the target profile manifest; any populated field outside it goes to extensions.org.emotionaldatamodel.migration.out_of_profile_fields (Essential: core.echo, which has no Essential home in v0.9).",
+      "7. Prune to the target profile manifest; any populated field outside it goes to extensions.org.emotionaldatamodel.migration.out_of_profile_fields (nothing for the seven synthetic examples once Essential carries salience.retrieval_cues).",
       "8. Set meta.version."
     ],
     "reference_implementation": "docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py"
