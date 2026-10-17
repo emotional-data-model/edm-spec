@@ -68,8 +68,9 @@ status = {}
 for fw in frameworks: status[fw['source_status']] = status.get(fw['source_status'], 0) + 1
 doc = {
  'generated':'2026-10-17','purpose':'Reference set for the EDM v0.8.3 ontology crosswalk (discovery only).',
- 'legend':{'source_status':{'FETCHED':'primary/official source fetched and constructs read from it','FETCHED_SECONDARY':'official abstract / distributor / encyclopedia fetched; some values from knowledge','KNOWLEDGE':'no fetch succeeded; constructs from model knowledge, see confidence','NOT_FOUND':'no such publication located'},
-           'value_source':'per-construct flag: FETCHED = values read from a fetched page; KNOWLEDGE = from model knowledge ([KNOWLEDGE] in the report)'},
+ 'legend':{'source_status':{'FETCHED':'primary/official source fetched and constructs read from it','FETCHED_SECONDARY':'official abstract / distributor / encyclopedia / open-access secondary source fetched; construct lists verified against it (see constructs[].verified_against) or, where that key is absent, partly from knowledge','KNOWLEDGE':'no fetch succeeded; constructs from model knowledge, see confidence','NOT_FOUND':'no such publication located'},
+           'value_source':'per-construct flag: FETCHED = values read from a fetched page, or verified item by item against an accessible secondary source recorded in verified_against (verification_level: secondary; sources/verification_2026-10-17.json); KNOWLEDGE = from model knowledge, unverified ([KNOWLEDGE] in the report)',
+           'verified_against':'per-construct record of the 2026-10-17 verification pass: status VERIFIED / PARTIAL / CONTRADICTED / UNVERIFIED, url, title, kind (open_access_paper, open_access_review, handbook_chapter, university_page, author_page, official_site, wikipedia, other), quote, corrections'},
  'summary':{'framework_count':len(frameworks),'by_family':by_fam,'by_source_status':status,
             'construct_count':sum(len(f['constructs']) for f in frameworks)},
  'frameworks':frameworks,

@@ -1,600 +1,846 @@
 [
-  {
-    "id": "w3c_emotionml_1_0",
-    "name": "W3C Emotion Markup Language (EmotionML) 1.0",
-    "family": "machine",
-    "citation": {
-      "authors": "Burkhardt, Felix; Schröder, Marc (eds.); W3C Multimodal Interaction Working Group",
-      "year": 2014,
-      "title": "Emotion Markup Language (EmotionML) 1.0",
-      "venue": "W3C Recommendation, 22 May 2014",
-      "url": "https://www.w3.org/TR/emotionml/",
-      "doi": null,
-      "accessed": "2026-10-17"
-    },
-    "source_status": "FETCHED",
-    "confidence": 0.97,
-    "fetched_urls": [
-      "https://www.w3.org/TR/emotionml/",
-      "https://www.w3.org/TR/emotion-voc/",
-      "https://www.w3.org/TR/emotion-voc/xml"
-    ],
-    "summary": "EmotionML is an XML plug-in language for representing and annotating emotion in technological contexts; an <emotion> element carries one or more descriptors of four kinds (category, dimension, appraisal, action-tendency), each drawn from an explicitly named vocabulary. Identifiers are XML element/attribute names in the namespace http://www.w3.org/2009/10/emotionml; vocabulary items are referenced by a vocabulary URI plus fragment and a per-item name attribute.",
-    "identifier_scheme": "Element names in namespace http://www.w3.org/2009/10/emotionml; descriptor sets are referenced by URI (e.g. category-set=\"http://www.w3.org/TR/emotion-voc/xml#big6\") and items by name (e.g. <category name=\"anger\" value=\"0.7\"/>).",
-    "constructs": [
-      {
-        "id": "emotionml_elements",
-        "label": "EmotionML element model",
-        "type": "code_system",
-        "uri_or_code": "http://www.w3.org/2009/10/emotionml",
-        "values": [
-          "emotionml|root; attrs: version (required, \"1.0\"), category-set, dimension-set, appraisal-set, action-tendency-set",
-          "emotion|attrs: id, version, category-set, dimension-set, appraisal-set, action-tendency-set, start, end, duration, time-ref-uri, time-ref-anchor-point, offset-to-start, expressed-through",
-          "category|attrs: name (required), value, confidence",
-          "dimension|attrs: name (required), value (or child <trace>), confidence",
-          "appraisal|attrs: name (required), value, confidence",
-          "action-tendency|attrs: name (required), value, confidence",
-          "intensity|NOT an element: intensity is a dimension name, <dimension name=\"intensity\"> from vocabulary intensity-dimension",
-          "reference|attrs: uri (required), role, media-type",
-          "info|attrs: id; arbitrary metadata container",
-          "trace|attrs: freq (required), samples (required); child of category/dimension/appraisal/action-tendency",
-          "vocabulary|attrs: type (required), id (required)",
-          "item|attrs: name (required); child of vocabulary"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Attribute 'value' is a float in [0,1] for category/dimension/appraisal/action-tendency; 'confidence' is a float in [0,1]. Time attributes start/end are absolute ms timestamps, duration ms, offset-to-start ms relative to time-ref-uri/time-ref-anchor-point. expressed-through is a space-separated list of modality tokens (e.g. gaze, face, voice, text)."
-      },
-      {
-        "id": "emotionml_reference_role",
-        "label": "reference/@role enumeration",
-        "type": "code_system",
-        "uri_or_code": "reference/@role",
-        "values": ["expressedBy", "experiencedBy", "triggeredBy", "targetedAt"],
-        "value_source": "FETCHED",
-        "notes": "Default value is expressedBy. expressedBy = the observable behaviour expressing the emotion; experiencedBy = the subject; triggeredBy = the cause/eliciting event; targetedAt = the object of the emotion."
-      },
-      {
-        "id": "emotionml_vocabulary_type",
-        "label": "vocabulary/@type enumeration",
-        "type": "code_system",
-        "uri_or_code": "vocabulary/@type",
-        "values": ["category", "dimension", "appraisal", "action-tendency"],
-        "value_source": "FETCHED",
-        "notes": "time-ref-anchor-point enumeration: start (default), end."
-      },
-      {
-        "id": "voc_big6",
-        "label": "Ekman big six categories",
-        "type": "category_set",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#big6",
-        "values": ["anger", "disgust", "fear", "happiness", "sadness", "surprise"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"category\" id=\"big6\" (Ekman 1972)."
-      },
-      {
-        "id": "voc_everyday_categories",
-        "label": "Everyday emotion categories (HUMAINE / Cowie et al.)",
-        "type": "category_set",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#everyday-categories",
-        "values": ["affectionate", "afraid", "amused", "angry", "bored", "confident", "content", "disappointed", "excited", "happy", "interested", "loving", "pleased", "relaxed", "sad", "satisfied", "worried"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"category\" id=\"everyday-categories\"; 17 items derived from the HUMAINE everyday-emotion work (Cowie et al.)."
-      },
-      {
-        "id": "voc_occ_categories",
-        "label": "OCC categories",
-        "type": "category_set",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-        "values": ["admiration", "anger", "disappointment", "distress", "fear", "fears-confirmed", "gloating", "gratification", "gratitude", "happy-for", "hate", "hope", "joy", "love", "pity", "pride", "relief", "remorse", "reproach", "resentment", "satisfaction", "shame"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"category\" id=\"occ-categories\"; 22 items from Ortony, Clore & Collins (1988). Contains EDM labels gratitude, hope, pride, relief, shame, disappointment, joy verbatim."
-      },
-      {
-        "id": "voc_fsre_categories",
-        "label": "FSRE categories (Fontaine, Scherer, Roesch, Ellsworth 2007)",
-        "type": "category_set",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#fsre-categories",
-        "values": ["anger", "anxiety", "being-hurt", "compassion", "contempt", "contentment", "despair", "disappointment", "disgust", "fear", "guilt", "happiness", "hate", "interest", "irritation", "jealousy", "joy", "love", "pleasure", "pride", "sadness", "shame", "stress", "surprise"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"category\" id=\"fsre-categories\"; 24 items. The XML file uses item name \"being-hurt\" (hyphen); the HTML Note's prose table prints \"being hurt\". The XML form is the machine-normative one."
-      },
-      {
-        "id": "voc_frijda_categories",
-        "label": "Frijda categories",
-        "type": "category_set",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#frijda-categories",
-        "values": ["anger", "arrogance", "desire", "disgust", "enjoyment", "fear", "humility", "indifference", "interest", "resignation", "shock", "surprise"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"category\" id=\"frijda-categories\"; 12 items (Frijda 1986)."
-      },
-      {
-        "id": "voc_pad_dimensions",
-        "label": "PAD dimensions (Mehrabian)",
-        "type": "dimension",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#pad-dimensions",
-        "values": ["pleasure", "arousal", "dominance"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"dimension\" id=\"pad-dimensions\"; values in [0,1] per EmotionML (0.5 = neutral)."
-      },
-      {
-        "id": "voc_fsre_dimensions",
-        "label": "FSRE dimensions",
-        "type": "dimension",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#fsre-dimensions",
-        "values": ["valence", "potency", "arousal", "unpredictability"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"dimension\" id=\"fsre-dimensions\" (Fontaine et al. 2007 four-dimensional model)."
-      },
-      {
-        "id": "voc_intensity_dimension",
-        "label": "Intensity dimension",
-        "type": "dimension",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#intensity-dimension",
-        "values": ["intensity"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"dimension\" id=\"intensity-dimension\"; single unipolar dimension."
-      },
-      {
-        "id": "voc_occ_appraisals",
-        "label": "OCC appraisals",
-        "type": "appraisal",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#occ-appraisals",
-        "values": ["desirability", "praiseworthiness", "appealingness", "desirability-for-other", "deservingness", "liking", "likelihood", "effort", "realization", "strength-of-identification", "expectation-of-deviation", "familiarity"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"appraisal\" id=\"occ-appraisals\". DISCREPANCY: the HTML Note table lists 12 items including \"realization\"; the automated read of the XML file returned 11 items without \"realization\". Treat \"realization\" as present (HTML Note is authoritative prose) but verify against the raw XML before machine use."
-      },
-      {
-        "id": "voc_ema_appraisals",
-        "label": "EMA appraisals (Gratch & Marsella)",
-        "type": "appraisal",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#ema-appraisals",
-        "values": ["relevance", "desirability", "agency", "blame", "likelihood", "unexpectedness", "urgency", "ego-involvement", "controllability", "changeability", "power", "adaptability"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"appraisal\" id=\"ema-appraisals\"; 12 items."
-      },
-      {
-        "id": "voc_scherer_appraisals",
-        "label": "Scherer appraisals (Component Process Model)",
-        "type": "appraisal",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#scherer-appraisals",
-        "values": ["suddenness", "familiarity", "predictability", "intrinsic-pleasantness", "relevance-person", "relevance-relationship", "relevance-social-order", "outcome-probability", "consonant-with-expectation", "goal-conduciveness", "urgency", "agent-self", "agent-other", "agent-nature", "cause-intentional", "control", "power", "adjustment-possible", "norm-compatibility", "self-compatibility"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"appraisal\" id=\"scherer-appraisals\"; 20 items grouped in the Note under Novelty, Goal significance, Coping potential, Compatibility with standards (group headings are not items)."
-      },
-      {
-        "id": "voc_frijda_action_tendencies",
-        "label": "Frijda action tendencies",
-        "type": "action_tendency",
-        "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#frijda-action-tendencies",
-        "values": ["approach", "avoidance", "being-with", "attending", "rejecting", "nonattending", "agonistic", "interrupting", "dominating", "submitting"],
-        "value_source": "FETCHED",
-        "notes": "vocabulary type=\"action-tendency\" id=\"frijda-action-tendencies\"; 10 items (Frijda 1986)."
-      }
-    ],
-    "verification_notes": "Element model and enumerations verified from the Recommendation text (first 100k chars; final ~14k chars = schema appendices not read). All 12 vocabularies verified from the W3C Working Group Note 'Vocabularies for EmotionML' (1 April 2014, editors Burkhardt, Schröder, Pelachaud; dated URL https://www.w3.org/TR/2014/NOTE-emotion-voc-20140401/) and from the machine-readable XML at https://www.w3.org/TR/emotion-voc/xml (root <emotionml xmlns=\"http://www.w3.org/2009/10/emotionml\" version=\"1.0\">). One discrepancy flagged (occ-appraisals 'realization'). Licence: W3C Document Licence; no restriction on referencing vocabulary URIs."
+ {
+  "id": "w3c_emotionml_1_0",
+  "name": "W3C Emotion Markup Language (EmotionML) 1.0",
+  "family": "machine",
+  "citation": {
+   "authors": "Burkhardt, Felix; Schröder, Marc (eds.); W3C Multimodal Interaction Working Group",
+   "year": 2014,
+   "title": "Emotion Markup Language (EmotionML) 1.0",
+   "venue": "W3C Recommendation, 22 May 2014",
+   "url": "https://www.w3.org/TR/emotionml/",
+   "doi": null,
+   "accessed": "2026-10-17"
   },
-  {
-    "id": "humaine_earl",
-    "name": "HUMAINE Emotion Annotation and Representation Language (EARL)",
-    "family": "machine",
-    "citation": {
-      "authors": "Schröder, Marc; Pirker, Hannes; Lamolle, Myriam (HUMAINE Network of Excellence)",
-      "year": 2006,
-      "title": "First Suggestions for an Emotion Annotation and Representation Language / HUMAINE EARL Proposal, Version 0.4.0, 30 June 2006",
-      "venue": "Proc. LREC 2006 Workshop on Corpora for Research on Emotion and Affect, Genoa; HUMAINE portal emotion-research.net",
-      "url": "http://emotion-research.net/projects/humaine/earl/proposal",
-      "doi": null,
-      "accessed": "2026-10-17"
-    },
-    "source_status": "FETCHED_SECONDARY",
-    "confidence": 0.9,
-    "fetched_urls": [
-      "https://web.archive.org/web/20080410193636id_/http://emotion-research.net/projects/humaine/earl/proposal",
-      "https://www.w3.org/2005/Incubator/emotion/XGR-requirements/",
-      "https://lists.w3.org/Archives/Public/public-xg-emotion/2006Aug/0002.html"
+  "source_status": "FETCHED",
+  "confidence": 0.97,
+  "fetched_urls": [
+   "https://www.w3.org/TR/emotionml/",
+   "https://www.w3.org/TR/emotion-voc/",
+   "https://www.w3.org/TR/emotion-voc/xml"
+  ],
+  "summary": "EmotionML is an XML plug-in language for representing and annotating emotion in technological contexts; an <emotion> element carries one or more descriptors of four kinds (category, dimension, appraisal, action-tendency), each drawn from an explicitly named vocabulary. Identifiers are XML element/attribute names in the namespace http://www.w3.org/2009/10/emotionml; vocabulary items are referenced by a vocabulary URI plus fragment and a per-item name attribute.",
+  "identifier_scheme": "Element names in namespace http://www.w3.org/2009/10/emotionml; descriptor sets are referenced by URI (e.g. category-set=\"http://www.w3.org/TR/emotion-voc/xml#big6\") and items by name (e.g. <category name=\"anger\" value=\"0.7\"/>).",
+  "constructs": [
+   {
+    "id": "emotionml_elements",
+    "label": "EmotionML element model",
+    "type": "code_system",
+    "uri_or_code": "http://www.w3.org/2009/10/emotionml",
+    "values": [
+     "emotionml|root; attrs: version (required, \"1.0\"), category-set, dimension-set, appraisal-set, action-tendency-set",
+     "emotion|attrs: id, version, category-set, dimension-set, appraisal-set, action-tendency-set, start, end, duration, time-ref-uri, time-ref-anchor-point, offset-to-start, expressed-through",
+     "category|attrs: name (required), value, confidence",
+     "dimension|attrs: name (required), value (or child <trace>), confidence",
+     "appraisal|attrs: name (required), value, confidence",
+     "action-tendency|attrs: name (required), value, confidence",
+     "intensity|NOT an element: intensity is a dimension name, <dimension name=\"intensity\"> from vocabulary intensity-dimension",
+     "reference|attrs: uri (required), role, media-type",
+     "info|attrs: id; arbitrary metadata container",
+     "trace|attrs: freq (required), samples (required); child of category/dimension/appraisal/action-tendency",
+     "vocabulary|attrs: type (required), id (required)",
+     "item|attrs: name (required); child of vocabulary"
     ],
-    "summary": "EARL (2006) is the XML emotion-annotation language developed in the EU HUMAINE Network of Excellence and is the direct predecessor of W3C EmotionML (the work moved to the W3C Emotion Incubator Group in 2006 and the Recommendation track in 2009). It represents a state as a simple <emotion> or a <complex-emotion>, with pluggable category/dimension/appraisal sets defined as XML Schema plug-ins; identifiers are XML attribute names and category strings.",
-    "identifier_scheme": "XML attributes on <emotion>: category=\"pleasure\", dimension attributes arousal/valence/power as floats, appraisal attributes as snake_case floats (e.g. intrinsic_pleasantness=\"0.7\"), plus intensity, probability, modality, regulation attributes (suppress, amplify, attenuate, simulate), start/end, xlink:href.",
-    "constructs": [
-      {
-        "id": "earl_elements",
-        "label": "EARL element/attribute model (v0.4.0)",
-        "type": "code_system",
-        "uri_or_code": null,
-        "values": [
-          "emotion|attrs: category, <dimension names>, <appraisal names>, intensity, probability, modality, suppress, amplify, attenuate, simulate, start, end, xlink:href",
-          "complex-emotion|container for co-occurring/masked emotions sharing one scope; attrs: start, end, xlink:href",
-          "samples|time-varying trace; attrs: value (dimension/appraisal/regulation name), rate; content = space-separated floats",
-          "regulation values|suppress, amplify, attenuate, simulate — each a float 0 (none) to 1 (strongest)",
-          "probability|labeller confidence 0..1 (became EmotionML 'confidence')",
-          "modality|e.g. face, voice (became EmotionML 'expressed-through')"
-        ],
-        "value_source": "FETCHED",
-        "notes": "EARL has NO action-tendency descriptor type; action tendencies were added only in EmotionML. EARL dialects = base schema + three plug-ins (categories, dimensions, appraisals)."
-      },
-      {
-        "id": "earl_default_categories_48",
-        "label": "HUMAINE 48 everyday emotion categories (Douglas-Cowie, Cox et al., deliverable D5f) — EARL default category set",
-        "type": "category_set",
-        "uri_or_code": null,
-        "values": [
-          "Negative & forceful|Anger, Annoyance, Contempt, Disgust, Irritation",
-          "Negative & not in control|Anxiety, Embarrassment, Fear, Helplessness, Powerlessness, Worry",
-          "Negative thoughts|Doubt, Envy, Frustration, Guilt, Shame",
-          "Negative & passive|Boredom, Despair, Disappointment, Hurt, Sadness",
-          "Agitation|Shock, Stress, Tension",
-          "Positive & lively|Amusement, Delight, Elation, Excitement, Happiness, Joy, Pleasure",
-          "Caring|Affection, Empathy, Friendliness, Love",
-          "Positive thoughts|Courage, Hope, Pride, Satisfaction, Trust",
-          "Quiet positive|Calm, Content, Relaxed, Relieved, Serene",
-          "Reactive|Interest, Politeness, Surprise"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Table 1 of the EARL proposal, reproduced verbatim (capitalised labels as printed, grouped under 10 headings; 48 items). Contains EDM labels Anxiety, Fear, Frustration, Shame, Disappointment, Sadness, Joy, Hope, Pride, Relieved(~relief), Calm/Serene(~peace), Affection(~tenderness). Not present: wonder, reverence, gratitude, longing, awe."
-      },
-      {
-        "id": "earl_default_dimensions",
-        "label": "EARL default dimensions",
-        "type": "dimension",
-        "uri_or_code": null,
-        "values": ["arousal", "valence", "power"],
-        "value_source": "FETCHED",
-        "notes": "Section 6.2 of the proposal: valence (positive/negative), arousal (active/passive), power (control / dominant vs submissive)."
-      },
-      {
-        "id": "earl_default_appraisals",
-        "label": "EARL default appraisals (flattened from Scherer)",
-        "type": "appraisal",
-        "uri_or_code": null,
-        "values": ["suddenness", "familiarity", "predictability", "intrinsic_pleasantness", "relevance_self_concerns", "relevance_relationship_concerns", "relevance_social_order_concerns", "goal_outcome_probability", "consonant_with_expectation", "goal_conduciveness", "goal_urgency", "cause_agent_self", "cause_agent_other", "cause_motive_intentional", "event_controllability", "agent_power", "goal_adjustment_possible", "standards_compatibility_external", "standards_compatibility_internal"],
-        "value_source": "FETCHED",
-        "notes": "Section 6.3; 19 snake_case attribute names. These were renamed to hyphenated forms in EmotionML's scherer-appraisals (e.g. intrinsic_pleasantness -> intrinsic-pleasantness, relevance_self_concerns -> relevance-person)."
-      }
+    "value_source": "FETCHED",
+    "notes": "Attribute 'value' is a float in [0,1] for category/dimension/appraisal/action-tendency; 'confidence' is a float in [0,1]. Time attributes start/end are absolute ms timestamps, duration ms, offset-to-start ms relative to time-ref-uri/time-ref-anchor-point. expressed-through is a space-separated list of modality tokens (e.g. gaze, face, voice, text)."
+   },
+   {
+    "id": "emotionml_reference_role",
+    "label": "reference/@role enumeration",
+    "type": "code_system",
+    "uri_or_code": "reference/@role",
+    "values": [
+     "expressedBy",
+     "experiencedBy",
+     "triggeredBy",
+     "targetedAt"
     ],
-    "verification_notes": "The live HUMAINE portal (emotion-research.net) returns HTTP 403 to automated fetches; the proposal page was retrieved from the Internet Archive snapshot of 2008-04-10 (hence FETCHED_SECONDARY). The 48-category table, dimensions and appraisal list were read directly from that snapshot. The LREC 2006 workshop paper PDF (dfki.de) was not retrievable (403/404), so the author list for the paper is from knowledge (confidence 0.9); the proposal page itself does not print authors. W3C XGR-requirements page confirms the 48-category list as the proposed default. Licence: HUMAINE deliverables are publicly posted research documents; no formal licence stated."
+    "value_source": "FETCHED",
+    "notes": "Default value is expressedBy. expressedBy = the observable behaviour expressing the emotion; experiencedBy = the subject; triggeredBy = the cause/eliciting event; targetedAt = the object of the emotion."
+   },
+   {
+    "id": "emotionml_vocabulary_type",
+    "label": "vocabulary/@type enumeration",
+    "type": "code_system",
+    "uri_or_code": "vocabulary/@type",
+    "values": [
+     "category",
+     "dimension",
+     "appraisal",
+     "action-tendency"
+    ],
+    "value_source": "FETCHED",
+    "notes": "time-ref-anchor-point enumeration: start (default), end."
+   },
+   {
+    "id": "voc_big6",
+    "label": "Ekman big six categories",
+    "type": "category_set",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#big6",
+    "values": [
+     "anger",
+     "disgust",
+     "fear",
+     "happiness",
+     "sadness",
+     "surprise"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"category\" id=\"big6\" (Ekman 1972)."
+   },
+   {
+    "id": "voc_everyday_categories",
+    "label": "Everyday emotion categories (HUMAINE / Cowie et al.)",
+    "type": "category_set",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#everyday-categories",
+    "values": [
+     "affectionate",
+     "afraid",
+     "amused",
+     "angry",
+     "bored",
+     "confident",
+     "content",
+     "disappointed",
+     "excited",
+     "happy",
+     "interested",
+     "loving",
+     "pleased",
+     "relaxed",
+     "sad",
+     "satisfied",
+     "worried"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"category\" id=\"everyday-categories\"; 17 items derived from the HUMAINE everyday-emotion work (Cowie et al.)."
+   },
+   {
+    "id": "voc_occ_categories",
+    "label": "OCC categories",
+    "type": "category_set",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+    "values": [
+     "admiration",
+     "anger",
+     "disappointment",
+     "distress",
+     "fear",
+     "fears-confirmed",
+     "gloating",
+     "gratification",
+     "gratitude",
+     "happy-for",
+     "hate",
+     "hope",
+     "joy",
+     "love",
+     "pity",
+     "pride",
+     "relief",
+     "remorse",
+     "reproach",
+     "resentment",
+     "satisfaction",
+     "shame"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"category\" id=\"occ-categories\"; 22 items from Ortony, Clore & Collins (1988). Contains EDM labels gratitude, hope, pride, relief, shame, disappointment, joy verbatim."
+   },
+   {
+    "id": "voc_fsre_categories",
+    "label": "FSRE categories (Fontaine, Scherer, Roesch, Ellsworth 2007)",
+    "type": "category_set",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#fsre-categories",
+    "values": [
+     "anger",
+     "anxiety",
+     "being-hurt",
+     "compassion",
+     "contempt",
+     "contentment",
+     "despair",
+     "disappointment",
+     "disgust",
+     "fear",
+     "guilt",
+     "happiness",
+     "hate",
+     "interest",
+     "irritation",
+     "jealousy",
+     "joy",
+     "love",
+     "pleasure",
+     "pride",
+     "sadness",
+     "shame",
+     "stress",
+     "surprise"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"category\" id=\"fsre-categories\"; 24 items. The XML file uses item name \"being-hurt\" (hyphen); the HTML Note's prose table prints \"being hurt\". The XML form is the machine-normative one."
+   },
+   {
+    "id": "voc_frijda_categories",
+    "label": "Frijda categories",
+    "type": "category_set",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#frijda-categories",
+    "values": [
+     "anger",
+     "arrogance",
+     "desire",
+     "disgust",
+     "enjoyment",
+     "fear",
+     "humility",
+     "indifference",
+     "interest",
+     "resignation",
+     "shock",
+     "surprise"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"category\" id=\"frijda-categories\"; 12 items (Frijda 1986)."
+   },
+   {
+    "id": "voc_pad_dimensions",
+    "label": "PAD dimensions (Mehrabian)",
+    "type": "dimension",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#pad-dimensions",
+    "values": [
+     "pleasure",
+     "arousal",
+     "dominance"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"dimension\" id=\"pad-dimensions\"; values in [0,1] per EmotionML (0.5 = neutral)."
+   },
+   {
+    "id": "voc_fsre_dimensions",
+    "label": "FSRE dimensions",
+    "type": "dimension",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#fsre-dimensions",
+    "values": [
+     "valence",
+     "potency",
+     "arousal",
+     "unpredictability"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"dimension\" id=\"fsre-dimensions\" (Fontaine et al. 2007 four-dimensional model)."
+   },
+   {
+    "id": "voc_intensity_dimension",
+    "label": "Intensity dimension",
+    "type": "dimension",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#intensity-dimension",
+    "values": [
+     "intensity"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"dimension\" id=\"intensity-dimension\"; single unipolar dimension."
+   },
+   {
+    "id": "voc_occ_appraisals",
+    "label": "OCC appraisals",
+    "type": "appraisal",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#occ-appraisals",
+    "values": [
+     "desirability",
+     "praiseworthiness",
+     "appealingness",
+     "desirability-for-other",
+     "deservingness",
+     "liking",
+     "likelihood",
+     "effort",
+     "realization",
+     "strength-of-identification",
+     "expectation-of-deviation",
+     "familiarity"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"appraisal\" id=\"occ-appraisals\". DISCREPANCY: the HTML Note table lists 12 items including \"realization\"; the automated read of the XML file returned 11 items without \"realization\". Treat \"realization\" as present (HTML Note is authoritative prose) but verify against the raw XML before machine use."
+   },
+   {
+    "id": "voc_ema_appraisals",
+    "label": "EMA appraisals (Gratch & Marsella)",
+    "type": "appraisal",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#ema-appraisals",
+    "values": [
+     "relevance",
+     "desirability",
+     "agency",
+     "blame",
+     "likelihood",
+     "unexpectedness",
+     "urgency",
+     "ego-involvement",
+     "controllability",
+     "changeability",
+     "power",
+     "adaptability"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"appraisal\" id=\"ema-appraisals\"; 12 items."
+   },
+   {
+    "id": "voc_scherer_appraisals",
+    "label": "Scherer appraisals (Component Process Model)",
+    "type": "appraisal",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#scherer-appraisals",
+    "values": [
+     "suddenness",
+     "familiarity",
+     "predictability",
+     "intrinsic-pleasantness",
+     "relevance-person",
+     "relevance-relationship",
+     "relevance-social-order",
+     "outcome-probability",
+     "consonant-with-expectation",
+     "goal-conduciveness",
+     "urgency",
+     "agent-self",
+     "agent-other",
+     "agent-nature",
+     "cause-intentional",
+     "control",
+     "power",
+     "adjustment-possible",
+     "norm-compatibility",
+     "self-compatibility"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"appraisal\" id=\"scherer-appraisals\"; 20 items grouped in the Note under Novelty, Goal significance, Coping potential, Compatibility with standards (group headings are not items)."
+   },
+   {
+    "id": "voc_frijda_action_tendencies",
+    "label": "Frijda action tendencies",
+    "type": "action_tendency",
+    "uri_or_code": "http://www.w3.org/TR/emotion-voc/xml#frijda-action-tendencies",
+    "values": [
+     "approach",
+     "avoidance",
+     "being-with",
+     "attending",
+     "rejecting",
+     "nonattending",
+     "agonistic",
+     "interrupting",
+     "dominating",
+     "submitting"
+    ],
+    "value_source": "FETCHED",
+    "notes": "vocabulary type=\"action-tendency\" id=\"frijda-action-tendencies\"; 10 items (Frijda 1986)."
+   }
+  ],
+  "verification_notes": "Element model and enumerations verified from the Recommendation text (first 100k chars; final ~14k chars = schema appendices not read). All 12 vocabularies verified from the W3C Working Group Note 'Vocabularies for EmotionML' (1 April 2014, editors Burkhardt, Schröder, Pelachaud; dated URL https://www.w3.org/TR/2014/NOTE-emotion-voc-20140401/) and from the machine-readable XML at https://www.w3.org/TR/emotion-voc/xml (root <emotionml xmlns=\"http://www.w3.org/2009/10/emotionml\" version=\"1.0\">). One discrepancy flagged (occ-appraisals 'realization'). Licence: W3C Document Licence; no restriction on referencing vocabulary URIs."
+ },
+ {
+  "id": "humaine_earl",
+  "name": "HUMAINE Emotion Annotation and Representation Language (EARL)",
+  "family": "machine",
+  "citation": {
+   "authors": "Schröder, Marc; Pirker, Hannes; Lamolle, Myriam (HUMAINE Network of Excellence)",
+   "year": 2006,
+   "title": "First Suggestions for an Emotion Annotation and Representation Language / HUMAINE EARL Proposal, Version 0.4.0, 30 June 2006",
+   "venue": "Proc. LREC 2006 Workshop on Corpora for Research on Emotion and Affect, Genoa; HUMAINE portal emotion-research.net",
+   "url": "http://emotion-research.net/projects/humaine/earl/proposal",
+   "doi": null,
+   "accessed": "2026-10-17"
   },
-  {
-    "id": "wordnet_affect",
-    "name": "WordNet-Affect",
-    "family": "machine",
-    "citation": {
-      "authors": "Strapparava, Carlo; Valitutti, Alessandro",
-      "year": 2004,
-      "title": "WordNet-Affect: an Affective Extension of WordNet",
-      "venue": "Proceedings of LREC 2004, Lisbon, pp. 1083-1086",
-      "url": "http://www.lrec-conf.org/proceedings/lrec2004/pdf/369.pdf",
-      "doi": null,
-      "accessed": "2026-10-17"
-    },
-    "source_status": "FETCHED",
-    "confidence": 0.9,
-    "fetched_urls": [
-      "https://wndomains.fbk.eu/wnaffect.html",
-      "http://www.lrec-conf.org/proceedings/lrec2004/pdf/369.pdf"
+  "source_status": "FETCHED_SECONDARY",
+  "confidence": 0.9,
+  "fetched_urls": [
+   "https://web.archive.org/web/20080410193636id_/http://emotion-research.net/projects/humaine/earl/proposal",
+   "https://www.w3.org/2005/Incubator/emotion/XGR-requirements/",
+   "https://lists.w3.org/Archives/Public/public-xg-emotion/2006Aug/0002.html"
+  ],
+  "summary": "EARL (2006) is the XML emotion-annotation language developed in the EU HUMAINE Network of Excellence and is the direct predecessor of W3C EmotionML (the work moved to the W3C Emotion Incubator Group in 2006 and the Recommendation track in 2009). It represents a state as a simple <emotion> or a <complex-emotion>, with pluggable category/dimension/appraisal sets defined as XML Schema plug-ins; identifiers are XML attribute names and category strings.",
+  "identifier_scheme": "XML attributes on <emotion>: category=\"pleasure\", dimension attributes arousal/valence/power as floats, appraisal attributes as snake_case floats (e.g. intrinsic_pleasantness=\"0.7\"), plus intensity, probability, modality, regulation attributes (suppress, amplify, attenuate, simulate), start/end, xlink:href.",
+  "constructs": [
+   {
+    "id": "earl_elements",
+    "label": "EARL element/attribute model (v0.4.0)",
+    "type": "code_system",
+    "uri_or_code": null,
+    "values": [
+     "emotion|attrs: category, <dimension names>, <appraisal names>, intensity, probability, modality, suppress, amplify, attenuate, simulate, start, end, xlink:href",
+     "complex-emotion|container for co-occurring/masked emotions sharing one scope; attrs: start, end, xlink:href",
+     "samples|time-varying trace; attrs: value (dimension/appraisal/regulation name), rate; content = space-separated floats",
+     "regulation values|suppress, amplify, attenuate, simulate — each a float 0 (none) to 1 (strongest)",
+     "probability|labeller confidence 0..1 (became EmotionML 'confidence')",
+     "modality|e.g. face, voice (became EmotionML 'expressed-through')"
     ],
-    "summary": "WordNet-Affect extends WordNet Domains by tagging a subset of WordNet synsets with affective labels (a-labels); synsets with a-label EMOTION form a hierarchy of emotional categories modelled on WordNet hypernymy and partitioned by valence. Units are WordNet synsets, written as lemma#sense (e.g. anger#1), plus the a-label and category hierarchy node.",
-    "identifier_scheme": "WordNet synset references lemma#sense-number (e.g. noun anger#1, verb fear#1), WordNet 1.6 offsets in the distributed a-hierarchy/a-synsets XML files; a-labels are uppercase tags (EMOTION, MOOD, ...).",
-    "constructs": [
-      {
-        "id": "wna_a_labels",
-        "label": "Affective labels (a-labels), Table 4 of the LREC 2004 paper",
-        "type": "hierarchy",
-        "uri_or_code": null,
-        "values": [
-          "EMOTION|noun anger#1, verb fear#1",
-          "MOOD|noun animosisy#1 [sic], adjective amiable#1",
-          "TRAIT|noun aggressiveness#1, adjective competitive#1",
-          "COGNITIVE STATE|noun confusion#2, adjective dazed#2",
-          "PHYSICAL STATE|noun illness#1, adjective all in#1",
-          "EDONIC SIGNAL|noun hurt#3, noun suffering#4 (spelled 'hedonic signal' on the FBK web page)",
-          "EMOTION-ELICITING SITUATION|noun awkwardness#3, adjective out of danger#1",
-          "EMOTIONAL RESPONSE|noun cold sweat#1, verb tremble#2",
-          "BEHAVIOUR|noun offense#1, adjective inhibited#1",
-          "ATTITUDE|noun intolerance#1, noun defensive#1",
-          "SENSATION|noun coldness#1, verb feel#3"
-        ],
-        "value_source": "FETCHED",
-        "notes": "11 a-labels, verbatim from the paper (uppercase) and the FBK page (lowercase). The paper prints 'EDONIC SIGNAL' and 'animosisy#1' as given."
-      },
-      {
-        "id": "wna_valence_partition",
-        "label": "Valence partition of the emotion hierarchy",
-        "type": "hierarchy",
-        "uri_or_code": null,
-        "values": [
-          "positive|positive emotions, pleasant signals (e.g. joy#1, enthusiasm#1)",
-          "negative|negative emotions, painful signals (e.g. anger#1, sadness#1)",
-          "ambiguous|valence depends on context (e.g. surprise#1)",
-          "neutral|affective mental states without valence"
-        ],
-        "value_source": "FETCHED",
-        "notes": "From wndomains.fbk.eu/wnaffect.html; adjectives additionally marked causative vs stative (Valitutti, Strapparava & Stock 2004, PsychNology 2(1))."
-      },
-      {
-        "id": "wna_six_emotion_classes",
-        "label": "Six Ekman-based top-level emotion lists (WordNet-Affect emotion lists as used in SemEval-2007 Affective Text)",
-        "type": "category_set",
-        "uri_or_code": null,
-        "values": ["anger", "disgust", "fear", "joy", "sadness", "surprise"],
-        "value_source": "KNOWLEDGE",
-        "notes": "The six-class split is NOT in the LREC 2004 paper nor on the FBK page; it comes from the WordNet-Affect emotion lists distributed with SemEval-2007 Task 14 'Affective Text' (Strapparava & Mihalcea 2007), files anger.txt, disgust.txt, fear.txt, joy.txt, sadness.txt, surprise.txt (WordNet 1.6 synset offsets). Confidence 0.85."
-      }
+    "value_source": "FETCHED",
+    "notes": "EARL has NO action-tendency descriptor type; action tendencies were added only in EmotionML. EARL dialects = base schema + three plug-ins (categories, dimensions, appraisals)."
+   },
+   {
+    "id": "earl_default_categories_48",
+    "label": "HUMAINE 48 everyday emotion categories (Douglas-Cowie, Cox et al., deliverable D5f) — EARL default category set",
+    "type": "category_set",
+    "uri_or_code": null,
+    "values": [
+     "Negative & forceful|Anger, Annoyance, Contempt, Disgust, Irritation",
+     "Negative & not in control|Anxiety, Embarrassment, Fear, Helplessness, Powerlessness, Worry",
+     "Negative thoughts|Doubt, Envy, Frustration, Guilt, Shame",
+     "Negative & passive|Boredom, Despair, Disappointment, Hurt, Sadness",
+     "Agitation|Shock, Stress, Tension",
+     "Positive & lively|Amusement, Delight, Elation, Excitement, Happiness, Joy, Pleasure",
+     "Caring|Affection, Empathy, Friendliness, Love",
+     "Positive thoughts|Courage, Hope, Pride, Satisfaction, Trust",
+     "Quiet positive|Calm, Content, Relaxed, Relieved, Serene",
+     "Reactive|Interest, Politeness, Surprise"
     ],
-    "verification_notes": "A-labels, examples and the paper's bibliographic data verified from the LREC 2004 PDF; valence partition and the three cited papers verified from the FBK page. Version numbers (WordNet-Affect 1.0 / 1.1) and licence are not stated on the fetched page; the resource is distributed by FBK on request/registration for research use (knowledge, confidence 0.7)."
+    "value_source": "FETCHED",
+    "notes": "Table 1 of the EARL proposal, reproduced verbatim (capitalised labels as printed, grouped under 10 headings; 48 items). Contains EDM labels Anxiety, Fear, Frustration, Shame, Disappointment, Sadness, Joy, Hope, Pride, Relieved(~relief), Calm/Serene(~peace), Affection(~tenderness). Not present: wonder, reverence, gratitude, longing, awe."
+   },
+   {
+    "id": "earl_default_dimensions",
+    "label": "EARL default dimensions",
+    "type": "dimension",
+    "uri_or_code": null,
+    "values": [
+     "arousal",
+     "valence",
+     "power"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Section 6.2 of the proposal: valence (positive/negative), arousal (active/passive), power (control / dominant vs submissive)."
+   },
+   {
+    "id": "earl_default_appraisals",
+    "label": "EARL default appraisals (flattened from Scherer)",
+    "type": "appraisal",
+    "uri_or_code": null,
+    "values": [
+     "suddenness",
+     "familiarity",
+     "predictability",
+     "intrinsic_pleasantness",
+     "relevance_self_concerns",
+     "relevance_relationship_concerns",
+     "relevance_social_order_concerns",
+     "goal_outcome_probability",
+     "consonant_with_expectation",
+     "goal_conduciveness",
+     "goal_urgency",
+     "cause_agent_self",
+     "cause_agent_other",
+     "cause_motive_intentional",
+     "event_controllability",
+     "agent_power",
+     "goal_adjustment_possible",
+     "standards_compatibility_external",
+     "standards_compatibility_internal"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Section 6.3; 19 snake_case attribute names. These were renamed to hyphenated forms in EmotionML's scherer-appraisals (e.g. intrinsic_pleasantness -> intrinsic-pleasantness, relevance_self_concerns -> relevance-person)."
+   }
+  ],
+  "verification_notes": "The live HUMAINE portal (emotion-research.net) returns HTTP 403 to automated fetches; the proposal page was retrieved from the Internet Archive snapshot of 2008-04-10 (hence FETCHED_SECONDARY). The 48-category table, dimensions and appraisal list were read directly from that snapshot. The LREC 2006 workshop paper PDF (dfki.de) was not retrievable (403/404), so the author list for the paper is from knowledge (confidence 0.9); the proposal page itself does not print authors. W3C XGR-requirements page confirms the 48-category list as the proposed default. Licence: HUMAINE deliverables are publicly posted research documents; no formal licence stated."
+ },
+ {
+  "id": "wordnet_affect",
+  "name": "WordNet-Affect",
+  "family": "machine",
+  "citation": {
+   "authors": "Strapparava, Carlo; Valitutti, Alessandro",
+   "year": 2004,
+   "title": "WordNet-Affect: an Affective Extension of WordNet",
+   "venue": "Proceedings of LREC 2004, Lisbon, pp. 1083-1086",
+   "url": "http://www.lrec-conf.org/proceedings/lrec2004/pdf/369.pdf",
+   "doi": null,
+   "accessed": "2026-10-17"
   },
-  {
-    "id": "nrc_lexicons",
-    "name": "NRC Affect Lexicons (EmoLex, VAD, Emotion Intensity, Hashtag Emotion) and Best-Worst Scaling",
-    "family": "machine",
-    "citation": {
-      "authors": "Mohammad, Saif M.; Turney, Peter D.; Kiritchenko, Svetlana (National Research Council Canada)",
-      "year": 2013,
-      "title": "Crowdsourcing a Word-Emotion Association Lexicon (and successor NRC lexicons)",
-      "venue": "Computational Intelligence 29(3):436-465; NRC lexicon pages at saifmohammad.com",
-      "url": "https://saifmohammad.com/WebPages/lexicons.html",
-      "doi": "10.1111/j.1467-8640.2012.00460.x",
-      "accessed": "2026-10-17"
+  "source_status": "FETCHED",
+  "confidence": 0.9,
+  "fetched_urls": [
+   "https://wndomains.fbk.eu/wnaffect.html",
+   "http://www.lrec-conf.org/proceedings/lrec2004/pdf/369.pdf",
+   "https://aclanthology.org/S07-1013.pdf"
+  ],
+  "summary": "WordNet-Affect extends WordNet Domains by tagging a subset of WordNet synsets with affective labels (a-labels); synsets with a-label EMOTION form a hierarchy of emotional categories modelled on WordNet hypernymy and partitioned by valence. Units are WordNet synsets, written as lemma#sense (e.g. anger#1), plus the a-label and category hierarchy node.",
+  "identifier_scheme": "WordNet synset references lemma#sense-number (e.g. noun anger#1, verb fear#1), WordNet 1.6 offsets in the distributed a-hierarchy/a-synsets XML files; a-labels are uppercase tags (EMOTION, MOOD, ...).",
+  "constructs": [
+   {
+    "id": "wna_a_labels",
+    "label": "Affective labels (a-labels), Table 4 of the LREC 2004 paper",
+    "type": "hierarchy",
+    "uri_or_code": null,
+    "values": [
+     "EMOTION|noun anger#1, verb fear#1",
+     "MOOD|noun animosisy#1 [sic], adjective amiable#1",
+     "TRAIT|noun aggressiveness#1, adjective competitive#1",
+     "COGNITIVE STATE|noun confusion#2, adjective dazed#2",
+     "PHYSICAL STATE|noun illness#1, adjective all in#1",
+     "EDONIC SIGNAL|noun hurt#3, noun suffering#4 (spelled 'hedonic signal' on the FBK web page)",
+     "EMOTION-ELICITING SITUATION|noun awkwardness#3, adjective out of danger#1",
+     "EMOTIONAL RESPONSE|noun cold sweat#1, verb tremble#2",
+     "BEHAVIOUR|noun offense#1, adjective inhibited#1",
+     "ATTITUDE|noun intolerance#1, noun defensive#1",
+     "SENSATION|noun coldness#1, verb feel#3"
+    ],
+    "value_source": "FETCHED",
+    "notes": "11 a-labels, verbatim from the paper (uppercase) and the FBK page (lowercase). The paper prints 'EDONIC SIGNAL' and 'animosisy#1' as given."
+   },
+   {
+    "id": "wna_valence_partition",
+    "label": "Valence partition of the emotion hierarchy",
+    "type": "hierarchy",
+    "uri_or_code": null,
+    "values": [
+     "positive|positive emotions, pleasant signals (e.g. joy#1, enthusiasm#1)",
+     "negative|negative emotions, painful signals (e.g. anger#1, sadness#1)",
+     "ambiguous|valence depends on context (e.g. surprise#1)",
+     "neutral|affective mental states without valence"
+    ],
+    "value_source": "FETCHED",
+    "notes": "From wndomains.fbk.eu/wnaffect.html; adjectives additionally marked causative vs stative (Valitutti, Strapparava & Stock 2004, PsychNology 2(1))."
+   },
+   {
+    "id": "wna_six_emotion_classes",
+    "label": "Six Ekman-based top-level emotion lists (WordNet-Affect emotion lists as used in SemEval-2007 Affective Text)",
+    "type": "category_set",
+    "uri_or_code": null,
+    "values": [
+     "anger",
+     "disgust",
+     "fear",
+     "joy",
+     "sadness",
+     "surprise"
+    ],
+    "value_source": "FETCHED",
+    "notes": "The six-class split is NOT in the LREC 2004 paper nor on the FBK page; it comes from the WordNet-Affect emotion lists distributed with SemEval-2007 Task 14 'Affective Text' (Strapparava & Mihalcea 2007), files anger.txt, disgust.txt, fear.txt, joy.txt, sadness.txt, surprise.txt (WordNet 1.6 synset offsets). Confidence 0.85.",
+    "verified_against": {
+     "status": "VERIFIED",
+     "url": "https://aclanthology.org/S07-1013.pdf",
+     "title": "Strapparava, C. & Mihalcea, R. (2007). SemEval-2007 Task 14: Affective Text. Proceedings of SemEval-2007, pp. 70-74 (ACL Anthology)",
+     "kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "\"Objective: Provided a set of predefined six emotion labels (i.e., Anger, Disgust, Fear, Joy, Sadness, Surprise), classify the titles with the appropriate emotion label and/or with a valence indication (positive/negative).\" ... \"We provided a set words extracted from WordNet Affect (Strapparava and Valitutti, 2004), relevant to the six emotions of interest.\"",
+     "corrections": "none - same six labels, same order.",
+     "note": "Text extracted locally with pdftotext (WebFetch could not decode the PDF streams). The paper confirms the six-class WordNet-Affect word lists were distributed as task resources, matching the knowledge note."
     },
-    "source_status": "FETCHED",
-    "confidence": 0.95,
-    "fetched_urls": [
-      "https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm",
-      "https://saifmohammad.com/WebPages/nrc-vad.html",
-      "https://saifmohammad.com/WebPages/AffectIntensity.htm",
-      "https://saifmohammad.com/WebPages/lexicons.html",
-      "https://saifmohammad.com/WebPages/BestWorst.html"
-    ],
-    "summary": "A family of English word-level affect lexicons from NRC Canada: binary word-emotion associations (EmoLex), real-valued valence/arousal/dominance norms (VAD), real-valued emotion intensities (EIL), and automatically derived hashtag-emotion association scores. Units are lowercase English terms (unigrams, later multiword expressions) with per-label scores; emotion labels are lowercase Plutchik names.",
-    "identifier_scheme": "Tab-separated 'term<TAB>label<TAB>score' rows; labels are lowercase strings (anger, anticipation, disgust, fear, joy, sadness, surprise, trust, negative, positive; valence, arousal, dominance). No URIs; version strings as on the home pages (e.g. EmoLex v0.92).",
-    "constructs": [
-      {
-        "id": "nrc_emolex_emotions",
-        "label": "NRC Word-Emotion Association Lexicon (EmoLex) — 8 emotions",
-        "type": "category_set",
-        "uri_or_code": "EmoLex v0.92 (released 10 July 2011; 14,182 unigrams; ~25,000 word senses)",
-        "values": ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"],
-        "value_source": "FETCHED",
-        "notes": "Plutchik's eight basic emotions; association scored 0/1 by Mechanical Turk crowdsourcing. Citations: Mohammad & Turney, Computational Intelligence 29(3), 2013; Mohammad & Turney, NAACL-HLT 2010 WS on Emotion in Text. DOI from knowledge."
-      },
-      {
-        "id": "nrc_emolex_sentiments",
-        "label": "EmoLex — 2 sentiments",
-        "type": "category_set",
-        "uri_or_code": "EmoLex v0.92",
-        "values": ["negative", "positive"],
-        "value_source": "FETCHED",
-        "notes": "Binary 0/1 association."
-      },
-      {
-        "id": "nrc_vad_dimensions",
-        "label": "NRC Valence, Arousal, and Dominance (VAD) Lexicon",
-        "type": "dimension",
-        "uri_or_code": "NRC-VAD v1.0 (July 2018; ~20,000 words; scores 0-1) / v2.1 (March 2025; ~55,000 terms = 25k unigrams + 10k MWEs...; scores -1 to 1)",
-        "values": ["valence|positive--negative / pleasure--displeasure", "arousal|excited--calm / active--passive", "dominance|powerful--weak / 'have full control'--'have no control'"],
-        "value_source": "FETCHED",
-        "notes": "Annotated with Best-Worst Scaling. Citations: Mohammad, ACL 2018 'Obtaining Reliable Human Ratings of Valence, Arousal, and Dominance for 20,000 English Words'; Mohammad 2025 arXiv:2503.23547 'NRC VAD Lexicon v2'; Mohammad, IJCNLP-AACL 2025 (MWEs)."
-      },
-      {
-        "id": "nrc_emotion_intensity",
-        "label": "NRC Emotion Intensity Lexicon (NRC-EIL; formerly NRC Affect Intensity Lexicon, NRC-AIL)",
-        "type": "dimension",
-        "uri_or_code": "v0.5 (2018, 4 emotions) -> v1 (March 2020, 8 emotions; ~10,000 entries; scores 0-1)",
-        "values": ["v0.5|anger, fear, joy, sadness", "v1|anger, anticipation, disgust, fear, joy, sadness, surprise, trust"],
-        "value_source": "FETCHED",
-        "notes": "Real-valued intensity via Best-Worst Scaling. Citation: Mohammad, 'Word Affect Intensities', LREC 2018, Miyazaki."
-      },
-      {
-        "id": "nrc_hashtag_emotion",
-        "label": "NRC Hashtag Emotion Lexicon",
-        "type": "category_set",
-        "uri_or_code": "v0.2 (2013; 16,862 unigrams; scores 0 to infinity)",
-        "values": ["anger", "anticipation", "disgust", "fear", "joy", "sadness", "surprise", "trust"],
-        "value_source": "FETCHED",
-        "notes": "Automatically created from emotion-word hashtags in tweets (PMI-style association). Citations: Mohammad & Kiritchenko, 'Using Hashtags to Capture Fine Emotion Categories from Tweets', Computational Intelligence 2015; Mohammad, '#Emotional Tweets', *SEM 2012."
-      },
-      {
-        "id": "nrc_best_worst_scaling",
-        "label": "Best-Worst Scaling (BWS / MaxDiff) annotation methodology",
-        "type": "code_system",
-        "uri_or_code": "Best-Worst-Scaling-Scripts.zip (May 2017)",
-        "values": [
-          "Kiritchenko & Mohammad 2016|Capturing Reliable Fine-Grained Sentiment Associations by Crowdsourcing and Best-Worst Scaling, NAACL-HLT 2016, San Diego",
-          "Kiritchenko & Mohammad 2017|Best-Worst Scaling More Reliable than Rating Scales: A Case Study on Sentiment Intensity Annotation, ACL 2017, Vancouver",
-          "Background|Louviere & Woodworth 1990; Cohen 2003; Louviere, Flynn & Marley 2015"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Annotators see 4-tuples and pick best and worst; counts converted to real-valued scores (proportion best minus proportion worst); split-half reliability script supplied. Used for VAD, EIL, SCL-NMA, SCL-OPP, SemEval-2015/2016 lexicons and the Tweet Emotion Intensity / Affect in Tweets datasets."
-      }
-    ],
-    "verification_notes": "All versions, label lists, counts and citations verified from the official saifmohammad.com pages. Licence (all NRC lexicons): free for non-commercial research and educational use only; no redistribution (link to home page instead); cite the papers; credit NRC in products; commercial use requires a licence from the author/NRC; Copyright National Research Council Canada. The Computational Intelligence DOI is from knowledge (confidence 0.85)."
+    "verification_level": "secondary"
+   }
+  ],
+  "verification_notes": "A-labels, examples and the paper's bibliographic data verified from the LREC 2004 PDF; valence partition and the three cited papers verified from the FBK page. Version numbers (WordNet-Affect 1.0 / 1.1) and licence are not stated on the fetched page; the resource is distributed by FBK on request/registration for research use (knowledge, confidence 0.7)."
+ },
+ {
+  "id": "nrc_lexicons",
+  "name": "NRC Affect Lexicons (EmoLex, VAD, Emotion Intensity, Hashtag Emotion) and Best-Worst Scaling",
+  "family": "machine",
+  "citation": {
+   "authors": "Mohammad, Saif M.; Turney, Peter D.; Kiritchenko, Svetlana (National Research Council Canada)",
+   "year": 2013,
+   "title": "Crowdsourcing a Word-Emotion Association Lexicon (and successor NRC lexicons)",
+   "venue": "Computational Intelligence 29(3):436-465; NRC lexicon pages at saifmohammad.com",
+   "url": "https://saifmohammad.com/WebPages/lexicons.html",
+   "doi": "10.1111/j.1467-8640.2012.00460.x",
+   "accessed": "2026-10-17"
   },
-  {
-    "id": "senticnet_hourglass",
-    "name": "SenticNet — Hourglass of Emotions (2012) and Hourglass Model Revisited (2020)",
-    "family": "machine",
-    "citation": {
-      "authors": "Cambria, Erik; Livingstone, Andrew; Hussain, Amir (2012); Susanto, Yosephine; Livingstone, Andrew G.; Ng, Bee Chin; Cambria, Erik (2020)",
-      "year": 2020,
-      "title": "The Hourglass of Emotions (LNCS 7403, pp. 144-157) / The Hourglass Model Revisited (IEEE Intelligent Systems 35(5):96-102)",
-      "venue": "Cognitive Behavioural Systems 2011, LNCS 7403, Springer 2012; IEEE Intelligent Systems, Sept/Oct 2020",
-      "url": "https://sentic.net/hourglass-model-revisited.pdf",
-      "doi": "10.1109/MIS.2020.2992799",
-      "accessed": "2026-10-17"
-    },
-    "source_status": "FETCHED",
-    "confidence": 0.92,
-    "fetched_urls": [
-      "https://sentic.net/hourglass-of-emotions.pdf",
-      "https://sentic.net/hourglass-model-revisited.pdf",
-      "https://sentic.net/senticnet-7.pdf",
-      "https://sentic.net/senticnet-8.pdf",
-      "https://sentic.net/senticnet.pdf"
+  "source_status": "FETCHED",
+  "confidence": 0.95,
+  "fetched_urls": [
+   "https://saifmohammad.com/WebPages/NRC-Emotion-Lexicon.htm",
+   "https://saifmohammad.com/WebPages/nrc-vad.html",
+   "https://saifmohammad.com/WebPages/AffectIntensity.htm",
+   "https://saifmohammad.com/WebPages/lexicons.html",
+   "https://saifmohammad.com/WebPages/BestWorst.html"
+  ],
+  "summary": "A family of English word-level affect lexicons from NRC Canada: binary word-emotion associations (EmoLex), real-valued valence/arousal/dominance norms (VAD), real-valued emotion intensities (EIL), and automatically derived hashtag-emotion association scores. Units are lowercase English terms (unigrams, later multiword expressions) with per-label scores; emotion labels are lowercase Plutchik names.",
+  "identifier_scheme": "Tab-separated 'term<TAB>label<TAB>score' rows; labels are lowercase strings (anger, anticipation, disgust, fear, joy, sadness, surprise, trust, negative, positive; valence, arousal, dominance). No URIs; version strings as on the home pages (e.g. EmoLex v0.92).",
+  "constructs": [
+   {
+    "id": "nrc_emolex_emotions",
+    "label": "NRC Word-Emotion Association Lexicon (EmoLex) — 8 emotions",
+    "type": "category_set",
+    "uri_or_code": "EmoLex v0.92 (released 10 July 2011; 14,182 unigrams; ~25,000 word senses)",
+    "values": [
+     "anger",
+     "anticipation",
+     "disgust",
+     "fear",
+     "joy",
+     "sadness",
+     "surprise",
+     "trust"
     ],
-    "summary": "The Hourglass of Emotions is SenticNet's emotion categorisation model: four independent but concomitant affective dimensions, each a float in [-1,+1] divided into six 'sentic levels' (three positive, three negative), from which compound emotions and a scalar polarity are derived. Units are lowercase emotion level names (e.g. joy, calmness) and dimension names; SenticNet concept entries carry a polarity label/value and Hourglass mood labels.",
-    "identifier_scheme": "Dimension name + sentic level label (lowercase), e.g. Introspection: joy; sentic vector = 4 floats in [-1,+1]; SenticNet entries use '#'-prefixed mood labels (e.g. #joy) with polarity_label positive|negative and polarity_value in [-1,1] (data-file schema from knowledge).",
-    "constructs": [
-      {
-        "id": "hourglass_2012_dimensions",
-        "label": "Hourglass of Emotions (2012) — four dimensions",
-        "type": "dimension",
-        "uri_or_code": "Cambria, Livingstone & Hussain 2012, LNCS 7403",
-        "values": ["Pleasantness", "Attention", "Sensitivity", "Aptitude"],
-        "value_source": "FETCHED",
-        "notes": "Each dimension is a float in [-1,+1]; level boundaries defined via a Gaussian G(x) at G(1), G(2/3), G(1/3), G(0), -G(1/3), -G(2/3), -G(1). Polarity p = sum over concepts of (Pleasantness + |Attention| - |Sensitivity| + Aptitude) / 3N."
-      },
-      {
-        "id": "hourglass_2012_sentic_levels",
-        "label": "Hourglass of Emotions (2012) — six sentic levels per dimension (Table 3), most positive to most negative",
-        "type": "category_set",
-        "uri_or_code": "Table 3, LNCS 7403 p.153",
-        "values": [
-          "Pleasantness|ecstasy, joy, serenity, pensiveness, sadness, grief",
-          "Attention|vigilance, anticipation, interest, distraction, surprise, amazement",
-          "Sensitivity|rage, anger, annoyance, apprehension, fear, terror",
-          "Aptitude|admiration, trust, acceptance, boredom, disgust, loathing"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Intervals: [G(1),G(2/3)), [G(2/3),G(1/3)), [G(1/3),G(0)), (G(0),-G(1/3)], (-G(1/3),-G(2/3)], (-G(2/3),-G(1)]. 24 levels; Plutchik-derived."
-      },
-      {
-        "id": "hourglass_2012_compound",
-        "label": "Hourglass of Emotions (2012) — second-level (compound) emotions, Table 4",
-        "type": "category_set",
-        "uri_or_code": "Table 4, LNCS 7403",
-        "values": [
-          "Pleasantness>0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|optimism, frivolity, love, gloat",
-          "Pleasantness<0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|frustration, disapproval, envy, remorse",
-          "Sensitivity>0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|aggressiveness, rejection, rivalry, contempt",
-          "Sensitivity<0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|anxiety, awe, submission, coercion"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Pairwise combination of sentic levels; e.g. love = joy (Pleasantness) + trust (Aptitude). Note awe = Sensitivity<0 x Attention<0 (fear + surprise); anxiety = Sensitivity<0 x Attention>0. Three/four-level compounds also allowed (e.g. joy + trust + anger = jealousy)."
-      },
-      {
-        "id": "hourglass_2020_dimensions",
-        "label": "Hourglass Model Revisited (2020) — four dimensions",
-        "type": "dimension",
-        "uri_or_code": "Susanto et al. 2020, IEEE Intelligent Systems 35(5)",
-        "values": ["Introspection|joy-versus-sadness", "Temper|calmness-versus-anger", "Attitude|pleasantness-versus-disgust", "Sensitivity|eagerness-versus-fear"],
-        "value_source": "FETCHED",
-        "notes": "Polarity formula (1): p_c = (I_c + T_c + A_c + S_c) / (|sgn(I_c)| + |sgn(T_c)| + |sgn(A_c)| + |sgn(S_c)|), i.e. sum of active dimension values divided by number of active dimensions; polarity in [-1,+1]. Surprise and other neutral emotions removed; calmness and eagerness added; antithetic emotions mirrored."
-      },
-      {
-        "id": "hourglass_2020_levels_24",
-        "label": "Hourglass Model Revisited (2020) — 24 basic emotions / six levels per dimension (Table 2), most positive to most negative",
-        "type": "category_set",
-        "uri_or_code": "Table 2, IEEE Intelligent Systems 35(5) p.99",
-        "values": [
-          "INTROSPECTION|ECSTASY, JOY, CONTENTMENT, MELANCHOLY, SADNESS, GRIEF",
-          "TEMPER|BLISS, CALMNESS, SERENITY, ANNOYANCE, ANGER, RAGE",
-          "ATTITUDE|DELIGHT, PLEASANTNESS, ACCEPTANCE, DISLIKE, DISGUST, LOATHING",
-          "SENSITIVITY|ENTHUSIASM, EAGERNESS, RESPONSIVENESS, ANXIETY, FEAR, TERROR"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Read from the rendered table image (Table 2 is a figure in the PDF; capitalisation as printed). Five sample words per level, e.g. CONTENTMENT: satisfaction, gratification, fulfilment, light-heartedness, frivolity; CALMNESS: tranquillity, equanimity, composure, imperturbability, soothingness; DELIGHT: admiration, adoration, glorification, devotion, enthrallment; MELANCHOLY: pensiveness, abandonment, emptiness, down-heartedness, nostalgia. Numeric level boundaries are not printed in the paper."
-      },
-      {
-        "id": "hourglass_2020_attitude_subdimensions",
-        "label": "Hourglass Model Revisited (2020) — subdimensions of Attitude (self-conscious/moral emotions), Table 3",
-        "type": "category_set",
-        "uri_or_code": "Table 3, IEEE Intelligent Systems 35(5) p.100",
-        "values": [
-          "ATTITUDE (toward self)|DELIGHT: self-respect, self-adoration, self-devotion, self-regard, self-fulfilment; PLEASANTNESS: pride, self-appreciation, self-attraction, self-formation, self-motivation; ACCEPTANCE: confidence, security, modesty, self-esteem, assurance; DISLIKE: low-confidence, insecurity, embarrassment, low-self-esteem, self-deprecation; DISGUST: shame, self-blame, self-disgust, disgrace, self-pity; LOATHING: self-contempt, self-loathing, self-abasement, self-denigration, self-condemnation",
-          "ATTITUDE (toward others)|DELIGHT: morality, generosity, self-sacrifice, magnanimity, bounty; PLEASANTNESS: sociability, appeasement, affability, conviviality, friendliness; ACCEPTANCE: sympathy, fairness, humbleness, humility, gratitude; DISLIKE: antipathy, unfairness, prejudice, hostility, ingratitude; DISGUST: asociability, greed, meanness, humiliation, unfriendliness; LOATHING: immorality, malevolence, turpitude, wickedness, xenophobia"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Relevant to EDM: pride = Attitude(toward self)/PLEASANTNESS; shame = Attitude(toward self)/DISGUST; gratitude = Attitude(toward others)/ACCEPTANCE. Table 1 (compound emotions, read from image) places: love/enjoyment/amusement = JOY+PLEASANTNESS; euphoria = JOY+EAGERNESS; enlightenment = JOY+CALMNESS; hate = SADNESS+DISGUST; distress = SADNESS+FEAR; envy = SADNESS+ANGER; hatred = ANGER+DISGUST; awe/submission/reverence = PLEASANTNESS+FEAR; kindness = PLEASANTNESS+EAGERNESS; hope/anticipation/optimism = EXPECTATION+JOY; hopelessness = EXPECTATION+SADNESS; shock = SURPRISE+ANGER; alarm = SURPRISE+FEAR; amazement/astonishment/wonderstruckness = SURPRISE+PLEASANTNESS. In Table 2, 'disappointment' is the first sample word of ATTITUDE/DISGUST (disappointment, detestation, disdain, disrespect, distrust) and 'relief' the last sample of TEMPER/BLISS (placidity, peacefulness, beatitude, gladness, relief)."
-      },
-      {
-        "id": "senticnet_7_8_primitives_polarity",
-        "label": "SenticNet 7 / SenticNet 8 — conceptual primitives and polarity",
-        "type": "code_system",
-        "uri_or_code": "SenticNet 7 (LREC 2022, pp. 3829-3839); SenticNet 8 (HCII 2024, LNCS; 400,000 concepts; https://sentic.net/downloads)",
-        "values": [
-          "primitive hierarchy|level-0 superprimitive (e.g. TERMINATE(x)), level-1 (e.g. DEACTIVATE = TERMINATE(PROCESS)), level-2 (e.g. KILL = DEACTIVATE(LIFE)), level-3 (e.g. MURDER = KILL(PERSON)); primitives written UPPERCASE with argument",
-          "polarity|positive or negative label with intensity in [-1,+1], derived from Hourglass (Susanto et al. 2020) emotions attached to each primitive; confidence score 0-100% via 'sentic paths'",
-          "SenticNet 8 normalization|lexical -> semantic (polarity detection + lexical substitution with SenticNet 7 primitives) -> pragmatic normalization; Hourglass of Emotions used as emotion categorization model for verbal and nonverbal content"
-        ],
-        "value_source": "FETCHED",
-        "notes": "SenticNet 7: Cambria, Liu, Decherchi, Xing, Kwok, LREC 2022, Marseille (CC-BY-NC-4.0). SenticNet 8: Cambria, Zhang, Mao, Chen, Kwok, 2024. Concrete per-concept data-file fields (polarity_label, polarity_value, primary_mood, secondary_mood, semantics) are from knowledge of the SenticNet download schema (confidence 0.8) and were not re-verified."
-      }
+    "value_source": "FETCHED",
+    "notes": "Plutchik's eight basic emotions; association scored 0/1 by Mechanical Turk crowdsourcing. Citations: Mohammad & Turney, Computational Intelligence 29(3), 2013; Mohammad & Turney, NAACL-HLT 2010 WS on Emotion in Text. DOI from knowledge."
+   },
+   {
+    "id": "nrc_emolex_sentiments",
+    "label": "EmoLex — 2 sentiments",
+    "type": "category_set",
+    "uri_or_code": "EmoLex v0.92",
+    "values": [
+     "negative",
+     "positive"
     ],
-    "verification_notes": "All five PDFs were downloaded from sentic.net and text-extracted locally; the 2012 Table 3/Table 4 and the 2020 dimension definitions and polarity formula were read from extracted text; the 2020 Tables 1-3 are embedded images and were read from rendered page images (minor transcription risk). DOIs: 2020 article DOI from knowledge (confidence 0.85); 2012 chapter DOI believed to be 10.1007/978-3-642-34584-5_11 (confidence 0.7, not included in citation). Licence: SenticNet resources are free for research under the sentic.net terms; LREC 2022 paper CC-BY-NC-4.0."
+    "value_source": "FETCHED",
+    "notes": "Binary 0/1 association."
+   },
+   {
+    "id": "nrc_vad_dimensions",
+    "label": "NRC Valence, Arousal, and Dominance (VAD) Lexicon",
+    "type": "dimension",
+    "uri_or_code": "NRC-VAD v1.0 (July 2018; ~20,000 words; scores 0-1) / v2.1 (March 2025; ~55,000 terms = 25k unigrams + 10k MWEs...; scores -1 to 1)",
+    "values": [
+     "valence|positive--negative / pleasure--displeasure",
+     "arousal|excited--calm / active--passive",
+     "dominance|powerful--weak / 'have full control'--'have no control'"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Annotated with Best-Worst Scaling. Citations: Mohammad, ACL 2018 'Obtaining Reliable Human Ratings of Valence, Arousal, and Dominance for 20,000 English Words'; Mohammad 2025 arXiv:2503.23547 'NRC VAD Lexicon v2'; Mohammad, IJCNLP-AACL 2025 (MWEs)."
+   },
+   {
+    "id": "nrc_emotion_intensity",
+    "label": "NRC Emotion Intensity Lexicon (NRC-EIL; formerly NRC Affect Intensity Lexicon, NRC-AIL)",
+    "type": "dimension",
+    "uri_or_code": "v0.5 (2018, 4 emotions) -> v1 (March 2020, 8 emotions; ~10,000 entries; scores 0-1)",
+    "values": [
+     "v0.5|anger, fear, joy, sadness",
+     "v1|anger, anticipation, disgust, fear, joy, sadness, surprise, trust"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Real-valued intensity via Best-Worst Scaling. Citation: Mohammad, 'Word Affect Intensities', LREC 2018, Miyazaki."
+   },
+   {
+    "id": "nrc_hashtag_emotion",
+    "label": "NRC Hashtag Emotion Lexicon",
+    "type": "category_set",
+    "uri_or_code": "v0.2 (2013; 16,862 unigrams; scores 0 to infinity)",
+    "values": [
+     "anger",
+     "anticipation",
+     "disgust",
+     "fear",
+     "joy",
+     "sadness",
+     "surprise",
+     "trust"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Automatically created from emotion-word hashtags in tweets (PMI-style association). Citations: Mohammad & Kiritchenko, 'Using Hashtags to Capture Fine Emotion Categories from Tweets', Computational Intelligence 2015; Mohammad, '#Emotional Tweets', *SEM 2012."
+   },
+   {
+    "id": "nrc_best_worst_scaling",
+    "label": "Best-Worst Scaling (BWS / MaxDiff) annotation methodology",
+    "type": "code_system",
+    "uri_or_code": "Best-Worst-Scaling-Scripts.zip (May 2017)",
+    "values": [
+     "Kiritchenko & Mohammad 2016|Capturing Reliable Fine-Grained Sentiment Associations by Crowdsourcing and Best-Worst Scaling, NAACL-HLT 2016, San Diego",
+     "Kiritchenko & Mohammad 2017|Best-Worst Scaling More Reliable than Rating Scales: A Case Study on Sentiment Intensity Annotation, ACL 2017, Vancouver",
+     "Background|Louviere & Woodworth 1990; Cohen 2003; Louviere, Flynn & Marley 2015"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Annotators see 4-tuples and pick best and worst; counts converted to real-valued scores (proportion best minus proportion worst); split-half reliability script supplied. Used for VAD, EIL, SCL-NMA, SCL-OPP, SemEval-2015/2016 lexicons and the Tweet Emotion Intensity / Affect in Tweets datasets."
+   }
+  ],
+  "verification_notes": "All versions, label lists, counts and citations verified from the official saifmohammad.com pages. Licence (all NRC lexicons): free for non-commercial research and educational use only; no redistribution (link to home page instead); cite the papers; credit NRC in products; commercial use requires a licence from the author/NRC; Copyright National Research Council Canada. The Computational Intelligence DOI is from knowledge (confidence 0.85)."
+ },
+ {
+  "id": "senticnet_hourglass",
+  "name": "SenticNet — Hourglass of Emotions (2012) and Hourglass Model Revisited (2020)",
+  "family": "machine",
+  "citation": {
+   "authors": "Cambria, Erik; Livingstone, Andrew; Hussain, Amir (2012); Susanto, Yosephine; Livingstone, Andrew G.; Ng, Bee Chin; Cambria, Erik (2020)",
+   "year": 2020,
+   "title": "The Hourglass of Emotions (LNCS 7403, pp. 144-157) / The Hourglass Model Revisited (IEEE Intelligent Systems 35(5):96-102)",
+   "venue": "Cognitive Behavioural Systems 2011, LNCS 7403, Springer 2012; IEEE Intelligent Systems, Sept/Oct 2020",
+   "url": "https://sentic.net/hourglass-model-revisited.pdf",
+   "doi": "10.1109/MIS.2020.2992799",
+   "accessed": "2026-10-17"
   },
-  {
-    "id": "snomed_ct_emotion_mood",
-    "name": "SNOMED CT emotion and mood concepts (International Edition)",
-    "family": "machine",
-    "citation": {
-      "authors": "SNOMED International",
-      "year": 2025,
-      "title": "SNOMED CT International Edition, release 20250201 (as served by HL7 tx.fhir.org)",
-      "venue": "SNOMED CT browser / Snowstorm terminology server; FHIR CodeSystem http://snomed.info/sct",
-      "url": "https://browser.ihtsdotools.org/",
-      "doi": null,
-      "accessed": "2026-10-17"
-    },
-    "source_status": "FETCHED_SECONDARY",
-    "confidence": 0.9,
-    "fetched_urls": [
-      "https://browser.ihtsdotools.org/snowstorm/snomed-ct/MAIN/concepts?term=emotion (HTTP 302 -> snomedbrowser.org human-verification page, 405; not usable)",
-      "https://tx.fhir.org/r4/CodeSystem/$lookup?system=http://snomed.info/sct&code=285854004",
-      "https://tx.fhir.org/r4/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs&filter=<term>",
-      "https://r4.ontoserver.csiro.au/fhir/CodeSystem/$lookup?system=http://snomed.info/sct&code=285854004"
+  "source_status": "FETCHED",
+  "confidence": 0.92,
+  "fetched_urls": [
+   "https://sentic.net/hourglass-of-emotions.pdf",
+   "https://sentic.net/hourglass-model-revisited.pdf",
+   "https://sentic.net/senticnet-7.pdf",
+   "https://sentic.net/senticnet-8.pdf",
+   "https://sentic.net/senticnet.pdf"
+  ],
+  "summary": "The Hourglass of Emotions is SenticNet's emotion categorisation model: four independent but concomitant affective dimensions, each a float in [-1,+1] divided into six 'sentic levels' (three positive, three negative), from which compound emotions and a scalar polarity are derived. Units are lowercase emotion level names (e.g. joy, calmness) and dimension names; SenticNet concept entries carry a polarity label/value and Hourglass mood labels.",
+  "identifier_scheme": "Dimension name + sentic level label (lowercase), e.g. Introspection: joy; sentic vector = 4 floats in [-1,+1]; SenticNet entries use '#'-prefixed mood labels (e.g. #joy) with polarity_label positive|negative and polarity_value in [-1,1] (data-file schema from knowledge).",
+  "constructs": [
+   {
+    "id": "hourglass_2012_dimensions",
+    "label": "Hourglass of Emotions (2012) — four dimensions",
+    "type": "dimension",
+    "uri_or_code": "Cambria, Livingstone & Hussain 2012, LNCS 7403",
+    "values": [
+     "Pleasantness",
+     "Attention",
+     "Sensitivity",
+     "Aptitude"
     ],
-    "summary": "SNOMED CT identifies concepts by numeric SCTIDs with a Fully Specified Name whose parenthesised semantic tag gives the top-level hierarchy. Emotions appear in two places: as observable entities under 285854004 |Emotion (observable entity)| (what can be measured) and as findings under 106126000 |Emotional state finding (finding)| and its child 106131003 |Mood finding (finding)| (what was observed). Coverage of discrete emotion words is sparse and clinically biased.",
-    "identifier_scheme": "SCTID (integer, e.g. 285854004) + FSN 'Emotion (observable entity)'; FHIR URI form http://snomed.info/sct|285854004 or http://snomed.info/id/285854004; version URI http://snomed.info/sct/900000000000207008/version/20250201.",
-    "constructs": [
-      {
-        "id": "snomed_anchor_concepts",
-        "label": "Anchor concepts: Emotion / Mood (observable entity) and Emotional state / Mood finding (finding)",
-        "type": "hierarchy",
-        "uri_or_code": "http://snomed.info/sct",
-        "values": [
-          "285854004|Emotion (observable entity)|parent 363871006 Mental state (observable entity) -> 363870007 Mental state, behavior / psychosocial function observable (observable entity) -> 363787002 Observable entity",
-          "1155968006|Mood (observable entity)|parent 285854004",
-          "1193648005|Type of emotion (observable entity)|parent 285854004",
-          "1193647000|Range of emotion (observable entity)|parent 285854004",
-          "247774004|Level of mood (observable entity)|parent 1155968006",
-          "1155970002|Emotion function (observable entity)|parent 285231000 Mental function (observable entity) -> 18373002 Nervous system function (observable entity)",
-          "106126000|Emotional state finding (finding)|parent 36456004 Mental state finding (finding) -> 384821006 Mental state, behavior and/or psychosocial function finding (finding) -> 404684003 Clinical finding",
-          "106131003|Mood finding (finding)|parent 106126000",
-          "365107007|Finding of level of mood (finding)|parent 106131003",
-          "46206005|Mood disorder (disorder)|parents 74732009 Mental disorder (disorder), 106131003"
-        ],
-        "value_source": "FETCHED",
-        "notes": "All SCTIDs, FSNs and parents verified via FHIR $lookup on tx.fhir.org (SNOMED CT International Edition 20250201)."
-      },
-      {
-        "id": "snomed_edm_label_map",
-        "label": "SNOMED CT concepts for the 17 EDM emotion labels (+ Awe, Calm)",
-        "type": "code_system",
-        "uri_or_code": "http://snomed.info/sct",
-        "values": [
-          "joy|NONE exact. Nearest: 112080002 Cheerful mood (finding) [synonyms: Happiness, Happy, Happy mood, Good mood, High spirits; parent 365107007 Finding of level of mood -> Mood finding]; 34822003 Elation (finding) [parent 81548002 Elevated mood (finding)]; 85949006 Euphoria (finding)",
-          "sadness|420038007 Feeling unhappy (finding) [parent 106131003 Mood finding]; child 1217332007 Persistent sadness (finding); related 17029006 Feeling despair (finding)",
-          "fear|1402001 Fear (finding) [parent 106131003 Mood finding]; 367545001 Fearful mood (finding) [child of 1402001]; 405050007 Level of fear (observable entity) [parent 247774004 Level of mood]; 247805009 Anxiety and fear (finding)",
-          "anger|75408008 Feeling angry (finding) [parent 106131003 Mood finding]; 192085004 Anger reaction (finding) [parent 274951009 Outbursts of anger (finding) -> 61372001 Aggressive behavior (finding)]",
-          "wonder|NONE (searched: wonder, awe, amazed, astonish, admiration, bewilder; only 286778007 Curious character (finding), a trait)",
-          "peace|NONE exact. Nearest: 102894008 Feeling calm (finding) [parent 106131003 Mood finding]; 271599002 Feeling content (finding) [synonym Contentedness; parent 106126000]; 15166001 Relaxed (qualifier value) is not a finding",
-          "tenderness|NONE in the affective sense (247348008 Tenderness (finding) and all 'Tenderness of X' are pain-on-palpation). Nearest affective: 23682002 Love (finding) [parent 106126000 Emotional state finding]; 286718001 Affectionate character (finding) is a trait",
-          "reverence|NONE",
-          "pride|1149081002 Feeling proud (finding) [parent 106126000 Emotional state finding]; related 704374004 Lack of pride (finding); 286762005 Character trait finding of level of pride (finding)",
-          "anxiety|48694002 Anxiety (finding) [parent 106126000 Emotional state finding]; 198288003 Anxiety state (finding) [child]; 405051006 Level of anxiety (observable entity) [parent 247774004]; 247805009 Anxiety and fear (finding)",
-          "gratitude|NONE (searched: gratitude, grateful, thankful)",
-          "longing|NONE (searched: longing, yearning, pining, nostalgia, homesick)",
-          "hope|225649001 Hopeful for the future (finding) [parent 225648009 Optimistic (finding) -> 365129006 Finding of level of hope (finding) -> 365107007 -> Mood finding]; 247797001 Level of hope (observable entity) [parent 247774004 Level of mood]; antonym 307077003 Feeling hopeless (finding)",
-          "shame|225012006 Feeling ashamed (finding) [parent 106126000 Emotional state finding]; related 7571003 Feeling guilt (finding)",
-          "disappointment|NONE (searched: disappointment, disappointed, disappoint)",
-          "relief|224978009 Feeling relief (finding) [parent 106126000 Emotional state finding]",
-          "frustration|224973000 Feeling frustrated (finding) [parent 106126000 Emotional state finding]; related 286757009 Tends to be intolerant of frustration (finding)",
-          "Awe|NONE",
-          "Calm|102894008 Feeling calm (finding) [parent 106131003 Mood finding]; 286713005 Calm character (finding) [trait, parent 286709003]"
-        ],
-        "value_source": "FETCHED",
-        "notes": "Searches used FHIR ValueSet/$expand text filter over the whole International Edition (prefix word match), then $lookup for FSN and parent. 'NONE' means no active concept whose FSN/synonym denotes that emotion was returned for the listed search terms; absence is as reliable as the filter (prefix on description words). Many EDM labels (wonder, reverence, gratitude, longing, disappointment, awe, tenderness) have no SNOMED CT emotion concept at all; SNOMED coverage is skewed to clinically salient negative states."
-      }
+    "value_source": "FETCHED",
+    "notes": "Each dimension is a float in [-1,+1]; level boundaries defined via a Gaussian G(x) at G(1), G(2/3), G(1/3), G(0), -G(1/3), -G(2/3), -G(1). Polarity p = sum over concepts of (Pleasantness + |Attention| - |Sensitivity| + Aptitude) / 3N."
+   },
+   {
+    "id": "hourglass_2012_sentic_levels",
+    "label": "Hourglass of Emotions (2012) — six sentic levels per dimension (Table 3), most positive to most negative",
+    "type": "category_set",
+    "uri_or_code": "Table 3, LNCS 7403 p.153",
+    "values": [
+     "Pleasantness|ecstasy, joy, serenity, pensiveness, sadness, grief",
+     "Attention|vigilance, anticipation, interest, distraction, surprise, amazement",
+     "Sensitivity|rage, anger, annoyance, apprehension, fear, terror",
+     "Aptitude|admiration, trust, acceptance, boredom, disgust, loathing"
     ],
-    "verification_notes": "The official SNOMED International browser/Snowstorm API (browser.ihtsdotools.org) redirects to snomedbrowser.org, which blocks non-browser clients with a human-verification page (HTTP 302/405); it could not be queried. All codes above were instead verified live against the HL7 terminology server tx.fhir.org (SNOMED CT International Edition, version http://snomed.info/sct/900000000000207008/version/20250201) and spot-checked on CSIRO Ontoserver (Australian extension 20260930) — hence FETCHED_SECONDARY, but every SCTID/FSN/parent listed was returned by the server, none is from memory. LICENCE: SNOMED CT is owned by SNOMED International and used under the SNOMED CT Affiliate Licence Agreement; use is free in Member countries/territories (incl. US, UK, Canada, Australia) and in qualifying research projects, otherwise an affiliate fee applies; redistribution of SCTIDs with FSNs in a crosswalk is permitted for Affiliates but the crosswalk should state that SNOMED CT content is subject to the Affiliate Licence and that users in non-Member countries need their own licence. Not re-verified: whether any of these concepts changed in the July 2025 / 2026 International releases."
-  }
+    "value_source": "FETCHED",
+    "notes": "Intervals: [G(1),G(2/3)), [G(2/3),G(1/3)), [G(1/3),G(0)), (G(0),-G(1/3)], (-G(1/3),-G(2/3)], (-G(2/3),-G(1)]. 24 levels; Plutchik-derived."
+   },
+   {
+    "id": "hourglass_2012_compound",
+    "label": "Hourglass of Emotions (2012) — second-level (compound) emotions, Table 4",
+    "type": "category_set",
+    "uri_or_code": "Table 4, LNCS 7403",
+    "values": [
+     "Pleasantness>0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|optimism, frivolity, love, gloat",
+     "Pleasantness<0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|frustration, disapproval, envy, remorse",
+     "Sensitivity>0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|aggressiveness, rejection, rivalry, contempt",
+     "Sensitivity<0 x (Attention>0, Attention<0, Aptitude>0, Aptitude<0)|anxiety, awe, submission, coercion"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Pairwise combination of sentic levels; e.g. love = joy (Pleasantness) + trust (Aptitude). Note awe = Sensitivity<0 x Attention<0 (fear + surprise); anxiety = Sensitivity<0 x Attention>0. Three/four-level compounds also allowed (e.g. joy + trust + anger = jealousy)."
+   },
+   {
+    "id": "hourglass_2020_dimensions",
+    "label": "Hourglass Model Revisited (2020) — four dimensions",
+    "type": "dimension",
+    "uri_or_code": "Susanto et al. 2020, IEEE Intelligent Systems 35(5)",
+    "values": [
+     "Introspection|joy-versus-sadness",
+     "Temper|calmness-versus-anger",
+     "Attitude|pleasantness-versus-disgust",
+     "Sensitivity|eagerness-versus-fear"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Polarity formula (1): p_c = (I_c + T_c + A_c + S_c) / (|sgn(I_c)| + |sgn(T_c)| + |sgn(A_c)| + |sgn(S_c)|), i.e. sum of active dimension values divided by number of active dimensions; polarity in [-1,+1]. Surprise and other neutral emotions removed; calmness and eagerness added; antithetic emotions mirrored."
+   },
+   {
+    "id": "hourglass_2020_levels_24",
+    "label": "Hourglass Model Revisited (2020) — 24 basic emotions / six levels per dimension (Table 2), most positive to most negative",
+    "type": "category_set",
+    "uri_or_code": "Table 2, IEEE Intelligent Systems 35(5) p.99",
+    "values": [
+     "INTROSPECTION|ECSTASY, JOY, CONTENTMENT, MELANCHOLY, SADNESS, GRIEF",
+     "TEMPER|BLISS, CALMNESS, SERENITY, ANNOYANCE, ANGER, RAGE",
+     "ATTITUDE|DELIGHT, PLEASANTNESS, ACCEPTANCE, DISLIKE, DISGUST, LOATHING",
+     "SENSITIVITY|ENTHUSIASM, EAGERNESS, RESPONSIVENESS, ANXIETY, FEAR, TERROR"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Read from the rendered table image (Table 2 is a figure in the PDF; capitalisation as printed). Five sample words per level, e.g. CONTENTMENT: satisfaction, gratification, fulfilment, light-heartedness, frivolity; CALMNESS: tranquillity, equanimity, composure, imperturbability, soothingness; DELIGHT: admiration, adoration, glorification, devotion, enthrallment; MELANCHOLY: pensiveness, abandonment, emptiness, down-heartedness, nostalgia. Numeric level boundaries are not printed in the paper."
+   },
+   {
+    "id": "hourglass_2020_attitude_subdimensions",
+    "label": "Hourglass Model Revisited (2020) — subdimensions of Attitude (self-conscious/moral emotions), Table 3",
+    "type": "category_set",
+    "uri_or_code": "Table 3, IEEE Intelligent Systems 35(5) p.100",
+    "values": [
+     "ATTITUDE (toward self)|DELIGHT: self-respect, self-adoration, self-devotion, self-regard, self-fulfilment; PLEASANTNESS: pride, self-appreciation, self-attraction, self-formation, self-motivation; ACCEPTANCE: confidence, security, modesty, self-esteem, assurance; DISLIKE: low-confidence, insecurity, embarrassment, low-self-esteem, self-deprecation; DISGUST: shame, self-blame, self-disgust, disgrace, self-pity; LOATHING: self-contempt, self-loathing, self-abasement, self-denigration, self-condemnation",
+     "ATTITUDE (toward others)|DELIGHT: morality, generosity, self-sacrifice, magnanimity, bounty; PLEASANTNESS: sociability, appeasement, affability, conviviality, friendliness; ACCEPTANCE: sympathy, fairness, humbleness, humility, gratitude; DISLIKE: antipathy, unfairness, prejudice, hostility, ingratitude; DISGUST: asociability, greed, meanness, humiliation, unfriendliness; LOATHING: immorality, malevolence, turpitude, wickedness, xenophobia"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Relevant to EDM: pride = Attitude(toward self)/PLEASANTNESS; shame = Attitude(toward self)/DISGUST; gratitude = Attitude(toward others)/ACCEPTANCE. Table 1 (compound emotions, read from image) places: love/enjoyment/amusement = JOY+PLEASANTNESS; euphoria = JOY+EAGERNESS; enlightenment = JOY+CALMNESS; hate = SADNESS+DISGUST; distress = SADNESS+FEAR; envy = SADNESS+ANGER; hatred = ANGER+DISGUST; awe/submission/reverence = PLEASANTNESS+FEAR; kindness = PLEASANTNESS+EAGERNESS; hope/anticipation/optimism = EXPECTATION+JOY; hopelessness = EXPECTATION+SADNESS; shock = SURPRISE+ANGER; alarm = SURPRISE+FEAR; amazement/astonishment/wonderstruckness = SURPRISE+PLEASANTNESS. In Table 2, 'disappointment' is the first sample word of ATTITUDE/DISGUST (disappointment, detestation, disdain, disrespect, distrust) and 'relief' the last sample of TEMPER/BLISS (placidity, peacefulness, beatitude, gladness, relief)."
+   },
+   {
+    "id": "senticnet_7_8_primitives_polarity",
+    "label": "SenticNet 7 / SenticNet 8 — conceptual primitives and polarity",
+    "type": "code_system",
+    "uri_or_code": "SenticNet 7 (LREC 2022, pp. 3829-3839); SenticNet 8 (HCII 2024, LNCS; 400,000 concepts; https://sentic.net/downloads)",
+    "values": [
+     "primitive hierarchy|level-0 superprimitive (e.g. TERMINATE(x)), level-1 (e.g. DEACTIVATE = TERMINATE(PROCESS)), level-2 (e.g. KILL = DEACTIVATE(LIFE)), level-3 (e.g. MURDER = KILL(PERSON)); primitives written UPPERCASE with argument",
+     "polarity|positive or negative label with intensity in [-1,+1], derived from Hourglass (Susanto et al. 2020) emotions attached to each primitive; confidence score 0-100% via 'sentic paths'",
+     "SenticNet 8 normalization|lexical -> semantic (polarity detection + lexical substitution with SenticNet 7 primitives) -> pragmatic normalization; Hourglass of Emotions used as emotion categorization model for verbal and nonverbal content"
+    ],
+    "value_source": "FETCHED",
+    "notes": "SenticNet 7: Cambria, Liu, Decherchi, Xing, Kwok, LREC 2022, Marseille (CC-BY-NC-4.0). SenticNet 8: Cambria, Zhang, Mao, Chen, Kwok, 2024. Concrete per-concept data-file fields (polarity_label, polarity_value, primary_mood, secondary_mood, semantics) are from knowledge of the SenticNet download schema (confidence 0.8) and were not re-verified."
+   }
+  ],
+  "verification_notes": "All five PDFs were downloaded from sentic.net and text-extracted locally; the 2012 Table 3/Table 4 and the 2020 dimension definitions and polarity formula were read from extracted text; the 2020 Tables 1-3 are embedded images and were read from rendered page images (minor transcription risk). DOIs: 2020 article DOI from knowledge (confidence 0.85); 2012 chapter DOI believed to be 10.1007/978-3-642-34584-5_11 (confidence 0.7, not included in citation). Licence: SenticNet resources are free for research under the sentic.net terms; LREC 2022 paper CC-BY-NC-4.0."
+ },
+ {
+  "id": "snomed_ct_emotion_mood",
+  "name": "SNOMED CT emotion and mood concepts (International Edition)",
+  "family": "machine",
+  "citation": {
+   "authors": "SNOMED International",
+   "year": 2025,
+   "title": "SNOMED CT International Edition, release 20250201 (as served by HL7 tx.fhir.org)",
+   "venue": "SNOMED CT browser / Snowstorm terminology server; FHIR CodeSystem http://snomed.info/sct",
+   "url": "https://browser.ihtsdotools.org/",
+   "doi": null,
+   "accessed": "2026-10-17"
+  },
+  "source_status": "FETCHED_SECONDARY",
+  "confidence": 0.9,
+  "fetched_urls": [
+   "https://browser.ihtsdotools.org/snowstorm/snomed-ct/MAIN/concepts?term=emotion (HTTP 302 -> snomedbrowser.org human-verification page, 405; not usable)",
+   "https://tx.fhir.org/r4/CodeSystem/$lookup?system=http://snomed.info/sct&code=285854004",
+   "https://tx.fhir.org/r4/ValueSet/$expand?url=http://snomed.info/sct?fhir_vs&filter=<term>",
+   "https://r4.ontoserver.csiro.au/fhir/CodeSystem/$lookup?system=http://snomed.info/sct&code=285854004"
+  ],
+  "summary": "SNOMED CT identifies concepts by numeric SCTIDs with a Fully Specified Name whose parenthesised semantic tag gives the top-level hierarchy. Emotions appear in two places: as observable entities under 285854004 |Emotion (observable entity)| (what can be measured) and as findings under 106126000 |Emotional state finding (finding)| and its child 106131003 |Mood finding (finding)| (what was observed). Coverage of discrete emotion words is sparse and clinically biased.",
+  "identifier_scheme": "SCTID (integer, e.g. 285854004) + FSN 'Emotion (observable entity)'; FHIR URI form http://snomed.info/sct|285854004 or http://snomed.info/id/285854004; version URI http://snomed.info/sct/900000000000207008/version/20250201.",
+  "constructs": [
+   {
+    "id": "snomed_anchor_concepts",
+    "label": "Anchor concepts: Emotion / Mood (observable entity) and Emotional state / Mood finding (finding)",
+    "type": "hierarchy",
+    "uri_or_code": "http://snomed.info/sct",
+    "values": [
+     "285854004|Emotion (observable entity)|parent 363871006 Mental state (observable entity) -> 363870007 Mental state, behavior / psychosocial function observable (observable entity) -> 363787002 Observable entity",
+     "1155968006|Mood (observable entity)|parent 285854004",
+     "1193648005|Type of emotion (observable entity)|parent 285854004",
+     "1193647000|Range of emotion (observable entity)|parent 285854004",
+     "247774004|Level of mood (observable entity)|parent 1155968006",
+     "1155970002|Emotion function (observable entity)|parent 285231000 Mental function (observable entity) -> 18373002 Nervous system function (observable entity)",
+     "106126000|Emotional state finding (finding)|parent 36456004 Mental state finding (finding) -> 384821006 Mental state, behavior and/or psychosocial function finding (finding) -> 404684003 Clinical finding",
+     "106131003|Mood finding (finding)|parent 106126000",
+     "365107007|Finding of level of mood (finding)|parent 106131003",
+     "46206005|Mood disorder (disorder)|parents 74732009 Mental disorder (disorder), 106131003"
+    ],
+    "value_source": "FETCHED",
+    "notes": "All SCTIDs, FSNs and parents verified via FHIR $lookup on tx.fhir.org (SNOMED CT International Edition 20250201)."
+   },
+   {
+    "id": "snomed_edm_label_map",
+    "label": "SNOMED CT concepts for the 17 EDM emotion labels (+ Awe, Calm)",
+    "type": "code_system",
+    "uri_or_code": "http://snomed.info/sct",
+    "values": [
+     "joy|NONE exact. Nearest: 112080002 Cheerful mood (finding) [synonyms: Happiness, Happy, Happy mood, Good mood, High spirits; parent 365107007 Finding of level of mood -> Mood finding]; 34822003 Elation (finding) [parent 81548002 Elevated mood (finding)]; 85949006 Euphoria (finding)",
+     "sadness|420038007 Feeling unhappy (finding) [parent 106131003 Mood finding]; child 1217332007 Persistent sadness (finding); related 17029006 Feeling despair (finding)",
+     "fear|1402001 Fear (finding) [parent 106131003 Mood finding]; 367545001 Fearful mood (finding) [child of 1402001]; 405050007 Level of fear (observable entity) [parent 247774004 Level of mood]; 247805009 Anxiety and fear (finding)",
+     "anger|75408008 Feeling angry (finding) [parent 106131003 Mood finding]; 192085004 Anger reaction (finding) [parent 274951009 Outbursts of anger (finding) -> 61372001 Aggressive behavior (finding)]",
+     "wonder|NONE (searched: wonder, awe, amazed, astonish, admiration, bewilder; only 286778007 Curious character (finding), a trait)",
+     "peace|NONE exact. Nearest: 102894008 Feeling calm (finding) [parent 106131003 Mood finding]; 271599002 Feeling content (finding) [synonym Contentedness; parent 106126000]; 15166001 Relaxed (qualifier value) is not a finding",
+     "tenderness|NONE in the affective sense (247348008 Tenderness (finding) and all 'Tenderness of X' are pain-on-palpation). Nearest affective: 23682002 Love (finding) [parent 106126000 Emotional state finding]; 286718001 Affectionate character (finding) is a trait",
+     "reverence|NONE",
+     "pride|1149081002 Feeling proud (finding) [parent 106126000 Emotional state finding]; related 704374004 Lack of pride (finding); 286762005 Character trait finding of level of pride (finding)",
+     "anxiety|48694002 Anxiety (finding) [parent 106126000 Emotional state finding]; 198288003 Anxiety state (finding) [child]; 405051006 Level of anxiety (observable entity) [parent 247774004]; 247805009 Anxiety and fear (finding)",
+     "gratitude|NONE (searched: gratitude, grateful, thankful)",
+     "longing|NONE (searched: longing, yearning, pining, nostalgia, homesick)",
+     "hope|225649001 Hopeful for the future (finding) [parent 225648009 Optimistic (finding) -> 365129006 Finding of level of hope (finding) -> 365107007 -> Mood finding]; 247797001 Level of hope (observable entity) [parent 247774004 Level of mood]; antonym 307077003 Feeling hopeless (finding)",
+     "shame|225012006 Feeling ashamed (finding) [parent 106126000 Emotional state finding]; related 7571003 Feeling guilt (finding)",
+     "disappointment|NONE (searched: disappointment, disappointed, disappoint)",
+     "relief|224978009 Feeling relief (finding) [parent 106126000 Emotional state finding]",
+     "frustration|224973000 Feeling frustrated (finding) [parent 106126000 Emotional state finding]; related 286757009 Tends to be intolerant of frustration (finding)",
+     "Awe|NONE",
+     "Calm|102894008 Feeling calm (finding) [parent 106131003 Mood finding]; 286713005 Calm character (finding) [trait, parent 286709003]"
+    ],
+    "value_source": "FETCHED",
+    "notes": "Searches used FHIR ValueSet/$expand text filter over the whole International Edition (prefix word match), then $lookup for FSN and parent. 'NONE' means no active concept whose FSN/synonym denotes that emotion was returned for the listed search terms; absence is as reliable as the filter (prefix on description words). Many EDM labels (wonder, reverence, gratitude, longing, disappointment, awe, tenderness) have no SNOMED CT emotion concept at all; SNOMED coverage is skewed to clinically salient negative states."
+   }
+  ],
+  "verification_notes": "The official SNOMED International browser/Snowstorm API (browser.ihtsdotools.org) redirects to snomedbrowser.org, which blocks non-browser clients with a human-verification page (HTTP 302/405); it could not be queried. All codes above were instead verified live against the HL7 terminology server tx.fhir.org (SNOMED CT International Edition, version http://snomed.info/sct/900000000000207008/version/20250201) and spot-checked on CSIRO Ontoserver (Australian extension 20260930) — hence FETCHED_SECONDARY, but every SCTID/FSN/parent listed was returned by the server, none is from memory. LICENCE: SNOMED CT is owned by SNOMED International and used under the SNOMED CT Affiliate Licence Agreement; use is free in Member countries/territories (incl. US, UK, Canada, Australia) and in qualifying research projects, otherwise an affiliate fee applies; redistribution of SCTIDs with FSNs in a crosswalk is permitted for Affiliates but the crosswalk should state that SNOMED CT content is subject to the Affiliate Licence and that users in non-Member countries need their own licence. Not re-verified: whether any of these concepts changed in the July 2025 / 2026 International releases."
+ }
 ]

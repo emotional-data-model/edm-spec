@@ -1,0 +1,1481 @@
+{
+ "generated": "2026-10-17",
+ "purpose": "Secondary-source verification of knowledge-reconstructed construct lists (REPORT.md section 9).",
+ "method": "For each construct, an accessible page showing the list was located (open-access paper/review, handbook chapter, university page, official site, Wikipedia last resort with its own citation recorded) and the list compared item by item. Quotes are from the fetched page text; PDFs without a text layer were extracted locally.",
+ "frameworks": {
+  "occ": {
+   "constructs": {
+    "occ_branches": {
+     "status": "VERIFIED",
+     "source_url": "https://users.cs.northwestern.edu/~ortony/Andrew_Ortony_files/2013%20-%20OCC%20and%20constructionism.pdf",
+     "source_title": "Clore & Ortony (2013), Emotion Review 5(4) - author-hosted PDF",
+     "source_kind": "author_page",
+     "quote": "According to the OCC account of emotions (Ortony et al., 1988), there are three different sources of value (goals, standards, and tastes), each of which is the basis for appraising a different domain (events, actions, or objects). Thus, events are appraised in terms of the desirability or undesirability of their outcomes for one's goals. Actions are appraised in terms of praise or blameworthiness with respect to applicable standards ... objects are appraised in terms of the appealing or unappealing nature of their attributes with respect to one's tastes or attitudes. [Adam et al. 2009: 'consequences of events, actions of agents, and aspects of objects ... the desirability of an event, i.e. the congruence of its consequences with the individual's goals ... the approbation of an action, i.e. its conformity to norms and standards ... the attraction of an object, i.e. the correspondence of its aspects with the individual's likings.']",
+     "source_values": [
+      "consequences of events (appraised against goals; desirability)",
+      "actions of agents (appraised against standards; praise/blameworthiness, approbation)",
+      "aspects of objects (appraised against tastes/attitudes; appealing/unappealing, attraction)"
+     ],
+     "corrections": "Branch names and the goals/standards/attitudes variables confirmed. The reaction-word pairs in the knowledge list (pleased/displeased, approving/disapproving, liking/disliking) are not shown verbatim on either page; the sources use desirability, praiseworthiness/approbation, and appealingness/attraction. Clore & Ortony write 'tastes or attitudes' and 'attributes of objects'.",
+     "note": "Two independent author-level sources agree on the three-branch structure and the 22-type count ('distinguishes 22 emotion types'; 'twenty-two emotions types that are grouped in six classes')."
+    },
+    "occ_well_being": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 206",
+     "source_kind": "university_page",
+     "quote": "Well-being emotions (joy, distress) arise when an individual appraises an event that has just occurred while only focusing on the desirability of its consequences for himself.",
+     "source_values": [
+      "joy",
+      "distress"
+     ],
+     "corrections": "none",
+     "note": ""
+    },
+    "occ_fortunes_of_others": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 206",
+     "source_kind": "university_page",
+     "quote": "Fortunes-of-others emotions (happy for, sorry for, resentment, gloating) arise when an individual appraises an event while focusing on its desirability for another individual.",
+     "source_values": [
+      "happy for",
+      "sorry for",
+      "resentment",
+      "gloating"
+     ],
+     "corrections": "Source lists 'sorry for' where the knowledge list has 'pity' (the knowledge note already flags this as the book's alternate label; Clore & Ortony 2013 use 'pity' as their example). Order differs (source: happy for, sorry for, resentment, gloating).",
+     "note": "Adam et al. also describe the pairing: 'two good-will (or empathetic) emotions' (happy for / sorry for) and 'two ill-will emotions' (resentment / gloating)."
+    },
+    "occ_prospect_based": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 206",
+     "source_kind": "university_page",
+     "quote": "Prospect-based emotions such as hope or fear arise when an individual appraises the consequences of a prospected event ... Other prospect-based emotions such as disappointment, relief, fears-confirmed, and satisfaction arise when an individual appraises an event that has just occurred and that was expected, while focusing on its desirability for himself.",
+     "source_values": [
+      "hope",
+      "fear",
+      "disappointment",
+      "relief",
+      "fears-confirmed",
+      "satisfaction"
+     ],
+     "corrections": "none (same six items; order differs). Clore & Ortony 2013 independently show 'satisfaction, fears confirmed' as realized prospects and 'disappointment, relief' as unrealized, matching the knowledge note.",
+     "note": ""
+    },
+    "occ_attribution": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 206",
+     "source_kind": "university_page",
+     "quote": "The second branch contains only one class of emotion types (Attribution emotions) ... pride and shame arise when an individual appraises one of his own actions ... Admiration and reproach arise when an individual appraises an action of another individual while focusing only on its approval.",
+     "source_values": [
+      "pride",
+      "shame",
+      "admiration",
+      "reproach"
+     ],
+     "corrections": "none. Clore & Ortony 2013 concur: 'one's own (e.g., pride, shame) or another's (e.g., admiration, reproach)'.",
+     "note": ""
+    },
+    "occ_attraction": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 207",
+     "source_kind": "university_page",
+     "quote": "Finally, the third branch contains one class of emotions: attraction emotions (love, hate), triggered by the appraisal of the aspects of objects w.r.t. the individual's likings.",
+     "source_values": [
+      "love",
+      "hate"
+     ],
+     "corrections": "none. Minor: Clore & Ortony 2013 illustrate the unappealing pole with 'disgust' ('appealing (e.g., love) or unappealing (e.g., disgust)'), a later wording choice by the authors, not a change to the type list.",
+     "note": ""
+    },
+    "occ_compound": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+     "source_title": "Adam, Herzig & Longin (2009), Synthese 168:201-248, p. 206",
+     "source_kind": "university_page",
+     "quote": "An other class, common both to Well-being emotions (first branch of the typology) and Attribution emotions (second branch of the typology) is Compounds emotions (attribution-wellbeing) (remorse, gratification, gratitude, anger) that arise when an individual appraises an action while focusing both on its approval an on the desirability of its consequences.",
+     "source_values": [
+      "remorse",
+      "gratification",
+      "gratitude",
+      "anger"
+     ],
+     "corrections": "none (order differs). Source confirms the total: 'The OCC typology contains twenty-two emotions types that are grouped in six classes' (2+4+6+4+2+4 = 22).",
+     "note": ""
+    }
+   },
+   "best_source": {
+    "url": "https://www.cs.uky.edu/~sgware/reading/papers/adam2009logical.pdf",
+    "title": "Adam, C., Herzig, A., & Longin, D. (2009). A logical formalization of the OCC theory of emotions. Synthese, 168, 201-248. doi:10.1007/s11229-009-9460-9 (open copy mirrored on a University of Kentucky course-reading page)",
+    "kind": "university_page",
+    "accessed": "2026-10-17",
+    "secondary": {
+     "url": "https://users.cs.northwestern.edu/~ortony/Andrew_Ortony_files/2013%20-%20OCC%20and%20constructionism.pdf",
+     "title": "Clore, G. L., & Ortony, A. (2013). Psychological construction in the OCC model of emotion. Emotion Review, 5(4), 335-343. doi:10.1177/1754073913489751 (author-hosted PDF, Northwestern)",
+     "kind": "author_page"
+    }
+   }
+  },
+  "gross": {
+   "constructs": {
+    "regulation_families": {
+     "status": "VERIFIED",
+     "source_url": "https://www.psychiatry.wisc.edu/courses/Nitschke/seminar/gross_2002_psychophys.pdf",
+     "source_title": "Gross (2002), Psychophysiology 39:281-291 - Figure 1 caption and text",
+     "source_kind": "university_page",
+     "quote": "Figure 1. A process model of emotion regulation. According to this model ... (1) selection of the situation; (2) modification of [the situation]; ... and (5) modulation of experiential, behavioral, or physiological respons[es]. Text: 'situation selection involves complex trade-offs ...'; 'This constitutes situation modification ...'; 'attentional deployment is used to select which of the many aspects of the situation you focus on'; 'cognitive change refers to selecting which of the many possible meanings ...'; 'Finally, response modulation refers to attempts to influence emotion response tendencies once they already have been elicited.' Frontiers 2019 (Kobylinska & Kusev): 'situation selection, situation modification, attention deployment, cognitive change and response modulation'.",
+     "source_values": [
+      "situation selection",
+      "situation modification",
+      "attentional deployment",
+      "cognitive change",
+      "response modulation"
+     ],
+     "corrections": "none. Variant: Kobylinska & Kusev write 'attention deployment'; Gross's own text uses 'attentional deployment'.",
+     "note": "Gross & John 2003 Figure 1 caption gives the same five in process form: '(1) selection of the situation, (2) mod[ification of the situation], (3) deployment of attention, (4) change of cognitions, and (5) modulation of experien[tial, behavioral, or physio]logical responses.'"
+    },
+    "antecedent_vs_response_focused": {
+     "status": "VERIFIED",
+     "source_url": "https://onlineacademiccommunity.uvic.ca/implicitassociationtestsyessir/wp-content/uploads/sites/9812/2025/12/gross-john-2003.pdf",
+     "source_title": "Gross & John (2003), JPSP 85(2):348-362",
+     "source_kind": "university_page",
+     "quote": "The first four of these processes are antecedent-focused, whereas the fifth is response-focused. ... Antecedent-focused strategies refer to things we do before the [emotion response tendencies have become fully activated] ... Response-focused strategies refer to things we do once an emotion [is already underway]. ... Reappraisal is an antecedent-focused strategy ... [suppression is] a response-focused strategy: it comes relatively late",
+     "source_values": [
+      "antecedent-focused",
+      "response-focused"
+     ],
+     "corrections": "none; mapping (first four families antecedent-focused, response modulation response-focused) confirmed. Gross 2002 gives the same wording.",
+     "note": ""
+    },
+    "erq_strategies": {
+     "status": "VERIFIED",
+     "source_url": "https://onlineacademiccommunity.uvic.ca/implicitassociationtestsyessir/wp-content/uploads/sites/9812/2025/12/gross-john-2003.pdf",
+     "source_title": "Gross & John (2003), JPSP 85(2):348-362",
+     "source_kind": "university_page",
+     "quote": "In this article, we describe five studies that examine individual differences in the use of two common emotion regulation strategies-- cognitive reappraisal and expressive suppression. In Study 1, we present brief scales to measure individual differences in the chronic use of these two strategies ... Cognitive reappraisal is a form of cognitive change ... Expressive suppression is a form of response modulation",
+     "source_values": [
+      "cognitive reappraisal",
+      "expressive suppression"
+     ],
+     "corrections": "none. Kobylinska & Kusev 2019 (Frontiers) confirm: 'cognitive reappraisal (antecedent focused strategy) and expressive suppression (response-focused strategy)'.",
+     "note": "The 2003 paper's passages read do not use the acronym 'ERQ'; the instrument is introduced as 'brief scales'."
+    },
+    "extended_model_stages": {
+     "status": "VERIFIED",
+     "source_url": "https://minerva-access.unimelb.edu.au/server/api/core/bitstreams/aa9eec35-cc41-4c73-ad6b-695c4afc37d2/content",
+     "source_title": "Agathos, Yurtbasi, O'Brien & Putica - The extended process model of emotion regulation in managing negative affect in PTSD: A systematic review (open repository copy)",
+     "source_kind": "open_access_review",
+     "quote": "Gross's pioneering extended process model (EPM; Gross, 2015) of ER emphasizes three critical stages in the ER process: identification, selection, and implementation. Monitoring of emotional states and regulation effectiveness occurs throughout these stages (Gross, 2015; Sheppes et al., 2015). The identification stage involves evaluating whether an emotional response requires regulation",
+     "source_values": [
+      "identification",
+      "selection",
+      "implementation"
+     ],
+     "corrections": "none; monitoring described as cross-cutting, matching the knowledge note.",
+     "note": "Gross 2015 (Psychological Inquiry) itself was not openly readable (T&F 403; NSF PAR connection refused). Wikiversity's EPM page also states Gross (2015) 'proposes a three-stage regulatory cycle comprising identification, selection, and implementation'."
+    }
+   },
+   "best_source": {
+    "url": "https://onlineacademiccommunity.uvic.ca/implicitassociationtestsyessir/wp-content/uploads/sites/9812/2025/12/gross-john-2003.pdf",
+    "title": "Gross, J. J., & John, O. P. (2003). Individual differences in two emotion regulation processes: Implications for affect, relationships, and well-being. JPSP, 85(2), 348-362 (copy on a University of Victoria course site)",
+    "kind": "university_page",
+    "accessed": "2026-10-17",
+    "secondary": [
+     {
+      "url": "https://www.psychiatry.wisc.edu/courses/Nitschke/seminar/gross_2002_psychophys.pdf",
+      "title": "Gross, J. J. (2002). Emotion regulation: Affective, cognitive, and social consequences. Psychophysiology, 39, 281-291 (copy on a UW-Madison course page)",
+      "kind": "university_page"
+     },
+     {
+      "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00072/full",
+      "title": "Kobylinska, D., & Kusev, P. (2019). Flexible emotion regulation: How situational demands and individual differences influence the effectiveness of regulatory strategies. Frontiers in Psychology, 10:72",
+      "kind": "open_access_review"
+     },
+     {
+      "url": "https://minerva-access.unimelb.edu.au/server/api/core/bitstreams/aa9eec35-cc41-4c73-ad6b-695c4afc37d2/content",
+      "title": "Agathos, J., Yurtbasi, M., O'Brien, H., & Putica, A. The extended process model of emotion regulation in managing negative affect in posttraumatic stress disorder: A systematic review (University of Melbourne repository copy)",
+      "kind": "open_access_review"
+     }
+    ]
+   }
+  },
+  "elliot": {
+   "constructs": {
+    "approach_avoidance_valence": {
+     "status": "VERIFIED",
+     "source_url": "https://personality-project.org/revelle/syllabi/classreadings/psp825804.pdf",
+     "source_title": "Elliot & Thrash (2002), JPSP 82(5):804-818, pp. 804-805",
+     "source_kind": "university_page",
+     "quote": "The distinction between approach and avoidance motivation has ... approach and avoidance motivation differ as a function of valence: In approach motivation, behavior is instigated or directed by a pos[itive/desirable] event or possibility (Elliot, 1999). This approach-avoidance distinction has been attended to in scientific psychology since its inception (see James, 1890 ...)",
+     "source_values": [
+      "approach",
+      "avoidance"
+     ],
+     "corrections": "none",
+     "note": "PMC8314248 (Lochbaum et al.) gives the same valence definition: 'An approach valence indicates a behavior that is initiated by a positive or desirable event or possibility.'"
+    },
+    "trichotomous_goals": {
+     "status": "VERIFIED",
+     "source_url": "https://personality-project.org/revelle/syllabi/classreadings/psp825804.pdf",
+     "source_title": "Elliot & Thrash (2002), JPSP 82(5):804-818, p. 806",
+     "source_kind": "university_page",
+     "quote": "Achievement goal theorists have identified three distinct types of achievement goals that are operative in most achievement contexts (Elliot & Harackiewicz, 1996): mastery goals (which focus on the development of competence and task mastery), performance-approach goals (which focus on attaining competence relative to others), and performance-avoidance goals (which focus on avoiding incompetence relative to others). Mastery and performance approach are approach goals, whereas performance avoidance is an avoidance goal.",
+     "source_values": [
+      "mastery goals",
+      "performance-approach goals",
+      "performance-avoidance goals"
+     ],
+     "corrections": "none to the list. Citation nuance: this source attributes the trichotomous framework to Elliot & Harackiewicz (1996); the knowledge label cites Elliot 1999 / Elliot & Church 1997. Lochbaum et al. (PMC8314248) likewise: 'proposed a trichotomous framework with the mastery, performance-approach, and performance-avoidance goals.'",
+     "note": ""
+    },
+    "two_by_two_goals": {
+     "status": "VERIFIED",
+     "source_url": "https://cie.asu.edu/ojs/index.php/cieatasu/article/download/1418/709/7434",
+     "source_title": "Poondej & Lerdpornkulrat (2016), Current Issues in Education 19(1)",
+     "source_kind": "open_access_review",
+     "quote": "the 2 x 2 achievement goal framework (mastery-approach, mastery-avoidance, performance-approach, and performance-avoidance goal orientations) ... mastery-approach; mastery-avoidance; performance-approach; and performance-avoidance. In the mastery-avoidance goal construct, competence was defined as 'the absolute requirements of the ...' (Elliot & McGregor, 2001, p. 502)",
+     "source_values": [
+      "mastery-approach",
+      "mastery-avoidance",
+      "performance-approach",
+      "performance-avoidance"
+     ],
+     "corrections": "none. PMC8314248 confirms derivation: Elliot 'expanded his trichotomous model with bifurcation of the mastery goal into the mastery-approach and mastery-avoidance goals.'",
+     "note": "Elliot & McGregor 2001 itself was not openly readable (HAL mirror blocked by an Anubis challenge; APA not attempted)."
+    },
+    "approach_avoidance_temperament": {
+     "status": "VERIFIED",
+     "source_url": "https://personality-project.org/revelle/syllabi/classreadings/psp825804.pdf",
+     "source_title": "Elliot & Thrash (2002), JPSP 82(5):804-818, abstract and p. 807",
+     "source_kind": "university_page",
+     "quote": "[measures of extraversion, positive emotionality, and behavioral activation system] loaded together on 1 factor (Approach Temperament) and measures of neuroticism, negative emotionality, and behavioral inhibition system loaded on another factor (Avoidance Temperament). ... a two-factor structure representing approach temperament (extraversion, positive emotionality, and BAS) and avoidance temperament (neuroticism, negative emotionality, and BIS).",
+     "source_values": [
+      "Approach Temperament (extraversion, positive emotionality, BAS)",
+      "Avoidance Temperament (neuroticism, negative emotionality, BIS)"
+     ],
+     "corrections": "none",
+     "note": ""
+    }
+   },
+   "best_source": {
+    "url": "https://personality-project.org/revelle/syllabi/classreadings/psp825804.pdf",
+    "title": "Elliot, A. J., & Thrash, T. M. (2002). Approach-avoidance motivation in personality: Approach and avoidance temperaments and goals. JPSP, 82(5), 804-818 (copy on W. Revelle's Northwestern course-readings site)",
+    "kind": "university_page",
+    "accessed": "2026-10-17",
+    "secondary": [
+     {
+      "url": "https://cie.asu.edu/ojs/index.php/cieatasu/article/download/1418/709/7434",
+      "title": "Poondej, C., & Lerdpornkulrat, T. (2016). Examining the construct validity of the Thai version of the 2 x 2 achievement goal orientation scale among undergraduate students. Current Issues in Education, 19(1) (ASU open journal)",
+      "kind": "open_access_review"
+     },
+     {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8314248",
+      "title": "Lochbaum, M., Zanatta, T., & Kazak, Z. (2019). The 2 x 2 achievement goals in sport and physical activity contexts: A meta-analytic test ... EJIHPE 10(1):173-205",
+      "kind": "open_access_review"
+     }
+    ]
+   }
+  },
+  "mayer_salovey": {
+   "constructs": {
+    "four_branches": {
+     "status": "VERIFIED",
+     "source_url": "https://sgs.salzburgglobal.org/fileadmin/user_upload/Documents/2010-2019/2018/Session_603/Brackett_et_al.__2016__Handbook_of_Emotion.pdf",
+     "source_title": "Brackett, Rivers, Bertoli & Salovey (2016), Handbook of Emotions ch. 30, p. 515",
+     "source_kind": "handbook_chapter",
+     "quote": "In 1997, Mayer and Salovey revised their original (Salovey & Mayer, 1990) definition ... 'Emotional intelligence involves the ability to perceive accurately, appraise, and express emotion; the ability to access and/or generate feelings when they facilitate thought; the ability to understand emotion and emotional knowledge; and the ability to regulate emotions to promote emotional and intellectual growth. (p. 10)' ... the four-branch model of emotional intelligence, which encompasses perceiving emotion, using emotion to facilitate thought, understanding emotion, and regulating emotion (Mayer & Salovey, 1997). Neubauer & Freudenthaler 2005: 'Branch I (Perception, Appraisal and Expression of Emotion) ... Branch II (Emotional Facilitation of Thinking) ... Branch III (Understanding and Analyzing Emotions) ... Branch IV (Reflective Regulation of Emotions)'.",
+     "source_values": [
+      "Perception, Appraisal and Expression of Emotion (perceiving emotion)",
+      "Emotional Facilitation of Thinking (using emotion to facilitate thought)",
+      "Understanding and Analyzing Emotions (understanding emotion)",
+      "Reflective Regulation of Emotions to Promote Emotional and Intellectual Growth (regulating/managing emotion)"
+     ],
+     "corrections": "Short labels confirmed. Parenthetical 1997 headings in the knowledge list need small adjustments: Branch 3 heading is 'Understanding and Analyzing Emotions' (knowledge appended '; employing emotional knowledge', which comes from the 1997 definition text, not the branch heading); Branch 1 heading is 'Perception, Appraisal and Expression of Emotion'; Branch 4 matches. Brackett et al. 2016 label branch 4 'regulating emotion'; 'managing emotions' is the MSCEIT/common label.",
+     "note": "Both chapters are co-authored by model authors or published in EI handbooks; branch wording differs slightly between them but the four constructs are identical."
+    },
+    "salovey_mayer_1990_components": {
+     "status": "VERIFIED",
+     "source_url": "https://center.uoregon.edu/StartingStrong/uploads/STARTINGSTRONG2016/HANDOUTS/KEY_46201/pub153_SaloveyMayerICP1990_OCR.pdf",
+     "source_title": "Salovey & Mayer (1990), Imagination, Cognition and Personality 9:185-211 (OCR copy)",
+     "source_kind": "university_page",
+     "quote": "Abstract: '... a set of skills hypothesized to contribute to the accurate appraisal and expression of emotion in oneself and in others, the effective regulation of emotion in self and others, and the use of feelings to motivate, plan, and achieve in one's life.' Section headings: 'APPRAISAL AND EXPRESSION OF EMOTION', 'REGULATION OF EMOTION' (with 'Regulation of Emotion in the Self' / 'Regulation of Emotion in Others'), 'UTILIZING EMOTIONAL INTELLIGENCE'. Neubauer & Freudenthaler 2005: 'three major components of EI were postulated: appraisal and expression of emotion, regulation of emotions, and utilization of emotions (with further subdivisions of each of these branches).'",
+     "source_values": [
+      "appraisal and expression of emotion",
+      "regulation of emotion",
+      "utilizing emotional intelligence / utilization of emotion(s)"
+     ],
+     "corrections": "Third component: the 1990 paper's own heading is 'Utilizing emotional intelligence'; 'utilization of emotion' is the secondary-source rendering (Neubauer & Freudenthaler). Knowledge list is otherwise exact.",
+     "note": "UNH Scholars record (scholars.unh.edu/psych_facpub/450) shows the same abstract but no open PDF."
+    },
+    "msceit": {
+     "status": "VERIFIED",
+     "source_url": "https://www.eiconsortium.org/measures/msceit.html",
+     "source_title": "EI Consortium - MSCEIT measure page; plus Brackett & Salovey (2006) Psicothema",
+     "source_kind": "other",
+     "quote": "EI Consortium: 'Perceiving Emotions: The ability to perceive emotions in oneself and others ...' 'Facilitating Thought: The ability to generate, use, and feel emotion ...' 'Understanding Emotions: The ability to understand emotional information ...' 'Managing Emotions: The ability to be open to feelings, and to modulate them ...' 'MSCEIT provides 15 main scores: Total EI score, two Area scores, four Branch scores, and eight Task scores.' Brackett & Salovey 2006: 'seven scores: one for each of the four branches, two area scores, and a total EI score. The two area scores are termed: Experiential EI (branches 1 and 2 combined) ... Strategic EI (branches 3 and 4 combined)'.",
+     "source_values": [
+      "Perceiving Emotions",
+      "Facilitating Thought",
+      "Understanding Emotions",
+      "Managing Emotions"
+     ],
+     "corrections": "none to the branch names; Experiential/Strategic area scores and total EI confirmed. Score-count statements differ by granularity across sources (Brackett et al. 2016: 'Five scores ... an overall emotional intelligence score and four branch scores'; Brackett & Salovey 2006: seven; EI Consortium: 15 including task scores) - not a contradiction of the construct list.",
+     "note": "Brackett et al. 2016 confirms 'The test assesses each of the four branches of the ability model via two tasks.'"
+    }
+   },
+   "best_source": {
+    "url": "https://sgs.salzburgglobal.org/fileadmin/user_upload/Documents/2010-2019/2018/Session_603/Brackett_et_al.__2016__Handbook_of_Emotion.pdf",
+    "title": "Brackett, M. A., Rivers, S. E., Bertoli, M. C., & Salovey, P. (2016). Emotional intelligence. In Handbook of Emotions (4th ed., ch. 30, pp. 513-531). Guilford (PDF mirrored by Salzburg Global Seminar)",
+    "kind": "handbook_chapter",
+    "accessed": "2026-10-17",
+    "secondary": [
+     {
+      "url": "https://methdiag.uni-wuppertal.de/fileadmin/psychologie/methdiag/EI/SchulzeRoberts_2005_EI_CH02_EN.pdf",
+      "title": "Neubauer, A. C., & Freudenthaler, H. H. (2005). Models of emotional intelligence. In Schulze & Roberts (Eds.), Emotional Intelligence: An International Handbook (pp. 31-50). Hogrefe & Huber (copy on Univ. Wuppertal site)",
+      "kind": "handbook_chapter"
+     },
+     {
+      "url": "https://center.uoregon.edu/StartingStrong/uploads/STARTINGSTRONG2016/HANDOUTS/KEY_46201/pub153_SaloveyMayerICP1990_OCR.pdf",
+      "title": "Salovey, P., & Mayer, J. D. (1990). Emotional intelligence. Imagination, Cognition and Personality, 9(3), 185-211 (OCR copy on a University of Oregon conference-handout page)",
+      "kind": "university_page"
+     },
+     {
+      "url": "https://www.psicothema.com/pi?pii=3273",
+      "title": "Brackett, M. A., & Salovey, P. (2006). Measuring emotional intelligence with the Mayer-Salovey-Caruso Emotional Intelligence Test (MSCEIT). Psicothema, 18 (suppl.), 34-41 (open journal)",
+      "kind": "open_access_review"
+     },
+     {
+      "url": "https://www.eiconsortium.org/measures/msceit.html",
+      "title": "Consortium for Research on Emotional Intelligence in Organizations - MSCEIT measure page",
+      "kind": "other"
+     }
+    ]
+   }
+  },
+  "bronfenbrenner": {
+   "constructs": {
+    "ecological_systems": {
+     "status": "VERIFIED",
+     "source_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1233925/full",
+     "source_title": "Tong & An (2024), Frontiers in Psychology 14:1233925",
+     "source_kind": "open_access_review",
+     "quote": "Microsystem: 'Settings such as family, school, peer group and workplace are all regarded as microsystems.' Mesosystem: 'comprises the linkages and processes taking place between two or more settings containing the developing person'. Exosystem: '[linkages between settings] at least one of which does not contain the developing person'. Macrosystem: 'the overarching pattern of micro-, meso-, and exosystems characteristic of a given culture or subculture'. Chronosystem: 'encompasses change or consistency over time not only in the characteristics of the person [but also of the environment]'.",
+     "source_values": [
+      "microsystem",
+      "mesosystem",
+      "exosystem",
+      "macrosystem",
+      "chronosystem"
+     ],
+     "corrections": "none",
+     "note": "The review's definitions follow Bronfenbrenner (1994) wording."
+    },
+    "ppct": {
+     "status": "VERIFIED",
+     "source_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1233925/full",
+     "source_title": "Tong & An (2024), Frontiers in Psychology 14:1233925",
+     "source_kind": "open_access_review",
+     "quote": "Process: comprises the 'primary mechanisms producing human development' [proximal processes]. Person: '[characteristics with the] capacity to influence the emergence and operation of proximal processes'. Context: ''Context' includes the micro-, meso-, exo-, and macrosystems in the earlier EST model'. Time: 'Time extends the original chronosystem (macro-time) to include another two levels [micro-time and meso-time]'.",
+     "source_values": [
+      "Process",
+      "Person",
+      "Context",
+      "Time"
+     ],
+     "corrections": "none",
+     "note": "Review attributes the PPCT formulation to Bronfenbrenner & Morris (2006) and Bronfenbrenner (1994), matching the knowledge citations."
+    }
+   },
+   "best_source": {
+    "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2023.1233925/full",
+    "title": "Tong, P., & An, I. S. (2024). Review of studies applying Bronfenbrenner's bioecological theory in international and intercultural education research. Frontiers in Psychology, 14:1233925",
+    "kind": "open_access_review",
+    "accessed": "2026-10-17"
+   }
+  },
+  "ekman": {
+   "constructs": {
+    "ekman_1999_expanded": {
+     "status": "VERIFIED",
+     "source_url": "https://w3id.org/spice/SON/ekmanEmotions/0.0.2",
+     "source_title": "SPICE Semantic Ontology Network (SON) - ekmanEmotions ontology (LODE rendering), bib-ref annotation quoting Ekman (1999) pp. 55-56",
+     "source_kind": "other",
+     "accessed": "2026-10-17",
+     "quote": "\"I propose that the following list of emotions will be found to share the characteristics listed in Table 3.1\" ... \"amusement, anger, contempt, contentment, disgust, embarassment, excitement, fear, guilt,\" \"pride in achievement, relief, sadness/distress, satisfaction, sensory pleasure, and shame\" -- citation given: Ekman, Paul. \"Basic emotions.\" Handbook of cognition and emotion 98.45-60 (1999): 16 - page 55, 56.",
+     "source_values": [
+      "amusement",
+      "anger",
+      "contempt",
+      "contentment",
+      "disgust",
+      "embarassment",
+      "excitement",
+      "fear",
+      "guilt",
+      "pride in achievement",
+      "relief",
+      "sadness/distress",
+      "satisfaction",
+      "sensory pleasure",
+      "shame"
+     ],
+     "corrections": "none (15 items, identical wording and order; the ontology's 'embarassment' is a typo for 'embarrassment')",
+     "note": "The ontology is a third-party artifact (H2020 SPICE project) that quotes the chapter verbatim with page numbers, so it is a secondary source displaying the list, not the chapter itself. The paulekman.com PDF of the chapter (https://www.paulekman.com/wp-content/uploads/2013/07/Basic-Emotions.pdf) was fetched but is a CCITT image scan with no text layer, so it could not be read. Wikiversity 'Recognizing Emotions' cites the same chapter but lists only seven emotions. Resolved URL after redirect: https://lode.opencitations.net/extract?read_as=owl&url=https://raw.githubusercontent.com/spice-h2020/SON/main/ekmanEmotions/ontology.owl"
+    }
+   }
+  },
+  "plutchik": {
+   "constructs": {
+    "plutchik_intensity_terms": {
+     "status": "VERIFIED",
+     "source_url": "https://arxiv.org/pdf/2602.06430",
+     "source_title": "Iwaki & Takahashi, 'Investigating the structure of emotions by analyzing similarity and association of emotion words' (arXiv 2602.06430), Table 1 '48 emotion words proposed by Plutchik'",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Table 1: 48 emotion words proposed by Plutchik | primary emotions: joy trust fear surprise sadness disgust anger anticipation | strong derived emotions: ecstasy admiration terror amazement grief loathing rage vigilance | weak derived emotions: serenity acceptance apprehension distraction pensiveness boredom annoyance interest",
+     "source_values": [
+      "ecstasy",
+      "admiration",
+      "terror",
+      "amazement",
+      "grief",
+      "loathing",
+      "rage",
+      "vigilance",
+      "joy",
+      "trust",
+      "fear",
+      "surprise",
+      "sadness",
+      "disgust",
+      "anger",
+      "anticipation",
+      "serenity",
+      "acceptance",
+      "apprehension",
+      "distraction",
+      "pensiveness",
+      "boredom",
+      "annoyance",
+      "interest"
+     ],
+     "corrections": "none (same 24 terms; the paper groups by tier rather than by primary-triplet, but the pairing strong/primary/weak per primary is identical)",
+     "note": "The paper's Figure 1 is credited '(c) Robert Plutchik'. Wikipedia 'Emotion classification' shows the same tiers in an 'Emotions and opposites' table but with added synonyms (e.g. 'Ecstasy, Elation', 'Apprehension, Dismay'), so it is less clean. Plutchik's 2001 American Scientist article was located only as a CCITT scan (emotionalcompetency.com) with no text layer."
+    },
+    "plutchik_primary_dyads": {
+     "status": "VERIFIED",
+     "source_url": "https://en.wikipedia.org/wiki/Emotion_classification",
+     "source_title": "Wikipedia: Emotion classification - section 'Plutchik's wheel of emotions', 'Dyads (Combinations)' table",
+     "source_kind": "wikipedia",
+     "accessed": "2026-10-17",
+     "wikipedia_citation": "Dyad tables cited to [51] 'Robert Plutchik's Psychoevolutionary Theory of Basic Emotions' (PDF), Adliterate.com; [52] Jonathan Turner (2000), On the Origins of Human Emotions, Stanford University Press, p. 76; [53] Athar et al. (2011) IJSER 2(6); [54] TenHouten (2016) Alienation and Affect; [55] Chorianopoulos et al. (2015) Entertainment Computing - ICEC 2015; [56] Plutchik (1991) The Emotions, University Press of America. Wheel itself cited to [49] personalityresearch.org and [50] Plutchik, 'The Nature of Emotions', American Scientist (archived 2001).",
+     "quote": "\"Primary dyad = one petal apart = Love = Joy + Trust\" ... table rows: \"Love, Friendliness | Joy + Trust\"; \"Submission, Modesty | Trust + Fear\"; \"Awe, Alarm | Fear + Surprise\"; \"Disapproval, Disappointment | Surprise + Sadness\"; \"Remorse, Misery | Sadness + Disgust\"; \"Contempt, Scorn | Disgust + Anger\"; \"Aggressiveness, Vengeance | Anger + Anticipation\"; \"Optimism, Courage | Anticipation + Joy\"",
+     "source_values": [
+      "Love, Friendliness = Joy + Trust",
+      "Submission, Modesty = Trust + Fear",
+      "Awe, Alarm = Fear + Surprise",
+      "Disapproval, Disappointment = Surprise + Sadness",
+      "Remorse, Misery = Sadness + Disgust",
+      "Contempt, Scorn = Disgust + Anger",
+      "Aggressiveness, Vengeance = Anger + Anticipation",
+      "Optimism, Courage = Anticipation + Joy"
+     ],
+     "corrections": "Compositions and first-listed labels match all 8. Wikipedia gives alternate labels (awe/alarm; disapproval/disappointment). Corroboration: arXiv 2602.06430 Table 1 lists the 24 'secondary emotions' and uses 'disappointment' (not 'disapproval') for Surprise+Sadness: 'optimism hope anxiety love guilt delight submission curiosity sentimentality awe despair shame disappointment unbelief outrage remorse envy pessimism contempt cynicism morbidness aggressiveness pride dominance'.",
+     "note": "Wikipedia does not label each row with its tier; tier follows from petal distance, and its three worked examples (Love primary, Envy secondary, Shame tertiary) agree with the knowledge list. No open text copy of the 2001 American Scientist figure was found."
+    },
+    "plutchik_secondary_dyads": {
+     "status": "VERIFIED",
+     "source_url": "https://en.wikipedia.org/wiki/Emotion_classification",
+     "source_title": "Wikipedia: Emotion classification - 'Dyads (Combinations)' table",
+     "source_kind": "wikipedia",
+     "accessed": "2026-10-17",
+     "wikipedia_citation": "Same as plutchik_primary_dyads: [51] Adliterate.com PDF; [52] Turner 2000 p.76; [53] Athar et al. 2011; [54] TenHouten 2016; [55] Chorianopoulos et al. 2015; [56] Plutchik 1991 The Emotions.",
+     "quote": "\"Secondary dyad = two petals apart = Envy = Sadness + Anger\" ... rows: \"Guilt, Excitement | Joy + Fear\"; \"Curiosity | Trust + Surprise\"; \"Despair | Fear + Sadness\"; \"Unbelief, Shock | Surprise + Disgust\"; \"Envy, Sullenness | Sadness + Anger\"; \"Cynicism | Disgust + Anticipation\"; \"Pride, Victory | Anger + Joy\"; \"Hope, Fatalism | Anticipation + Trust\"",
+     "source_values": [
+      "Guilt, Excitement = Joy + Fear",
+      "Curiosity = Trust + Surprise",
+      "Despair = Fear + Sadness",
+      "Unbelief, Shock = Surprise + Disgust",
+      "Envy, Sullenness = Sadness + Anger",
+      "Cynicism = Disgust + Anticipation",
+      "Pride, Victory = Anger + Joy",
+      "Hope, Fatalism = Anticipation + Trust"
+     ],
+     "corrections": "none on composition or first-listed labels; Wikipedia confirms the knowledge note that Anticipation+Trust is rendered 'Hope' or 'Fatalism'. arXiv 2602.06430 uses 'hope'.",
+     "note": "See primary dyads note."
+    },
+    "plutchik_tertiary_dyads": {
+     "status": "VERIFIED",
+     "source_url": "https://en.wikipedia.org/wiki/Emotion_classification",
+     "source_title": "Wikipedia: Emotion classification - 'Dyads (Combinations)' table",
+     "source_kind": "wikipedia",
+     "accessed": "2026-10-17",
+     "wikipedia_citation": "Same as plutchik_primary_dyads: [51] Adliterate.com PDF; [52] Turner 2000 p.76; [53] Athar et al. 2011; [54] TenHouten 2016; [55] Chorianopoulos et al. 2015; [56] Plutchik 1991 The Emotions.",
+     "quote": "\"Tertiary dyad = three petals apart = Shame = Fear + Disgust\" ... rows: \"Delight, Doom | Joy + Surprise\"; \"Sentimentality, Resignation | Trust + Sadness\"; \"Shame, Prudishness | Fear + Disgust\"; \"Outrage, Hate | Surprise + Anger\"; \"Pessimism | Sadness + Anticipation\"; \"Morbidness, Derisiveness | Disgust + Joy\"; \"Dominance | Anger + Trust\"; \"Anxiety, Dread | Anticipation + Fear\"",
+     "source_values": [
+      "Delight, Doom = Joy + Surprise",
+      "Sentimentality, Resignation = Trust + Sadness",
+      "Shame, Prudishness = Fear + Disgust",
+      "Outrage, Hate = Surprise + Anger",
+      "Pessimism = Sadness + Anticipation",
+      "Morbidness, Derisiveness = Disgust + Joy",
+      "Dominance = Anger + Trust",
+      "Anxiety, Dread = Anticipation + Fear"
+     ],
+     "corrections": "none on composition or first-listed labels. (Wikipedia additionally lists 'opposite' combinations - Bittersweetness, Ambivalence, Frozenness, Confusion - citing TenHouten; these are not in Plutchik 2001 and not in the knowledge list.)",
+     "note": "See primary dyads note. A WebSearch summary noted that some sources (TenHouten) use different tertiary labels such as 'Resourcefulness' and 'Sullenness'; not verified by fetch."
+    }
+   }
+  },
+  "russell": {
+   "constructs": {
+    "russell_dimensions": {
+     "status": "VERIFIED",
+     "source_url": "https://pdodds.w3.uvm.edu/research/papers/others/1980/russell1980a.pdf",
+     "source_title": "Russell, J. A. (1980). A circumplex model of affect. JPSP 39(6), 1161-1178 (scanned copy with OCR layer, hosted by P. S. Dodds, University of Vermont)",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "Abstract: \"a unidimensional scaling on hypothesized pleasure-displeasure and degree-of-arousal dimensions\"; p. 1166: \"The horizontal and vertical axes are easily interpretable as the proposed pleasure-displeasure and degree of arousal dimensions.\"",
+     "source_values": [
+      "pleasure-displeasure",
+      "degree of arousal (degree-of-arousal)"
+     ],
+     "corrections": "none; Russell's own labels are 'pleasure-displeasure' and 'degree of arousal'. The parentheticals '(valence)' and '(arousal-sleepiness)' in the knowledge list are glosses, not Russell's 1980 wording (he uses 'sleepiness' only as the 270-degree concept).",
+     "note": "Text extracted locally with pdftotext from the OCR layer (Acrobat Paper Capture)."
+    },
+    "russell_octants": {
+     "status": "VERIFIED",
+     "source_url": "https://pdodds.w3.uvm.edu/research/papers/others/1980/russell1980a.pdf",
+     "source_title": "Russell (1980), A circumplex model of affect - abstract and Figure 1 'Eight affect concepts in a circular order'",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "Abstract: \"affective concepts fall in a circle in the following order: pleasure (0 deg), excitement (45 deg), arousal (90 deg), distress (135 deg), displeasure (180 deg), depression (225 deg), sleepiness (270 deg), and relaxation (315 deg).\" Figure 1 labels (OCR): AROUSAL, DISTRESS, EXCITEMENT, MISERY, PLEASURE, DEPRESSION, CONTENTMENT, SLEEPINESS. Method: \"eight categories ... labeled arousal, contentment, depression, distress, excitement, misery, pleasure, and sleepiness.\"",
+     "source_values": [
+      "pleasure (0)",
+      "excitement (45)",
+      "arousal (90)",
+      "distress (135)",
+      "displeasure / misery (180)",
+      "depression (225)",
+      "sleepiness (270)",
+      "relaxation / contentment (315)"
+     ],
+     "corrections": "none; the paper itself uses both renderings - 'displeasure' and 'relaxation' in the abstract, 'misery' and 'contentment' in Figure 1 and the category-sort task - so the knowledge list's 'displeasure (misery)' and 'contentment (relaxation)' are both correct. Order matches.",
+     "note": ""
+    },
+    "russell_28_words": {
+     "status": "VERIFIED",
+     "source_url": "https://pdodds.w3.uvm.edu/research/papers/others/1980/russell1980a.pdf",
+     "source_title": "Russell (1980), A circumplex model of affect - Table 2 'Frequency of Placement of 28 Words Into Eight Categories' (p. 1166) and Figure 2 angles (p. 1167)",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "Table 2 row order (OCR): Happy, Delighted, Excited, Astonished, Aroused, Tense, Alarmed, Angry, Afraid, Annoyed, Distressed, Frustrated, Miserable, Sad, Gloomy, Depressed, Bored, Droopy, Tired, Sleepy, Calm, Relaxed, Satisfied, At ease ['Atealle' in OCR], Content, Serene, Glad, Pleased. Text: \"Beginning with happy at 7.8 deg ... delighted (24.9 deg) ... Excited fell at 48.6 deg ... astonished (69.8 deg) and finally aroused (73.8 deg) ... tense (92.8 deg), alarmed (96.5 deg) ... miserable (188.7 deg), sad (207.5 deg), through to droopy (256.6 deg) and tired (267.7 deg) ... sleepy fell at 271.9 deg\"",
+     "source_values": [
+      "happy",
+      "delighted",
+      "excited",
+      "astonished",
+      "aroused",
+      "tense",
+      "alarmed",
+      "angry",
+      "afraid",
+      "annoyed",
+      "distressed",
+      "frustrated",
+      "miserable",
+      "sad",
+      "gloomy",
+      "depressed",
+      "bored",
+      "droopy",
+      "tired",
+      "sleepy",
+      "calm",
+      "relaxed",
+      "satisfied",
+      "at ease",
+      "content",
+      "serene",
+      "glad",
+      "pleased"
+     ],
+     "corrections": "none - all 28 words and their circular order match Table 2 exactly.",
+     "note": "Table 2 order is the canonical circular order used in Figure 2. Study 3 substituted 'drowsy' for 'droopy' (p. 1170: 'drowsy was used in place of droopy'), which does not affect the 28-word list."
+    }
+   }
+  },
+  "pad": {
+   "constructs": {
+    "pad_dimensions": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/mehrabian1996analysis.pdf",
+     "source_title": "Mehrabian, A. (1996). Analysis of the Big-five Personality Factors in Terms of the PAD Temperament Model. Australian Journal of Psychology 48(2), 86-92 (scan with OCR layer hosted at University of Kentucky CS)",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "\"the following three basic scales of temperament were developed: Trait Pleasure-Displeasure, Trait Arousability, and Trait Dominance-Submissiveness.\" ... \"+P, +A, and +D to refer to pleasant, arousable, and dominant temperament, respectively, and ... -P, -A, and -D to refer to unpleasant, unarousable, and submissive temperament\". Corroborating state-level labels, Wikipedia 'PAD emotional state model' (citing Mehrabian 1980, Basic dimensions for a general psychological theory, pp. 39-53): \"Pleasure-Displeasure Scale\", \"Arousal-Nonarousal Scale\", \"Dominance-Submissiveness Scale\".",
+     "source_values": [
+      "Trait Pleasure-Displeasure (P)",
+      "Trait Arousability (A)",
+      "Trait Dominance-Submissiveness (D)"
+     ],
+     "corrections": "Minor: in Mehrabian's 1996 temperament framework the A axis is named 'Trait Arousability' (poles 'arousable/unarousable'), not 'arousal-nonarousal'; 'Arousal-Nonarousal' is the state-level scale name (Mehrabian 1980, per Wikipedia). P and D labels match.",
+     "note": "This is a different 1996 Mehrabian paper from the Current Psychology 14:261-292 paper the construct cites, but it presents the same PAD temperament model. The Current Psychology paper itself was not accessible (Springer)."
+    },
+    "pad_octants": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/mehrabian1996analysis.pdf",
+     "source_title": "Mehrabian (1996), Analysis of the Big-five Personality Factors in Terms of the PAD Temperament Model, Aust. J. Psychol. 48(2) - p. 87; corroborated by Mehrabian's own page https://kaaj.com/psych/scales/temp.html",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "\"it has been useful to describe four diagonals in PAD space as follows: Exuberant-Bored = (+P+A+D) vs. (-P-A-D); Dependent-Disdainful = (+P+A-D) vs. (-P-A+D); Relaxed-Anxious = (+P-A+D) vs. (-P+A-D); Docile-Hostile = (+P-A-D) vs. (-P+A+D)\". kaaj.com (author page): \"Exuberant (+P+A+D) vs. Bored (-P-A-D)\", \"Dependent (+P+A-D) vs. Disdainful (-P-A+D)\", \"Relaxed (+P-A+D) vs. Anxious (-P+A-D)\", \"Docile (+P-A-D) vs. Hostile (-P+A+D)\" - attributed there to Mehrabian (1987, 1991).",
+     "source_values": [
+      "Exuberant (+P+A+D)",
+      "Bored (-P-A-D)",
+      "Dependent (+P+A-D)",
+      "Disdainful (-P-A+D)",
+      "Relaxed (+P-A+D)",
+      "Anxious (-P+A-D)",
+      "Docile (+P-A-D)",
+      "Hostile (-P+A+D)"
+     ],
+     "corrections": "none - all eight labels and sign patterns match, in the same four opposed pairs.",
+     "note": "The author's page attributes the octant labels to Mehrabian 1987 and 1991 rather than 1996; the construct label 'Mehrabian 1996' is a reasonable citation since the 1996 papers restate them."
+    }
+   }
+  },
+  "scherer": {
+   "constructs": {
+    "cpm_components": {
+     "status": "VERIFIED",
+     "source_url": "https://www.unige.ch/cisa/download_file/view/135/245",
+     "source_title": "Scherer, K. R. (2005). What are emotions? And how can they be measured? Social Science Information 44(4), 695-729 - Table 1 (p. 698) (PDF hosted on unige.ch/cisa/gew)",
+     "source_kind": "author_page",
+     "accessed": "2026-10-17",
+     "quote": "TABLE 1 Relationships between organismic subsystems and the functions and components of emotion ... Emotion component: \"Cognitive component (appraisal)\"; \"Neurophysiological component (bodily symptoms)\"; \"Motivational component (action tendencies)\"; \"Motor expression component (facial and vocal expression)\"; \"Subjective feeling component (emotional experience)\"",
+     "source_values": [
+      "Cognitive component (appraisal)",
+      "Neurophysiological component (bodily symptoms)",
+      "Motivational component (action tendencies)",
+      "Motor expression component (facial and vocal expression)",
+      "Subjective feeling component (emotional experience)"
+     ],
+     "corrections": "none - exact match including parentheticals.",
+     "note": "Also open at https://static1.squarespace.com/static/55917f64e4b0cd3b4705b68c/t/5bc7c2fba4222f0b94cc8550/1539818235703/scherer+%282005%29.pdf (not fetched)."
+    },
+    "grid_24_terms": {
+     "status": "VERIFIED",
+     "source_url": "https://www.w3.org/TR/emotion-voc/",
+     "source_title": "W3C: Vocabularies for EmotionML (W3C Working Group Note), section 2.4 'FSRE categories'",
+     "source_kind": "other",
+     "accessed": "2026-10-17",
+     "quote": "Section 2.4 FSRE categories (24 terms): anger, anxiety, being hurt, compassion, contempt, contentment, despair, disappointment, disgust, fear, guilt, happiness, hate, interest, irritation, jealousy, joy, love, pleasure, pride, sadness, shame, stress, surprise. Cited as: Fontaine, J. R., Scherer, K. R., Roesch, E. B., & Ellsworth, P. C. (2007). The World of Emotions Is Not Two-Dimensional. Psychological Science, 18(12), 1050-1057.",
+     "source_values": [
+      "anger",
+      "anxiety",
+      "being hurt",
+      "compassion",
+      "contempt",
+      "contentment",
+      "despair",
+      "disappointment",
+      "disgust",
+      "fear",
+      "guilt",
+      "happiness",
+      "hate",
+      "interest",
+      "irritation",
+      "jealousy",
+      "joy",
+      "love",
+      "pleasure",
+      "pride",
+      "sadness",
+      "shame",
+      "stress",
+      "surprise"
+     ],
+     "corrections": "none - same 24 terms (W3C lists them alphabetically; knowledge list is grouped by valence).",
+     "note": "The Fontaine et al. 2007 paper itself is open (CC-BY green copy at https://archive-ouverte.unige.ch/unige:97776; course copy at https://cs.uwaterloo.ca/~jhoey/teaching/cs886-affect/papers/Fontaine_Scherer_Roesch_Ellsworth.pdf, fetched) and confirms 'a Web-based questionnaire composed of 24 emotion terms and 144 emotion features', but the 24 terms appear there only inside Figure 1 (image), so the W3C note is the accessible text source. The construct's knowledge note said '(SAGE 403)'; the W3C page resolves that. unige.ch GRID pages (/cisa/GRID, grid-book) are 404 and the unige 'download_file' links returned unrelated press clippings."
+    },
+    "cpm_secs": {
+     "status": "VERIFIED",
+     "source_url": "https://www.unige.ch/fapse/e3lab/application/files/9617/7739/2796/2005-Sander_Grandjean__Scherer-Neural_Networks.pdf",
+     "source_title": "Sander, D., Grandjean, D., & Scherer, K. R. (2005). A systems approach to appraisal mechanisms in emotion. Neural Networks 18, 317-352 - section 1.2 (pp. 319-320) and Table 3 (p. 326) (PDF hosted by University of Geneva E3 Lab)",
+     "source_kind": "author_page",
+     "accessed": "2026-10-17",
+     "quote": "\"(1) Relevance detection ... Three checks are involved: (a) Novelty check ... three features of novelty: (i) suddenness ... (ii) familiarity ... (iii) predictability; (b) Intrinsic pleasantness check; (c) Goal/need relevance check. (2) Implication assessment ... five checks ...: (a) Causal attribution check ... agent and intentionality. In other words, who did it and why?; (b) Outcome probability check; (c) Discrepancy-from-expectation check; (d) Goal/need conduciveness check; (e) Urgency check. (3) Coping potential determination ... Three aspects ...: (a) control ... (b) power ... (c) the potential for adjustment. (4) Normative significance evaluation ... Two subchecks: (a) Internal standards check ... (b) External standards check\". Table 3 rows: Relevance [Novelty: Suddenness, Familiarity, Predictability; Intrinsic pleasantness; Goal/need relevance]; Implication [Cause: agent; Cause: motive; Outcome probability; Discrepancy from expectation; Conduciveness; Urgency]; Coping potential [Control; Power; Adjustment]; Normative significance [Internal standards; External standards].",
+     "source_values": [
+      "Relevance detection: novelty (suddenness, familiarity, predictability); intrinsic pleasantness; goal/need relevance",
+      "Implication assessment: causal attribution (agent, motive/intentionality); outcome probability; discrepancy from expectation; goal/need conduciveness; urgency",
+      "Coping potential determination: control; power; adjustment",
+      "Normative significance evaluation: internal standards; external standards"
+     ],
+     "corrections": "none - all four objectives and every sub-check match; the paper states this is the Scherer (2001) SEC set ('The SECs proposed by the component process model (Scherer, 2001) are organized in terms of four ... appraisal objectives').",
+     "note": "The 2001 chapter itself was not fetched; the Sander et al. 2005 paper is the authors' own restatement. Scherer (2005) Social Science Information only partially lists the checks."
+    },
+    "gew_20_families": {
+     "status": "VERIFIED",
+     "source_url": "https://www.unige.ch/cisa/download_file/view/138/245",
+     "source_title": "Geneva Emotion Wheel Version 3.0 - English instructions and response sheet (GEW_English_05042013.docx), downloaded from https://www.unige.ch/cisa/gew/",
+     "source_kind": "author_page",
+     "accessed": "2026-10-17",
+     "quote": "\"Geneva Emotion Wheel Version 3.0 ... 20 different emotions are arranged in a circular fashion on the following response sheet\" ... wheel labels (document.xml text run): \"Contentment Joy Pleasure Admiration Compassion Anger Hate Regret Guilt Love Fear Sadness Amusement Disgust Shame Pride Relief Interest None Other ________ Contempt Disappointment\"",
+     "source_values": [
+      "Contentment",
+      "Joy",
+      "Pleasure",
+      "Admiration",
+      "Compassion",
+      "Anger",
+      "Hate",
+      "Regret",
+      "Guilt",
+      "Love",
+      "Fear",
+      "Sadness",
+      "Amusement",
+      "Disgust",
+      "Shame",
+      "Pride",
+      "Relief",
+      "Interest",
+      "Contempt",
+      "Disappointment"
+     ],
+     "corrections": "none - the same 20 family labels (plus 'None' and 'Other'). Order on the wheel could not be recovered from the docx text run, so the knowledge list's ordering is unverified but the membership is exact.",
+     "note": "The docx was downloaded with curl and its word/document.xml stripped of tags; the labels are text boxes in the drawing, listed twice (two response-sheet copies). Scherer (2005) describes an earlier 16-family prototype ('the number of emotion families was limited to 4 per quadrant, yielding a total of 16'), so '20 families' is specific to v2/v3."
+    }
+   }
+  },
+  "panksepp": {
+   "constructs": {
+    "anps_scales": {
+     "status": "VERIFIED",
+     "source_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.00794/full",
+     "source_title": "Ozkarar-Gradwohl, F. G. (2019). Cross-Cultural Affective Neuroscience. Frontiers in Psychology 10:794",
+     "source_kind": "open_access_review",
+     "accessed": "2026-10-17",
+     "quote": "\"ANPS measured six basic affects: CARE, PLAY, SEEK, SADNESS, FEAR, ANGER; along with a Spirituality subscale.\"",
+     "source_values": [
+      "CARE",
+      "PLAY",
+      "SEEK",
+      "SADNESS",
+      "FEAR",
+      "ANGER",
+      "Spirituality (subscale)"
+     ],
+     "corrections": "none for the six affective scales (spelling 'SEEK' confirmed). Note Davis & Montag (2019, Frontiers in Neuroscience 12:1025, https://pmc.ncbi.nlm.nih.gov/articles/PMC6344464) describe the same instrument in system terms: 'The ANPS was designed to measure self-reported activations of six primary emotions in human lives: SEEKING, RAGE/Anger, FEAR, CARE, PANIC/Sadness, and PLAY' - i.e. scale names vary between SEEK/SEEKING and ANGER/RAGE across papers.",
+     "note": "Fetched via the Frontiers 'public-pages-files' text mirror (https://public-pages-files-2025.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.00794/text). The Davis, Panksepp & Normansell 2003 original was not fetched. Neither page mentions a 'Dominance' scale (ANPS 2.4) - that part of the knowledge note remains unverified."
+    },
+    "process_levels": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3181986/",
+     "source_title": "Panksepp, J. (2010). Affective neuroscience of the emotional BrainMind: evolutionary perspectives and implications for understanding depression. Dialogues in Clinical Neuroscience 12(4), 533-545 - Table I",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Table I: \"Primary-process, basic-primordial affects (sub-neocortical)\" [Emotional affects (emotion action systems; intentions-in-actions); Homeostatic affects; Sensory affects]; \"Secondary-process emotions (learning via basal ganglia)\" [Classical conditioning; Instrumental and operant conditioning; Emotional habits]; \"Tertiary affects and neocortical 'awareness' functions\" [Cognitive executive functions: thoughts and planning; Emotional ruminations and regulations; 'Free-will' or intention-to-act]",
+     "source_values": [
+      "Primary-process, basic-primordial affects (sub-neocortical)",
+      "Secondary-process emotions (learning via basal ganglia)",
+      "Tertiary affects and neocortical 'awareness' functions"
+     ],
+     "corrections": "none in substance; Panksepp's own table wording is 'basic-primordial affects (sub-neocortical)', 'learning via basal ganglia', and 'neocortical awareness functions' - the knowledge glosses ('subcortical emotional systems', 'learning and memory', 'cortical cognition and awareness') are paraphrases.",
+     "note": "Panksepp's authorship of this source makes it primary rather than secondary; the construct cites Panksepp & Biven 2012 / Panksepp 2011, which present the same hierarchy."
+    }
+   }
+  },
+  "damasio": {
+   "constructs": {
+    "emotion_vs_feeling": {
+     "status": "VERIFIED",
+     "source_url": "https://oaj.fupress.net/index.php/pam/article/download/7060/7040",
+     "source_title": "Bortolan, A. 'A Phenomenological Discussion of Antonio Damasio's Theory of Emotions', Phenomenology and Mind (Firenze University Press, open access), section 1.2 and footnote 5, p. 180",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "\"the author maintains that there is a difference also between 'feeling' and 'knowing that we have a feeling' (2000, p. 36) ... Indeed he claims: '[...] I separate three stages of processing along a continuum: a state of emotion, which can be triggered and executed nonconsciously; a state of feeling, which can be represented nonconsciously; and a state of feeling made conscious, i.e. known to the organism having both emotion and feeling' (2000, p. 37).\" Also: \"feelings of emotions consist in the perception of the bodily modifications which constitute emotional reactions\".",
+     "source_values": [
+      "a state of emotion (can be triggered and executed nonconsciously)",
+      "a state of feeling (can be represented nonconsciously)",
+      "a state of feeling made conscious, i.e. known to the organism having both emotion and feeling"
+     ],
+     "corrections": "none - Damasio's own three-stage wording (quoted from The Feeling of What Happens, UK ed. 2000, pp. 36-37) matches emotion / feeling / 'feeling of a feeling' (knowing that one feels). Knowledge gloss 'emotion (bodily, outwardly directed)' is consistent with the review's 'internal changes in body state' (Campbell).",
+     "note": "Corroborated by Anthony Campbell's 2000 review of the book (https://acampbell.uk/bookreviews/r/damasio-2.html): emotions are 'internal changes in body state (chemical, visceral, muscular)', 'we are not conscious of all our feelings', and conscious knowledge of feeling is a third level. Page citations in Bortolan refer to the 2000 Vintage edition."
+    },
+    "emotion_classes": {
+     "status": "VERIFIED",
+     "source_url": "https://oaj.fupress.net/index.php/pam/article/download/7060/7040",
+     "source_title": "Bortolan, A. 'A Phenomenological Discussion of Antonio Damasio's Theory of Emotions', Phenomenology and Mind, section 1.2 'Primary, secondary, background emotions and feelings', pp. 179-180",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "\"anger, fear, disgust, happiness, sadness and surprise are 'primary emotions' (1995) ... becoming the source of the so-called 'secondary' or 'social' emotions (1995) ... Apart from the primary and the social ones, Damasio identifies a third fundamental category of affective states, namely 'background emotions' (2000, pp. 52-53). He maintains that background emotions are responses provoked by internal conditions generated by diverse physiological processes\" ... footnote 2: \"contempt, which is deemed to be a typical secondary emotion\" (Damasio 2004, p. 62) ... p. 184: \"Social emotions such as pride, shame, embarassment or admiration\".",
+     "source_values": [
+      "primary emotions (anger, fear, disgust, happiness, sadness, surprise)",
+      "secondary or social emotions (e.g. contempt, pride, shame, embarrassment, admiration)",
+      "background emotions"
+     ],
+     "corrections": "Class labels match (background / primary / secondary-social). Primary examples match. Secondary/social examples in this source are contempt, pride, shame, embarrassment, admiration - the knowledge note's 'jealousy, guilt' are not named here (a WebSearch snippet of a reader's post on Looking for Spinoza lists 'compassion, embarrassment, shame, guilt, contempt, jealousy, envy, pride, admiration' but that page was not fetched). The knowledge note's background examples 'well-being/malaise, calm/tension' are not shown in any fetched page.",
+     "note": "Primary-emotion list is attributed by Bortolan to Descartes' Error (1995) and background emotions to The Feeling of What Happens (2000). The UMB-hosted Psyche review by Aldo Mosca returned 404."
+    },
+    "self_and_consciousness_levels": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12405250/",
+     "source_title": "Immertreu, Schilling, Maier & Krauss (2025). Probing for consciousness in machines. Frontiers in Artificial Intelligence 8:1610225 (summarising Damasio's model); corroborated by A. Campbell's review of The Feeling of What Happens (https://acampbell.uk/bookreviews/r/damasio-2.html) and Bortolan (above)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Frontiers AI 2025: \"the protoself, the neural representation of the body state\"; \"core consciousness, a higher-level representation of the self, the world, and their mutual relations\" ... \"creates a core self, a sense of perception belonging to oneself\"; \"extended consciousness, which includes memory, language, planning, and other high-level mental activities\"; \"The autobiographic self, built on top of the core self, includes memories of one's past\". Campbell review: proto-self = \"an interconnected and temporarily coherent collection of neural patterns representing the state of the organism\" (unconscious); \"the core self, which is produced whenever an object of any kind modifies the proto-self\"; autobiographical self \"is based on memory and also on anticipations of the future\". Bortolan: \"the so-called 'proto-self' (2000, p. 154)\"; \"consciousness, even in the basic form of 'core consciousness'\".",
+     "source_values": [
+      "proto-self (non-conscious neural representation of the body state)",
+      "core self / core consciousness",
+      "autobiographical self / extended consciousness"
+     ],
+     "corrections": "none.",
+     "note": "No single fetched page is a neuroscience review of Damasio; the three secondary sources together display all three levels with the pairing core self<->core consciousness and autobiographical self<->extended consciousness."
+    }
+   }
+  },
+  "wordnet_affect": {
+   "constructs": {
+    "wna_six_emotion_classes": {
+     "status": "VERIFIED",
+     "source_url": "https://aclanthology.org/S07-1013.pdf",
+     "source_title": "Strapparava, C. & Mihalcea, R. (2007). SemEval-2007 Task 14: Affective Text. Proceedings of SemEval-2007, pp. 70-74 (ACL Anthology)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "\"Objective: Provided a set of predefined six emotion labels (i.e., Anger, Disgust, Fear, Joy, Sadness, Surprise), classify the titles with the appropriate emotion label and/or with a valence indication (positive/negative).\" ... \"We provided a set words extracted from WordNet Affect (Strapparava and Valitutti, 2004), relevant to the six emotions of interest.\"",
+     "source_values": [
+      "Anger",
+      "Disgust",
+      "Fear",
+      "Joy",
+      "Sadness",
+      "Surprise"
+     ],
+     "corrections": "none - same six labels, same order.",
+     "note": "Text extracted locally with pdftotext (WebFetch could not decode the PDF streams). The paper confirms the six-class WordNet-Affect word lists were distributed as task resources, matching the knowledge note."
+    }
+   }
+  },
+  "conway": {
+   "constructs": {
+    "knowledge_hierarchy": {
+     "status": "VERIFIED",
+     "source_url": "http://www.self-definingmemories.com/Four_Dimensions_of_SDM_s_-_Blagov___Singer__2004.pdf",
+     "source_title": "Blagov & Singer (2004) Four dimensions of self-defining memories, J. Personality 72(3) (author-hosted PDF)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "A recent comprehensive model of autobiographical memory (Conway & Pleydell-Pearce, 2000) ... builds memories across three levels of organizational detail. Autobiographical knowledge may be slotted in general phases or stages of life (``lifetime periods''); in more narrow and theme-oriented timelines consisting of months, weeks, or days (``general events''); or it may possess specific imagistic qualities tied to a given moment in time (``event-specific knowledge'').",
+     "source_values": [
+      "lifetime periods",
+      "general events",
+      "event-specific knowledge"
+     ],
+     "corrections": "none for the 2000 three-level list. Conway (2005, JML 53:594-628, same site, p.608) relabels the bottom level: 'the autobiographical memory knowledge base in long-term memory contains two distinct types of representation: autobiographical knowledge and episodic memories ... Autobiographical memory knowledge structures terminate in episodic memories' and adds a top-level 'life story' (p.609) and 'conceptual self' (p.597), confirming the construct note.",
+     "note": "Conway & Pleydell-Pearce 2000 itself remains closed-access; verified via Blagov & Singer 2004 (which restates the three levels verbatim) and Conway 2005 full text (pdftotext of the author-hosted PDF). Wikipedia 'Autobiographical memory' independently gives the same three levels citing Conway & Pleydell-Pearce 2000."
+    },
+    "retrieval_modes": {
+     "status": "VERIFIED",
+     "source_url": "http://www.self-definingmemories.com/Conway_2005.pdf",
+     "source_title": "Conway (2005) Memory and the self, Journal of Memory and Language 53, 594-628 (author-hosted PDF)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "We refer to this process as generative retrieval and contrast it with direct retrieval (see Moscovitch, 1995, for a similar distinction). The two types of retrieval are, however, closely related and all generative retrieval cycles end in direct retrieval ... The only major difference between the two is that direct retrieval does not entail iterative searches of knowledge base as depicted in Fig. 9.",
+     "source_values": [
+      "generative retrieval",
+      "direct retrieval"
+     ],
+     "corrections": "none",
+     "note": "Conway 2005 attributes the generative-retrieval cycle to Williams & Santos-Williams (1980), adopted for the SMS in Conway 1990/1992/1996 and Conway & Pleydell-Pearce 2000; Fig. 9 is titled 'Direct and generative retrieval'. Conway, Singer & Tagini 2004 (p.500) also: 'generative retrieval usually begins at the general event level' and 'activated through direct retrieval with little effort or conscious recall'."
+    },
+    "correspondence_vs_coherence": {
+     "status": "VERIFIED",
+     "source_url": "http://www.self-definingmemories.com/Conway_2005.pdf",
+     "source_title": "Conway (2005) Memory and the self, JML 53, 594-628 (author-hosted PDF); cross-checked with Conway, Singer & Tagini (2004) Social Cognition 22(5)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Set against the force of coherence is the demand of correspondence. Conway, Meares et al. (2004) argued that from an evolutionary perspective a memory system that did not maintain an accurate record of goal processing ... [memory] is a product of the tradeoff between the separate but competing demands of coherence and correspondence. / CST 2004 abstract: a fundamental tension between adaptive correspondence (experience-near sensory-perceptual records of goal activity) and self-coherence (a more abstracted and conceptually-rich long-term store of conceptual and remembered knowledge).",
+     "source_values": [
+      "coherence / self-coherence (consistency of memory with the self, goals and life story; Conway 2005 §'Coherence and correspondence')",
+      "correspondence / adaptive correspondence (accurate, experience-near record of goal processing)"
+     ],
+     "corrections": "Glosses in the knowledge list are fair paraphrases. Two nuances: (1) Conway 2005 frames the distinction via Russell's coherence vs correspondence theories of truth and credits Conway, Meares & Standart (2004) for 'self-coherence'; the 'adaptive correspondence' label is from Conway, Singer & Tagini 2004. (2) Sources list coherence first.",
+     "note": "Semantic Scholar abstract was unavailable earlier; full text now read via pdftotext."
+    },
+    "self_defining_memory_criteria": {
+     "status": "VERIFIED",
+     "source_url": "http://www.self-definingmemories.com/Conway__Singer____Tagini__2004.pdf",
+     "source_title": "Conway, Singer & Tagini (2004) The self and autobiographical memory: correspondence and coherence, Social Cognition 22(5) 491-529 (author-hosted PDF; also digitalcommons.conncoll.edu/psychfacpub/13)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "A self-defining memory (SDM) is a specific type of autobiographical memory that has the following attributes: affective intensity, vividness, high levels of rehearsal, linkage to similar memories, and connection to an enduring concern or unresolved conflict (J.A. Singer & Moffitt, 1991-1992; J.A. Singer & Salovey, 1993).",
+     "source_values": [
+      "affective intensity",
+      "vividness",
+      "high levels of rehearsal",
+      "linkage to similar memories",
+      "connection to an enduring concern or unresolved conflict"
+     ],
+     "corrections": "Order differs (source: affect, vividness, rehearsal, linkage, concern). Source attributes the criteria to Singer & Moffitt (1991-92) and Singer & Salovey (1993), as the construct note says.",
+     "note": "Conway is first author of this paper, so this is the strongest evidence that Conway adopts the Singer criteria. Conway 2005 (p.604) also discusses 'self-defining experiences (Pillemer, 1998; Singer & Salovey, 1993 ...)'."
+    }
+   }
+  },
+  "singer_blagov": {
+   "constructs": {
+    "self_defining_memory_criteria": {
+     "status": "VERIFIED",
+     "source_url": "http://www.self-definingmemories.com/Four_Dimensions_of_SDM_s_-_Blagov___Singer__2004.pdf",
+     "source_title": "Blagov & Singer (2004) Four dimensions of self-defining memories, J. Personality 72(3) 481-511 (author-hosted PDF); corroborated by Wang & Singer (2021) Frontiers in Psychology 11:622527 (PMC7873928)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "B&S 2004 p.483-484: A self-defining memory is a highly significant personal memory that can be characterized by the following properties: It evokes strong emotion at the time of recollection. It is vivid in the mind's eye, filled with sensory detail ... It becomes a repeated touchstone in consciousness ... it is highly linked to related memories. Finally, self-defining memories revolve around the most important concerns and conflicts in our lives. / Wang & Singer 2021: SDMs are personal memories that are vivid, affectively intense, and repetitively recalled, linked to other similar memories, and focused on an enduring concern or unresolved conflict",
+     "source_values": [
+      "vivid",
+      "affectively intense",
+      "repetitively recalled",
+      "linked to other similar memories",
+      "focused on an enduring concern or unresolved conflict"
+     ],
+     "corrections": "none (Wang & Singer 2021 wording matches the knowledge list almost verbatim).",
+     "note": "Also appears in Conway, Singer & Tagini 2004 p.500 and Lavallee et al. 2019 PLOS ONE (PMC6894867)."
+    },
+    "specificity": {
+     "status": "PARTIAL",
+     "source_url": "http://www.selfdefiningmemories.com/Classification_System___Scoring_Manual_for_SDMs.pdf",
+     "source_title": "Singer & Blagov (2000-2001) Classification System and Scoring Manual for Self-defining Autobiographical Memories, Connecticut College (hosted on selfdefiningmemories.com)",
+     "source_kind": "coding_manual",
+     "accessed": "2026-10-17",
+     "quote": "Level 1: Structure and Specificity of the Memory Narrative. Specific memory narratives: A specific memory narrative has at least one single-event statement ... 1. It is a unique occurrence; 2. It has brief duration of less than one day. ... Non-specific (generalized) narratives (Episodic and Generic): Episodic narratives ... pertain to a general event with a length of over a day or with unclear duration ... Generic narratives: The memory is composed of equivalent events that kept occurring over time intervals",
+     "source_values": [
+      "specific (at least one single-event statement: unique occurrence, duration less than one day; subtypes Type 1 pure specific, Type 2 specific with generalization, Type 3 specific with multiple single events)",
+      "non-specific / generalized: episodic (extended, over a day or unclear duration)",
+      "non-specific / generalized: generic (repeated, blended events)"
+     ],
+     "corrections": "Top-level split specific vs non-specific confirmed, and 'less than one day' confirmed. The manual's two non-specific subtypes are labelled 'episodic' and 'generic' (not 'generic or extended'); 'extended' is a gloss of 'episodic'. The manual does use 'summary' as a synonym for non-specific ('78% specific and 22% summary, found by Singer and Moffitt').",
+     "note": "The manual's 'episodic' label is a Singer & Moffitt usage, not Tulving's."
+    },
+    "integrative_meaning": {
+     "status": "VERIFIED",
+     "source_url": "http://www.selfdefiningmemories.com/Classification_System___Scoring_Manual_for_SDMs.pdf",
+     "source_title": "Singer & Blagov (2000-2001) Classification System and Scoring Manual for Self-defining Autobiographical Memories",
+     "source_kind": "coding_manual",
+     "accessed": "2026-10-17",
+     "quote": "Level 2: Memory Integration. This coding system divides memory narratives into two categories of integrative and non-integrative memories. Integrative memories contain statements that ascribe meaning to the memory described. This meaning is usually expressed in statements about what the memory has taught the individual (e.g., \"the lesson learned\" or \"from that point on I realized...\")",
+     "source_values": [
+      "integrative (subtypes: general lesson / meaning not tied to self; self-relevant / meaning tied to self: relationship meaning, functional meaning)",
+      "non-integrative (subtypes: pure event / time stamp; categorization by emotion, impact, context or attribute)"
+     ],
+     "corrections": "none; the manual adds subtypes under each category.",
+     "note": ""
+    },
+    "content": {
+     "status": "PARTIAL",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7873928/",
+     "source_title": "Wang & Singer (2021) A cross-cultural study of self-defining memories in Chinese and American college students, Frontiers in Psychology 11:622527",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "categorized SDMs into six types of events: life threatening events (LTEs), recreation/exploration, relationship, achievement, guilt/shame, and drug, alcohol, or tobacco use. ... Each narrative can only be coded into one category.",
+     "source_values": [
+      "life threatening events",
+      "recreation/exploration",
+      "relationship",
+      "achievement",
+      "guilt/shame",
+      "drug, alcohol, or tobacco use"
+     ],
+     "corrections": "Six of seven labels confirmed (singular 'relationship'; 'achievement' not 'achievement/mastery'). A seventh 'not classifiable' category was not found in any accessible source. Blagov & Singer 2004 (p.487) say only that the Thorne & McLean system 'was adapted for the purposes of the current study and coded for relationships, achievements, and physical threat, among other content categories'; Thorne, McLean & Lawrence 2004 use four categories (mortality, relationship, achievement, leisure).",
+     "note": "Thorne & McLean (2001) manual is an unpublished UCSC manuscript; self-definingmemories.com instruments page (which lists it) refused connection (ECONNREFUSED)."
+    },
+    "affect": {
+     "status": "CONTRADICTED",
+     "source_url": "http://www.self-definingmemories.com/Four_Dimensions_of_SDM_s_-_Blagov___Singer__2004.pdf",
+     "source_title": "Blagov & Singer (2004) Four dimensions of self-defining memories, J. Personality 72(3) (author-hosted PDF); Singer & Blagov scoring manual (selfdefiningmemories.com)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "B&S 2004 p.488: we have measured participants' rating of how a memory makes them feel at the time of recall ... affect is measured, not simply for valence (positive or negative), but for the intensity of the affective tone as well. p.492: participants rated their memories on the basic emotions of happiness, sadness, anger, fear, surprise, shame, disgust, guilt, interest, and contempt (Izard, 1977) with pride and embarrassment added. Positive and Negative Affect were operationalized as averaged combined scores on positive or negative self-rated emotions",
+     "source_values": [
+      "participant self-ratings on 12 emotions (happiness, sadness, anger, fear, surprise, shame, disgust, guilt, interest, contempt, pride, embarrassment)",
+      "composite Positive Affect score",
+      "composite Negative Affect score"
+     ],
+     "corrections": "The four-way categorical scheme positive/negative/mixed/neutral is NOT Blagov & Singer's affect dimension, and the Singer & Blagov scoring manual contains no affect coding at all (the word 'affect' does not occur; examples carry only Positive/Negative tags). The four-way coder scheme appears in a later adaptation: Lavallee et al. 2019 PLOS ONE (PMC6894867) 'memories were coded as positive, negative, neutral or mixed according to the emotional words used'.",
+     "note": "Recommend relabelling: affect = participant-rated valence and intensity (B&S 2004), with positive/negative/neutral/mixed as a secondary coder adaptation (Lavallee et al. 2019)."
+    }
+   }
+  },
+  "pillemer": {
+   "constructs": {
+    "personal_event_memory_features": {
+     "status": "PARTIAL",
+     "source_url": "https://dynamic.uoregon.edu/jjf/articles/bf2000.pdf",
+     "source_title": "Becker & Freyd (2000) review of Pillemer, Momentous Events, Vivid Memories (Harvard UP 1998), author-hosted PDF; plus Wikipedia 'Personal-event memory'",
+     "source_kind": "other",
+     "accessed": "2026-10-17",
+     "quote": "Review: These seemingly diverse memories, which Pillemer terms personal event memories, have several features in common. Each memory corresponds to a specific moment or event, rather than a general event or a series of events; each contains many details of the rememberer's personal circumstances; and each is filled with sensory information that promotes a sense of reexperiencing the event. / Wikipedia: Its defining characteristics are that it is for a specific event; includes vivid multi-sensory elements (sights, sounds, smells, body positions, etc.); is usually recalled in detail; and is usually believed by the individual to be an accurate representation of the event.",
+     "source_values": [
+      "specific moment or event (not a general event or series)",
+      "many details of the rememberer's personal circumstances",
+      "sensory information promoting a sense of reexperiencing",
+      "(Wikipedia only) usually believed by the individual to be an accurate representation of the event"
+     ],
+     "corrections": "Features 1, 2, 3 and 5 of the knowledge list are confirmed in substance (the 'believed truthful' item only via Wikipedia). The count of five and the exact wording of item 4 ('links details and images to a particular moment or moments of phenomenal experience') and 'bodily sensations' could not be confirmed; the review presents three features.",
+     "note": "Pillemer 2001 (Review of General Psychology 5(2)) full text is paywalled (UNH repository links only to PsycNet); Google Books API returned 429; Project MUSE review blocked by a verification challenge. 5 attempts.",
+     "wikipedia_citation": "Pillemer, D. B. (1998). Momentous Events, Vivid Memories. Harvard University Press."
+    },
+    "momentous_event_types": {
+     "status": "VERIFIED",
+     "source_url": "https://lifestorylab.psych.ufl.edu/wp-content/uploads/sites/84/Using-Study-Abroad-Memories-in-Everyday-Life-Insights-from-the-Functional-Approach-to-Autobiographical-Memory.pdf",
+     "source_title": "Life Story Lab (Bluck lab, Univ. of Florida) author-hosted paper: Using Study Abroad Memories in Everyday Life: Insights from the Functional Approach to Autobiographical Memory",
+     "source_kind": "author_page",
+     "accessed": "2026-10-17",
+     "quote": "Pillemer (1998) argued that autobiographical memories can serve as powerful directives to behavior. This includes memories that contain messages from others (memorable messages), provide implicit guidance (symbolic messages), signal the beginning of a life path (originating events), redirect the life course (turning points), reassure a person regarding their beliefs (anchoring events), or provide analogous scenarios (analogous events) that can guide current or future action.",
+     "source_values": [
+      "originating events",
+      "turning points",
+      "anchoring events",
+      "analogous events"
+     ],
+     "corrections": "none for the four event types; note Pillemer 1998 lists them alongside two further directive-memory forms, 'memorable messages' and 'symbolic messages'. Hemingway & Starkey 2018 (J Bus Ethics 151:875-890, CC-BY) list 'originating events, turning points, anchoring events, analogous events, redemptive events, contaminating events (Pillemer 1998; Ligon et al. 2008)' - the last two are Ligon et al.'s additions, not Pillemer's.",
+     "note": "Definitions in the knowledge note match the source glosses."
+    }
+   }
+  },
+  "mcadams": {
+   "constructs": {
+    "coded_narrative_constructs": {
+     "status": "PARTIAL",
+     "source_url": "http://www.self-definingmemories.com/Narrative_Identity_shaped_by_SDM.pdf",
+     "source_title": "McAdams (2018) Narrative identity: What is it? What does it do? How do you measure it? Imagination, Cognition and Personality 37(3) 359-372 (hosted on self-definingmemories.com)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "ended narrative responses for objectively defined constructs, such as agency and communion themes, redemption and contamination, elaborative processing, meaning making, and coherence, among others (Adler, Lodi-Smith, Philippe, ...)",
+     "source_values": [
+      "agency",
+      "communion",
+      "redemption",
+      "contamination",
+      "elaborative processing",
+      "meaning making",
+      "coherence"
+     ],
+     "corrections": "Could not read McAdams & McLean 2013 Table 1 itself (SAGE paywalled; edX mirror returned 503/empty; ResearchGate/Scribd not fetchable). A search snippet of the edX copy confirms Table 1 is headed 'Coding construct / Definition / Example (of high score)' with 'Agency' as its first row. Agency, communion, redemption, contamination and meaning making are confirmed as McAdams' coded constructs; 'exploratory narrative processing' and 'coherent positive resolution' (Pals 2006) are not confirmed by an accessible page - McAdams 2018 lists 'elaborative processing' and 'coherence' instead.",
+     "note": "Treat the last two labels as unverified."
+    },
+    "redemption_sequence": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4395856/",
+     "source_title": "Adler, Turner, Brookshier, Monahan, Walder-Biesanz, Harmeling, Albaugh, McAdams & Oltmanns (2015) Variation in narrative identity is associated with trajectories of mental health over several years, JPSP 108(3) 476-496 (PMC author manuscript)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Redemption is rated as present when a narrative shows a clear shift from an undesired or negative beginning to a subsequent positive ending. The beginning and ending must be narrated as connected to each other ... the emergent positivity must somehow undo the core (if not the entirety) of the initial negativity.",
+     "source_values": null,
+     "corrections": "Definition confirmed. The subtypes in the note (sacrifice, recovery, growth, learning, improvement) were not confirmed: Foley Center instrument URLs (sesp.northwestern.edu/foley/instruments/...) all return 404 and no mirror of the redemption coding manual was found.",
+     "note": "McAdams et al. 2001 PSPB abstract not retrievable (PubMed search returned zero results; SAGE paywalled)."
+    },
+    "contamination_sequence": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4395856/",
+     "source_title": "Adler et al. (2015) JPSP 108(3) 476-496 (PMC author manuscript)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "Contamination is rated as present when a narrative shows a clear shift from a pleasant or positive beginning to a subsequent negative ending. The beginning and ending must be narrated as connected to each other ... the negative state at the end must spoil or overcome the previous positive state.",
+     "source_values": null,
+     "corrections": "none",
+     "note": ""
+    },
+    "agency_themes": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12421715/",
+     "source_title": "Kemper, Martin, Cohrs, Schmiedek & Habermas (2025) Agency and communion in brief entire life narratives across the life span, Journal of Personality 93(5) 1042-1054 (PMC)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "McAdams' (2001) manual contains four subthemes each for agency and communion (see Tables S2 and S3). Table 2 rows: Self-mastery; Status/victory; Achievement/responsibility; Empowerment",
+     "source_values": [
+      "Self-mastery",
+      "Status/victory",
+      "Achievement/responsibility",
+      "Empowerment"
+     ],
+     "corrections": "none for the 2001 manual. Caution: the earlier McAdams et al. (1996) version, as used in McAdams et al. 2004 (J. Personality 72:761-784, languageandcognition.umd.edu/McAdamsEtAl2004.pdf), lists the four agency themes as 'achievement/responsibility, power/impact, self-mastery, and status/victory' - i.e. 'power/impact' where the 2001 manual has 'empowerment'.",
+     "note": "Foley Center manual page 404; verified via two open papers applying the manual."
+    },
+    "communion_themes": {
+     "status": "VERIFIED",
+     "source_url": "http://languageandcognition.umd.edu/McAdamsEtAl2004.pdf",
+     "source_title": "McAdams, Anyidoho, Brown, Huang, Kaplan & Machado (2004) Traits and stories: links between dispositional and narrative features of personality, J. Personality 72(4) 761-784 (university-hosted PDF); also Kemper et al. 2025 PMC12421715 Table 2",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "four themes of communion--love/friendship, dialogue, caring/help, and unity/togetherness.",
+     "source_values": [
+      "love/friendship",
+      "dialogue",
+      "caring/help",
+      "unity/togetherness"
+     ],
+     "corrections": "none",
+     "note": "Same four labels in Kemper et al. 2025 Table 2."
+    },
+    "nuclear_episodes": {
+     "status": "CONTRADICTED",
+     "source_url": "https://cpb-us-e1.wpmucdn.com/sites.northwestern.edu/dist/4/3901/files/2020/11/The-Life-Story-Interview-II-2007.pdf",
+     "source_title": "McAdams, The Life Story Interview (II, 2007/2008 revision), Foley Center for the Study of Lives, Northwestern University (university-hosted PDF)",
+     "source_kind": "university_page",
+     "accessed": "2026-10-17",
+     "quote": "B. Key Scenes in the Life Story ... 1. High point. ... 2. Low point. ... 3. Turning point. ... 4. Positive childhood memory. ... 5. Negative childhood memory. ... 6. Vivid adult memory. ... 7. Religious, spiritual, or mystical experience. ... 8. Wisdom event.",
+     "source_values": [
+      "High point",
+      "Low point",
+      "Turning point",
+      "Positive childhood memory",
+      "Negative childhood memory",
+      "Vivid adult memory",
+      "Religious, spiritual, or mystical experience",
+      "Wisdom event"
+     ],
+     "corrections": "The knowledge list (peak experience, nadir experience, turning point, earliest memory, important childhood scene, important adolescent scene, important adult scene, one other important scene) matches the EARLIER (1995) protocol exactly - confirmed verbatim by the Northwestern Magazine Winter 2005 sidebar 'So, What's Your Story?' (https://www.northwestern.edu/magazine/winter2005/feature/redemption/sidebar1.html), Step Two 'Critical Events'. But the construct note attributes it to the 'McAdams 2008 revision', whose eight key scenes are different (above). The 'canonical triad' high point / low point / turning point is confirmed in both versions and in McAdams 2018 ('key scenes like high points, low points, and turning points (what I called nuclear episodes)').",
+     "note": "Fix: either relabel the list as the 1995 LSI 'critical events' or replace with the 2008 key-scene list."
+    },
+    "imagoes": {
+     "status": "VERIFIED",
+     "source_url": "https://journals.lib.unb.ca/index.php/NW/article/download/33446/1882529067/1882536825",
+     "source_title": "McAdams (2021) Narrative identity and the redemptive self: an intellectual autobiography, with occasional critique, Narrative Works 11(1) 6-23 (open journal, UNB)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "The protagonist of the story is the self, but the self comes in different personified guises (what I called imagoes), which often track social roles or self-stereotypes ... Imagoes interact, conflict, and play off against each other in the story",
+     "source_values": null,
+     "corrections": "none; McAdams adds that he 'borrowed the idea of the imago' from Guntrip (1971) and in the 1985 book delineated '12 different types of imagoes by crossing the orthogonal dimensions of agency and communion'.",
+     "note": "McAdams writing in first person about Power, Intimacy, and the Life Story (1985)."
+    },
+    "generativity_script": {
+     "status": "VERIFIED",
+     "source_url": "https://journals.lib.unb.ca/index.php/NW/article/download/33446/1882529067/1882536825",
+     "source_title": "McAdams (2021) Narrative Works 11(1) 6-23",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "The story has an envisioned ending, too, or what I called (with a nod to Erikson again) a generativity script. It is an ending that ideally gives birth to new beginnings (my offspring, my legacy, something I will leave behind).",
+     "source_values": null,
+     "corrections": "none",
+     "note": ""
+    }
+   }
+  },
+  "bruner": {
+   "constructs": {
+    "modes_of_thought": {
+     "status": "VERIFIED",
+     "source_url": "https://berlinartinstitute.com/online-art-courses/wp-content/uploads/2025/06/JeromeBruner_ActualMinds_PossibleWorlds_Chapter_2.pdf",
+     "source_title": "Bruner (1986) Actual Minds, Possible Worlds, ch. 2 'Two Modes of Thought' (mirrored chapter PDF); corroborated by The Marginalian summary",
+     "source_kind": "handbook_chapter",
+     "accessed": "2026-10-17",
+     "quote": "There are two modes of cognitive functioning, two modes of thought, each providing distinctive ways of ordering experience, of constructing reality. ... One mode, the paradigmatic or logico-scientific one, attempts to fulfill the ideal of a formal, mathematical system of description and explanation. ... the logico-scientific mode (I shall call it paradigmatic hereafter)",
+     "source_values": [
+      "paradigmatic or logico-scientific mode",
+      "narrative mode"
+     ],
+     "corrections": "none",
+     "note": ""
+    },
+    "ten_features_of_narrative": {
+     "status": "VERIFIED",
+     "source_url": "https://www.cs.uky.edu/~sgware/reading/papers/bruner1991narrative.pdf",
+     "source_title": "Bruner (1991) The Narrative Construction of Reality, Critical Inquiry 18(1) 1-21 (JSTOR scan mirrored at cs.uky.edu)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "I propose now to sketch out ten features of narrative ... And now to the ten features of narrative. 1. Narrative diachronicity. 2. Particularity. 3. Intentional state entailment. 4. Hermeneutic composability. 5. Canonicity and breach. 6. Referentiality. 7. Genericness. 8. Normativeness. 9. Context sensitivity and negotiability. 10. Narrative accrual.",
+     "source_values": [
+      "Narrative diachronicity",
+      "Particularity",
+      "Intentional state entailment",
+      "Hermeneutic composability",
+      "Canonicity and breach",
+      "Referentiality",
+      "Genericness",
+      "Normativeness",
+      "Context sensitivity and negotiability",
+      "Narrative accrual"
+     ],
+     "corrections": "none (order and wording identical).",
+     "note": "Headings extracted with pdftotext; items 4 and 9 appear with run-together spacing in the OCR layer but are unambiguous."
+    },
+    "dual_landscape": {
+     "status": "VERIFIED",
+     "source_url": "https://berlinartinstitute.com/online-art-courses/wp-content/uploads/2025/06/JeromeBruner_ActualMinds_PossibleWorlds_Chapter_2.pdf",
+     "source_title": "Bruner (1986) Actual Minds, Possible Worlds, ch. 2 (p.14)",
+     "source_kind": "handbook_chapter",
+     "accessed": "2026-10-17",
+     "quote": "story must construct two landscapes simultaneously. One is the landscape of action, where the constituents are the arguments of action: agent, intention or goal, situation, instrument, something corresponding to a \"story grammar.\" The other landscape is the landscape of consciousness: what those involved in the action know, think, or feel, or do not know, think, or feel.",
+     "source_values": [
+      "landscape of action (agent, intention or goal, situation, instrument)",
+      "landscape of consciousness (what those involved know, think, or feel, or do not)"
+     ],
+     "corrections": "none",
+     "note": "Bruner also uses the phrase 'dual landscape' on p.21 of the chapter."
+    }
+   }
+  },
+  "tulving": {
+   "constructs": {
+    "memory_systems": {
+     "status": "VERIFIED",
+     "source_url": "https://bpb-us-e1.wpmucdn.com/sites.harvard.edu/dist/3/137/files/2022/09/10.1.1.473.4742.pdf",
+     "source_title": "Slotnick & Schacter (2007) The cognitive neuroscience of memory and consciousness, in Zelazo, Moscovitch & Thompson (eds) Cambridge Handbook of Consciousness, pp. 809-827 (Harvard-hosted PDF)",
+     "source_kind": "handbook_chapter",
+     "accessed": "2026-10-17",
+     "quote": "Tulving (1985a) argued that each of three dissociable memory systems is uniquely associated with a particular type of consciousness. Specifically, he contended that procedural memory (learning of motor, perceptual, and cognitive skills) ... semantic memory (general factual knowledge) ... and episodic memory (recollection of personal experiences)",
+     "source_values": [
+      "procedural memory",
+      "semantic memory",
+      "episodic memory"
+     ],
+     "corrections": "none for the three systems. The 'monohierarchical' embedding (episodic within semantic within procedural) is not stated on any accessible page; it rests on the 1985 article itself (Canadian Psychology 26(1) 1-12, DOI 10.1037/h0080017), which is closed-access (alicekim.ca mirror 404).",
+     "note": ""
+    },
+    "consciousness_kinds": {
+     "status": "VERIFIED",
+     "source_url": "https://bpb-us-e1.wpmucdn.com/sites.harvard.edu/dist/3/137/files/2022/09/10.1.1.473.4742.pdf",
+     "source_title": "Slotnick & Schacter (2007) Cambridge Handbook of Consciousness ch. 28; corroborated by De Brigard (2024) Episodic memory without autonoetic consciousness, Phil Trans R Soc B 379:20230410 (PMC11496718)",
+     "source_kind": "handbook_chapter",
+     "accessed": "2026-10-17",
+     "quote": "procedural memory ... is associated with anoetic or \"nonknowing\" consciousness, which entails simple awareness of external stimuli; semantic memory (general factual knowledge) is associated with noetic or \"knowing\" consciousness; and episodic memory (recollection of personal experiences) is associated with autonoetic or \"self-knowing\" consciousness.",
+     "source_values": [
+      "anoetic (nonknowing) - procedural",
+      "noetic (knowing) - semantic",
+      "autonoetic (self-knowing) - episodic"
+     ],
+     "corrections": "none (gloss spelling only: 'nonknowing' / De Brigard 'not-knowing' vs knowledge 'non-knowing').",
+     "note": ""
+    },
+    "remember_know": {
+     "status": "VERIFIED",
+     "source_url": "https://bpb-us-e1.wpmucdn.com/sites.harvard.edu/dist/3/137/files/2022/09/10.1.1.473.4742.pdf",
+     "source_title": "Slotnick & Schacter (2007) Cambridge Handbook of Consciousness ch. 28; corroborated by De Brigard 2024 (PMC11496718) and Klein 2013 Front. Behav. Neurosci. 7:3",
+     "source_kind": "handbook_chapter",
+     "accessed": "2026-10-17",
+     "quote": "Tulving's (1985b) own article focused on the important distinction between remembering, which involves specific recollections of past experiences, and knowing, which involves a general sense of familiarity without specific recollection, and introduced seminal techniques for experimentally assessing these two forms of memory.",
+     "source_values": [
+      "remember",
+      "know"
+     ],
+     "corrections": "none",
+     "note": "De Brigard: the remember/know paradigm was 'introduced as a methodological strategy to measure' whether recollection involved autonoetic consciousness."
+    },
+    "episodic_memory_core_properties": {
+     "status": "VERIFIED",
+     "source_url": "https://turing.iimas.unam.mx/~luis/cursos/MARE2024-2/lecturas/Tulving.pdf",
+     "source_title": "Tulving (2002) Episodic memory: from mind to brain, Annual Review of Psychology 53, 1-25 (course-site mirror of the Annual Reviews PDF)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "The three clues--sense of subjective time, autonoetic awareness, and self--point to three central components of a neurocognitive (mind/brain) system that makes mental time travel possible. ... The essence of episodic memory lies in the conjunction of three concepts--self, autonoetic awareness, and subjectively sensed time.",
+     "source_values": [
+      "self",
+      "autonoetic awareness",
+      "subjectively sensed time"
+     ],
+     "corrections": "none",
+     "note": "'Mental time travel' confirmed in the same passages."
+    },
+    "chronesthesia": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3009795",
+     "source_title": "Nyberg, Kim, Habib, Levine & Tulving (2010) Consciousness of subjective time in the brain, PNAS 107(51) 22356-22359 (PMC)",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "a form of consciousness that allows individuals to think about the subjective time in which they live [and mentally travel through it] (ref. 30: Tulving E (2002) in Principles of Frontal Lobe Function, eds Stuss DT, Knight RT, Oxford Univ Press, pp 311-325)",
+     "source_values": null,
+     "corrections": "none on the definition. Bibliographic nuance: Tulving 2002 Annu. Rev. cites the chapter as 'Chronesthesia: awareness of subjective time. In The Age of the Frontal Lobes, ed. DT Stuss, RC Knight. In press'; the published chapter (per Nyberg 2010 and Wikipedia) is 'Chronesthesia: Conscious awareness of subjective time', in Principles of Frontal Lobe Function, pp. 311-325.",
+     "note": "Conway 2005 (p.603) also uses the term: '(or, as Tulving, 2002, terms it, chronesthesia)'."
+    },
+    "encoding_specificity": {
+     "status": "VERIFIED",
+     "source_url": "https://en.wikipedia.org/wiki/Encoding_specificity_principle",
+     "source_title": "Wikipedia: Encoding specificity principle",
+     "source_kind": "wikipedia",
+     "accessed": "2026-10-17",
+     "quote": "matching the encoding contexts of information at recall assists in the retrieval of episodic memories",
+     "source_values": null,
+     "corrections": "none on substance; Wikipedia's lead phrases it as context matching, the knowledge note phrases it as cue effectiveness depending on co-encoding - both are standard statements of the principle. Wikipedia flags its Tulving & Thomson reference as 'needs verification'.",
+     "note": "Baylor open textbook page (openbooks.library.baylor.edu) returned 403; Wikipedia used as last resort for a definition-only check.",
+     "wikipedia_citation": "Tulving, E., & Thomson, D. M. (1973). Encoding specificity and retrieval processes in episodic memory. Psychological Review, 80(5), 352-373."
+    }
+   }
+  },
+  "ainsworth": {
+   "constructs": {
+    "strange_situation_subgroups": {
+     "status": "VERIFIED",
+     "source_url": "https://safersociety.org/wp-content/uploads/2022/07/01_Classification-Criteria.pdf",
+     "source_title": "Criteria for Classification — Patterns of Attachment, Ainsworth, Blehar, Waters & Wall, 1978 (3-page PDF transcription of the 1978 classification criteria, hosted by Safer Society Foundation)",
+     "source_kind": "other",
+     "accessed": "2026-10-17",
+     "quote": "Criteria for Classification / Patterns of Attachment, Ainsworth, Blehar, Waters & Wall, 1978 / Group A: Conspicuous avoidance of proximity to or interaction with the mother in the reunion episodes. ... Subgroup A1: Conspicuous avoidance of the mother in the reunion episodes ... Subgroup A2: The baby shows a mixed response to his mother on reunion ... Subgroup B1: The baby greets his mother, smiling upon her return ... Subgroup B2: The baby greets his mother upon reunion, tends to approach her, and seems to want contact with her, but to a lesser extent than does a B3 baby. ... Subgroup B3: The baby actively seeks physical contact with his mother ... Subgroup B4: The baby wants contact, especially in the reunion episodes ... Subgroup C1: Proximity seeking and contact maintaining is strong in the reunion episodes ... Resistant behavior is particularly conspicuous. ... Subgroup C2: Perhaps the most conspicuous characteristic of C2 infants is their passivity.",
+     "source_values": [
+      "Group A",
+      "Subgroup A1",
+      "Subgroup A2",
+      "Group B",
+      "Subgroup B1",
+      "Subgroup B2",
+      "Subgroup B3",
+      "Subgroup B4",
+      "Group C",
+      "Subgroup C1",
+      "Subgroup C2"
+     ],
+     "corrections": "none — all eight subgroup labels A1, A2, B1, B2, B3, B4, C1, C2 appear as headings under Groups A, B, C. The PDF has no D/disorganized heading (consistent: D is Main & Solomon, not Ainsworth 1978).",
+     "note": "Text extracted locally with pypdf from the fetched PDF (WebFetch could not read the compressed stream). Corroborated by two further sources: (1) Oxford Academic Table 2.1 'The Ainsworth Strange Situation Classifications, as outlined in Patterns of Attachment (1978)' at https://academic.oup.com/view-large/518033958, which lists rows A1, A2, B1, B2, B3, B4, C1, C2 with behavioural criteria (e.g. A2: 'Low to moderate proximity-seeking on reunion. Marked proximity-avoiding behaviours.'; B3: 'Strong proximity-seeking and contact-maintaining on reunion. No contact-resisting or proximity-avoiding.'); parent book not identified on the table page. (2) Wikipedia 'Strange situation' (https://en.wikipedia.org/wiki/Strange_situation): 'they are further subclassified as B1, B2, B3, and B4'; A1/A2 and C1/C2 subtypes described, citing Ainsworth, Blehar, Waters & Wall (1978) pp. 59-63 and Cassidy & Berlin (1994). Knowledge-note claim that 'B3 is the prototypically secure group' is consistent with the criteria text (B2 and B4 are defined relative to B3) but is not stated in those words. Fraley's lab page (the entry's cited URL) does NOT mention subgroups."
+    },
+    "disorganized_disoriented": {
+     "status": "VERIFIED",
+     "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5600694/",
+     "source_title": "Granqvist, P., Sroufe, L. A., Dozier, M., Hesse, E., Steele, M., van IJzendoorn, M., et al. (2017). Disorganized attachment in infancy: a review of the phenomenon and its implications for clinicians and policy-makers. Attachment & Human Development, 19(6), 534-558.",
+     "source_kind": "open_access_review",
+     "accessed": "2026-10-17",
+     "quote": "Reference list: Main, M., & Solomon, J. (1986). Discovery of a new, insecure-disorganized/disoriented attachment pattern. In M. Yogman & T. B. Brazelton (Eds.), Affective Development in Infancy (pp. 95-124). Norwood, NJ: Ablex. / Main, M., & Solomon, J. (1990). Procedures for identifying infants as disorganised/disoriented during the Ainsworth Strange Situation. In M. T. Greenberg, D. Cicchetti, & E. M. Cummings (Eds.), Attachment in the Preschool Years (pp. 121-160). Chicago, IL: University of Chicago Press. Body: infants classified as disorganized are also given 'an alternate \"best-fitting\" (secondary) organized category as well' ... 'This convention has led to a particularly marked decrease in primary resistant category assignments.' ... the concept 'arose out of a growing awareness amongst researchers that not all infant responses in the Strange Situation could be placed in the original patterns defined by Ainsworth.'",
+     "source_values": [
+      "disorganized/disoriented (D), with an alternate best-fitting secondary organized (A/B/C) category"
+     ],
+     "corrections": "none for the construct value. One bibliographic discrepancy: the knowledge note lists the 1986 editors as 'T. B. Brazelton & M. W. Yogman'; Granqvist et al.'s reference list gives 'M. Yogman & T. B. Brazelton'. Editor order not resolved here (the published volume's editor order should be checked before citing).",
+     "note": "The term 'disorganized/disoriented' is visibly present in the PMC-hosted reference entries for both Main & Solomon chapters, and the body confirms the secondary A/B/C assignment convention stated in the knowledge note. Corroborated by Wikipedia 'Strange situation': Main and Solomon (1990) 'extended the original attachment classification to identify a fourth disorganized/disoriented attachment style', citing Main & Solomon (1990), Attachment in the Preschool Years, pp. 121-60 (Wikipedia cites only the 1990 chapter, not 1986). Fraley's lab page (the entry's cited URL) does NOT mention D or Main & Solomon."
+    }
+   }
+  },
+  "bartholomew": {
+   "constructs": {
+    "rq_prototypes": {
+     "status": "VERIFIED",
+     "source_url": "https://www.psicothema.com/pdf/4146.pdf",
+     "source_title": "Sheinbaum, T., Bedoya, E., Kwapil, T. R., & Barrantes-Vidal, N. (2013). Comparison of self-reported attachment in young adults from Spain and the United States. Psicothema, 25(4), 514-519.",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "According to Bartholomew's framework, the two independent dimensions can be combined to define four attachment prototypes: secure (positive self/positive others), dismissing (positive self/negative others), preoccupied (negative self/positive others), and fearful (negative self/negative others).",
+     "source_values": [
+      "secure (positive self/positive others)",
+      "dismissing (positive self/negative others)",
+      "preoccupied (negative self/positive others)",
+      "fearful (negative self/negative others)"
+     ],
+     "corrections": "none — all four labels and the full self/other mapping match the knowledge list. Source order is secure, dismissing, preoccupied, fearful (knowledge list order secure, preoccupied, dismissing, fearful); source says 'others' (plural) where the knowledge note says 'other'.",
+     "note": "Text extracted locally with pypdf from the fetched PDF. Primary-source check: the Bartholomew & Horowitz (1991) abstract (fetched via NCBI E-utilities, https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=1920064&rettype=abstract&retmode=text) describes four prototypic patterns defined by positive/negative self-image crossed with positive/negative image of others but does NOT name secure/preoccupied/dismissing/fearful in the abstract itself. Fraley's measures page (https://labs.psychology.illinois.edu/~rcfraley/measures/measures.html) names the RQ styles as 'secure', 'fearful-avoidant', 'preoccupied', 'dismissing-avoidant' (Styles A-D). PMC8470855 (Wongpakaran et al. 2021, Healthcare 9(9):1174) states 'The RQ has four measurable categories of attachment styles—secure, fearful, preoccupied, and dismissing' and gives only the preoccupied self/other mapping explicitly. Bartholomew's SFU page (selfreports.htm) returned 404; no sfu.ca RQ page located by search."
+    },
+    "model_of_self": {
+     "status": "VERIFIED",
+     "source_url": "https://www.psicothema.com/pdf/4146.pdf",
+     "source_title": "Sheinbaum, T., Bedoya, E., Kwapil, T. R., & Barrantes-Vidal, N. (2013). Comparison of self-reported attachment in young adults from Spain and the United States. Psicothema, 25(4), 514-519.",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "These authors systematized Bowlby's (1973) concept of internal working models and proposed a four-prototype scheme based on two underlying dimensions, the positivity of a person's Model of Self (MS) and the positivity of a person's Model of Others (MO). MS is associated with the degree to which a person fears rejection and abandonment by a significant other, whereas MO is associated with the degree to which a person avoids closeness and intimacy with others",
+     "source_values": [
+      "positive",
+      "negative"
+     ],
+     "corrections": "none — 'positive self' / 'negative self' values and the fear-of-rejection/abandonment (anxiety) interpretation in the knowledge note are both present.",
+     "note": "Bartholomew & Horowitz 1991 abstract (via E-utilities) confirms the dimension in the authors' own words as 'whether a person's self-image is positive or negative'. Fraley's measures page: 'Underlying the four types or styles are two dimensions, Model of Self and Model of Other (or Partner).' PMC8470855: 'the model of self is calculated by summing secure and dismissing items'."
+    },
+    "model_of_other": {
+     "status": "VERIFIED",
+     "source_url": "https://www.psicothema.com/pdf/4146.pdf",
+     "source_title": "Sheinbaum, T., Bedoya, E., Kwapil, T. R., & Barrantes-Vidal, N. (2013). Comparison of self-reported attachment in young adults from Spain and the United States. Psicothema, 25(4), 514-519.",
+     "source_kind": "open_access_paper",
+     "accessed": "2026-10-17",
+     "quote": "the positivity of a person's Model of Self (MS) and the positivity of a person's Model of Others (MO). ... MO is associated with the degree to which a person avoids closeness and intimacy with others",
+     "source_values": [
+      "positive",
+      "negative"
+     ],
+     "corrections": "Label wording: Psicothema uses 'Model of Others' (plural); Fraley's page uses 'Model of Other (or Partner)'; Bartholomew & Horowitz abstract uses 'image of others'. Values positive/negative and the avoidance-of-intimacy interpretation match.",
+     "note": "PMC8470855: 'the model of the other by summing the secure and preoccupied items'; Figure 1 caption 'Bartholomew and Horowitz's self/other model: self model (X-axis) and other model (Y-axis)'."
+    }
+   }
+  },
+  "sdt": {
+   "constructs": {
+    "motivation_continuum": {
+     "status": "VERIFIED",
+     "source_url": "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf",
+     "source_title": "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. American Psychologist, 55(1), 68-78. (author-hosted PDF at selfdeterminationtheory.org)",
+     "source_kind": "author_page",
+     "accessed": "2026-10-17",
+     "quote": "Figure 1 / The Self-Determination Continuum Showing Types of Motivation With Their Regulatory Styles, Loci of Causality, and Corresponding Processes ... At the far left of the self-determination continuum is amotivation, the state of lacking the intention to act. ... To the right of amotivation in Figure 1 are five classifications of motivated behavior. ... At the far right of the continuum is the classic state of intrinsic motivation ... The extrinsically motivated behaviors that are least autonomous are referred to as externally regulated. ... External regulation is the type of motivation focused on by operant theorists ... A second type of extrinsic motivation is labeled introjected regulation. ... A more autonomous, or self-determined, form of extrinsic motivation is regulation through identification. ... Finally, the most autonomous form of extrinsic motivation is integrated regulation. ... In some studies, identified, integrated, and intrinsic forms of regulation have been combined to form an autonomous motivation composite.",
+     "source_values": [
+      "amotivation",
+      "external regulation (externally regulated)",
+      "introjected regulation",
+      "regulation through identification / identified regulation",
+      "integrated regulation",
+      "intrinsic motivation"
+     ],
+     "corrections": "none — all six items appear in the body text in the knowledge-list order (amotivation at far left, intrinsic motivation at far right; 'five classifications of motivated behavior' between). Minor wording: the body introduces the third extrinsic type as 'regulation through identification'; the exact phrase 'identified regulation' appears later on p. 73 ('identified regulation was associated with more interest and enjoyment of school').",
+     "note": "Body text extracted locally with pypdf (the Figure 1 graphic itself is an embedded scanned image and its labels were not machine-readable; text extraction of the figure block is garbled). The '-ed regulation' labels flagged as knowledge in the entry are therefore confirmed from Ryan & Deci's own prose. Corroborated by Bureau, Guay, Plamondon, Ratelle, Howard & Gilbert (2023), Motivation and Emotion 47:46-60 (author-hosted PDF at selfdeterminationtheory.org): 'a continuum that ranges from highly self-determined (intrinsic motivation) to non-self-determined (external regulation, and also amotivation, a non-motivated state; see Fig. 1)' with 'introjected regulation', 'identified regulation', 'integrated regulation' all named. PMC10936145 table (reproducing Deci & Ryan 2000 p. 237) was blocked by a reCAPTCHA page."
+    }
+   }
+  },
+  "lazarus": {
+   "constructs": {
+    "coping_functions": {
+     "status": "VERIFIED",
+     "source_url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.00694/full",
+     "source_title": "Stanisławski, K. (2019). The Coping Circumplex Model: An Integrative Model of the Structure of Coping With Stress. Frontiers in Psychology, 10:694.",
+     "source_kind": "open_access_review",
+     "accessed": "2026-10-17",
+     "quote": "Lazarus and Folkman (1984) distinguished two basic coping categories, i.e., problem-focused and emotion-focused coping, as responses aimed at 'managing or altering the problem causing the distress' and 'regulating emotional responses to the problem,' respectively. ... They developed the Ways of Coping Questionnaire (WCQ) based on the problem- vs. emotion-focused distinction to measure responses to stress during a specified period of time.",
+     "source_values": [
+      "problem-focused coping",
+      "emotion-focused coping"
+     ],
+     "corrections": "none",
+     "note": "Open-access review quoting Lazarus & Folkman (1984) definitions directly. The review also notes the distinction 'has been criticized by many authors over the years (Lazarus, 1996; Compas et al., 2001; Skinner et al., 2003)'. Lazarus & Folkman 1984 book itself not fetched."
+    }
+   }
+  },
+  "goleman": {
+   "constructs": {
+    "four_domains": {
+     "status": "VERIFIED",
+     "source_url": "https://keystepmedia.com/what-is-emotional-intelligence",
+     "source_title": "What Is Emotional Intelligence? — Key Step Media (Goleman's publishing company)",
+     "source_kind": "official_site",
+     "accessed": "2026-10-17",
+     "quote": "Self Awareness / Self Management / Social Awareness / Relationship Management ... Under the four domains mentioned above, there are 12 competencies, which are as follows:",
+     "source_values": [
+      "Self Awareness",
+      "Self Management",
+      "Social Awareness",
+      "Relationship Management"
+     ],
+     "corrections": "none",
+     "note": "Re-fetched the entry's cited URL; four domain labels confirmed exactly as recorded."
+    },
+    "twelve_competencies": {
+     "status": "PARTIAL",
+     "source_url": "https://keystepmedia.com/what-is-emotional-intelligence",
+     "source_title": "What Is Emotional Intelligence? — Key Step Media (Goleman's publishing company)",
+     "source_kind": "official_site",
+     "accessed": "2026-10-17",
+     "quote": "Under the four domains mentioned above, there are 12 competencies, which are as follows: 1. Emotional Self-Awareness 2. Emotional Self-Control 3. Adaptability 4. Achievement Orientation 5. Positive Outlook 6. Empathy 7. Organizational Awareness 8. Influence 9. Coach and Mentor 10. Conflict Management 11. Teamwork 12. Inspirational Leadership",
+     "source_values": [
+      "Emotional Self-Awareness",
+      "Emotional Self-Control",
+      "Adaptability",
+      "Achievement Orientation",
+      "Positive Outlook",
+      "Empathy",
+      "Organizational Awareness",
+      "Influence",
+      "Coach and Mentor",
+      "Conflict Management",
+      "Teamwork",
+      "Inspirational Leadership"
+     ],
+     "corrections": "The 12 competency labels and their order are VERIFIED on the cited page. The competency-to-domain grouping is NOT shown on the cited page: the page lists the four domains, then the 12 competencies as a single numbered list with no domain headings. The project report's claim that the grouping was from knowledge is therefore CORRECT, and the entry's existing notes already say so ('the fetched page lists competencies without assigning domains'). The PARTIAL status applies only to the grouping; the list itself stays FETCHED.",
+     "note": "Grouping attempts: (1) keystepmedia (cited URL) — no grouping. (2) HBR 2017 article (https://hbr.org/2017/02/emotional-intelligence-has-12-elements-which-do-you-need-to-work-on) — body truncated/paywalled; domains not visible. (3) University of Minnesota 'Overview of Goleman's Four Emotional Intelligence Domains and Learned Competencies' (https://www.takingcharge.csh.umn.edu/node/1602, university_page, dated 01/2026, attributes domains to Goleman without a specific publication) — partially corroborates the knowledge grouping: Social Awareness = Empathy, Organizational Awareness (matches); Self Management and Regulation = Emotional self-control, Adaptability (matches; omits Achievement Orientation and Positive Outlook); Relationship Management = 'Influence', 'Coach and mentor', 'Inspirational leadership', 'Conflict management' plus 'Team collaboration traits' (matches; Teamwork named as collaboration); Self-Awareness given as descriptive bullets without naming 'Emotional Self-Awareness'. (4) Big Think article returned 403. No fetched page showed the full 12-under-4 grouping; the Korn Ferry ESCI page was not located by search."
+    }
+   }
+  }
+ }
+}

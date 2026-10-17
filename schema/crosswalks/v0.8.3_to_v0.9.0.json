@@ -1,0 +1,602 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM v0.8.3 to v0.9.0 Migration Crosswalk (DRAFT, discovery)",
+  "description": "Draft record of the v0.9 relayout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. Five affective domains are renamed (core->narrative, constellation->emotion, milky_way->context, gravity->salience, impulse->motivation); 57 affective fields become 47 (39 carried by rename/move, 9 merged into others, 7 cut with text preserved in extensions, 2 moved to an opt-in trait profile, 7 new); every categorical field becomes text + codings; four fields become dimensions with a numeric value beside the ordinal text. No artifact text changes: scripts/v09_layout.py in the discovery folder proves the scalar multiset of the affective domains is identical before and after.",
+  "status": "draft",
+  "discovery_only": true,
+  "version_from": "0.8.3",
+  "version_to": "0.9.0",
+  "release_date": null,
+  "breaking_changes": true,
+  "release_class": "minor",
+  "summary": {
+    "domains_renamed": 5,
+    "fields_added": 7,
+    "infrastructure_fields_added": 1,
+    "fields_removed": 7,
+    "fields_renamed_or_moved": 39,
+    "fields_merged": 9,
+    "fields_moved_to_trait_profile": 2,
+    "affective_field_count_before": 57,
+    "affective_field_count_after": 47,
+    "values_deprecated": 10,
+    "values_renamed": 0,
+    "text_changes_required": 0
+  },
+  "domain_renames": {
+    "core": "narrative",
+    "constellation": "emotion",
+    "milky_way": "context",
+    "gravity": "salience",
+    "impulse": "motivation"
+  },
+  "field_map": [
+    {
+      "from": "core.anchor",
+      "to": "narrative.subject",
+      "action": "rename",
+      "shape": "text",
+      "note": "EmotionML reference@targetedAt; OCC object"
+    },
+    {
+      "from": "core.spark",
+      "to": "narrative.trigger",
+      "action": "rename",
+      "shape": "text",
+      "note": "EmotionML reference@triggeredBy"
+    },
+    {
+      "from": "core.wound",
+      "to": "narrative.harm",
+      "action": "rename",
+      "shape": "text",
+      "note": "Lazarus & Folkman harm/loss appraisal; MFOEM:000106 appraisal of loss"
+    },
+    {
+      "from": "core.fuel",
+      "to": "narrative.drive",
+      "action": "rename",
+      "shape": "text",
+      "note": "Panksepp SEEKING; SDT intrinsic motivation"
+    },
+    {
+      "from": "core.bridge",
+      "to": "narrative.integration",
+      "action": "rename",
+      "shape": "text",
+      "note": "Singer & Blagov integrative meaning"
+    },
+    {
+      "from": "core.echo",
+      "to": "salience.retrieval_cues",
+      "action": "merge",
+      "shape": "list",
+      "note": "Tulving retrieval cue; first element of the merged list"
+    },
+    {
+      "from": "core.narrative",
+      "to": "narrative.summary",
+      "action": "rename",
+      "shape": "text",
+      "note": "the narrative text itself"
+    },
+    {
+      "from": "constellation.emotion_primary",
+      "to": "emotion.primary",
+      "action": "rename",
+      "shape": "coded",
+      "note": "MFOEM emotion process; EmotionML category"
+    },
+    {
+      "from": "constellation.emotion_subtone",
+      "to": "emotion.secondary",
+      "action": "rename",
+      "shape": "coded_list",
+      "note": "EmotionML multiple categories"
+    },
+    {
+      "from": "constellation.higher_order_emotion",
+      "to": "emotion.secondary",
+      "action": "merge",
+      "shape": "coded_list",
+      "note": "appended to secondary[]"
+    },
+    {
+      "from": "constellation.meta_emotional_state",
+      "to": "emotion.meta",
+      "action": "rename",
+      "shape": "text",
+      "note": "meta-emotion (Gottman et al. 1996)"
+    },
+    {
+      "from": "constellation.interpersonal_affect",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "no framework home beyond EI competencies; text preserved in extensions"
+    },
+    {
+      "from": "constellation.narrative_arc",
+      "to": "narrative.arc",
+      "action": "merge",
+      "shape": "coded_list",
+      "note": "Booker / McAdams; arc becomes a list so both readings survive"
+    },
+    {
+      "from": "constellation.relational_dynamics",
+      "to": "context.relationship",
+      "action": "move",
+      "shape": "coded",
+      "note": "EDM vocab relationship/v1; Fiske as companion code"
+    },
+    {
+      "from": "constellation.temporal_context",
+      "to": "context.life_stage",
+      "action": "move",
+      "shape": "coded",
+      "note": "Conway lifetime period"
+    },
+    {
+      "from": "constellation.memory_type",
+      "to": "salience.memory_type",
+      "action": "move",
+      "shape": "coded",
+      "note": "Pillemer momentous-event types as codes"
+    },
+    {
+      "from": "constellation.media_format",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "duplicates meta.source_type; text preserved in extensions"
+    },
+    {
+      "from": "constellation.narrative_archetype",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "replaced by narrative.self_position (stated-only free text); enum value preserved in extensions, never copied into self_position"
+    },
+    {
+      "from": "constellation.symbolic_anchor",
+      "to": "salience.tether",
+      "action": "merge",
+      "shape": "object",
+      "note": "tether.referent"
+    },
+    {
+      "from": "constellation.relational_perspective",
+      "to": "context.scope",
+      "action": "move",
+      "shape": "coded",
+      "note": "Bronfenbrenner nested systems"
+    },
+    {
+      "from": "constellation.temporal_rhythm",
+      "to": "emotion.temporal_profile",
+      "action": "rename",
+      "shape": "coded",
+      "note": "EmotionML trace / Scherer suddenness; EDM-specific shapes kept"
+    },
+    {
+      "from": "constellation.identity_thread",
+      "to": "narrative.identity_link",
+      "action": "rename",
+      "shape": "text",
+      "note": "Conway self-memory system"
+    },
+    {
+      "from": "constellation.expressed_insight",
+      "to": "narrative.meaning",
+      "action": "rename",
+      "shape": "text",
+      "note": "McAdams meaning-making"
+    },
+    {
+      "from": "constellation.transformational_pivot",
+      "to": "narrative.turning_point",
+      "action": "rename",
+      "shape": "bool",
+      "note": "McAdams / Pillemer turning point"
+    },
+    {
+      "from": "constellation.somatic_signature",
+      "to": "emotion.bodily_sensation",
+      "action": "rename",
+      "shape": "text",
+      "note": "MFOEM:000003 physiological process involved in an emotion"
+    },
+    {
+      "from": "constellation.arc_type",
+      "to": "narrative.arc",
+      "action": "move",
+      "shape": "coded_list",
+      "note": "Booker / Campbell / McAdams"
+    },
+    {
+      "from": "milky_way.event_type",
+      "to": "context.event",
+      "action": "rename",
+      "shape": "text",
+      "note": "Singer & Blagov content category as companion (context.event_category)"
+    },
+    {
+      "from": "milky_way.location_context",
+      "to": "context.place",
+      "action": "rename",
+      "shape": "text",
+      "note": "Tulving episodic where"
+    },
+    {
+      "from": "milky_way.associated_people",
+      "to": "context.people",
+      "action": "rename",
+      "shape": "list",
+      "note": ""
+    },
+    {
+      "from": "milky_way.visibility_context",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "governance; duplicates meta.visibility; text preserved in extensions"
+    },
+    {
+      "from": "milky_way.tone_shift",
+      "to": "narrative.valence_shift",
+      "action": "rename",
+      "shape": "text",
+      "note": "McAdams redemption / contamination"
+    },
+    {
+      "from": "gravity.emotional_weight",
+      "to": "emotion.intensity",
+      "action": "move",
+      "shape": "dimension",
+      "note": "EmotionML intensity-dimension; numeric value carried as-is"
+    },
+    {
+      "from": "gravity.emotional_density",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "no framework construct; text preserved in extensions"
+    },
+    {
+      "from": "gravity.valence",
+      "to": "emotion.valence",
+      "action": "move",
+      "shape": "dimension",
+      "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence"
+    },
+    {
+      "from": "gravity.viscosity",
+      "to": "salience.persistence",
+      "action": "merge",
+      "shape": "object",
+      "note": "persistence.text"
+    },
+    {
+      "from": "gravity.gravity_type",
+      "to": "salience.tether",
+      "action": "merge",
+      "shape": "object",
+      "note": "tether.stake (Lazarus ego-involvement)"
+    },
+    {
+      "from": "gravity.tether_type",
+      "to": "salience.tether",
+      "action": "rename",
+      "shape": "object",
+      "note": "tether.type (EDM vocab tether/v1; OCC branches)"
+    },
+    {
+      "from": "gravity.recall_triggers",
+      "to": "salience.retrieval_cues",
+      "action": "rename",
+      "shape": "list",
+      "note": "Tulving; Conway sensory-perceptual cue"
+    },
+    {
+      "from": "gravity.retrieval_keys",
+      "to": "salience.retrieval_cues",
+      "action": "merge",
+      "shape": "list",
+      "note": "appended to retrieval_cues"
+    },
+    {
+      "from": "gravity.nearby_themes",
+      "to": "salience.themes",
+      "action": "rename",
+      "shape": "list",
+      "note": "Conway thematic linkage"
+    },
+    {
+      "from": "gravity.recurrence_pattern",
+      "to": "salience.recurrence",
+      "action": "rename",
+      "shape": "coded",
+      "note": "Singer & Blagov specificity"
+    },
+    {
+      "from": "gravity.strength_score",
+      "to": "salience.linkage_strength",
+      "action": "rename",
+      "shape": "number",
+      "note": "SDM criterion: linked to similar memories"
+    },
+    {
+      "from": "gravity.temporal_decay",
+      "to": "salience.persistence",
+      "action": "merge",
+      "shape": "object",
+      "note": "persistence.decay"
+    },
+    {
+      "from": "gravity.resilience_markers",
+      "to": "salience.resilience",
+      "action": "rename",
+      "shape": "list",
+      "note": "Lazarus positive reappraisal; Bar-On optimism"
+    },
+    {
+      "from": "gravity.adaptation_trajectory",
+      "to": "salience.trajectory",
+      "action": "rename",
+      "shape": "coded",
+      "note": "McAdams redemption / contamination"
+    },
+    {
+      "from": "impulse.primary_energy",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "duplicates emotion.primary; text preserved in extensions"
+    },
+    {
+      "from": "impulse.drive_state",
+      "to": "motivation.action_tendency",
+      "action": "rename",
+      "shape": "coded",
+      "note": "Frijda action tendency (EmotionML frijda-action-tendencies)"
+    },
+    {
+      "from": "impulse.motivational_orientation",
+      "to": "motivation.need",
+      "action": "rename",
+      "shape": "coded",
+      "note": "SDT basic psychological needs"
+    },
+    {
+      "from": "impulse.temporal_focus",
+      "to": "motivation.temporal_focus",
+      "action": "rename",
+      "shape": "coded",
+      "note": "Tulving chronesthesia"
+    },
+    {
+      "from": "impulse.directionality",
+      "to": "context.scope",
+      "action": "merge",
+      "shape": "object",
+      "note": "scope.direction"
+    },
+    {
+      "from": "impulse.social_visibility",
+      "to": null,
+      "action": "cut",
+      "shape": null,
+      "note": "duplicates context.scope and meta.visibility; text preserved in extensions"
+    },
+    {
+      "from": "impulse.urgency",
+      "to": "emotion.appraisal.urgency",
+      "action": "move",
+      "shape": "dimension",
+      "note": "EmotionML ema-appraisals#urgency; MFOEM:000089/000090"
+    },
+    {
+      "from": "impulse.risk_posture",
+      "to": "motivation.risk_posture",
+      "action": "rename",
+      "shape": "coded",
+      "note": "Lazarus threat / challenge"
+    },
+    {
+      "from": "impulse.agency_level",
+      "to": "emotion.appraisal.control",
+      "action": "move",
+      "shape": "dimension",
+      "note": "EmotionML scherer-appraisals#control; MFOEM:000110/000116"
+    },
+    {
+      "from": "impulse.regulation_state",
+      "to": "trait.regulation_state",
+      "action": "trait",
+      "shape": "coded",
+      "note": "Gross; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile"
+    },
+    {
+      "from": "impulse.attachment_style",
+      "to": "trait.attachment_style",
+      "action": "trait",
+      "shape": "coded",
+      "note": "Ainsworth / Main; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile"
+    },
+    {
+      "from": "impulse.coping_style",
+      "to": "motivation.coping",
+      "action": "rename",
+      "shape": "coded",
+      "note": "Lazarus & Folkman Ways of Coping; Gross family as second coding"
+    }
+  ],
+  "new_fields": [
+    {
+      "path": "narrative.self_position",
+      "shape": "text",
+      "note": "stated-only: the subject's expressed lens on themselves in the story; codes to McAdams imago (open) and agency/communion; Hermans I-positions",
+      "populated_by_migration": false
+    },
+    {
+      "path": "emotion.kind",
+      "shape": "coded",
+      "note": "MFOEM:000001 emotion process | MFOEM:000193 mood process | MFOEM:000006 subjective affective feeling | MFOEM:000199 emotion disposition",
+      "populated_by_migration": false
+    },
+    {
+      "path": "emotion.arousal",
+      "shape": "dimension",
+      "note": "Russell; PAD; GRID; EmotionML pad-dimensions#arousal",
+      "populated_by_migration": false
+    },
+    {
+      "path": "emotion.appraisal.attribution",
+      "shape": "coded",
+      "note": "Scherer agent-self / agent-other / agent-nature; MFOEM:000076 / 000078 / 000077",
+      "populated_by_migration": false
+    },
+    {
+      "path": "context.event_category",
+      "shape": "coded",
+      "note": "Singer & Blagov / Thorne & McLean content categories",
+      "populated_by_migration": false
+    },
+    {
+      "path": "context.relationship_model",
+      "shape": "coded",
+      "note": "Fiske relational models",
+      "populated_by_migration": false
+    },
+    {
+      "path": "salience.function",
+      "shape": "coded_list",
+      "note": "Pillemer / Bluck memory functions: directive, self, social",
+      "populated_by_migration": false
+    },
+    {
+      "path": "telemetry.field_confidence",
+      "shape": "object",
+      "note": "EmotionML confidence attribute, per field path (infrastructure, not an affective field)",
+      "populated_by_migration": false
+    }
+  ],
+  "trait_profile": {
+    "fields": [
+      "trait.attachment_style",
+      "trait.regulation_state"
+    ],
+    "rule": "Not part of any canonical profile. A partner profile opts in by listing trait.* in included_fields. Each value is recorded only as stated for this experience and is never aggregated into a person-level classification by the artifact."
+  },
+  "coding_shape": {
+    "coded": {
+      "text": "string (the interpretation; mandatory when the field is populated)",
+      "codings": [
+        {
+          "system": "URI",
+          "version": "string",
+          "code": "string",
+          "display": "string",
+          "relation": "exact | broader | narrower | related (default exact)"
+        }
+      ]
+    },
+    "dimension": {
+      "text": "ordinal label or null",
+      "value": "number or null (never derived from text by migration)",
+      "codings": "[...]"
+    },
+    "edm_vocabulary": "https://emotionaldatamodel.org/vocab/<field>/v1#<value>",
+    "xref_namespace": "https://emotionaldatamodel.org/xref/v1/<framework_id>#<slug> (placeholder for frameworks that publish no concept URIs)"
+  },
+  "deprecated_values": [
+    {
+      "field": "context.relationship",
+      "value": "friend",
+      "coded_to": "friendship",
+      "reason": "duplicate",
+      "text_change": false
+    },
+    {
+      "field": "context.relationship",
+      "value": "couple",
+      "coded_to": "romantic_partnership",
+      "reason": "duplicate",
+      "text_change": false
+    },
+    {
+      "field": "context.relationship",
+      "value": "grief",
+      "coded_to": null,
+      "reason": "an emotion, not a relational configuration",
+      "text_change": false
+    },
+    {
+      "field": "context.relationship",
+      "value": "self_reflection",
+      "coded_to": null,
+      "reason": "a narrative mode, not a relational configuration",
+      "text_change": false
+    },
+    {
+      "field": "salience.memory_type",
+      "value": "legacy_artifact",
+      "coded_to": null,
+      "reason": "an object tether, not a memory type (coded tether/v1#object, related)",
+      "text_change": false
+    },
+    {
+      "field": "salience.persistence",
+      "value": "fluid",
+      "coded_to": "transient",
+      "reason": "nominal value inside an ordinal scale",
+      "text_change": false
+    },
+    {
+      "field": "salience.recurrence",
+      "value": "emerging",
+      "coded_to": null,
+      "reason": "not a recurrence structure",
+      "text_change": false
+    },
+    {
+      "field": "salience.trajectory",
+      "value": "emerging",
+      "coded_to": null,
+      "reason": "not a trajectory direction",
+      "text_change": false
+    },
+    {
+      "field": "emotion.temporal_profile",
+      "value": "looping",
+      "coded_to": "recurring",
+      "reason": "overlaps recurring",
+      "text_change": false
+    },
+    {
+      "field": "emotion.temporal_profile",
+      "value": "cyclic",
+      "coded_to": "recurring",
+      "reason": "overlaps recurring / salience.recurrence=cyclical",
+      "text_change": false
+    }
+  ],
+  "backward_compatibility": {
+    "v083_to_v090": "Automatic. Paths change; no text changes. Cut fields are preserved verbatim under extensions.org.emotionaldatamodel.migration. New fields are null until re-extracted; the migration never infers them.",
+    "v090_to_v083": "Lossy only for new fields and codings; the reverse map is field_map inverted."
+  },
+  "migration_notes": {
+    "automatic_upgrade": true,
+    "data_loss_risk": "none (cut-field text preserved in extensions)",
+    "steps": [
+      "1. Rename domains and fields per field_map.",
+      "2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.",
+      "3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.",
+      "4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].",
+      "5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.",
+      "6. Copy cut-field values into extensions.org.emotionaldatamodel.migration.",
+      "7. Set meta.version."
+    ],
+    "reference_implementation": "docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py"
+  }
+}

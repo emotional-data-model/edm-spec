@@ -25,7 +25,7 @@ Grounding per row: **strong** = at least one exact mapping; **moderate** = broad
 | Field rows | 57 |
 | Value rows | 185 |
 | Mappings | 913 |
-| Targets verified V / K / - | 393 / 241 / 279 |
+| Targets verified V / K / - | 602 / 32 / 279 |
 | Fields strong / moderate / weak / orphan | 19 / 1 / 36 / 1 |
 | Values strong / moderate / weak / orphan | 62 / 0 / 96 / 27 |
 
@@ -94,7 +94,7 @@ _Central person, object, or theme of the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | W3C EmotionML + vocabularies | related | <reference role="targetedAt"> | - | object/person the emotion is about |
-| OCC | related | aspects of objects / actions of agents (eliciting branches) | K | the thing the valenced reaction is about |
+| OCC | related | aspects of objects / actions of agents (eliciting branches) | V | the thing the valenced reaction is about |
 | Singer & Blagov SDM | related | content category (relationship, achievement, ...) | K | content domain of the memory |
 | Conway self-memory system | related | general event / ESK theme | - | thematic index in the autobiographical knowledge base |
 | Lazarus appraisal / coping | related | ego-involvement (type) | V | what is at stake |
@@ -109,7 +109,7 @@ _What triggered or initiated the emotional response_
 | Lazarus appraisal / coping | related | primary appraisal: encounter / stimulus event | V | eliciting encounter |
 | Scherer CPM / GRID / GEW | related | eliciting event; relevance check (novelty) | - | CPM first SEC |
 | OCC | related | eliciting event / agent / object | - | OCC root branches |
-| Gross process model | related | situation (situation selection / modification) | K | the situation that elicits |
+| Gross process model | related | situation (situation selection / modification) | V | the situation that elicits |
 | Pillemer momentous events | related | originating event | - | event that starts a life path |
 | OBO MFOEM Emotion Ontology | related | affective appraisal process (MFOEM:000002) | V | MFOEM models the appraisal, not the stimulus |
 
@@ -121,9 +121,9 @@ _Emotional pain, loss, or vulnerability present in the experience_
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | harm/loss appraisal; core relational theme: sadness (irrevocable loss) | - |  |
 | OBO MFOEM Emotion Ontology | related | appraisal of loss (MFOEM:000106) | V |  |
-| Conway self-memory system | related | SDM criterion: enduring concern / unresolved conflict | K |  |
+| Conway self-memory system | related | SDM criterion: enduring concern / unresolved conflict | V |  |
 | Singer & Blagov SDM | related | content: life-threatening events; guilt/shame | K |  |
-| McAdams narrative identity | related | contamination sequence; low point | K |  |
+| McAdams narrative identity | related | contamination sequence; low point | V |  |
 | Scherer CPM / GRID / GEW | related | goal conduciveness / obstructiveness check | - |  |
 | Panksepp primary systems | related | PANIC/GRIEF | V |  |
 
@@ -138,7 +138,7 @@ _What energized or motivated the experience_
 | Elliot approach-avoidance | related | approach motivation | - |  |
 | Lazarus appraisal / coping | related | goal relevance (primary appraisal) | V |  |
 | Scherer CPM / GRID / GEW | related | goal conduciveness | - |  |
-| McAdams narrative identity | related | agency / communion themes | K |  |
+| McAdams narrative identity | related | agency / communion themes | V |  |
 
 ### `core.bridge` — free_text — grounding: **weak**
 
@@ -146,10 +146,10 @@ _Connection or shift between past and present understanding_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | meaning-making; redemption sequence | K | link between past event and present understanding |
-| Singer & Blagov SDM | related | integrative meaning | K |  |
-| Conway self-memory system | related | coherence (self-memory system) | K |  |
-| Tulving episodic memory | related | chronesthesia / mental time travel | K |  |
+| McAdams narrative identity | related | meaning-making; redemption sequence | V | link between past event and present understanding |
+| Singer & Blagov SDM | related | integrative meaning | V |  |
+| Conway self-memory system | related | coherence (self-memory system) | V |  |
+| Tulving episodic memory | related | chronesthesia / mental time travel | V |  |
 
 ### `core.echo` — free_text — grounding: **weak**
 
@@ -158,9 +158,9 @@ _What continues to resonate or recur from the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Pillemer momentous events | related | sensory imagery; vividness of personal event memory | - |  |
-| Conway self-memory system | related | SDM criterion: vividness; rehearsal | K |  |
+| Conway self-memory system | related | SDM criterion: vividness; rehearsal | V |  |
 | Singer & Blagov SDM | related | SDM criterion: repeatedly recalled | - |  |
-| Tulving episodic memory | related | encoding specificity (retrieval cue) | K |  |
+| Tulving episodic memory | related | encoding specificity (retrieval cue) | V |  |
 
 ### `core.narrative` — free_text — grounding: **weak**
 
@@ -169,8 +169,8 @@ _A compressed, faithful account of the experience as described by the source, pr
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | McAdams narrative identity | related | life-story episode narrative (nuclear episode) | - |  |
-| Bruner | related | narrative mode; particularity; diachronicity | K |  |
-| Tulving episodic memory | related | episodic memory (what-where-when) | K |  |
+| Bruner | related | narrative mode; particularity; diachronicity | V |  |
+| Tulving episodic memory | related | episodic memory (what-where-when) | V |  |
 | Singer & Blagov SDM | related | specificity: specific (single-event) memory | K |  |
 | Pillemer momentous events | related | personal event memory | K |  |
 
@@ -190,12 +190,12 @@ _The dominant emotional quality expressed in the experience_
 | Russell circumplex | related | 28 circumplex affect terms | - |  |
 | PAD (Mehrabian & Russell) | related | 8 PAD octant labels | - |  |
 | OCC | related | 22 emotion types | - |  |
-| Scherer CPM / GRID / GEW | related | GRID 24 terms / GEW 20 families | K |  |
+| Scherer CPM / GRID / GEW | related | GRID 24 terms / GEW 20 families | V |  |
 | Barrett constructed emotion | related | emotion concept / category (constructed) | - | Barrett: category is a population, not a natural kind |
 | Anthropic 2026 emotion concepts | related | emotion concepts (171) | V | functional emotion concepts in Claude Sonnet 4.5 |
 | Hume semantic space | related | expression categories | - |  |
 | Panksepp primary systems | related | primary-process emotional systems | V |  |
-| Damasio | related | primary / secondary emotions | K |  |
+| Damasio | related | primary / secondary emotions | V |  |
 | Lazarus appraisal / coping | related | core relational themes (one per emotion) | V |  |
 | W3C EmotionML + vocabularies | exact | <category name= set=...> | - | single categorical label; set = vocabulary URI |
 | OBO MFOEM Emotion Ontology | exact | emotion process (MFOEM:000001) subclass | - | artifact field = instance of an emotion-process class |
@@ -213,9 +213,9 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | exact | joy | V |  |
 | Cowen & Keltner 2017 | exact | joy | V |  |
 | GoEmotions | exact | joy | V |  |
-| OCC | exact | joy | K |  |
-| Scherer CPM / GRID / GEW | exact | joy (GRID/GEW) | K |  |
-| Russell circumplex | related | happy / delighted (high pleasure, mid arousal) | K |  |
+| OCC | exact | joy | V |  |
+| Scherer CPM / GRID / GEW | exact | joy (GRID/GEW) | V |  |
+| Russell circumplex | related | happy / delighted (high pleasure, mid arousal) | V |  |
 | PAD (Mehrabian & Russell) | related | +P +A +D exuberant | - |  |
 | Panksepp primary systems | related | PLAY | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000034 joy | V |  |
@@ -237,10 +237,10 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | exact | sadness | V |  |
 | Cowen & Keltner 2017 | exact | sadness | V |  |
 | GoEmotions | exact | sadness | V |  |
-| OCC | exact | distress | K |  |
-| Scherer CPM / GRID / GEW | exact | sadness | K |  |
-| Russell circumplex | related | sad / gloomy (low pleasure, low arousal) | K |  |
-| PAD (Mehrabian & Russell) | related | -P -A (no octant label) | K |  |
+| OCC | exact | distress | V |  |
+| Scherer CPM / GRID / GEW | exact | sadness | V |  |
+| Russell circumplex | related | sad / gloomy (low pleasure, low arousal) | V |  |
+| PAD (Mehrabian & Russell) | related | -P -A (no octant label) | V |  |
 | Panksepp primary systems | broader | PANIC/GRIEF | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000056 sadness | V |  |
 | W3C EmotionML + vocabularies | exact | big6#sadness; fsre-categories#sadness; everyday-categories#sad | V |  |
@@ -261,9 +261,9 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | exact | fear | V |  |
 | Cowen & Keltner 2017 | exact | fear | V |  |
 | GoEmotions | exact | fear | V |  |
-| OCC | exact | fear | K |  |
-| Scherer CPM / GRID / GEW | exact | fear | K |  |
-| Russell circumplex | related | afraid / alarmed (low pleasure, high arousal) | K |  |
+| OCC | exact | fear | V |  |
+| Scherer CPM / GRID / GEW | exact | fear | V |  |
+| Russell circumplex | related | afraid / alarmed (low pleasure, high arousal) | V |  |
 | PAD (Mehrabian & Russell) | related | -P +A -D anxious | - |  |
 | Panksepp primary systems | exact | FEAR | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000026 fear | V |  |
@@ -285,9 +285,9 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | exact | anger | V |  |
 | Cowen & Keltner 2017 | exact | anger | V |  |
 | GoEmotions | exact | anger | V |  |
-| OCC | exact | anger | K |  |
-| Scherer CPM / GRID / GEW | exact | anger | K |  |
-| Russell circumplex | exact | angry | K |  |
+| OCC | exact | anger | V |  |
+| Scherer CPM / GRID / GEW | exact | anger | V |  |
+| Russell circumplex | exact | angry | V |  |
 | PAD (Mehrabian & Russell) | related | -P +A +D hostile | - |  |
 | Panksepp primary systems | exact | RAGE | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000009 anger | V |  |
@@ -309,8 +309,8 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | related | awe (primary dyad fear + surprise); surprise | V |  |
 | Cowen & Keltner 2017 | related | awe; interest; surprise | V |  |
 | GoEmotions | related | surprise; curiosity; admiration | V |  |
-| Scherer CPM / GRID / GEW | related | surprise; interest (GRID) | K |  |
-| Russell circumplex | related | astonished | K |  |
+| Scherer CPM / GRID / GEW | related | surprise; interest (GRID) | V |  |
+| Russell circumplex | related | astonished | V |  |
 | Panksepp primary systems | related | SEEKING | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000209 positive surprise; MFOEM:000167 curiosity; MFOEM:000033 interest | V |  |
 | W3C EmotionML + vocabularies | related | big6#surprise; everyday-categories#interested; fsre-categories#interest | V |  |
@@ -325,10 +325,10 @@ _The dominant emotional quality expressed in the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Plutchik wheel | exact | serenity (low-intensity joy) | K |  |
+| Plutchik wheel | exact | serenity (low-intensity joy) | V |  |
 | Cowen & Keltner 2017 | exact | calmness | V |  |
-| Scherer CPM / GRID / GEW | related | contentment (GRID/GEW) | K |  |
-| Russell circumplex | exact | calm / relaxed / serene / at ease | K |  |
+| Scherer CPM / GRID / GEW | related | contentment (GRID/GEW) | V |  |
+| Russell circumplex | exact | calm / relaxed / serene / at ease | V |  |
 | PAD (Mehrabian & Russell) | related | +P -A +D relaxed | - |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000043 serenity; MFOEM:000114 feeling calm | V |  |
 | W3C EmotionML + vocabularies | related | everyday-categories#relaxed; everyday-categories#content; fsre-categories#contentment | V |  |
@@ -346,8 +346,8 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | related | love (primary dyad joy + trust); trust | V |  |
 | Cowen & Keltner 2017 | related | adoration; sympathy (rated set); romance | V |  |
 | GoEmotions | related | caring; love | V |  |
-| OCC | related | love (liking) | K |  |
-| Scherer CPM / GRID / GEW | related | compassion; love (GRID) | K |  |
+| OCC | related | love (liking) | V |  |
+| Scherer CPM / GRID / GEW | related | compassion; love (GRID) | V |  |
 | Panksepp primary systems | exact | CARE | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000052 compassion; MFOEM:000049 companionate love | V |  |
 | W3C EmotionML + vocabularies | related | fsre-categories#love; everyday-categories#affectionate; everyday-categories#loving | V |  |
@@ -366,7 +366,7 @@ _The dominant emotional quality expressed in the experience_
 |---|---|---|---|---|
 | Cowen & Keltner 2017 | related | awe; admiration | V |  |
 | GoEmotions | related | admiration | V |  |
-| OCC | related | admiration | K |  |
+| OCC | related | admiration | V |  |
 | SenticNet Hourglass | related | admiration (Aptitude) | V |  |
 | Hume semantic space | related | Admiration; Awe | V |  |
 | WordNet-Affect | related | reverence / veneration (under love/respect) | - | [KNOWLEDGE] low confidence |
@@ -376,12 +376,12 @@ _The dominant emotional quality expressed in the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Ekman basic emotions | related | pride in achievement (1999 expanded list) | K |  |
+| Ekman basic emotions | related | pride in achievement (1999 expanded list) | V |  |
 | Cowen & Keltner 2017 | related | pride (rated 34 set; dropped from final 27, co-loaded with admiration/triumph) | V |  |
-| Plutchik wheel | related | pride (secondary dyad anger + joy) | K |  |
+| Plutchik wheel | related | pride (secondary dyad anger + joy) | V |  |
 | GoEmotions | exact | pride | V |  |
-| OCC | exact | pride | K |  |
-| Scherer CPM / GRID / GEW | exact | pride | K |  |
+| OCC | exact | pride | V |  |
+| Scherer CPM / GRID / GEW | exact | pride | V |  |
 | PAD (Mehrabian & Russell) | related | +D dominance | - |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000041 pride | V |  |
 | W3C EmotionML + vocabularies | exact | fsre-categories#pride; occ-categories#pride | V |  |
@@ -398,12 +398,12 @@ _The dominant emotional quality expressed in the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Ekman basic emotions | related | fear | V |  |
-| Plutchik wheel | exact | anxiety (tertiary dyad anticipation + fear); apprehension | K |  |
+| Plutchik wheel | exact | anxiety (tertiary dyad anticipation + fear); apprehension | V |  |
 | Cowen & Keltner 2017 | exact | anxiety | V |  |
 | GoEmotions | exact | nervousness | V |  |
-| OCC | broader | fear | K |  |
-| Scherer CPM / GRID / GEW | exact | anxiety (GRID) | K |  |
-| Russell circumplex | related | tense / nervous | K |  |
+| OCC | broader | fear | V |  |
+| Scherer CPM / GRID / GEW | exact | anxiety (GRID) | V |  |
+| Russell circumplex | related | tense / nervous | V |  |
 | PAD (Mehrabian & Russell) | exact | -P +A -D anxious | - |  |
 | Panksepp primary systems | broader | FEAR | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000028 anxiety; MFOEM:000196 anxious mood | V |  |
@@ -422,7 +422,7 @@ _The dominant emotional quality expressed in the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | GoEmotions | exact | gratitude | V |  |
-| OCC | exact | gratitude | K |  |
+| OCC | exact | gratitude | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#gratitude | V |  |
 | WordNet-Affect | exact | gratitude | - |  |
 | Hume semantic space | exact | Gratitude | - | check Hume list |
@@ -447,9 +447,9 @@ _The dominant emotional quality expressed in the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Plutchik wheel | exact | hope (secondary dyad anticipation + trust); optimism (primary dyad) | K |  |
+| Plutchik wheel | exact | hope (secondary dyad anticipation + trust); optimism (primary dyad) | V |  |
 | GoEmotions | exact | optimism | V |  |
-| OCC | exact | hope | K |  |
+| OCC | exact | hope | V |  |
 | Panksepp primary systems | related | SEEKING | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000177 hope | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#hope | V |  |
@@ -465,12 +465,12 @@ _The dominant emotional quality expressed in the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Ekman basic emotions | related | shame (1999 expanded list) | K |  |
+| Ekman basic emotions | related | shame (1999 expanded list) | V |  |
 | Cowen & Keltner 2017 | related | awkwardness | V |  |
-| Plutchik wheel | related | shame (tertiary dyad fear + disgust) | K |  |
+| Plutchik wheel | related | shame (tertiary dyad fear + disgust) | V |  |
 | GoEmotions | related | embarrassment; remorse | V |  |
-| OCC | exact | shame | K |  |
-| Scherer CPM / GRID / GEW | exact | shame | K |  |
+| OCC | exact | shame | V |  |
+| Scherer CPM / GRID / GEW | exact | shame | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000055 shame | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#shame; fsre-categories#shame | V |  |
 | HUMAINE EARL | exact | Shame | V |  |
@@ -488,8 +488,8 @@ _The dominant emotional quality expressed in the experience_
 | Plutchik wheel | related | sadness; disapproval (primary dyad surprise + sadness) | V |  |
 | Cowen & Keltner 2017 | related | disappointment (rated 34 set; not in final 27) | V |  |
 | GoEmotions | exact | disappointment | V |  |
-| OCC | exact | disappointment | K |  |
-| Scherer CPM / GRID / GEW | exact | disappointment | K |  |
+| OCC | exact | disappointment | V |  |
+| Scherer CPM / GRID / GEW | exact | disappointment | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000051 disappointment | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#disappointment; fsre-categories#disappointment; everyday-categories#disappointed | V |  |
 | HUMAINE EARL | exact | Disappointment | V |  |
@@ -500,11 +500,11 @@ _The dominant emotional quality expressed in the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Ekman basic emotions | exact | relief (1999 expanded list) | K |  |
+| Ekman basic emotions | exact | relief (1999 expanded list) | V |  |
 | Cowen & Keltner 2017 | exact | relief | V | see Cowen & Keltner inconsistency note |
 | GoEmotions | exact | relief | V |  |
-| OCC | exact | relief | K |  |
-| Scherer CPM / GRID / GEW | exact | relief (GEW) | K |  |
+| OCC | exact | relief | V |  |
+| Scherer CPM / GRID / GEW | exact | relief (GEW) | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#relief | V |  |
 | HUMAINE EARL | exact | Relieved | V |  |
 | WordNet-Affect | related | relief (positive-emotion) | - |  |
@@ -519,10 +519,10 @@ _The dominant emotional quality expressed in the experience_
 |---|---|---|---|---|
 | Plutchik wheel | related | annoyance; anger | V |  |
 | GoEmotions | related | annoyance; anger | V |  |
-| OCC | related | anger; distress | K |  |
-| Scherer CPM / GRID / GEW | related | irritation (GRID) | K |  |
-| Russell circumplex | exact | frustrated | K |  |
-| PAD (Mehrabian & Russell) | related | -P +A | K |  |
+| OCC | related | anger; distress | V |  |
+| Scherer CPM / GRID / GEW | related | irritation (GRID) | V |  |
+| Russell circumplex | exact | frustrated | V |  |
+| PAD (Mehrabian & Russell) | related | -P +A | V |  |
 | Panksepp primary systems | related | RAGE (SEEKING frustration) | V |  |
 | OBO MFOEM Emotion Ontology | broader | MFOEM:000009 anger; related MFOEM:000011 irritation, MFOEM:000012 annoyance | V |  |
 | W3C EmotionML + vocabularies | related | fsre-categories#irritation | V |  |
@@ -543,7 +543,7 @@ _Secondary emotional nuances that add depth to the primary emotion_
 |---|---|---|---|---|
 | W3C EmotionML + vocabularies | exact | multiple <category> / multiple <emotion> with confidence | - | EmotionML allows several categories per annotation |
 | HUMAINE EARL | exact | <complex-emotion> container | - |  |
-| Plutchik wheel | related | dyads (primary/secondary/tertiary) | K | mixed emotions |
+| Plutchik wheel | related | dyads (primary/secondary/tertiary) | V | mixed emotions |
 | Cowen & Keltner 2017 | related | blends / continuous gradients between categories | V |  |
 | GoEmotions | related | multi-label annotation | - |  |
 | Barrett constructed emotion | related | emotional granularity | K |  |
@@ -559,7 +559,7 @@ _Complex or layered emotional state_
 | Cowen & Keltner 2017 | related | awe; aesthetic appreciation; nostalgia; entrancement | V | complex self-transcendent categories |
 | Damasio | related | secondary (social) emotions | - |  |
 | OCC | related | compound emotions (gratification, remorse, gratitude, anger) | - |  |
-| Plutchik wheel | related | dyads | K |  |
+| Plutchik wheel | related | dyads | V |  |
 | Barrett constructed emotion | related | conceptual combination | - |  |
 | Hume semantic space | related | Awe; Aesthetic Appreciation; Nostalgia | V |  |
 
@@ -569,7 +569,7 @@ _How the person relates to their own emotional state_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Gross process model | related | extended process model: identification stage (emotion awareness / valuation) | K |  |
+| Gross process model | related | extended process model: identification stage (emotion awareness / valuation) | V |  |
 | Mayer-Salovey EI | related | branch 4: reflective regulation (openness to feelings) | - |  |
 | Goleman EI | related | emotional self-awareness | V |  |
 | Bar-On EQ-i | related | emotional self-awareness subscale | - |  |
@@ -593,26 +593,26 @@ _The underlying trajectory or story movement represented by the moment_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Booker seven plots | related | seven plots / five-stage structure | V |  |
-| McAdams narrative identity | related | redemption / contamination; nuclear episodes | K |  |
+| McAdams narrative identity | related | redemption / contamination; nuclear episodes | V |  |
 | Campbell monomyth | related | monomyth stages | - |  |
-| Bruner | related | canonicity and breach | K |  |
+| Bruner | related | canonicity and breach | V |  |
 
 **`overcoming`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Booker seven plots | exact | Overcoming the Monster | V |  |
-| McAdams narrative identity | related | redemption sequence | K |  |
+| McAdams narrative identity | related | redemption sequence | V |  |
 | Campbell monomyth | related | The Road of Trials / Ordeal | V |  |
 | Lazarus appraisal / coping | related | challenge appraisal | - |  |
-| Elliot approach-avoidance | related | approach (mastery) | K |  |
+| Elliot approach-avoidance | related | approach (mastery) | V |  |
 
 **`transformation`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Booker seven plots | exact | Rebirth | V |  |
-| McAdams narrative identity | related | redemption; turning point | K |  |
+| McAdams narrative identity | related | redemption; turning point | V |  |
 | Campbell monomyth | related | Apotheosis | V |  |
 | Pillemer momentous events | related | turning point | - |  |
 
@@ -620,7 +620,7 @@ _The underlying trajectory or story movement represented by the moment_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | exact | communion | K |  |
+| McAdams narrative identity | exact | communion | V |  |
 | Booker seven plots | related | Comedy (ends in union) | V |  |
 | Fiske relational models | related | communal sharing | V |  |
 | Panksepp primary systems | related | CARE | V |  |
@@ -631,7 +631,7 @@ _The underlying trajectory or story movement represented by the moment_
 |---|---|---|---|---|
 | McAdams narrative identity | related | meaning-making; exploratory narrative processing | K |  |
 | Singer & Blagov SDM | related | integrative memory | - |  |
-| Bruner | related | landscape of consciousness | K |  |
+| Bruner | related | landscape of consciousness | V |  |
 
 **`closure`** — grounding: weak
 
@@ -646,7 +646,7 @@ _The underlying trajectory or story movement represented by the moment_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Booker seven plots | exact | Tragedy | V |  |
-| McAdams narrative identity | related | contamination sequence; low point | K |  |
+| McAdams narrative identity | related | contamination sequence; low point | V |  |
 | Lazarus appraisal / coping | related | harm/loss appraisal | - |  |
 | Singer & Blagov SDM | related | life-threatening events | K |  |
 | Panksepp primary systems | related | PANIC/GRIEF | V |  |
@@ -657,7 +657,7 @@ _The underlying trajectory or story movement represented by the moment_
 |---|---|---|---|---|
 | Booker seven plots | related | Overcoming the Monster (nightmare stage) | V |  |
 | Campbell monomyth | related | The Road of Trials | V |  |
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 | Lazarus appraisal / coping | related | confrontive coping | V |  |
 
 ### `constellation.relational_dynamics` — canonical_open — grounding: **weak**
@@ -670,7 +670,7 @@ _The dominant relational configuration influencing the experience_
 | Bronfenbrenner ecological systems | related | microsystem relationships | - |  |
 | Ainsworth / Main attachment | related | attachment relationships | - |  |
 | Singer & Blagov SDM | related | content: relationship | K |  |
-| McAdams narrative identity | related | communion | K |  |
+| McAdams narrative identity | related | communion | V |  |
 
 **`parent_child`** — grounding: weak
 
@@ -678,17 +678,17 @@ _The dominant relational configuration influencing the experience_
 |---|---|---|---|---|
 | Ainsworth / Main attachment | related | infant-caregiver attachment | - |  |
 | Fiske relational models | related | authority ranking + communal sharing | - |  |
-| Bronfenbrenner ecological systems | related | microsystem (family) | K |  |
-| McAdams narrative identity | related | communion | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (family) | V |  |
+| McAdams narrative identity | related | communion | V |  |
 | Singer & Blagov SDM | related | relationship (content) | - |  |
 
 **`grandparent_grandchild`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | microsystem (family) | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (family) | V |  |
 | Fiske relational models | related | communal sharing | V |  |
-| McAdams narrative identity | related | generativity | K |  |
+| McAdams narrative identity | related | generativity | V |  |
 
 **`romantic_partnership`** — grounding: weak
 
@@ -712,13 +712,13 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | equality matching / communal sharing | V |  |
-| Bronfenbrenner ecological systems | related | microsystem (family) | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (family) | V |  |
 
 **`family`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | exact | microsystem: family | K |  |
+| Bronfenbrenner ecological systems | exact | microsystem: family | V |  |
 | Fiske relational models | related | communal sharing | V |  |
 
 **`friendship`** — grounding: weak
@@ -726,15 +726,15 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | equality matching / communal sharing | V |  |
-| Bronfenbrenner ecological systems | related | microsystem (peers) | K |  |
-| McAdams narrative identity | related | communion | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (peers) | V |  |
+| McAdams narrative identity | related | communion | V |  |
 
 **`friend`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | equality matching / communal sharing | V | duplicate of friendship |
-| Bronfenbrenner ecological systems | related | microsystem (peers) | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (peers) | V |  |
 
 **`companionship`** — grounding: weak
 
@@ -748,7 +748,7 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | market pricing / authority ranking | V |  |
-| Bronfenbrenner ecological systems | related | microsystem (workplace) | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (workplace) | V |  |
 
 **`mentorship`** — grounding: weak
 
@@ -756,7 +756,7 @@ _The dominant relational configuration influencing the experience_
 |---|---|---|---|---|
 | Fiske relational models | related | authority ranking | V |  |
 | Campbell monomyth | related | Supernatural Aid (mentor figure) | V |  |
-| McAdams narrative identity | related | generativity | K |  |
+| McAdams narrative identity | related | generativity | V |  |
 
 **`reunion`** — grounding: weak
 
@@ -770,7 +770,7 @@ _The dominant relational configuration influencing the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | mesosystem / macrosystem | K |  |
+| Bronfenbrenner ecological systems | related | mesosystem / macrosystem | V |  |
 | Fiske relational models | related | communal sharing | V |  |
 
 **`grief`** — grounding: weak
@@ -787,7 +787,7 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | McAdams narrative identity | related | exploratory narrative processing | K |  |
-| Bruner | related | landscape of consciousness | K |  |
+| Bruner | related | landscape of consciousness | V |  |
 | Singer & Blagov SDM | related | integrative memory | - |  |
 
 **`professional`** — grounding: weak
@@ -795,7 +795,7 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | market pricing | V |  |
-| Bronfenbrenner ecological systems | related | microsystem (workplace) / exosystem | K |  |
+| Bronfenbrenner ecological systems | related | microsystem (workplace) / exosystem | V |  |
 
 **`therapeutic`** — grounding: weak
 
@@ -809,7 +809,7 @@ _The dominant relational configuration influencing the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Fiske relational models | related | communal sharing / market pricing | V |  |
-| McAdams narrative identity | related | generativity script | K |  |
+| McAdams narrative identity | related | generativity script | V |  |
 
 **`adversarial`** — grounding: weak
 
@@ -817,7 +817,7 @@ _The dominant relational configuration influencing the experience_
 |---|---|---|---|---|
 | Fiske relational models | related | relational-model violation / conflict | - |  |
 | Lazarus appraisal / coping | related | anger (demeaning offense) | V |  |
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 | Panksepp primary systems | related | RAGE | V |  |
 
 ### `constellation.temporal_context` — closed_enum — grounding: **weak**
@@ -826,10 +826,10 @@ _The life-stage or temporal frame associated with the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Conway self-memory system | related | lifetime periods | K | Conway periods are thematic, not age-banded |
+| Conway self-memory system | related | lifetime periods | V | Conway periods are thematic, not age-banded |
 | McAdams narrative identity | related | life-story chapters | - |  |
-| Bronfenbrenner ecological systems | related | chronosystem | K |  |
-| Tulving episodic memory | related | chronesthesia | K |  |
+| Bronfenbrenner ecological systems | related | chronosystem | V |  |
+| Tulving episodic memory | related | chronesthesia | V |  |
 
 **`childhood`** — grounding: weak
 
@@ -837,7 +837,7 @@ _The life-stage or temporal frame associated with the experience_
 |---|---|---|---|---|
 | Conway self-memory system | related | lifetime period | - | thematic, not age-banded |
 | McAdams narrative identity | related | life-story chapter | - |  |
-| Bronfenbrenner ecological systems | related | chronosystem | K |  |
+| Bronfenbrenner ecological systems | related | chronosystem | V |  |
 
 **`early_adulthood`** — grounding: weak
 
@@ -851,7 +851,7 @@ _The life-stage or temporal frame associated with the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Conway self-memory system | related | lifetime period | - |  |
-| McAdams narrative identity | related | life-story chapter; generativity | K |  |
+| McAdams narrative identity | related | life-story chapter; generativity | V |  |
 
 **`late_life`** — grounding: weak
 
@@ -864,20 +864,20 @@ _The life-stage or temporal frame associated with the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Conway self-memory system | related | recent period / event-specific knowledge | K |  |
+| Conway self-memory system | related | recent period / event-specific knowledge | V |  |
 
 **`future`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Tulving episodic memory | exact | episodic future thinking (mental time travel) | - |  |
-| McAdams narrative identity | related | generativity script | K |  |
+| McAdams narrative identity | related | generativity script | V |  |
 
 **`timeless`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Tulving episodic memory | related | semantic / noetic | K |  |
+| Tulving episodic memory | related | semantic / noetic | V |  |
 | Conway self-memory system | related | general event (repeated) | - |  |
 
 ### `constellation.memory_type` — closed_enum — grounding: **weak**
@@ -886,9 +886,9 @@ _The class of memory the experience represents within personal identity_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Conway self-memory system | related | lifetime period / general event / event-specific knowledge; self-defining memory | K |  |
-| Singer & Blagov SDM | related | self-defining memory; specificity | K |  |
-| Pillemer momentous events | related | originating / turning-point / anchoring / analogous events | K |  |
+| Conway self-memory system | related | lifetime period / general event / event-specific knowledge; self-defining memory | V |  |
+| Singer & Blagov SDM | related | self-defining memory; specificity | V |  |
+| Pillemer momentous events | related | originating / turning-point / anchoring / analogous events | V |  |
 | Tulving episodic memory | related | episodic vs semantic | - |  |
 
 **`legacy_artifact`** — grounding: orphan
@@ -899,8 +899,8 @@ _orphan_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Conway self-memory system | related | event-specific knowledge | K |  |
-| Tulving episodic memory | related | episodic memory | K |  |
+| Conway self-memory system | related | event-specific knowledge | V |  |
+| Tulving episodic memory | related | episodic memory | V |  |
 | Singer & Blagov SDM | related | specific memory | - |  |
 
 **`milestone`** — grounding: weak
@@ -923,7 +923,7 @@ _orphan_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Pillemer momentous events | exact | originating event | - |  |
-| Singer & Blagov SDM | related | self-defining memory | K |  |
+| Singer & Blagov SDM | related | self-defining memory | V |  |
 | Conway self-memory system | related | self-defining memory | - |  |
 | McAdams narrative identity | related | nuclear episode | - |  |
 
@@ -971,7 +971,7 @@ _The archetypal identity the subject embodies — which of the 12 canonical iden
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | imagoes (personified idealised self-images) | K | McAdams 1993 imagoes [KNOWLEDGE] |
+| McAdams narrative identity | related | imagoes (personified idealised self-images) | V | McAdams 1993 imagoes [KNOWLEDGE] |
 | Campbell monomyth | related | the Hero | - |  |
 
 **`hero`** — grounding: strong
@@ -1063,39 +1063,39 @@ _The perspective through which the experience is narrated or understood_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | agency | K |  |
-| Bronfenbrenner ecological systems | related | person (centre of nested systems) | K |  |
+| McAdams narrative identity | related | agency | V |  |
+| Bronfenbrenner ecological systems | related | person (centre of nested systems) | V |  |
 
 **`partner`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | microsystem | K |  |
-| McAdams narrative identity | related | communion | K |  |
+| Bronfenbrenner ecological systems | related | microsystem | V |  |
+| McAdams narrative identity | related | communion | V |  |
 
 **`family`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | exact | microsystem: family | K |  |
+| Bronfenbrenner ecological systems | exact | microsystem: family | V |  |
 
 **`friends`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | exact | microsystem: peers | K |  |
+| Bronfenbrenner ecological systems | exact | microsystem: peers | V |  |
 
 **`community`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | mesosystem / exosystem | K |  |
+| Bronfenbrenner ecological systems | related | mesosystem / exosystem | V |  |
 
 **`humanity`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | macrosystem | K |  |
+| Bronfenbrenner ecological systems | related | macrosystem | V |  |
 | Cowen & Keltner 2017 | related | awe (self-transcendent) | V |  |
 
 ### `constellation.temporal_rhythm` — closed_enum — grounding: **weak**
@@ -1120,7 +1120,7 @@ _The perceived temporal movement or cadence of the emotional event_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000062 appraisal as sudden | V |  |
-| Scherer CPM / GRID / GEW | exact | suddenness (novelty check) | K |  |
+| Scherer CPM / GRID / GEW | exact | suddenness (novelty check) | V |  |
 | W3C EmotionML + vocabularies | exact | scherer-appraisals#suddenness | V |  |
 | HUMAINE EARL | exact | suddenness (appraisal) | V |  |
 
@@ -1141,7 +1141,7 @@ _The perceived temporal movement or cadence of the emotional event_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Conway self-memory system | related | repeated general event | - |  |
-| Pillemer momentous events | related | analogous events | K |  |
+| Pillemer momentous events | related | analogous events | V |  |
 
 **`spiraling`** — grounding: orphan
 
@@ -1175,7 +1175,7 @@ _A succinct expression of how the experience connects to personal identity_
 |---|---|---|---|---|
 | Conway self-memory system | exact | self-memory system: memory-self linkage | - |  |
 | McAdams narrative identity | exact | narrative identity | K |  |
-| Singer & Blagov SDM | related | self-defining memory | K |  |
+| Singer & Blagov SDM | related | self-defining memory | V |  |
 | Pillemer momentous events | related | self function of autobiographical memory | - |  |
 | Tulving episodic memory | related | autonoetic consciousness | - |  |
 
@@ -1186,9 +1186,9 @@ _The explicit realization or conclusion stated by the subject_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | McAdams narrative identity | exact | meaning-making (lesson / insight) | - |  |
-| Singer & Blagov SDM | exact | integrative meaning | K |  |
+| Singer & Blagov SDM | exact | integrative meaning | V |  |
 | Pillemer momentous events | related | directive function (lessons) | - |  |
-| Gross process model | related | cognitive change (reappraisal) | K |  |
+| Gross process model | related | cognitive change (reappraisal) | V |  |
 
 ### `constellation.transformational_pivot` — boolean — grounding: **strong**
 
@@ -1198,7 +1198,7 @@ _Marks experiences the subject explicitly identifies as life-changing or traject
 |---|---|---|---|---|
 | McAdams narrative identity | exact | turning point (nuclear episode) | K |  |
 | Pillemer momentous events | exact | turning point | - |  |
-| Singer & Blagov SDM | related | self-defining memory | K |  |
+| Singer & Blagov SDM | related | self-defining memory | V |  |
 | Campbell monomyth | related | crossing of the first threshold | V |  |
 
 ### `constellation.somatic_signature` — free_text — grounding: **strong**
@@ -1222,7 +1222,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 |---|---|---|---|---|
 | Booker seven plots | related | seven plots | V |  |
 | Campbell monomyth | related | monomyth stages | - |  |
-| McAdams narrative identity | related | redemption / contamination; nuclear episodes | K |  |
+| McAdams narrative identity | related | redemption / contamination; nuclear episodes | V |  |
 | Lazarus appraisal / coping | related | core relational themes | V |  |
 
 **`betrayal`** — grounding: weak
@@ -1230,7 +1230,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | anger: demeaning offense | V |  |
-| McAdams narrative identity | related | contamination sequence | K |  |
+| McAdams narrative identity | related | contamination sequence | V |  |
 | Booker seven plots | related | Tragedy | V |  |
 | Fiske relational models | related | relational-model violation | - |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000225 mistrust | V |  |
@@ -1241,7 +1241,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 |---|---|---|---|---|
 | Campbell monomyth | exact | Freedom to Live | V |  |
 | Booker seven plots | related | Rebirth | V |  |
-| McAdams narrative identity | related | redemption sequence | K |  |
+| McAdams narrative identity | related | redemption sequence | V |  |
 | Self-determination theory | related | autonomy | V |  |
 
 **`grief`** — grounding: strong
@@ -1251,9 +1251,9 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000016 grief | V |  |
 | Panksepp primary systems | exact | PANIC/GRIEF | V |  |
 | Lazarus appraisal / coping | exact | sadness: irrevocable loss | V |  |
-| Plutchik wheel | exact | grief (high-intensity sadness) | K |  |
+| Plutchik wheel | exact | grief (high-intensity sadness) | V |  |
 | SenticNet Hourglass | exact | grief (Pleasantness level) | V |  |
-| McAdams narrative identity | related | contamination; low point | K |  |
+| McAdams narrative identity | related | contamination; low point | V |  |
 | Booker seven plots | related | Tragedy | V |  |
 
 **`discovery`** — grounding: weak
@@ -1271,7 +1271,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 | Lazarus appraisal / coping | related | confrontive coping | V |  |
 | Booker seven plots | related | Overcoming the Monster | V |  |
 | Campbell monomyth | related | Refusal of the Call | V |  |
@@ -1280,7 +1280,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | exact | communion | K |  |
+| McAdams narrative identity | exact | communion | V |  |
 | Ainsworth / Main attachment | related | attachment bond | - |  |
 | Fiske relational models | related | communal sharing | V |  |
 | Panksepp primary systems | related | CARE | V |  |
@@ -1290,7 +1290,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | meaning-making; redemption | K |  |
+| McAdams narrative identity | related | meaning-making; redemption | V |  |
 | OCC | related | attribution branch (pride / shame / admiration / reproach) | - |  |
 | Lazarus appraisal / coping | related | guilt: moral transgression | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000023 moral disgust; MFOEM:000053 guilt | V |  |
@@ -1301,7 +1301,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Booker seven plots | exact | Rebirth | V |  |
-| McAdams narrative identity | related | redemption sequence | K |  |
+| McAdams narrative identity | related | redemption sequence | V |  |
 | Campbell monomyth | related | Apotheosis; The Ultimate Boon | V |  |
 | Pillemer momentous events | related | turning point | - | duplicate of narrative_arc=transformation |
 
@@ -1309,7 +1309,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | redemption; communion | K |  |
+| McAdams narrative identity | related | redemption; communion | V |  |
 | Booker seven plots | related | Comedy (resolution via reunion) | V |  |
 | Fiske relational models | related | relational-model restoration | - |  |
 
@@ -1318,8 +1318,8 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | secondary appraisal: blame / credit (accountability) | V |  |
-| OCC | related | reproach / self-reproach (shame, remorse) | K |  |
-| McAdams narrative identity | related | contamination; meaning-making | K |  |
+| OCC | related | reproach / self-reproach (shame, remorse) | V |  |
+| McAdams narrative identity | related | contamination; meaning-making | V |  |
 | Booker seven plots | related | Tragedy (nightmare stage) | V |  |
 | Campbell monomyth | related | Atonement with the Father | V |  |
 
@@ -1338,7 +1338,7 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 |---|---|---|---|---|
 | Campbell monomyth | related | Belly of the Whale; Departure | V |  |
 | Booker seven plots | related | Voyage and Return; Tragedy | V |  |
-| McAdams narrative identity | related | contamination | K |  |
+| McAdams narrative identity | related | contamination | V |  |
 | Panksepp primary systems | related | PANIC/GRIEF (separation distress) | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000227 loneliness | V |  |
 
@@ -1347,11 +1347,11 @@ _The structural emotional arc pattern of the experience, encoded at capture time
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | GoEmotions | exact | gratitude | V | duplicate of emotion_primary=gratitude |
-| OCC | exact | gratitude | K |  |
+| OCC | exact | gratitude | V |  |
 | W3C EmotionML + vocabularies | exact | occ-categories#gratitude | V |  |
 | WordNet-Affect | exact | gratitude | - |  |
 | Lazarus appraisal / coping | exact | gratitude | - |  |
-| McAdams narrative identity | related | redemption | K |  |
+| McAdams narrative identity | related | redemption | V |  |
 
 **`authenticity`** — grounding: weak
 
@@ -1373,7 +1373,7 @@ _Type of event or situation_
 | Singer & Blagov SDM | related | content category | K |  |
 | OCC | related | consequences of events branch | - |  |
 | Pillemer momentous events | related | personal event memory types | - |  |
-| Conway self-memory system | related | general events | K |  |
+| Conway self-memory system | related | general events | V |  |
 | W3C EmotionML + vocabularies | related | <reference role="triggeredBy"> | - |  |
 | Lazarus appraisal / coping | related | encounter | - |  |
 
@@ -1385,7 +1385,7 @@ _Place or spatial context of the experience_
 |---|---|---|---|---|
 | Bronfenbrenner ecological systems | related | microsystem setting | - |  |
 | Tulving episodic memory | related | spatial context of episodic memory | - |  |
-| Conway self-memory system | related | event-specific knowledge | K |  |
+| Conway self-memory system | related | event-specific knowledge | V |  |
 | Pillemer momentous events | related | specific location detail | - |  |
 
 ### `milky_way.associated_people` — free_text_list — grounding: **weak**
@@ -1423,7 +1423,7 @@ _Directional emotional change during the experience_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | exact | redemption (bad->good) / contamination (good->bad) sequence | K | EDM is finer (any pair); McAdams has two directions |
+| McAdams narrative identity | exact | redemption (bad->good) / contamination (good->bad) sequence | V | EDM is finer (any pair); McAdams has two directions |
 | W3C EmotionML + vocabularies | related | <trace>; sequence of timed <emotion> elements | V |  |
 | Russell circumplex | related | trajectory in affect space | - |  |
 | Scherer CPM / GRID / GEW | related | recursive appraisal -> emotion change | - |  |
@@ -1446,8 +1446,8 @@ _The felt intensity of the emotional experience_
 | Singer & Blagov SDM | exact | SDM criterion: affective intensity | - |  |
 | Conway self-memory system | exact | SDM criterion: affective intensity | - |  |
 | Scherer CPM / GRID / GEW | related | intensity (CPM emergent) | - |  |
-| Russell circumplex | related | arousal | K |  |
-| PAD (Mehrabian & Russell) | related | Arousal | K |  |
+| Russell circumplex | related | arousal | V |  |
+| PAD (Mehrabian & Russell) | related | Arousal | V |  |
 | Barrett constructed emotion | related | core affect arousal | - |  |
 | SenticNet Hourglass | related | sentic level magnitude | - |  |
 | Hume semantic space | related | expression score 0..1 | - |  |
@@ -1459,7 +1459,7 @@ _How concentrated or layered the emotional content is_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Plutchik wheel | related | dyads (mixed emotions) | K |  |
+| Plutchik wheel | related | dyads (mixed emotions) | V |  |
 | Cowen & Keltner 2017 | related | blends | - |  |
 | Barrett constructed emotion | related | emotional granularity | K | granularity is a person-level trait, not an event property |
 | W3C EmotionML + vocabularies | related | multiple <category> elements | - |  |
@@ -1488,7 +1488,7 @@ _The qualitative direction of the emotional experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Russell circumplex | exact | pleasure-displeasure dimension | - |  |
-| PAD (Mehrabian & Russell) | exact | Pleasure | K |  |
+| PAD (Mehrabian & Russell) | exact | Pleasure | V |  |
 | Scherer CPM / GRID / GEW | exact | GRID valence dimension | - |  |
 | Barrett constructed emotion | exact | core affect valence | - |  |
 | OBO MFOEM Emotion Ontology | exact | valence (MFOEM:000194): positive valence (MFOEM:000207) / negative valence (MFOEM:000208) | V | MFOEM has no "mixed" |
@@ -1499,9 +1499,9 @@ _The qualitative direction of the emotional experience_
 | WordNet-Affect | exact | positive / negative / ambiguous / neutral | V | "ambiguous" = EDM mixed |
 | GoEmotions | exact | sentiment grouping: positive / negative / ambiguous / neutral | V |  |
 | Singer & Blagov SDM | exact | affect: positive / negative / mixed / neutral | K |  |
-| OCC | exact | pleased / displeased root | K |  |
+| OCC | exact | pleased / displeased root | V |  |
 | Lazarus appraisal / coping | related | goal congruence / incongruence | V |  |
-| McAdams narrative identity | related | redemption / contamination valence | K |  |
+| McAdams narrative identity | related | redemption / contamination valence | V |  |
 | Plutchik wheel | related | opposition pairs | V |  |
 | Hume semantic space | related | valence (dimension view) | - |  |
 | Cowen & Keltner 2017 | related | valence (appraisal dimension) | - |  |
@@ -1515,7 +1515,7 @@ _The qualitative direction of the emotional experience_
 | GoEmotions | exact | positive | V |  |
 | Singer & Blagov SDM | exact | positive | K |  |
 | NRC lexicons | exact | positive (EmoLex) | V |  |
-| OCC | exact | pleased | K |  |
+| OCC | exact | pleased | V |  |
 | Russell circumplex | exact | pleasure pole | - |  |
 | PAD (Mehrabian & Russell) | exact | +P | - |  |
 | SenticNet Hourglass | exact | positive polarity | - |  |
@@ -1529,7 +1529,7 @@ _The qualitative direction of the emotional experience_
 | GoEmotions | exact | negative | V |  |
 | Singer & Blagov SDM | exact | negative | K |  |
 | NRC lexicons | exact | negative (EmoLex) | V |  |
-| OCC | exact | displeased | K |  |
+| OCC | exact | displeased | V |  |
 | Russell circumplex | exact | displeasure pole | - |  |
 | PAD (Mehrabian & Russell) | exact | -P | - |  |
 | SenticNet Hourglass | exact | negative polarity | - |  |
@@ -1553,7 +1553,7 @@ _The perceived "stickiness" or persistence of the emotion_
 | Scherer CPM / GRID / GEW | related | duration; emotion vs mood | - |  |
 | OBO MFOEM Emotion Ontology | related | mood process (MFOEM:000193) vs emotion process | - |  |
 | W3C EmotionML + vocabularies | related | duration attribute | - |  |
-| Damasio | related | background emotions | K |  |
+| Damasio | related | background emotions | V |  |
 
 **`low`** — grounding: weak
 
@@ -1599,7 +1599,7 @@ _The type of element to which the experience is emotionally anchored_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | W3C EmotionML + vocabularies | related | <reference role="targetedAt"> (any URI) | - |  |
-| OCC | related | events / agents / objects branches | K |  |
+| OCC | related | events / agents / objects branches | V |  |
 | Conway self-memory system | related | working self; autobiographical knowledge base | V |  |
 | Lazarus appraisal / coping | related | object of ego-involvement | - |  |
 | Tulving episodic memory | related | cue type | - |  |
@@ -1625,7 +1625,7 @@ _The type of element to which the experience is emotionally anchored_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | OCC | exact | events branch | - |  |
-| Conway self-memory system | related | general event / ESK | K |  |
+| Conway self-memory system | related | general event / ESK | V |  |
 | Pillemer momentous events | related | personal event memory | K |  |
 
 **`place`** — grounding: weak
@@ -1663,7 +1663,7 @@ _orphan_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Conway self-memory system | related | working self | V |  |
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 
 ### `gravity.recall_triggers` — free_text_list — grounding: **strong**
 
@@ -1692,7 +1692,7 @@ _Adjacent themes or motifs connected to the experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Conway self-memory system | related | thematic linkage of general events | - |  |
-| McAdams narrative identity | related | agency / communion themes | K |  |
+| McAdams narrative identity | related | agency / communion themes | V |  |
 | Singer & Blagov SDM | related | content categories | - |  |
 
 ### `gravity.recurrence_pattern` — canonical_open — grounding: **weak**
@@ -1703,7 +1703,7 @@ _The temporal recurrence structure extracted from the experience's context, fram
 |---|---|---|---|---|
 | Conway self-memory system | related | single vs repeated general events | - |  |
 | Singer & Blagov SDM | related | specificity: specific vs generic (summary of repeated events) | K |  |
-| Pillemer momentous events | related | anchoring / analogous events | K |  |
+| Pillemer momentous events | related | anchoring / analogous events | V |  |
 | Lazarus appraisal / coping | related | chronic stressor | - |  |
 
 **`cyclical`** — grounding: weak
@@ -1775,8 +1775,8 @@ _Indicators of stabilizing or constructive emotional processing_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | positive reappraisal; emotion-focused coping | V |  |
-| Gross process model | related | cognitive change | K |  |
-| McAdams narrative identity | related | redemption; coherent positive resolution | K |  |
+| Gross process model | related | cognitive change | V |  |
+| McAdams narrative identity | related | redemption; coherent positive resolution | V |  |
 | Bar-On EQ-i | related | stress tolerance; optimism; adaptability | V |  |
 | Goleman EI | related | positive outlook; adaptability | V |  |
 
@@ -1786,7 +1786,7 @@ _How the emotional state is evolving across time_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | redemption (improving) / contamination (declining) / coherent positive resolution (integrative) | K |  |
+| McAdams narrative identity | related | redemption (improving) / contamination (declining) / coherent positive resolution (integrative) | V |  |
 | Singer & Blagov SDM | related | integrative vs non-integrative | - |  |
 | Gross process model | related | regulation outcome over time | - |  |
 | Lazarus appraisal / coping | related | coping outcome | - |  |
@@ -1795,7 +1795,7 @@ _How the emotional state is evolving across time_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | redemption sequence | K |  |
+| McAdams narrative identity | related | redemption sequence | V |  |
 
 **`stable`** — grounding: orphan
 
@@ -1805,13 +1805,13 @@ _orphan_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | contamination sequence | K |  |
+| McAdams narrative identity | related | contamination sequence | V |  |
 
 **`integrative`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Singer & Blagov SDM | exact | integrative | K |  |
+| Singer & Blagov SDM | exact | integrative | V |  |
 | McAdams narrative identity | related | coherent positive resolution | K |  |
 
 **`emerging`** — grounding: orphan
@@ -1828,8 +1828,8 @@ _Dominant emotional or motivational energy in the moment_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Panksepp primary systems | related | primary-process emotional systems | V |  |
-| Elliot approach-avoidance | related | approach / avoidance temperament | K |  |
-| Self-determination theory | related | intrinsic motivation | K |  |
+| Elliot approach-avoidance | related | approach / avoidance temperament | V |  |
+| Self-determination theory | related | intrinsic motivation | V |  |
 | OBO MFOEM Emotion Ontology | related | feeling of urge (MFOEM:000223); feeling of desire (MFOEM:000220) | V |  |
 | W3C EmotionML + vocabularies | related | <action-tendency> | V |  |
 
@@ -1841,11 +1841,11 @@ _The behavioral direction or movement expressed through the emotional response_
 |---|---|---|---|---|
 | W3C EmotionML + vocabularies | exact | <action-tendency name= set=frijda-action-tendencies> | - |  |
 | OBO MFOEM Emotion Ontology | exact | emotional action tendency (MFOEM:000007); emotional bodily movement behaviour | V |  |
-| Elliot approach-avoidance | related | approach / avoidance | K |  |
+| Elliot approach-avoidance | related | approach / avoidance | V |  |
 | Plutchik wheel | related | 8 adaptive behaviours (protection, destruction, incorporation, rejection, reproduction, reintegration, orientation, exploration) | - |  |
 | Panksepp primary systems | related | primary systems (SEEKING, RAGE, FEAR, CARE, ...) | - |  |
 | Lazarus appraisal / coping | related | Ways of Coping | V |  |
-| Gross process model | related | situation selection / modification | K |  |
+| Gross process model | related | situation selection / modification | V |  |
 
 **`explore`** — grounding: strong
 
@@ -1860,7 +1860,7 @@ _The behavioral direction or movement expressed through the emotional response_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Elliot approach-avoidance | exact | approach | K |  |
+| Elliot approach-avoidance | exact | approach | V |  |
 | W3C EmotionML + vocabularies | exact | frijda-action-tendencies#approach | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000136 moving towards people | V |  |
 | Plutchik wheel | related | incorporation | - |  |
@@ -1869,7 +1869,7 @@ _The behavioral direction or movement expressed through the emotional response_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Elliot approach-avoidance | exact | avoidance | K |  |
+| Elliot approach-avoidance | exact | avoidance | V |  |
 | W3C EmotionML + vocabularies | exact | frijda-action-tendencies#avoidance | V |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000137 moving away from people | V |  |
 | Plutchik wheel | related | protection (fear) | - |  |
@@ -1880,14 +1880,14 @@ _The behavioral direction or movement expressed through the emotional response_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | planful problem-solving; positive reappraisal | V |  |
-| Gross process model | related | situation modification | K |  |
-| McAdams narrative identity | related | redemption | K |  |
+| Gross process model | related | situation modification | V |  |
+| McAdams narrative identity | related | redemption | V |  |
 
 **`persevere`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Elliot approach-avoidance | related | mastery-approach | K |  |
+| Elliot approach-avoidance | related | mastery-approach | V |  |
 | Lazarus appraisal / coping | related | planful problem-solving | - |  |
 | Self-determination theory | related | competence | V |  |
 
@@ -1897,7 +1897,7 @@ _The behavioral direction or movement expressed through the emotional response_
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | seeking social support | V |  |
 | W3C EmotionML + vocabularies | related | frijda-action-tendencies#being-with | V |  |
-| McAdams narrative identity | related | communion | K |  |
+| McAdams narrative identity | related | communion | V |  |
 
 **`confront`** — grounding: strong
 
@@ -1920,8 +1920,8 @@ _The behavioral direction or movement expressed through the emotional response_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Gross process model | related | cognitive change | K |  |
-| Singer & Blagov SDM | related | integrative meaning | K |  |
+| Gross process model | related | cognitive change | V |  |
+| Singer & Blagov SDM | related | integrative meaning | V |  |
 
 ### `impulse.motivational_orientation` — closed_enum — grounding: **strong**
 
@@ -1932,7 +1932,7 @@ _The foundational motivational domain guiding the individual's internal stance_
 | Self-determination theory | exact | basic psychological needs (autonomy, competence, relatedness) | V | EDM adds safety, meaning, authenticity |
 | Elliot approach-avoidance | related | mastery goals | - |  |
 | Panksepp primary systems | related | SEEKING / CARE / PANIC / FEAR | V |  |
-| McAdams narrative identity | related | agency / communion / generativity | K |  |
+| McAdams narrative identity | related | agency / communion / generativity | V |  |
 | Bar-On EQ-i | related | self-actualization | V |  |
 
 **`belonging`** — grounding: strong
@@ -1941,7 +1941,7 @@ _The foundational motivational domain guiding the individual's internal stance_
 |---|---|---|---|---|
 | Self-determination theory | exact | relatedness | V |  |
 | Panksepp primary systems | related | CARE; PANIC/GRIEF | V |  |
-| McAdams narrative identity | related | communion | K |  |
+| McAdams narrative identity | related | communion | V |  |
 | Ainsworth / Main attachment | related | attachment | V |  |
 
 **`safety`** — grounding: weak
@@ -1958,22 +1958,22 @@ _The foundational motivational domain guiding the individual's internal stance_
 |---|---|---|---|---|
 | Self-determination theory | exact | competence | V |  |
 | Elliot approach-avoidance | exact | mastery-approach goal | - |  |
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 
 **`meaning`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | meaning-making; generativity | K |  |
+| McAdams narrative identity | related | meaning-making; generativity | V |  |
 | Bar-On EQ-i | related | self-actualization | V |  |
-| Singer & Blagov SDM | related | integrative meaning | K |  |
+| Singer & Blagov SDM | related | integrative meaning | V |  |
 
 **`autonomy`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Self-determination theory | exact | autonomy | V |  |
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 
 **`authenticity`** — grounding: weak
 
@@ -1988,9 +1988,9 @@ _The temporal direction toward which the motivational energy is oriented_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Tulving episodic memory | exact | chronesthesia / mental time travel (past, future) | K |  |
+| Tulving episodic memory | exact | chronesthesia / mental time travel (past, future) | V |  |
 | Conway self-memory system | related | working self goals | - |  |
-| McAdams narrative identity | related | life story (past) / generativity script (future) | K |  |
+| McAdams narrative identity | related | life story (past) / generativity script (future) | V |  |
 
 **`past`** — grounding: strong
 
@@ -2010,7 +2010,7 @@ _The temporal direction toward which the motivational energy is oriented_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Tulving episodic memory | exact | episodic future thinking | - |  |
-| McAdams narrative identity | related | generativity script | K |  |
+| McAdams narrative identity | related | generativity script | V |  |
 | Self-determination theory | related | goal pursuit | - |  |
 
 ### `impulse.directionality` — closed_enum — grounding: **weak**
@@ -2019,7 +2019,7 @@ _Whether the impulse is self-directed, relational, or expansive beyond self_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | agency (self) / communion (other) | K |  |
+| McAdams narrative identity | related | agency (self) / communion (other) | V |  |
 | Bronfenbrenner ecological systems | related | nested systems | - |  |
 | Cowen & Keltner 2017 | related | awe (self-transcendent) | V |  |
 
@@ -2027,14 +2027,14 @@ _Whether the impulse is self-directed, relational, or expansive beyond self_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | agency | K |  |
+| McAdams narrative identity | related | agency | V |  |
 | Gross process model | related | intrinsic regulation | - |  |
 
 **`outward`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| McAdams narrative identity | related | communion | K |  |
+| McAdams narrative identity | related | communion | V |  |
 | Gross process model | related | extrinsic (interpersonal) regulation | - |  |
 
 **`transcendent`** — grounding: weak
@@ -2042,7 +2042,7 @@ _Whether the impulse is self-directed, relational, or expansive beyond self_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Cowen & Keltner 2017 | related | awe | V |  |
-| Bronfenbrenner ecological systems | related | macrosystem | K |  |
+| Bronfenbrenner ecological systems | related | macrosystem | V |  |
 
 ### `impulse.social_visibility` — closed_enum — grounding: **weak**
 
@@ -2060,13 +2060,13 @@ _orphan_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | microsystem | K |  |
+| Bronfenbrenner ecological systems | related | microsystem | V |  |
 
 **`collective`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Bronfenbrenner ecological systems | related | mesosystem / macrosystem | K |  |
+| Bronfenbrenner ecological systems | related | mesosystem / macrosystem | V |  |
 
 ### `impulse.urgency` — closed_enum — grounding: **strong**
 
@@ -2078,8 +2078,8 @@ _The intensity or immediacy of the motivational state_
 | W3C EmotionML + vocabularies | exact | ema-appraisals#urgency; scherer-appraisals#urgency | V |  |
 | HUMAINE EARL | exact | goal_urgency (appraisal) | V |  |
 | OBO MFOEM Emotion Ontology | exact | appraisal of urgency of response (MFOEM:000088): urgent (MFOEM:000089) / not urgent (MFOEM:000090) | V | EDM 4 levels finer than MFOEM binary |
-| Russell circumplex | related | arousal | K |  |
-| PAD (Mehrabian & Russell) | related | Arousal | K |  |
+| Russell circumplex | related | arousal | V |  |
+| PAD (Mehrabian & Russell) | related | Arousal | V |  |
 | NRC lexicons | related | VAD arousal | - |  |
 | Lazarus appraisal / coping | related | imminence | - |  |
 
@@ -2088,7 +2088,7 @@ _The intensity or immediacy of the motivational state_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000090 appraisal as not urgent response | V |  |
-| Russell circumplex | related | calm (low arousal) | K | label collides with emotion peace |
+| Russell circumplex | related | calm (low arousal) | V | label collides with emotion peace |
 
 **`elevated`** — grounding: weak
 
@@ -2126,7 +2126,7 @@ _The stance toward uncertainty or potential risk embedded in the moment_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | threat appraisal | - |  |
-| Elliot approach-avoidance | related | avoidance temperament | K |  |
+| Elliot approach-avoidance | related | avoidance temperament | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000104 appraisal as dangerous | V |  |
 
 **`balanced`** — grounding: orphan
@@ -2138,7 +2138,7 @@ _orphan_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | related | challenge appraisal | - |  |
-| Elliot approach-avoidance | related | approach temperament | K |  |
+| Elliot approach-avoidance | related | approach temperament | V |  |
 | OBO MFOEM Emotion Ontology | related | MFOEM:000105 appraisal as not dangerous | V |  |
 
 ### `impulse.agency_level` — closed_enum — grounding: **strong**
@@ -2148,9 +2148,9 @@ _The perceived ability to act or influence the situation_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | McAdams narrative identity | exact | agency theme | - |  |
-| Scherer CPM / GRID / GEW | exact | coping potential (control / power checks); GRID power dimension | K |  |
+| Scherer CPM / GRID / GEW | exact | coping potential (control / power checks); GRID power dimension | V |  |
 | Lazarus appraisal / coping | exact | secondary appraisal: coping potential | V |  |
-| PAD (Mehrabian & Russell) | exact | Dominance | K |  |
+| PAD (Mehrabian & Russell) | exact | Dominance | V |  |
 | NRC lexicons | exact | VAD dominance | - |  |
 | W3C EmotionML + vocabularies | exact | pad-dimensions#dominance; fsre-dimensions#potency; ema-appraisals#controllability; scherer-appraisals#control; scherer-appraisals#power | V |  |
 | HUMAINE EARL | exact | power (dimension); event_controllability; agent_power (appraisals) | V |  |
@@ -2164,7 +2164,7 @@ _The perceived ability to act or influence the situation_
 |---|---|---|---|---|
 | PAD (Mehrabian & Russell) | exact | -D | - |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000116 feeling out of control | V |  |
-| Scherer CPM / GRID / GEW | exact | low coping potential / power | K |  |
+| Scherer CPM / GRID / GEW | exact | low coping potential / power | V |  |
 
 **`medium`** — grounding: orphan
 
@@ -2176,7 +2176,7 @@ _orphan_
 |---|---|---|---|---|
 | PAD (Mehrabian & Russell) | exact | +D | - |  |
 | OBO MFOEM Emotion Ontology | exact | MFOEM:000110 feeling in control | V |  |
-| Scherer CPM / GRID / GEW | exact | high coping potential / power | K |  |
+| Scherer CPM / GRID / GEW | exact | high coping potential / power | V |  |
 
 ### `impulse.regulation_state` — closed_enum — grounding: **moderate**
 
@@ -2184,7 +2184,7 @@ _The stability or turbulence of emotional self-regulation_
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Gross process model | broader | emotion regulation (process model) | K | Gross names strategies, not state levels |
+| Gross process model | broader | emotion regulation (process model) | V | Gross names strategies, not state levels |
 | Mayer-Salovey EI | related | branch 4: managing emotions | - |  |
 | Goleman EI | related | emotional self-control | V |  |
 | Bar-On EQ-i | related | impulse control; stress tolerance | V |  |
@@ -2216,7 +2216,7 @@ _The relational attachment pattern influencing the emotional expression_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Ainsworth / Main attachment | exact | Strange Situation A/B/C + Main & Solomon D | - |  |
-| Bartholomew adult attachment | related | secure / preoccupied / dismissing / fearful | K | different partition |
+| Bartholomew adult attachment | related | secure / preoccupied / dismissing / fearful | V | different partition |
 | Panksepp primary systems | related | CARE / PANIC-GRIEF | V |  |
 
 **`secure`** — grounding: strong
@@ -2224,7 +2224,7 @@ _The relational attachment pattern influencing the emotional expression_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Ainsworth / Main attachment | exact | B: secure | - |  |
-| Bartholomew adult attachment | exact | secure | K |  |
+| Bartholomew adult attachment | exact | secure | V |  |
 | Ainsworth / Main attachment | exact | Hazan & Shaver: secure | - |  |
 
 **`anxious`** — grounding: strong
@@ -2232,21 +2232,21 @@ _The relational attachment pattern influencing the emotional expression_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Ainsworth / Main attachment | exact | C: anxious-ambivalent / resistant | V |  |
-| Bartholomew adult attachment | related | preoccupied | K |  |
+| Bartholomew adult attachment | related | preoccupied | V |  |
 
 **`avoidant`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Ainsworth / Main attachment | exact | A: avoidant | - |  |
-| Bartholomew adult attachment | related | dismissing | K |  |
+| Bartholomew adult attachment | related | dismissing | V |  |
 
 **`disorganized`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Ainsworth / Main attachment | exact | D: disorganized / disoriented (Main & Solomon) | K |  |
-| Bartholomew adult attachment | related | fearful | K | contested equivalence |
+| Ainsworth / Main attachment | exact | D: disorganized / disoriented (Main & Solomon) | V |  |
+| Bartholomew adult attachment | related | fearful | V | contested equivalence |
 
 ### `impulse.coping_style` — canonical_open — grounding: **strong**
 
@@ -2256,7 +2256,7 @@ _The primary strategy used to manage or integrate the emotional experience_
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | Ways of Coping (8 scales) | V |  |
 | Gross process model | exact | emotion regulation strategy families | - |  |
-| Mayer-Salovey EI | related | managing emotions | K |  |
+| Mayer-Salovey EI | related | managing emotions | V |  |
 | Bar-On EQ-i | related | stress management composite | - |  |
 | Goleman EI | related | self-management | - |  |
 
@@ -2265,21 +2265,21 @@ _The primary strategy used to manage or integrate the emotional experience_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | positive reappraisal | V |  |
-| Gross process model | exact | cognitive change (reappraisal) | K |  |
-| McAdams narrative identity | related | redemption / meaning-making | K |  |
+| Gross process model | exact | cognitive change (reappraisal) | V |  |
+| McAdams narrative identity | related | redemption / meaning-making | V |  |
 
 **`seek_support`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | seeking social support | V |  |
-| Gross process model | related | situation selection (interpersonal regulation) | K |  |
+| Gross process model | related | situation selection (interpersonal regulation) | V |  |
 
 **`distract`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Gross process model | exact | attentional deployment (distraction) | K |  |
+| Gross process model | exact | attentional deployment (distraction) | V |  |
 | Lazarus appraisal / coping | related | escape-avoidance | V |  |
 
 **`ritualize`** — grounding: orphan
@@ -2291,22 +2291,22 @@ _orphan_
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | confrontive coping | V |  |
-| Gross process model | related | situation modification | K |  |
+| Gross process model | related | situation modification | V |  |
 
 **`detach`** — grounding: strong
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
 | Lazarus appraisal / coping | exact | distancing | V |  |
-| Gross process model | related | response modulation (suppression) | K |  |
+| Gross process model | related | response modulation (suppression) | V |  |
 
 **`process`** — grounding: weak
 
 | Framework | Relation | Target | Ver. | Note |
 |---|---|---|---|---|
-| Lazarus appraisal / coping | related | emotion-focused coping | K |  |
-| Gross process model | related | cognitive change | K |  |
-| Singer & Blagov SDM | related | integrative meaning | K |  |
+| Lazarus appraisal / coping | related | emotion-focused coping | V |  |
+| Gross process model | related | cognitive change | V |  |
+| Singer & Blagov SDM | related | integrative meaning | V |  |
 
 
 ## Gap list A — Orphans (EDM rows with no mapping anywhere)

@@ -24,7 +24,7 @@ The neutrality mechanism proposed throughout is the one in `coding-proposal.md`:
 
 ## 4. Emotion vs mood vs feeling vs disposition
 
-- **Positions.** MFOEM distinguishes emotion process, mood process, subjective affective feeling, emotion disposition (love, hate) and trait. Damasio distinguishes emotion (bodily) from feeling (perception of the body state) and background emotions [KNOWLEDGE]. Scherer separates emotion from mood by duration and object-focus [KNOWLEDGE].
+- **Positions.** MFOEM distinguishes emotion process, mood process, subjective affective feeling, emotion disposition (love, hate) and trait. Damasio distinguishes emotion (bodily) from feeling (perception of the body state) and background emotions (verified 2026-10-17 against Bortolan's open-access summary of Damasio 1999/2000). Scherer separates emotion from mood by duration and object-focus [KNOWLEDGE].
 - **Where EDM currently leans.** `viscosity=enduring` and `temporal_decay` are the only hint that something is mood-like; `tenderness` and `love` are dispositions in MFOEM but appear as emotion values.
 - **Neutral position.** Add `emotion.kind` with codes `MFOEM:000001` emotion process | `MFOEM:000193` mood process | `MFOEM:000006` subjective affective feeling | `MFOEM:000199` emotion disposition. Default to emotion process when the subject does not distinguish.
 
@@ -53,7 +53,7 @@ The neutrality mechanism proposed throughout is the one in `coding-proposal.md`:
 
 ## 9. Transactional coping vs process-model regulation
 
-- **Positions.** Lazarus & Folkman classify coping by its function in a stressful transaction (eight Ways of Coping scales, fetched); Gross classifies regulation by *when* in the emotion-generative process it acts (five families) [KNOWLEDGE].
+- **Positions.** Lazarus & Folkman classify coping by its function in a stressful transaction (eight Ways of Coping scales, fetched); Gross classifies regulation by *when* in the emotion-generative process it acts (five families; verified 2026-10-17 against Gross 2002, course mirror).
 - **Neutral position.** `motivation.coping` may carry both a Ways-of-Coping coding and a Gross-family coding; the two are orthogonal, not competing, for most values (positive reappraisal = cognitive change; escape-avoidance ≈ attentional deployment / situation selection).
 
 ## 10. Functional emotion concepts in language models (Anthropic 2026)
