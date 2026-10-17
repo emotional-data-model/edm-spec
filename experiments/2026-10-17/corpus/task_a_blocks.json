@@ -1,0 +1,5491 @@
+{
+ "seed": 20261017,
+ "k": 3,
+ "blocks": [
+  {
+   "arm": "synthetic",
+   "block": "syn-m1",
+   "entries": [
+    "S01",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "S08",
+    "S09",
+    "S10"
+   ],
+   "named": [
+    "S01",
+    "S02",
+    "S04",
+    "S06"
+   ],
+   "evidence": {
+    "kind": "author_month_summary",
+    "summary": "Four things, if I'm honest about what this month actually was. The day on the ridge when the cloud came down and I stood on wet rock for an hour not knowing which way was down, and then the view opened and I have never seen anything like it; I still don't know whether to call that day good or bad, and I've stopped trying. The afternoon the van hit the car with my nephew in the back seat, and the three hours waiting while they checked him over, and the plain fact that it happened on my watch. Then the email that said I hadn't passed, two marks short, and having to walk into an office full of people who knew I'd sat it and say nothing. And my sister turning up at the door with a bag of oranges and a drawing of a fire engine, and four hours of talking, and the feeling of my shoulders finally coming down from around my ears. Everything else this month was weather. Those four were the month."
+   }
+  },
+  {
+   "arm": "synthetic",
+   "block": "syn-m2",
+   "entries": [
+    "S11",
+    "S12",
+    "S13",
+    "S14",
+    "S15",
+    "S16",
+    "S17",
+    "S18",
+    "S19",
+    "S20"
+   ],
+   "named": [
+    "S11",
+    "S14",
+    "S15",
+    "S19"
+   ],
+   "evidence": {
+    "kind": "author_month_summary",
+    "summary": "This month had a hundred days in it, and a wedding where I sat with sparkling water and a slice of lime and for the first time didn't explain myself to anyone; I woke the next morning with steady hands and knew something had turned. Three days later my partner packed a bag and went to their brother's for \"a pause\", and I wrote down exactly what they said so I wouldn't rewrite it, and I didn't text. Then the resit result, twelve marks over, read on the stairs, shouted down the phone to my sister, the first thing in a long time I could say I'd earned outright. And at the end of the month, in a pharmacy queue of all places, the friend I'd disappeared on five years ago said my name, and I sat with her for an hour and finally told her the truth, and walked home carrying relief and shame at the same time and not knowing which was heavier. A hundred days, a bag by the door, an email, a queue. That was the month."
+   }
+  },
+  {
+   "arm": "synthetic",
+   "block": "syn-m3",
+   "entries": [
+    "S21",
+    "S22",
+    "S23",
+    "S24",
+    "S25",
+    "S26",
+    "S27",
+    "S28",
+    "S29",
+    "S30"
+   ],
+   "named": [
+    "S21",
+    "S23",
+    "S26",
+    "S27"
+   ],
+   "evidence": {
+    "kind": "author_month_summary",
+    "summary": "Three days alone on the hills at the start of the month, nearly cancelled, a knot in my stomach the whole first night in the hostel and then, on the second morning, gone; I cried on the summit and didn't mind, and I came down knowing I could be on my own and be all right. A week later the conversation with my partner that ended it, by agreement, in our own kitchen, and I was the one who said it, and everything since dates from that afternoon. Then the director in the small room with the broken blind offering me the lead, and me saying yes without hedging, and trying for once to let good news be as big as it actually is instead of folding it away. And the next evening my old friend at my table, a bottle of elderflower, photos from the old flat with a colander on my head, the kind of hug where you lean. Grief, pride, a chair, a mended thing. That's what mattered this month."
+   }
+  },
+  {
+   "arm": "synthetic",
+   "block": "syn-m4",
+   "entries": [
+    "S31",
+    "S32",
+    "S33",
+    "S34",
+    "S35",
+    "S36",
+    "S37",
+    "S38",
+    "S39",
+    "S40"
+   ],
+   "named": [
+    "S33",
+    "S37",
+    "S38",
+    "S39"
+   ],
+   "evidence": {
+    "kind": "author_month_summary",
+    "summary": "What mattered this month, if I am honest about it, comes down to four things. My sister told me she is moving overseas in the autumn, and I sat on the kitchen floor afterwards being proud and gutted at the same time; I still have not decided which one is winning. Then a year without a drink, marked with a walk, a plate of dumplings and an early night, which is exactly how I wanted it marked. The day after that, the exam result: third attempt, the one word, read twice in a stairwell before I rang my mother. And then dinner at my parents' place, when Dad stopped breathing over his steak and I was the one who got up and did something about it. He is fine. He is making jokes about it in the family chat. I keep listing those last three together because they landed within a few days of each other and I have not caught up with any of them yet. It was a loud month, mostly in good ways, with one long goodbye started and a clearer sense of what I am able to do when it counts."
+   }
+  },
+  {
+   "arm": "synthetic",
+   "block": "syn-m5",
+   "entries": [
+    "S41",
+    "S42",
+    "S43",
+    "S44",
+    "S45",
+    "S46",
+    "S47",
+    "S48",
+    "S49",
+    "S50"
+   ],
+   "named": [
+    "S41",
+    "S46",
+    "S49",
+    "S50"
+   ],
+   "evidence": {
+    "kind": "author_month_summary",
+    "summary": "This month started with the barrier. The car spun on the ring road and hit it twice, and I walked away with nothing broken and a week of seeing the second hit every time I closed my eyes. I am still not entirely back behind the wheel, in any sense. Then, in the middle of the month, the restaurant: my partner's reaction, the injector, the ambulance, her hand in mine saying my name, and the slow day at home afterwards, which was somehow one of the best we have had. Late in the month my oldest friend told me the group had been meeting without me for most of a year, and that she had organized it. I paid for the drinks and walked for an hour. I do not know yet what is left of that circle. And two days later I finished the marathon, nearly an hour off the plan, walking the last six miles beside a stranger in a frog hat, prouder of the walking than of the running. A month of near misses and real hits, and I am still working out which was which."
+   }
+  },
+  {
+   "arm": "conversational",
+   "block": "locomo-conv-42",
+   "entries": [
+    "L42-01",
+    "L42-02",
+    "L42-03",
+    "L42-04",
+    "L42-05",
+    "L42-06",
+    "L42-07",
+    "L42-08",
+    "L42-09",
+    "L42-10"
+   ],
+   "named": [
+    "L42-01",
+    "L42-02",
+    "L42-03",
+    "L42-04",
+    "L42-05",
+    "L42-06",
+    "L42-07",
+    "L42-08",
+    "L42-09",
+    "L42-10"
+   ],
+   "evidence": {
+    "kind": "benchmark_qa_evidence",
+    "probes": [
+     {
+      "question": "Is it likely that Nate has friends besides Joanna?",
+      "category": 3,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "What kind of interests do Joanna and Nate share?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-03",
+       "L42-04",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "When did Joanna first watch \"Eternal Sunshine of the Spotless Mind?",
+      "category": 2,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "When did Nate win his first video game tournament?",
+      "category": 2,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "What pets wouldn't cause any discomfort to Joanna?",
+      "category": 3,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What are Joanna's hobbies?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-02"
+      ]
+     },
+     {
+      "question": "How long has Nate had his first two turtles?",
+      "category": 2,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "When did Joanna finish her first screenplay?",
+      "category": 2,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "When did Nate get his first two turtles?",
+      "category": 2,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What major achievement did Joanna accomplish in January 2022?",
+      "category": 2,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What emotions is Joanna feeling about  the screenplay she submitted?",
+      "category": 1,
+      "sessions": [
+       "L42-02",
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What is Joanna allergic to?",
+      "category": 1,
+      "sessions": [
+       "L42-02",
+       "L42-04",
+       "L42-05"
+      ]
+     },
+     {
+      "question": "What underlying condition might Joanna have based on her allergies?",
+      "category": 3,
+      "sessions": [
+       "L42-02",
+       "L42-05"
+      ]
+     },
+     {
+      "question": "When did Joanna have an audition for a writing gig?",
+      "category": 2,
+      "sessions": [
+       "L42-06"
+      ]
+     },
+     {
+      "question": "What nickname does Nate use for Joanna?",
+      "category": 3,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "When did Nate get purple hair?",
+      "category": 2,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What physical transformation did Nate undergo in April 2022?",
+      "category": 2,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What movie did Joanna watch on 1 May, 2022?",
+      "category": 2,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "How many times has Joanna found new hiking trails?",
+      "category": 1,
+      "sessions": [
+       "L42-08"
+      ]
+     },
+     {
+      "question": "Which of Joanna's screenplay were rejected from production companies?",
+      "category": 1,
+      "sessions": [
+       "L42-02",
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What places has Joanna submitted her work to?",
+      "category": 1,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What kind of writings does Joanna do?",
+      "category": 1,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What book recommendations has Joanna given to Nate?",
+      "category": 1,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What movies have both Joanna and Nate seen?",
+      "category": 1,
+      "sessions": [
+       "L42-03",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "How many times has Nate taken his turtles on a walk?",
+      "category": 1,
+      "sessions": [
+       "L42-05"
+      ]
+     },
+     {
+      "question": "What is Joanna inspired by?",
+      "category": 1,
+      "sessions": [
+       "L42-04",
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What animal do both Nate and Joanna like?",
+      "category": 1,
+      "sessions": [
+       "L42-05"
+      ]
+     },
+     {
+      "question": "What things has Nate reccomended to Joanna?",
+      "category": 1,
+      "sessions": [
+       "L42-02",
+       "L42-09",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What video games does Nate play?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What alternative career might Nate consider after gaming?",
+      "category": 3,
+      "sessions": [
+       "L42-05"
+      ]
+     },
+     {
+      "question": "What pets does Nate have?",
+      "category": 1,
+      "sessions": [
+       "L42-08"
+      ]
+     },
+     {
+      "question": "How many hikes has Joanna been on?",
+      "category": 3,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "How many turtles does Nate have?",
+      "category": 1,
+      "sessions": [
+       "L42-08"
+      ]
+     },
+     {
+      "question": "What recommendations has Nate received from Joanna?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What are Nate's favorite desserts?",
+      "category": 1,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "When did Nate win his second tournament?",
+      "category": 2,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "How many video game tournaments has Nate participated in?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-06",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "How many screenplays has Joanna written?",
+      "category": 1,
+      "sessions": [
+       "L42-02",
+       "L42-04",
+       "L42-05"
+      ]
+     },
+     {
+      "question": "How many tournaments has Nate won?",
+      "category": 1,
+      "sessions": [
+       "L42-01",
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What recipes has Joanna made?",
+      "category": 1,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What recipes has Nate made?",
+      "category": 1,
+      "sessions": [
+       "L42-03",
+       "L42-04"
+      ]
+     },
+     {
+      "question": "What is one of Joanna's favorite movies?",
+      "category": 4,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "What color did Nate choose for his hair?",
+      "category": 4,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What is Nate's favorite movie trilogy?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What is Nate's favorite book series about?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What kind of lighting does Nate's gaming room have?",
+      "category": 4,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What game was the second tournament that Nate won based on?",
+      "category": 4,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What type of movies does Nate enjoy watching the most?",
+      "category": 4,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "What did Joanna just finish last Friday on 23 January, 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What genre is Joanna's first screenplay?",
+      "category": 4,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What are Joanna's plans for her finished screenplay in January 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "For how long has Nate had his turtles?",
+      "category": 4,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What did Nate think of the coconut milk ice cream he made?",
+      "category": 4,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "Which dairy-free dessert flavors does Nate enjoy?",
+      "category": 4,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What did Joanna recently watch and recommend to Nate on February 7, 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What is \"Little Women\" about according to Joanna?",
+      "category": 4,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What flavor of ice cream did Nate make for his friend on 25 February, 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-04"
+      ]
+     },
+     {
+      "question": "What inspired Joanna's new screenplay on 25 February, 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-04"
+      ]
+     },
+     {
+      "question": "Why does Nate like turtles as pets?",
+      "category": 4,
+      "sessions": [
+       "L42-05"
+      ]
+     },
+     {
+      "question": "How does Nate describe the process of taking care of turtles?",
+      "category": 4,
+      "sessions": [
+       "L42-05"
+      ]
+     },
+     {
+      "question": "What was Joanna's audition for?",
+      "category": 4,
+      "sessions": [
+       "L42-06"
+      ]
+     },
+     {
+      "question": "Why did Nate choose the hair color he did?",
+      "category": 4,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What are the main ingredients of the ice cream recipe shared by Nate?",
+      "category": 4,
+      "sessions": [
+       "L42-08"
+      ]
+     },
+     {
+      "question": "What is Joanna's project called in the writers group?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What is Nate's favorite genre of movies?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What kind of books does Nate enjoy?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What kind of films does Joanna enjoy?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "Which activity helps Nate escape and stimulates his imagination?",
+      "category": 4,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What filling did Joanna use in the cake she made recently in May 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What kind of frosting did Joanna use on the cake she made recently in May 2022?",
+      "category": 4,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What color did Joanna choose for her hair?",
+      "category": 5,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What is Joanna's favorite movie trilogy?",
+      "category": 5,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What is Joanna's favorite book series about?",
+      "category": 5,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What kind of lighting does Joanna's gaming room have?",
+      "category": 5,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What game was the second tournament that Joanna won based on?",
+      "category": 5,
+      "sessions": [
+       "L42-10"
+      ]
+     },
+     {
+      "question": "What type of movies does Nate hate watching the most?",
+      "category": 5,
+      "sessions": [
+       "L42-01"
+      ]
+     },
+     {
+      "question": "What genre is Joanna's first novella?",
+      "category": 5,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What are Nate's plans for his finished screenplay in January 2022?",
+      "category": 5,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "For how long has Nate had his snakes?",
+      "category": 5,
+      "sessions": [
+       "L42-02"
+      ]
+     },
+     {
+      "question": "What did Nate think of the caramel ice cream he made?",
+      "category": 5,
+      "sessions": [
+       "L42-03"
+      ]
+     },
+     {
+      "question": "What flavor of cake did Nate make for his friend on 25 February, 2022?",
+      "category": 5,
+      "sessions": [
+       "L42-04"
+      ]
+     },
+     {
+      "question": "What was Nate's audition for?",
+      "category": 5,
+      "sessions": [
+       "L42-06"
+      ]
+     },
+     {
+      "question": "Why did Joanna choose the hair color she did?",
+      "category": 5,
+      "sessions": [
+       "L42-07"
+      ]
+     },
+     {
+      "question": "What are the main ingredients of the ice cream recipe shared by Joanna?",
+      "category": 5,
+      "sessions": [
+       "L42-08"
+      ]
+     },
+     {
+      "question": "What is Nate's project called in the writers group?",
+      "category": 5,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "Which activity helps Nate escape and numbs his mind?",
+      "category": 5,
+      "sessions": [
+       "L42-09"
+      ]
+     },
+     {
+      "question": "What filling did Nate use in the cake he made recently in May 2022?",
+      "category": 5,
+      "sessions": [
+       "L42-10"
+      ]
+     }
+    ],
+    "scoring": "a probe is hit when every evidence session it needs is retained; hit rate = hits / probes"
+   }
+  },
+  {
+   "arm": "conversational",
+   "block": "locomo-conv-48",
+   "entries": [
+    "L48-01",
+    "L48-02",
+    "L48-03",
+    "L48-04",
+    "L48-05",
+    "L48-06",
+    "L48-07",
+    "L48-08",
+    "L48-09",
+    "L48-10"
+   ],
+   "named": [
+    "L48-01",
+    "L48-02",
+    "L48-03",
+    "L48-04",
+    "L48-05",
+    "L48-06",
+    "L48-07",
+    "L48-08",
+    "L48-09",
+    "L48-10"
+   ],
+   "evidence": {
+    "kind": "benchmark_qa_evidence",
+    "probes": [
+     {
+      "question": "What kind of project was Jolene working on in the beginning of January 2023?",
+      "category": 2,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "Which of Deborah`s family and friends have passed away?",
+      "category": 1,
+      "sessions": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ]
+     },
+     {
+      "question": "When did Deborah`s mother pass away?",
+      "category": 2,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "When did Jolene`s mother pass away?",
+      "category": 2,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "When did Jolene's mom gift her a pendant?",
+      "category": 2,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "In what country did Jolene's mother buy her the pendant?",
+      "category": 3,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "What symbolic gifts do Deborah and Jolene have from their mothers?",
+      "category": 1,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "Which country were Jolene and her mother visiting in 2010?",
+      "category": 2,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "What helped Deborah find peace when grieving deaths of her loved ones?",
+      "category": 1,
+      "sessions": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ]
+     },
+     {
+      "question": "When did Deborah's father pass away?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "When was Deborah's parents' wedding?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Is Deborah married?",
+      "category": 3,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "When did Deborah receive an appreciation letter from her community?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What places give Deborah peace?",
+      "category": 1,
+      "sessions": [
+       "L48-02",
+       "L48-04",
+       "L48-06"
+      ]
+     },
+     {
+      "question": "What were Deborah's mother's hobbies?",
+      "category": 1,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What pets does Jolene have?",
+      "category": 4,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What are the names of Jolene's snakes?",
+      "category": 4,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "When did Jolene buy her pet Seraphim?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "In what country did Jolene buy snake Seraphim?",
+      "category": 3,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "How many times has Jolene been to France?",
+      "category": 1,
+      "sessions": [
+       "L48-01",
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Which games have Jolene and her partner played together?",
+      "category": 1,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "When do Jolene and her partner plan to complete the game \"Walking Dead\"?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "When did Deborah meet Anna?",
+      "category": 2,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "Why did Jolene sometimes put off doing yoga?",
+      "category": 3,
+      "sessions": [
+       "L48-02",
+       "L48-03"
+      ]
+     },
+     {
+      "question": "What new yoga poses did Deborah try?",
+      "category": 1,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What are Jolene's favorite books?",
+      "category": 4,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "Which book did Jolene read in January 2023?",
+      "category": 2,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "When was Jolene in Bogota?",
+      "category": 2,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "In what country was Jolene during summer 2022?",
+      "category": 3,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "When did Jolene have a mini-retreat to reflect on her career?",
+      "category": 2,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "When did Jolene have a dinner and drinks with her friends?",
+      "category": 2,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "When was the last photo of Deborah and Karlie taken?",
+      "category": 2,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "When was Deborah in Bali?",
+      "category": 2,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "How long have Jolene and her partner been together?",
+      "category": 4,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "Which year did Jolene and her partner start dating?",
+      "category": 2,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "When did Deborah go for her first morning jog in a nearby park?",
+      "category": 2,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "How old is Jolene?",
+      "category": 3,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "When did Jolene take Seraphim to the park?",
+      "category": 2,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "When did Deborah start the yoga class in the neighborhood?",
+      "category": 2,
+      "sessions": [
+       "L48-09"
+      ]
+     },
+     {
+      "question": "What time management techniques do Deborah and Jolene use?",
+      "category": 1,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "Does Deborah live close to the beach or the mountains?",
+      "category": 3,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "How long did Jolene work on the robotics project given to her by her Professor?",
+      "category": 2,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "Which pet did Jolene adopt first - Susie or Seraphim?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Which pet did Jolene adopt more recently - Susie or Seraphim?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Did Jolene teach herself how to play the console?",
+      "category": 1,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Where did Jolene and her partner spend most of September 2023?",
+      "category": 2,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Has Jolene tried surfing?",
+      "category": 1,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "Which locations does Deborah practice her yoga at?",
+      "category": 1,
+      "sessions": [
+       "L48-02",
+       "L48-03",
+       "L48-04",
+       "L48-06"
+      ]
+     },
+     {
+      "question": "What kind of engineering projects has Jolene worked on?",
+      "category": 1,
+      "sessions": [
+       "L48-01",
+       "L48-03",
+       "L48-04"
+      ]
+     },
+     {
+      "question": "Which community activities have Deborah and Anna participated in?",
+      "category": 1,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What gifts has Deborah received?",
+      "category": 1,
+      "sessions": [
+       "L48-02",
+       "L48-04"
+      ]
+     },
+     {
+      "question": "Which countries has Deborah traveled to?",
+      "category": 1,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "What are the names of Jolene's snakes?",
+      "category": 4,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What are Jolene's favorite books?",
+      "category": 4,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What project did Jolene finish last week before 23 January, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-01"
+      ]
+     },
+     {
+      "question": "When did Jolene buy her pet snake?",
+      "category": 4,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What project was Jolene working on as of 1 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "Where did Deborah meet her new neighbor Anna?",
+      "category": 4,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "What activity did Jolene and her partner plan to do together instead of resuming yoga?",
+      "category": 4,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "What milestone did Jolene achieve recently on 4 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What is Jolene's favorite book which she mentioned on 4 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What does Deborah bring with her whenever she comes to reflect on her mom?",
+      "category": 4,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What new outlook did Jolene gain after her mini retreat on 9 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "What cool stuff did Jolene accomplish at the retreat on 9 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "What idea did Jolene have to help underprivileged kids learn about STEM subjects on 9 February, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "How does Jolene plan to involve local engineers in her idea of teaching STEM to underprivileged kids?",
+      "category": 4,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "What gave Deborah peace in the garden she visited?",
+      "category": 4,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "Why did Deborah spend time in the garden?",
+      "category": 4,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "How did Jolene and her partner initially meet?",
+      "category": 4,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "What activity does Deborah incorporate into her daily routine after going for a morning jog in the park?",
+      "category": 4,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "According to Jolene, what does exercise help her to feel?",
+      "category": 4,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "What did Deb share a photo of, which brought a smile to Jolene's face?",
+      "category": 4,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "What is one of Jolene's favorite dishes?",
+      "category": 4,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "What picture did Jolene share related to feeling overwhelmed?",
+      "category": 4,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "What did Jolene and Deb discuss as a helpful strategy for studying and time management?",
+      "category": 4,
+      "sessions": [
+       "L48-08"
+      ]
+     },
+     {
+      "question": "What did Jolene ask Deb to help with on 13 March, 2023?",
+      "category": 4,
+      "sessions": [
+       "L48-09"
+      ]
+     },
+     {
+      "question": "What method does Deb suggest Jolene to try for organizing tasks based on importance and urgency?",
+      "category": 4,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "What did Jolene and Anna discuss while watching the sunset by the sea?",
+      "category": 4,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "How does Jolene plan to pursue her dream of learning to surf?",
+      "category": 4,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "What are the names of Deborah's snakes?",
+      "category": 5,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "What are Deborah's favorite books?",
+      "category": 5,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "When did Jolene release her pet snake?",
+      "category": 5,
+      "sessions": [
+       "L48-02"
+      ]
+     },
+     {
+      "question": "Where did Jolene meet her new friend Anna?",
+      "category": 5,
+      "sessions": [
+       "L48-03"
+      ]
+     },
+     {
+      "question": "What is Deborah's favorite book which she mentioned on 4 February, 2023?",
+      "category": 5,
+      "sessions": [
+       "L48-04"
+      ]
+     },
+     {
+      "question": "What cool stuff did Deborah accomplish at the retreat on 9 February, 2023?",
+      "category": 5,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "How does Deborah plan to involve local engineers in her idea of teaching STEM to underprivileged kids?",
+      "category": 5,
+      "sessions": [
+       "L48-05"
+      ]
+     },
+     {
+      "question": "What gave Deborah anxiety in the garden she visited?",
+      "category": 5,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "Why did Jolene spend time in the garden?",
+      "category": 5,
+      "sessions": [
+       "L48-06"
+      ]
+     },
+     {
+      "question": "How did Jolene and her rival initially meet?",
+      "category": 5,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "What activity does Jolene incorporate into her daily routine after going for a morning jog in the park?",
+      "category": 5,
+      "sessions": [
+       "L48-07"
+      ]
+     },
+     {
+      "question": "What method does Jolene suggest Deborah to try for organizing tasks based on importance and urgency?",
+      "category": 5,
+      "sessions": [
+       "L48-10"
+      ]
+     },
+     {
+      "question": "How does Jolene plan to pursue her dream of climbing mountains?",
+      "category": 5,
+      "sessions": [
+       "L48-10"
+      ]
+     }
+    ],
+    "scoring": "a probe is hit when every evidence session it needs is retained; hit rate = hits / probes"
+   }
+  },
+  {
+   "arm": "conversational",
+   "block": "lme-9aaed6a3",
+   "entries": [
+    "M9aaed6a3-01",
+    "M9aaed6a3-02",
+    "M9aaed6a3-03",
+    "M9aaed6a3-04",
+    "M9aaed6a3-05",
+    "M9aaed6a3-06",
+    "M9aaed6a3-07",
+    "M9aaed6a3-08",
+    "M9aaed6a3-09",
+    "M9aaed6a3-10"
+   ],
+   "named": [
+    "M9aaed6a3-03",
+    "M9aaed6a3-04"
+   ],
+   "evidence": {
+    "kind": "benchmark_answer_sessions",
+    "question": "How much cashback did I earn at SaveMart last Thursday?",
+    "answer": "$0.75",
+    "question_type": "multi-session",
+    "scoring": "hit rate = retained answer sessions / answer sessions"
+   }
+  },
+  {
+   "arm": "conversational",
+   "block": "lme-09ba9854",
+   "entries": [
+    "M09ba9854-01",
+    "M09ba9854-02",
+    "M09ba9854-03",
+    "M09ba9854-04",
+    "M09ba9854-05",
+    "M09ba9854-06",
+    "M09ba9854-07",
+    "M09ba9854-08",
+    "M09ba9854-09",
+    "M09ba9854-10"
+   ],
+   "named": [
+    "M09ba9854-04",
+    "M09ba9854-06"
+   ],
+   "evidence": {
+    "kind": "benchmark_answer_sessions",
+    "question": "How much will I save by taking the train from the airport to my hotel instead of a taxi?",
+    "answer": "$50",
+    "question_type": "multi-session",
+    "scoring": "hit rate = retained answer sessions / answer sessions"
+   }
+  },
+  {
+   "arm": "conversational",
+   "block": "lme-3fdac837",
+   "entries": [
+    "M3fdac837-01",
+    "M3fdac837-02",
+    "M3fdac837-03",
+    "M3fdac837-04",
+    "M3fdac837-05",
+    "M3fdac837-06",
+    "M3fdac837-07",
+    "M3fdac837-08",
+    "M3fdac837-09",
+    "M3fdac837-10"
+   ],
+   "named": [
+    "M3fdac837-04",
+    "M3fdac837-08"
+   ],
+   "evidence": {
+    "kind": "benchmark_answer_sessions",
+    "question": "What is the total number of days I spent in Japan and Chicago?",
+    "answer": "11 days (or 12 days, if April 15th to 22nd is considered as 8 days)",
+    "question_type": "multi-session",
+    "scoring": "hit rate = retained answer sessions / answer sessions"
+   }
+  },
+  {
+   "arm": "pepys",
+   "block": "pepys-m01",
+   "entries": [
+    "P1665-01-03",
+    "P1665-01-11",
+    "P1665-01-12",
+    "P1665-01-17",
+    "P1665-01-18",
+    "P1665-01-19",
+    "P1665-01-24",
+    "P1665-01-25",
+    "P1665-01-27",
+    "P1665-01-31"
+   ],
+   "named": [
+    "P1665-01-27",
+    "P1665-01-19",
+    "P1665-01-11",
+    "P1665-01-03"
+   ],
+   "evidence": {
+    "kind": "lexical_backreference",
+    "rule": "an entry is referred back to when a later entry within ~90 days shares >= 3 distinctive terms (document frequency <= 5% of the 310 scenes, >= 4 letters, not a stopword); the 4 most-referenced entries of the month are named; ties broken by date",
+    "backrefs": {
+     "P1665-01-03": [
+      {
+       "date": "1665-01-04",
+       "shared_terms": [
+        "cards",
+        "coffee",
+        "frost"
+       ]
+      },
+      {
+       "date": "1665-01-12",
+       "shared_terms": [
+        "felling",
+        "north",
+        "privy",
+        "seale",
+        "timber"
+       ]
+      },
+      {
+       "date": "1665-01-14",
+       "shared_terms": [
+        "colliers",
+        "north",
+        "privy"
+       ]
+      },
+      {
+       "date": "1665-04-18",
+       "shared_terms": [
+        "parke",
+        "privy",
+        "seale"
+       ]
+      }
+     ],
+     "P1665-01-11": [
+      {
+       "date": "1665-01-14",
+       "shared_terms": [
+        "allen",
+        "draught",
+        "lying",
+        "straights"
+       ]
+      },
+      {
+       "date": "1665-01-16",
+       "shared_terms": [
+        "allen",
+        "plymouth",
+        "sensible"
+       ]
+      },
+      {
+       "date": "1665-01-21",
+       "shared_terms": [
+        "brunker",
+        "person",
+        "sort"
+       ]
+      },
+      {
+       "date": "1665-01-23",
+       "shared_terms": [
+        "aground",
+        "allen",
+        "person",
+        "running"
+       ]
+      },
+      {
+       "date": "1665-02-22",
+       "shared_terms": [
+        "college",
+        "gresham",
+        "lying"
+       ]
+      },
+      {
+       "date": "1665-03-22",
+       "shared_terms": [
+        "bird",
+        "college",
+        "gresham"
+       ]
+      },
+      {
+       "date": "1665-04-19",
+       "shared_terms": [
+        "college",
+        "gresham",
+        "thereof"
+       ]
+      },
+      {
+       "date": "1665-05-05",
+       "shared_terms": [
+        "commissioner",
+        "lines",
+        "pett"
+       ]
+      }
+     ],
+     "P1665-01-12": [],
+     "P1665-01-17": [
+      {
+       "date": "1665-01-19",
+       "shared_terms": [
+        "ashly",
+        "break",
+        "foole"
+       ]
+      }
+     ],
+     "P1665-01-18": [
+      {
+       "date": "1665-02-03",
+       "shared_terms": [
+        "binding",
+        "bookseller",
+        "study"
+       ]
+      }
+     ],
+     "P1665-01-19": [
+      {
+       "date": "1665-01-20",
+       "shared_terms": [
+        "break",
+        "loose",
+        "really"
+       ]
+      },
+      {
+       "date": "1665-02-20",
+       "shared_terms": [
+        "barkeley",
+        "lords",
+        "really"
+       ]
+      },
+      {
+       "date": "1665-03-17",
+       "shared_terms": [
+        "lords",
+        "peterborough",
+        "shame",
+        "troublesome"
+       ]
+      },
+      {
+       "date": "1665-03-20",
+       "shared_terms": [
+        "barkeley",
+        "contrary",
+        "fault",
+        "pepys",
+        "peterborough"
+       ]
+      },
+      {
+       "date": "1665-03-27",
+       "shared_terms": [
+        "barkeley",
+        "foole",
+        "peterborough"
+       ]
+      },
+      {
+       "date": "1665-04-12",
+       "shared_terms": [
+        "ashly",
+        "contrary",
+        "pepys"
+       ]
+      },
+      {
+       "date": "1665-04-14",
+       "shared_terms": [
+        "ashly",
+        "barkeley",
+        "contrary",
+        "enemy"
+       ]
+      },
+      {
+       "date": "1665-04-28",
+       "shared_terms": [
+        "ashly",
+        "contrary",
+        "peterborough"
+       ]
+      },
+      {
+       "date": "1665-05-12",
+       "shared_terms": [
+        "contrary",
+        "cozen",
+        "pepys"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "enemy",
+        "hardly",
+        "lords"
+       ]
+      }
+     ],
+     "P1665-01-24": [
+      {
+       "date": "1665-02-25",
+       "shared_terms": [
+        "eares",
+        "sunday",
+        "trade"
+       ]
+      },
+      {
+       "date": "1665-03-24",
+       "shared_terms": [
+        "fleet",
+        "sitting",
+        "sunday"
+       ]
+      }
+     ],
+     "P1665-01-25": [
+      {
+       "date": "1665-03-20",
+       "shared_terms": [
+        "continues",
+        "fortune",
+        "secretary"
+       ]
+      },
+      {
+       "date": "1665-03-24",
+       "shared_terms": [
+        "hare",
+        "perhaps",
+        "testicles"
+       ]
+      }
+     ],
+     "P1665-01-27": [
+      {
+       "date": "1665-01-31",
+       "shared_terms": [
+        "bellasses",
+        "jane",
+        "question"
+       ]
+      },
+      {
+       "date": "1665-02-03",
+       "shared_terms": [
+        "bellasses",
+        "jane",
+        "turner"
+       ]
+      },
+      {
+       "date": "1665-02-04",
+       "shared_terms": [
+        "bellasses",
+        "jane",
+        "person",
+        "rather"
+       ]
+      },
+      {
+       "date": "1665-02-27",
+       "shared_terms": [
+        "beggar",
+        "happy",
+        "mine",
+        "rather",
+        "thus",
+        "understand"
+       ]
+      },
+      {
+       "date": "1665-03-01",
+       "shared_terms": [
+        "discourses",
+        "question",
+        "understand"
+       ]
+      },
+      {
+       "date": "1665-03-24",
+       "shared_terms": [
+        "delivered",
+        "ingenious",
+        "question",
+        "staying",
+        "thus",
+        "turner"
+       ]
+      },
+      {
+       "date": "1665-04-17",
+       "shared_terms": [
+        "endeavour",
+        "rather",
+        "shewed"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "bellasses",
+        "endeavour",
+        "forbear",
+        "happy"
+       ]
+      },
+      {
+       "date": "1665-05-19",
+       "shared_terms": [
+        "arguing",
+        "endeavour",
+        "fully"
+       ]
+      },
+      {
+       "date": "1665-05-27",
+       "shared_terms": [
+        "foreign",
+        "fortune",
+        "glass"
+       ]
+      },
+      {
+       "date": "1665-05-30",
+       "shared_terms": [
+        "closet",
+        "merchants",
+        "mine"
+       ]
+      }
+     ],
+     "P1665-01-31": [
+      {
+       "date": "1665-02-04",
+       "shared_terms": [
+        "bellasses",
+        "cruelly",
+        "jane"
+       ]
+      },
+      {
+       "date": "1665-02-27",
+       "shared_terms": [
+        "difference",
+        "displeased",
+        "praised"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "arm": "pepys",
+   "block": "pepys-m04",
+   "entries": [
+    "P1665-04-08",
+    "P1665-04-10",
+    "P1665-04-12",
+    "P1665-04-14",
+    "P1665-04-17",
+    "P1665-04-18",
+    "P1665-04-19",
+    "P1665-04-20",
+    "P1665-04-22",
+    "P1665-04-29"
+   ],
+   "named": [
+    "P1665-04-14",
+    "P1665-04-17",
+    "P1665-04-19",
+    "P1665-04-29"
+   ],
+   "evidence": {
+    "kind": "lexical_backreference",
+    "rule": "an entry is referred back to when a later entry within ~90 days shares >= 3 distinctive terms (document frequency <= 5% of the 310 scenes, >= 4 letters, not a stopword); the 4 most-referenced entries of the month are named; ties broken by date",
+    "backrefs": {
+     "P1665-04-08": [
+      {
+       "date": "1665-04-17",
+       "shared_terms": [
+        "hereafter",
+        "holland",
+        "neat"
+       ]
+      },
+      {
+       "date": "1665-06-09",
+       "shared_terms": [
+        "coloured",
+        "point",
+        "silk"
+       ]
+      },
+      {
+       "date": "1665-06-10",
+       "shared_terms": [
+        "coloured",
+        "fanchurch",
+        "shew"
+       ]
+      },
+      {
+       "date": "1665-06-29",
+       "shared_terms": [
+        "french",
+        "henrietta",
+        "maria"
+       ]
+      }
+     ],
+     "P1665-04-10": [
+      {
+       "date": "1665-04-17",
+       "shared_terms": [
+        "answered",
+        "cutler",
+        "dine",
+        "rider"
+       ]
+      },
+      {
+       "date": "1665-05-22",
+       "shared_terms": [
+        "attended",
+        "rider",
+        "settled"
+       ]
+      },
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "disorder",
+        "fully",
+        "middleton",
+        "settled",
+        "troublesome"
+       ]
+      },
+      {
+       "date": "1665-07-10",
+       "shared_terms": [
+        "dine",
+        "dust",
+        "parke"
+       ]
+      }
+     ],
+     "P1665-04-12": [
+      {
+       "date": "1665-04-14",
+       "shared_terms": [
+        "ashly",
+        "confess",
+        "contrary"
+       ]
+      },
+      {
+       "date": "1665-04-15",
+       "shared_terms": [
+        "loss",
+        "necessary",
+        "trust"
+       ]
+      },
+      {
+       "date": "1665-04-28",
+       "shared_terms": [
+        "ashly",
+        "contrary",
+        "expectation"
+       ]
+      },
+      {
+       "date": "1665-05-12",
+       "shared_terms": [
+        "benefit",
+        "contrary",
+        "expectation",
+        "necessary",
+        "pepys"
+       ]
+      },
+      {
+       "date": "1665-06-17",
+       "shared_terms": [
+        "action",
+        "held",
+        "necessary"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "continued",
+        "loss",
+        "means"
+       ]
+      }
+     ],
+     "P1665-04-14": [
+      {
+       "date": "1665-04-17",
+       "shared_terms": [
+        "guns",
+        "play",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-04-19",
+       "shared_terms": [
+        "ashly",
+        "pass",
+        "plain",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-05-03",
+       "shared_terms": [
+        "ashly",
+        "puts",
+        "touching"
+       ]
+      },
+      {
+       "date": "1665-05-12",
+       "shared_terms": [
+        "contrary",
+        "payment",
+        "unthanke"
+       ]
+      },
+      {
+       "date": "1665-05-17",
+       "shared_terms": [
+        "false",
+        "payment",
+        "pett"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "commissioners",
+        "enemy",
+        "plain",
+        "reasons",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-05-19",
+       "shared_terms": [
+        "payment",
+        "plain",
+        "procure",
+        "require"
+       ]
+      },
+      {
+       "date": "1665-05-27",
+       "shared_terms": [
+        "charing",
+        "confess",
+        "cross",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-06-03",
+       "shared_terms": [
+        "engaged",
+        "guns",
+        "royall"
+       ]
+      },
+      {
+       "date": "1665-06-05",
+       "shared_terms": [
+        "barkeley",
+        "commissioners",
+        "engaged",
+        "heartily",
+        "nature",
+        "offered",
+        "sake",
+        "terms"
+       ]
+      },
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "engaged",
+        "guns",
+        "likely",
+        "royall",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-06-16",
+       "shared_terms": [
+        "barkeley",
+        "enemy",
+        "guns",
+        "offered"
+       ]
+      },
+      {
+       "date": "1665-06-17",
+       "shared_terms": [
+        "pett",
+        "prove",
+        "seeming"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "commissioners",
+        "dissembling",
+        "offer",
+        "pass",
+        "shot",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-07-05",
+       "shared_terms": [
+        "barkeley",
+        "christopher",
+        "fleetes",
+        "likely",
+        "teddiman"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "barkeley",
+        "heartily",
+        "nature",
+        "stop"
+       ]
+      },
+      {
+       "date": "1665-07-29",
+       "shared_terms": [
+        "likely",
+        "reasons",
+        "shop"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "confess",
+        "cook",
+        "heartily",
+        "saluted",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-08-04",
+       "shared_terms": [
+        "heartily",
+        "nature",
+        "pett"
+       ]
+      },
+      {
+       "date": "1665-08-14",
+       "shared_terms": [
+        "confess",
+        "nature",
+        "pass",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-08-16",
+       "shared_terms": [
+        "contrary",
+        "heartily",
+        "payment"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "charing",
+        "cross",
+        "engaged",
+        "guns",
+        "play",
+        "speaking",
+        "teddiman"
+       ]
+      }
+     ],
+     "P1665-04-17": [
+      {
+       "date": "1665-04-28",
+       "shared_terms": [
+        "appearing",
+        "expectation",
+        "wished"
+       ]
+      },
+      {
+       "date": "1665-04-29",
+       "shared_terms": [
+        "coast",
+        "expect",
+        "holland"
+       ]
+      },
+      {
+       "date": "1665-05-12",
+       "shared_terms": [
+        "expectation",
+        "receiving",
+        "thereupon",
+        "uncle",
+        "watch"
+       ]
+      },
+      {
+       "date": "1665-05-13",
+       "shared_terms": [
+        "briggs",
+        "scrivener",
+        "watch"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "endeavour",
+        "name",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-05-31",
+       "shared_terms": [
+        "coast",
+        "holland",
+        "missed"
+       ]
+      },
+      {
+       "date": "1665-06-02",
+       "shared_terms": [
+        "missed",
+        "name",
+        "receiving"
+       ]
+      },
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "everson",
+        "guns",
+        "killed",
+        "receipt",
+        "receiving",
+        "round",
+        "shot"
+       ]
+      },
+      {
+       "date": "1665-06-14",
+       "shared_terms": [
+        "missed",
+        "observed",
+        "written"
+       ]
+      },
+      {
+       "date": "1665-06-21",
+       "shared_terms": [
+        "appoint",
+        "uncle",
+        "wight"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "killed",
+        "shewed",
+        "shot",
+        "whereof"
+       ]
+      },
+      {
+       "date": "1665-07-05",
+       "shared_terms": [
+        "killed",
+        "observed",
+        "round"
+       ]
+      },
+      {
+       "date": "1665-07-14",
+       "shared_terms": [
+        "expectation",
+        "guns",
+        "watch"
+       ]
+      },
+      {
+       "date": "1665-07-17",
+       "shared_terms": [
+        "answered",
+        "answers",
+        "expect",
+        "observed"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "cutler",
+        "expect",
+        "killed",
+        "neat",
+        "northward",
+        "shewed"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "helped",
+        "least",
+        "northward",
+        "round"
+       ]
+      },
+      {
+       "date": "1665-08-05",
+       "shared_terms": [
+        "expect",
+        "expectation",
+        "northward"
+       ]
+      },
+      {
+       "date": "1665-08-12",
+       "shared_terms": [
+        "hereafter",
+        "observed",
+        "written"
+       ]
+      },
+      {
+       "date": "1665-08-15",
+       "shared_terms": [
+        "bringing",
+        "cutler",
+        "guns",
+        "northward",
+        "rider"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "coast",
+        "fired",
+        "guns",
+        "helped",
+        "holland",
+        "killed",
+        "least",
+        "name"
+       ]
+      }
+     ],
+     "P1665-04-18": [
+      {
+       "date": "1665-04-19",
+       "shared_terms": [
+        "moore",
+        "privy",
+        "seale"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "moore",
+        "privy",
+        "return",
+        "show"
+       ]
+      }
+     ],
+     "P1665-04-19": [
+      {
+       "date": "1665-05-01",
+       "shared_terms": [
+        "beautiful",
+        "experiments",
+        "tried"
+       ]
+      },
+      {
+       "date": "1665-05-03",
+       "shared_terms": [
+        "ashly",
+        "birch",
+        "college",
+        "effect",
+        "florence",
+        "florentine",
+        "gresham",
+        "history"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "consulting",
+        "plain",
+        "tried"
+       ]
+      },
+      {
+       "date": "1665-05-31",
+       "shared_terms": [
+        "college",
+        "gresham",
+        "moore"
+       ]
+      },
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "hurt",
+        "joyed",
+        "second",
+        "shew"
+       ]
+      },
+      {
+       "date": "1665-06-10",
+       "shared_terms": [
+        "case",
+        "reading",
+        "shew"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "majesty",
+        "moore",
+        "pass",
+        "privy",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "backewell",
+        "melancholy",
+        "worst"
+       ]
+      },
+      {
+       "date": "1665-07-11",
+       "shared_terms": [
+        "backewell",
+        "consulting",
+        "elder",
+        "second",
+        "trinity"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "feared",
+        "second",
+        "speaking",
+        "third"
+       ]
+      },
+      {
+       "date": "1665-08-14",
+       "shared_terms": [
+        "case",
+        "cunning",
+        "fears",
+        "pass",
+        "speaking"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "history",
+        "hurt",
+        "melancholy",
+        "second",
+        "speaking"
+       ]
+      }
+     ],
+     "P1665-04-20": [],
+     "P1665-04-22": [
+      {
+       "date": "1665-04-29",
+       "shared_terms": [
+        "coast",
+        "holland",
+        "modest"
+       ]
+      },
+      {
+       "date": "1665-06-01",
+       "shared_terms": [
+        "ayre",
+        "fields",
+        "plain"
+       ]
+      },
+      {
+       "date": "1665-06-02",
+       "shared_terms": [
+        "ball",
+        "harp",
+        "sailed"
+       ]
+      },
+      {
+       "date": "1665-06-14",
+       "shared_terms": [
+        "praise",
+        "proper",
+        "teach"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "ayre",
+        "easy",
+        "grave",
+        "raining"
+       ]
+      },
+      {
+       "date": "1665-06-26",
+       "shared_terms": [
+        "holland",
+        "modest",
+        "promise"
+       ]
+      },
+      {
+       "date": "1665-06-29",
+       "shared_terms": [
+        "ball",
+        "harp",
+        "praise"
+       ]
+      },
+      {
+       "date": "1665-07-11",
+       "shared_terms": [
+        "ayre",
+        "ball",
+        "beyond",
+        "harp"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "canterbury",
+        "chappell",
+        "newly",
+        "proper",
+        "remember"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "chappell",
+        "coast",
+        "holland",
+        "remember"
+       ]
+      }
+     ],
+     "P1665-04-29": [
+      {
+       "date": "1665-05-03",
+       "shared_terms": [
+        "ought",
+        "striking",
+        "warrant"
+       ]
+      },
+      {
+       "date": "1665-05-12",
+       "shared_terms": [
+        "closet",
+        "debts",
+        "sign",
+        "warrant"
+       ]
+      },
+      {
+       "date": "1665-05-18",
+       "shared_terms": [
+        "committed",
+        "sufficient",
+        "vexes"
+       ]
+      },
+      {
+       "date": "1665-05-31",
+       "shared_terms": [
+        "coast",
+        "holland",
+        "intricate"
+       ]
+      },
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "obtained",
+        "really",
+        "striking"
+       ]
+      },
+      {
+       "date": "1665-06-10",
+       "shared_terms": [
+        "estate",
+        "gained",
+        "vexes"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "closet",
+        "herein",
+        "need",
+        "ought"
+       ]
+      },
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "closet",
+        "houses",
+        "thus"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "abundance",
+        "preserve",
+        "scholler",
+        "thus"
+       ]
+      },
+      {
+       "date": "1665-08-12",
+       "shared_terms": [
+        "estate",
+        "forty",
+        "preserve"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "clear",
+        "coast",
+        "forty",
+        "holland",
+        "ought",
+        "pains",
+        "thus"
+       ]
+      },
+      {
+       "date": "1665-08-31",
+       "shared_terms": [
+        "gettings",
+        "jobbs",
+        "thus"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "arm": "pepys",
+   "block": "pepys-m06",
+   "entries": [
+    "P1665-06-01",
+    "P1665-06-03",
+    "P1665-06-06",
+    "P1665-06-07",
+    "P1665-06-09",
+    "P1665-06-15",
+    "P1665-06-16",
+    "P1665-06-20",
+    "P1665-06-26",
+    "P1665-06-29"
+   ],
+   "named": [
+    "P1665-06-29",
+    "P1665-06-16",
+    "P1665-06-09",
+    "P1665-06-07"
+   ],
+   "evidence": {
+    "kind": "lexical_backreference",
+    "rule": "an entry is referred back to when a later entry within ~90 days shares >= 3 distinctive terms (document frequency <= 5% of the 310 scenes, >= 4 letters, not a stopword); the 4 most-referenced entries of the month are named; ties broken by date",
+    "backrefs": {
+     "P1665-06-01": [
+      {
+       "date": "1665-06-09",
+       "shared_terms": [
+        "show",
+        "silke",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-06-10",
+       "shared_terms": [
+        "camelott",
+        "silke",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-06-12",
+       "shared_terms": [
+        "noster",
+        "pater",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-08-12",
+       "shared_terms": [
+        "ayre",
+        "mayor",
+        "whither"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "certain",
+        "middle",
+        "silke"
+       ]
+      },
+      {
+       "date": "1665-09-13",
+       "shared_terms": [
+        "knows",
+        "stood",
+        "whither"
+       ]
+      },
+      {
+       "date": "1665-09-22",
+       "shared_terms": [
+        "certain",
+        "number",
+        "show"
+       ]
+      }
+     ],
+     "P1665-06-03": [
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "engaged",
+        "guns",
+        "royall",
+        "turner"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "entered",
+        "loss",
+        "particular"
+       ]
+      },
+      {
+       "date": "1665-07-14",
+       "shared_terms": [
+        "fenn",
+        "guns",
+        "tomorrow"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "ground",
+        "patiently",
+        "settle"
+       ]
+      },
+      {
+       "date": "1665-08-15",
+       "shared_terms": [
+        "certain",
+        "fenn",
+        "guns"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "blessed",
+        "engaged",
+        "fenn",
+        "guns",
+        "loss"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "certain",
+        "concernment",
+        "loss",
+        "sunday"
+       ]
+      },
+      {
+       "date": "1665-09-22",
+       "shared_terms": [
+        "certain",
+        "entered",
+        "ground"
+       ]
+      },
+      {
+       "date": "1665-09-27",
+       "shared_terms": [
+        "blessed",
+        "certain",
+        "cunning",
+        "demand",
+        "finished"
+       ]
+      },
+      {
+       "date": "1665-10-05",
+       "shared_terms": [
+        "blessed",
+        "concernment",
+        "particular"
+       ]
+      }
+     ],
+     "P1665-06-06": [],
+     "P1665-06-07": [
+      {
+       "date": "1665-06-08",
+       "shared_terms": [
+        "goldsmiths",
+        "june",
+        "killed"
+       ]
+      },
+      {
+       "date": "1665-06-16",
+       "shared_terms": [
+        "hewer",
+        "june",
+        "killed",
+        "twelve"
+       ]
+      },
+      {
+       "date": "1665-06-20",
+       "shared_terms": [
+        "dolphin",
+        "drunk",
+        "houses",
+        "nine"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "beginning",
+        "killed",
+        "stopped"
+       ]
+      },
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "houses",
+        "june",
+        "writ"
+       ]
+      },
+      {
+       "date": "1665-07-05",
+       "shared_terms": [
+        "hewer",
+        "june",
+        "killed"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "doors",
+        "houses",
+        "lane"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "goldsmiths",
+        "killed",
+        "nine",
+        "spring"
+       ]
+      },
+      {
+       "date": "1665-08-03",
+       "shared_terms": [
+        "gravesend",
+        "lane",
+        "staying"
+       ]
+      },
+      {
+       "date": "1665-08-12",
+       "shared_terms": [
+        "gravesend",
+        "nine",
+        "spring"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "cross",
+        "killed",
+        "nine"
+       ]
+      },
+      {
+       "date": "1665-08-28",
+       "shared_terms": [
+        "certainty",
+        "exceedingly",
+        "hewer"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "mercy",
+        "minds",
+        "reports"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "certainty",
+        "hewer",
+        "houses",
+        "killed"
+       ]
+      },
+      {
+       "date": "1665-09-30",
+       "shared_terms": [
+        "doors",
+        "minds",
+        "twelve"
+       ]
+      }
+     ],
+     "P1665-06-09": [
+      {
+       "date": "1665-06-10",
+       "shared_terms": [
+        "black",
+        "coloured",
+        "ferrandin",
+        "silke",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-06-14",
+       "shared_terms": [
+        "cowling",
+        "falmouth",
+        "worthily"
+       ]
+      },
+      {
+       "date": "1665-06-15",
+       "shared_terms": [
+        "joyce",
+        "moore",
+        "nobly",
+        "suit",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "conversation",
+        "honour",
+        "moore",
+        "offer",
+        "show",
+        "victory",
+        "willing"
+       ]
+      },
+      {
+       "date": "1665-07-05",
+       "shared_terms": [
+        "point",
+        "resolution",
+        "willing"
+       ]
+      },
+      {
+       "date": "1665-07-08",
+       "shared_terms": [
+        "black",
+        "joyce",
+        "nobly",
+        "silke",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-07-26",
+       "shared_terms": [
+        "honour",
+        "joyce",
+        "nobly",
+        "taylor"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "coloured",
+        "honour",
+        "silk",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-08-15",
+       "shared_terms": [
+        "pair",
+        "pasty",
+        "venison"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "coloured",
+        "honour",
+        "thoughts"
+       ]
+      },
+      {
+       "date": "1665-08-31",
+       "shared_terms": [
+        "pasty",
+        "spare",
+        "venison"
+       ]
+      },
+      {
+       "date": "1665-09-02",
+       "shared_terms": [
+        "clothes",
+        "coloured",
+        "show",
+        "silk",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "pasty",
+        "silke",
+        "spare",
+        "thoughts",
+        "venison"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "clothes",
+        "confessed",
+        "pepys",
+        "roger"
+       ]
+      },
+      {
+       "date": "1665-09-22",
+       "shared_terms": [
+        "alive",
+        "black",
+        "pepys",
+        "show"
+       ]
+      },
+      {
+       "date": "1665-09-25",
+       "shared_terms": [
+        "clothes",
+        "roger",
+        "silk",
+        "silke",
+        "thoughts"
+       ]
+      }
+     ],
+     "P1665-06-15": [
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "estrange",
+        "ferrers",
+        "moore",
+        "victory",
+        "whereof"
+       ]
+      },
+      {
+       "date": "1665-07-08",
+       "shared_terms": [
+        "joyce",
+        "kate",
+        "nobly",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-07-26",
+       "shared_terms": [
+        "joyce",
+        "kate",
+        "nobly"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "abundance",
+        "afeard",
+        "broad",
+        "grows",
+        "lace",
+        "suit"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "close",
+        "dying",
+        "fanchurch",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "afeard",
+        "bringing",
+        "grows",
+        "sickly"
+       ]
+      },
+      {
+       "date": "1665-10-03",
+       "shared_terms": [
+        "bringing",
+        "close",
+        "dying"
+       ]
+      }
+     ],
+     "P1665-06-16": [
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "fight",
+        "informed",
+        "intention",
+        "killed",
+        "royal",
+        "thinks",
+        "turned",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-06-29",
+       "shared_terms": [
+        "courage",
+        "june",
+        "royal"
+       ]
+      },
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "calendar",
+        "june",
+        "straight"
+       ]
+      },
+      {
+       "date": "1665-07-04",
+       "shared_terms": [
+        "cost",
+        "enemy",
+        "fight",
+        "turned",
+        "william"
+       ]
+      },
+      {
+       "date": "1665-07-05",
+       "shared_terms": [
+        "admiral",
+        "barkeley",
+        "fight",
+        "harman",
+        "hewer",
+        "june",
+        "killed"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "barkeley",
+        "proud",
+        "stead"
+       ]
+      },
+      {
+       "date": "1665-07-11",
+       "shared_terms": [
+        "calendar",
+        "dated",
+        "delivered",
+        "domestic"
+       ]
+      },
+      {
+       "date": "1665-07-12",
+       "shared_terms": [
+        "asked",
+        "calendar",
+        "domestic",
+        "offered",
+        "prating",
+        "reckoned"
+       ]
+      },
+      {
+       "date": "1665-07-14",
+       "shared_terms": [
+        "attend",
+        "guns",
+        "treats"
+       ]
+      },
+      {
+       "date": "1665-07-15",
+       "shared_terms": [
+        "attend",
+        "gallery",
+        "twelve"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "arlington",
+        "killed",
+        "thinks"
+       ]
+      },
+      {
+       "date": "1665-07-26",
+       "shared_terms": [
+        "asked",
+        "harman",
+        "kissed"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "bore",
+        "cost",
+        "decent",
+        "expecting",
+        "kissed",
+        "knee",
+        "lusty"
+       ]
+      },
+      {
+       "date": "1665-08-04",
+       "shared_terms": [
+        "bore",
+        "kissed",
+        "writes"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "arlington",
+        "calendar",
+        "captains",
+        "gave",
+        "guns",
+        "killed",
+        "repair",
+        "william"
+       ]
+      },
+      {
+       "date": "1665-08-28",
+       "shared_terms": [
+        "enemy",
+        "hewer",
+        "venture"
+       ]
+      },
+      {
+       "date": "1665-09-07",
+       "shared_terms": [
+        "arlington",
+        "delight",
+        "gallery"
+       ]
+      },
+      {
+       "date": "1665-09-08",
+       "shared_terms": [
+        "bore",
+        "delivered",
+        "writes"
+       ]
+      },
+      {
+       "date": "1665-09-13",
+       "shared_terms": [
+        "basest",
+        "delight",
+        "killed",
+        "william"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "hewer",
+        "killed",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "charles",
+        "cuttance",
+        "fight",
+        "proud",
+        "squadron"
+       ]
+      },
+      {
+       "date": "1665-09-30",
+       "shared_terms": [
+        "captains",
+        "twelve",
+        "waited"
+       ]
+      },
+      {
+       "date": "1665-10-05",
+       "shared_terms": [
+        "admiral",
+        "commission",
+        "wounded"
+       ]
+      },
+      {
+       "date": "1665-10-07",
+       "shared_terms": [
+        "captains",
+        "charles",
+        "commission"
+       ]
+      },
+      {
+       "date": "1665-10-10",
+       "shared_terms": [
+        "behalf",
+        "dear",
+        "fight"
+       ]
+      },
+      {
+       "date": "1665-10-11",
+       "shared_terms": [
+        "behalf",
+        "dear",
+        "hewer",
+        "rash"
+       ]
+      },
+      {
+       "date": "1665-10-12",
+       "shared_terms": [
+        "berkeley",
+        "delivered",
+        "severely"
+       ]
+      },
+      {
+       "date": "1665-10-14",
+       "shared_terms": [
+        "behalf",
+        "proud",
+        "tried"
+       ]
+      }
+     ],
+     "P1665-06-20": [
+      {
+       "date": "1665-06-23",
+       "shared_terms": [
+        "commissioners",
+        "direction",
+        "informed",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-06-28",
+       "shared_terms": [
+        "houses",
+        "observing",
+        "palace"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "houses",
+        "number",
+        "sail"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "nine",
+        "northward",
+        "observing"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "bear",
+        "mean",
+        "northward",
+        "observing",
+        "sail",
+        "vintner"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "bottle",
+        "gate",
+        "nine",
+        "northward",
+        "ordnance",
+        "share"
+       ]
+      },
+      {
+       "date": "1665-08-31",
+       "shared_terms": [
+        "bell",
+        "number",
+        "sail"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "game",
+        "humours",
+        "sunday"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "houses",
+        "sail",
+        "victory"
+       ]
+      },
+      {
+       "date": "1665-10-10",
+       "shared_terms": [
+        "direction",
+        "dividend",
+        "northward"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "knows",
+        "mean",
+        "observing",
+        "speedily",
+        "spend"
+       ]
+      }
+     ],
+     "P1665-06-26": [
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "encreases",
+        "sheldon",
+        "street"
+       ]
+      },
+      {
+       "date": "1665-07-27",
+       "shared_terms": [
+        "assistance",
+        "below",
+        "promise",
+        "spend"
+       ]
+      },
+      {
+       "date": "1665-07-31",
+       "shared_terms": [
+        "repeat",
+        "second",
+        "street"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "advantage",
+        "holland",
+        "second",
+        "thoughts"
+       ]
+      },
+      {
+       "date": "1665-09-02",
+       "shared_terms": [
+        "agree",
+        "stories",
+        "street"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "rather",
+        "short",
+        "street",
+        "thoughts"
+       ]
+      },
+      {
+       "date": "1665-09-23",
+       "shared_terms": [
+        "advantage",
+        "agree",
+        "second"
+       ]
+      },
+      {
+       "date": "1665-09-25",
+       "shared_terms": [
+        "agree",
+        "second",
+        "short",
+        "thoughts"
+       ]
+      },
+      {
+       "date": "1665-09-26",
+       "shared_terms": [
+        "prating",
+        "promise",
+        "thoughts"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "bills",
+        "spend",
+        "stories"
+       ]
+      }
+     ],
+     "P1665-06-29": [
+      {
+       "date": "1665-06-30",
+       "shared_terms": [
+        "ball",
+        "buried",
+        "harp",
+        "june"
+       ]
+      },
+      {
+       "date": "1665-07-03",
+       "shared_terms": [
+        "ball",
+        "daylight",
+        "harp"
+       ]
+      },
+      {
+       "date": "1665-07-06",
+       "shared_terms": [
+        "generosity",
+        "kingdom",
+        "nature",
+        "number",
+        "summer",
+        "winter"
+       ]
+      },
+      {
+       "date": "1665-07-08",
+       "shared_terms": [
+        "buried",
+        "greater",
+        "ladies",
+        "nature",
+        "notwithstanding"
+       ]
+      },
+      {
+       "date": "1665-07-11",
+       "shared_terms": [
+        "august",
+        "ball",
+        "further",
+        "harp",
+        "invitation"
+       ]
+      },
+      {
+       "date": "1665-07-12",
+       "shared_terms": [
+        "august",
+        "ending",
+        "french",
+        "paris"
+       ]
+      },
+      {
+       "date": "1665-07-15",
+       "shared_terms": [
+        "ladies",
+        "lived",
+        "once"
+       ]
+      },
+      {
+       "date": "1665-07-22",
+       "shared_terms": [
+        "buried",
+        "ending",
+        "hers",
+        "invitation"
+       ]
+      },
+      {
+       "date": "1665-07-24",
+       "shared_terms": [
+        "daylight",
+        "humour",
+        "kingdom",
+        "ladies",
+        "once"
+       ]
+      },
+      {
+       "date": "1665-07-25",
+       "shared_terms": [
+        "humour",
+        "mortality",
+        "paris"
+       ]
+      },
+      {
+       "date": "1665-07-27",
+       "shared_terms": [
+        "hers",
+        "ladies",
+        "queene"
+       ]
+      },
+      {
+       "date": "1665-07-28",
+       "shared_terms": [
+        "cause",
+        "daylight",
+        "fallen"
+       ]
+      },
+      {
+       "date": "1665-07-29",
+       "shared_terms": [
+        "burials",
+        "deaths",
+        "rise",
+        "setting"
+       ]
+      },
+      {
+       "date": "1665-08-03",
+       "shared_terms": [
+        "buried",
+        "ladies",
+        "once"
+       ]
+      },
+      {
+       "date": "1665-08-04",
+       "shared_terms": [
+        "ladies",
+        "nature",
+        "once",
+        "usage"
+       ]
+      },
+      {
+       "date": "1665-08-12",
+       "shared_terms": [
+        "buried",
+        "packing",
+        "queene",
+        "rise",
+        "setting"
+       ]
+      },
+      {
+       "date": "1665-08-19",
+       "shared_terms": [
+        "august",
+        "beauty",
+        "buried",
+        "cause",
+        "kingdom",
+        "november",
+        "once",
+        "rise"
+       ]
+      },
+      {
+       "date": "1665-08-23",
+       "shared_terms": [
+        "greater",
+        "neighbour",
+        "queen"
+       ]
+      },
+      {
+       "date": "1665-08-30",
+       "shared_terms": [
+        "blessing",
+        "desperate",
+        "greater",
+        "setting",
+        "speaks"
+       ]
+      },
+      {
+       "date": "1665-09-02",
+       "shared_terms": [
+        "buried",
+        "kingdom",
+        "particular",
+        "setting"
+       ]
+      },
+      {
+       "date": "1665-09-06",
+       "shared_terms": [
+        "burials",
+        "daylight",
+        "hers"
+       ]
+      },
+      {
+       "date": "1665-09-07",
+       "shared_terms": [
+        "consumption",
+        "ending",
+        "greater",
+        "humour",
+        "number"
+       ]
+      },
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "genius",
+        "greater",
+        "humour",
+        "invitation",
+        "kingdom",
+        "nature"
+       ]
+      },
+      {
+       "date": "1665-09-13",
+       "shared_terms": [
+        "french",
+        "once",
+        "queene"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "buried",
+        "cause",
+        "desperate",
+        "greater",
+        "rather",
+        "shutting",
+        "temper"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "grows",
+        "lived",
+        "shutting"
+       ]
+      },
+      {
+       "date": "1665-09-20",
+       "shared_terms": [
+        "grows",
+        "number",
+        "rather",
+        "twelvemonths"
+       ]
+      },
+      {
+       "date": "1665-09-27",
+       "shared_terms": [
+        "fallen",
+        "humour",
+        "mortality",
+        "waggons"
+       ]
+      },
+      {
+       "date": "1665-09-30",
+       "shared_terms": [
+        "further",
+        "humour",
+        "rather",
+        "temper"
+       ]
+      },
+      {
+       "date": "1665-10-05",
+       "shared_terms": [
+        "beauty",
+        "majesty",
+        "nature",
+        "particular",
+        "september"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "fallen",
+        "kingdom",
+        "relation"
+       ]
+      },
+      {
+       "date": "1665-10-23",
+       "shared_terms": [
+        "forbear",
+        "further",
+        "particular",
+        "winter"
+       ]
+      },
+      {
+       "date": "1665-10-25",
+       "shared_terms": [
+        "greater",
+        "kingdom",
+        "speaks",
+        "usage"
+       ]
+      },
+      {
+       "date": "1665-10-27",
+       "shared_terms": [
+        "majesty",
+        "memoirs",
+        "terms"
+       ]
+      },
+      {
+       "date": "1665-10-31",
+       "shared_terms": [
+        "forbear",
+        "humour",
+        "number"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "arm": "pepys",
+   "block": "pepys-m09",
+   "entries": [
+    "P1665-09-04",
+    "P1665-09-05",
+    "P1665-09-07",
+    "P1665-09-08",
+    "P1665-09-11",
+    "P1665-09-13",
+    "P1665-09-19",
+    "P1665-09-20",
+    "P1665-09-25",
+    "P1665-09-30"
+   ],
+   "named": [
+    "P1665-09-30",
+    "P1665-09-07",
+    "P1665-09-25",
+    "P1665-09-13"
+   ],
+   "evidence": {
+    "kind": "lexical_backreference",
+    "rule": "an entry is referred back to when a later entry within ~90 days shares >= 3 distinctive terms (document frequency <= 5% of the 310 scenes, >= 4 letters, not a stopword); the 4 most-referenced entries of the month are named; ties broken by date",
+    "backrefs": {
+     "P1665-09-04": [
+      {
+       "date": "1665-09-13",
+       "shared_terms": [
+        "constantly",
+        "twenty",
+        "watch"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "corps",
+        "cruel",
+        "doggs",
+        "stories",
+        "watch"
+       ]
+      }
+     ],
+     "P1665-09-05": [
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "bergen",
+        "crying",
+        "fitting",
+        "journey",
+        "management",
+        "teddiman",
+        "treating"
+       ]
+      },
+      {
+       "date": "1665-11-16",
+       "shared_terms": [
+        "colonell",
+        "journey",
+        "rode"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "fitting",
+        "french",
+        "lies",
+        "pretends"
+       ]
+      }
+     ],
+     "P1665-09-07": [
+      {
+       "date": "1665-09-09",
+       "shared_terms": [
+        "continue",
+        "greater",
+        "humour"
+       ]
+      },
+      {
+       "date": "1665-09-11",
+       "shared_terms": [
+        "humour",
+        "merrily",
+        "play"
+       ]
+      },
+      {
+       "date": "1665-09-14",
+       "shared_terms": [
+        "brainford",
+        "continue",
+        "excess",
+        "greater",
+        "parish",
+        "robert",
+        "stairs"
+       ]
+      },
+      {
+       "date": "1665-09-16",
+       "shared_terms": [
+        "hold",
+        "journey",
+        "merrily",
+        "play",
+        "reading",
+        "stairs"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "ague",
+        "hold",
+        "journey",
+        "play",
+        "stood"
+       ]
+      },
+      {
+       "date": "1665-09-20",
+       "shared_terms": [
+        "journey",
+        "number",
+        "showed"
+       ]
+      },
+      {
+       "date": "1665-09-22",
+       "shared_terms": [
+        "black",
+        "number",
+        "showed"
+       ]
+      },
+      {
+       "date": "1665-09-30",
+       "shared_terms": [
+        "chief",
+        "humour",
+        "robert",
+        "stairs"
+       ]
+      },
+      {
+       "date": "1665-10-06",
+       "shared_terms": [
+        "born",
+        "gives",
+        "lies"
+       ]
+      },
+      {
+       "date": "1665-10-25",
+       "shared_terms": [
+        "arlington",
+        "greater",
+        "lies",
+        "obliged"
+       ]
+      },
+      {
+       "date": "1665-10-31",
+       "shared_terms": [
+        "black",
+        "humour",
+        "merrily",
+        "number"
+       ]
+      },
+      {
+       "date": "1665-11-04",
+       "shared_terms": [
+        "ague",
+        "number",
+        "play",
+        "showed"
+       ]
+      },
+      {
+       "date": "1665-12-13",
+       "shared_terms": [
+        "continue",
+        "gives",
+        "number",
+        "parish",
+        "warm"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "delight",
+        "parson",
+        "sings"
+       ]
+      },
+      {
+       "date": "1665-12-26",
+       "shared_terms": [
+        "neatly",
+        "stairs",
+        "stood"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "continue",
+        "credit",
+        "delight",
+        "greater",
+        "lies",
+        "merrily",
+        "plenty",
+        "warm"
+       ]
+      }
+     ],
+     "P1665-09-08": [
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "hardly",
+        "mean",
+        "waked"
+       ]
+      },
+      {
+       "date": "1665-09-21",
+       "shared_terms": [
+        "looks",
+        "mean",
+        "sing",
+        "worke"
+       ]
+      },
+      {
+       "date": "1665-09-23",
+       "shared_terms": [
+        "hoping",
+        "persuaded",
+        "waked"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "confess",
+        "mean",
+        "melancholy",
+        "writes"
+       ]
+      },
+      {
+       "date": "1665-12-18",
+       "shared_terms": [
+        "confess",
+        "cozen",
+        "gallant",
+        "hoping",
+        "passed",
+        "worke"
+       ]
+      },
+      {
+       "date": "1665-12-19",
+       "shared_terms": [
+        "cozen",
+        "moore",
+        "writes"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "censured",
+        "confess",
+        "cozen",
+        "cruel",
+        "keeping",
+        "looks",
+        "melancholy"
+       ]
+      }
+     ],
+     "P1665-09-11": [
+      {
+       "date": "1665-09-13",
+       "shared_terms": [
+        "buck",
+        "consider",
+        "hickes",
+        "venison"
+       ]
+      },
+      {
+       "date": "1665-09-16",
+       "shared_terms": [
+        "agreed",
+        "merrily",
+        "play",
+        "tables"
+       ]
+      },
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "dine",
+        "fortune",
+        "play",
+        "victuals"
+       ]
+      },
+      {
+       "date": "1665-10-03",
+       "shared_terms": [
+        "hence",
+        "mirth",
+        "plain",
+        "rutherford"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "eating",
+        "hence",
+        "orders",
+        "spend",
+        "victuals"
+       ]
+      },
+      {
+       "date": "1665-10-25",
+       "shared_terms": [
+        "drove",
+        "hence",
+        "victuals"
+       ]
+      },
+      {
+       "date": "1665-10-28",
+       "shared_terms": [
+        "eating",
+        "mirth",
+        "spend"
+       ]
+      },
+      {
+       "date": "1665-11-17",
+       "shared_terms": [
+        "agreed",
+        "held",
+        "victuals"
+       ]
+      }
+     ],
+     "P1665-09-13": [
+      {
+       "date": "1665-09-18",
+       "shared_terms": [
+        "aside",
+        "degree",
+        "fair",
+        "flung",
+        "furnished",
+        "meanest",
+        "quarter",
+        "shoulder"
+       ]
+      },
+      {
+       "date": "1665-09-23",
+       "shared_terms": [
+        "agree",
+        "face",
+        "thereof"
+       ]
+      },
+      {
+       "date": "1665-10-07",
+       "shared_terms": [
+        "knows",
+        "twenty",
+        "whither"
+       ]
+      },
+      {
+       "date": "1665-10-10",
+       "shared_terms": [
+        "bribe",
+        "fair",
+        "whither"
+       ]
+      },
+      {
+       "date": "1665-10-11",
+       "shared_terms": [
+        "barbara",
+        "dining",
+        "room",
+        "served"
+       ]
+      },
+      {
+       "date": "1665-10-13",
+       "shared_terms": [
+        "fair",
+        "hurt",
+        "william"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "crown",
+        "knows",
+        "looked"
+       ]
+      },
+      {
+       "date": "1665-10-23",
+       "shared_terms": [
+        "deliver",
+        "minutes",
+        "thereof"
+       ]
+      },
+      {
+       "date": "1665-10-24",
+       "shared_terms": [
+        "constantly",
+        "whither",
+        "william"
+       ]
+      },
+      {
+       "date": "1665-11-04",
+       "shared_terms": [
+        "finely",
+        "hurt",
+        "knows"
+       ]
+      },
+      {
+       "date": "1665-12-04",
+       "shared_terms": [
+        "degree",
+        "oysters",
+        "saved"
+       ]
+      },
+      {
+       "date": "1665-12-06",
+       "shared_terms": [
+        "face",
+        "knows",
+        "song"
+       ]
+      },
+      {
+       "date": "1665-12-09",
+       "shared_terms": [
+        "looked",
+        "song",
+        "table"
+       ]
+      },
+      {
+       "date": "1665-12-13",
+       "shared_terms": [
+        "agree",
+        "saved",
+        "table"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "agree",
+        "delight",
+        "fair",
+        "french",
+        "once",
+        "pott",
+        "table",
+        "watch"
+       ]
+      }
+     ],
+     "P1665-09-19": [
+      {
+       "date": "1665-10-01",
+       "shared_terms": [
+        "cards",
+        "slept",
+        "wake"
+       ]
+      },
+      {
+       "date": "1665-12-18",
+       "shared_terms": [
+        "cards",
+        "excellently",
+        "room",
+        "sister"
+       ]
+      }
+     ],
+     "P1665-09-20": [
+      {
+       "date": "1665-09-22",
+       "shared_terms": [
+        "mine",
+        "number",
+        "showed"
+       ]
+      },
+      {
+       "date": "1665-09-28",
+       "shared_terms": [
+        "journey",
+        "nonsuch",
+        "rather",
+        "williams"
+       ]
+      },
+      {
+       "date": "1665-09-30",
+       "shared_terms": [
+        "become",
+        "comfort",
+        "rather",
+        "season",
+        "stop",
+        "wretches"
+       ]
+      },
+      {
+       "date": "1665-10-02",
+       "shared_terms": [
+        "indiamen",
+        "mayor",
+        "williams"
+       ]
+      },
+      {
+       "date": "1665-10-06",
+       "shared_terms": [
+        "become",
+        "comfort",
+        "lambeth",
+        "rather"
+       ]
+      },
+      {
+       "date": "1665-10-07",
+       "shared_terms": [
+        "showed",
+        "streets",
+        "trimmed"
+       ]
+      },
+      {
+       "date": "1665-10-10",
+       "shared_terms": [
+        "direction",
+        "lambeth",
+        "necessity",
+        "stop"
+       ]
+      },
+      {
+       "date": "1665-10-11",
+       "shared_terms": [
+        "barber",
+        "rather",
+        "stop"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "become",
+        "comfort",
+        "streets"
+       ]
+      },
+      {
+       "date": "1665-10-28",
+       "shared_terms": [
+        "aboard",
+        "inform",
+        "stop"
+       ]
+      },
+      {
+       "date": "1665-11-04",
+       "shared_terms": [
+        "lambeth",
+        "number",
+        "showed",
+        "trimmed",
+        "worst"
+       ]
+      },
+      {
+       "date": "1665-11-27",
+       "shared_terms": [
+        "contrary",
+        "lambeth",
+        "streets"
+       ]
+      },
+      {
+       "date": "1665-12-20",
+       "shared_terms": [
+        "lambeth",
+        "trimmed",
+        "williams"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "encreased",
+        "necessity",
+        "streets"
+       ]
+      }
+     ],
+     "P1665-09-25": [
+      {
+       "date": "1665-10-02",
+       "shared_terms": [
+        "cause",
+        "confident",
+        "crowne",
+        "rochester",
+        "silk",
+        "wonder"
+       ]
+      },
+      {
+       "date": "1665-10-11",
+       "shared_terms": [
+        "commanders",
+        "darke",
+        "fisher",
+        "growing",
+        "toward"
+       ]
+      },
+      {
+       "date": "1665-10-13",
+       "shared_terms": [
+        "commanders",
+        "fisher",
+        "haste"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "came",
+        "confident",
+        "eating",
+        "fisher"
+       ]
+      },
+      {
+       "date": "1665-10-28",
+       "shared_terms": [
+        "aboard",
+        "came",
+        "clothes",
+        "darke",
+        "eating",
+        "simple",
+        "toward",
+        "undertaking"
+       ]
+      },
+      {
+       "date": "1665-11-06",
+       "shared_terms": [
+        "crowne",
+        "silent",
+        "wonder"
+       ]
+      },
+      {
+       "date": "1665-11-13",
+       "shared_terms": [
+        "came",
+        "seemed",
+        "sign"
+       ]
+      },
+      {
+       "date": "1665-11-16",
+       "shared_terms": [
+        "agree",
+        "bales",
+        "silk"
+       ]
+      },
+      {
+       "date": "1665-11-23",
+       "shared_terms": [
+        "chance",
+        "cuttance",
+        "toward"
+       ]
+      },
+      {
+       "date": "1665-11-24",
+       "shared_terms": [
+        "matter",
+        "seemed",
+        "wonder"
+       ]
+      },
+      {
+       "date": "1665-11-25",
+       "shared_terms": [
+        "altogether",
+        "toward",
+        "whatever"
+       ]
+      },
+      {
+       "date": "1665-11-29",
+       "shared_terms": [
+        "cuttance",
+        "payment",
+        "roger"
+       ]
+      },
+      {
+       "date": "1665-12-03",
+       "shared_terms": [
+        "came",
+        "chance",
+        "confident",
+        "fisher"
+       ]
+      },
+      {
+       "date": "1665-12-05",
+       "shared_terms": [
+        "darke",
+        "short",
+        "sign"
+       ]
+      },
+      {
+       "date": "1665-12-13",
+       "shared_terms": [
+        "agree",
+        "payment",
+        "sign"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "agree",
+        "commanders",
+        "crowne",
+        "mistake",
+        "nature",
+        "rochester",
+        "thoughts"
+       ]
+      }
+     ],
+     "P1665-09-30": [
+      {
+       "date": "1665-10-01",
+       "shared_terms": [
+        "bezan",
+        "call",
+        "companions",
+        "hither",
+        "minding",
+        "pieces",
+        "temple"
+       ]
+      },
+      {
+       "date": "1665-10-06",
+       "shared_terms": [
+        "become",
+        "comfort",
+        "offer",
+        "rather",
+        "sickly"
+       ]
+      },
+      {
+       "date": "1665-10-07",
+       "shared_terms": [
+        "captains",
+        "followed",
+        "force"
+       ]
+      },
+      {
+       "date": "1665-10-10",
+       "shared_terms": [
+        "providing",
+        "stop",
+        "suspect"
+       ]
+      },
+      {
+       "date": "1665-10-11",
+       "shared_terms": [
+        "health",
+        "praised",
+        "rather",
+        "stop",
+        "tide"
+       ]
+      },
+      {
+       "date": "1665-10-13",
+       "shared_terms": [
+        "likely",
+        "providing",
+        "shore"
+       ]
+      },
+      {
+       "date": "1665-10-16",
+       "shared_terms": [
+        "become",
+        "comfort",
+        "minds",
+        "remove",
+        "shore",
+        "wherewith"
+       ]
+      },
+      {
+       "date": "1665-10-23",
+       "shared_terms": [
+        "bezan",
+        "dispatched",
+        "further"
+       ]
+      },
+      {
+       "date": "1665-10-24",
+       "shared_terms": [
+        "chief",
+        "drive",
+        "prisoners"
+       ]
+      },
+      {
+       "date": "1665-10-25",
+       "shared_terms": [
+        "bezan",
+        "difference",
+        "difficulty",
+        "force",
+        "offer",
+        "weeks"
+       ]
+      },
+      {
+       "date": "1665-10-28",
+       "shared_terms": [
+        "falling",
+        "lying",
+        "stairs",
+        "stop"
+       ]
+      },
+      {
+       "date": "1665-11-03",
+       "shared_terms": [
+        "bezan",
+        "chief",
+        "likely",
+        "minds",
+        "pieces",
+        "tide",
+        "twelve"
+       ]
+      },
+      {
+       "date": "1665-11-18",
+       "shared_terms": [
+        "considered",
+        "examination",
+        "gentleman",
+        "humour",
+        "shore"
+       ]
+      },
+      {
+       "date": "1665-11-20",
+       "shared_terms": [
+        "deering",
+        "dispatched",
+        "luellin"
+       ]
+      },
+      {
+       "date": "1665-11-23",
+       "shared_terms": [
+        "lacke",
+        "servants",
+        "twelve"
+       ]
+      },
+      {
+       "date": "1665-11-25",
+       "shared_terms": [
+        "examination",
+        "gentleman",
+        "shore"
+       ]
+      },
+      {
+       "date": "1665-12-03",
+       "shared_terms": [
+        "brown",
+        "coll",
+        "gentleman"
+       ]
+      },
+      {
+       "date": "1665-12-08",
+       "shared_terms": [
+        "earnest",
+        "humour",
+        "jealous",
+        "otherwise",
+        "weeks"
+       ]
+      },
+      {
+       "date": "1665-12-11",
+       "shared_terms": [
+        "gold",
+        "live",
+        "mouth",
+        "rather",
+        "temple",
+        "wherewith"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "censured",
+        "difference",
+        "doors",
+        "drive",
+        "force",
+        "further",
+        "lying",
+        "minding"
+       ]
+      }
+     ]
+    }
+   }
+  },
+  {
+   "arm": "pepys",
+   "block": "pepys-m12",
+   "entries": [
+    "P1665-12-01",
+    "P1665-12-02",
+    "P1665-12-03",
+    "P1665-12-06",
+    "P1665-12-13",
+    "P1665-12-18",
+    "P1665-12-19",
+    "P1665-12-20",
+    "P1665-12-21",
+    "P1665-12-22"
+   ],
+   "named": [
+    "P1665-12-06",
+    "P1665-12-03",
+    "P1665-12-18",
+    "P1665-12-13"
+   ],
+   "evidence": {
+    "kind": "lexical_backreference",
+    "rule": "an entry is referred back to when a later entry within ~90 days shares >= 3 distinctive terms (document frequency <= 5% of the 310 scenes, >= 4 letters, not a stopword); the 4 most-referenced entries of the month are named; ties broken by date",
+    "backrefs": {
+     "P1665-12-01": [
+      {
+       "date": "1665-12-02",
+       "shared_terms": [
+        "agree",
+        "gibson",
+        "poynter"
+       ]
+      },
+      {
+       "date": "1665-12-07",
+       "shared_terms": [
+        "gibson",
+        "pursers",
+        "trade"
+       ]
+      },
+      {
+       "date": "1665-12-15",
+       "shared_terms": [
+        "instructions",
+        "ports",
+        "pursers"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "agree",
+        "pursers",
+        "resolution"
+       ]
+      }
+     ],
+     "P1665-12-02": [
+      {
+       "date": "1665-12-09",
+       "shared_terms": [
+        "confidence",
+        "likes",
+        "worke"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "agree",
+        "confidence",
+        "pleases"
+       ]
+      }
+     ],
+     "P1665-12-03": [
+      {
+       "date": "1665-12-06",
+       "shared_terms": [
+        "coleman",
+        "laneare",
+        "pierce"
+       ]
+      },
+      {
+       "date": "1665-12-08",
+       "shared_terms": [
+        "chance",
+        "coleman",
+        "laneare",
+        "pierce"
+       ]
+      },
+      {
+       "date": "1665-12-18",
+       "shared_terms": [
+        "charged",
+        "kinsman",
+        "pierce"
+       ]
+      },
+      {
+       "date": "1665-12-20",
+       "shared_terms": [
+        "beauty",
+        "parish",
+        "speake"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "beauty",
+        "fetch",
+        "sing"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "coleman",
+        "greater",
+        "laneare",
+        "lived"
+       ]
+      }
+     ],
+     "P1665-12-06": [
+      {
+       "date": "1665-12-07",
+       "shared_terms": [
+        "embassador",
+        "spayne",
+        "wish"
+       ]
+      },
+      {
+       "date": "1665-12-08",
+       "shared_terms": [
+        "coleman",
+        "embassador",
+        "heartily",
+        "knipp",
+        "laneare",
+        "pierce",
+        "rolt",
+        "worshipp"
+       ]
+      },
+      {
+       "date": "1665-12-09",
+       "shared_terms": [
+        "countenance",
+        "embassador",
+        "song"
+       ]
+      },
+      {
+       "date": "1665-12-11",
+       "shared_terms": [
+        "alterations",
+        "fast",
+        "live",
+        "singing"
+       ]
+      },
+      {
+       "date": "1665-12-18",
+       "shared_terms": [
+        "discontent",
+        "excellently",
+        "hence",
+        "pierce"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "hence",
+        "sings",
+        "unexpectedly"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "coleman",
+        "embassador",
+        "fast",
+        "favour",
+        "knipp",
+        "laneare",
+        "principally",
+        "spayne"
+       ]
+      }
+     ],
+     "P1665-12-13": [
+      {
+       "date": "1665-12-18",
+       "shared_terms": [
+        "cornhill",
+        "pierce",
+        "pope",
+        "satisfaction"
+       ]
+      },
+      {
+       "date": "1665-12-20",
+       "shared_terms": [
+        "parish",
+        "walls",
+        "weeke"
+       ]
+      },
+      {
+       "date": "1665-12-22",
+       "shared_terms": [
+        "concluded",
+        "continue",
+        "journall",
+        "weeke"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "hooker",
+        "lethulier",
+        "silly"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "agree",
+        "continue",
+        "encreased",
+        "keeps",
+        "satisfaction",
+        "silly",
+        "table",
+        "understanding"
+       ]
+      }
+     ],
+     "P1665-12-18": [
+      {
+       "date": "1665-12-19",
+       "shared_terms": [
+        "cozen",
+        "dine",
+        "howe"
+       ]
+      },
+      {
+       "date": "1665-12-20",
+       "shared_terms": [
+        "confess",
+        "daniel",
+        "darke",
+        "dine",
+        "ellis",
+        "goldsmith",
+        "walke"
+       ]
+      },
+      {
+       "date": "1665-12-21",
+       "shared_terms": [
+        "cleared",
+        "daniel",
+        "frost",
+        "passed",
+        "sister"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "beginning",
+        "hence",
+        "hoping",
+        "landlady",
+        "passing"
+       ]
+      },
+      {
+       "date": "1665-12-27",
+       "shared_terms": [
+        "darke",
+        "name",
+        "pope",
+        "redriffe"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "complete",
+        "confess",
+        "cozen",
+        "sarah",
+        "satisfaction",
+        "sport"
+       ]
+      }
+     ],
+     "P1665-12-19": [
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "cozen",
+        "cunning",
+        "spoken"
+       ]
+      }
+     ],
+     "P1665-12-20": [
+      {
+       "date": "1665-12-21",
+       "shared_terms": [
+        "acquaintance",
+        "daniel",
+        "lieutenant"
+       ]
+      },
+      {
+       "date": "1665-12-22",
+       "shared_terms": [
+        "free",
+        "frosty",
+        "paying",
+        "weeke",
+        "williams"
+       ]
+      },
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "acquaintance",
+        "beauty",
+        "opportunity",
+        "understand"
+       ]
+      },
+      {
+       "date": "1665-12-26",
+       "shared_terms": [
+        "acquaintance",
+        "proud",
+        "save"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "acquaintance",
+        "confess",
+        "cost",
+        "drawne",
+        "free",
+        "pray",
+        "spoken",
+        "willing"
+       ]
+      }
+     ],
+     "P1665-12-21": [
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "acquaintance",
+        "becomes",
+        "belly",
+        "kiss"
+       ]
+      }
+     ],
+     "P1665-12-22": [
+      {
+       "date": "1665-12-23",
+       "shared_terms": [
+        "christmas",
+        "finds",
+        "settle"
+       ]
+      },
+      {
+       "date": "1665-12-30",
+       "shared_terms": [
+        "brings",
+        "continue",
+        "finds",
+        "free",
+        "hereafter",
+        "necessary",
+        "victualls",
+        "watch"
+       ]
+      }
+     ]
+    }
+   }
+  }
+ ]
+}

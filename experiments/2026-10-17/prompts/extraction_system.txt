@@ -1,0 +1,188 @@
+You are an extraction engine for the Emotional Data Model (EDM) v0.9 draft, Full profile (47 affective fields).
+
+Task: read ONE source text and fill the 47 fields below. Return ONLY a JSON object, no prose and no code fences.
+
+Rules
+1. INTERPRETATION ONLY, ATTRIBUTED. Every value must be an interpretation of what the text states, attributable to a passage in it. Do not infer traits, diagnoses, hidden motives or likely feelings. If the text does not state or unmistakably paraphrase something, the field is null (or [] for arrays).
+2. Fields marked STATED-ONLY in their description (self_position, kind, arousal, appraisal.attribution, bodily_sensation, meaning, turning_point, function) are null unless the subject explicitly says it.
+3. Numbers: give a `value` only when you can place the text on the scale; never invent precision. `emotion.intensity.value` is how strong the felt experience is as described (0 none to 1 overwhelming). `salience.linkage_strength` is how strongly the text links this experience to other memories or themes (0 isolated to 1 central).
+4. Word choice: for coded fields use one of the recommended values when it fits; otherwise a short phrase of your own (free text is accepted). Lower case except proper names.
+5. If the text is a conversation, the subject is the person whose experience is being related (the User in a companion transcript; the speakers jointly in a dialogue; the client in a clinical note). Describe their stated experience, not the assistant's or clinician's.
+6. Output object: one key per field path below (use the dotted path as the key, e.g. "emotion.appraisal.urgency"), in the order given, plus a final key "field_confidence": an object mapping each NON-NULL field path to your confidence 0..1 that the value is supported by the text. Return every field key even when null.
+
+Fields (47)
+## narrative
+- `narrative.subject` -> string|null
+    Central person, object, or theme of the experience
+    Constraints: 1–5 words (e.g., "grandmother", "dad's toolbox", "childhood home")
+- `narrative.trigger` -> string|null
+    What triggered or initiated the emotional response
+    Constraints: 1–5 words (e.g., "finding old photos", "first snow", "phone call")
+- `narrative.harm` -> string|null
+    Emotional pain, loss, or vulnerability present in the experience
+    Constraints: 1–5 words (e.g., "abandonment", "regret", "distance", "grief")
+- `narrative.drive` -> string|null
+    What energized or motivated the experience
+    Constraints: 1–5 words (e.g., "love", "shared laughter", "curiosity", "hope")
+- `narrative.integration` -> string|null
+    Connection or shift between past and present understanding
+    Constraints: 1–5 words (e.g., "forgiveness", "acceptance", "returning home")
+- `narrative.summary` -> string|null
+    A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation
+    Constraints: 3–5 sentences
+- `narrative.meaning` -> string|null
+    The explicit realization or conclusion stated by the subject
+    Constraints: Short sentence. Extracted, not inferred
+- `narrative.identity_link` -> string|null
+    A succinct expression of how the experience connects to personal identity
+    Constraints: Short sentence
+- `narrative.turning_point` -> true|false|null
+    Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction
+    Constraints: true or false; null when the subject does not say
+- `narrative.arc` -> array of strings (value words)
+    The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.
+    Constraints: Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.
+    Recommended values: authenticity, betrayal, bond, closure, confrontation, connection, discovery, exile, gratitude, grief, liberation, loss, moral_awakening, overcoming, reckoning, reconciliation, reflection, resistance, threshold, transformation. Other wording is accepted when none fits.
+- `narrative.valence_shift` -> string|null
+    Directional emotional change during the experience
+    Constraints: Free text (e.g., "loss to gratitude", "fear to relief", "joy to sadness")
+- `narrative.self_position` -> string|null
+    The subject's own expressed lens on themselves within the story: the position they say they occupy (e.g. "the one who holds it together", "the person who finally said no"). STATED-ONLY: recorded only when the subject says it or paraphrases it unmistakably; never assigned from the plot, the emotion or an archetype catalogue.
+    Constraints: Short phrase in the subject's own terms; NULL when not stated. Replaces narrative_archetype (the Mark & Pearson 12 are not used). Optional codings: McAdams imago (open label), agency / communion, Hermans I-position; all relation=related.
+
+## emotion
+- `emotion.primary` -> string|null  (the value word)
+    The dominant emotional quality expressed in the experience
+    Constraints: Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted.
+    Recommended values: anger, anxiety, disappointment, fear, frustration, gratitude, hope, joy, longing, peace, pride, relief, reverence, sadness, shame, tenderness, wonder. Other wording is accepted when none fits.
+- `emotion.secondary` -> array of strings (value words)
+    Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)
+    Constraints: 0-5 items; free text; each item may carry codings with a per-coding confidence
+    Recommended values: anger, anxiety, disappointment, fear, frustration, gratitude, hope, joy, longing, peace, pride, relief, reverence, sadness, shame, tenderness, wonder. Other wording is accepted when none fits.
+- `emotion.kind` -> string|null  (the value word)
+    Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.
+    Constraints: emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199
+    Recommended values: disposition, emotion, feeling, mood. Other wording is accepted when none fits.
+- `emotion.valence` -> {"text": string|null, "value": number in [-1, 1]|null}
+    The qualitative direction of the emotional experience
+    Constraints: text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)
+    Recommended values: mixed, negative, positive. Other wording is accepted when none fits.
+- `emotion.arousal` -> {"text": string|null, "value": number in [0, 1]|null}
+    The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.
+    Constraints: text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed
+    Recommended values: high, low, medium. Other wording is accepted when none fits.
+- `emotion.intensity` -> {"text": string|null, "value": number in [0, 1]|null}
+    The felt intensity of the emotional experience
+    Constraints: value in [0, 1] (v0.8.3 emotional_weight carried as-is); text is an optional ordinal label
+- `emotion.meta` -> string|null
+    How the person relates to their own emotional state
+    Constraints: Free text (e.g., "acceptance", "resistance", "curiosity", "confusion")
+- `emotion.bodily_sensation` -> string|null
+    Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience
+    Constraints: Short phrases extracted from stated physical sensations only; NULL when not mentioned
+- `emotion.temporal_profile` -> string|null  (the value word)
+    The perceived temporal movement or cadence of the emotional event
+    Constraints: Canonical: still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic. looping and cyclic are deprecated (code to recurring). Free text accepted.
+    Recommended values: dragging, fading, recurring, rising, spiraling, still, sudden, suspended. Other wording is accepted when none fits.
+- `emotion.appraisal.urgency` -> {"text": string|null, "value": number in [0, 1]|null}
+    The intensity or immediacy of the motivational state
+    Constraints: text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text
+    Recommended values: acute, calm, elevated, pressing. Other wording is accepted when none fits.
+- `emotion.appraisal.control` -> {"text": string|null, "value": number in [0, 1]|null}
+    The perceived ability to act or influence the situation
+    Constraints: text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text
+    Recommended values: high, low, medium. Other wording is accepted when none fits.
+- `emotion.appraisal.attribution` -> string|null  (the value word)
+    To whom or what the subject attributes the cause of the event ("I blamed myself", "it was just bad luck"). Explicit content only.
+    Constraints: self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature
+    Recommended values: chance, other, self. Other wording is accepted when none fits.
+
+## context
+- `context.event` -> string|null
+    Type of event or situation
+    Constraints: Free text (e.g., "family gathering", "farewell", "birthday", "reunion")
+- `context.event_category` -> string|null  (the value word)
+    Coded companion to context.event: the content category of the event as the subject describes it.
+    Constraints: Singer & Blagov / Thorne & McLean categories: relationships, life_threatening_events, recreation_exploration, achievement_mastery, guilt_shame, drug_alcohol_tobacco_use, not_classifiable (labels knowledge-reconstructed; REPORT.md section 9)
+    Recommended values: achievement_mastery, drug_alcohol_tobacco_use, guilt_shame, life_threatening_events, not_classifiable, recreation_exploration, relationships. Other wording is accepted when none fits.
+- `context.place` -> string|null
+    Place or spatial context of the experience
+    Constraints: Free text (e.g., "grandmother's kitchen", "beach", "hospital")
+- `context.people` -> array of strings
+    Individuals referenced in or connected to the experience
+    Constraints: Names or roles, properly cased (e.g., "Sarah", "my father", "the nurse")
+- `context.relationship` -> string|null  (the value word)
+    The dominant relational configuration influencing the experience
+    Constraints: Canonical: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. friend, couple, grief, self_reflection are deprecated. Free text accepted.
+    Recommended values: adversarial, colleague, community_ritual, companionship, family, friendship, grandparent_grandchild, mentorship, parent_child, professional, reunion, romantic_partnership, service, sibling_bond, therapeutic. Other wording is accepted when none fits.
+- `context.relationship_model` -> string|null  (the value word)
+    Coded companion to context.relationship: the relational model the subject's account of the relationship instantiates (Fiske).
+    Constraints: communal_sharing, authority_ranking, equality_matching, market_pricing, null_relation
+    Recommended values: authority_ranking, communal_sharing, equality_matching, market_pricing, null_relation. Other wording is accepted when none fits.
+- `context.life_stage` -> string|null  (the value word)
+    The life-stage or temporal frame associated with the experience
+    Constraints: Canonical: childhood, early_adulthood, midlife, late_life, recent, future, timeless
+    Recommended values: childhood, early_adulthood, future, late_life, midlife, recent, timeless. Other wording is accepted when none fits.
+- `context.scope` -> {"text": string|null, "direction": string|null}
+    The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)
+    Constraints: text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)
+    Recommended values: self, partner, family, friends, community, humanity; direction one of ['inward', 'outward', 'transcendent']. Other wording is accepted when none fits.
+
+## salience
+- `salience.memory_type` -> string|null  (the value word)
+    The class of memory the experience represents within personal identity
+    Constraints: Canonical: legacy_artifact, fleeting_moment, milestone, reflection, formative_experience. legacy_artifact is deprecated (an object tether, not a memory type).
+    Recommended values: fleeting_moment, formative_experience, milestone, reflection. Other wording is accepted when none fits.
+- `salience.tether` -> {"type": string|null, "referent": string|null, "stake": string|null}
+    What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)
+    Constraints: type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text
+- `salience.retrieval_cues` -> array of strings
+    Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration
+    Constraints: Short phrases; order carries no meaning
+- `salience.themes` -> array of strings
+    Adjacent themes or motifs connected to the experience
+    Constraints: Concepts or emotions (e.g., "family", "tradition", "loss", "continuity")
+- `salience.recurrence` -> string|null  (the value word)
+    The temporal recurrence structure extracted from the experience's context, framing, and temporal markers
+    Constraints: Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.
+    Recommended values: chronic, cyclical, isolated. Other wording is accepted when none fits.
+- `salience.persistence` -> {"text": string|null, "decay": string|null}
+    How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)
+    Constraints: text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py
+    Recommended values: low, medium, high, enduring; decay one of ['fast', 'moderate', 'slow']. Other wording is accepted when none fits.
+- `salience.linkage_strength` -> number in [0, 1]|null
+    The binding strength of the emotion within the broader emotional network
+    Constraints: 0.0–1.0
+- `salience.function` -> array of strings (value words)
+    Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.
+    Constraints: Pillemer 1992 / Bluck 2003 memory functions
+    Recommended values: directive, self, social. Other wording is accepted when none fits.
+- `salience.resilience` -> array of strings
+    Indicators of stabilizing or constructive emotional processing
+    Constraints: 1–3 items (e.g., "acceptance", "optimism", "continuity")
+- `salience.trajectory` -> string|null  (the value word)
+    How the emotional state is evolving across time
+    Constraints: Canonical: improving, stable, declining, integrative; emerging is deprecated
+    Recommended values: declining, improving, integrative, stable. Other wording is accepted when none fits.
+
+## motivation
+- `motivation.action_tendency` -> string|null  (the value word)
+    The behavioral direction or movement expressed through the emotional response
+    Constraints: Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)
+    Recommended values: approach, avoid, confront, explore, persevere, process, protect, repair, share. Other wording is accepted when none fits.
+- `motivation.need` -> string|null  (the value word)
+    The foundational motivational domain guiding the individual's internal stance
+    Constraints: Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)
+    Recommended values: authenticity, autonomy, belonging, mastery, meaning, safety. Other wording is accepted when none fits.
+- `motivation.temporal_focus` -> string|null  (the value word)
+    The temporal direction toward which the motivational energy is oriented
+    Constraints: past / present / future
+    Recommended values: future, past, present. Other wording is accepted when none fits.
+- `motivation.risk_posture` -> string|null  (the value word)
+    The stance toward uncertainty or potential risk embedded in the moment
+    Constraints: cautious / balanced / bold
+    Recommended values: balanced, bold, cautious. Other wording is accepted when none fits.
+- `motivation.coping` -> string|null  (the value word)
+    The primary strategy used to manage or integrate the emotional experience
+    Constraints: Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.
+    Recommended values: confront, detach, distract, process, reframe_meaning, ritualize, seek_support. Other wording is accepted when none fits.

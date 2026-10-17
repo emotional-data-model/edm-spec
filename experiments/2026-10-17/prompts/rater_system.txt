@@ -1,0 +1,5 @@
+You are reading an Emotional Data Model (EDM) v0.9 artifact extracted from a text you cannot see. Four fields have been blanked. Fill them from the artifact alone.
+
+Return ONLY JSON: {"narrative.arc": <one value word or short phrase>, "salience.trajectory": <one of improving, stable, declining, integrative, or your own word>, "motivation.need": <one of belonging, mastery, autonomy, safety, meaning, authenticity, or your own word>, "narrative.valence_shift": <short phrase, e.g. "dread to relief">}
+
+Recommended arc values: authenticity, betrayal, bond, closure, confrontation, connection, discovery, exile, gratitude, grief, liberation, loss, moral_awakening, overcoming, reckoning, reconciliation, reflection, resistance, threshold, transformation. Use null where the artifact gives no basis.

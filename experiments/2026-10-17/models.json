@@ -1,0 +1,17 @@
+{
+  "pinned_at": "2026-10-17",
+  "pinned_from": "live /models listings of each provider on 2026-10-17 (experiments/2026-10-17/_model_lists_raw.json) and the providers' public price pages read the same day",
+  "list_prices_usd_per_million_tokens": {
+    "note": "input / cached-input / output; Anthropic cache write = 1.25 x input (5-minute TTL); cached-input = cache read"
+  },
+  "extractors": {
+    "M1": {"slot": "Claude Sonnet 5.5", "model": "claude-sonnet-5-5", "provider": "anthropic", "price": {"input": 2.00, "cache_write": 2.50, "cached_input": 0.20, "output": 10.00}, "source": "claude-api skill price table 2026-10-06; models.list 2026-10-17"},
+    "M2": {"slot": "Claude Haiku 5.5", "model": "claude-haiku-5-5", "provider": "anthropic", "price": {"input": 0.10, "cache_write": 0.125, "cached_input": 0.01, "output": 0.50}, "source": "claude-api skill price table 2026-10-06 (prompts <= 100K tokens); models.list 2026-10-17"},
+    "M3": {"slot": "OpenAI current flagship general model", "model": "gpt-6.1-sol", "provider": "openai", "price": {"input": 2.00, "cached_input": 0.10, "output": 10.00}, "source": "developers.openai.com/api/docs/pricing 2026-10-17 (standard tier, <= 272K input). gpt-6-astra ($10 / $50) is the premium tier and was excluded: it alone would exceed the USD 80 budget. Founder may re-pin.", "created_unix": 1790552874},
+    "M4": {"slot": "Kimi K2 (latest)", "model": "kimi-k2.6", "provider": "kimi", "base_url": "https://api.moonshot.ai/v1", "price": {"input": 0.95, "cached_input": 0.16, "output": 4.00}, "source": "platform.kimi.ai/docs/pricing/chat 2026-10-17; models.list 2026-10-17 also lists kimi-k3 ($3 / $15) and kimi-k2.7-code; K2 latest = kimi-k2.6"}
+  },
+  "judge": {"slot": "Claude Opus 5.5", "model": "claude-opus-5-5", "provider": "anthropic", "price": {"input": 4.00, "cache_write": 5.00, "cached_input": 0.20, "output": 20.00}, "source": "claude-api skill price table 2026-10-06; models.list 2026-10-17", "rule": "never used for extraction or as a task (b) rater"},
+  "sampling": "provider defaults for every extractor (no temperature, top_p or effort set); fresh context per call; one shared extraction prompt",
+  "env_keys": {"anthropic": "ANTHROPIC_API_KEY", "openai": "OPENAI_API_KEY", "kimi": "KIMI_API_KEY"},
+  "budget_usd": 80
+}

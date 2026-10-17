@@ -1,0 +1,4 @@
+Artifact:
+{artifact_json}
+
+Return the JSON object now.
