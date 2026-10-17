@@ -1,0 +1,153 @@
+{
+ "items": 20,
+ "authored_span_used": 0,
+ "per_rater": {
+  "claude-sonnet-5-5": {
+   "narrative.arc": {
+    "shift_B": 0.06666666666666667,
+    "shift_control": 0.05,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "salience.trajectory": {
+    "shift_B": 0.2,
+    "shift_control": 0.11666666666666667,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "motivation.need": {
+    "shift_B": 0.06666666666666667,
+    "shift_control": 0.05,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "narrative.valence_shift": {
+    "shift_B": 0.4166666666666667,
+    "shift_control": 0.45,
+    "readings_B": 60,
+    "readings_control": 60
+   }
+  },
+  "claude-haiku-5-5": {
+   "narrative.arc": {
+    "shift_B": 0.2,
+    "shift_control": 0.11666666666666667,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "salience.trajectory": {
+    "shift_B": 0.26666666666666666,
+    "shift_control": 0.25,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "motivation.need": {
+    "shift_B": 0.15,
+    "shift_control": 0.15,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "narrative.valence_shift": {
+    "shift_B": 0.6666666666666666,
+    "shift_control": 0.7166666666666667,
+    "readings_B": 60,
+    "readings_control": 60
+   }
+  },
+  "gpt-6.1-sol": {
+   "narrative.arc": {
+    "shift_B": 0.016666666666666666,
+    "shift_control": 0.016666666666666666,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "salience.trajectory": {
+    "shift_B": 0.05,
+    "shift_control": 0.08333333333333333,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "motivation.need": {
+    "shift_B": 0.0,
+    "shift_control": 0.0,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "narrative.valence_shift": {
+    "shift_B": 0.31666666666666665,
+    "shift_control": 0.31666666666666665,
+    "readings_B": 60,
+    "readings_control": 60
+   }
+  },
+  "kimi-k2.6": {
+   "narrative.arc": {
+    "shift_B": 0.16666666666666666,
+    "shift_control": 0.16666666666666666,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "salience.trajectory": {
+    "shift_B": 0.16666666666666666,
+    "shift_control": 0.05,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "motivation.need": {
+    "shift_B": 0.03333333333333333,
+    "shift_control": 0.016666666666666666,
+    "readings_B": 60,
+    "readings_control": 60
+   },
+   "narrative.valence_shift": {
+    "shift_B": 0.4,
+    "shift_control": 0.4666666666666667,
+    "readings_B": 60,
+    "readings_control": 60
+   }
+  }
+ },
+ "pooled": {
+  "shift_B_three_coded_fields": 0.11527777777777778,
+  "shift_control_three_coded_fields": 0.08888888888888889,
+  "readings_B": 720,
+  "readings_control": 720,
+  "per_field": {
+   "narrative.arc": {
+    "shift_B": 0.1125,
+    "shift_control": 0.0875
+   },
+   "salience.trajectory": {
+    "shift_B": 0.17083333333333334,
+    "shift_control": 0.125
+   },
+   "motivation.need": {
+    "shift_B": 0.0625,
+    "shift_control": 0.05416666666666667
+   },
+   "narrative.valence_shift": {
+    "shift_B": 0.45,
+    "shift_control": 0.4875
+   }
+  },
+  "per_rater": {
+   "claude-sonnet-5-5": {
+    "shift_B": 0.1111111111111111,
+    "shift_control": 0.07222222222222222
+   },
+   "claude-haiku-5-5": {
+    "shift_B": 0.20555555555555555,
+    "shift_control": 0.17222222222222222
+   },
+   "gpt-6.1-sol": {
+    "shift_B": 0.022222222222222223,
+    "shift_control": 0.03333333333333333
+   },
+   "kimi-k2.6": {
+    "shift_B": 0.12222222222222222,
+    "shift_control": 0.07777777777777778
+   }
+  }
+ },
+ "pass": false
+}

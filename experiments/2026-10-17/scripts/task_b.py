@@ -139,7 +139,7 @@ async def main():
     print(f"{len(items)} items; authored span used for {sum(i['self_position_from_authored_span'] for i in items)}")
     if not a.score_only:
         rd = os.path.join(RAW, 'rater'); os.makedirs(rd, exist_ok=True)
-        spend = Spend(os.path.join(EXP, 'spend.json')); stats = {'calls': 0, 'usd': 0.0}
+        spend = Spend(os.path.join(EXP, 'spend_rater.json')); stats = {'calls': 0, 'usd': 0.0}
         tasks = []
         existing = load_ratings()
         for e in MODELS['extractors'].values():

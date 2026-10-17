@@ -1,0 +1,1951 @@
+[
+ {
+  "id": "S02",
+  "self_position": "the adult in the driver's seat who was supposed to get him home",
+  "self_position_from_authored_span": false,
+  "place": "road junction",
+  "base": {
+   "narrative.subject": "nephew after car crash",
+   "narrative.trigger": "van hitting the car",
+   "narrative.harm": "nephew endangered on my watch",
+   "narrative.drive": "protecting nephew",
+   "narrative.integration": null,
+   "narrative.summary": "The writer says they did not want to write this but will. Driving their nephew home from swimming, a van came through a junction and hit the back passenger side where he sat; the car spun and stopped against the kerb. The writer heard him crying and took it to mean he was awake and breathing. He was checked for three hours and is fine, bruised by the belt. The writer keeps going over being the adult responsible, insists the van driver was at fault, and still hates that it happened on their watch.",
+   "narrative.meaning": null,
+   "narrative.identity_link": "They were the adult in the driver's seat who was supposed to get him home.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "anxiety",
+   "emotion.secondary": [
+    "relief",
+    "anger",
+    "guilt"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "mixed",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.7
+   },
+   "emotion.meta": "reluctance to write, then rumination",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "recurring",
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": "other",
+   "context.event": "car collision",
+   "context.event_category": "life_threatening_events",
+   "context.people": [
+    "my nephew",
+    "my sister",
+    "the van driver",
+    "a witness"
+   ],
+   "context.relationship": "family",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "family",
+    "direction": "inward"
+   },
+   "salience.memory_type": "formative_experience",
+   "salience.tether": {
+    "type": "person",
+    "referent": "nephew",
+    "stake": "his safety and the writer's responsibility"
+   },
+   "salience.retrieval_cues": [
+    "van at the junction",
+    "back passenger side",
+    "nephew crying",
+    "fire engine"
+   ],
+   "salience.themes": [
+    "responsibility",
+    "guilt versus blame",
+    "child safety",
+    "relief"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": null,
+    "decay": null
+   },
+   "salience.linkage_strength": 0.4,
+   "salience.function": [],
+   "salience.resilience": [
+    "asserting the other driver's fault"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "process",
+   "motivation.need": null,
+   "motivation.temporal_focus": "past",
+   "motivation.risk_posture": null,
+   "motivation.coping": "process"
+  }
+ },
+ {
+  "id": "S03",
+  "self_position": "the one in this house who has to try to fix things before anyone buys a replacement",
+  "self_position_from_authored_span": false,
+  "place": "home",
+  "base": {
+   "narrative.subject": "broken kettle",
+   "narrative.trigger": "kettle stopped working",
+   "narrative.harm": "mild frustration",
+   "narrative.drive": "fixing things first",
+   "narrative.integration": "learning personal limit",
+   "narrative.summary": "The kettle stopped working mid-boil in the morning. The writer spent forty minutes taking the base apart with a butter knife before admitting it was dead and walking to the shop for a new one. The partner found it funny, while the writer found it a bit funny and a bit annoying in equal halves. The writer notes tight shoulders, probable fault from overfilling, and a habit of keeping a lid on frustration. The entry ends with the new blue kettle and the day described as fine.",
+   "narrative.meaning": "Forty minutes is my limit before I'll admit defeat.",
+   "narrative.identity_link": "I'm the one in the house who tries to fix things before allowing a replacement.",
+   "narrative.turning_point": false,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "frustration",
+   "emotion.secondary": [
+    "amusement"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "mixed",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.2
+   },
+   "emotion.meta": "matter-of-fact acceptance",
+   "emotion.bodily_sensation": "shoulders tight while crouched over the kettle",
+   "emotion.temporal_profile": null,
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "broken kettle",
+   "context.event_category": "not_classifiable",
+   "context.people": [
+    "my partner"
+   ],
+   "context.relationship": "romantic_partnership",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "object",
+    "referent": "kettle",
+    "stake": null
+   },
+   "salience.retrieval_cues": [
+    "kettle",
+    "butter knife",
+    "forty minutes"
+   ],
+   "salience.themes": [
+    "frustration",
+    "fixing things",
+    "self-knowledge",
+    "partner's patience"
+   ],
+   "salience.recurrence": "chronic",
+   "salience.persistence": {
+    "text": "low",
+    "decay": "fast"
+   },
+   "salience.linkage_strength": 0.2,
+   "salience.function": [
+    "directive"
+   ],
+   "salience.resilience": [
+    "acceptance",
+    "humor"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "repair",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "detach"
+  }
+ },
+ {
+  "id": "S04",
+  "self_position": "the one who passes things",
+  "self_position_from_authored_span": false,
+  "place": null,
+  "base": {
+   "narrative.subject": "failed exam result",
+   "narrative.trigger": "reading results email",
+   "narrative.harm": "loss of identity as passer",
+   "narrative.drive": null,
+   "narrative.integration": null,
+   "narrative.summary": "The user reports that exam results came out and they did not pass, missing by two marks after a year of work. They describe shaking hands and a cold feeling in the stomach since opening the email. They told their manager they were 'still waiting', which they call lying. They say the hardest part is that they have always been 'the one who passes' and don't know how to be the person who didn't. They can't think about a resit and decide to switch off and lie down for the evening.",
+   "narrative.meaning": null,
+   "narrative.identity_link": "They have seen themselves as the one who passes since school.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "sadness",
+   "emotion.secondary": [
+    "shame",
+    "anxiety",
+    "disappointment"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.7
+   },
+   "emotion.meta": "confusion",
+   "emotion.bodily_sensation": "hands shaking; cold feeling in stomach that won't go",
+   "emotion.temporal_profile": "suspended",
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "failing exam results",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "my manager",
+    "colleagues"
+   ],
+   "context.relationship": "colleague",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "formative_experience",
+   "salience.tether": {
+    "type": "identity",
+    "referent": "being the one who passes",
+    "stake": "standing with people"
+   },
+   "salience.retrieval_cues": [
+    "results email",
+    "two marks short"
+   ],
+   "salience.themes": [
+    "failure",
+    "identity",
+    "social standing",
+    "concealment"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": null,
+    "decay": null
+   },
+   "salience.linkage_strength": 0.6,
+   "salience.function": [],
+   "salience.resilience": [],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "avoid",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "detach"
+  }
+ },
+ {
+  "id": "S08",
+  "self_position": "the one who does the chasing, the one who books the table and sends the reminder",
+  "self_position_from_authored_span": false,
+  "place": null,
+  "base": {
+   "narrative.subject": "friend's cancelled coffee",
+   "narrative.trigger": "friend cancelled by text",
+   "narrative.harm": "mild irritation, low mood",
+   "narrative.drive": "maintaining friendship",
+   "narrative.integration": "annoyance without relational crisis",
+   "narrative.summary": "A friend cancelled a planned coffee by text about an hour beforehand, for the second time this month. The client felt irritation and a low mood that lasted the evening, rated as mild, and it had passed by the next morning. The client attributed the cancellation to the friend's chronic disorganisation rather than to the friendship, unlike earlier self-blaming attributions. The client described themselves as the one who does the chasing and said they get clingy when people go quiet. The client concluded they can be annoyed at a friend without it becoming a crisis about whether the friend still likes them.",
+   "narrative.meaning": "I can be annoyed at a friend without it turning into a crisis about whether they still like me.",
+   "narrative.identity_link": "The client sees themselves as the one who does the chasing in friendships and who gets clingy when people go quiet.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "frustration",
+   "emotion.secondary": [
+    "sadness"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "mild",
+    "value": 0.2
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "fading",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": "other",
+   "context.event": "friend cancelled coffee",
+   "context.event_category": "relationships",
+   "context.people": [
+    "a friend"
+   ],
+   "context.relationship": "friendship",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "friends",
+    "direction": "outward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "person",
+    "referent": "the friend who cancelled",
+    "stake": "security in friendship"
+   },
+   "salience.retrieval_cues": [
+    "friend cancelling by text",
+    "waiting for a reply",
+    "people going quiet"
+   ],
+   "salience.themes": [
+    "friendship",
+    "attribution",
+    "reassurance seeking",
+    "reciprocity",
+    "self-blame"
+   ],
+   "salience.recurrence": "cyclical",
+   "salience.persistence": {
+    "text": "low",
+    "decay": "fast"
+   },
+   "salience.linkage_strength": 0.5,
+   "salience.function": [],
+   "salience.resilience": [
+    "non-self-blaming attribution",
+    "emotional proportionality"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": null,
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S09",
+  "self_position": "the maps person on the team",
+  "self_position_from_authored_span": false,
+  "place": "pub quiz, now home",
+  "base": {
+   "narrative.subject": "quiz night geography round",
+   "narrative.trigger": "getting geography round wrong",
+   "narrative.harm": "threatened role as maps person",
+   "narrative.drive": "caring about the team role",
+   "narrative.integration": "admitting he cares more",
+   "narrative.summary": "The user's quiz team came ninth out of eleven, lower than their usual top four. The user got the whole five-question geography round wrong. At home they feel grumpy, saying it is less about the result and more about being the team's maps person and wondering what they bring otherwise. They conclude they care about this more than they'd admit, and say they want to be grumpy for an hour and then forget it.",
+   "narrative.meaning": "He cares about this more than he'd admit.",
+   "narrative.identity_link": "He sees himself as the maps person on his quiz team.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "frustration",
+   "emotion.secondary": [
+    "disappointment",
+    "pride"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.3
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "fading",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "pub quiz night",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "quiz team"
+   ],
+   "context.relationship": "companionship",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "identity",
+    "referent": "maps person role",
+    "stake": "role on the team"
+   },
+   "salience.retrieval_cues": [
+    "geography round",
+    "capitals and rivers",
+    "ninth out of eleven"
+   ],
+   "salience.themes": [
+    "identity",
+    "competence",
+    "team role",
+    "caring"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "low",
+    "decay": "fast"
+   },
+   "salience.linkage_strength": 0.3,
+   "salience.function": [],
+   "salience.resilience": [
+    "acceptance",
+    "humor"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "process",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": null,
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S10",
+  "self_position": "the quiet one at the end of the table, the one who takes the notes",
+  "self_position_from_authored_span": false,
+  "place": "team meeting",
+  "base": {
+   "narrative.subject": "team meeting update",
+   "narrative.trigger": "volunteering for team update",
+   "narrative.harm": "public speaking avoidance",
+   "narrative.drive": "graded practice",
+   "narrative.integration": "small public things survivable",
+   "narrative.summary": "The client opened session 7 reporting a small success: they volunteered to give a five-minute update at a team meeting, which they had declined on several previous occasions. They described it as \"fine, unremarkable, which is the point\", noticing their voice stayed steady and that afterwards their shoulders dropped and their breathing slowed. They noted with humour that someone else had to take the notes this week. They concluded that small public things are survivable, while framing the event as minor and not wanting to \"make a thing of it\".",
+   "narrative.meaning": "I can do the small public things and nothing bad happens; they're survivable.",
+   "narrative.identity_link": "Client usually sees themselves as the quiet note-taker at the end of the table.",
+   "narrative.turning_point": false,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "relief",
+   "emotion.secondary": [
+    "pride",
+    "amusement"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.3
+   },
+   "emotion.meta": "downplaying; not wanting to make a thing of it",
+   "emotion.bodily_sensation": "shoulders dropped about two inches; breathing went slow again, like after a run",
+   "emotion.temporal_profile": "fading",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "medium",
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "team meeting update",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "the team",
+    "clinician"
+   ],
+   "context.relationship": "therapeutic",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "event",
+    "referent": "five-minute team update",
+    "stake": "coping with public speaking"
+   },
+   "salience.retrieval_cues": [
+    "team meeting",
+    "taking the notes",
+    "shoulders dropping"
+   ],
+   "salience.themes": [
+    "public speaking",
+    "avoidance",
+    "survivability",
+    "small success"
+   ],
+   "salience.recurrence": null,
+   "salience.persistence": {
+    "text": null,
+    "decay": null
+   },
+   "salience.linkage_strength": 0.4,
+   "salience.function": [],
+   "salience.resilience": [
+    "realistic appraisal",
+    "humour",
+    "steady voice"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "approach",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S11",
+  "self_position": "someone who numbs feelings but sat with them and owns this achievement",
+  "self_position_from_authored_span": false,
+  "place": "wedding",
+  "base": {
+   "narrative.subject": "100 days sober",
+   "narrative.trigger": "attending a wedding sober",
+   "narrative.harm": "lifelong numbing of feelings",
+   "narrative.drive": "ownership of sobriety",
+   "narrative.integration": "new self-understanding",
+   "narrative.summary": "The user marks day one hundred of not drinking and says they got through a wedding the night before without a drink. They were comfortable being the one with sparkling water, did not apologise or explain, and woke with a clear head and steady hands. They want the assistant to keep a record that they did this themselves, to read back on a bad night when their brain says one drink won't matter. They say they have always numbed feelings since their teens, and that last night something flipped and their view of themselves is no longer what it was on Friday afternoon.",
+   "narrative.meaning": "I did this myself, and I get to own it.",
+   "narrative.identity_link": "Nothing about how I see myself is the same as it was on Friday afternoon.",
+   "narrative.turning_point": true,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "pride",
+   "emotion.secondary": [
+    "relief",
+    "gratitude",
+    "hope"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.7
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": "clear head, no pounding behind the eyes, steady hands",
+   "emotion.temporal_profile": null,
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "sober wedding attendance",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "my partner"
+   ],
+   "context.relationship": null,
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "day one hundred and the wedding",
+    "stake": "sobriety and self-image"
+   },
+   "salience.retrieval_cues": [
+    "steady hands making coffee",
+    "sparkling water with lime",
+    "not tonight",
+    "day one hundred"
+   ],
+   "salience.themes": [
+    "sobriety",
+    "self-ownership",
+    "numbing",
+    "identity change"
+   ],
+   "salience.recurrence": "chronic",
+   "salience.persistence": {
+    "text": "enduring",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.8,
+   "salience.function": [
+    "directive",
+    "self"
+   ],
+   "salience.resilience": [
+    "self-ownership",
+    "record-keeping for bad nights",
+    "sitting with feelings"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "persevere",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S15",
+  "self_position": "the one who failed and came back",
+  "self_position_from_authored_span": false,
+  "place": "the stairs",
+  "base": {
+   "narrative.subject": "passing the exam",
+   "narrative.trigger": "opening the results email",
+   "narrative.harm": "earlier failure",
+   "narrative.drive": "earned effort",
+   "narrative.integration": "failure becoming strength",
+   "narrative.summary": "The writer opened an email on the stairs, read the number three times, shouted and sat down because their knees wobbled, and their face stayed hot for about ten minutes. They had passed by twelve marks, not scraping through. They phoned their sister, who screamed, and then their manager, who said he knew it. They state they earned the result through five weeks of evenings at the kitchen table, and that the person who failed in the winter and came back is a better self. They plan to go out to dinner with their sister.",
+   "narrative.meaning": "I earned this one; the person who failed and came back is a better seat to sit in.",
+   "narrative.identity_link": "They now identify as the person who failed and came back rather than the one who passes.",
+   "narrative.turning_point": true,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "joy",
+   "emotion.secondary": [
+    "pride",
+    "relief",
+    "gratitude"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": 0.9
+   },
+   "emotion.arousal": {
+    "text": "high",
+    "value": 0.85
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.9
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": "knees went, a proper wobble; face hot for about ten minutes",
+   "emotion.temporal_profile": "sudden",
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "exam result",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "my sister",
+    "my nephew",
+    "my manager"
+   ],
+   "context.relationship": "family",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "the results email",
+    "stake": "self-worth after failure"
+   },
+   "salience.retrieval_cues": [
+    "the email on the stairs",
+    "twelve marks over",
+    "evenings at the kitchen table with the lamp on"
+   ],
+   "salience.themes": [
+    "failure and recovery",
+    "effort",
+    "identity",
+    "achievement"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "enduring",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.7,
+   "salience.function": [
+    "self"
+   ],
+   "salience.resilience": [
+    "learning from failure",
+    "self-efficacy",
+    "optimism"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "share",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": null,
+   "motivation.coping": null
+  }
+ },
+ {
+  "id": "S16",
+  "self_position": "the careful one in this flat",
+  "self_position_from_authored_span": false,
+  "place": "kitchen in the user's flat",
+  "base": {
+   "narrative.subject": "kitchen tea towel fire",
+   "narrative.trigger": "tea towel left on hob",
+   "narrative.harm": "embarrassment",
+   "narrative.drive": "wanting to learn from it",
+   "narrative.integration": "keeping the lesson as reminder",
+   "narrative.summary": "The user reports a small fire in the kitchen, started when a tea towel left draped over a still-warm hob caught alight while they were in the loo. They smothered the flame with a pan lid. Afterwards they were annoyed and shaky, with trembling hands for about ten minutes. They say it was entirely their own doing and that they feel embarrassed because they are the careful one in the flat. They ask to be reminded about the towel whenever they mention late-night cooking, then go to open the windows.",
+   "narrative.meaning": null,
+   "narrative.identity_link": "The user sees themselves as the careful one in the flat, and the fire contradicts that.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "embarrassment",
+   "emotion.secondary": [
+    "annoyance",
+    "shakiness",
+    "shame"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "moderate",
+    "value": 0.45
+   },
+   "emotion.meta": "owns it without self-cruelty",
+   "emotion.bodily_sensation": "hands trembling for about ten minutes",
+   "emotion.temporal_profile": "fading",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "small kitchen fire",
+   "context.event_category": "life_threatening_events",
+   "context.people": [],
+   "context.relationship": "therapeutic",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "event",
+    "referent": "tea towel fire",
+    "stake": "being the careful one"
+   },
+   "salience.retrieval_cues": [
+    "tea towel",
+    "late-night cooking",
+    "smell in the flat",
+    "hob"
+   ],
+   "salience.themes": [
+    "carefulness",
+    "responsibility",
+    "embarrassment",
+    "safety"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": null,
+    "decay": null
+   },
+   "salience.linkage_strength": 0.35,
+   "salience.function": [
+    "directive"
+   ],
+   "salience.resilience": [
+    "accountability",
+    "learning from it"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "protect",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S23",
+  "self_position": "the one who said it and put it on the table",
+  "self_position_from_authored_span": false,
+  "place": "the flat",
+  "base": {
+   "narrative.subject": "separation from partner",
+   "narrative.trigger": "conversation about the pause",
+   "narrative.harm": "grief over ending relationship",
+   "narrative.drive": "clarity about own role",
+   "narrative.integration": "holding grief and relief together",
+   "narrative.summary": "The client reported that their partner returned to the flat at the weekend for a conversation about a pause begun several weeks earlier. The conversation lasted most of an afternoon and ended in an agreement to separate, with belongings to be collected over a fortnight and a period of no contact afterwards. The client stressed that they were the one who proposed stopping. They described the week since as grief and relief taking turns, with better sleep and unexpected upset in a supermarket. They called the conversation a hinge from which everything will date.",
+   "narrative.meaning": "Everything is going to date from that afternoon.",
+   "narrative.identity_link": "The client positions themselves as the one who ended the relationship.",
+   "narrative.turning_point": true,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "sadness",
+   "emotion.secondary": [
+    "relief",
+    "grief"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "mixed",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.62
+   },
+   "emotion.meta": "accepts both feelings without resolving them",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "recurring",
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "agreement to separate",
+   "context.event_category": "relationships",
+   "context.people": [
+    "partner",
+    "clinician"
+   ],
+   "context.relationship": "romantic_partnership",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "partner",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "the Sunday afternoon conversation",
+    "stake": "end of the relationship"
+   },
+   "salience.retrieval_cues": [
+    "Sunday afternoon",
+    "supermarket",
+    "partner collecting belongings"
+   ],
+   "salience.themes": [
+    "separation",
+    "grief and relief",
+    "agency",
+    "before and after"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "enduring",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.8,
+   "salience.function": [],
+   "salience.resilience": [
+    "steadiness from owning the decision",
+    "sleeping better"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": null,
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": null,
+   "motivation.coping": "process"
+  }
+ },
+ {
+  "id": "S26",
+  "self_position": "the one they turn to when the question is hard",
+  "self_position_from_authored_span": false,
+  "place": "small meeting room at work",
+  "base": {
+   "narrative.subject": "being offered the lead",
+   "narrative.trigger": "director's job offer",
+   "narrative.harm": null,
+   "narrative.drive": "pride in recognition",
+   "narrative.integration": "letting good feeling be big",
+   "narrative.summary": "The narrator was offered the lead on the new programme by the director in a small meeting room and said yes immediately, without hedging. They reflect on past roles in the building (note-taker, one who passes, one who failed and came back) and now see themselves as the one people turn to. They usually shrink good news and keep it on a short lead, but are trying tonight to let it be as big as it is. They rang their sister and joked with their nephew, and describe the day as a line in the sand between their past working life and what starts Monday. They note that wine did not even cross their mind.",
+   "narrative.meaning": "This is a line in the sand between my working life up to this afternoon and whatever starts on Monday.",
+   "narrative.identity_link": "They now see themselves as the one people turn to when the question is hard.",
+   "narrative.turning_point": true,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "pride",
+   "emotion.secondary": [
+    "joy",
+    "relief",
+    "gladness"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.75
+   },
+   "emotion.meta": "trying to let the feeling be as big as it is rather than minimising it",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "sudden",
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "job promotion offer",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "the director",
+    "my sister",
+    "my nephew"
+   ],
+   "context.relationship": "professional",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "the lead role offer",
+    "stake": "professional identity"
+   },
+   "salience.retrieval_cues": [
+    "the meeting room with the broken blind",
+    "the phrase \"the lead\"",
+    "sister saying \"about time\""
+   ],
+   "salience.themes": [
+    "achievement",
+    "identity",
+    "self-permission",
+    "change",
+    "restraint with good feeling"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "high",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.6,
+   "salience.function": [],
+   "salience.resilience": [
+    "self-awareness",
+    "allowing positive feeling"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "approach",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": "bold",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S28",
+  "self_position": "the one in this family who does the voices",
+  "self_position_from_authored_span": false,
+  "place": "sister's home",
+  "base": {
+   "narrative.subject": "Sunday lunch at sister's",
+   "narrative.trigger": "Sunday lunch",
+   "narrative.harm": null,
+   "narrative.drive": "family warmth",
+   "narrative.integration": null,
+   "narrative.summary": "The narrator spends a Sunday lunch at their sister's, where the roast is slightly overdone and nobody minds. They read the dinosaur book four times to their nephew, doing the voices as they have for three years. After lunch they doze on the sofa in the sun with the nephew's feet in their ribs, wake to coffee and laughter, and do the crossword badly with their sister. They drive home with the windows down, concluding that nothing happened and it was nice.",
+   "narrative.meaning": "Nothing happened today. It was nice.",
+   "narrative.identity_link": "The narrator is the one in the family who does the voices and has their own crossword corner.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "peace",
+   "emotion.secondary": [
+    "tenderness",
+    "joy"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.3
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": "heavy, warm, full-stomached feeling; eyelids weighing a kilo each",
+   "emotion.temporal_profile": "still",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "Sunday family lunch",
+   "context.event_category": "relationships",
+   "context.people": [
+    "my sister",
+    "the nephew",
+    "my sister's husband"
+   ],
+   "context.relationship": "family",
+   "context.relationship_model": "communal_sharing",
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "family",
+    "direction": "outward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "event",
+    "referent": "Sunday lunch at sister's",
+    "stake": "family closeness"
+   },
+   "salience.retrieval_cues": [
+    "dinosaur book voices",
+    "sun on legs on the sofa",
+    "smell of coffee",
+    "crossword rivers corner"
+   ],
+   "salience.themes": [
+    "family",
+    "ordinary contentment",
+    "belonging",
+    "routine"
+   ],
+   "salience.recurrence": "cyclical",
+   "salience.persistence": {
+    "text": "low",
+    "decay": null
+   },
+   "salience.linkage_strength": 0.3,
+   "salience.function": [],
+   "salience.resilience": [
+    "contentment",
+    "continuity"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "approach",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": null,
+   "motivation.coping": null
+  }
+ },
+ {
+  "id": "S29",
+  "self_position": "the one who organises these, the lido person",
+  "self_position_from_authored_span": false,
+  "place": "lido and changing room",
+  "base": {
+   "narrative.subject": "lido swimming",
+   "narrative.trigger": "cold, crowded evening swim",
+   "narrative.harm": "group drifting away",
+   "narrative.drive": "deciding to quit",
+   "narrative.integration": "letting go of lido",
+   "narrative.summary": "The narrator went to the lido in the coldest water of the year, in a crowded lane, got kicked twice and got out after six lengths with numb fingers and feet. In the changing room they wondered why they do it. They describe being the one who has organised the group swims for four years while everyone else drifted off, so this year it was just them and the message. On the bench they decided the lido era is over and something else will take the Thursday slot. They ended with tea, a hot bath and bed.",
+   "narrative.meaning": "They won't miss the thing itself, only perhaps the idea of it.",
+   "narrative.identity_link": "They have been the lido person and organiser of the group for four years.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "frustration",
+   "emotion.secondary": [
+    "disappointment",
+    "resignation"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "moderate",
+    "value": 0.4
+   },
+   "emotion.meta": "resigned acceptance",
+   "emotion.bodily_sensation": "white fingers, numb feet with distant thudding, teeth chattering, skin stinging as blood returned",
+   "emotion.temporal_profile": null,
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "evening swim at the lido",
+   "context.event_category": "recreation_exploration",
+   "context.people": [
+    "a stranger",
+    "the group"
+   ],
+   "context.relationship": "friendship",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "ritual",
+    "referent": "Thursday lido swim",
+    "stake": "organiser role in a fading group"
+   },
+   "salience.retrieval_cues": [
+    "cold water",
+    "changing room",
+    "anyone fancy a swim message"
+   ],
+   "salience.themes": [
+    "friends drifting away",
+    "ending a habit",
+    "being the organiser"
+   ],
+   "salience.recurrence": "chronic",
+   "salience.persistence": {
+    "text": null,
+    "decay": null
+   },
+   "salience.linkage_strength": 0.4,
+   "salience.function": [],
+   "salience.resilience": [
+    "decisiveness",
+    "self-care"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "avoid",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": null,
+   "motivation.coping": "detach"
+  }
+ },
+ {
+  "id": "S30",
+  "self_position": "the one in that office who says sorry first",
+  "self_position_from_authored_span": false,
+  "place": "office",
+  "base": {
+   "narrative.subject": "apology to colleague",
+   "narrative.trigger": "sharp one-line email",
+   "narrative.harm": "discomfort over sharp email",
+   "narrative.drive": "repairing friction",
+   "narrative.integration": "repair smaller than dread",
+   "narrative.summary": "Earlier in the week the client sent a colleague a sharp one-line email during a busy afternoon and felt uncomfortable about it for the rest of the day. The next morning the client apologised in person at the colleague's desk, and the two ended up having coffee. The colleague was 'completely fine about it', and the client felt mild embarrassment that passed quickly, then a 'light, pleased' mood. The client called it a minor event and did not want to over-read it.",
+   "narrative.meaning": "The gap between doing something I'm not proud of and putting it right can be about eighteen hours, and the putting-right is usually smaller than the dread.",
+   "narrative.identity_link": "The client is the one in the office who says sorry first and clears friction.",
+   "narrative.turning_point": false,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "relief",
+   "emotion.secondary": [
+    "pride",
+    "embarrassment"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.25
+   },
+   "emotion.meta": "acceptance",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "fading",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "apology to colleague",
+   "context.event_category": "relationships",
+   "context.people": [
+    "colleague"
+   ],
+   "context.relationship": "colleague",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "outward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "event",
+    "referent": "apology at colleague's desk",
+    "stake": "workplace relationship repair"
+   },
+   "salience.retrieval_cues": [
+    "sharp email",
+    "apology at colleague's desk",
+    "coffee"
+   ],
+   "salience.themes": [
+    "repair",
+    "apology",
+    "dread versus relief",
+    "workplace friction"
+   ],
+   "salience.recurrence": null,
+   "salience.persistence": {
+    "text": "low",
+    "decay": "fast"
+   },
+   "salience.linkage_strength": 0.2,
+   "salience.function": [],
+   "salience.resilience": [
+    "repair",
+    "proportion"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "repair",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": "balanced",
+   "motivation.coping": "confront"
+  }
+ },
+ {
+  "id": "S31",
+  "self_position": "the one carrying the map nobody looked at",
+  "self_position_from_authored_span": false,
+  "place": "hiking trail",
+  "base": {
+   "narrative.subject": "short hike with cousin",
+   "narrative.trigger": "closed trail",
+   "narrative.harm": null,
+   "narrative.drive": "company of cousin",
+   "narrative.integration": "plans yield, company remains",
+   "narrative.summary": "The narrator recalls a short spring hike with their cousin that they keep forgetting and then remembering. The trail was closed past the second bridge, so the planned loop became an hour-long out-and-back, and they debated whether the closure sign applied to them. The narrator carried the map nobody looked at, felt annoyed at burning calves on the last switchback, found the view merely fine, and ate sandwiches in the car with the heater on because of the wind. They conclude that plans are suggestions the weather has not read yet, and that a short walk with someone you like is still worthwhile even when the loop does not close.",
+   "narrative.meaning": "A plan is a suggestion the weather has not read yet, and a short walk with someone you like is still a short walk with someone you like, even when the loop does not close.",
+   "narrative.identity_link": "The narrator slots into the role of map carrier on outings without being asked.",
+   "narrative.turning_point": false,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "tenderness",
+   "emotion.secondary": [
+    "amusement",
+    "frustration"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "mixed",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.2
+   },
+   "emotion.meta": "wry acceptance",
+   "emotion.bodily_sensation": "calves burned on the last switchback",
+   "emotion.temporal_profile": null,
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "short hike",
+   "context.event_category": "recreation_exploration",
+   "context.people": [
+    "my cousin"
+   ],
+   "context.relationship": "family",
+   "context.relationship_model": null,
+   "context.life_stage": null,
+   "context.scope": {
+    "text": "family",
+    "direction": "outward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "event",
+    "referent": "closure sign and sandwiches",
+    "stake": null
+   },
+   "salience.retrieval_cues": [
+    "closure sign",
+    "sandwiches in the car",
+    "cousin's impression of the ranger"
+   ],
+   "salience.themes": [
+    "plans versus weather",
+    "companionship",
+    "ordinary days"
+   ],
+   "salience.recurrence": "cyclical",
+   "salience.persistence": {
+    "text": "medium",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.15,
+   "salience.function": [],
+   "salience.resilience": [
+    "acceptance",
+    "humor"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": null,
+   "motivation.need": null,
+   "motivation.temporal_focus": "past",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S36",
+  "self_position": "the one who kills plants",
+  "self_position_from_authored_span": false,
+  "place": "narrator's home windowsill",
+  "base": {
+   "narrative.subject": "dead fern",
+   "narrative.trigger": "friend noticing dead fern",
+   "narrative.harm": "embarrassment",
+   "narrative.drive": "honesty",
+   "narrative.integration": "owning the truth",
+   "narrative.summary": "The narrator confesses that the fern their friend gave them has been dead for about two months, and that they had kept hiding it and saying it was doing great. The friend came by to drop off a book, went straight to the window and laughed so hard she had to sit down. The narrator first blamed the north-facing light, then admitted it was their own fault. The friend said she had assumed as much since about the second visit. The narrator feels relief and embarrassment in roughly equal parts, has thrown the pot out, and the friend plans to bring a cactus next time.",
+   "narrative.meaning": "In this story I am the one who kills plants, and it is now a matter of record between us.",
+   "narrative.identity_link": "In this story I am the one who kills plants.",
+   "narrative.turning_point": true,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "relief",
+   "emotion.secondary": [
+    "embarrassment",
+    "amusement"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "mixed",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "low",
+    "value": 0.35
+   },
+   "emotion.meta": "wry acceptance",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "sudden",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "confessing a dead plant",
+   "context.event_category": "relationships",
+   "context.people": [
+    "my friend"
+   ],
+   "context.relationship": "friendship",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "friends",
+    "direction": "outward"
+   },
+   "salience.memory_type": "fleeting_moment",
+   "salience.tether": {
+    "type": "object",
+    "referent": "the fern",
+    "stake": "honesty with friend"
+   },
+   "salience.retrieval_cues": [
+    "fern",
+    "windowsill",
+    "north-facing light",
+    "cactus"
+   ],
+   "salience.themes": [
+    "honesty",
+    "embarrassment",
+    "friendship",
+    "self-image",
+    "guilt"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "low",
+    "decay": "fast"
+   },
+   "salience.linkage_strength": 0.25,
+   "salience.function": [],
+   "salience.resilience": [
+    "humor",
+    "acceptance"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "share",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": null,
+   "motivation.coping": "confront"
+  }
+ },
+ {
+  "id": "S37",
+  "self_position": "the one who drives everyone home",
+  "self_position_from_authored_span": false,
+  "place": null,
+  "base": {
+   "narrative.subject": "one year sober",
+   "narrative.trigger": "first sobriety anniversary",
+   "narrative.harm": "decade of drinking",
+   "narrative.drive": "self-respect",
+   "narrative.integration": "wanting versus needing distinction",
+   "narrative.summary": "The writer marks one year since they stopped drinking with an ordinary day: a long walk with their brother, dumplings and an early night. They describe the year as undramatic, made of a quiet morning decision and many small daily refusals. They credit support from people and a non-lecturing doctor but say staying stopped was their own doing. They note they have gone from leaving gatherings early for the wrong reasons to being the one who drives everyone home, and they keep the page to reread on a future bad night.",
+   "narrative.meaning": "Wanting a drink and needing one were never the same thing.",
+   "narrative.identity_link": "They have become the sibling who drives everyone home and likes who they are on the other side.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "pride",
+   "emotion.secondary": [
+    "gratitude",
+    "peace",
+    "hope"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "moderate",
+    "value": 0.5
+   },
+   "emotion.meta": "reflective acceptance",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "still",
+   "emotion.appraisal.urgency": {
+    "text": "calm",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": "self",
+   "context.event": "sobriety anniversary",
+   "context.event_category": "drug_alcohol_tobacco_use",
+   "context.people": [
+    "my brother",
+    "a doctor"
+   ],
+   "context.relationship": "sibling_bond",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "one year of sobriety",
+    "stake": "staying sober"
+   },
+   "salience.retrieval_cues": [
+    "this page",
+    "declining a second glass",
+    "driving everyone home"
+   ],
+   "salience.themes": [
+    "sobriety",
+    "ordinariness",
+    "self-credit",
+    "identity change",
+    "want versus need"
+   ],
+   "salience.recurrence": "chronic",
+   "salience.persistence": {
+    "text": "enduring",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.7,
+   "salience.function": [
+    "directive",
+    "self"
+   ],
+   "salience.resilience": [
+    "self-efficacy",
+    "acceptance",
+    "continuity"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "persevere",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S38",
+  "self_position": "the one who finished",
+  "self_position_from_authored_span": false,
+  "place": "stairwell at work",
+  "base": {
+   "narrative.subject": "passing qualifying exam",
+   "narrative.trigger": "receiving exam result",
+   "narrative.harm": null,
+   "narrative.drive": "finishing what she started",
+   "narrative.integration": "rewriting family story about herself",
+   "narrative.summary": "Client opened the session reporting she passed the professional qualifying exam on her third attempt, with results released two days earlier. She described receiving the notification at work, opening it in a stairwell, reading the single word twice, and phoning her mother first, who cried; she herself stayed calm until the train home. She connected the result to a family story of being the one who doesn't finish things and said that in this story she is the one who finished. She stated that the second and third tries count as much as the first and that she intends to hold on to this memory for future setbacks. She declined to explore earlier failed attempts and plans a small celebration and sessions on the transition into practice.",
+   "narrative.meaning": "The second and third tries count as much as the first.",
+   "narrative.identity_link": "She sees herself as the one who finished, not the one who doesn't finish.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "pride",
+   "emotion.secondary": [
+    "relief",
+    "joy"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.7
+   },
+   "emotion.meta": null,
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": null,
+   "emotion.appraisal.urgency": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": null,
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "passing qualifying exam",
+   "context.event_category": "achievement_mastery",
+   "context.people": [
+    "her mother",
+    "clinician"
+   ],
+   "context.relationship": "therapeutic",
+   "context.relationship_model": null,
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "self",
+    "direction": "inward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "the single word of the exam result",
+    "stake": "self-story as someone who finishes"
+   },
+   "salience.retrieval_cues": [
+    "reading the single word twice",
+    "stairwell",
+    "call to her mother",
+    "the train home"
+   ],
+   "salience.themes": [
+    "perseverance",
+    "family story",
+    "identity",
+    "achievement"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "enduring",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.7,
+   "salience.function": [
+    "directive",
+    "self"
+   ],
+   "salience.resilience": [
+    "perseverance",
+    "deliberate memory use",
+    "optimism"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "share",
+   "motivation.need": null,
+   "motivation.temporal_focus": "future",
+   "motivation.risk_posture": null,
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S39",
+  "self_position": "the youngest, who tonight was the one who stood up",
+  "self_position_from_authored_span": false,
+  "place": "parents' home",
+  "base": {
+   "narrative.subject": "dad choking at dinner",
+   "narrative.trigger": "dad stopped mid-sentence choking",
+   "narrative.harm": "threat of father dying",
+   "narrative.drive": "decisive action",
+   "narrative.integration": "worst minute passes",
+   "narrative.summary": "During dinner at his parents' home, the narrator's father stopped mid-sentence and put his hands on the table, silently choking. The narrator got behind him and did the abdominal thrusts from the staff-kitchen poster, and on the second push a piece of steak came out and his father breathed. His father joked 'well, that was undignified,' his mother laughed and cried, and they finished dinner. The narrator drove home under a clear sky, saying the father is fine and already joking in the family chat.",
+   "narrative.meaning": "The worst minute passes, and it passes faster when someone in the room decides to move.",
+   "narrative.identity_link": "Usually the youngest who is told things after decisions are made, tonight the narrator was the one who stood up.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "relief",
+   "emotion.secondary": [
+    "pride",
+    "tenderness",
+    "fear"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "positive",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "moderate",
+    "value": 0.5
+   },
+   "emotion.meta": "acceptance; deliberately not making it bigger than it is",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "sudden",
+   "emotion.appraisal.urgency": {
+    "text": "acute",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "high",
+    "value": null
+   },
+   "emotion.appraisal.attribution": null,
+   "context.event": "father choking at family dinner",
+   "context.event_category": "life_threatening_events",
+   "context.people": [
+    "Dad",
+    "my mother"
+   ],
+   "context.relationship": "parent_child",
+   "context.relationship_model": "communal_sharing",
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "family",
+    "direction": "outward"
+   },
+   "salience.memory_type": "milestone",
+   "salience.tether": {
+    "type": "event",
+    "referent": "dad choking at dinner",
+    "stake": "father's life"
+   },
+   "salience.retrieval_cues": [
+    "hands flat on the table",
+    "silent choking",
+    "piece of steak",
+    "door being dragged open sound",
+    "undignified joke"
+   ],
+   "salience.themes": [
+    "family",
+    "helping",
+    "role in family",
+    "resilience",
+    "humor"
+   ],
+   "salience.recurrence": "isolated",
+   "salience.persistence": {
+    "text": "medium",
+    "decay": null
+   },
+   "salience.linkage_strength": 0.4,
+   "salience.function": [],
+   "salience.resilience": [
+    "humor",
+    "acceptance",
+    "perspective"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "protect",
+   "motivation.need": null,
+   "motivation.temporal_focus": "present",
+   "motivation.risk_posture": null,
+   "motivation.coping": "reframe_meaning"
+  }
+ },
+ {
+  "id": "S49",
+  "self_position": "the one outside the window",
+  "self_position_from_authored_span": false,
+  "place": null,
+  "base": {
+   "narrative.subject": "closest friend's disclosure",
+   "narrative.trigger": "friend's confession tonight",
+   "narrative.harm": "exclusion and betrayal",
+   "narrative.drive": "need to process before calling",
+   "narrative.integration": null,
+   "narrative.summary": "The user's closest friend told them tonight that the group had been meeting without them for most of a year, and that she organized the first gatherings on purpose. The user paid for drinks, said \"thank you for telling me,\" and walked for an hour before going home. They keep rearranging the past year in their mind and say nothing about the group will be the same. They plan to send a voice note to their sister, who can call back in the morning.",
+   "narrative.meaning": "Nothing about that group is ever going to be the same after tonight.",
+   "narrative.identity_link": "The user sees themself as the one outside the window, talked about instead of to.",
+   "narrative.turning_point": null,
+   "narrative.arc": null,
+   "narrative.valence_shift": null,
+   "emotion.primary": "sadness",
+   "emotion.secondary": [
+    "shame",
+    "anger",
+    "disappointment"
+   ],
+   "emotion.kind": null,
+   "emotion.valence": {
+    "text": "negative",
+    "value": null
+   },
+   "emotion.arousal": {
+    "text": null,
+    "value": null
+   },
+   "emotion.intensity": {
+    "text": "high",
+    "value": 0.7
+   },
+   "emotion.meta": "uncertain about own response; rearranging events",
+   "emotion.bodily_sensation": null,
+   "emotion.temporal_profile": "recurring",
+   "emotion.appraisal.urgency": {
+    "text": "elevated",
+    "value": null
+   },
+   "emotion.appraisal.control": {
+    "text": "low",
+    "value": null
+   },
+   "emotion.appraisal.attribution": "other",
+   "context.event": "friend's disclosure of exclusion",
+   "context.event_category": "relationships",
+   "context.people": [
+    "closest friend",
+    "the group",
+    "my sister"
+   ],
+   "context.relationship": "friendship",
+   "context.relationship_model": "communal_sharing",
+   "context.life_stage": "recent",
+   "context.scope": {
+    "text": "friends",
+    "direction": "inward"
+   },
+   "salience.memory_type": "formative_experience",
+   "salience.tether": {
+    "type": "person",
+    "referent": "closest friend and the group",
+    "stake": "belonging"
+   },
+   "salience.retrieval_cues": [
+    "we should catch up soon",
+    "the one outside the window",
+    "paying for drinks"
+   ],
+   "salience.themes": [
+    "exclusion",
+    "friendship",
+    "betrayal",
+    "belonging"
+   ],
+   "salience.recurrence": "chronic",
+   "salience.persistence": {
+    "text": "high",
+    "decay": "slow"
+   },
+   "salience.linkage_strength": 0.6,
+   "salience.function": [],
+   "salience.resilience": [
+    "seeking support"
+   ],
+   "salience.trajectory": null,
+   "motivation.action_tendency": "share",
+   "motivation.need": null,
+   "motivation.temporal_focus": "past",
+   "motivation.risk_posture": "cautious",
+   "motivation.coping": "seek_support"
+  }
+ }
+]

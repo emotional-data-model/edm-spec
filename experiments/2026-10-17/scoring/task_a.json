@@ -1,0 +1,5687 @@
+{
+ "k": 3,
+ "per_block": [
+  {
+   "block": "syn-m1",
+   "arm": "synthetic",
+   "recency": 0.0,
+   "random": 0.296,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "S01",
+       "S04",
+       "S02"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S01",
+       "S02",
+       "S04"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S04",
+       "S01",
+       "S06"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S01",
+       "S03",
+       "S08"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "S01": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": 0.75
+      },
+      "S02": {
+       "intensity": 0.7,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "S03": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S04": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S05": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S06": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S07": {
+       "intensity": 0.25,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S08": {
+       "intensity": 0.2,
+       "linkage": 0.5,
+       "persistence": 0.25
+      },
+      "S09": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S10": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "S04",
+       "S02",
+       "S06"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S04",
+       "S01",
+       "S02"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S02",
+       "S04",
+       "S06"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S02",
+       "S04",
+       "S05"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S01": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S02": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S03": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": 0.25
+      },
+      "S04": {
+       "intensity": 0.75,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S05": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "S06": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S07": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S08": {
+       "intensity": 0.3,
+       "linkage": 0.6,
+       "persistence": 0.25
+      },
+      "S09": {
+       "intensity": 0.4,
+       "linkage": 0.5,
+       "persistence": 0.25
+      },
+      "S10": {
+       "intensity": 0.3,
+       "linkage": 0.5,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "S04",
+       "S07",
+       "S03"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "S03",
+       "S08",
+       "S01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "S04",
+       "S07",
+       "S08"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "S08",
+       "S09",
+       "S01"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "S01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S03": {
+       "intensity": 0.25,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "S04": {
+       "intensity": null,
+       "linkage": 0.95,
+       "persistence": null
+      },
+      "S05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S07": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S08": {
+       "intensity": 0.2,
+       "linkage": 0.8,
+       "persistence": 0.25
+      },
+      "S09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": 0.25
+      },
+      "S10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "S01",
+       "S02",
+       "S04"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S01",
+       "S02",
+       "S04"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S02",
+       "S04",
+       "S01"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S01",
+       "S06",
+       "S02"
+      ],
+      "hit_rate": 0.75
+     },
+     "components": {
+      "S01": {
+       "intensity": 0.9,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S02": {
+       "intensity": 0.8,
+       "linkage": 0.9,
+       "persistence": 0.75
+      },
+      "S03": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S04": {
+       "intensity": 0.8,
+       "linkage": 0.9,
+       "persistence": 0.75
+      },
+      "S05": {
+       "intensity": 0.55,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S06": {
+       "intensity": 0.6,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S07": {
+       "intensity": 0.45,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S08": {
+       "intensity": 0.3,
+       "linkage": 0.6,
+       "persistence": 0.25
+      },
+      "S09": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S10": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": 0.25
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "syn-m2",
+   "arm": "synthetic",
+   "recency": 0.25,
+   "random": 0.29625,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "S15",
+       "S11",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S15",
+       "S11",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S11",
+       "S15",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S11",
+       "S15",
+       "S13"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S11": {
+       "intensity": 0.7,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S12": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S13": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.5
+      },
+      "S14": {
+       "intensity": 0.55,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S15": {
+       "intensity": 0.9,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S16": {
+       "intensity": 0.45,
+       "linkage": 0.35,
+       "persistence": null
+      },
+      "S17": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "S18": {
+       "intensity": 0.25,
+       "linkage": 0.15,
+       "persistence": 0.25
+      },
+      "S19": {
+       "intensity": 0.65,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S20": {
+       "intensity": 0.2,
+       "linkage": 0.1,
+       "persistence": 0.25
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "S15",
+       "S11",
+       "S13"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "S15",
+       "S11",
+       "S14"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S11",
+       "S15",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S13",
+       "S15",
+       "S11"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S11": {
+       "intensity": 0.7,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "S12": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S13": {
+       "intensity": 0.4,
+       "linkage": 0.5,
+       "persistence": 1.0
+      },
+      "S14": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S15": {
+       "intensity": 0.9,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S16": {
+       "intensity": 0.5,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S17": {
+       "intensity": null,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "S18": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S19": {
+       "intensity": 0.6,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S20": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": 0.25
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "S11",
+       "S15",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S15",
+       "S12",
+       "S11"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "S11",
+       "S15",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S12",
+       "S20",
+       "S11"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "S11": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S12": {
+       "intensity": 0.5,
+       "linkage": null,
+       "persistence": 0.25
+      },
+      "S13": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "S14": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S15": {
+       "intensity": 0.9,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S16": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S17": {
+       "intensity": null,
+       "linkage": 0.0,
+       "persistence": null
+      },
+      "S18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S19": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S20": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": 0.25
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "S15",
+       "S11",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S15",
+       "S11",
+       "S19"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S11",
+       "S15",
+       "S14"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S11",
+       "S13",
+       "S15"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S11": {
+       "intensity": 0.8,
+       "linkage": 0.9,
+       "persistence": 1.0
+      },
+      "S12": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S13": {
+       "intensity": 0.4,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S14": {
+       "intensity": 0.5,
+       "linkage": 0.8,
+       "persistence": 0.75
+      },
+      "S15": {
+       "intensity": 0.9,
+       "linkage": 0.9,
+       "persistence": 1.0
+      },
+      "S16": {
+       "intensity": 0.5,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S17": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S18": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S19": {
+       "intensity": 0.8,
+       "linkage": 0.75,
+       "persistence": 0.75
+      },
+      "S20": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": 0.25
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "syn-m3",
+   "arm": "synthetic",
+   "recency": 0.0,
+   "random": 0.3015,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S26",
+       "S21",
+       "S23"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S23",
+       "S21",
+       "S26"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S23",
+       "S21",
+       "S26"
+      ],
+      "hit_rate": 0.75
+     },
+     "components": {
+      "S21": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S22": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S23": {
+       "intensity": 0.625,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S24": {
+       "intensity": 0.35,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S25": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "S26": {
+       "intensity": 0.75,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S27": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S28": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S29": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "S30": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": 0.25
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "S23",
+       "S21",
+       "S26"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S21",
+       "S26",
+       "S27"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S23",
+       "S21",
+       "S24"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "S23",
+       "S24",
+       "S21"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S21": {
+       "intensity": 0.7,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "S22": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "S23": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S24": {
+       "intensity": 0.3,
+       "linkage": 0.6,
+       "persistence": 1.0
+      },
+      "S25": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "S26": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S27": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S28": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S29": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S30": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": 0.25
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S22",
+       "S30",
+       "S24"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S21",
+       "S22",
+       "S23"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S21": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S22": {
+       "intensity": 0.25,
+       "linkage": null,
+       "persistence": null
+      },
+      "S23": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S24": {
+       "intensity": 0.2,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S25": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "S26": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S27": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S28": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S29": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S30": {
+       "intensity": 0.25,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S26",
+       "S21",
+       "S27"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S23",
+       "S26",
+       "S21"
+      ],
+      "hit_rate": 0.75
+     },
+     "components": {
+      "S21": {
+       "intensity": 0.7,
+       "linkage": 0.8,
+       "persistence": 0.75
+      },
+      "S22": {
+       "intensity": 0.3,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S23": {
+       "intensity": null,
+       "linkage": 1.0,
+       "persistence": 1.0
+      },
+      "S24": {
+       "intensity": 0.3,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S25": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": 0.25
+      },
+      "S26": {
+       "intensity": 0.8,
+       "linkage": 0.9,
+       "persistence": 1.0
+      },
+      "S27": {
+       "intensity": 0.6,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "S28": {
+       "intensity": 0.2,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S29": {
+       "intensity": 0.6,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S30": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "syn-m4",
+   "arm": "synthetic",
+   "recency": 0.5,
+   "random": 0.30525,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "S38",
+       "S37",
+       "S33"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S33",
+       "S38",
+       "S32"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "S37",
+       "S38",
+       "S33"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S37",
+       "S38",
+       "S31"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S31": {
+       "intensity": 0.2,
+       "linkage": 0.15,
+       "persistence": 0.5
+      },
+      "S32": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": 0.5
+      },
+      "S33": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S34": {
+       "intensity": 0.25,
+       "linkage": 0.15,
+       "persistence": 0.25
+      },
+      "S35": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S36": {
+       "intensity": 0.35,
+       "linkage": 0.25,
+       "persistence": 0.25
+      },
+      "S37": {
+       "intensity": 0.5,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S38": {
+       "intensity": 0.7,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S39": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "S40": {
+       "intensity": 0.3,
+       "linkage": 0.15,
+       "persistence": 0.25
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "S38",
+       "S37",
+       "S33"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S33",
+       "S38",
+       "S39"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S37",
+       "S38",
+       "S33"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S31",
+       "S37",
+       "S38"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S31": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 1.0
+      },
+      "S32": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "S33": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "S34": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S35": {
+       "intensity": 0.3,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "S36": {
+       "intensity": 0.45,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "S37": {
+       "intensity": 0.4,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S38": {
+       "intensity": 0.6,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S39": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": 0.5
+      },
+      "S40": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": 0.25
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "S38",
+       "S33",
+       "S37"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S33",
+       "S31",
+       "S32"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "S38",
+       "S33",
+       "S37"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S38",
+       "S31",
+       "S32"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "S31": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S32": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S33": {
+       "intensity": 0.8500000000000001,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S34": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S35": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S36": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S37": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S38": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": 1.0
+      },
+      "S39": {
+       "intensity": null,
+       "linkage": 0.75,
+       "persistence": null
+      },
+      "S40": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "S38",
+       "S37",
+       "S32"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "S33",
+       "S32",
+       "S36"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "S37",
+       "S38",
+       "S33"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_persistence": {
+      "retained": [
+       "S37",
+       "S32",
+       "S38"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S31": {
+       "intensity": 0.2,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S32": {
+       "intensity": 0.6,
+       "linkage": 0.6499999999999999,
+       "persistence": 0.75
+      },
+      "S33": {
+       "intensity": 0.8,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S34": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S35": {
+       "intensity": 0.2,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S36": {
+       "intensity": 0.5,
+       "linkage": 0.5,
+       "persistence": 0.5
+      },
+      "S37": {
+       "intensity": 0.4,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S38": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": 0.75
+      },
+      "S39": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S40": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": 0.25
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "syn-m5",
+   "arm": "synthetic",
+   "recency": 0.5,
+   "random": 0.3035,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "S41",
+       "S49",
+       "S50"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S41",
+       "S49",
+       "S46"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S41",
+       "S49",
+       "S43"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "S41",
+       "S49",
+       "S42"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S41": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S42": {
+       "intensity": 0.2,
+       "linkage": 0.15,
+       "persistence": 0.25
+      },
+      "S43": {
+       "intensity": 0.4,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "S44": {
+       "intensity": 0.35,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S45": {
+       "intensity": 0.35,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S46": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S47": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S48": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": 0.25
+      },
+      "S49": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "S50": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "S49",
+       "S41",
+       "S43"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "S41",
+       "S49",
+       "S46"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_linkage": {
+      "retained": [
+       "S49",
+       "S41",
+       "S43"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "S41",
+       "S43",
+       "S49"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "S41": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 1.0
+      },
+      "S42": {
+       "intensity": 0.2,
+       "linkage": 0.15,
+       "persistence": 0.25
+      },
+      "S43": {
+       "intensity": 0.45,
+       "linkage": 0.6,
+       "persistence": 1.0
+      },
+      "S44": {
+       "intensity": 0.3,
+       "linkage": 0.5,
+       "persistence": 0.5
+      },
+      "S45": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "S46": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S47": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "S48": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S49": {
+       "intensity": 0.7,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "S50": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "S41",
+       "S43",
+       "S49"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "S44",
+       "S41",
+       "S42"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "S41",
+       "S43",
+       "S44"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "S44",
+       "S41",
+       "S42"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "S41": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S42": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S43": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": null
+      },
+      "S44": {
+       "intensity": 0.2,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "S45": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S46": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S47": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S48": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "S49": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "S50": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "S41",
+       "S49",
+       "S50"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "S41",
+       "S50",
+       "S43"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "S41",
+       "S49",
+       "S43"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "S41",
+       "S49",
+       "S50"
+      ],
+      "hit_rate": 0.75
+     },
+     "components": {
+      "S41": {
+       "intensity": 0.9,
+       "linkage": 0.9,
+       "persistence": 1.0
+      },
+      "S42": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S43": {
+       "intensity": 0.5,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S44": {
+       "intensity": 0.3,
+       "linkage": 0.7,
+       "persistence": 0.5
+      },
+      "S45": {
+       "intensity": 0.3,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "S46": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "S47": {
+       "intensity": 0.2,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "S48": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "S49": {
+       "intensity": null,
+       "linkage": 0.9,
+       "persistence": 0.75
+      },
+      "S50": {
+       "intensity": 0.8,
+       "linkage": 0.7,
+       "persistence": 0.75
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "locomo-conv-42",
+   "arm": "conversational",
+   "recency": 0.2988505747126437,
+   "random": 0.25720689655172413,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "L42-09",
+       "L42-02",
+       "L42-05"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-09",
+       "L42-02",
+       "L42-05"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-02",
+       "L42-05",
+       "L42-09"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "S_persistence": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "components": {
+      "L42-01": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-02": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L42-03": {
+       "intensity": 0.55,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-04": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L42-05": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L42-06": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L42-07": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-08": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-09": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L42-10": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "L42-03",
+       "L42-04",
+       "L42-05"
+      ],
+      "hit_rate": 0.1839080459770115
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-03",
+       "L42-05",
+       "L42-09"
+      ],
+      "hit_rate": 0.26436781609195403
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-04",
+       "L42-03",
+       "L42-05"
+      ],
+      "hit_rate": 0.1839080459770115
+     },
+     "S_persistence": {
+      "retained": [
+       "L42-03",
+       "L42-04",
+       "L42-01"
+      ],
+      "hit_rate": 0.20689655172413793
+     },
+     "components": {
+      "L42-01": {
+       "intensity": 0.6,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "L42-02": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L42-03": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": 0.75
+      },
+      "L42-04": {
+       "intensity": 0.5,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "L42-05": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L42-06": {
+       "intensity": 0.45,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-07": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-08": {
+       "intensity": 0.5,
+       "linkage": 0.45,
+       "persistence": null
+      },
+      "L42-09": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L42-10": {
+       "intensity": 0.7,
+       "linkage": 0.35,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "L42-05",
+       "L42-10",
+       "L42-01"
+      ],
+      "hit_rate": 0.26436781609195403
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-05",
+       "L42-10",
+       "L42-01"
+      ],
+      "hit_rate": 0.26436781609195403
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "S_persistence": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "components": {
+      "L42-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-05": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-10": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "L42-03",
+       "L42-01",
+       "L42-05"
+      ],
+      "hit_rate": 0.21839080459770116
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-07",
+       "L42-10",
+       "L42-03"
+      ],
+      "hit_rate": 0.2988505747126437
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.3563218390804598
+     },
+     "S_persistence": {
+      "retained": [
+       "L42-03",
+       "L42-05",
+       "L42-01"
+      ],
+      "hit_rate": 0.21839080459770116
+     },
+     "components": {
+      "L42-01": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "L42-02": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L42-03": {
+       "intensity": 0.75,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "L42-04": {
+       "intensity": null,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L42-05": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "L42-06": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-07": {
+       "intensity": 0.8,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-08": {
+       "intensity": null,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L42-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L42-10": {
+       "intensity": 0.8,
+       "linkage": 0.5,
+       "persistence": null
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "locomo-conv-48",
+   "arm": "conversational",
+   "recency": 0.17391304347826086,
+   "random": 0.2746304347826087,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "L48-01",
+       "L48-04",
+       "L48-02"
+      ],
+      "hit_rate": 0.44565217391304346
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-04",
+       "L48-02",
+       "L48-05"
+      ],
+      "hit_rate": 0.42391304347826086
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-04"
+      ],
+      "hit_rate": 0.44565217391304346
+     },
+     "S_persistence": {
+      "retained": [
+       "L48-01",
+       "L48-07",
+       "L48-02"
+      ],
+      "hit_rate": 0.391304347826087
+     },
+     "components": {
+      "L48-01": {
+       "intensity": 0.4,
+       "linkage": 0.6,
+       "persistence": 1.0
+      },
+      "L48-02": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L48-03": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "L48-04": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L48-05": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L48-06": {
+       "intensity": 0.5,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L48-07": {
+       "intensity": 0.4,
+       "linkage": 0.5,
+       "persistence": 0.5
+      },
+      "L48-08": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L48-09": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L48-10": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "L48-07",
+       "L48-01",
+       "L48-02"
+      ],
+      "hit_rate": 0.391304347826087
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-04",
+       "L48-02",
+       "L48-05"
+      ],
+      "hit_rate": 0.42391304347826086
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.41304347826086957
+     },
+     "S_persistence": {
+      "retained": [
+       "L48-07",
+       "L48-10",
+       "L48-01"
+      ],
+      "hit_rate": 0.2608695652173913
+     },
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L48-02": {
+       "intensity": 0.6,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L48-03": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "L48-04": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L48-05": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "L48-06": {
+       "intensity": 0.4,
+       "linkage": 0.6,
+       "persistence": null
+      },
+      "L48-07": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": 1.0
+      },
+      "L48-08": {
+       "intensity": 0.55,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L48-09": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "L48-10": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": 0.5
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "L48-04",
+       "L48-06",
+       "L48-10"
+      ],
+      "hit_rate": 0.30434782608695654
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-10",
+       "L48-01",
+       "L48-02"
+      ],
+      "hit_rate": 0.391304347826087
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-04",
+       "L48-06",
+       "L48-01"
+      ],
+      "hit_rate": 0.30434782608695654
+     },
+     "S_persistence": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-03"
+      ],
+      "hit_rate": 0.3804347826086957
+     },
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-04": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "L48-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-06": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "L48-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-10": {
+       "intensity": 0.75,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.41304347826086957
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-02",
+       "L48-08",
+       "L48-10"
+      ],
+      "hit_rate": 0.358695652173913
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.41304347826086957
+     },
+     "S_persistence": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.41304347826086957
+     },
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "L48-02": {
+       "intensity": 0.7,
+       "linkage": 0.8,
+       "persistence": 1.0
+      },
+      "L48-03": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "L48-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-06": {
+       "intensity": 0.5,
+       "linkage": 0.7,
+       "persistence": 1.0
+      },
+      "L48-07": {
+       "intensity": null,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "L48-08": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "L48-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "L48-10": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": 0.5
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "lme-9aaed6a3",
+   "arm": "conversational",
+   "recency": 0.0,
+   "random": 0.2855,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "M9aaed6a3-05",
+       "M9aaed6a3-10",
+       "M9aaed6a3-08"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M9aaed6a3-10",
+       "M9aaed6a3-05",
+       "M9aaed6a3-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M9aaed6a3-05",
+       "M9aaed6a3-10",
+       "M9aaed6a3-08"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M9aaed6a3-06",
+       "M9aaed6a3-01",
+       "M9aaed6a3-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M9aaed6a3-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-05": {
+       "intensity": 0.4,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "M9aaed6a3-06": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": 0.25
+      },
+      "M9aaed6a3-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-08": {
+       "intensity": 0.25,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "M9aaed6a3-09": {
+       "intensity": null,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "M9aaed6a3-10": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "M9aaed6a3-10",
+       "M9aaed6a3-05",
+       "M9aaed6a3-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M9aaed6a3-10",
+       "M9aaed6a3-05",
+       "M9aaed6a3-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M9aaed6a3-05",
+       "M9aaed6a3-10",
+       "M9aaed6a3-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M9aaed6a3-01",
+       "M9aaed6a3-02",
+       "M9aaed6a3-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "M9aaed6a3-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-05": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "M9aaed6a3-06": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M9aaed6a3-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-09": {
+       "intensity": 0.15,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-10": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "M9aaed6a3-01",
+       "M9aaed6a3-02",
+       "M9aaed6a3-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "M9aaed6a3-01",
+       "M9aaed6a3-02",
+       "M9aaed6a3-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "M9aaed6a3-01",
+       "M9aaed6a3-02",
+       "M9aaed6a3-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "M9aaed6a3-01",
+       "M9aaed6a3-02",
+       "M9aaed6a3-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "M9aaed6a3-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "M9aaed6a3-06",
+       "M9aaed6a3-08",
+       "M9aaed6a3-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M9aaed6a3-06",
+       "M9aaed6a3-08",
+       "M9aaed6a3-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M9aaed6a3-06",
+       "M9aaed6a3-08",
+       "M9aaed6a3-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M9aaed6a3-06",
+       "M9aaed6a3-01",
+       "M9aaed6a3-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M9aaed6a3-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-06": {
+       "intensity": 0.45,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "M9aaed6a3-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-08": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M9aaed6a3-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M9aaed6a3-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "lme-09ba9854",
+   "arm": "conversational",
+   "recency": 0.0,
+   "random": 0.291,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "M09ba9854-07",
+       "M09ba9854-08",
+       "M09ba9854-10"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M09ba9854-07",
+       "M09ba9854-08",
+       "M09ba9854-09"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M09ba9854-07",
+       "M09ba9854-10",
+       "M09ba9854-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M09ba9854-02",
+       "M09ba9854-01",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M09ba9854-01": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M09ba9854-02": {
+       "intensity": 0.2,
+       "linkage": 0.1,
+       "persistence": 0.25
+      },
+      "M09ba9854-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-04": {
+       "intensity": null,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "M09ba9854-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-07": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M09ba9854-08": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M09ba9854-09": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M09ba9854-10": {
+       "intensity": null,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "M09ba9854-08",
+       "M09ba9854-07",
+       "M09ba9854-09"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M09ba9854-08",
+       "M09ba9854-07",
+       "M09ba9854-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M09ba9854-08",
+       "M09ba9854-07",
+       "M09ba9854-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M09ba9854-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-02": {
+       "intensity": 0.35,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M09ba9854-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-07": {
+       "intensity": 0.45,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "M09ba9854-08": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M09ba9854-09": {
+       "intensity": 0.3,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M09ba9854-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "M09ba9854-04",
+       "M09ba9854-01",
+       "M09ba9854-02"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "M09ba9854-04",
+       "M09ba9854-01",
+       "M09ba9854-02"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "M09ba9854-04",
+       "M09ba9854-01",
+       "M09ba9854-02"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "M09ba9854-01",
+       "M09ba9854-02",
+       "M09ba9854-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M09ba9854-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-04": {
+       "intensity": 0.3,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "M09ba9854-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M09ba9854-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "lme-3fdac837",
+   "arm": "conversational",
+   "recency": 0.5,
+   "random": 0.295,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-05",
+       "M3fdac837-07"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-05",
+       "M3fdac837-07"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-06",
+       "M3fdac837-07"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-03",
+       "M3fdac837-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M3fdac837-01": {
+       "intensity": 0.25,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M3fdac837-02": {
+       "intensity": null,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "M3fdac837-03": {
+       "intensity": 0.15,
+       "linkage": 0.1,
+       "persistence": 0.25
+      },
+      "M3fdac837-04": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M3fdac837-05": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "M3fdac837-06": {
+       "intensity": 0.55,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "M3fdac837-07": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "M3fdac837-08": {
+       "intensity": 0.25,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M3fdac837-09": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M3fdac837-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "M3fdac837-08",
+       "M3fdac837-06",
+       "M3fdac837-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-08",
+       "M3fdac837-04"
+      ],
+      "hit_rate": 1.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-06",
+       "M3fdac837-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M3fdac837-01",
+       "M3fdac837-02",
+       "M3fdac837-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M3fdac837-01": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M3fdac837-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-03": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M3fdac837-04": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "M3fdac837-05": {
+       "intensity": 0.4,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "M3fdac837-06": {
+       "intensity": 0.7,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "M3fdac837-07": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "M3fdac837-08": {
+       "intensity": 0.6,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-09": {
+       "intensity": 0.3,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-01",
+       "M3fdac837-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-01",
+       "M3fdac837-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M3fdac837-06",
+       "M3fdac837-01",
+       "M3fdac837-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M3fdac837-01",
+       "M3fdac837-02",
+       "M3fdac837-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M3fdac837-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-06": {
+       "intensity": 0.8,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "M3fdac837-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-06",
+       "M3fdac837-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "M3fdac837-02",
+       "M3fdac837-01",
+       "M3fdac837-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-06",
+       "M3fdac837-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "M3fdac837-05",
+       "M3fdac837-01",
+       "M3fdac837-02"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "M3fdac837-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-02": {
+       "intensity": 0.3,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-05": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "M3fdac837-06": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "M3fdac837-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "M3fdac837-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "pepys-m01",
+   "arm": "pepys",
+   "recency": 0.25,
+   "random": 0.304,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-01-11",
+       "P1665-01-12",
+       "P1665-01-31"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-01-17",
+       "P1665-01-18",
+       "P1665-01-19"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-01-03": {
+       "intensity": 0.2,
+       "linkage": 0.15000000000000002,
+       "persistence": null
+      },
+      "P1665-01-11": {
+       "intensity": 0.45,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-01-12": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-01-17": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-01-18": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-01-19": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-01-24": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-25": {
+       "intensity": 0.2,
+       "linkage": 0.1,
+       "persistence": 0.25
+      },
+      "P1665-01-27": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-31": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-03",
+       "P1665-01-11"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-01-03": {
+       "intensity": 0.2,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "P1665-01-11": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-01-12": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-01-17": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-18": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-19": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-24": {
+       "intensity": 0.2,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-25": {
+       "intensity": 0.2,
+       "linkage": 0.1,
+       "persistence": null
+      },
+      "P1665-01-27": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-31": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": 0.5
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-19",
+       "P1665-01-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-19",
+       "P1665-01-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-01-03",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-01-03",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-01-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-11": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-12": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-17": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-19": {
+       "intensity": 0.15000000000000002,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-24": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-25": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-27": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-31": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-18"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-01-11",
+       "P1665-01-31",
+       "P1665-01-18"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-11",
+       "P1665-01-12"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-01-31",
+       "P1665-01-18",
+       "P1665-01-19"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-01-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-11": {
+       "intensity": 0.7,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "P1665-01-12": {
+       "intensity": null,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-01-17": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-01-18": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-01-19": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-01-24": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-25": {
+       "intensity": 0.25,
+       "linkage": 0.15000000000000002,
+       "persistence": 0.25
+      },
+      "P1665-01-27": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-01-31": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "pepys-m04",
+   "arm": "pepys",
+   "recency": 0.25,
+   "random": 0.29425,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-29",
+       "P1665-04-19"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-19",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-04-08",
+       "P1665-04-12",
+       "P1665-04-14"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-04-19",
+       "P1665-04-08",
+       "P1665-04-10"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-04-08": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-10": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-12": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-14": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-17": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-18": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-19": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-04-20": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-22": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-29": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-19",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-19",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-19",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-08",
+       "P1665-04-10"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-04-08": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-10": {
+       "intensity": 0.2,
+       "linkage": 0.15000000000000002,
+       "persistence": null
+      },
+      "P1665-04-12": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": 0.5
+      },
+      "P1665-04-14": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-17": {
+       "intensity": 0.3,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "P1665-04-18": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-19": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "P1665-04-20": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-22": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-29": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "P1665-04-19",
+       "P1665-04-12",
+       "P1665-04-08"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-04-19",
+       "P1665-04-08",
+       "P1665-04-10"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-04-08",
+       "P1665-04-10",
+       "P1665-04-12"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-08",
+       "P1665-04-10"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-04-08": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-10": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-12": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": 0.75
+      },
+      "P1665-04-14": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-17": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-19": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-20": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-22": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-29": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "P1665-04-17",
+       "P1665-04-12",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-19",
+       "P1665-04-14"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-04-17",
+       "P1665-04-29",
+       "P1665-04-12"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-04-12",
+       "P1665-04-17",
+       "P1665-04-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-04-08": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-10": {
+       "intensity": null,
+       "linkage": 0.15000000000000002,
+       "persistence": null
+      },
+      "P1665-04-12": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.75
+      },
+      "P1665-04-14": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-04-17": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "P1665-04-18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-04-19": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-04-20": {
+       "intensity": 0.5,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "P1665-04-22": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-04-29": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": 0.5
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "pepys-m06",
+   "arm": "pepys",
+   "recency": 0.25,
+   "random": 0.29425,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-06-07",
+       "P1665-06-03",
+       "P1665-06-09"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-07",
+       "P1665-06-03"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-06-03",
+       "P1665-06-07",
+       "P1665-06-09"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-06-06",
+       "P1665-06-01",
+       "P1665-06-03"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-06-01": {
+       "intensity": 0.45,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-03": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-06": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-06-07": {
+       "intensity": 0.45,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-09": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-15": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-16": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-20": {
+       "intensity": 0.15,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-26": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-29": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-06-07",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-06-07",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-06-01": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-03": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-06": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-07": {
+       "intensity": 0.5,
+       "linkage": 0.5,
+       "persistence": null
+      },
+      "P1665-06-09": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-15": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-16": {
+       "intensity": 0.5,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "P1665-06-20": {
+       "intensity": 0.2,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-26": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-29": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "P1665-06-16",
+       "P1665-06-01",
+       "P1665-06-03"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-06-16",
+       "P1665-06-01",
+       "P1665-06-03"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-03",
+       "P1665-06-06"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-06-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-06": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-07": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-09": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-15": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-16": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-20": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-26": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-29": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "P1665-06-03",
+       "P1665-06-07",
+       "P1665-06-29"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-06-01",
+       "P1665-06-06",
+       "P1665-06-07"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-06-29",
+       "P1665-06-07",
+       "P1665-06-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-06-29",
+       "P1665-06-09",
+       "P1665-06-01"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-06-01": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-03": {
+       "intensity": null,
+       "linkage": 0.7,
+       "persistence": null
+      },
+      "P1665-06-06": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-06-07": {
+       "intensity": 0.6499999999999999,
+       "linkage": 0.75,
+       "persistence": null
+      },
+      "P1665-06-09": {
+       "intensity": 0.6,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-06-15": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-06-16": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-20": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-06-26": {
+       "intensity": 0.5,
+       "linkage": 0.6499999999999999,
+       "persistence": null
+      },
+      "P1665-06-29": {
+       "intensity": 0.4,
+       "linkage": 0.8,
+       "persistence": 0.75
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "pepys-m09",
+   "arm": "pepys",
+   "recency": 0.5,
+   "random": 0.3015,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-20",
+       "P1665-09-19"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-09-19",
+       "P1665-09-30",
+       "P1665-09-20"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-04",
+       "P1665-09-07"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-09-05",
+       "P1665-09-13",
+       "P1665-09-19"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-09-04": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-05": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-07": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-08": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-11": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-09-13": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-19": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-09-20": {
+       "intensity": 0.45,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-25": {
+       "intensity": 0.35,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-09-30": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": null
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-09-08",
+       "P1665-09-19",
+       "P1665-09-20"
+      ],
+      "hit_rate": 0.0
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-09-08",
+       "P1665-09-19",
+       "P1665-09-30"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-20",
+       "P1665-09-04"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-09-05",
+       "P1665-09-13",
+       "P1665-09-25"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-09-04": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-05": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-07": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-08": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-11": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-09-13": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-19": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-20": {
+       "intensity": 0.5,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "P1665-09-25": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-30": {
+       "intensity": 0.6,
+       "linkage": 0.5,
+       "persistence": 0.25
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-07",
+       "P1665-09-08"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-07",
+       "P1665-09-08"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-04",
+       "P1665-09-05"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-09-04",
+       "P1665-09-05",
+       "P1665-09-07"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-09-04": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-05": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-07": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-08": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-11": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-13": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-19": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-20": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-25": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-09-30": {
+       "intensity": 0.875,
+       "linkage": 0.8,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "P1665-09-20",
+       "P1665-09-30",
+       "P1665-09-04"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-09-30",
+       "P1665-09-07",
+       "P1665-09-19"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-09-20",
+       "P1665-09-30",
+       "P1665-09-04"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-09-04",
+       "P1665-09-30",
+       "P1665-09-07"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-09-04": {
+       "intensity": 0.6,
+       "linkage": 0.7,
+       "persistence": 0.75
+      },
+      "P1665-09-05": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-09-07": {
+       "intensity": 0.7,
+       "linkage": 0.44999999999999996,
+       "persistence": 0.25
+      },
+      "P1665-09-08": {
+       "intensity": 0.5,
+       "linkage": 0.25,
+       "persistence": null
+      },
+      "P1665-09-11": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-09-13": {
+       "intensity": 0.5,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-09-19": {
+       "intensity": 0.7,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-09-20": {
+       "intensity": 0.7,
+       "linkage": 0.8,
+       "persistence": null
+      },
+      "P1665-09-25": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-09-30": {
+       "intensity": 0.75,
+       "linkage": 0.75,
+       "persistence": 0.75
+      }
+     }
+    }
+   }
+  },
+  {
+   "block": "pepys-m12",
+   "arm": "pepys",
+   "recency": 0.0,
+   "random": 0.29325,
+   "models": {
+    "claude-sonnet-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-12-01",
+       "P1665-12-02",
+       "P1665-12-06"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-12-19",
+       "P1665-12-22",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.0
+     },
+     "components": {
+      "P1665-12-01": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-02": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-03": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-12-06": {
+       "intensity": 0.8,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-13": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-18": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-19": {
+       "intensity": 0.25,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-12-20": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-21": {
+       "intensity": 0.4,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-12-22": {
+       "intensity": 0.3,
+       "linkage": 0.3,
+       "persistence": 0.25
+      }
+     }
+    },
+    "claude-haiku-5-5": {
+     "S_all": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-12-03",
+       "P1665-12-01",
+       "P1665-12-02"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-12-01": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-02": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-03": {
+       "intensity": 0.3,
+       "linkage": 0.2,
+       "persistence": 0.25
+      },
+      "P1665-12-06": {
+       "intensity": 0.8,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "P1665-12-13": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-18": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-19": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-20": {
+       "intensity": 0.6,
+       "linkage": 0.4,
+       "persistence": null
+      },
+      "P1665-12-21": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-22": {
+       "intensity": 0.4,
+       "linkage": 0.3,
+       "persistence": null
+      }
+     }
+    },
+    "gpt-6.1-sol": {
+     "S_all": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-20",
+       "P1665-12-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-12-01",
+       "P1665-12-02",
+       "P1665-12-03"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-12-01",
+       "P1665-12-02",
+       "P1665-12-03"
+      ],
+      "hit_rate": 0.25
+     },
+     "components": {
+      "P1665-12-01": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-02": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-03": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-06": {
+       "intensity": 0.9,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-13": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-19": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-20": {
+       "intensity": 0.8,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-21": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-22": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      }
+     }
+    },
+    "kimi-k2.6": {
+     "S_all": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-13",
+       "P1665-12-20"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-13",
+       "P1665-12-20"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-13",
+       "P1665-12-20"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_persistence": {
+      "retained": [
+       "P1665-12-06",
+       "P1665-12-13",
+       "P1665-12-20"
+      ],
+      "hit_rate": 0.5
+     },
+     "components": {
+      "P1665-12-01": {
+       "intensity": 0.5,
+       "linkage": 0.3,
+       "persistence": 0.25
+      },
+      "P1665-12-02": {
+       "intensity": null,
+       "linkage": 0.3,
+       "persistence": null
+      },
+      "P1665-12-03": {
+       "intensity": null,
+       "linkage": 0.2,
+       "persistence": null
+      },
+      "P1665-12-06": {
+       "intensity": 0.9,
+       "linkage": 0.8,
+       "persistence": 0.75
+      },
+      "P1665-12-13": {
+       "intensity": 0.7,
+       "linkage": 0.6,
+       "persistence": 0.5
+      },
+      "P1665-12-18": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-19": {
+       "intensity": null,
+       "linkage": null,
+       "persistence": null
+      },
+      "P1665-12-20": {
+       "intensity": 0.7,
+       "linkage": 0.5,
+       "persistence": 0.5
+      },
+      "P1665-12-21": {
+       "intensity": 0.5,
+       "linkage": 0.25,
+       "persistence": 0.25
+      },
+      "P1665-12-22": {
+       "intensity": null,
+       "linkage": 0.4,
+       "persistence": 0.5
+      }
+     }
+    }
+   }
+  }
+ ],
+ "per_arm": {
+  "conversational": {
+   "S_all": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.16039480259870065,
+     "mean_diff_vs_recency": -0.03415792103948027,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.2150424787606197,
+     "mean_diff_vs_recency": 0.02048975512243878,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.2137431284357821,
+     "mean_diff_vs_recency": 0.0191904047976012,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.22628685657171416,
+     "mean_diff_vs_recency": 0.031734132933533235,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 0,
+    "pass": false
+   },
+   "S_intensity": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.15604697651174412,
+     "mean_diff_vs_recency": -0.038505747126436785,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.33765617191404296,
+     "mean_diff_vs_recency": 0.14310344827586205,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.23113443278360818,
+     "mean_diff_vs_recency": 0.036581709145427285,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.23150924537731132,
+     "mean_diff_vs_recency": 0.03695652173913043,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 1,
+    "pass": false
+   },
+   "S_linkage": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.16039480259870065,
+     "mean_diff_vs_recency": -0.03415792103948027,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.11939030484757622,
+     "mean_diff_vs_recency": -0.0751624187906047,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.23213393303348323,
+     "mean_diff_vs_recency": 0.03758120939530235,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.2538730634682659,
+     "mean_diff_vs_recency": 0.05932033983008496,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 0,
+    "pass": false
+   },
+   "S_persistence": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.14952523738130935,
+     "mean_diff_vs_recency": -0.045027486256871564,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.19355322338830586,
+     "mean_diff_vs_recency": -0.0009995002498750683,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.24735132433783108,
+     "mean_diff_vs_recency": 0.05279860069965018,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.12628685657171415,
+     "mean_diff_vs_recency": -0.06826586706646677,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 0,
+    "pass": false
+   },
+   "recency_mean": 0.1945527236381809,
+   "random_mean": 0.28066746626686656
+  },
+  "pepys": {
+   "S_all": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.35,
+     "mean_diff_vs_recency": 0.1,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.25,
+     "mean_diff_vs_recency": 0.0,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.35,
+     "mean_diff_vs_recency": 0.1,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.4,
+     "mean_diff_vs_recency": 0.15,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 3,
+    "pass": true
+   },
+   "S_intensity": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.3,
+     "mean_diff_vs_recency": 0.05,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.25,
+     "mean_diff_vs_recency": 0.0,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.35,
+     "mean_diff_vs_recency": 0.1,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.4,
+     "mean_diff_vs_recency": 0.15,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 2,
+    "pass": false
+   },
+   "S_linkage": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.35,
+     "mean_diff_vs_recency": 0.1,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.3,
+     "mean_diff_vs_recency": 0.05,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.2,
+     "mean_diff_vs_recency": -0.05,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.4,
+     "mean_diff_vs_recency": 0.15,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 2,
+    "pass": false
+   },
+   "S_persistence": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.15,
+     "mean_diff_vs_recency": -0.1,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.25,
+     "mean_diff_vs_recency": 0.0,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.2,
+     "mean_diff_vs_recency": -0.05,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.45,
+     "mean_diff_vs_recency": 0.2,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 1,
+    "pass": false
+   },
+   "recency_mean": 0.25,
+   "random_mean": 0.29745
+  },
+  "synthetic": {
+   "S_all": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.75,
+     "mean_diff_vs_recency": 0.5,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.65,
+     "mean_diff_vs_recency": 0.4,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.6,
+     "mean_diff_vs_recency": 0.35,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.7,
+     "mean_diff_vs_recency": 0.45,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 4,
+    "pass": true
+   },
+   "S_intensity": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.7,
+     "mean_diff_vs_recency": 0.45,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.75,
+     "mean_diff_vs_recency": 0.5,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.25,
+     "mean_diff_vs_recency": 0.0,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.6,
+     "mean_diff_vs_recency": 0.35,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 3,
+    "pass": true
+   },
+   "S_linkage": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.7,
+     "mean_diff_vs_recency": 0.45,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.65,
+     "mean_diff_vs_recency": 0.4,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.55,
+     "mean_diff_vs_recency": 0.3,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.7,
+     "mean_diff_vs_recency": 0.45,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 4,
+    "pass": true
+   },
+   "S_persistence": {
+    "claude-sonnet-5-5": {
+     "mean_salience_hit": 0.5,
+     "mean_diff_vs_recency": 0.25,
+     "blocks": 5
+    },
+    "claude-haiku-5-5": {
+     "mean_salience_hit": 0.5,
+     "mean_diff_vs_recency": 0.25,
+     "blocks": 5
+    },
+    "gpt-6.1-sol": {
+     "mean_salience_hit": 0.3,
+     "mean_diff_vs_recency": 0.05,
+     "blocks": 5
+    },
+    "kimi-k2.6": {
+     "mean_salience_hit": 0.65,
+     "mean_diff_vs_recency": 0.4,
+     "blocks": 5
+    },
+    "models_meeting_10pt": 3,
+    "pass": true
+   },
+   "recency_mean": 0.25,
+   "random_mean": 0.3005
+  }
+ },
+ "pooled": {
+  "S_all": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.4201316008662336,
+    "mean_diff_vs_recency": 0.18861402632017327,
+    "blocks": 15
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.3716808262535399,
+    "mean_diff_vs_recency": 0.1401632517074796,
+    "blocks": 15
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.3879143761452607,
+    "mean_diff_vs_recency": 0.15639680159920039,
+    "blocks": 15
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.4420956188572381,
+    "mean_diff_vs_recency": 0.21057804431117774,
+    "blocks": 15
+   },
+   "models_meeting_10pt": 4,
+   "pass": true
+  },
+  "S_intensity": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.3853489921705814,
+    "mean_diff_vs_recency": 0.15383141762452107,
+    "blocks": 15
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.4458853906380143,
+    "mean_diff_vs_recency": 0.21436781609195404,
+    "blocks": 15
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.2770448109278694,
+    "mean_diff_vs_recency": 0.0455272363818091,
+    "blocks": 15
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.4105030817924371,
+    "mean_diff_vs_recency": 0.17898550724637682,
+    "blocks": 15
+   },
+   "models_meeting_10pt": 3,
+   "pass": true
+  },
+  "S_linkage": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.4034649341995669,
+    "mean_diff_vs_recency": 0.17194735965350658,
+    "blocks": 15
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.3564634349491921,
+    "mean_diff_vs_recency": 0.12494586040313177,
+    "blocks": 15
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.3273779776778278,
+    "mean_diff_vs_recency": 0.09586040313176744,
+    "blocks": 15
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.45129102115608866,
+    "mean_diff_vs_recency": 0.21977344661002832,
+    "blocks": 15
+   },
+   "models_meeting_10pt": 3,
+   "pass": true
+  },
+  "S_persistence": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.26650841246043644,
+    "mean_diff_vs_recency": 0.03499083791437615,
+    "blocks": 15
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.3145177411294353,
+    "mean_diff_vs_recency": 0.08300016658337499,
+    "blocks": 15
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.24911710811261037,
+    "mean_diff_vs_recency": 0.01759953356655006,
+    "blocks": 15
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.4087622855239047,
+    "mean_diff_vs_recency": 0.17724471097784442,
+    "blocks": 15
+   },
+   "models_meeting_10pt": 1,
+   "pass": false
+  },
+  "recency_mean": 0.2315175745460603,
+  "random_mean": 0.29287248875562216
+ }
+}

@@ -1,0 +1,22 @@
+20 items; authored span used for 0
+claude-sonnet-5-5: 180 ratings planned, 180 to do
+claude-haiku-5-5: 180 ratings planned, 180 to do
+gpt-6.1-sol: 180 ratings planned, 180 to do
+kimi-k2.6: 180 ratings planned, 180 to do
+  rater 50 calls, $0.12
+  rater 100 calls, $0.23
+  rater 150 calls, $0.34
+  rater 200 calls, $0.45
+  rater 250 calls, $0.56
+  rater 300 calls, $0.67
+  rater 350 calls, $0.78
+  rater 400 calls, $0.88
+  rater 450 calls, $0.99
+  rater 500 calls, $1.05
+  rater 550 calls, $1.11
+  rater 600 calls, $1.17
+  rater 650 calls, $1.23
+  rater 700 calls, $1.30
+rater calls done: 720, $1.32; cumulative $1.32
+task_b pass: False {"narrative.arc": {"shift_B": 0.1125, "shift_control": 0.0875}, "salience.trajectory": {"shift_B": 0.17083333333333334, "shift_control": 0.125}, "motivation.need": {"shift_B": 0.0625, "shift_control": 0.05416666666666667}, "narrative.valence_shift": {"shift_B": 0.45, "shift_control": 0.4875}}
+exit=0

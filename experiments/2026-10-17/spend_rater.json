@@ -1,0 +1,38 @@
+{
+ "by_model": {
+  "claude-sonnet-5-5": {
+   "usd": 0.6626540000000002,
+   "calls": 180,
+   "input_tokens": 270867,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 12092
+  },
+  "kimi-k2.6": {
+   "usd": 0.13806078999999996,
+   "calls": 180,
+   "input_tokens": 95713,
+   "cached_input_tokens": 80384,
+   "cache_write_tokens": 0,
+   "output_tokens": 8568
+  },
+  "claude-haiku-5-5": {
+   "usd": 0.06657070000000002,
+   "calls": 180,
+   "input_tokens": 270867,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 78968
+  },
+  "gpt-6.1-sol": {
+   "usd": 0.4566620000000001,
+   "calls": 180,
+   "input_tokens": 173901,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 10886
+  }
+ },
+ "total_usd": 1.323947490000001,
+ "calls": 720
+}

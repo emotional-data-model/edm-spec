@@ -98,7 +98,7 @@ async def main():
     a = ap.parse_args()
     outputs, counts, arm_of = load_outputs()
     texts = {json.loads(l)['id']: json.loads(l)['text'] for l in open(os.path.join(EXP, 'corpus', '.resolved_texts.jsonl'), encoding='utf-8')}
-    prov = Provider(JUDGE); sem = asyncio.Semaphore(a.concurrency); spend = Spend(os.path.join(EXP, 'spend.json'))
+    prov = Provider(JUDGE); sem = asyncio.Semaphore(a.concurrency); spend = Spend(os.path.join(EXP, 'spend_judge.json'))
     stats = {'calls': 0, 'usd': 0.0, 'bad': 0}
     jd = os.path.join(RAW, 'judge'); os.makedirs(jd, exist_ok=True)
     tasks = []
