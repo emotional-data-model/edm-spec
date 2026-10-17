@@ -1,0 +1,442 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.full.schema.json",
+  "title": "EDM v0.9.0 Full Profile (DRAFT, discovery)",
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 47 affective fields over 5 affective domains; the trait block is not included (opt-in via partner manifest). Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 47,
+  "x_affective_fields": [
+    "narrative.subject",
+    "narrative.trigger",
+    "narrative.harm",
+    "narrative.drive",
+    "narrative.integration",
+    "narrative.summary",
+    "narrative.meaning",
+    "narrative.identity_link",
+    "narrative.turning_point",
+    "narrative.arc",
+    "narrative.valence_shift",
+    "narrative.self_position",
+    "emotion.primary",
+    "emotion.secondary",
+    "emotion.kind",
+    "emotion.valence",
+    "emotion.arousal",
+    "emotion.intensity",
+    "emotion.meta",
+    "emotion.bodily_sensation",
+    "emotion.temporal_profile",
+    "emotion.appraisal.urgency",
+    "emotion.appraisal.control",
+    "emotion.appraisal.attribution",
+    "context.event",
+    "context.event_category",
+    "context.place",
+    "context.people",
+    "context.relationship",
+    "context.relationship_model",
+    "context.life_stage",
+    "context.scope",
+    "salience.memory_type",
+    "salience.tether",
+    "salience.retrieval_cues",
+    "salience.themes",
+    "salience.recurrence",
+    "salience.persistence",
+    "salience.linkage_strength",
+    "salience.function",
+    "salience.resilience",
+    "salience.trajectory",
+    "motivation.action_tendency",
+    "motivation.need",
+    "motivation.temporal_focus",
+    "motivation.risk_posture",
+    "motivation.coping"
+  ],
+  "type": "object",
+  "required": [
+    "meta",
+    "narrative",
+    "emotion",
+    "context",
+    "salience",
+    "motivation",
+    "governance",
+    "telemetry",
+    "system",
+    "crosswalks"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "description": "Full identity, provenance, and consent metadata with all tracking fields.",
+      "type": "object",
+      "required": [
+        "version",
+        "profile",
+        "created_at",
+        "visibility",
+        "pii_tier",
+        "consent_basis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Unique identifier for the EDM artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "version": {
+          "type": "string",
+          "description": "EDM schema version.",
+          "pattern": "^0\\.9\\.[0-9]+(-draft)?$"
+        },
+        "profile": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "essential",
+                "extended",
+                "full"
+              ],
+              "description": "Canonical extraction profile"
+            },
+            {
+              "type": "string",
+              "pattern": "^partner:.+$",
+              "description": "Partner profile ID with namespace prefix per EDM v0.8.0 Section 3.7.2 and ADR-0017 — e.g. partner:com.deepadata.journaling.v1"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Artifact extraction timestamp.",
+          "format": "date-time"
+        },
+        "source_timestamp": {
+          "description": "The timestamp of the original source content, distinct from created_at which marks extraction time",
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_constraints": "ISO-8601 UTC timestamp"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Post-extraction update timestamp.",
+          "format": "date-time"
+        },
+        "locale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Linguistic and cultural context.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "owner_user_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Artifact owner identifier."
+        },
+        "parent_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "private",
+            "shared",
+            "public"
+          ],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "moderate",
+            "high",
+            "extreme"
+          ],
+          "description": "PII classification level."
+        },
+        "source_type": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "enum": [
+            "text",
+            "audio",
+            "image",
+            "video",
+            "mixed",
+            null
+          ],
+          "description": "Source medium."
+        },
+        "source_context": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Input scenario description."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": [
+            "consent",
+            "contract",
+            "legitimate_interest",
+            "none"
+          ],
+          "description": "Legal basis for processing."
+        },
+        "consent_scope": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Consent scope description."
+        },
+        "consent_revoked_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Consent revocation timestamp.",
+          "format": "date-time"
+        },
+        "tags": {
+          "type": [
+            "array",
+            "null"
+          ],
+          "items": {
+            "type": "string"
+          },
+          "description": "User-defined labels."
+        }
+      }
+    },
+    "narrative": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/narrative.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "subject",
+              "trigger",
+              "harm",
+              "drive",
+              "integration",
+              "summary",
+              "meaning",
+              "identity_link",
+              "turning_point",
+              "arc",
+              "valence_shift",
+              "self_position"
+            ]
+          },
+          "required": [
+            "subject",
+            "trigger",
+            "harm",
+            "drive",
+            "integration",
+            "arc",
+            "self_position"
+          ]
+        }
+      ],
+      "x_fields": [
+        "narrative.subject",
+        "narrative.trigger",
+        "narrative.harm",
+        "narrative.drive",
+        "narrative.integration",
+        "narrative.summary",
+        "narrative.meaning",
+        "narrative.identity_link",
+        "narrative.turning_point",
+        "narrative.arc",
+        "narrative.valence_shift",
+        "narrative.self_position"
+      ]
+    },
+    "emotion": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/emotion.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "primary",
+              "secondary",
+              "kind",
+              "valence",
+              "arousal",
+              "intensity",
+              "meta",
+              "bodily_sensation",
+              "temporal_profile",
+              "appraisal"
+            ]
+          },
+          "required": [
+            "primary",
+            "secondary",
+            "valence",
+            "intensity"
+          ]
+        }
+      ],
+      "x_fields": [
+        "emotion.primary",
+        "emotion.secondary",
+        "emotion.kind",
+        "emotion.valence",
+        "emotion.arousal",
+        "emotion.intensity",
+        "emotion.meta",
+        "emotion.bodily_sensation",
+        "emotion.temporal_profile",
+        "emotion.appraisal.urgency",
+        "emotion.appraisal.control",
+        "emotion.appraisal.attribution"
+      ]
+    },
+    "context": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/context.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "event",
+              "event_category",
+              "place",
+              "people",
+              "relationship",
+              "relationship_model",
+              "life_stage",
+              "scope"
+            ]
+          }
+        }
+      ],
+      "x_fields": [
+        "context.event",
+        "context.event_category",
+        "context.place",
+        "context.people",
+        "context.relationship",
+        "context.relationship_model",
+        "context.life_stage",
+        "context.scope"
+      ]
+    },
+    "salience": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/salience.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "memory_type",
+              "tether",
+              "retrieval_cues",
+              "themes",
+              "recurrence",
+              "persistence",
+              "linkage_strength",
+              "function",
+              "resilience",
+              "trajectory"
+            ]
+          }
+        }
+      ],
+      "x_fields": [
+        "salience.memory_type",
+        "salience.tether",
+        "salience.retrieval_cues",
+        "salience.themes",
+        "salience.recurrence",
+        "salience.persistence",
+        "salience.linkage_strength",
+        "salience.function",
+        "salience.resilience",
+        "salience.trajectory"
+      ]
+    },
+    "motivation": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/motivation.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "action_tendency",
+              "need",
+              "temporal_focus",
+              "risk_posture",
+              "coping"
+            ]
+          }
+        }
+      ],
+      "x_fields": [
+        "motivation.action_tendency",
+        "motivation.need",
+        "motivation.temporal_focus",
+        "motivation.risk_posture",
+        "motivation.coping"
+      ]
+    },
+    "governance": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
+    },
+    "telemetry": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/telemetry.json"
+    },
+    "system": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/system.json"
+    },
+    "crosswalks": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/crosswalks.json"
+    },
+    "extensions": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/extensions.json",
+      "x_draft_note": "Optional in every profile so that migration can preserve cut and out-of-profile text (the v0.8 composites do not list extensions)."
+    }
+  }
+}

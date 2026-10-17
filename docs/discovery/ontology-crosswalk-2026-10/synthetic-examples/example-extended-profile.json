@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "id": "5a73bda8-1849-4983-ba04-e218f4aa93bb",
+    "version": "0.8.3",
+    "profile": "extended",
+    "created_at": "2026-10-17T09:12:21.000Z",
+    "owner_user_id": "vp-SYN00000000000000A1",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate",
+    "updated_at": null,
+    "locale": "en",
+    "source_type": "text",
+    "source_context": "journal entry written after the concert recording arrived",
+    "consent_scope": "personal memory archive",
+    "tags": [
+      "choir",
+      "resilience",
+      "community"
+    ]
+  },
+  "core": {
+    "anchor": "choir winter concert",
+    "spark": "concert recording arrived",
+    "wound": "breath limited by illness",
+    "fuel": "choir of every age",
+    "bridge": "still performing despite limits",
+    "echo": "the hall going quiet",
+    "narrative": "The recording of the choir's winter concert arrived this week, with my first solo verse in it. A long-term health condition has limited my breath and stamina for years, and the weekly rehearsals with people of every age keep both my lungs and my mood working. Standing at the front of the hall and hearing the room go quiet brought back the person who used to perform without thinking about it. What started as a neighbour's nudge three years ago has become the one hour a week that is only mine, and I have come to believe everyone needs an hour like that."
+  },
+  "constellation": {
+    "emotion_primary": "joy",
+    "emotion_subtone": [
+      "pride",
+      "gratitude",
+      "relief"
+    ],
+    "higher_order_emotion": "quiet triumph",
+    "meta_emotional_state": "grateful acceptance",
+    "interpersonal_affect": "belonging",
+    "narrative_arc": "overcoming",
+    "relational_dynamics": "community_ritual",
+    "temporal_context": "midlife",
+    "memory_type": "milestone",
+    "media_format": "audio",
+    "narrative_archetype": "hero",
+    "symbolic_anchor": "the solo verse",
+    "relational_perspective": "community",
+    "temporal_rhythm": "rising",
+    "identity_thread": "performer despite limits",
+    "expressed_insight": "everyone needs an hour a week that is only theirs",
+    "transformational_pivot": true,
+    "somatic_signature": "breath held, then easy",
+    "arc_type": "authenticity"
+  },
+  "milky_way": {
+    "event_type": "annual concert performance",
+    "location_context": "community hall",
+    "associated_people": [
+      "choir members",
+      "a neighbour"
+    ],
+    "visibility_context": "shared_publicly",
+    "tone_shift": "effort to ease"
+  },
+  "gravity": {
+    "emotional_weight": 0.82,
+    "valence": "positive",
+    "tether_type": "identity",
+    "recurrence_pattern": "cyclical",
+    "strength_score": 0.9
+  },
+  "governance": {
+    "jurisdiction": "GDPR",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    },
+    "exportability": "restricted",
+    "policy_labels": [
+      "personal",
+      "health-adjacent"
+    ]
+  },
+  "telemetry": {
+    "entry_confidence": 0.91,
+    "extraction_model": "synthetic-hand-written",
+    "extraction_provider": null,
+    "extraction_notes": "SYNTHETIC example written for discovery (docs/discovery/ontology-crosswalk-2026-10); not an extraction output; no real person is described."
+  }
+}

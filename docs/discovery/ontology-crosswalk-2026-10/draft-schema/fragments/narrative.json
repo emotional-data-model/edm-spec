@@ -1,0 +1,238 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/narrative.json",
+  "title": "EDM NARRATIVE Domain (v0.9 DRAFT)",
+  "description": "What the story is and what the subject says it means (v0.8.3 core + the narrative fields of constellation and milky_way).",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "description": "Central person, object, or theme of the experience",
+      "x_constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "trigger": {
+      "description": "What triggered or initiated the emotional response",
+      "x_constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "harm": {
+      "description": "Emotional pain, loss, or vulnerability present in the experience",
+      "x_constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "drive": {
+      "description": "What energized or motivated the experience",
+      "x_constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "integration": {
+      "description": "Connection or shift between past and present understanding",
+      "x_constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
+      "x_constraints": "3–5 sentences",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "meaning": {
+      "description": "The explicit realization or conclusion stated by the subject",
+      "x_constraints": "Short sentence. Extracted, not inferred",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "identity_link": {
+      "description": "A succinct expression of how the experience connects to personal identity",
+      "x_constraints": "Short sentence",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "turning_point": {
+      "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
+      "x_constraints": "true or false; null when the subject does not say",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "arc": {
+      "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
+      "x_constraints": "Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+          },
+          {
+            "properties": {
+              "codings": {
+                "items": {
+                  "if": {
+                    "properties": {
+                      "system": {
+                        "const": "https://emotionaldatamodel.org/vocab/arc/v1"
+                      }
+                    },
+                    "required": [
+                      "system"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "code": {
+                        "enum": [
+                          "authenticity",
+                          "betrayal",
+                          "bond",
+                          "closure",
+                          "confrontation",
+                          "connection",
+                          "discovery",
+                          "exile",
+                          "gratitude",
+                          "grief",
+                          "liberation",
+                          "loss",
+                          "moral_awakening",
+                          "overcoming",
+                          "reckoning",
+                          "reconciliation",
+                          "reflection",
+                          "resistance",
+                          "threshold",
+                          "transformation"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 3,
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/arc/v1",
+      "x_recommended_values": [
+        "authenticity",
+        "betrayal",
+        "bond",
+        "closure",
+        "confrontation",
+        "connection",
+        "discovery",
+        "exile",
+        "gratitude",
+        "grief",
+        "liberation",
+        "loss",
+        "moral_awakening",
+        "overcoming",
+        "reckoning",
+        "reconciliation",
+        "reflection",
+        "resistance",
+        "threshold",
+        "transformation"
+      ]
+    },
+    "valence_shift": {
+      "description": "Directional emotional change during the experience",
+      "x_constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "self_position": {
+      "description": "The subject's own expressed lens on themselves within the story: the position they say they occupy (e.g. \"the one who holds it together\", \"the person who finally said no\"). STATED-ONLY: recorded only when the subject says it or paraphrases it unmistakably; never assigned from the plot, the emotion or an archetype catalogue.",
+      "x_constraints": "Short phrase in the subject's own terms; NULL when not stated. Replaces narrative_archetype (the Mark & Pearson 12 are not used). Optional codings: McAdams imago (open label), agency / communion, Hermans I-position; all relation=related.",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

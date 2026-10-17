@@ -2,7 +2,12 @@
 and a migration demonstration proving that artifact text is unchanged by the relayout.
 
 Usage:
-  python -I scripts/v09_layout.py <repo-root> <out-crosswalk.json> <out-migration-example.json>
+  python -I scripts/v09_layout.py <examples-dir> <out-crosswalk.json> <out-migration-example.json> [<migrated-out-dir>]
+
+<examples-dir> holds the seven v0.8.3 artifacts (synthetic-examples/ on this branch). The migration example is built
+from example-full-profile.json; with <migrated-out-dir> every artifact in the directory is migrated, pruned to its
+(base) profile's v0.9 manifest, and written there for validation against draft-schema/ (an unpruned copy goes to
+<migrated-out-dir>/unpruned/ so the profile-agnostic relayout can be validated too).
 
 Discovery only. Nothing here is normative; the crosswalk is written with status "draft".
 """
@@ -112,6 +117,17 @@ LAYOUT_ORDER = {
  'motivation':['action_tendency','need','temporal_focus','risk_posture','coping'],
 }
 AFFECTIVE_COUNT = sum(len(v) for v in LAYOUT_ORDER.values())
+ALL_09 = [f'{d}.{f}' for d, fs in LAYOUT_ORDER.items() for f in fs]
+
+# Vocabularies born in v0.9 (the six new coded fields); inherited vocabularies come from fields.json below.
+NEW_VOCAB = {
+ 'kind': ['emotion', 'mood', 'feeling', 'disposition'],
+ 'arousal': ['low', 'medium', 'high'],
+ 'attribution': ['self', 'other', 'chance'],
+ 'event_category': ['relationships', 'life_threatening_events', 'recreation_exploration', 'achievement_mastery', 'guilt_shame', 'drug_alcohol_tobacco_use', 'not_classifiable'],
+ 'relationship_model': ['communal_sharing', 'authority_ranking', 'equality_matching', 'market_pricing', 'null_relation'],
+ 'function': ['directive', 'self', 'social'],
+}
 
 # ---------------------------------------------------------------------------
 # 2. Deprecated canonical values: still accepted as text, coded to the canonical value or marked deprecated. No text changes.
@@ -188,6 +204,27 @@ for _f, _paths in _SRC.items():
     for _p in _paths:
         CANONICAL[_f] |= set((next(x for x in FIELDS_083 if x['path'] == _p)['canonical_values']) or [])
 CANONICAL['persistence'] |= {'transient', 'short', 'enduring', 'chronic'}
+for _k, _vals in NEW_VOCAB.items(): CANONICAL[_k] = set(_vals)
+
+# ---------------------------------------------------------------------------
+# 3b. Profile manifests for the v0.9 draft. Essential is fixed by direction (7 narrative + 4 emotion); Extended and Full
+#     are derived: a carried field is in a profile when any of its v0.8.3 sources was; the six new coded fields are
+#     Full-only; self_position is Essential. trait.* belongs to no canonical profile (opt-in via partner manifest).
+# ---------------------------------------------------------------------------
+ESSENTIAL_09 = ['narrative.subject', 'narrative.trigger', 'narrative.harm', 'narrative.drive', 'narrative.integration', 'narrative.arc',
+                'narrative.self_position', 'emotion.primary', 'emotion.secondary', 'emotion.valence', 'emotion.intensity']
+_P083 = {x['path']: set(x['profiles']) for x in FIELDS_083}
+def _derived(profile):
+    keep = set(ESSENTIAL_09)
+    for old, new, action, shape, note in FIELD_MAP:
+        if new and action != 'trait' and profile in _P083[old]: keep.add(new)
+    return [p for p in ALL_09 if p in keep]
+PROFILES_09 = {'essential': [p for p in ALL_09 if p in set(ESSENTIAL_09)], 'extended': _derived('extended'), 'full': list(ALL_09)}
+PARTNER_BASE = {'partner:com.deepadata.journaling.v1': 'extended', 'partner:com.deepadata.therapy.v1': 'full',
+                'partner:com.deepadata.companion.v1': 'extended', 'partner:com.deepadata.wiki.v1': 'extended'}
+TRAIT_OPT_IN = {'partner:com.deepadata.therapy.v1'}  # discovery assumption for the draft manifests
+def profile_fields(profile):
+    return PROFILES_09[PARTNER_BASE.get(profile, profile)]
 
 def coded(field, value, extra=None):
     if value is None: return {'text': None, 'codings': []}
@@ -201,7 +238,9 @@ def dimension(text, value, codings):
 # ---------------------------------------------------------------------------
 # 4. Migration (v0.8.3 artifact -> v0.9 draft layout). Never infers: new fields are null; numeric values are copied, never derived.
 # ---------------------------------------------------------------------------
-def migrate(a):
+def migrate(a, profile=None):
+    """profile=None gives the profile-agnostic relayout (every v0.9 field present, nulls included). With a profile
+    (canonical or partner id) populated fields outside its manifest, and trait.* without opt-in, move to the legacy extension."""
     g = lambda d, k: (a.get(d) or {}).get(k)
     legacy = {}
     for old, new, action, shape, note in FIELD_MAP:
@@ -267,8 +306,7 @@ def migrate(a):
         'coping': coded('coping', g('impulse', 'coping_style'), COPING_CODES),
     }
     if g('impulse', 'attachment_style') or g('impulse', 'regulation_state'):
-        out['trait'] = {'_opt_in': 'present only because the v0.8.3 artifact carried these fields; a v0.9 profile must opt in to keep them',
-                        'attachment_style': coded('attachment_style', g('impulse', 'attachment_style'), ATTACH_CODES),
+        out['trait'] = {'attachment_style': coded('attachment_style', g('impulse', 'attachment_style'), ATTACH_CODES),
                         'regulation_state': coded('regulation_state', g('impulse', 'regulation_state'))}
     for d in ('governance', 'telemetry', 'system', 'crosswalks'):
         if d in a: out[d] = a[d]
@@ -276,12 +314,36 @@ def migrate(a):
     ext = dict(a.get('extensions') or {})
     if legacy: ext[LEGACY_EXT] = {'v0_8_3_cut_fields': legacy}
     if ext: out['extensions'] = ext
+    if profile: prune_to_profile(out, profile)
     return out
+
+def is_empty(v):
+    if v is None: return True
+    if isinstance(v, list): return all(is_empty(x) for x in v)
+    if isinstance(v, dict): return all(is_empty(x) for k, x in v.items() if k != 'codings')
+    return False
+
+def prune_to_profile(out, profile):
+    """Drop v0.9 fields outside the profile manifest; populated ones are preserved verbatim in the legacy extension."""
+    allowed = set(profile_fields(profile)); moved = {}
+    for dom in ('narrative', 'emotion', 'context', 'salience', 'motivation', 'trait'):
+        if dom not in out: continue
+        for k in list(out[dom].keys()):
+            path = f'{dom}.{k}'
+            if dom == 'trait': keep = profile in TRAIT_OPT_IN
+            elif k == 'appraisal': keep = any(p.startswith('emotion.appraisal.') for p in allowed)
+            else: keep = path in allowed
+            if keep: continue
+            v = out[dom].pop(k)
+            if not is_empty(v): moved[path] = v
+        if not out[dom]: del out[dom]
+    if moved:
+        out.setdefault('extensions', {}).setdefault(LEGACY_EXT, {})['out_of_profile_fields'] = moved
 
 # ---------------------------------------------------------------------------
 # 5. Proof: every scalar the v0.8.3 affective domains carried is present, unchanged, in the migrated artifact (codings excluded).
 # ---------------------------------------------------------------------------
-def leaves(x, skip_keys=('codings', '_opt_in')):
+def leaves(x, skip_keys=('codings',)):
     if isinstance(x, dict):
         for k, v in x.items():
             if k in skip_keys: continue
@@ -338,7 +400,10 @@ def crosswalk():
      'trait_profile': {
         'fields': TRAIT_FIELDS,
         'rule': 'Not part of any canonical profile. A partner profile opts in by listing trait.* in included_fields. Each value is recorded only as stated for this experience and is never aggregated into a person-level classification by the artifact.',
+        'migration': 'A v0.8.3 artifact carrying attachment_style or regulation_state keeps them in trait.* only when the target profile opts in; otherwise they are preserved verbatim in extensions.' + LEGACY_EXT + '.out_of_profile_fields.',
      },
+     'profiles': {'essential': PROFILES_09['essential'], 'extended': PROFILES_09['extended'], 'full': PROFILES_09['full'], 'trait_opt_in_partner_profiles': sorted(TRAIT_OPT_IN),
+                  'rule': 'Essential = 7 narrative + 4 emotion fields (fixed by direction). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/.'},
      'coding_shape': {
         'coded': {'text': 'string (the interpretation; mandatory when the field is populated)', 'codings': [{'system': 'URI', 'version': 'string', 'code': 'string', 'display': 'string', 'relation': 'exact | broader | narrower | related (default exact)'}]},
         'dimension': {'text': 'ordinal label or null', 'value': 'number or null (never derived from text by migration)', 'codings': '[...]'},
@@ -352,18 +417,32 @@ def crosswalk():
      },
      'migration_notes': {
         'automatic_upgrade': True, 'data_loss_risk': 'none (cut-field text preserved in extensions)',
-        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.', '4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.', '7. Set meta.version.'],
+        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.', '4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.v0_8_3_cut_fields.', '7. Prune to the target profile manifest; any populated field outside it goes to extensions.' + LEGACY_EXT + '.out_of_profile_fields (Essential: core.echo, which has no Essential home in v0.9).', '8. Set meta.version.'],
         'reference_implementation': 'docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py',
      },
     }
 
 if __name__ == '__main__':
-    repo, out_crosswalk, out_example = sys.argv[1:4]
-    ex_path = os.path.join(repo, 'examples', 'example-full-profile.json')
+    ex_dir, out_crosswalk, out_example = sys.argv[1:4]
+    migrated_dir = sys.argv[4] if len(sys.argv) > 4 else None
+    ex_path = os.path.join(ex_dir, 'example-full-profile.json')
     old = json.load(open(ex_path, encoding='utf-8'))
-    new = migrate(old)
+    new = migrate(old, 'full')
     p = proof(old, new)
     json.dump(crosswalk(), open(out_crosswalk, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
-    json.dump({'source': 'examples/example-full-profile.json', 'proof': p, 'migrated': new}, open(out_example, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+    json.dump({'source': os.path.basename(os.path.normpath(ex_dir)) + '/example-full-profile.json', 'proof': p, 'migrated': new},
+              open(out_example, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
     print('affective fields v0.9:', AFFECTIVE_COUNT, {k: len(v) for k, v in LAYOUT_ORDER.items()})
+    print('profiles:', {k: len(v) for k, v in PROFILES_09.items()})
     print('proof:', json.dumps(p))
+    if migrated_dir:
+        os.makedirs(os.path.join(migrated_dir, 'unpruned'), exist_ok=True)
+        for name in sorted(os.listdir(ex_dir)):
+            if not name.endswith('.json'): continue
+            src = json.load(open(os.path.join(ex_dir, name), encoding='utf-8'))
+            prof = src['meta']['profile']
+            mig = migrate(src, prof); pr = proof(src, mig)
+            json.dump(mig, open(os.path.join(migrated_dir, name), 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+            json.dump(migrate(src), open(os.path.join(migrated_dir, 'unpruned', name), 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
+            moved = sorted(((mig.get('extensions') or {}).get(LEGACY_EXT) or {}).get('out_of_profile_fields', {}).keys())
+            print(f"  {name}: profile={prof} proof={'ok' if pr['text_unchanged'] else 'FAIL ' + json.dumps(pr)} out_of_profile={moved}")

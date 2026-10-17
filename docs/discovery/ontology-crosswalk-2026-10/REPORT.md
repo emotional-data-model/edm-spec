@@ -105,6 +105,8 @@ Profiles would follow the same tiering as today (Essential ≈ narrative + emoti
 
 ## 7. Uniquely-EDM constructs ranked for the ontology experiment
 
+The experiment itself is pre-registered in `experiment-plan.md` (50 synthetic texts over the Singer & Blagov categories, 4 models × 5 repeats, per-field repeatability / agreement / null-precision thresholds, and the two downstream tasks: salience-weighted retention and the `self_position` rater study).
+
 Ranking = how often the construct appears in the memory/significance literature in the reference set (count of *related* mappings in the matrix) plus adjacent literature not in the set [KNOWLEDGE]. Higher rank = more worth testing because a framework nearly has it.
 
 | Rank | Construct | Related mappings in matrix | Adjacent literature | Experiment question |

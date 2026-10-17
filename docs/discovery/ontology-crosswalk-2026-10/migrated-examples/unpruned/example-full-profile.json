@@ -1,0 +1,539 @@
+{
+  "meta": {
+    "id": "476fd156-a402-4cd7-8e08-7a68a5228bfc",
+    "version": "0.9.0-draft",
+    "profile": "full",
+    "created_at": "2026-10-17T09:12:40.000Z",
+    "owner_user_id": "vp-SYN00000000000000A1",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate",
+    "updated_at": null,
+    "locale": "en",
+    "parent_id": null,
+    "source_type": "text",
+    "source_context": "journal entry written after the concert recording arrived",
+    "consent_scope": "personal memory archive",
+    "consent_revoked_at": null,
+    "tags": [
+      "choir",
+      "resilience",
+      "community"
+    ]
+  },
+  "narrative": {
+    "subject": "choir winter concert",
+    "trigger": "concert recording arrived",
+    "harm": "stamina lost to illness",
+    "drive": "choir of every age",
+    "integration": "performer then, performer now",
+    "summary": "The recording of the choir's winter concert arrived this week, with my first solo verse in it. A long-term health condition has limited my breath and stamina for years, and the weekly rehearsals with people of every age keep both my lungs and my mood working. Standing at the front of the hall and hearing the room go quiet brought back the person who used to perform without thinking about it. What started as a neighbour's nudge three years ago has become the one hour a week that is only mine, and I have come to believe everyone needs an hour like that.",
+    "meaning": "everyone needs an hour a week that is only theirs",
+    "identity_link": "performer despite physical limits",
+    "turning_point": true,
+    "arc": [
+      {
+        "text": "overcoming",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "overcoming",
+            "display": "overcoming",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/booker",
+            "code": "overcoming_the_monster",
+            "display": "Overcoming the Monster",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "authenticity",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "authenticity",
+            "display": "authenticity",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "valence_shift": "effort to ease",
+    "self_position": null
+  },
+  "emotion": {
+    "primary": {
+      "text": "joy",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+          "version": "1",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+          "version": "2025-07-31",
+          "code": "MFOEM:000034",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+          "version": "2014-04-01",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        }
+      ]
+    },
+    "secondary": [
+      {
+        "text": "proud",
+        "codings": []
+      },
+      {
+        "text": "grateful",
+        "codings": []
+      },
+      {
+        "text": "relieved",
+        "codings": []
+      },
+      {
+        "text": "nostalgic",
+        "codings": []
+      },
+      {
+        "text": "quiet triumph",
+        "codings": []
+      }
+    ],
+    "kind": {
+      "text": null,
+      "codings": []
+    },
+    "valence": {
+      "text": "positive",
+      "value": null,
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/valence/v1",
+          "version": "1",
+          "code": "positive",
+          "display": "positive",
+          "relation": "exact"
+        },
+        {
+          "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+          "version": "2025-07-31",
+          "code": "MFOEM:000207",
+          "display": "positive valence",
+          "relation": "exact"
+        }
+      ]
+    },
+    "arousal": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "intensity": {
+      "text": null,
+      "value": 0.8,
+      "codings": [
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#intensity-dimension",
+          "version": "2014-04-01",
+          "code": "intensity",
+          "display": "intensity",
+          "relation": "exact"
+        }
+      ]
+    },
+    "meta": "grateful acceptance",
+    "bodily_sensation": "breath held, then easy",
+    "temporal_profile": {
+      "text": "rising",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/temporal_profile/v1",
+          "version": "1",
+          "code": "rising",
+          "display": "rising",
+          "relation": "exact"
+        }
+      ]
+    },
+    "appraisal": {
+      "urgency": {
+        "text": "elevated",
+        "value": null,
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/urgency/v1",
+            "version": "1",
+            "code": "elevated",
+            "display": "elevated",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#ema-appraisals",
+            "version": "2014-04-01",
+            "code": "urgency",
+            "display": "urgency",
+            "relation": "exact"
+          }
+        ]
+      },
+      "control": {
+        "text": "high",
+        "value": null,
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/control/v1",
+            "version": "1",
+            "code": "high",
+            "display": "high",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#scherer-appraisals",
+            "version": "2014-04-01",
+            "code": "control",
+            "display": "control",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000110",
+            "display": "feeling in control",
+            "relation": "related"
+          }
+        ]
+      },
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
+    }
+  },
+  "context": {
+    "event": "annual concert",
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
+    "place": "community hall",
+    "people": [
+      "choir members",
+      "a neighbour"
+    ],
+    "relationship": {
+      "text": "community_ritual",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/relationship/v1",
+          "version": "1",
+          "code": "community_ritual",
+          "display": "community_ritual",
+          "relation": "exact"
+        }
+      ]
+    },
+    "relationship_model": {
+      "text": null,
+      "codings": []
+    },
+    "life_stage": {
+      "text": "midlife",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
+          "version": "1",
+          "code": "midlife",
+          "display": "midlife",
+          "relation": "exact"
+        }
+      ]
+    },
+    "scope": {
+      "text": "community",
+      "direction": "outward",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/scope/v1",
+          "version": "1",
+          "code": "community",
+          "display": "community",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "salience": {
+    "memory_type": {
+      "text": "milestone",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/memory_type/v1",
+          "version": "1",
+          "code": "milestone",
+          "display": "milestone",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/pillemer",
+          "code": "turning_points",
+          "display": "turning points",
+          "relation": "related"
+        }
+      ]
+    },
+    "tether": {
+      "type": {
+        "text": "identity",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/tether/v1",
+            "version": "1",
+            "code": "identity",
+            "display": "identity",
+            "relation": "exact"
+          }
+        ]
+      },
+      "referent": "the solo verse",
+      "stake": "identity restoration"
+    },
+    "retrieval_cues": [
+      "the hall going quiet",
+      "the recording",
+      "stage lights",
+      "the quiet before the first note",
+      "choir",
+      "solo verse",
+      "stamina",
+      "community hall"
+    ],
+    "themes": [
+      "chronic illness",
+      "self-care",
+      "community",
+      "performance"
+    ],
+    "recurrence": {
+      "text": "cyclical",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+          "version": "1",
+          "code": "cyclical",
+          "display": "cyclical",
+          "relation": "exact"
+        }
+      ]
+    },
+    "persistence": {
+      "text": "high",
+      "decay": "slow",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/persistence/v1",
+          "version": "1",
+          "code": "enduring",
+          "display": "enduring",
+          "relation": "exact"
+        }
+      ]
+    },
+    "linkage_strength": 0.9,
+    "function": [],
+    "resilience": [
+      "acceptance",
+      "community",
+      "adaptation"
+    ],
+    "trajectory": {
+      "text": "improving",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/trajectory/v1",
+          "version": "1",
+          "code": "improving",
+          "display": "improving",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": "share",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/action_tendency/v1",
+          "version": "1",
+          "code": "share",
+          "display": "share",
+          "relation": "exact"
+        },
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#frijda-action-tendencies",
+          "version": "2014-04-01",
+          "code": "being-with",
+          "display": "being-with",
+          "relation": "exact"
+        }
+      ]
+    },
+    "need": {
+      "text": "meaning",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/need/v1",
+          "version": "1",
+          "code": "meaning",
+          "display": "meaning",
+          "relation": "exact"
+        }
+      ]
+    },
+    "temporal_focus": {
+      "text": "present",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/temporal_focus/v1",
+          "version": "1",
+          "code": "present",
+          "display": "present",
+          "relation": "exact"
+        }
+      ]
+    },
+    "risk_posture": {
+      "text": "bold",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/risk_posture/v1",
+          "version": "1",
+          "code": "bold",
+          "display": "bold",
+          "relation": "exact"
+        }
+      ]
+    },
+    "coping": {
+      "text": "seek_support",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/coping/v1",
+          "version": "1",
+          "code": "seek_support",
+          "display": "seek_support",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/lazarus",
+          "code": "seeking_social_support",
+          "display": "Seeking Social Support",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "trait": {
+    "attachment_style": {
+      "text": "secure",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/attachment_style/v1",
+          "version": "1",
+          "code": "secure",
+          "display": "secure",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/ainsworth",
+          "code": "B",
+          "display": "B (secure)",
+          "relation": "exact"
+        }
+      ]
+    },
+    "regulation_state": {
+      "text": "regulated",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/regulation_state/v1",
+          "version": "1",
+          "code": "regulated",
+          "display": "regulated",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "governance": {
+    "jurisdiction": "GDPR",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    },
+    "exportability": "allowed",
+    "k_anonymity": {
+      "k": null,
+      "groups": []
+    },
+    "policy_labels": [
+      "personal",
+      "health-adjacent"
+    ],
+    "masking_rules": []
+  },
+  "telemetry": {
+    "entry_confidence": 0.93,
+    "extraction_model": "synthetic-hand-written",
+    "extraction_provider": null,
+    "extraction_notes": "SYNTHETIC example written for discovery (docs/discovery/ontology-crosswalk-2026-10); not an extraction output; no real person is described.",
+    "field_confidence": {}
+  },
+  "system": {
+    "embeddings": [],
+    "indices": {
+      "waypoint_ids": []
+    }
+  },
+  "crosswalks": {
+    "plutchik_primary": "joy",
+    "geneva_emotion_wheel": "Pride / Elation",
+    "DSM5_specifiers": null,
+    "ISO_27557_labels": null
+  },
+  "extensions": {
+    "org.emotionaldatamodel.migration": {
+      "v0_8_3_cut_fields": {
+        "constellation.interpersonal_affect": "belonging",
+        "constellation.media_format": "audio",
+        "constellation.narrative_archetype": "hero",
+        "milky_way.visibility_context": "shared_publicly",
+        "gravity.emotional_density": "high",
+        "impulse.primary_energy": "empowerment",
+        "impulse.social_visibility": "collective"
+      }
+    }
+  }
+}

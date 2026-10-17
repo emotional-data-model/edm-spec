@@ -1,5 +1,5 @@
 {
-  "source": "examples/example-full-profile.json",
+  "source": "synthetic-examples/example-full-profile.json",
   "proof": {
     "old_scalar_count": 71,
     "new_scalar_count": 71,
@@ -9,36 +9,36 @@
   },
   "migrated": {
     "meta": {
-      "id": "c41c7878-48f4-40f2-a7ee-9817a2a837de",
+      "id": "476fd156-a402-4cd7-8e08-7a68a5228bfc",
       "version": "0.9.0-draft",
       "profile": "full",
-      "created_at": "2026-03-09T11:45:09.455Z",
-      "updated_at": null,
-      "locale": "en-au",
-      "owner_user_id": "vp-02HZ4GKWP7XTJY9QN7BN",
-      "parent_id": null,
+      "created_at": "2026-10-17T09:12:40.000Z",
+      "owner_user_id": "vp-SYN00000000000000A1",
+      "consent_basis": "consent",
       "visibility": "private",
       "pii_tier": "moderate",
+      "updated_at": null,
+      "locale": "en",
+      "parent_id": null,
       "source_type": "text",
-      "source_context": "journal entry written after competition photos arrived",
-      "consent_basis": "consent",
+      "source_context": "journal entry written after the concert recording arrived",
       "consent_scope": "personal memory archive",
       "consent_revoked_at": null,
       "tags": [
-        "dance",
+        "choir",
         "resilience",
         "community"
       ]
     },
     "narrative": {
-      "subject": "physie competition",
-      "trigger": "receiving competition photos",
-      "harm": "body betrayal through arthritis",
-      "drive": "supportive women community",
-      "integration": "dance connecting past performer to present self",
-      "summary": "Weekend physie competition photos arrived, capturing the joy of performing despite a psoriatic arthritis diagnosis eight years ago. The supportive community of women and weekly classes keep both joints mobile and spirits high. Dancing in front of crowds resurrects the professional dancer within, defying physical limitations. What began as Jason's encouragement four years ago has become essential self-care for this working single mum.",
-      "meaning": "we all need something in our lives that we can do just for us",
-      "identity_link": "dancer despite physical limitations",
+      "subject": "choir winter concert",
+      "trigger": "concert recording arrived",
+      "harm": "stamina lost to illness",
+      "drive": "choir of every age",
+      "integration": "performer then, performer now",
+      "summary": "The recording of the choir's winter concert arrived this week, with my first solo verse in it. A long-term health condition has limited my breath and stamina for years, and the weekly rehearsals with people of every age keep both my lungs and my mood working. Standing at the front of the hall and hearing the room go quiet brought back the person who used to perform without thinking about it. What started as a neighbour's nudge three years ago has become the one hour a week that is only mine, and I have come to believe everyone needs an hour like that.",
+      "meaning": "everyone needs an hour a week that is only theirs",
+      "identity_link": "performer despite physical limits",
       "turning_point": true,
       "arc": [
         {
@@ -72,7 +72,7 @@
           ]
         }
       ],
-      "valence_shift": "struggle to triumph",
+      "valence_shift": "effort to ease",
       "self_position": null
     },
     "emotion": {
@@ -104,7 +104,7 @@
       },
       "secondary": [
         {
-          "text": "triumphant",
+          "text": "proud",
           "codings": []
         },
         {
@@ -112,7 +112,7 @@
           "codings": []
         },
         {
-          "text": "empowered",
+          "text": "relieved",
           "codings": []
         },
         {
@@ -120,7 +120,7 @@
           "codings": []
         },
         {
-          "text": "self-actualization",
+          "text": "quiet triumph",
           "codings": []
         }
       ],
@@ -166,8 +166,8 @@
           }
         ]
       },
-      "meta": "empowered",
-      "bodily_sensation": "mobile joints",
+      "meta": "grateful acceptance",
+      "bodily_sensation": "breath held, then easy",
       "temporal_profile": {
         "text": "rising",
         "codings": [
@@ -235,15 +235,15 @@
       }
     },
     "context": {
-      "event": "competition",
+      "event": "annual concert",
       "event_category": {
         "text": null,
         "codings": []
       },
-      "place": "physie competition venue",
+      "place": "community hall",
       "people": [
-        "Jason",
-        "dance sisters"
+        "choir members",
+        "a neighbour"
       ],
       "relationship": {
         "text": "community_ritual",
@@ -319,24 +319,24 @@
             }
           ]
         },
-        "referent": "dance stage",
+        "referent": "the solo verse",
         "stake": "identity restoration"
       },
       "retrieval_cues": [
-        "feeling young on stage",
-        "physie photos",
+        "the hall going quiet",
+        "the recording",
         "stage lights",
-        "supportive cheers",
-        "physie competition",
-        "arthritis warrior",
-        "dance community",
-        "stage performance"
+        "the quiet before the first note",
+        "choir",
+        "solo verse",
+        "stamina",
+        "community hall"
       ],
       "themes": [
         "chronic illness",
-        "single motherhood",
         "self-care",
-        "community support"
+        "community",
+        "performance"
       ],
       "recurrence": {
         "text": "cyclical",
@@ -458,39 +458,6 @@
         ]
       }
     },
-    "trait": {
-      "_opt_in": "present only because the v0.8.3 artifact carried these fields; a v0.9 profile must opt in to keep them",
-      "attachment_style": {
-        "text": "secure",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/attachment_style/v1",
-            "version": "1",
-            "code": "secure",
-            "display": "secure",
-            "relation": "exact"
-          },
-          {
-            "system": "https://emotionaldatamodel.org/xref/v1/ainsworth",
-            "code": "B",
-            "display": "B (secure)",
-            "relation": "exact"
-          }
-        ]
-      },
-      "regulation_state": {
-        "text": "regulated",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/regulation_state/v1",
-            "version": "1",
-            "code": "regulated",
-            "display": "regulated",
-            "relation": "exact"
-          }
-        ]
-      }
-    },
     "governance": {
       "jurisdiction": "GDPR",
       "retention_policy": {
@@ -516,9 +483,9 @@
     },
     "telemetry": {
       "entry_confidence": 0.93,
-      "extraction_model": "claude-sonnet-4-6",
-      "extraction_provider": "anthropic",
-      "extraction_notes": "Full-profile extraction; interpretive fields grounded in stated content, no inference applied.",
+      "extraction_model": "synthetic-hand-written",
+      "extraction_provider": null,
+      "extraction_notes": "SYNTHETIC example written for discovery (docs/discovery/ontology-crosswalk-2026-10); not an extraction output; no real person is described.",
       "field_confidence": {}
     },
     "system": {
@@ -537,12 +504,44 @@
       "org.emotionaldatamodel.migration": {
         "v0_8_3_cut_fields": {
           "constellation.interpersonal_affect": "belonging",
-          "constellation.media_format": "photo_with_story",
+          "constellation.media_format": "audio",
           "constellation.narrative_archetype": "hero",
           "milky_way.visibility_context": "shared_publicly",
           "gravity.emotional_density": "high",
           "impulse.primary_energy": "empowerment",
           "impulse.social_visibility": "collective"
+        },
+        "out_of_profile_fields": {
+          "trait.attachment_style": {
+            "text": "secure",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/attachment_style/v1",
+                "version": "1",
+                "code": "secure",
+                "display": "secure",
+                "relation": "exact"
+              },
+              {
+                "system": "https://emotionaldatamodel.org/xref/v1/ainsworth",
+                "code": "B",
+                "display": "B (secure)",
+                "relation": "exact"
+              }
+            ]
+          },
+          "trait.regulation_state": {
+            "text": "regulated",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/regulation_state/v1",
+                "version": "1",
+                "code": "regulated",
+                "display": "regulated",
+                "relation": "exact"
+              }
+            ]
+          }
         }
       }
     }

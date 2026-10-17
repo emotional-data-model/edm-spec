@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "id": "323112d7-b664-44b9-8bb8-975d3b1425bb",
+    "version": "0.9.0-draft",
+    "profile": "partner:com.deepadata.therapy.v1",
+    "created_at": "2026-10-17T14:30:00.000Z",
+    "owner_user_id": "vp-SYN00000000000000D4",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "high"
+  },
+  "narrative": {
+    "subject": "peacekeeper role",
+    "trigger": "sibling's comment at dinner",
+    "harm": "never allowed to be upset",
+    "drive": "therapeutic insight",
+    "integration": "dinner reaction to childhood role",
+    "summary": "Session focused on how a sibling's offhand comment at a family dinner reopened an old pattern. Client described being the one expected to keep the peace since childhood and noticed they had apologised for a disagreement they did not start. Named the moment when they said 'I have been managing everyone's mood since I was ten.' First time explicitly connecting the dinner reaction to the childhood role.",
+    "meaning": null,
+    "identity_link": "the one who keeps the peace",
+    "turning_point": true,
+    "arc": [
+      {
+        "text": "overcoming",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "overcoming",
+            "display": "overcoming",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/booker",
+            "code": "overcoming_the_monster",
+            "display": "Overcoming the Monster",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "reconciliation",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "reconciliation",
+            "display": "reconciliation",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "valence_shift": "resentment to insight",
+    "self_position": null
+  },
+  "emotion": {
+    "primary": {
+      "text": "sadness",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+          "version": "1",
+          "code": "sadness",
+          "display": "sadness",
+          "relation": "exact"
+        },
+        {
+          "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+          "version": "2025-07-31",
+          "code": "MFOEM:000056",
+          "display": "sadness",
+          "relation": "exact"
+        },
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#fsre-categories",
+          "version": "2014-04-01",
+          "code": "sadness",
+          "display": "sadness",
+          "relation": "exact"
+        }
+      ]
+    },
+    "secondary": [
+      {
+        "text": "anxiety",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "anxiety",
+            "display": "anxiety",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000028",
+            "display": "anxiety",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#fsre-categories",
+            "version": "2014-04-01",
+            "code": "anxiety",
+            "display": "anxiety",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "anger",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "anger",
+            "display": "anger",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000009",
+            "display": "anger",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#big6",
+            "version": "2014-04-01",
+            "code": "anger",
+            "display": "anger",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "relief",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "relief",
+            "display": "relief",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+            "version": "2014-04-01",
+            "code": "relief",
+            "display": "relief",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "kind": {
+      "text": null,
+      "codings": []
+    },
+    "valence": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "arousal": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "intensity": {
+      "text": null,
+      "value": 0.86,
+      "codings": [
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#intensity-dimension",
+          "version": "2014-04-01",
+          "code": "intensity",
+          "display": "intensity",
+          "relation": "exact"
+        }
+      ]
+    },
+    "meta": null,
+    "bodily_sensation": "jaw tight when describing the dinner",
+    "temporal_profile": {
+      "text": null,
+      "codings": []
+    },
+    "appraisal": {
+      "urgency": {
+        "text": null,
+        "value": null,
+        "codings": []
+      },
+      "control": {
+        "text": "medium",
+        "value": null,
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/control/v1",
+            "version": "1",
+            "code": "medium",
+            "display": "medium",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#scherer-appraisals",
+            "version": "2014-04-01",
+            "code": "control",
+            "display": "control",
+            "relation": "exact"
+          }
+        ]
+      },
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
+    }
+  },
+  "context": {
+    "event": "therapy session",
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
+    "place": "therapist's office",
+    "people": [
+      "sibling",
+      "parents"
+    ],
+    "relationship": {
+      "text": "sibling_bond",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/relationship/v1",
+          "version": "1",
+          "code": "sibling_bond",
+          "display": "sibling_bond",
+          "relation": "exact"
+        }
+      ]
+    },
+    "relationship_model": {
+      "text": null,
+      "codings": []
+    },
+    "life_stage": {
+      "text": null,
+      "codings": []
+    },
+    "scope": {
+      "text": null,
+      "direction": null,
+      "codings": []
+    }
+  },
+  "salience": {
+    "memory_type": {
+      "text": null,
+      "codings": []
+    },
+    "tether": {
+      "type": {
+        "text": "person",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/tether/v1",
+            "version": "1",
+            "code": "person",
+            "display": "person",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/occ",
+            "code": "agents",
+            "display": "actions of agents",
+            "relation": "exact"
+          }
+        ]
+      },
+      "referent": null,
+      "stake": null
+    },
+    "retrieval_cues": [
+      "managing everyone's mood",
+      "family dinners",
+      "raised voices",
+      "being asked to smooth things over",
+      "sibling",
+      "peacekeeper",
+      "apology",
+      "family role"
+    ],
+    "themes": [
+      "self-worth",
+      "boundaries",
+      "family roles",
+      "validation"
+    ],
+    "recurrence": {
+      "text": "chronic",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+          "version": "1",
+          "code": "chronic",
+          "display": "chronic",
+          "relation": "exact"
+        }
+      ]
+    },
+    "persistence": {
+      "text": null,
+      "decay": "slow",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/persistence/v1",
+          "version": "1",
+          "code": "enduring",
+          "display": "enduring",
+          "relation": "exact"
+        }
+      ]
+    },
+    "linkage_strength": 0.84,
+    "function": [],
+    "resilience": [
+      "naming the pattern",
+      "emotional awareness",
+      "willingness to examine"
+    ],
+    "trajectory": {
+      "text": "improving",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/trajectory/v1",
+          "version": "1",
+          "code": "improving",
+          "display": "improving",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
+    },
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": "process",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/coping/v1",
+          "version": "1",
+          "code": "process",
+          "display": "process",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "trait": {
+    "attachment_style": {
+      "text": "anxious",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/attachment_style/v1",
+          "version": "1",
+          "code": "anxious",
+          "display": "anxious",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/ainsworth",
+          "code": "C",
+          "display": "C (insecure-ambivalent/resistant)",
+          "relation": "exact"
+        }
+      ]
+    },
+    "regulation_state": {
+      "text": "regulated",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/regulation_state/v1",
+          "version": "1",
+          "code": "regulated",
+          "display": "regulated",
+          "relation": "exact"
+        }
+      ]
+    }
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "legal",
+      "ttl_days": 2555,
+      "on_expiry": "anonymize"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": true
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.95,
+    "extraction_model": "synthetic-hand-written",
+    "field_confidence": {}
+  },
+  "system": {
+    "embeddings": null,
+    "indices": null
+  },
+  "crosswalks": {
+    "plutchik_primary": "sadness",
+    "geneva_emotion_wheel": "disappointment",
+    "DSM5_specifiers": null,
+    "ISO_27557_labels": null
+  },
+  "extensions": {
+    "org.emotionaldatamodel.migration": {
+      "v0_8_3_cut_fields": {
+        "milky_way.visibility_context": "private"
+      }
+    }
+  }
+}

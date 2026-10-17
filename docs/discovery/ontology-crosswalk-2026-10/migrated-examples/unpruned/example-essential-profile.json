@@ -1,0 +1,233 @@
+{
+  "meta": {
+    "id": "4e7b154a-35ed-43e4-9bd5-2ae205e50568",
+    "version": "0.9.0-draft",
+    "profile": "essential",
+    "created_at": "2026-10-17T09:12:03.000Z",
+    "owner_user_id": "vp-SYN00000000000000A1",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "narrative": {
+    "subject": "choir winter concert",
+    "trigger": "concert recording arrived",
+    "harm": "stamina lost to illness",
+    "drive": "choir of every age",
+    "integration": "performing through limits",
+    "summary": null,
+    "meaning": null,
+    "identity_link": null,
+    "turning_point": null,
+    "arc": [
+      {
+        "text": "overcoming",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "overcoming",
+            "display": "overcoming",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/booker",
+            "code": "overcoming_the_monster",
+            "display": "Overcoming the Monster",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "valence_shift": null,
+    "self_position": null
+  },
+  "emotion": {
+    "primary": {
+      "text": "joy",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+          "version": "1",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+          "version": "2025-07-31",
+          "code": "MFOEM:000034",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+          "version": "2014-04-01",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        }
+      ]
+    },
+    "secondary": [
+      {
+        "text": "proud",
+        "codings": []
+      },
+      {
+        "text": "grateful",
+        "codings": []
+      },
+      {
+        "text": "nostalgic",
+        "codings": []
+      },
+      {
+        "text": "supported",
+        "codings": []
+      }
+    ],
+    "kind": {
+      "text": null,
+      "codings": []
+    },
+    "valence": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "arousal": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "intensity": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "meta": null,
+    "bodily_sensation": null,
+    "temporal_profile": {
+      "text": null,
+      "codings": []
+    },
+    "appraisal": {
+      "urgency": {
+        "text": null,
+        "value": null,
+        "codings": []
+      },
+      "control": {
+        "text": null,
+        "value": null,
+        "codings": []
+      },
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
+    }
+  },
+  "context": {
+    "event": null,
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
+    "place": null,
+    "people": null,
+    "relationship": {
+      "text": null,
+      "codings": []
+    },
+    "relationship_model": {
+      "text": null,
+      "codings": []
+    },
+    "life_stage": {
+      "text": null,
+      "codings": []
+    },
+    "scope": {
+      "text": null,
+      "direction": null,
+      "codings": []
+    }
+  },
+  "salience": {
+    "memory_type": {
+      "text": null,
+      "codings": []
+    },
+    "tether": {
+      "type": {
+        "text": null,
+        "codings": []
+      },
+      "referent": null,
+      "stake": null
+    },
+    "retrieval_cues": [
+      "the hall going quiet"
+    ],
+    "themes": null,
+    "recurrence": {
+      "text": null,
+      "codings": []
+    },
+    "persistence": {
+      "text": null,
+      "decay": null,
+      "codings": []
+    },
+    "linkage_strength": null,
+    "function": [],
+    "resilience": null,
+    "trajectory": {
+      "text": null,
+      "codings": []
+    }
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
+    },
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
+  },
+  "governance": {
+    "jurisdiction": "GDPR",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.94,
+    "extraction_model": "synthetic-hand-written",
+    "extraction_provider": null,
+    "field_confidence": {}
+  }
+}

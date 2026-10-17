@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "EDM TELEMETRY Domain (v0.9 DRAFT)",
+  "type": "object",
+  "properties": {
+    "entry_confidence": {
+      "description": "Confidence score for extraction accuracy",
+      "type": [
+        "number",
+        "null"
+      ]
+    },
+    "extraction_model": {
+      "description": "Model identifier used for extraction",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "extraction_provider": {
+      "description": "Provider of the extraction model",
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "anthropic",
+        "openai",
+        "google",
+        "kimi",
+        "open_weight",
+        "other",
+        null
+      ],
+      "x_draft_note": "google, open_weight and other added so the experiment-plan.md runs can be recorded; v0.8.3 enum is anthropic / openai / kimi"
+    },
+    "extraction_notes": {
+      "description": "Optional notes about extraction quality",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "field_confidence": {
+      "description": "Extractor confidence per populated field, keyed by field path (e.g. \"emotion.primary\": 0.92), after EmotionML's confidence attribute. Infrastructure, not an affective field; excluded from the seal hash like the rest of telemetry.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "propertyNames": {
+        "pattern": "^(narrative|emotion|context|salience|motivation|trait)\\.[a-z_.]+$"
+      },
+      "additionalProperties": {
+        "type": "number",
+        "minimum": 0,
+        "maximum": 1
+      }
+    }
+  },
+  "additionalProperties": false,
+  "required": [
+    "entry_confidence",
+    "extraction_model"
+  ],
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/telemetry.json"
+}

@@ -1,0 +1,476 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/salience.json",
+  "title": "EDM SALIENCE Domain (v0.9 DRAFT)",
+  "description": "Why and how the experience stays retrievable and what it is bound to (v0.8.3 gravity + memory_type / symbolic_anchor + core.echo).",
+  "type": "object",
+  "properties": {
+    "memory_type": {
+      "description": "The class of memory the experience represents within personal identity",
+      "x_constraints": "Canonical: legacy_artifact, fleeting_moment, milestone, reflection, formative_experience. legacy_artifact is deprecated (an object tether, not a memory type).",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/memory_type/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "fleeting_moment",
+                        "formative_experience",
+                        "legacy_artifact",
+                        "milestone",
+                        "reflection"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/memory_type/v1",
+      "x_recommended_values": [
+        "fleeting_moment",
+        "formative_experience",
+        "milestone",
+        "reflection"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "legacy_artifact",
+          "replaced_by": null,
+          "reason": "an object tether, not a memory type (coded tether/v1#object, related)"
+        }
+      ]
+    },
+    "tether": {
+      "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
+      "x_constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "allOf": [
+            {
+              "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+            },
+            {
+              "properties": {
+                "codings": {
+                  "items": {
+                    "if": {
+                      "properties": {
+                        "system": {
+                          "const": "https://emotionaldatamodel.org/vocab/tether/v1"
+                        }
+                      },
+                      "required": [
+                        "system"
+                      ]
+                    },
+                    "then": {
+                      "properties": {
+                        "code": {
+                          "enum": [
+                            "event",
+                            "identity",
+                            "object",
+                            "person",
+                            "place",
+                            "ritual",
+                            "self",
+                            "symbol",
+                            "tradition"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "referent": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The concrete object, place or element that concentrates the meaning (v0.8.3 symbolic_anchor)"
+        },
+        "stake": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "What is at stake in the tether (v0.8.3 gravity_type; Lazarus ego-involvement)",
+          "x_profiles": [
+            "full"
+          ]
+        }
+      },
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/tether/v1",
+      "x_recommended_values": [
+        "event",
+        "identity",
+        "object",
+        "person",
+        "place",
+        "ritual",
+        "self",
+        "symbol",
+        "tradition"
+      ]
+    },
+    "retrieval_cues": {
+      "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
+      "x_constraints": "Short phrases; order carries no meaning",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "themes": {
+      "description": "Adjacent themes or motifs connected to the experience",
+      "x_constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
+      "x_profiles": [
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "recurrence": {
+      "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
+      "x_constraints": "Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/recurrence/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "chronic",
+                        "cyclical",
+                        "emerging",
+                        "isolated"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+      "x_recommended_values": [
+        "chronic",
+        "cyclical",
+        "isolated"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "emerging",
+          "replaced_by": null,
+          "reason": "not a recurrence structure"
+        }
+      ]
+    },
+    "persistence": {
+      "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
+      "x_constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
+      "x_profiles": [
+        "full"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_recommended_values": [
+            "low",
+            "medium",
+            "high",
+            "enduring"
+          ]
+        },
+        "decay": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_recommended_values": [
+            "fast",
+            "moderate",
+            "slow"
+          ]
+        },
+        "codings": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coding"
+              },
+              {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/persistence/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "chronic",
+                        "enduring",
+                        "fluid",
+                        "high",
+                        "low",
+                        "medium",
+                        "short",
+                        "transient"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/persistence/v1",
+      "x_recommended_values": [
+        "chronic",
+        "enduring",
+        "high",
+        "low",
+        "medium",
+        "short",
+        "transient"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "fluid",
+          "replaced_by": "transient",
+          "reason": "nominal value inside an ordinal scale"
+        }
+      ]
+    },
+    "linkage_strength": {
+      "description": "The binding strength of the emotion within the broader emotional network",
+      "x_constraints": "0.0–1.0",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "maximum": 1
+    },
+    "function": {
+      "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
+      "x_constraints": "Pillemer 1992 / Bluck 2003 memory functions",
+      "x_profiles": [
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+          },
+          {
+            "properties": {
+              "codings": {
+                "items": {
+                  "if": {
+                    "properties": {
+                      "system": {
+                        "const": "https://emotionaldatamodel.org/vocab/function/v1"
+                      }
+                    },
+                    "required": [
+                      "system"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "code": {
+                        "enum": [
+                          "directive",
+                          "self",
+                          "social"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 3,
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/function/v1",
+      "x_recommended_values": [
+        "directive",
+        "self",
+        "social"
+      ]
+    },
+    "resilience": {
+      "description": "Indicators of stabilizing or constructive emotional processing",
+      "x_constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
+      "x_profiles": [
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "trajectory": {
+      "description": "How the emotional state is evolving across time",
+      "x_constraints": "Canonical: improving, stable, declining, integrative; emerging is deprecated",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/trajectory/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "declining",
+                        "emerging",
+                        "improving",
+                        "integrative",
+                        "stable"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/trajectory/v1",
+      "x_recommended_values": [
+        "declining",
+        "improving",
+        "integrative",
+        "stable"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "emerging",
+          "replaced_by": null,
+          "reason": "not a trajectory direction"
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json",
+  "title": "EDM v0.9 DRAFT shared shapes",
+  "description": "coded = text + codings; dimension = text + value + codings; coding = FHIR R4 Coding (system, version, code, display) plus an EDM relation. Text is the interpretation; codings are optional, additive and may disagree; a coding never replaces the text.",
+  "definitions": {
+    "coding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "system",
+        "code"
+      ],
+      "properties": {
+        "system": {
+          "type": "string",
+          "format": "uri",
+          "description": "Code system URI (EDM vocabulary, OBO PURL, EmotionML vocabulary, or an EDM xref placeholder)"
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Code-system version as published by its owner"
+        },
+        "code": {
+          "type": "string"
+        },
+        "display": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "relation": {
+          "type": "string",
+          "enum": [
+            "exact",
+            "broader",
+            "narrower",
+            "related"
+          ],
+          "default": "exact",
+          "description": "How the EDM text relates to the target concept (SKOS mapping sense)"
+        },
+        "confidence": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Extractor confidence in this coding (EmotionML confidence attribute)"
+        }
+      }
+    },
+    "codings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/coding"
+      },
+      "default": []
+    },
+    "coded": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "The interpretation, in the value words of the field; mandatory when the field is populated"
+        },
+        "codings": {
+          "$ref": "#/definitions/codings"
+        }
+      },
+      "if": {
+        "properties": {
+          "codings": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "codings"
+        ]
+      },
+      "then": {
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      },
+      "x_rule": "codings are only allowed when text is present (v0.9-proposal.md section 4 rule 1)"
+    },
+    "dimension": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "text",
+        "value"
+      ],
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Ordinal label"
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "description": "Numeric value on the scale named by the EmotionML coding; never derived from text by migration"
+        },
+        "codings": {
+          "$ref": "#/definitions/codings"
+        }
+      },
+      "if": {
+        "properties": {
+          "codings": {
+            "minItems": 1
+          }
+        },
+        "required": [
+          "codings"
+        ]
+      },
+      "then": {
+        "anyOf": [
+          {
+            "properties": {
+              "text": {
+                "type": "string"
+              }
+            }
+          },
+          {
+            "properties": {
+              "value": {
+                "type": "number"
+              }
+            }
+          }
+        ]
+      },
+      "x_rule": "codings are only allowed when text or value is present"
+    }
+  }
+}

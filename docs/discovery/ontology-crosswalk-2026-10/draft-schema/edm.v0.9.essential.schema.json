@@ -1,0 +1,222 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.essential.schema.json",
+  "title": "EDM v0.9.0 Essential Profile (DRAFT, discovery)",
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 11 affective fields over 2 affective domains; the trait block is not included (opt-in via partner manifest). Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 11,
+  "x_affective_fields": [
+    "narrative.subject",
+    "narrative.trigger",
+    "narrative.harm",
+    "narrative.drive",
+    "narrative.integration",
+    "narrative.arc",
+    "narrative.self_position",
+    "emotion.primary",
+    "emotion.secondary",
+    "emotion.valence",
+    "emotion.intensity"
+  ],
+  "type": "object",
+  "required": [
+    "meta",
+    "narrative",
+    "emotion",
+    "governance",
+    "telemetry"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "meta": {
+      "description": "Identity, provenance, and consent metadata. Essential profile requires minimal governance fields.",
+      "type": "object",
+      "required": [
+        "version",
+        "profile",
+        "created_at",
+        "visibility",
+        "pii_tier",
+        "consent_basis"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Unique identifier for the EDM artifact.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "version": {
+          "type": "string",
+          "description": "EDM schema version.",
+          "pattern": "^0\\.9\\.[0-9]+(-draft)?$"
+        },
+        "profile": {
+          "oneOf": [
+            {
+              "type": "string",
+              "enum": [
+                "essential",
+                "extended",
+                "full"
+              ],
+              "description": "Canonical extraction profile"
+            },
+            {
+              "type": "string",
+              "pattern": "^partner:.+$",
+              "description": "Partner profile ID with namespace prefix per EDM v0.8.0 Section 3.7.2 and ADR-0017 — e.g. partner:com.deepadata.journaling.v1"
+            }
+          ]
+        },
+        "created_at": {
+          "type": "string",
+          "description": "Artifact extraction timestamp.",
+          "format": "date-time"
+        },
+        "updated_at": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Optional post-extraction update timestamp.",
+          "format": "date-time"
+        },
+        "locale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Linguistic and cultural context.",
+          "pattern": "^[a-z]{2}(-[a-z]{2})?$"
+        },
+        "owner_user_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Artifact owner identifier."
+        },
+        "parent_id": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Parent artifact link.",
+          "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+        },
+        "visibility": {
+          "type": "string",
+          "enum": [
+            "private",
+            "shared",
+            "public"
+          ],
+          "description": "Artifact visibility scope."
+        },
+        "pii_tier": {
+          "type": "string",
+          "enum": [
+            "none",
+            "low",
+            "moderate",
+            "high",
+            "extreme"
+          ],
+          "description": "PII classification level."
+        },
+        "consent_basis": {
+          "type": "string",
+          "enum": [
+            "consent",
+            "contract",
+            "legitimate_interest",
+            "none"
+          ],
+          "description": "Legal basis for processing."
+        }
+      }
+    },
+    "narrative": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/narrative.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "subject",
+              "trigger",
+              "harm",
+              "drive",
+              "integration",
+              "arc",
+              "self_position"
+            ]
+          },
+          "required": [
+            "subject",
+            "trigger",
+            "harm",
+            "drive",
+            "integration",
+            "arc",
+            "self_position"
+          ]
+        }
+      ],
+      "x_fields": [
+        "narrative.subject",
+        "narrative.trigger",
+        "narrative.harm",
+        "narrative.drive",
+        "narrative.integration",
+        "narrative.arc",
+        "narrative.self_position"
+      ]
+    },
+    "emotion": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/emotion.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "primary",
+              "secondary",
+              "valence",
+              "intensity"
+            ]
+          },
+          "required": [
+            "primary",
+            "secondary",
+            "valence",
+            "intensity"
+          ]
+        }
+      ],
+      "x_fields": [
+        "emotion.primary",
+        "emotion.secondary",
+        "emotion.valence",
+        "emotion.intensity"
+      ]
+    },
+    "governance": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/governance.json"
+    },
+    "telemetry": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/telemetry.json"
+    },
+    "extensions": {
+      "$ref": "https://deepadata.com/schemas/edm/v0.8.0/fragments/extensions.json",
+      "x_draft_note": "Optional in every profile so that migration can preserve cut and out-of-profile text (the v0.8 composites do not list extensions)."
+    }
+  }
+}

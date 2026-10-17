@@ -1,0 +1,361 @@
+{
+  "meta": {
+    "id": "e37eb439-19db-49ce-afd7-6a4b76466541",
+    "version": "0.9.0-draft",
+    "profile": "partner:com.deepadata.journaling.v1",
+    "created_at": "2026-10-17T06:40:00.000Z",
+    "owner_user_id": "vp-SYN00000000000000B2",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "narrative": {
+    "subject": "morning pages",
+    "trigger": "dream of the mentor's workshop",
+    "harm": "mentor's death",
+    "drive": "keeping the lesson going",
+    "integration": "writing as practice",
+    "summary": "Woke from a dream set in the workshop my late mentor kept behind the house, where I learned to sand a chair leg without rushing. In the dream he said nothing and just handed me the next piece. Two years since the funeral and I still save up things to tell him. I started these morning pages because he said hands and words both need a daily practice. Maybe writing is how I keep the lesson going.",
+    "meaning": null,
+    "identity_link": "apprentice who keeps the craft",
+    "turning_point": null,
+    "arc": [
+      {
+        "text": "reflection",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "reflection",
+            "display": "reflection",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "grief",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "grief",
+            "display": "grief",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000016",
+            "display": "grief",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "valence_shift": "grief to gratitude",
+    "self_position": null
+  },
+  "emotion": {
+    "primary": {
+      "text": "longing",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+          "version": "1",
+          "code": "longing",
+          "display": "longing",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/cowen_keltner",
+          "code": "nostalgia",
+          "display": "nostalgia",
+          "relation": "related"
+        }
+      ]
+    },
+    "secondary": [
+      {
+        "text": "tenderness",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "tenderness",
+            "display": "tenderness",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000048",
+            "display": "love",
+            "relation": "related"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000052",
+            "display": "compassion",
+            "relation": "related"
+          }
+        ]
+      },
+      {
+        "text": "gratitude",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "gratitude",
+            "display": "gratitude",
+            "relation": "exact"
+          },
+          {
+            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+            "version": "2014-04-01",
+            "code": "gratitude",
+            "display": "gratitude",
+            "relation": "exact"
+          }
+        ]
+      },
+      {
+        "text": "peace",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+            "version": "1",
+            "code": "peace",
+            "display": "peace",
+            "relation": "exact"
+          },
+          {
+            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+            "version": "2025-07-31",
+            "code": "MFOEM:000043",
+            "display": "serenity",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "kind": {
+      "text": null,
+      "codings": []
+    },
+    "valence": {
+      "text": "mixed",
+      "value": null,
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/valence/v1",
+          "version": "1",
+          "code": "mixed",
+          "display": "mixed",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/xref/v1/wordnet_affect",
+          "code": "ambiguous",
+          "display": "ambiguous",
+          "relation": "exact"
+        }
+      ]
+    },
+    "arousal": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "intensity": {
+      "text": null,
+      "value": 0.78,
+      "codings": [
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#intensity-dimension",
+          "version": "2014-04-01",
+          "code": "intensity",
+          "display": "intensity",
+          "relation": "exact"
+        }
+      ]
+    },
+    "meta": null,
+    "bodily_sensation": null,
+    "temporal_profile": {
+      "text": null,
+      "codings": []
+    },
+    "appraisal": {
+      "urgency": {
+        "text": null,
+        "value": null,
+        "codings": []
+      },
+      "control": {
+        "text": null,
+        "value": null,
+        "codings": []
+      },
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
+    }
+  },
+  "context": {
+    "event": "morning journaling after a dream",
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
+    "place": "mentor's workshop (dreamed)",
+    "people": [
+      "my late mentor"
+    ],
+    "relationship": {
+      "text": null,
+      "codings": []
+    },
+    "relationship_model": {
+      "text": null,
+      "codings": []
+    },
+    "life_stage": {
+      "text": "midlife",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
+          "version": "1",
+          "code": "midlife",
+          "display": "midlife",
+          "relation": "exact"
+        }
+      ]
+    },
+    "scope": {
+      "text": null,
+      "direction": null,
+      "codings": []
+    }
+  },
+  "salience": {
+    "memory_type": {
+      "text": "legacy_artifact",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/memory_type/v1",
+          "version": "1",
+          "code": "legacy_artifact",
+          "display": "legacy_artifact",
+          "relation": "exact"
+        },
+        {
+          "system": "https://emotionaldatamodel.org/vocab/tether/v1",
+          "version": "1",
+          "code": "object",
+          "display": "object",
+          "relation": "related"
+        }
+      ]
+    },
+    "tether": {
+      "type": {
+        "text": "person",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/tether/v1",
+            "version": "1",
+            "code": "person",
+            "display": "person",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/occ",
+            "code": "agents",
+            "display": "actions of agents",
+            "relation": "exact"
+          }
+        ]
+      },
+      "referent": null,
+      "stake": null
+    },
+    "retrieval_cues": [
+      "the next piece handed over"
+    ],
+    "themes": null,
+    "recurrence": {
+      "text": "cyclical",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+          "version": "1",
+          "code": "cyclical",
+          "display": "cyclical",
+          "relation": "exact"
+        }
+      ]
+    },
+    "persistence": {
+      "text": null,
+      "decay": null,
+      "codings": []
+    },
+    "linkage_strength": 0.75,
+    "function": [],
+    "resilience": null,
+    "trajectory": {
+      "text": null,
+      "codings": []
+    }
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
+    },
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.92,
+    "extraction_model": "synthetic-hand-written",
+    "field_confidence": {}
+  },
+  "extensions": {
+    "org.emotionaldatamodel.migration": {
+      "v0_8_3_cut_fields": {
+        "milky_way.visibility_context": "private"
+      }
+    }
+  }
+}

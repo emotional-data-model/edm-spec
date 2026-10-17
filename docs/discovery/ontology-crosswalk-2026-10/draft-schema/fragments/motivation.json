@@ -1,0 +1,271 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/motivation.json",
+  "title": "EDM MOTIVATION Domain (v0.9 DRAFT)",
+  "description": "The behavioural direction the subject expresses (v0.8.3 impulse minus the appraisal, scope and trait fields).",
+  "type": "object",
+  "properties": {
+    "action_tendency": {
+      "description": "The behavioral direction or movement expressed through the emotional response",
+      "x_constraints": "Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/action_tendency/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "approach",
+                        "avoid",
+                        "confront",
+                        "explore",
+                        "persevere",
+                        "process",
+                        "protect",
+                        "repair",
+                        "share"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/action_tendency/v1",
+      "x_recommended_values": [
+        "approach",
+        "avoid",
+        "confront",
+        "explore",
+        "persevere",
+        "process",
+        "protect",
+        "repair",
+        "share"
+      ]
+    },
+    "need": {
+      "description": "The foundational motivational domain guiding the individual's internal stance",
+      "x_constraints": "Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/need/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "authenticity",
+                        "autonomy",
+                        "belonging",
+                        "mastery",
+                        "meaning",
+                        "safety"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/need/v1",
+      "x_recommended_values": [
+        "authenticity",
+        "autonomy",
+        "belonging",
+        "mastery",
+        "meaning",
+        "safety"
+      ]
+    },
+    "temporal_focus": {
+      "description": "The temporal direction toward which the motivational energy is oriented",
+      "x_constraints": "past / present / future",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/temporal_focus/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "future",
+                        "past",
+                        "present"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/temporal_focus/v1",
+      "x_recommended_values": [
+        "future",
+        "past",
+        "present"
+      ]
+    },
+    "risk_posture": {
+      "description": "The stance toward uncertainty or potential risk embedded in the moment",
+      "x_constraints": "cautious / balanced / bold",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/risk_posture/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "balanced",
+                        "bold",
+                        "cautious"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/risk_posture/v1",
+      "x_recommended_values": [
+        "balanced",
+        "bold",
+        "cautious"
+      ]
+    },
+    "coping": {
+      "description": "The primary strategy used to manage or integrate the emotional experience",
+      "x_constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/coping/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "confront",
+                        "detach",
+                        "distract",
+                        "process",
+                        "reframe_meaning",
+                        "ritualize",
+                        "seek_support"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/coping/v1",
+      "x_recommended_values": [
+        "confront",
+        "detach",
+        "distract",
+        "process",
+        "reframe_meaning",
+        "ritualize",
+        "seek_support"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,400 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/context.json",
+  "title": "EDM CONTEXT Domain (v0.9 DRAFT)",
+  "description": "Where, when, with whom and in what relational frame (v0.8.3 milky_way + the relational fields of constellation).",
+  "type": "object",
+  "properties": {
+    "event": {
+      "description": "Type of event or situation",
+      "x_constraints": "Free text (e.g., \"family gathering\", \"farewell\", \"birthday\", \"reunion\")",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "event_category": {
+      "description": "Coded companion to context.event: the content category of the event as the subject describes it.",
+      "x_constraints": "Singer & Blagov / Thorne & McLean categories: relationships, life_threatening_events, recreation_exploration, achievement_mastery, guilt_shame, drug_alcohol_tobacco_use, not_classifiable (labels knowledge-reconstructed; REPORT.md section 9)",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/event_category/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "achievement_mastery",
+                        "drug_alcohol_tobacco_use",
+                        "guilt_shame",
+                        "life_threatening_events",
+                        "not_classifiable",
+                        "recreation_exploration",
+                        "relationships"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/event_category/v1",
+      "x_recommended_values": [
+        "achievement_mastery",
+        "drug_alcohol_tobacco_use",
+        "guilt_shame",
+        "life_threatening_events",
+        "not_classifiable",
+        "recreation_exploration",
+        "relationships"
+      ]
+    },
+    "place": {
+      "description": "Place or spatial context of the experience",
+      "x_constraints": "Free text (e.g., \"grandmother's kitchen\", \"beach\", \"hospital\")",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "people": {
+      "description": "Individuals referenced in or connected to the experience",
+      "x_constraints": "Names or roles, properly cased (e.g., \"Sarah\", \"my father\", \"the nurse\")",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
+    },
+    "relationship": {
+      "description": "The dominant relational configuration influencing the experience",
+      "x_constraints": "Canonical: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. friend, couple, grief, self_reflection are deprecated. Free text accepted.",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/relationship/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "adversarial",
+                        "colleague",
+                        "community_ritual",
+                        "companionship",
+                        "couple",
+                        "family",
+                        "friend",
+                        "friendship",
+                        "grandparent_grandchild",
+                        "grief",
+                        "mentorship",
+                        "parent_child",
+                        "professional",
+                        "reunion",
+                        "romantic_partnership",
+                        "self_reflection",
+                        "service",
+                        "sibling_bond",
+                        "therapeutic"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/relationship/v1",
+      "x_recommended_values": [
+        "adversarial",
+        "colleague",
+        "community_ritual",
+        "companionship",
+        "family",
+        "friendship",
+        "grandparent_grandchild",
+        "mentorship",
+        "parent_child",
+        "professional",
+        "reunion",
+        "romantic_partnership",
+        "service",
+        "sibling_bond",
+        "therapeutic"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "friend",
+          "replaced_by": "friendship",
+          "reason": "duplicate"
+        },
+        {
+          "value": "couple",
+          "replaced_by": "romantic_partnership",
+          "reason": "duplicate"
+        },
+        {
+          "value": "grief",
+          "replaced_by": null,
+          "reason": "an emotion, not a relational configuration"
+        },
+        {
+          "value": "self_reflection",
+          "replaced_by": null,
+          "reason": "a narrative mode, not a relational configuration"
+        }
+      ]
+    },
+    "relationship_model": {
+      "description": "Coded companion to context.relationship: the relational model the subject's account of the relationship instantiates (Fiske).",
+      "x_constraints": "communal_sharing, authority_ranking, equality_matching, market_pricing, null_relation",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/relationship_model/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "authority_ranking",
+                        "communal_sharing",
+                        "equality_matching",
+                        "market_pricing",
+                        "null_relation"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/relationship_model/v1",
+      "x_recommended_values": [
+        "authority_ranking",
+        "communal_sharing",
+        "equality_matching",
+        "market_pricing",
+        "null_relation"
+      ]
+    },
+    "life_stage": {
+      "description": "The life-stage or temporal frame associated with the experience",
+      "x_constraints": "Canonical: childhood, early_adulthood, midlife, late_life, recent, future, timeless",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/life_stage/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "childhood",
+                        "early_adulthood",
+                        "future",
+                        "late_life",
+                        "midlife",
+                        "recent",
+                        "timeless"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/life_stage/v1",
+      "x_recommended_values": [
+        "childhood",
+        "early_adulthood",
+        "future",
+        "late_life",
+        "midlife",
+        "recent",
+        "timeless"
+      ]
+    },
+    "scope": {
+      "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
+      "x_constraints": "text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "required": [
+        "text"
+      ],
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_recommended_values": [
+            "self",
+            "partner",
+            "family",
+            "friends",
+            "community",
+            "humanity"
+          ]
+        },
+        "direction": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "x_recommended_values": [
+            "inward",
+            "outward",
+            "transcendent"
+          ],
+          "x_profiles": [
+            "full"
+          ]
+        },
+        "codings": {
+          "type": "array",
+          "items": {
+            "allOf": [
+              {
+                "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coding"
+              },
+              {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/scope/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "community",
+                        "family",
+                        "friends",
+                        "humanity",
+                        "partner",
+                        "self"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/scope/v1",
+      "x_recommended_values": [
+        "community",
+        "family",
+        "friends",
+        "humanity",
+        "partner",
+        "self"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

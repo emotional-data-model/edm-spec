@@ -1,0 +1,622 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/emotion.json",
+  "title": "EDM EMOTION Domain (v0.9 DRAFT)",
+  "description": "The affect itself: category, valence, arousal, intensity, meta-emotion, bodily sensation, temporal profile and appraisal (v0.8.3 constellation emotion fields + gravity.valence / emotional_weight + impulse urgency / agency_level).",
+  "type": "object",
+  "properties": {
+    "primary": {
+      "description": "The dominant emotional quality expressed in the experience",
+      "x_constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted.",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/emotion/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "anger",
+                        "anxiety",
+                        "disappointment",
+                        "fear",
+                        "frustration",
+                        "gratitude",
+                        "hope",
+                        "joy",
+                        "longing",
+                        "peace",
+                        "pride",
+                        "relief",
+                        "reverence",
+                        "sadness",
+                        "shame",
+                        "tenderness",
+                        "wonder"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/emotion/v1",
+      "x_recommended_values": [
+        "anger",
+        "anxiety",
+        "disappointment",
+        "fear",
+        "frustration",
+        "gratitude",
+        "hope",
+        "joy",
+        "longing",
+        "peace",
+        "pride",
+        "relief",
+        "reverence",
+        "sadness",
+        "shame",
+        "tenderness",
+        "wonder"
+      ]
+    },
+    "secondary": {
+      "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
+      "x_constraints": "0-5 items; free text; each item may carry codings with a per-coding confidence",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "allOf": [
+          {
+            "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+          },
+          {
+            "properties": {
+              "codings": {
+                "items": {
+                  "if": {
+                    "properties": {
+                      "system": {
+                        "const": "https://emotionaldatamodel.org/vocab/emotion/v1"
+                      }
+                    },
+                    "required": [
+                      "system"
+                    ]
+                  },
+                  "then": {
+                    "properties": {
+                      "code": {
+                        "enum": [
+                          "anger",
+                          "anxiety",
+                          "disappointment",
+                          "fear",
+                          "frustration",
+                          "gratitude",
+                          "hope",
+                          "joy",
+                          "longing",
+                          "peace",
+                          "pride",
+                          "relief",
+                          "reverence",
+                          "sadness",
+                          "shame",
+                          "tenderness",
+                          "wonder"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ]
+      },
+      "maxItems": 5,
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/emotion/v1",
+      "x_recommended_values": [
+        "anger",
+        "anxiety",
+        "disappointment",
+        "fear",
+        "frustration",
+        "gratitude",
+        "hope",
+        "joy",
+        "longing",
+        "peace",
+        "pride",
+        "relief",
+        "reverence",
+        "sadness",
+        "shame",
+        "tenderness",
+        "wonder"
+      ]
+    },
+    "kind": {
+      "description": "Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.",
+      "x_constraints": "emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/kind/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "disposition",
+                        "emotion",
+                        "feeling",
+                        "mood"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/kind/v1",
+      "x_recommended_values": [
+        "disposition",
+        "emotion",
+        "feeling",
+        "mood"
+      ]
+    },
+    "valence": {
+      "description": "The qualitative direction of the emotional experience",
+      "x_constraints": "text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/dimension"
+        },
+        {
+          "properties": {
+            "value": {
+              "minimum": -1,
+              "maximum": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/valence/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "mixed",
+                        "negative",
+                        "positive"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/valence/v1",
+      "x_recommended_values": [
+        "mixed",
+        "negative",
+        "positive"
+      ]
+    },
+    "arousal": {
+      "description": "The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.",
+      "x_constraints": "text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed",
+      "x_profiles": [
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/dimension"
+        },
+        {
+          "properties": {
+            "value": {
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/arousal/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "high",
+                        "low",
+                        "medium"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/arousal/v1",
+      "x_recommended_values": [
+        "high",
+        "low",
+        "medium"
+      ]
+    },
+    "intensity": {
+      "description": "The felt intensity of the emotional experience",
+      "x_constraints": "value in [0, 1] (v0.8.3 emotional_weight carried as-is); text is an optional ordinal label",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/dimension"
+        },
+        {
+          "properties": {
+            "value": {
+              "minimum": 0,
+              "maximum": 1
+            }
+          }
+        }
+      ]
+    },
+    "meta": {
+      "description": "How the person relates to their own emotional state",
+      "x_constraints": "Free text (e.g., \"acceptance\", \"resistance\", \"curiosity\", \"confusion\")",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bodily_sensation": {
+      "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
+      "x_constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "temporal_profile": {
+      "description": "The perceived temporal movement or cadence of the emotional event",
+      "x_constraints": "Canonical: still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic. looping and cyclic are deprecated (code to recurring). Free text accepted.",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+        },
+        {
+          "properties": {
+            "codings": {
+              "items": {
+                "if": {
+                  "properties": {
+                    "system": {
+                      "const": "https://emotionaldatamodel.org/vocab/temporal_profile/v1"
+                    }
+                  },
+                  "required": [
+                    "system"
+                  ]
+                },
+                "then": {
+                  "properties": {
+                    "code": {
+                      "enum": [
+                        "cyclic",
+                        "dragging",
+                        "fading",
+                        "looping",
+                        "recurring",
+                        "rising",
+                        "spiraling",
+                        "still",
+                        "sudden",
+                        "suspended"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/temporal_profile/v1",
+      "x_recommended_values": [
+        "dragging",
+        "fading",
+        "recurring",
+        "rising",
+        "spiraling",
+        "still",
+        "sudden",
+        "suspended"
+      ],
+      "x_deprecated_values": [
+        {
+          "value": "looping",
+          "replaced_by": "recurring",
+          "reason": "overlaps recurring"
+        },
+        {
+          "value": "cyclic",
+          "replaced_by": "recurring",
+          "reason": "overlaps recurring / salience.recurrence=cyclical"
+        }
+      ]
+    },
+    "appraisal": {
+      "description": "Appraisal dimensions stated by the subject (Scherer / EmotionML appraisal vocabularies)",
+      "type": [
+        "object",
+        "null"
+      ],
+      "additionalProperties": false,
+      "x_profiles": [
+        "full"
+      ],
+      "properties": {
+        "urgency": {
+          "description": "The intensity or immediacy of the motivational state",
+          "x_constraints": "text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text",
+          "x_profiles": [
+            "full"
+          ],
+          "allOf": [
+            {
+              "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/dimension"
+            },
+            {
+              "properties": {
+                "value": {
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            {
+              "properties": {
+                "codings": {
+                  "items": {
+                    "if": {
+                      "properties": {
+                        "system": {
+                          "const": "https://emotionaldatamodel.org/vocab/urgency/v1"
+                        }
+                      },
+                      "required": [
+                        "system"
+                      ]
+                    },
+                    "then": {
+                      "properties": {
+                        "code": {
+                          "enum": [
+                            "acute",
+                            "calm",
+                            "elevated",
+                            "pressing"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/urgency/v1",
+          "x_recommended_values": [
+            "acute",
+            "calm",
+            "elevated",
+            "pressing"
+          ]
+        },
+        "control": {
+          "description": "The perceived ability to act or influence the situation",
+          "x_constraints": "text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text",
+          "x_profiles": [
+            "full"
+          ],
+          "allOf": [
+            {
+              "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/dimension"
+            },
+            {
+              "properties": {
+                "value": {
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              }
+            },
+            {
+              "properties": {
+                "codings": {
+                  "items": {
+                    "if": {
+                      "properties": {
+                        "system": {
+                          "const": "https://emotionaldatamodel.org/vocab/control/v1"
+                        }
+                      },
+                      "required": [
+                        "system"
+                      ]
+                    },
+                    "then": {
+                      "properties": {
+                        "code": {
+                          "enum": [
+                            "high",
+                            "low",
+                            "medium"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/control/v1",
+          "x_recommended_values": [
+            "high",
+            "low",
+            "medium"
+          ]
+        },
+        "attribution": {
+          "description": "To whom or what the subject attributes the cause of the event (\"I blamed myself\", \"it was just bad luck\"). Explicit content only.",
+          "x_constraints": "self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature",
+          "x_profiles": [
+            "full"
+          ],
+          "allOf": [
+            {
+              "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
+            },
+            {
+              "properties": {
+                "codings": {
+                  "items": {
+                    "if": {
+                      "properties": {
+                        "system": {
+                          "const": "https://emotionaldatamodel.org/vocab/attribution/v1"
+                        }
+                      },
+                      "required": [
+                        "system"
+                      ]
+                    },
+                    "then": {
+                      "properties": {
+                        "code": {
+                          "enum": [
+                            "chance",
+                            "other",
+                            "self"
+                          ]
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ],
+          "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/attribution/v1",
+          "x_recommended_values": [
+            "chance",
+            "other",
+            "self"
+          ]
+        }
+      }
+    }
+  },
+  "additionalProperties": false
+}

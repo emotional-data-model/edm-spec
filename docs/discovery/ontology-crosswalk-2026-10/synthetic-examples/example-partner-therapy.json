@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "id": "323112d7-b664-44b9-8bb8-975d3b1425bb",
+    "version": "0.8.3",
+    "profile": "partner:com.deepadata.therapy.v1",
+    "created_at": "2026-10-17T14:30:00.000Z",
+    "owner_user_id": "vp-SYN00000000000000D4",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "high"
+  },
+  "core": {
+    "anchor": "peacekeeper role",
+    "spark": "sibling's comment at dinner",
+    "wound": "never allowed to be upset",
+    "fuel": "therapeutic insight",
+    "bridge": "dinner reaction to childhood role",
+    "echo": "managing everyone's mood",
+    "narrative": "Session focused on how a sibling's offhand comment at a family dinner reopened an old pattern. Client described being the one expected to keep the peace since childhood and noticed they had apologised for a disagreement they did not start. Named the moment when they said 'I have been managing everyone's mood since I was ten.' First time explicitly connecting the dinner reaction to the childhood role."
+  },
+  "constellation": {
+    "emotion_primary": "sadness",
+    "emotion_subtone": [
+      "anxiety",
+      "anger",
+      "relief"
+    ],
+    "narrative_arc": "overcoming",
+    "relational_dynamics": "sibling_bond",
+    "identity_thread": "the one who keeps the peace",
+    "arc_type": "reconciliation",
+    "transformational_pivot": true,
+    "somatic_signature": "jaw tight when describing the dinner"
+  },
+  "milky_way": {
+    "event_type": "therapy session",
+    "location_context": "therapist's office",
+    "associated_people": [
+      "sibling",
+      "parents"
+    ],
+    "visibility_context": "private",
+    "tone_shift": "resentment to insight"
+  },
+  "gravity": {
+    "emotional_weight": 0.86,
+    "tether_type": "person",
+    "recall_triggers": [
+      "family dinners",
+      "raised voices",
+      "being asked to smooth things over"
+    ],
+    "retrieval_keys": [
+      "sibling",
+      "peacekeeper",
+      "apology",
+      "family role"
+    ],
+    "nearby_themes": [
+      "self-worth",
+      "boundaries",
+      "family roles",
+      "validation"
+    ],
+    "recurrence_pattern": "chronic",
+    "strength_score": 0.84,
+    "temporal_decay": "slow",
+    "resilience_markers": [
+      "naming the pattern",
+      "emotional awareness",
+      "willingness to examine"
+    ],
+    "adaptation_trajectory": "improving"
+  },
+  "impulse": {
+    "regulation_state": "regulated",
+    "agency_level": "medium",
+    "coping_style": "process",
+    "attachment_style": "anxious"
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "legal",
+      "ttl_days": 2555,
+      "on_expiry": "anonymize"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": true
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.95,
+    "extraction_model": "synthetic-hand-written"
+  },
+  "system": {
+    "embeddings": null,
+    "indices": null
+  },
+  "crosswalks": {
+    "plutchik_primary": "sadness",
+    "geneva_emotion_wheel": "disappointment",
+    "DSM5_specifiers": null,
+    "ISO_27557_labels": null
+  }
+}

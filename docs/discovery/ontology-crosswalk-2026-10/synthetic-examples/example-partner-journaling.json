@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "id": "e37eb439-19db-49ce-afd7-6a4b76466541",
+    "version": "0.8.3",
+    "profile": "partner:com.deepadata.journaling.v1",
+    "created_at": "2026-10-17T06:40:00.000Z",
+    "owner_user_id": "vp-SYN00000000000000B2",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "core": {
+    "anchor": "morning pages",
+    "spark": "dream of the mentor's workshop",
+    "wound": "mentor's death",
+    "fuel": "keeping the lesson going",
+    "bridge": "writing as practice",
+    "echo": "the next piece handed over",
+    "narrative": "Woke from a dream set in the workshop my late mentor kept behind the house, where I learned to sand a chair leg without rushing. In the dream he said nothing and just handed me the next piece. Two years since the funeral and I still save up things to tell him. I started these morning pages because he said hands and words both need a daily practice. Maybe writing is how I keep the lesson going."
+  },
+  "constellation": {
+    "emotion_primary": "longing",
+    "emotion_subtone": [
+      "tenderness",
+      "gratitude",
+      "peace"
+    ],
+    "narrative_arc": "reflection",
+    "identity_thread": "apprentice who keeps the craft",
+    "arc_type": "grief",
+    "temporal_context": "midlife",
+    "memory_type": "legacy_artifact"
+  },
+  "milky_way": {
+    "event_type": "morning journaling after a dream",
+    "location_context": "mentor's workshop (dreamed)",
+    "associated_people": [
+      "my late mentor"
+    ],
+    "visibility_context": "private",
+    "tone_shift": "grief to gratitude"
+  },
+  "gravity": {
+    "emotional_weight": 0.78,
+    "valence": "mixed",
+    "tether_type": "person",
+    "recurrence_pattern": "cyclical",
+    "strength_score": 0.75
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.92,
+    "extraction_model": "synthetic-hand-written"
+  }
+}

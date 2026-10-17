@@ -1,0 +1,124 @@
+{
+  "meta": {
+    "id": "4e7b154a-35ed-43e4-9bd5-2ae205e50568",
+    "version": "0.9.0-draft",
+    "profile": "essential",
+    "created_at": "2026-10-17T09:12:03.000Z",
+    "owner_user_id": "vp-SYN00000000000000A1",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "narrative": {
+    "subject": "choir winter concert",
+    "trigger": "concert recording arrived",
+    "harm": "stamina lost to illness",
+    "drive": "choir of every age",
+    "integration": "performing through limits",
+    "arc": [
+      {
+        "text": "overcoming",
+        "codings": [
+          {
+            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+            "version": "1",
+            "code": "overcoming",
+            "display": "overcoming",
+            "relation": "exact"
+          },
+          {
+            "system": "https://emotionaldatamodel.org/xref/v1/booker",
+            "code": "overcoming_the_monster",
+            "display": "Overcoming the Monster",
+            "relation": "exact"
+          }
+        ]
+      }
+    ],
+    "self_position": null
+  },
+  "emotion": {
+    "primary": {
+      "text": "joy",
+      "codings": [
+        {
+          "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+          "version": "1",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+          "version": "2025-07-31",
+          "code": "MFOEM:000034",
+          "display": "joy",
+          "relation": "exact"
+        },
+        {
+          "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+          "version": "2014-04-01",
+          "code": "joy",
+          "display": "joy",
+          "relation": "exact"
+        }
+      ]
+    },
+    "secondary": [
+      {
+        "text": "proud",
+        "codings": []
+      },
+      {
+        "text": "grateful",
+        "codings": []
+      },
+      {
+        "text": "nostalgic",
+        "codings": []
+      },
+      {
+        "text": "supported",
+        "codings": []
+      }
+    ],
+    "valence": {
+      "text": null,
+      "value": null,
+      "codings": []
+    },
+    "intensity": {
+      "text": null,
+      "value": null,
+      "codings": []
+    }
+  },
+  "governance": {
+    "jurisdiction": "GDPR",
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.94,
+    "extraction_model": "synthetic-hand-written",
+    "extraction_provider": null,
+    "field_confidence": {}
+  },
+  "extensions": {
+    "org.emotionaldatamodel.migration": {
+      "out_of_profile_fields": {
+        "salience.retrieval_cues": [
+          "the hall going quiet"
+        ]
+      }
+    }
+  }
+}

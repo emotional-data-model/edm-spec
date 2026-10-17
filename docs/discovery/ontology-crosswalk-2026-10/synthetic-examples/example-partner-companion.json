@@ -1,0 +1,64 @@
+{
+  "meta": {
+    "id": "c29bd2ce-a5fd-42db-bad4-5a9baa70f869",
+    "version": "0.8.3",
+    "profile": "partner:com.deepadata.companion.v1",
+    "created_at": "2026-10-17T20:30:00.000Z",
+    "owner_user_id": "vp-SYN00000000000000C3",
+    "consent_basis": "consent",
+    "visibility": "private",
+    "pii_tier": "moderate"
+  },
+  "core": {
+    "anchor": "department presentation on Friday",
+    "spark": "fear of being judged",
+    "wound": "not being taken seriously",
+    "fuel": "rehearsing out loud",
+    "bridge": "dread to cautious confidence",
+    "echo": "tougher rooms before",
+    "narrative": "The user talked about presenting to the whole department on Friday, the first time they will speak in front of senior staff. They listed what could go wrong, then noticed that most of it was unlikely and that they had rehearsed more than anyone would expect. Talking it through moved them from dread to cautious confidence. They said they had presented to tougher rooms during their training and had simply forgotten it."
+  },
+  "constellation": {
+    "emotion_primary": "anxiety",
+    "emotion_subtone": [
+      "hope",
+      "vulnerability",
+      "determination"
+    ],
+    "narrative_arc": "overcoming",
+    "interpersonal_affect": "openness",
+    "relational_dynamics": "companionship",
+    "identity_thread": "capable but self-doubting",
+    "arc_type": "threshold",
+    "temporal_rhythm": "rising"
+  },
+  "milky_way": {
+    "event_type": "pre-presentation support conversation",
+    "visibility_context": "private",
+    "tone_shift": "dread to confidence"
+  },
+  "gravity": {
+    "emotional_weight": 0.7,
+    "valence": "mixed",
+    "tether_type": "event",
+    "recurrence_pattern": "cyclical",
+    "strength_score": 0.66
+  },
+  "governance": {
+    "jurisdiction": null,
+    "retention_policy": {
+      "basis": "user_defined",
+      "ttl_days": null,
+      "on_expiry": "soft_delete"
+    },
+    "subject_rights": {
+      "portable": true,
+      "erasable": true,
+      "explainable": false
+    }
+  },
+  "telemetry": {
+    "entry_confidence": 0.88,
+    "extraction_model": "synthetic-hand-written"
+  }
+}
