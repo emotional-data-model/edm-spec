@@ -161,7 +161,7 @@ def score_unit(outputs, texts, unit, shape, vocab, judge):
         stat_r = {m: per_model_rep[m]['icc'] for m in EXTRACTORS}; stat_x = res['cross']['icc']
     elif shape in ('T', 'S', 'L'):
         for m in EXTRACTORS:
-            rates = []
+            rates = []; nn_rates = []
             for tid in texts:
                 g = judge.get((tid, unit))
                 if g is None: continue
@@ -169,7 +169,10 @@ def score_unit(outputs, texts, unit, shape, vocab, judge):
                 labels = [l for l in labels if l is not None]
                 r = pairwise_same_rate(labels)
                 if r is not None: rates.append(r)
-            per_model_rep[m] = {'rate': sum(rates) / len(rates) if rates else None, 'texts': len(rates)}
+                nn = [l for l in labels if l != 'null']  # descriptive: agreement among populated answers only
+                r2 = pairwise_same_rate(nn)
+                if r2 is not None: nn_rates.append(r2)
+            per_model_rep[m] = {'rate': sum(rates) / len(rates) if rates else None, 'texts': len(rates), 'rate_nonnull': sum(nn_rates) / len(nn_rates) if nn_rates else None, 'texts_nonnull': len(nn_rates)}
         xr = []
         for tid in texts:
             g = judge.get((tid, unit))
@@ -181,7 +184,18 @@ def score_unit(outputs, texts, unit, shape, vocab, judge):
                 if labels: reps.append(modal(labels))
             r = pairwise_same_rate(reps)
             if r is not None: xr.append(r)
-        res['cross'] = {'rate': sum(xr) / len(xr) if xr else None, 'texts': len(xr)}
+        xr_nn = []
+        for tid in texts:
+            g = judge.get((tid, unit))
+            if g is None: continue
+            reps = []
+            for m in EXTRACTORS:
+                labels = [g.get(f'{m}#{rep}') for rep in sorted(outputs[m].get(tid, {})) if outputs[m][tid][rep] is not None]
+                labels = [l for l in labels if l is not None and l != 'null']
+                if labels: reps.append(modal(labels))
+            r = pairwise_same_rate(reps)
+            if r is not None: xr_nn.append(r)
+        res['cross'] = {'rate': sum(xr) / len(xr) if xr else None, 'texts': len(xr), 'rate_nonnull': sum(xr_nn) / len(xr_nn) if xr_nn else None, 'texts_nonnull': len(xr_nn)}
         for m in EXTRACTORS:
             for tid in texts:
                 for rep, flat in outputs[m].get(tid, {}).items():

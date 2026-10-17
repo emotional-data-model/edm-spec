@@ -1,0 +1,37 @@
+g1_summary: 150 texts to judge
+g2_narrative: 150 texts to judge
+g3_meaning: 150 texts to judge
+g4_context: 150 texts to judge
+g5_salience: 150 texts to judge
+  judge 25 records, $0.27 this run (bad=0)
+  judge 50 records, $0.79 this run (bad=0)
+  judge 75 records, $1.32 this run (bad=0)
+  judge 100 records, $1.98 this run (bad=0)
+  judge 125 records, $2.64 this run (bad=0)
+  judge 150 records, $3.19 this run (bad=0)
+  judge 175 records, $3.67 this run (bad=0)
+  judge 200 records, $4.00 this run (bad=0)
+  judge 225 records, $4.31 this run (bad=0)
+  judge 250 records, $4.67 this run (bad=0)
+  judge 275 records, $5.09 this run (bad=0)
+  judge 300 records, $5.51 this run (bad=0)
+  judge 325 records, $5.88 this run (bad=0)
+  judge 350 records, $6.11 this run (bad=0)
+  judge 375 records, $6.35 this run (bad=0)
+  judge 400 records, $6.67 this run (bad=0)
+  judge 425 records, $7.12 this run (bad=0)
+  judge 450 records, $7.53 this run (bad=0)
+  judge 475 records, $7.91 this run (bad=0)
+  judge 500 records, $8.19 this run (bad=0)
+  judge 525 records, $8.72 this run (bad=0)
+  judge 550 records, $9.26 this run (bad=0)
+  judge 575 records, $9.68 this run (bad=0)
+  judge 600 records, $10.14 this run (bad=0)
+  judge 625 records, $10.52 this run (bad=0)
+  judge 650 records, $10.81 this run (bad=0)
+  judge 675 records, $11.18 this run (bad=0)
+  judge 700 records, $11.58 this run (bad=0)
+  judge 725 records, $12.02 this run (bad=0)
+  judge 750 records, $12.44 this run (bad=0)
+judge done: 750 records, $12.44 this run, bad=0, cumulative spend $12.44
+exit=0

@@ -29,40 +29,50 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8633333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.8633333333333333,
+      "texts_nonnull": 150
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6953333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.709009009009009,
+      "texts_nonnull": 148
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7053333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.7053333333333334,
+      "texts_nonnull": 150
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6686666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.6812030075187969,
+      "texts_nonnull": 133
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.39666666666666667,
+     "texts": 150,
+     "rate_nonnull": 0.45,
+     "texts_nonnull": 150
     },
     "null_rate": 0.04666666666666667,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8633333333333333,
+     "claude-haiku-5-5": 0.6953333333333334,
+     "gpt-6.1-sol": 0.7053333333333334,
+     "kimi-k2.6": 0.6686666666666666
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.39666666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -71,41 +81,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8666666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.8721088435374149,
+      "texts_nonnull": 147
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6733333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.6836829836829836,
+      "texts_nonnull": 143
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.756,
+      "texts": 150,
+      "rate_nonnull": 0.775912408759124,
+      "texts_nonnull": 137
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6513333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.6729323308270677,
+      "texts_nonnull": 133
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5266666666666666,
+     "texts": 150,
+     "rate_nonnull": 0.5596846846846847,
+     "texts_nonnull": 148
     },
     "null_rate": 0.089,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8666666666666667,
+     "claude-haiku-5-5": 0.6733333333333333,
+     "gpt-6.1-sol": 0.756,
+     "kimi-k2.6": 0.6513333333333333
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5266666666666666,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.harm": {
@@ -113,41 +133,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.85,
+      "texts": 150,
+      "rate_nonnull": 0.7968421052631579,
+      "texts_nonnull": 95
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.686,
+      "texts": 150,
+      "rate_nonnull": 0.6492354740061163,
+      "texts_nonnull": 109
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7493333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.6967948717948718,
+      "texts_nonnull": 104
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7086666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.6249084249084249,
+      "texts_nonnull": 91
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5377777777777778,
+     "texts": 150,
+     "rate_nonnull": 0.4249249249249249,
+     "texts_nonnull": 111
     },
     "null_rate": 0.36433333333333334,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.85,
+     "claude-haiku-5-5": 0.686,
+     "gpt-6.1-sol": 0.7493333333333334,
+     "kimi-k2.6": 0.7086666666666667
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5377777777777778,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.drive": {
@@ -155,41 +185,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8006666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.8139088729016787,
+      "texts_nonnull": 139
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6033333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.5938888888888889,
+      "texts_nonnull": 120
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6839999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.6699186991869919,
+      "texts_nonnull": 123
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5513333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.5512626262626262,
+      "texts_nonnull": 132
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.38,
+     "texts": 150,
+     "rate_nonnull": 0.4052511415525114,
+     "texts_nonnull": 146
     },
     "null_rate": 0.19266666666666668,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8006666666666666,
+     "claude-haiku-5-5": 0.6033333333333334,
+     "gpt-6.1-sol": 0.6839999999999999,
+     "kimi-k2.6": 0.5513333333333333
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.38,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.integration": {
@@ -197,41 +237,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8786666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.7655172413793103,
+      "texts_nonnull": 58
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8333333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.5488372093023256,
+      "texts_nonnull": 43
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8586666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.7413978494623656,
+      "texts_nonnull": 62
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8653333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.6805555555555555,
+      "texts_nonnull": 48
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.72,
+     "texts": 150,
+     "rate_nonnull": 0.4016393442622951,
+     "texts_nonnull": 61
     },
     "null_rate": 0.668,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8786666666666667,
+     "claude-haiku-5-5": 0.8333333333333334,
+     "gpt-6.1-sol": 0.8586666666666667,
+     "kimi-k2.6": 0.8653333333333334
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.72,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.meaning": {
@@ -239,41 +292,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9266666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.8852459016393442,
+      "texts_nonnull": 61
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8260000000000001,
+      "texts": 150,
+      "rate_nonnull": 0.7690476190476191,
+      "texts_nonnull": 70
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8353333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.8469841269841271,
+      "texts_nonnull": 105
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9079999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.8364779874213837,
+      "texts_nonnull": 53
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7077777777777778,
+     "texts": 150,
+     "rate_nonnull": 0.6745098039215687,
+     "texts_nonnull": 85
     },
     "null_rate": 0.5396666666666666,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9266666666666666,
+     "claude-haiku-5-5": 0.8260000000000001,
+     "gpt-6.1-sol": 0.8353333333333333,
+     "kimi-k2.6": 0.9079999999999999
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7077777777777778,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.identity_link": {
@@ -281,40 +347,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9106666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.8326666666666667,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.852,
+      "texts": 150,
+      "rate_nonnull": 0.6798611111111111,
+      "texts_nonnull": 48
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9179999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.78,
+      "texts_nonnull": 45
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8973333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.7957264957264957,
+      "texts_nonnull": 39
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8188888888888889,
+     "texts": 150,
+     "rate_nonnull": 0.5947712418300654,
+     "texts_nonnull": 51
     },
     "null_rate": 0.7176666666666667,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9106666666666666,
+     "claude-haiku-5-5": 0.852,
+     "gpt-6.1-sol": 0.9179999999999999,
+     "kimi-k2.6": 0.8973333333333333
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.8188888888888889,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -323,41 +402,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8273333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.7766283524904214,
+      "texts_nonnull": 87
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6486666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.6019230769230769,
+      "texts_nonnull": 104
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8626666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.8166666666666667,
+      "texts_nonnull": 78
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.756,
+      "texts": 150,
+      "rate_nonnull": 0.6550200803212851,
+      "texts_nonnull": 83
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5755555555555555,
+     "texts": 150,
+     "rate_nonnull": 0.37702265372168287,
+     "texts_nonnull": 103
     },
     "null_rate": 0.449,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8273333333333333,
+     "claude-haiku-5-5": 0.6486666666666666,
+     "gpt-6.1-sol": 0.8626666666666667,
+     "kimi-k2.6": 0.756
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5755555555555555,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.self_position": {
@@ -365,40 +455,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9586666666666668,
+      "texts": 150,
+      "rate_nonnull": 0.8666666666666667,
+      "texts_nonnull": 26
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9039999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.9426356589147287,
+      "texts_nonnull": 43
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9339999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.9244444444444445,
+      "texts_nonnull": 45
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9613333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.8144927536231884,
+      "texts_nonnull": 23
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8733333333333333,
+     "texts": 150,
+     "rate_nonnull": 0.8134920634920635,
+     "texts_nonnull": 42
     },
     "null_rate": 0.7923333333333333,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9586666666666668,
+     "claude-haiku-5-5": 0.9039999999999999,
+     "gpt-6.1-sol": 0.9339999999999999,
+     "kimi-k2.6": 0.9613333333333333
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.8733333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -407,41 +510,53 @@
     "shape": "S",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9773333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.9773333333333333,
+      "texts_nonnull": 150
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7906666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.8205479452054795,
+      "texts_nonnull": 146
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.996,
+      "texts": 150,
+      "rate_nonnull": 0.996,
+      "texts_nonnull": 150
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8260000000000001,
+      "texts": 150,
+      "rate_nonnull": 0.8853146853146853,
+      "texts_nonnull": 143
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7833333333333333,
+     "texts": 150,
+     "rate_nonnull": 0.8355555555555555,
+     "texts_nonnull": 150
     },
     "null_rate": 0.035,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9773333333333333,
+     "claude-haiku-5-5": 0.7906666666666666,
+     "gpt-6.1-sol": 0.996,
+     "kimi-k2.6": 0.8260000000000001
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7833333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.turning_point": {
@@ -1206,41 +1321,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.874,
+      "texts": 150,
+      "rate_nonnull": 0.7459770114942529,
+      "texts_nonnull": 58
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7433333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.5865740740740741,
+      "texts_nonnull": 72
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9113333333333332,
+      "texts": 150,
+      "rate_nonnull": 0.8257575757575758,
+      "texts_nonnull": 44
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7226666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.6648401826484018,
+      "texts_nonnull": 73
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.6455555555555555,
+     "texts": 150,
+     "rate_nonnull": 0.34459459459459457,
+     "texts_nonnull": 74
     },
     "null_rate": 0.6263333333333333,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.874,
+     "claude-haiku-5-5": 0.7433333333333333,
+     "gpt-6.1-sol": 0.9113333333333332,
+     "kimi-k2.6": 0.7226666666666667
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.6455555555555555,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "emotion.bodily_sensation": {
@@ -1248,40 +1374,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9786666666666668,
+      "texts": 150,
+      "rate_nonnull": 0.9575757575757576,
+      "texts_nonnull": 33
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9520000000000001,
+      "texts": 150,
+      "rate_nonnull": 0.8666666666666667,
+      "texts_nonnull": 30
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9666666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.9470588235294118,
+      "texts_nonnull": 34
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9533333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.8688172043010752,
+      "texts_nonnull": 31
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9366666666666666,
+     "texts": 150,
+     "rate_nonnull": 0.8428571428571429,
+     "texts_nonnull": 35
     },
     "null_rate": 0.7926666666666666,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9786666666666668,
+     "claude-haiku-5-5": 0.9520000000000001,
+     "gpt-6.1-sol": 0.9666666666666667,
+     "kimi-k2.6": 0.9533333333333334
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9366666666666666,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -1399,41 +1538,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.79,
+      "texts": 150,
+      "rate_nonnull": 0.79,
+      "texts_nonnull": 150
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.652,
+      "texts": 150,
+      "rate_nonnull": 0.6616780045351474,
+      "texts_nonnull": 147
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8486666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.8486666666666667,
+      "texts_nonnull": 150
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6673333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.6933333333333334,
+      "texts_nonnull": 140
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.4111111111111111,
+     "texts": 150,
+     "rate_nonnull": 0.4388888888888889,
+     "texts_nonnull": 150
     },
     "null_rate": 0.03133333333333333,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.79,
+     "claude-haiku-5-5": 0.652,
+     "gpt-6.1-sol": 0.8486666666666667,
+     "kimi-k2.6": 0.6673333333333333
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.4111111111111111,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.event_category": {
@@ -1496,41 +1645,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8620000000000001,
+      "texts": 150,
+      "rate_nonnull": 0.8312499999999999,
+      "texts_nonnull": 112
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7253333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.6831858407079646,
+      "texts_nonnull": 113
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8553333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.8526170798898072,
+      "texts_nonnull": 121
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7226666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.6786163522012579,
+      "texts_nonnull": 106
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5633333333333334,
+     "texts": 150,
+     "rate_nonnull": 0.49712643678160917,
+     "texts_nonnull": 116
     },
     "null_rate": 0.261,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8620000000000001,
+     "claude-haiku-5-5": 0.7253333333333333,
+     "gpt-6.1-sol": 0.8553333333333334,
+     "kimi-k2.6": 0.7226666666666667
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5633333333333334,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.people": {
@@ -1538,41 +1698,52 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8173333333333332,
+      "texts": 150,
+      "rate_nonnull": 0.7967741935483871,
+      "texts_nonnull": 124
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.668,
+      "texts": 150,
+      "rate_nonnull": 0.6416020671834626,
+      "texts_nonnull": 129
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8679999999999999,
+      "texts": 150,
+      "rate_nonnull": 0.8595588235294118,
+      "texts_nonnull": 136
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7886666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.7793650793650794,
+      "texts_nonnull": 126
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5466666666666666,
+     "texts": 150,
+     "rate_nonnull": 0.5202020202020202,
+     "texts_nonnull": 132
     },
     "null_rate": 0.15433333333333332,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8173333333333332,
+     "claude-haiku-5-5": 0.668,
+     "gpt-6.1-sol": 0.8679999999999999,
+     "kimi-k2.6": 0.7886666666666666
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5466666666666666,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.relationship": {
@@ -1957,41 +2128,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8053333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.8225563909774436,
+      "texts_nonnull": 133
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7060000000000001,
+      "texts": 150,
+      "rate_nonnull": 0.718939393939394,
+      "texts_nonnull": 132
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7906666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.8002450980392156,
+      "texts_nonnull": 136
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6646666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.6531746031746032,
+      "texts_nonnull": 126
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5244444444444445,
+     "texts": 150,
+     "rate_nonnull": 0.5096618357487922,
+     "texts_nonnull": 138
     },
     "null_rate": 0.14233333333333334,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8053333333333333,
+     "claude-haiku-5-5": 0.7060000000000001,
+     "gpt-6.1-sol": 0.7906666666666666,
+     "kimi-k2.6": 0.6646666666666667
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5244444444444445,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "salience.tether.stake": {
@@ -1999,40 +2180,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6706666666666666,
+      "texts": 150,
+      "rate_nonnull": 0.5906542056074766,
+      "texts_nonnull": 107
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5033333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.42946428571428574,
+      "texts_nonnull": 112
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7033333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.6790960451977401,
+      "texts_nonnull": 118
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.472,
+      "texts": 150,
+      "rate_nonnull": 0.4112,
+      "texts_nonnull": 125
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.3277777777777778,
+     "texts": 150,
+     "rate_nonnull": 0.1808785529715762,
+     "texts_nonnull": 129
     },
     "null_rate": 0.271,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.6706666666666666,
+     "claude-haiku-5-5": 0.5033333333333333,
+     "gpt-6.1-sol": 0.7033333333333334,
+     "kimi-k2.6": 0.472
     },
-    "stat_cross": null,
+    "stat_cross": 0.3277777777777778,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -2041,40 +2230,50 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5786666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.5628571428571428,
+      "texts_nonnull": 140
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.35866666666666663,
+      "texts": 150,
+      "rate_nonnull": 0.2975124378109453,
+      "texts_nonnull": 134
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8593333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.5486486486486487,
+      "texts_nonnull": 37
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.4206666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.3206989247311828,
+      "texts_nonnull": 124
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.18444444444444444,
+     "texts": 150,
+     "rate_nonnull": 0.11870503597122302,
+     "texts_nonnull": 139
     },
     "null_rate": 0.2946666666666667,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.5786666666666667,
+     "claude-haiku-5-5": 0.35866666666666663,
+     "gpt-6.1-sol": 0.8593333333333334,
+     "kimi-k2.6": 0.4206666666666667
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.18444444444444444,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -2083,40 +2282,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.526,
+      "texts": 150,
+      "rate_nonnull": 0.526,
+      "texts_nonnull": 150
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.3233333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.32297297297297295,
+      "texts_nonnull": 148
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5873333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.5922222222222222,
+      "texts_nonnull": 150
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.4073333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.35621890547263685,
+      "texts_nonnull": 134
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.055555555555555546,
+     "texts": 150,
+     "rate_nonnull": 0.05444444444444444,
+     "texts_nonnull": 150
     },
     "null_rate": 0.04533333333333334,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.526,
+     "claude-haiku-5-5": 0.3233333333333333,
+     "gpt-6.1-sol": 0.5873333333333333,
+     "kimi-k2.6": 0.4073333333333333
     },
-    "stat_cross": null,
+    "stat_cross": 0.055555555555555546,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -2384,40 +2591,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6953333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.5773462783171521,
+      "texts_nonnull": 103
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6233333333333333,
+      "texts": 150,
+      "rate_nonnull": 0.4715355805243446,
+      "texts_nonnull": 89
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7146666666666667,
+      "texts": 150,
+      "rate_nonnull": 0.5825925925925926,
+      "texts_nonnull": 90
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5713333333333334,
+      "texts": 150,
+      "rate_nonnull": 0.4780780780780781,
+      "texts_nonnull": 111
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.38,
+     "texts": 150,
+     "rate_nonnull": 0.11477987421383647,
+     "texts_nonnull": 106
     },
     "null_rate": 0.38533333333333336,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.6953333333333334,
+     "claude-haiku-5-5": 0.6233333333333333,
+     "gpt-6.1-sol": 0.7146666666666667,
+     "kimi-k2.6": 0.5713333333333334
     },
-    "stat_cross": null,
+    "stat_cross": 0.38,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -2751,41 +2966,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.96,
+      "texts": 50,
+      "rate_nonnull": 0.96,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.846,
+      "texts": 50,
+      "rate_nonnull": 0.846,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.838,
+      "texts": 50,
+      "rate_nonnull": 0.838,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.828,
+      "texts": 50,
+      "rate_nonnull": 0.828,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.66,
+     "texts": 50,
+     "rate_nonnull": 0.66,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.96,
+     "claude-haiku-5-5": 0.846,
+     "gpt-6.1-sol": 0.838,
+     "kimi-k2.6": 0.828
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.66,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.trigger": {
@@ -2793,41 +3021,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.96,
+      "texts": 50,
+      "rate_nonnull": 0.9591836734693877,
+      "texts_nonnull": 49
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7340000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.7306666666666666,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.87,
+      "texts": 50,
+      "rate_nonnull": 0.8755102040816326,
+      "texts_nonnull": 49
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.762,
+      "texts": 50,
+      "rate_nonnull": 0.7659999999999999,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7033333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.6933333333333332,
+     "texts_nonnull": 50
     },
     "null_rate": 0.014,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.96,
+     "claude-haiku-5-5": 0.7340000000000001,
+     "gpt-6.1-sol": 0.87,
+     "kimi-k2.6": 0.762
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7033333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.harm": {
@@ -2835,40 +3074,50 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8640000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.85,
+      "texts_nonnull": 40
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.634,
+      "texts": 50,
+      "rate_nonnull": 0.6568181818181817,
+      "texts_nonnull": 44
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.698,
+      "texts": 50,
+      "rate_nonnull": 0.6906976744186046,
+      "texts_nonnull": 43
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.644,
+      "texts": 50,
+      "rate_nonnull": 0.6821705426356589,
+      "texts_nonnull": 43
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.43,
+     "texts": 50,
+     "rate_nonnull": 0.3695652173913043,
+     "texts_nonnull": 46
     },
     "null_rate": 0.174,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8640000000000001,
+     "claude-haiku-5-5": 0.634,
+     "gpt-6.1-sol": 0.698,
+     "kimi-k2.6": 0.644
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.43,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -2877,41 +3126,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8440000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8543478260869565,
+      "texts_nonnull": 46
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.614,
+      "texts": 50,
+      "rate_nonnull": 0.6503875968992248,
+      "texts_nonnull": 43
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.728,
+      "texts": 50,
+      "rate_nonnull": 0.694017094017094,
+      "texts_nonnull": 39
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.624,
+      "texts": 50,
+      "rate_nonnull": 0.6265306122448979,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.4733333333333334,
+     "texts": 50,
+     "rate_nonnull": 0.4965986394557823,
+     "texts_nonnull": 49
     },
     "null_rate": 0.154,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8440000000000001,
+     "claude-haiku-5-5": 0.614,
+     "gpt-6.1-sol": 0.728,
+     "kimi-k2.6": 0.624
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.4733333333333334,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.integration": {
@@ -2919,41 +3178,49 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.794,
+      "texts": 50,
+      "rate_nonnull": 0.7878048780487804,
+      "texts_nonnull": 41
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.616,
+      "texts": 50,
+      "rate_nonnull": 0.5287037037037038,
+      "texts_nonnull": 36
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7859999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.7691056910569106,
+      "texts_nonnull": 41
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7240000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.681981981981982,
+      "texts_nonnull": 37
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.45,
+     "texts": 50,
+     "rate_nonnull": 0.3953488372093023,
+     "texts_nonnull": 43
     },
     "null_rate": 0.245,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.794,
+     "claude-haiku-5-5": 0.616,
+     "gpt-6.1-sol": 0.7859999999999999,
+     "kimi-k2.6": 0.7240000000000001
     },
-    "stat_cross": null,
+    "stat_cross": 0.45,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.meaning": {
@@ -2961,41 +3228,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8759999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.9142857142857143,
+      "texts_nonnull": 42
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8059999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.7999999999999999,
+      "texts_nonnull": 46
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.894,
+      "texts": 50,
+      "rate_nonnull": 0.9040816326530612,
+      "texts_nonnull": 49
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7979999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.8429629629629629,
+      "texts_nonnull": 45
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7266666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.7857142857142857,
+     "texts_nonnull": 49
     },
     "null_rate": 0.109,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8759999999999999,
+     "claude-haiku-5-5": 0.8059999999999999,
+     "gpt-6.1-sol": 0.894,
+     "kimi-k2.6": 0.7979999999999999
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7266666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.identity_link": {
@@ -3003,41 +3282,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.852,
+      "texts": 50,
+      "rate_nonnull": 0.8072916666666666,
+      "texts_nonnull": 32
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.722,
+      "texts": 50,
+      "rate_nonnull": 0.700952380952381,
+      "texts_nonnull": 35
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8859999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.8200000000000001,
+      "texts_nonnull": 30
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.768,
+      "texts": 50,
+      "rate_nonnull": 0.7645161290322581,
+      "texts_nonnull": 31
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7066666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.638095238095238,
+     "texts_nonnull": 35
     },
     "null_rate": 0.396,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.852,
+     "claude-haiku-5-5": 0.722,
+     "gpt-6.1-sol": 0.8859999999999999,
+     "kimi-k2.6": 0.768
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7066666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.valence_shift": {
@@ -3045,41 +3335,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.75,
+      "texts": 50,
+      "rate_nonnull": 0.7626016260162601,
+      "texts_nonnull": 41
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.56,
+      "texts": 50,
+      "rate_nonnull": 0.5393939393939394,
+      "texts_nonnull": 44
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8340000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8133333333333332,
+      "texts_nonnull": 30
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6859999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6886178861788618,
+      "texts_nonnull": 41
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.43,
+     "texts": 50,
+     "rate_nonnull": 0.3592592592592593,
+     "texts_nonnull": 45
     },
     "null_rate": 0.254,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.75,
+     "claude-haiku-5-5": 0.56,
+     "gpt-6.1-sol": 0.8340000000000001,
+     "kimi-k2.6": 0.6859999999999999
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.43,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.self_position": {
@@ -3087,41 +3387,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8959999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.8613333333333334,
+      "texts_nonnull": 25
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.848,
+      "texts": 50,
+      "rate_nonnull": 0.9470588235294118,
+      "texts_nonnull": 34
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.89,
+      "texts": 50,
+      "rate_nonnull": 0.9090909090909091,
+      "texts_nonnull": 33
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.884,
+      "texts": 50,
+      "rate_nonnull": 0.8144927536231884,
+      "texts_nonnull": 23
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.8177083333333334,
+     "texts_nonnull": 32
     },
     "null_rate": 0.471,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8959999999999999,
+     "claude-haiku-5-5": 0.848,
+     "gpt-6.1-sol": 0.89,
+     "kimi-k2.6": 0.884
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7666666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.summary": {
@@ -3129,40 +3442,53 @@
     "shape": "S",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.968,
+      "texts": 50,
+      "rate_nonnull": 0.968,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.902,
+      "texts": 50,
+      "rate_nonnull": 0.902,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9359999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.9359999999999999,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9466666666666668,
+     "texts": 50,
+     "rate_nonnull": 0.9466666666666668,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.968,
+     "claude-haiku-5-5": 0.902,
+     "gpt-6.1-sol": 1.0,
+     "kimi-k2.6": 0.9359999999999999
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9466666666666668,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -3931,41 +4257,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.75,
+      "texts": 50,
+      "rate_nonnull": 0.7539007092198581,
+      "texts_nonnull": 47
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.564,
+      "texts": 50,
+      "rate_nonnull": 0.5761904761904763,
+      "texts_nonnull": 49
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.802,
+      "texts": 50,
+      "rate_nonnull": 0.7979797979797979,
+      "texts_nonnull": 33
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.58,
+      "texts": 50,
+      "rate_nonnull": 0.692517006802721,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.30333333333333334,
+     "texts": 50,
+     "rate_nonnull": 0.3877551020408163,
+     "texts_nonnull": 49
     },
     "null_rate": 0.158,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.75,
+     "claude-haiku-5-5": 0.564,
+     "gpt-6.1-sol": 0.802,
+     "kimi-k2.6": 0.58
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.30333333333333334,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "emotion.bodily_sensation": {
@@ -3973,40 +4309,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.992,
+      "texts": 50,
+      "rate_nonnull": 0.9800000000000001,
+      "texts_nonnull": 20
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.932,
+      "texts": 50,
+      "rate_nonnull": 0.85,
+      "texts_nonnull": 20
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.976,
+      "texts": 50,
+      "rate_nonnull": 0.9400000000000001,
+      "texts_nonnull": 20
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.948,
+      "texts": 50,
+      "rate_nonnull": 0.9238095238095237,
+      "texts_nonnull": 21
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9366666666666668,
+     "texts": 50,
+     "rate_nonnull": 0.8492063492063492,
+     "texts_nonnull": 21
     },
     "null_rate": 0.596,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.992,
+     "claude-haiku-5-5": 0.932,
+     "gpt-6.1-sol": 0.976,
+     "kimi-k2.6": 0.948
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9366666666666668,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -4124,41 +4473,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.956,
+      "texts": 50,
+      "rate_nonnull": 0.956,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.85,
+      "texts": 50,
+      "rate_nonnull": 0.85,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.968,
+      "texts": 50,
+      "rate_nonnull": 0.968,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.85,
+      "texts": 50,
+      "rate_nonnull": 0.85,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7,
+     "texts": 50,
+     "rate_nonnull": 0.7,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.956,
+     "claude-haiku-5-5": 0.85,
+     "gpt-6.1-sol": 0.968,
+     "kimi-k2.6": 0.85
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "context.event_category": {
@@ -4221,41 +4583,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9259999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.9195121951219513,
+      "texts_nonnull": 41
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.858,
+      "texts": 50,
+      "rate_nonnull": 0.8707317073170733,
+      "texts_nonnull": 41
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9,
+      "texts": 50,
+      "rate_nonnull": 0.9073170731707317,
+      "texts_nonnull": 41
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8320000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8699999999999999,
+      "texts_nonnull": 40
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.6933333333333332,
+     "texts": 50,
+     "rate_nonnull": 0.7063492063492064,
+     "texts_nonnull": 42
     },
     "null_rate": 0.193,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9259999999999999,
+     "claude-haiku-5-5": 0.858,
+     "gpt-6.1-sol": 0.9,
+     "kimi-k2.6": 0.8320000000000001
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.6933333333333332,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "context.people": {
@@ -4263,41 +4638,53 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.846,
+      "texts": 50,
+      "rate_nonnull": 0.8452380952380952,
+      "texts_nonnull": 42
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.79,
+      "texts": 50,
+      "rate_nonnull": 0.78,
+      "texts_nonnull": 45
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.852,
+      "texts": 50,
+      "rate_nonnull": 0.8531914893617022,
+      "texts_nonnull": 47
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.87,
+      "texts": 50,
+      "rate_nonnull": 0.8765151515151516,
+      "texts_nonnull": 44
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.65,
+     "texts": 50,
+     "rate_nonnull": 0.6413043478260869,
+     "texts_nonnull": 46
     },
     "null_rate": 0.12,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.846,
+     "claude-haiku-5-5": 0.79,
+     "gpt-6.1-sol": 0.852,
+     "kimi-k2.6": 0.87
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.65,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "context.relationship": {
@@ -4682,41 +5069,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.858,
+      "texts": 50,
+      "rate_nonnull": 0.8551020408163265,
+      "texts_nonnull": 49
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.778,
+      "texts": 50,
+      "rate_nonnull": 0.772,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.84,
+      "texts": 50,
+      "rate_nonnull": 0.848,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.732,
+      "texts": 50,
+      "rate_nonnull": 0.732,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5566666666666666,
+     "texts": 50,
+     "rate_nonnull": 0.5533333333333333,
+     "texts_nonnull": 50
     },
     "null_rate": 0.009,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.858,
+     "claude-haiku-5-5": 0.778,
+     "gpt-6.1-sol": 0.84,
+     "kimi-k2.6": 0.732
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5566666666666666,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "salience.tether.stake": {
@@ -4724,40 +5122,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.708,
+      "texts": 50,
+      "rate_nonnull": 0.7170212765957448,
+      "texts_nonnull": 47
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.40399999999999997,
+      "texts": 50,
+      "rate_nonnull": 0.41250000000000003,
+      "texts_nonnull": 48
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6579999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6446808510638298,
+      "texts_nonnull": 47
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.484,
+      "texts": 50,
+      "rate_nonnull": 0.484,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.2366666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.25170068027210885,
+     "texts_nonnull": 49
     },
     "null_rate": 0.063,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.708,
+     "claude-haiku-5-5": 0.40399999999999997,
+     "gpt-6.1-sol": 0.6579999999999999,
+     "kimi-k2.6": 0.484
     },
-    "stat_cross": null,
+    "stat_cross": 0.2366666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -4766,40 +5172,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.612,
+      "texts": 50,
+      "rate_nonnull": 0.612,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.33399999999999996,
+      "texts": 50,
+      "rate_nonnull": 0.33399999999999996,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.71,
+      "texts": 50,
+      "rate_nonnull": 0.5222222222222223,
+      "texts_nonnull": 27
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.436,
+      "texts": 50,
+      "rate_nonnull": 0.436,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.09,
+     "texts": 50,
+     "rate_nonnull": 0.10666666666666666,
+     "texts_nonnull": 50
     },
     "null_rate": 0.132,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.612,
+     "claude-haiku-5-5": 0.33399999999999996,
+     "gpt-6.1-sol": 0.71,
+     "kimi-k2.6": 0.436
     },
-    "stat_cross": null,
+    "stat_cross": 0.09,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -4808,40 +5222,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5479999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.5479999999999999,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.406,
+      "texts": 50,
+      "rate_nonnull": 0.406,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.62,
+      "texts": 50,
+      "rate_nonnull": 0.62,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.446,
+      "texts": 50,
+      "rate_nonnull": 0.446,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.03,
+     "texts": 50,
+     "rate_nonnull": 0.03,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.5479999999999999,
+     "claude-haiku-5-5": 0.406,
+     "gpt-6.1-sol": 0.62,
+     "kimi-k2.6": 0.446
     },
-    "stat_cross": null,
+    "stat_cross": 0.03,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -5110,40 +5532,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5720000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.563265306122449,
+      "texts_nonnull": 49
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.41600000000000004,
+      "texts": 50,
+      "rate_nonnull": 0.48533333333333334,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5760000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.5562962962962963,
+      "texts_nonnull": 45
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.524,
+      "texts": 50,
+      "rate_nonnull": 0.524,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.11666666666666665,
+     "texts": 50,
+     "rate_nonnull": 0.12666666666666665,
+     "texts_nonnull": 50
     },
     "null_rate": 0.054,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.5720000000000001,
+     "claude-haiku-5-5": 0.41600000000000004,
+     "gpt-6.1-sol": 0.5760000000000001,
+     "kimi-k2.6": 0.524
     },
-    "stat_cross": null,
+    "stat_cross": 0.11666666666666665,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -5477,40 +5907,50 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.892,
+      "texts": 50,
+      "rate_nonnull": 0.892,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6940000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.7361111111111112,
+      "texts_nonnull": 48
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.688,
+      "texts": 50,
+      "rate_nonnull": 0.688,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.65,
+      "texts": 50,
+      "rate_nonnull": 0.6313725490196078,
+      "texts_nonnull": 34
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.32333333333333336,
+     "texts": 50,
+     "rate_nonnull": 0.48,
+     "texts_nonnull": 50
     },
     "null_rate": 0.125,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.892,
+     "claude-haiku-5-5": 0.6940000000000001,
+     "gpt-6.1-sol": 0.688,
+     "kimi-k2.6": 0.65
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.32333333333333336,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -5519,40 +5959,50 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.87,
+      "texts": 50,
+      "rate_nonnull": 0.8895833333333334,
+      "texts_nonnull": 48
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.72,
+      "texts": 50,
+      "rate_nonnull": 0.7627906976744185,
+      "texts_nonnull": 43
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.722,
+      "texts": 50,
+      "rate_nonnull": 0.7515873015873016,
+      "texts_nonnull": 42
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.68,
+      "texts": 50,
+      "rate_nonnull": 0.7362745098039216,
+      "texts_nonnull": 34
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5033333333333334,
+     "texts": 50,
+     "rate_nonnull": 0.5868055555555556,
+     "texts_nonnull": 48
     },
     "null_rate": 0.211,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.87,
+     "claude-haiku-5-5": 0.72,
+     "gpt-6.1-sol": 0.722,
+     "kimi-k2.6": 0.68
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.5033333333333334,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -5561,41 +6011,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.888,
+      "texts": 50,
+      "rate_nonnull": 0.7428571428571429,
+      "texts_nonnull": 14
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.83,
+      "texts": 50,
+      "rate_nonnull": 0.773015873015873,
+      "texts_nonnull": 21
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.904,
+      "texts": 50,
+      "rate_nonnull": 0.8666666666666666,
+      "texts_nonnull": 21
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9279999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.9090909090909091,
+      "texts_nonnull": 11
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7566666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.7196969696969697,
+     "texts_nonnull": 22
     },
     "null_rate": 0.69,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.888,
+     "claude-haiku-5-5": 0.83,
+     "gpt-6.1-sol": 0.904,
+     "kimi-k2.6": 0.9279999999999999
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7566666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.drive": {
@@ -5603,41 +6066,49 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.774,
+      "texts": 50,
+      "rate_nonnull": 0.7934782608695652,
+      "texts_nonnull": 46
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.632,
+      "texts": 50,
+      "rate_nonnull": 0.5974358974358974,
+      "texts_nonnull": 39
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.63,
+      "texts": 50,
+      "rate_nonnull": 0.6453900709219857,
+      "texts_nonnull": 47
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.624,
+      "texts": 50,
+      "rate_nonnull": 0.6137254901960785,
+      "texts_nonnull": 34
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.37,
+     "texts": 50,
+     "rate_nonnull": 0.41156462585034015,
+     "texts_nonnull": 49
     },
     "null_rate": 0.223,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.774,
+     "claude-haiku-5-5": 0.632,
+     "gpt-6.1-sol": 0.63,
+     "kimi-k2.6": 0.624
     },
-    "stat_cross": null,
+    "stat_cross": 0.37,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.integration": {
@@ -5645,40 +6116,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.902,
+      "texts": 50,
+      "rate_nonnull": 0.5545454545454546,
+      "texts_nonnull": 11
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.904,
+      "texts": 50,
+      "rate_nonnull": 0.5133333333333334,
+      "texts_nonnull": 5
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.89,
+      "texts": 50,
+      "rate_nonnull": 0.6194444444444445,
+      "texts_nonnull": 12
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.924,
+      "texts": 50,
+      "rate_nonnull": 0.6047619047619047,
+      "texts_nonnull": 7
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8066666666666668,
+     "texts": 50,
+     "rate_nonnull": 0.37878787878787884,
+     "texts_nonnull": 11
     },
     "null_rate": 0.848,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.902,
+     "claude-haiku-5-5": 0.904,
+     "gpt-6.1-sol": 0.89,
+     "kimi-k2.6": 0.924
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.8066666666666668,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -5687,41 +6171,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.912,
+      "texts": 50,
+      "rate_nonnull": 0.7857142857142857,
+      "texts_nonnull": 14
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8540000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.7071428571428572,
+      "texts_nonnull": 14
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8220000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.7530864197530863,
+      "texts_nonnull": 27
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.97,
+      "texts": 50,
+      "rate_nonnull": 0.8,
+      "texts_nonnull": 5
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.67,
+     "texts": 50,
+     "rate_nonnull": 0.4215686274509804,
+     "texts_nonnull": 17
     },
     "null_rate": 0.725,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.912,
+     "claude-haiku-5-5": 0.8540000000000001,
+     "gpt-6.1-sol": 0.8220000000000001,
+     "kimi-k2.6": 0.97
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.67,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.identity_link": {
@@ -5729,40 +6226,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.904,
+      "texts": 50,
+      "rate_nonnull": 0.8875,
+      "texts_nonnull": 16
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.902,
+      "texts": 50,
+      "rate_nonnull": 0.6599999999999999,
+      "texts_nonnull": 10
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9179999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6666666666666666,
+      "texts_nonnull": 12
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.96,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 6
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8066666666666668,
+     "texts": 50,
+     "rate_nonnull": 0.5151515151515151,
+     "texts_nonnull": 11
     },
     "null_rate": 0.801,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.904,
+     "claude-haiku-5-5": 0.902,
+     "gpt-6.1-sol": 0.9179999999999999,
+     "kimi-k2.6": 0.96
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.8066666666666668,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -5771,41 +6281,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.934,
+      "texts": 50,
+      "rate_nonnull": 0.8833333333333334,
+      "texts_nonnull": 14
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.81,
+      "texts": 50,
+      "rate_nonnull": 0.7298245614035088,
+      "texts_nonnull": 19
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.894,
+      "texts": 50,
+      "rate_nonnull": 0.78125,
+      "texts_nonnull": 16
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.898,
+      "texts": 50,
+      "rate_nonnull": 0.6925925925925926,
+      "texts_nonnull": 9
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.75,
+     "texts": 50,
+     "rate_nonnull": 0.36666666666666664,
+     "texts_nonnull": 20
     },
     "null_rate": 0.74,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.934,
+     "claude-haiku-5-5": 0.81,
+     "gpt-6.1-sol": 0.894,
+     "kimi-k2.6": 0.898
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.75,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.self_position": {
@@ -5813,40 +6336,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.98,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 1
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.932,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 4
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.96,
+      "texts": 50,
+      "rate_nonnull": 0.9428571428571428,
+      "texts_nonnull": 7
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.93,
+     "texts": 50,
+     "rate_nonnull": 0.8,
+     "texts_nonnull": 5
     },
     "null_rate": 0.95,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.98,
+     "claude-haiku-5-5": 0.932,
+     "gpt-6.1-sol": 0.96,
+     "kimi-k2.6": 1.0
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.93,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -5855,41 +6391,52 @@
     "shape": "S",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.972,
+      "texts": 50,
+      "rate_nonnull": 0.972,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7659999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.8586956521739131,
+      "texts_nonnull": 46
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.988,
+      "texts": 50,
+      "rate_nonnull": 0.988,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6940000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8697674418604651,
+      "texts_nonnull": 43
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.56,
+     "texts": 50,
+     "rate_nonnull": 0.7166666666666667,
+     "texts_nonnull": 50
     },
     "null_rate": 0.105,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.972,
+     "claude-haiku-5-5": 0.7659999999999999,
+     "gpt-6.1-sol": 0.988,
+     "kimi-k2.6": 0.6940000000000001
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.56,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.turning_point": {
@@ -6650,40 +7197,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9620000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8333333333333334,
+      "texts_nonnull": 5
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.858,
+      "texts": 50,
+      "rate_nonnull": 0.5625,
+      "texts_nonnull": 8
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9840000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.9,
+      "texts_nonnull": 4
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.924,
+      "texts": 50,
+      "rate_nonnull": 0.85,
+      "texts_nonnull": 4
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9033333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.2857142857142857,
+     "texts_nonnull": 7
     },
     "null_rate": 0.91,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9620000000000001,
+     "claude-haiku-5-5": 0.858,
+     "gpt-6.1-sol": 0.9840000000000001,
+     "kimi-k2.6": 0.924
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9033333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -6692,40 +7252,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.992,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 1
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 1
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.98,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 3
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.988,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 2
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.98,
+     "texts": 50,
+     "rate_nonnull": 1.0,
+     "texts_nonnull": 1
     },
     "null_rate": 0.972,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.992,
+     "claude-haiku-5-5": 1.0,
+     "gpt-6.1-sol": 0.98,
+     "kimi-k2.6": 0.988
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.98,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -6840,41 +7413,52 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8240000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.8240000000000001,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6459999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6758865248226951,
+      "texts_nonnull": 47
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.83,
+      "texts": 50,
+      "rate_nonnull": 0.83,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.644,
+      "texts": 50,
+      "rate_nonnull": 0.7291666666666667,
+      "texts_nonnull": 40
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.3466666666666666,
+     "texts": 50,
+     "rate_nonnull": 0.43,
+     "texts_nonnull": 50
     },
     "null_rate": 0.094,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8240000000000001,
+     "claude-haiku-5-5": 0.6459999999999999,
+     "gpt-6.1-sol": 0.83,
+     "kimi-k2.6": 0.644
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.3466666666666666,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.event_category": {
@@ -6936,41 +7520,54 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.94,
+      "texts": 50,
+      "rate_nonnull": 0.9238095238095237,
+      "texts_nonnull": 21
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.856,
+      "texts": 50,
+      "rate_nonnull": 0.8363636363636363,
+      "texts_nonnull": 22
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.848,
+      "texts": 50,
+      "rate_nonnull": 0.8266666666666667,
+      "texts_nonnull": 30
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.878,
+      "texts": 50,
+      "rate_nonnull": 0.8895833333333333,
+      "texts_nonnull": 16
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.71,
+     "texts": 50,
+     "rate_nonnull": 0.5694444444444444,
+     "texts_nonnull": 24
     },
     "null_rate": 0.588,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.94,
+     "claude-haiku-5-5": 0.856,
+     "gpt-6.1-sol": 0.848,
+     "kimi-k2.6": 0.878
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.71,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "context.people": {
@@ -6978,41 +7575,52 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8320000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.76875,
+      "texts_nonnull": 32
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6859999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6254901960784314,
+      "texts_nonnull": 34
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.914,
+      "texts": 50,
+      "rate_nonnull": 0.8948717948717948,
+      "texts_nonnull": 39
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.736,
+      "texts": 50,
+      "rate_nonnull": 0.6760416666666667,
+      "texts_nonnull": 32
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5866666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.5277777777777778,
+     "texts_nonnull": 36
     },
     "null_rate": 0.343,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.8320000000000001,
+     "claude-haiku-5-5": 0.6859999999999999,
+     "gpt-6.1-sol": 0.914,
+     "kimi-k2.6": 0.736
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5866666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.relationship": {
@@ -7395,41 +8003,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.846,
+      "texts": 50,
+      "rate_nonnull": 0.8729729729729729,
+      "texts_nonnull": 37
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.782,
+      "texts": 50,
+      "rate_nonnull": 0.8029411764705883,
+      "texts_nonnull": 34
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.792,
+      "texts": 50,
+      "rate_nonnull": 0.7513513513513513,
+      "texts_nonnull": 37
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.782,
+      "texts": 50,
+      "rate_nonnull": 0.7518518518518519,
+      "texts_nonnull": 27
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.62,
+     "texts": 50,
+     "rate_nonnull": 0.587719298245614,
+     "texts_nonnull": 38
     },
     "null_rate": 0.344,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.846,
+     "claude-haiku-5-5": 0.782,
+     "gpt-6.1-sol": 0.792,
+     "kimi-k2.6": 0.782
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.62,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "salience.tether.stake": {
@@ -7437,40 +8055,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.69,
+      "texts": 50,
+      "rate_nonnull": 0.4597222222222222,
+      "texts_nonnull": 24
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.682,
+      "texts": 50,
+      "rate_nonnull": 0.604,
+      "texts_nonnull": 25
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.73,
+      "texts": 50,
+      "rate_nonnull": 0.6258064516129032,
+      "texts_nonnull": 31
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.64,
+      "texts": 50,
+      "rate_nonnull": 0.43209876543209874,
+      "texts_nonnull": 27
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.53,
+     "texts": 50,
+     "rate_nonnull": 0.2156862745098039,
+     "texts_nonnull": 34
     },
     "null_rate": 0.493,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.69,
+     "claude-haiku-5-5": 0.682,
+     "gpt-6.1-sol": 0.73,
+     "kimi-k2.6": 0.64
     },
-    "stat_cross": null,
+    "stat_cross": 0.53,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -7479,40 +8105,50 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.66,
+      "texts": 50,
+      "rate_nonnull": 0.624390243902439,
+      "texts_nonnull": 41
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.434,
+      "texts": 50,
+      "rate_nonnull": 0.26126126126126126,
+      "texts_nonnull": 37
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8759999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6222222222222222,
+      "texts_nonnull": 9
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.61,
+      "texts": 50,
+      "rate_nonnull": 0.3213333333333333,
+      "texts_nonnull": 25
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.37,
+     "texts": 50,
+     "rate_nonnull": 0.18376068376068375,
+     "texts_nonnull": 39
     },
     "null_rate": 0.461,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.66,
+     "claude-haiku-5-5": 0.434,
+     "gpt-6.1-sol": 0.8759999999999999,
+     "kimi-k2.6": 0.61
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.37,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -7521,40 +8157,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.58,
+      "texts": 50,
+      "rate_nonnull": 0.58,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.35600000000000004,
+      "texts": 50,
+      "rate_nonnull": 0.35625,
+      "texts_nonnull": 48
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.612,
+      "texts": 50,
+      "rate_nonnull": 0.6266666666666666,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.518,
+      "texts": 50,
+      "rate_nonnull": 0.36568627450980395,
+      "texts_nonnull": 34
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.11,
+     "texts": 50,
+     "rate_nonnull": 0.10666666666666666,
+     "texts_nonnull": 50
     },
     "null_rate": 0.128,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.58,
+     "claude-haiku-5-5": 0.35600000000000004,
+     "gpt-6.1-sol": 0.612,
+     "kimi-k2.6": 0.518
     },
-    "stat_cross": null,
+    "stat_cross": 0.11,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -7817,41 +8461,51 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.778,
+      "texts": 50,
+      "rate_nonnull": 0.5289855072463768,
+      "texts_nonnull": 23
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.742,
+      "texts": 50,
+      "rate_nonnull": 0.3929824561403509,
+      "texts_nonnull": 19
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8,
+      "texts": 50,
+      "rate_nonnull": 0.5696969696969697,
+      "texts_nonnull": 22
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.764,
+      "texts": 50,
+      "rate_nonnull": 0.6041666666666666,
+      "texts_nonnull": 24
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.05072463768115942,
+     "texts_nonnull": 23
     },
     "null_rate": 0.576,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.778,
+     "claude-haiku-5-5": 0.742,
+     "gpt-6.1-sol": 0.8,
+     "kimi-k2.6": 0.764
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5666666666666667,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "salience.trajectory": {
@@ -8183,40 +8837,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.738,
+      "texts": 50,
+      "rate_nonnull": 0.738,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.546,
+      "texts": 50,
+      "rate_nonnull": 0.546,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.59,
+      "texts": 50,
+      "rate_nonnull": 0.59,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.528,
+      "texts": 50,
+      "rate_nonnull": 0.5659863945578232,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.20666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.21,
+     "texts_nonnull": 50
     },
     "null_rate": 0.015,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.738,
+     "claude-haiku-5-5": 0.546,
+     "gpt-6.1-sol": 0.59,
+     "kimi-k2.6": 0.528
     },
-    "stat_cross": null,
+    "stat_cross": 0.20666666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -8225,41 +8887,49 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.77,
+      "texts": 50,
+      "rate_nonnull": 0.77,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5660000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.5686666666666667,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6759999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6920289855072463,
+      "texts_nonnull": 46
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.512,
+      "texts": 50,
+      "rate_nonnull": 0.5340136054421769,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.37333333333333335,
+     "texts": 50,
+     "rate_nonnull": 0.4,
+     "texts_nonnull": 50
     },
     "null_rate": 0.042,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.77,
+     "claude-haiku-5-5": 0.5660000000000001,
+     "gpt-6.1-sol": 0.6759999999999999,
+     "kimi-k2.6": 0.512
     },
-    "stat_cross": null,
+    "stat_cross": 0.37333333333333335,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.harm": {
@@ -8267,41 +8937,49 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7979999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.7634146341463415,
+      "texts_nonnull": 41
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.594,
+      "texts": 50,
+      "rate_nonnull": 0.5825757575757575,
+      "texts_nonnull": 44
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6459999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6141666666666666,
+      "texts_nonnull": 40
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5539999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.4738738738738738,
+      "texts_nonnull": 37
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.42666666666666664,
+     "texts": 50,
+     "rate_nonnull": 0.33333333333333337,
+     "texts_nonnull": 43
     },
     "null_rate": 0.229,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.7979999999999999,
+     "claude-haiku-5-5": 0.594,
+     "gpt-6.1-sol": 0.6459999999999999,
+     "kimi-k2.6": 0.5539999999999999
     },
-    "stat_cross": null,
+    "stat_cross": 0.42666666666666664,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.drive": {
@@ -8309,41 +8987,49 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.784,
+      "texts": 50,
+      "rate_nonnull": 0.7943262411347518,
+      "texts_nonnull": 47
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.564,
+      "texts": 50,
+      "rate_nonnull": 0.5263157894736842,
+      "texts_nonnull": 38
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.6940000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.6756756756756757,
+      "texts_nonnull": 37
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.406,
+      "texts": 50,
+      "rate_nonnull": 0.43265306122448977,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.2966666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.3055555555555555,
+     "texts_nonnull": 48
     },
     "null_rate": 0.201,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.784,
+     "claude-haiku-5-5": 0.564,
+     "gpt-6.1-sol": 0.6940000000000001,
+     "kimi-k2.6": 0.406
     },
-    "stat_cross": null,
+    "stat_cross": 0.2966666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.integration": {
@@ -8351,40 +9037,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.94,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 6
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.98,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 2
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9,
+      "texts": 50,
+      "rate_nonnull": 0.7777777777777778,
+      "texts_nonnull": 9
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.948,
+      "texts": 50,
+      "rate_nonnull": 0.8,
+      "texts_nonnull": 4
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9033333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.4761904761904762,
+     "texts_nonnull": 7
     },
     "null_rate": 0.911,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.94,
+     "claude-haiku-5-5": 0.98,
+     "gpt-6.1-sol": 0.9,
+     "kimi-k2.6": 0.948
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9033333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -8393,41 +9092,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.992,
+      "texts": 50,
+      "rate_nonnull": 0.9199999999999999,
+      "texts_nonnull": 5
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.818,
+      "texts": 50,
+      "rate_nonnull": 0.7133333333333333,
+      "texts_nonnull": 10
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.79,
+      "texts": 50,
+      "rate_nonnull": 0.8379310344827586,
+      "texts_nonnull": 29
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.956,
+      "texts": 50,
+      "rate_nonnull": 0.7999999999999999,
+      "texts_nonnull": 3
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.7266666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.6140350877192983,
+     "texts_nonnull": 19
     },
     "null_rate": 0.785,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.992,
+     "claude-haiku-5-5": 0.818,
+     "gpt-6.1-sol": 0.79,
+     "kimi-k2.6": 0.956
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.7266666666666667,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.identity_link": {
@@ -8435,40 +9146,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.976,
+      "texts": 50,
+      "rate_nonnull": 0.8,
+      "texts_nonnull": 2
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.932,
+      "texts": 50,
+      "rate_nonnull": 0.5,
+      "texts_nonnull": 3
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.95,
+      "texts": 50,
+      "rate_nonnull": 0.8333333333333334,
+      "texts_nonnull": 3
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9640000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.6666666666666666,
+      "texts_nonnull": 2
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9433333333333332,
+     "texts": 50,
+     "rate_nonnull": 0.4666666666666667,
+     "texts_nonnull": 5
     },
     "null_rate": 0.956,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.976,
+     "claude-haiku-5-5": 0.932,
+     "gpt-6.1-sol": 0.95,
+     "kimi-k2.6": 0.9640000000000001
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9433333333333332,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -8477,41 +9201,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7979999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.7479166666666667,
+      "texts_nonnull": 32
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5760000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.6097560975609756,
+      "texts_nonnull": 41
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.86,
+      "texts": 50,
+      "rate_nonnull": 0.8375,
+      "texts_nonnull": 32
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.684,
+      "texts": 50,
+      "rate_nonnull": 0.603030303030303,
+      "texts_nonnull": 33
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.5466666666666666,
+     "texts": 50,
+     "rate_nonnull": 0.4035087719298246,
+     "texts_nonnull": 38
     },
     "null_rate": 0.353,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.7979999999999999,
+     "claude-haiku-5-5": 0.5760000000000001,
+     "gpt-6.1-sol": 0.86,
+     "kimi-k2.6": 0.684
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.5466666666666666,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "narrative.self_position": {
@@ -8519,40 +9253,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.932,
+      "texts": 50,
+      "rate_nonnull": 0.8666666666666666,
+      "texts_nonnull": 5
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9520000000000001,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 5
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.9233333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.8,
+     "texts_nonnull": 5
     },
     "null_rate": 0.956,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 1.0,
+     "claude-haiku-5-5": 0.932,
+     "gpt-6.1-sol": 0.9520000000000001,
+     "kimi-k2.6": 1.0
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.9233333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": true
    },
@@ -8561,41 +9308,53 @@
     "shape": "S",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.992,
+      "texts": 50,
+      "rate_nonnull": 0.992,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7040000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.7040000000000001,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 1.0,
+      "texts": 50,
+      "rate_nonnull": 1.0,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.848,
+      "texts": 50,
+      "rate_nonnull": 0.848,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8433333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.8433333333333333,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.992,
+     "claude-haiku-5-5": 0.7040000000000001,
+     "gpt-6.1-sol": 1.0,
+     "kimi-k2.6": 0.848
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.8433333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "narrative.turning_point": {
@@ -9355,41 +10114,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.91,
+      "texts": 50,
+      "rate_nonnull": 0.611111111111111,
+      "texts_nonnull": 6
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.8079999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6333333333333333,
+      "texts_nonnull": 15
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.948,
+      "texts": 50,
+      "rate_nonnull": 0.9142857142857144,
+      "texts_nonnull": 7
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.664,
+      "texts": 50,
+      "rate_nonnull": 0.5599999999999999,
+      "texts_nonnull": 20
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.73,
+     "texts": 50,
+     "rate_nonnull": 0.25,
+     "texts_nonnull": 18
     },
     "null_rate": 0.811,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.91,
+     "claude-haiku-5-5": 0.8079999999999999,
+     "gpt-6.1-sol": 0.948,
+     "kimi-k2.6": 0.664
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.73,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol"
+    ],
+    "outcome": "pass",
+    "borderline": true,
     "sparse": false
    },
    "emotion.bodily_sensation": {
@@ -9397,40 +10168,53 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9520000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.9166666666666666,
+      "texts_nonnull": 12
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.924,
+      "texts": 50,
+      "rate_nonnull": 0.8888888888888888,
+      "texts_nonnull": 9
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.9440000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.9454545454545454,
+      "texts_nonnull": 11
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.924,
+      "texts": 50,
+      "rate_nonnull": 0.6916666666666667,
+      "texts_nonnull": 8
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.8933333333333333,
+     "texts": 50,
+     "rate_nonnull": 0.8205128205128205,
+     "texts_nonnull": 13
     },
     "null_rate": 0.81,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.9520000000000001,
+     "claude-haiku-5-5": 0.924,
+     "gpt-6.1-sol": 0.9440000000000001,
+     "kimi-k2.6": 0.924
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.8933333333333333,
+    "models_pass_repeat": [
+     "claude-sonnet-5-5",
+     "claude-haiku-5-5",
+     "gpt-6.1-sol",
+     "kimi-k2.6"
+    ],
+    "outcome": "pass",
     "borderline": false,
     "sparse": false
    },
@@ -9543,40 +10327,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.59,
+      "texts": 50,
+      "rate_nonnull": 0.59,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.46,
+      "texts": 50,
+      "rate_nonnull": 0.46,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.748,
+      "texts": 50,
+      "rate_nonnull": 0.748,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.508,
+      "texts": 50,
+      "rate_nonnull": 0.508,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.18666666666666668,
+     "texts": 50,
+     "rate_nonnull": 0.18666666666666668,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.59,
+     "claude-haiku-5-5": 0.46,
+     "gpt-6.1-sol": 0.748,
+     "kimi-k2.6": 0.508
     },
-    "stat_cross": null,
+    "stat_cross": 0.18666666666666668,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -9637,41 +10429,51 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.72,
+      "texts": 50,
+      "rate_nonnull": 0.72,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.462,
+      "texts": 50,
+      "rate_nonnull": 0.462,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.818,
+      "texts": 50,
+      "rate_nonnull": 0.8233333333333333,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.45799999999999996,
+      "texts": 50,
+      "rate_nonnull": 0.45799999999999996,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.2866666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.2866666666666667,
+     "texts_nonnull": 50
     },
     "null_rate": 0.002,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.72,
+     "claude-haiku-5-5": 0.462,
+     "gpt-6.1-sol": 0.818,
+     "kimi-k2.6": 0.45799999999999996
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.2866666666666667,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.people": {
@@ -9679,41 +10481,51 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.774,
+      "texts": 50,
+      "rate_nonnull": 0.774,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.528,
+      "texts": 50,
+      "rate_nonnull": 0.528,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.838,
+      "texts": 50,
+      "rate_nonnull": 0.838,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.76,
+      "texts": 50,
+      "rate_nonnull": 0.76,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.4033333333333334,
+     "texts": 50,
+     "rate_nonnull": 0.4033333333333334,
+     "texts_nonnull": 50
     },
     "null_rate": 0.0,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.774,
+     "claude-haiku-5-5": 0.528,
+     "gpt-6.1-sol": 0.838,
+     "kimi-k2.6": 0.76
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "stat_cross": 0.4033333333333334,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "context.relationship": {
@@ -10084,40 +10896,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7120000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.748936170212766,
+      "texts_nonnull": 47
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.5579999999999999,
+      "texts": 50,
+      "rate_nonnull": 0.6041666666666666,
+      "texts_nonnull": 48
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.74,
+      "texts": 50,
+      "rate_nonnull": 0.7884353741496598,
+      "texts_nonnull": 49
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.48,
+      "texts": 50,
+      "rate_nonnull": 0.5183673469387755,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.39666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.4066666666666666,
+     "texts_nonnull": 50
     },
     "null_rate": 0.074,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.7120000000000001,
+     "claude-haiku-5-5": 0.5579999999999999,
+     "gpt-6.1-sol": 0.74,
+     "kimi-k2.6": 0.48
     },
-    "stat_cross": null,
+    "stat_cross": 0.39666666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -10126,40 +10946,48 @@
     "shape": "T",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.614,
+      "texts": 50,
+      "rate_nonnull": 0.512962962962963,
+      "texts_nonnull": 36
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.424,
+      "texts": 50,
+      "rate_nonnull": 0.3384615384615384,
+      "texts_nonnull": 39
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.722,
+      "texts": 50,
+      "rate_nonnull": 0.7608333333333334,
+      "texts_nonnull": 40
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.292,
+      "texts": 50,
+      "rate_nonnull": 0.3236111111111111,
+      "texts_nonnull": 48
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.21666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.07971014492753623,
+     "texts_nonnull": 46
     },
     "null_rate": 0.257,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.614,
+     "claude-haiku-5-5": 0.424,
+     "gpt-6.1-sol": 0.722,
+     "kimi-k2.6": 0.292
     },
-    "stat_cross": null,
+    "stat_cross": 0.21666666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -10168,40 +10996,50 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.46399999999999997,
+      "texts": 50,
+      "rate_nonnull": 0.4612244897959184,
+      "texts_nonnull": 49
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.308,
+      "texts": 50,
+      "rate_nonnull": 0.2872340425531915,
+      "texts_nonnull": 47
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.992,
+      "texts": 50,
+      "rate_nonnull": 0.6,
+      "texts_nonnull": 1
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.21600000000000003,
+      "texts": 50,
+      "rate_nonnull": 0.20272108843537415,
+      "texts_nonnull": 49
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.09333333333333334,
+     "texts": 50,
+     "rate_nonnull": 0.08,
+     "texts_nonnull": 50
     },
     "null_rate": 0.291,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.46399999999999997,
+     "claude-haiku-5-5": 0.308,
+     "gpt-6.1-sol": 0.992,
+     "kimi-k2.6": 0.21600000000000003
     },
-    "stat_cross": null,
-    "models_pass_repeat": [],
-    "outcome": "pending",
+    "stat_cross": 0.09333333333333334,
+    "models_pass_repeat": [
+     "gpt-6.1-sol"
+    ],
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -10210,40 +11048,48 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.45,
+      "texts": 50,
+      "rate_nonnull": 0.45,
+      "texts_nonnull": 50
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.20800000000000002,
+      "texts": 50,
+      "rate_nonnull": 0.20800000000000002,
+      "texts_nonnull": 50
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.53,
+      "texts": 50,
+      "rate_nonnull": 0.53,
+      "texts_nonnull": 50
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.258,
+      "texts": 50,
+      "rate_nonnull": 0.26,
+      "texts_nonnull": 50
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.026666666666666665,
+     "texts": 50,
+     "rate_nonnull": 0.026666666666666665,
+     "texts_nonnull": 50
     },
     "null_rate": 0.008,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.45,
+     "claude-haiku-5-5": 0.20800000000000002,
+     "gpt-6.1-sol": 0.53,
+     "kimi-k2.6": 0.258
     },
-    "stat_cross": null,
+    "stat_cross": 0.026666666666666665,
     "models_pass_repeat": [],
-    "outcome": "pending",
+    "outcome": "cut",
     "borderline": false,
     "sparse": false
    },
@@ -10501,41 +11347,49 @@
     "shape": "L",
     "repeat": {
      "claude-sonnet-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.736,
+      "texts": 50,
+      "rate_nonnull": 0.635483870967742,
+      "texts_nonnull": 31
      },
      "claude-haiku-5-5": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.7120000000000001,
+      "texts": 50,
+      "rate_nonnull": 0.5116666666666666,
+      "texts_nonnull": 20
      },
      "gpt-6.1-sol": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.768,
+      "texts": 50,
+      "rate_nonnull": 0.6463768115942029,
+      "texts_nonnull": 23
      },
      "kimi-k2.6": {
-      "rate": null,
-      "texts": 0
+      "rate": 0.426,
+      "texts": 50,
+      "rate_nonnull": 0.33423423423423426,
+      "texts_nonnull": 37
      }
     },
     "cross": {
-     "rate": null,
-     "texts": 0
+     "rate": 0.45666666666666667,
+     "texts": 50,
+     "rate_nonnull": 0.14141414141414144,
+     "texts_nonnull": 33
     },
     "null_rate": 0.526,
     "noncanonical_rate": null,
-    "notes": [
-     "judge pending"
-    ],
+    "notes": [],
     "stat_repeat": {
-     "claude-sonnet-5-5": null,
-     "claude-haiku-5-5": null,
-     "gpt-6.1-sol": null,
-     "kimi-k2.6": null
+     "claude-sonnet-5-5": 0.736,
+     "claude-haiku-5-5": 0.7120000000000001,
+     "gpt-6.1-sol": 0.768,
+     "kimi-k2.6": 0.426
     },
-    "stat_cross": null,
+    "stat_cross": 0.45666666666666667,
     "models_pass_repeat": [],
-    "outcome": "pending",
-    "borderline": false,
+    "outcome": "cut",
+    "borderline": true,
     "sparse": false
    },
    "salience.trajectory": {

@@ -14,6 +14,14 @@ def main():
     ta = json.load(open(os.path.join(SCORING, 'task_a.json'), encoding='utf-8'))
     tb = json.load(open(os.path.join(SCORING, 'task_b.json'), encoding='utf-8')) if os.path.exists(os.path.join(SCORING, 'task_b.json')) else None
     spend = json.load(open(os.path.join(EXP, 'spend.json'), encoding='utf-8'))
+    for extra in ('spend_judge.json', 'spend_rater.json'):  # D3: concurrent passes kept their own ledgers
+        q = os.path.join(EXP, extra)
+        if os.path.exists(q):
+            e = json.load(open(q, encoding='utf-8'))
+            for m, d in e['by_model'].items():
+                t = spend['by_model'].setdefault(m, {'usd': 0.0, 'calls': 0, 'input_tokens': 0, 'cached_input_tokens': 0, 'cache_write_tokens': 0, 'output_tokens': 0})
+                for k in t: t[k] += d.get(k, 0)
+            spend['total_usd'] += e['total_usd']; spend['calls'] += e['calls']
     spend_pilot = json.load(open(os.path.join(EXP, 'spend_pilot.json'), encoding='utf-8')) if os.path.exists(os.path.join(EXP, 'spend_pilot.json')) else {'total_usd': 0, 'calls': 0}
     narrative = open(os.path.join(SCORING, 'results_narrative.md'), encoding='utf-8').read() if os.path.exists(os.path.join(SCORING, 'results_narrative.md')) else ''
     short = {m: m.replace('claude-', '').replace('gpt-', 'gpt') for m in EXTRACTORS}
@@ -28,13 +36,15 @@ def main():
     for oc in ('pass', 'interpretive', 'cut', 'pending'):
         L.append(f'| {oc} | ' + ' | '.join(str(sum(1 for u, s, v in UNITS if ft['table'][sc][u]['outcome'] == oc)) for sc in scopes) + ' |')
     L.append('\n### 1.1 Pooled (150 texts)\n')
-    L.append('| Unit | Shape | ' + ' | '.join(f'rep {short[m]}' for m in EXTRACTORS) + ' | cross | null | non-canon | outcome | per-arm outcome (syn / conv / pepys) | flags |')
-    L.append('|---|---|' + '---|' * len(EXTRACTORS) + '---|---|---|---|---|---|')
+    L.append('| Unit | Shape | ' + ' | '.join(f'rep {short[m]}' for m in EXTRACTORS) + ' | cross | cross, populated only | null | non-canon | outcome | per-arm outcome (syn / conv / pepys) | flags |')
+    L.append('|---|---|' + '---|' * len(EXTRACTORS) + '---|---|---|---|---|---|---|')
     for u, s, v in UNITS:
         r = ft['table']['pooled'][u]
-        arms = ' / '.join(ft['table'][a][u]['outcome'][:5] if a in ft['table'] else '—' for a in ARMS)
-        flags = ', '.join(x for x, y in (('borderline', r['borderline']), ('sparse', r['sparse'])) if y)
-        L.append(f'| `{u}` | {s} | ' + ' | '.join(fmt(r['stat_repeat'].get(m)) for m in EXTRACTORS) + f" | {fmt(r['stat_cross'])} | {fmt(r['null_rate'])} | {fmt(r['noncanonical_rate'])} | **{r['outcome']}** | {arms} | {flags} |")
+        arms = ' / '.join(ft['table'][a][u]['outcome'] if a in ft['table'] else '—' for a in ARMS)
+        nn = r['cross'].get('rate_nonnull') if isinstance(r.get('cross'), dict) else None
+        flags = ', '.join(x for x, y in (('borderline', r['borderline']), ('sparse', r['sparse']), ('null-driven', s in ('T', 'S', 'L') and r['outcome'] == 'pass' and nn is not None and nn < 0.60), ('value never populated', r['outcome'] == 'pending')) if y)
+        L.append(f'| `{u}` | {s} | ' + ' | '.join(fmt(r['stat_repeat'].get(m)) for m in EXTRACTORS) + f" | {fmt(r['stat_cross'])} | {fmt(nn)} | {fmt(r['null_rate'])} | {fmt(r['noncanonical_rate'])} | **{r['outcome']}** | {arms} | {flags} |")
+    L.append(chr(10) + '"cross, populated only" (free-text units) is the same judge-equivalence rate computed over populated answers only, so that agreement on null does not carry a sparse field; it is descriptive, the outcome follows the frozen rule. *null-driven* marks a pass whose populated-only cross rate is below the 0.60 threshold. "value never populated" marks numeric slots no extractor filled (ICC undefined).')
     for a in ARMS:
         if a not in ft['table']: continue
         L.append(f'\n### 1.2 {a} arm ({ft["texts_per_arm"].get(a)} texts)\n')

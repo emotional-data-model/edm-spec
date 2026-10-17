@@ -7,16 +7,16 @@ Outputs loaded: {"claude-sonnet-5-5": {"calls": 750, "valid": 750}, "claude-haik
 
 | Unit | Shape | rep sonnet-5-5 | rep haiku-5-5 | rep gpt6.1-sol | rep kimi-k2.6 | cross | null rate | non-canon | outcome | flags |
 |---|---|---|---|---|---|---|---|---|---|---|
-| narrative.subject | T | — | — | — | — | — | 0.05 | — | **pending** |  judge pending |
-| narrative.trigger | T | — | — | — | — | — | 0.09 | — | **pending** |  judge pending |
-| narrative.harm | T | — | — | — | — | — | 0.36 | — | **pending** |  judge pending |
-| narrative.drive | T | — | — | — | — | — | 0.19 | — | **pending** |  judge pending |
-| narrative.integration | T | — | — | — | — | — | 0.67 | — | **pending** |  judge pending |
-| narrative.meaning | T | — | — | — | — | — | 0.54 | — | **pending** |  judge pending |
-| narrative.identity_link | T | — | — | — | — | — | 0.72 | — | **pending** |  judge pending |
-| narrative.valence_shift | T | — | — | — | — | — | 0.45 | — | **pending** |  judge pending |
-| narrative.self_position | T | — | — | — | — | — | 0.79 | — | **pending** |  judge pending |
-| narrative.summary | S | — | — | — | — | — | 0.04 | — | **pending** |  judge pending |
+| narrative.subject | T | 0.86 | 0.70 | 0.71 | 0.67 | 0.40 | 0.05 | — | **cut** |  |
+| narrative.trigger | T | 0.87 | 0.67 | 0.76 | 0.65 | 0.53 | 0.09 | — | **cut** | borderline |
+| narrative.harm | T | 0.85 | 0.69 | 0.75 | 0.71 | 0.54 | 0.36 | — | **cut** | borderline |
+| narrative.drive | T | 0.80 | 0.60 | 0.68 | 0.55 | 0.38 | 0.19 | — | **cut** | borderline |
+| narrative.integration | T | 0.88 | 0.83 | 0.86 | 0.87 | 0.72 | 0.67 | — | **pass** | borderline |
+| narrative.meaning | T | 0.93 | 0.83 | 0.84 | 0.91 | 0.71 | 0.54 | — | **pass** | borderline |
+| narrative.identity_link | T | 0.91 | 0.85 | 0.92 | 0.90 | 0.82 | 0.72 | — | **pass** |  |
+| narrative.valence_shift | T | 0.83 | 0.65 | 0.86 | 0.76 | 0.58 | 0.45 | — | **cut** | borderline |
+| narrative.self_position | T | 0.96 | 0.90 | 0.93 | 0.96 | 0.87 | 0.79 | — | **pass** |  |
+| narrative.summary | S | 0.98 | 0.79 | 1.00 | 0.83 | 0.78 | 0.04 | — | **pass** | borderline |
 | narrative.turning_point | B | 0.83 | 0.84 | 0.96 | 0.76 | 0.58 | 0.89 | — | **pass** |  |
 | narrative.arc | CL | 0.78 | 0.68 | 0.74 | 0.66 | 0.48 | 0.22 | 0.06 | **cut** | borderline |
 | emotion.primary | C | 0.86 | 0.76 | 0.84 | 0.78 | 0.57 | 0.11 | 0.14 | **pass** |  |
@@ -32,14 +32,14 @@ Outputs loaded: {"claude-sonnet-5-5": {"calls": 750, "valid": 750}, "claude-haik
 | emotion.appraisal.urgency.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
 | emotion.appraisal.control.text | C | 0.78 | 0.55 | 0.68 | 0.42 | 0.36 | 0.79 | 0.02 | **cut** | borderline |
 | emotion.appraisal.control.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
-| emotion.meta | T | — | — | — | — | — | 0.63 | — | **pending** |  judge pending |
-| emotion.bodily_sensation | T | — | — | — | — | — | 0.79 | — | **pending** |  judge pending |
+| emotion.meta | T | 0.87 | 0.74 | 0.91 | 0.72 | 0.65 | 0.63 | — | **cut** | borderline |
+| emotion.bodily_sensation | T | 0.98 | 0.95 | 0.97 | 0.95 | 0.94 | 0.79 | — | **pass** |  |
 | emotion.temporal_profile | C | 0.80 | 0.67 | 0.75 | 0.73 | 0.37 | 0.56 | 0.06 | **interpretive** | borderline |
 | emotion.appraisal.attribution | C | 0.98 | 0.80 | 0.77 | 0.78 | 0.55 | 0.78 | 0.05 | **pass** |  |
-| context.event | T | — | — | — | — | — | 0.03 | — | **pending** |  judge pending |
+| context.event | T | 0.79 | 0.65 | 0.85 | 0.67 | 0.41 | 0.03 | — | **cut** | borderline |
 | context.event_category | C | 0.86 | 0.79 | 0.81 | 0.74 | 0.60 | 0.05 | 0.00 | **pass** | borderline |
-| context.place | T | — | — | — | — | — | 0.26 | — | **pending** |  judge pending |
-| context.people | L | — | — | — | — | — | 0.15 | — | **pending** |  judge pending |
+| context.place | T | 0.86 | 0.73 | 0.86 | 0.72 | 0.56 | 0.26 | — | **cut** | borderline |
+| context.people | L | 0.82 | 0.67 | 0.87 | 0.79 | 0.55 | 0.15 | — | **cut** | borderline |
 | context.relationship | C | 0.85 | 0.72 | 0.78 | 0.83 | 0.60 | 0.24 | 0.02 | **pass** | borderline |
 | context.relationship_model | C | 0.75 | 0.48 | 0.63 | 0.59 | 0.20 | 0.73 | 0.00 | **cut** | borderline |
 | context.life_stage | C | 0.79 | 0.47 | 0.91 | 0.56 | 0.44 | 0.39 | 0.00 | **cut** | borderline |
@@ -47,16 +47,16 @@ Outputs loaded: {"claude-sonnet-5-5": {"calls": 750, "valid": 750}, "claude-haik
 | context.scope.direction | C | 0.84 | 0.60 | 0.78 | 0.68 | 0.37 | 0.18 | — | **cut** | borderline |
 | salience.memory_type | C | 0.85 | 0.73 | 0.80 | 0.72 | 0.36 | 0.26 | 0.00 | **interpretive** | borderline |
 | salience.tether.type | C | 0.81 | 0.71 | 0.81 | 0.71 | 0.53 | 0.14 | 0.00 | **pass** | borderline |
-| salience.tether.referent | T | — | — | — | — | — | 0.14 | — | **pending** |  judge pending |
-| salience.tether.stake | T | — | — | — | — | — | 0.27 | — | **pending** |  judge pending |
-| salience.retrieval_cues | L | — | — | — | — | — | 0.29 | — | **pending** |  judge pending |
-| salience.themes | L | — | — | — | — | — | 0.05 | — | **pending** |  judge pending |
+| salience.tether.referent | T | 0.81 | 0.71 | 0.79 | 0.66 | 0.52 | 0.14 | — | **cut** | borderline |
+| salience.tether.stake | T | 0.67 | 0.50 | 0.70 | 0.47 | 0.33 | 0.27 | — | **cut** |  |
+| salience.retrieval_cues | L | 0.58 | 0.36 | 0.86 | 0.42 | 0.18 | 0.29 | — | **cut** |  |
+| salience.themes | L | 0.53 | 0.32 | 0.59 | 0.41 | 0.06 | 0.05 | — | **cut** |  |
 | salience.recurrence | C | 0.72 | 0.51 | 0.55 | 0.67 | 0.20 | 0.63 | 0.03 | **cut** | borderline |
 | salience.persistence.text | C | 0.71 | 0.53 | 0.55 | 0.57 | 0.26 | 0.68 | 0.02 | **cut** | borderline |
 | salience.persistence.decay | C | 0.75 | 0.52 | 0.86 | 0.59 | 0.25 | 0.72 | — | **cut** | borderline |
 | salience.linkage_strength | N | 0.96 | 0.88 | 0.09 | 0.94 | 0.50 | 0.43 | — | **interpretive** | borderline |
 | salience.function | CL | 0.92 | 0.68 | 0.87 | 0.76 | 0.52 | 0.73 | 0.00 | **pass** | borderline |
-| salience.resilience | L | — | — | — | — | — | 0.39 | — | **pending** |  judge pending |
+| salience.resilience | L | 0.70 | 0.62 | 0.71 | 0.57 | 0.38 | 0.39 | — | **cut** |  |
 | salience.trajectory | C | 0.81 | 0.67 | 0.84 | 0.65 | 0.42 | 0.54 | 0.00 | **cut** | borderline |
 | motivation.action_tendency | C | 0.82 | 0.66 | 0.73 | 0.72 | 0.40 | 0.20 | 0.02 | **pass** | borderline |
 | motivation.need | C | 0.85 | 0.68 | 0.80 | 0.73 | 0.50 | 0.43 | 0.01 | **pass** | borderline |
@@ -64,22 +64,22 @@ Outputs loaded: {"claude-sonnet-5-5": {"calls": 750, "valid": 750}, "claude-haik
 | motivation.risk_posture | C | 0.80 | 0.46 | 0.83 | 0.73 | 0.18 | 0.62 | 0.00 | **interpretive** | borderline |
 | motivation.coping | C | 0.82 | 0.69 | 0.73 | 0.74 | 0.54 | 0.45 | 0.05 | **pass** | borderline |
 
-Outcomes: {'pending': 24, 'pass': 14, 'cut': 14, 'interpretive': 4}
+Outcomes: {'cut': 28, 'pass': 20, 'pending': 4, 'interpretive': 4}
 
 ## synthetic
 
 | Unit | Shape | rep sonnet-5-5 | rep haiku-5-5 | rep gpt6.1-sol | rep kimi-k2.6 | cross | null rate | non-canon | outcome | flags |
 |---|---|---|---|---|---|---|---|---|---|---|
-| narrative.subject | T | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
-| narrative.trigger | T | — | — | — | — | — | 0.01 | — | **pending** |  judge pending |
-| narrative.harm | T | — | — | — | — | — | 0.17 | — | **pending** |  judge pending |
-| narrative.drive | T | — | — | — | — | — | 0.15 | — | **pending** |  judge pending |
-| narrative.integration | T | — | — | — | — | — | 0.24 | — | **pending** |  judge pending |
-| narrative.meaning | T | — | — | — | — | — | 0.11 | — | **pending** |  judge pending |
-| narrative.identity_link | T | — | — | — | — | — | 0.40 | — | **pending** |  judge pending |
-| narrative.valence_shift | T | — | — | — | — | — | 0.25 | — | **pending** |  judge pending |
-| narrative.self_position | T | — | — | — | — | — | 0.47 | — | **pending** |  judge pending |
-| narrative.summary | S | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| narrative.subject | T | 0.96 | 0.85 | 0.84 | 0.83 | 0.66 | 0.00 | — | **pass** | borderline |
+| narrative.trigger | T | 0.96 | 0.73 | 0.87 | 0.76 | 0.70 | 0.01 | — | **cut** | borderline |
+| narrative.harm | T | 0.86 | 0.63 | 0.70 | 0.64 | 0.43 | 0.17 | — | **cut** |  |
+| narrative.drive | T | 0.84 | 0.61 | 0.73 | 0.62 | 0.47 | 0.15 | — | **cut** | borderline |
+| narrative.integration | T | 0.79 | 0.62 | 0.79 | 0.72 | 0.45 | 0.24 | — | **cut** | borderline |
+| narrative.meaning | T | 0.88 | 0.81 | 0.89 | 0.80 | 0.73 | 0.11 | — | **pass** | borderline |
+| narrative.identity_link | T | 0.85 | 0.72 | 0.89 | 0.77 | 0.71 | 0.40 | — | **cut** | borderline |
+| narrative.valence_shift | T | 0.75 | 0.56 | 0.83 | 0.69 | 0.43 | 0.25 | — | **cut** | borderline |
+| narrative.self_position | T | 0.90 | 0.85 | 0.89 | 0.88 | 0.77 | 0.47 | — | **pass** | borderline |
+| narrative.summary | S | 0.97 | 0.90 | 1.00 | 0.94 | 0.95 | 0.00 | — | **pass** |  |
 | narrative.turning_point | B | 0.81 | 0.80 | 0.95 | 0.68 | 0.49 | 0.67 | — | **pass** | borderline |
 | narrative.arc | CL | 0.85 | 0.71 | 0.72 | 0.79 | 0.50 | 0.02 | 0.04 | **pass** | borderline |
 | emotion.primary | C | 0.86 | 0.71 | 0.81 | 0.86 | 0.58 | 0.01 | 0.17 | **pass** | borderline |
@@ -95,14 +95,14 @@ Outcomes: {'pending': 24, 'pass': 14, 'cut': 14, 'interpretive': 4}
 | emotion.appraisal.urgency.value | D | — | — | — | — | — | 0.99 | — | **pending** | sparse |
 | emotion.appraisal.control.text | C | 0.77 | 0.55 | 0.67 | 0.49 | 0.40 | 0.66 | 0.01 | **cut** | borderline |
 | emotion.appraisal.control.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
-| emotion.meta | T | — | — | — | — | — | 0.16 | — | **pending** |  judge pending |
-| emotion.bodily_sensation | T | — | — | — | — | — | 0.60 | — | **pending** |  judge pending |
+| emotion.meta | T | 0.75 | 0.56 | 0.80 | 0.58 | 0.30 | 0.16 | — | **cut** | borderline |
+| emotion.bodily_sensation | T | 0.99 | 0.93 | 0.98 | 0.95 | 0.94 | 0.60 | — | **pass** |  |
 | emotion.temporal_profile | C | 0.76 | 0.66 | 0.77 | 0.84 | 0.35 | 0.24 | 0.03 | **interpretive** | borderline |
 | emotion.appraisal.attribution | C | 0.99 | 0.90 | 0.87 | 0.73 | 0.72 | 0.55 | 0.01 | **pass** | borderline |
-| context.event | T | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| context.event | T | 0.96 | 0.85 | 0.97 | 0.85 | 0.70 | 0.00 | — | **pass** | borderline |
 | context.event_category | C | 0.99 | 0.96 | 0.94 | 0.93 | 0.93 | 0.00 | 0.00 | **pass** |  |
-| context.place | T | — | — | — | — | — | 0.19 | — | **pending** |  judge pending |
-| context.people | L | — | — | — | — | — | 0.12 | — | **pending** |  judge pending |
+| context.place | T | 0.93 | 0.86 | 0.90 | 0.83 | 0.69 | 0.19 | — | **pass** | borderline |
+| context.people | L | 0.85 | 0.79 | 0.85 | 0.87 | 0.65 | 0.12 | — | **pass** | borderline |
 | context.relationship | C | 0.82 | 0.82 | 0.87 | 0.91 | 0.63 | 0.15 | 0.03 | **pass** |  |
 | context.relationship_model | C | 0.84 | 0.63 | 0.66 | 0.64 | 0.10 | 0.69 | 0.00 | **cut** | borderline |
 | context.life_stage | C | 0.85 | 0.62 | 0.75 | 0.53 | 0.44 | 0.13 | 0.00 | **cut** | borderline |
@@ -110,16 +110,16 @@ Outcomes: {'pending': 24, 'pass': 14, 'cut': 14, 'interpretive': 4}
 | context.scope.direction | C | 0.95 | 0.68 | 0.73 | 0.63 | 0.53 | 0.04 | — | **cut** | borderline |
 | salience.memory_type | C | 0.84 | 0.70 | 0.78 | 0.82 | 0.36 | 0.02 | 0.00 | **interpretive** | borderline |
 | salience.tether.type | C | 0.89 | 0.83 | 0.84 | 0.78 | 0.58 | 0.01 | 0.00 | **pass** |  |
-| salience.tether.referent | T | — | — | — | — | — | 0.01 | — | **pending** |  judge pending |
-| salience.tether.stake | T | — | — | — | — | — | 0.06 | — | **pending** |  judge pending |
-| salience.retrieval_cues | L | — | — | — | — | — | 0.13 | — | **pending** |  judge pending |
-| salience.themes | L | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| salience.tether.referent | T | 0.86 | 0.78 | 0.84 | 0.73 | 0.56 | 0.01 | — | **cut** | borderline |
+| salience.tether.stake | T | 0.71 | 0.40 | 0.66 | 0.48 | 0.24 | 0.06 | — | **cut** |  |
+| salience.retrieval_cues | L | 0.61 | 0.33 | 0.71 | 0.44 | 0.09 | 0.13 | — | **cut** |  |
+| salience.themes | L | 0.55 | 0.41 | 0.62 | 0.45 | 0.03 | 0.00 | — | **cut** |  |
 | salience.recurrence | C | 0.80 | 0.46 | 0.48 | 0.70 | 0.17 | 0.40 | 0.03 | **cut** | borderline |
 | salience.persistence.text | C | 0.74 | 0.55 | 0.60 | 0.62 | 0.21 | 0.40 | 0.02 | **cut** | borderline |
 | salience.persistence.decay | C | 0.79 | 0.56 | 0.91 | 0.62 | 0.21 | 0.50 | — | **cut** |  |
 | salience.linkage_strength | N | 0.97 | 0.90 | 0.09 | 0.96 | 0.54 | 0.22 | — | **pass** | borderline |
 | salience.function | CL | 0.92 | 0.65 | 0.87 | 0.79 | 0.43 | 0.37 | 0.00 | **pass** | borderline |
-| salience.resilience | L | — | — | — | — | — | 0.05 | — | **pending** |  judge pending |
+| salience.resilience | L | 0.57 | 0.42 | 0.58 | 0.52 | 0.12 | 0.05 | — | **cut** |  |
 | salience.trajectory | C | 0.75 | 0.51 | 0.83 | 0.68 | 0.31 | 0.22 | 0.00 | **cut** | borderline |
 | motivation.action_tendency | C | 0.81 | 0.67 | 0.76 | 0.83 | 0.50 | 0.08 | 0.01 | **pass** | borderline |
 | motivation.need | C | 0.88 | 0.62 | 0.81 | 0.86 | 0.55 | 0.25 | 0.00 | **pass** |  |
@@ -127,22 +127,22 @@ Outcomes: {'pending': 24, 'pass': 14, 'cut': 14, 'interpretive': 4}
 | motivation.risk_posture | C | 0.79 | 0.45 | 0.80 | 0.79 | 0.08 | 0.53 | 0.00 | **interpretive** |  |
 | motivation.coping | C | 0.77 | 0.59 | 0.62 | 0.73 | 0.47 | 0.12 | 0.05 | **cut** | borderline |
 
-Outcomes: {'pending': 24, 'pass': 15, 'interpretive': 5, 'cut': 12}
+Outcomes: {'pass': 23, 'cut': 24, 'interpretive': 5, 'pending': 4}
 
 ## conversational
 
 | Unit | Shape | rep sonnet-5-5 | rep haiku-5-5 | rep gpt6.1-sol | rep kimi-k2.6 | cross | null rate | non-canon | outcome | flags |
 |---|---|---|---|---|---|---|---|---|---|---|
-| narrative.subject | T | — | — | — | — | — | 0.12 | — | **pending** |  judge pending |
-| narrative.trigger | T | — | — | — | — | — | 0.21 | — | **pending** |  judge pending |
-| narrative.harm | T | — | — | — | — | — | 0.69 | — | **pending** |  judge pending |
-| narrative.drive | T | — | — | — | — | — | 0.22 | — | **pending** |  judge pending |
-| narrative.integration | T | — | — | — | — | — | 0.85 | — | **pending** |  judge pending |
-| narrative.meaning | T | — | — | — | — | — | 0.72 | — | **pending** |  judge pending |
-| narrative.identity_link | T | — | — | — | — | — | 0.80 | — | **pending** |  judge pending |
-| narrative.valence_shift | T | — | — | — | — | — | 0.74 | — | **pending** |  judge pending |
-| narrative.self_position | T | — | — | — | — | — | 0.95 | — | **pending** | sparse judge pending |
-| narrative.summary | S | — | — | — | — | — | 0.10 | — | **pending** |  judge pending |
+| narrative.subject | T | 0.89 | 0.69 | 0.69 | 0.65 | 0.32 | 0.12 | — | **cut** |  |
+| narrative.trigger | T | 0.87 | 0.72 | 0.72 | 0.68 | 0.50 | 0.21 | — | **cut** |  |
+| narrative.harm | T | 0.89 | 0.83 | 0.90 | 0.93 | 0.76 | 0.69 | — | **pass** | borderline |
+| narrative.drive | T | 0.77 | 0.63 | 0.63 | 0.62 | 0.37 | 0.22 | — | **cut** | borderline |
+| narrative.integration | T | 0.90 | 0.90 | 0.89 | 0.92 | 0.81 | 0.85 | — | **pass** |  |
+| narrative.meaning | T | 0.91 | 0.85 | 0.82 | 0.97 | 0.67 | 0.72 | — | **pass** | borderline |
+| narrative.identity_link | T | 0.90 | 0.90 | 0.92 | 0.96 | 0.81 | 0.80 | — | **pass** |  |
+| narrative.valence_shift | T | 0.93 | 0.81 | 0.89 | 0.90 | 0.75 | 0.74 | — | **pass** | borderline |
+| narrative.self_position | T | 0.98 | 0.93 | 0.96 | 1.00 | 0.93 | 0.95 | — | **pass** | sparse |
+| narrative.summary | S | 0.97 | 0.77 | 0.99 | 0.69 | 0.56 | 0.10 | — | **cut** | borderline |
 | narrative.turning_point | B | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | — | **pass** | sparse |
 | narrative.arc | CL | 0.86 | 0.64 | 0.81 | 0.71 | 0.54 | 0.42 | 0.07 | **pass** | borderline |
 | emotion.primary | C | 0.89 | 0.86 | 0.84 | 0.74 | 0.57 | 0.29 | 0.13 | **pass** | borderline |
@@ -158,14 +158,14 @@ Outcomes: {'pending': 24, 'pass': 15, 'interpretive': 5, 'cut': 12}
 | emotion.appraisal.urgency.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
 | emotion.appraisal.control.text | C | 0.72 | 0.56 | 0.62 | 0.26 | 0.21 | 0.89 | 0.06 | **cut** | borderline |
 | emotion.appraisal.control.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
-| emotion.meta | T | — | — | — | — | — | 0.91 | — | **pending** | sparse judge pending |
-| emotion.bodily_sensation | T | — | — | — | — | — | 0.97 | — | **pending** | sparse judge pending |
+| emotion.meta | T | 0.96 | 0.86 | 0.98 | 0.92 | 0.90 | 0.91 | — | **pass** | sparse |
+| emotion.bodily_sensation | T | 0.99 | 1.00 | 0.98 | 0.99 | 0.98 | 0.97 | — | **pass** | sparse |
 | emotion.temporal_profile | C | 0.66 | 0.68 | 0.80 | 0.67 | 0.48 | 0.79 | 0.00 | **cut** | borderline |
 | emotion.appraisal.attribution | C | 0.75 | 0.64 | 0.80 | 1.00 | 0.23 | 0.95 | 0.15 | **interpretive** | borderline, sparse |
-| context.event | T | — | — | — | — | — | 0.09 | — | **pending** |  judge pending |
+| context.event | T | 0.82 | 0.65 | 0.83 | 0.64 | 0.35 | 0.09 | — | **cut** | borderline |
 | context.event_category | C | 0.84 | 0.78 | 0.82 | 0.67 | 0.41 | 0.12 | 0.00 | **pass** | borderline |
-| context.place | T | — | — | — | — | — | 0.59 | — | **pending** |  judge pending |
-| context.people | L | — | — | — | — | — | 0.34 | — | **pending** |  judge pending |
+| context.place | T | 0.94 | 0.86 | 0.85 | 0.88 | 0.71 | 0.59 | — | **pass** | borderline |
+| context.people | L | 0.83 | 0.69 | 0.91 | 0.74 | 0.59 | 0.34 | — | **cut** | borderline |
 | context.relationship | C | 0.90 | 0.78 | 0.80 | 0.77 | 0.79 | 0.48 | 0.00 | **pass** |  |
 | context.relationship_model | C | 0.75 | 0.49 | 0.49 | 0.50 | 0.30 | 0.79 | 0.00 | **cut** | borderline |
 | context.life_stage | C | 0.80 | 0.59 | 0.89 | 0.59 | 0.41 | 0.37 | 0.00 | **cut** | borderline |
@@ -173,16 +173,16 @@ Outcomes: {'pending': 24, 'pass': 15, 'interpretive': 5, 'cut': 12}
 | context.scope.direction | C | 0.77 | 0.64 | 0.78 | 0.62 | 0.30 | 0.29 | — | **cut** |  |
 | salience.memory_type | C | 0.79 | 0.65 | 0.85 | 0.67 | 0.41 | 0.55 | 0.00 | **cut** | borderline |
 | salience.tether.type | C | 0.79 | 0.71 | 0.82 | 0.70 | 0.47 | 0.35 | 0.01 | **pass** | borderline |
-| salience.tether.referent | T | — | — | — | — | — | 0.34 | — | **pending** |  judge pending |
-| salience.tether.stake | T | — | — | — | — | — | 0.49 | — | **pending** |  judge pending |
-| salience.retrieval_cues | L | — | — | — | — | — | 0.46 | — | **pending** |  judge pending |
-| salience.themes | L | — | — | — | — | — | 0.13 | — | **pending** |  judge pending |
+| salience.tether.referent | T | 0.85 | 0.78 | 0.79 | 0.78 | 0.62 | 0.34 | — | **cut** | borderline |
+| salience.tether.stake | T | 0.69 | 0.68 | 0.73 | 0.64 | 0.53 | 0.49 | — | **cut** |  |
+| salience.retrieval_cues | L | 0.66 | 0.43 | 0.88 | 0.61 | 0.37 | 0.46 | — | **cut** |  |
+| salience.themes | L | 0.58 | 0.36 | 0.61 | 0.52 | 0.11 | 0.13 | — | **cut** |  |
 | salience.recurrence | C | 0.66 | 0.54 | 0.55 | 0.62 | 0.33 | 0.78 | 0.06 | **cut** | borderline |
 | salience.persistence.text | C | 0.66 | 0.38 | 0.36 | 0.58 | 0.15 | 0.87 | 0.03 | **cut** | borderline |
 | salience.persistence.decay | C | 0.75 | 0.20 | 1.00 | 0.61 | 0.08 | 0.91 | — | **cut** | sparse |
 | salience.linkage_strength | N | 0.92 | 0.78 | — | 0.94 | 0.10 | 0.62 | — | **interpretive** | borderline |
 | salience.function | CL | 0.71 | 0.51 | 0.81 | 0.53 | 0.15 | 0.86 | 0.00 | **cut** | borderline |
-| salience.resilience | L | — | — | — | — | — | 0.58 | — | **pending** |  judge pending |
+| salience.resilience | L | 0.78 | 0.74 | 0.80 | 0.76 | 0.57 | 0.58 | — | **cut** | borderline |
 | salience.trajectory | C | 0.87 | 0.82 | 0.90 | 0.67 | 0.53 | 0.71 | 0.00 | **pass** | borderline |
 | motivation.action_tendency | C | 0.84 | 0.70 | 0.78 | 0.70 | 0.41 | 0.23 | 0.02 | **pass** | borderline |
 | motivation.need | C | 0.84 | 0.63 | 0.83 | 0.64 | 0.62 | 0.51 | 0.02 | **cut** |  |
@@ -190,22 +190,22 @@ Outcomes: {'pending': 24, 'pass': 15, 'interpretive': 5, 'cut': 12}
 | motivation.risk_posture | C | 0.71 | 0.34 | 0.92 | 0.57 | 0.21 | 0.77 | 0.00 | **cut** | borderline |
 | motivation.coping | C | 0.85 | 0.75 | 0.80 | 0.74 | 0.61 | 0.67 | 0.05 | **pass** | borderline |
 
-Outcomes: {'pending': 25, 'pass': 11, 'cut': 18, 'interpretive': 2}
+Outcomes: {'cut': 29, 'pass': 20, 'pending': 5, 'interpretive': 2}
 
 ## pepys
 
 | Unit | Shape | rep sonnet-5-5 | rep haiku-5-5 | rep gpt6.1-sol | rep kimi-k2.6 | cross | null rate | non-canon | outcome | flags |
 |---|---|---|---|---|---|---|---|---|---|---|
-| narrative.subject | T | — | — | — | — | — | 0.01 | — | **pending** |  judge pending |
-| narrative.trigger | T | — | — | — | — | — | 0.04 | — | **pending** |  judge pending |
-| narrative.harm | T | — | — | — | — | — | 0.23 | — | **pending** |  judge pending |
-| narrative.drive | T | — | — | — | — | — | 0.20 | — | **pending** |  judge pending |
-| narrative.integration | T | — | — | — | — | — | 0.91 | — | **pending** | sparse judge pending |
-| narrative.meaning | T | — | — | — | — | — | 0.79 | — | **pending** |  judge pending |
-| narrative.identity_link | T | — | — | — | — | — | 0.96 | — | **pending** | sparse judge pending |
-| narrative.valence_shift | T | — | — | — | — | — | 0.35 | — | **pending** |  judge pending |
-| narrative.self_position | T | — | — | — | — | — | 0.96 | — | **pending** | sparse judge pending |
-| narrative.summary | S | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| narrative.subject | T | 0.74 | 0.55 | 0.59 | 0.53 | 0.21 | 0.01 | — | **cut** |  |
+| narrative.trigger | T | 0.77 | 0.57 | 0.68 | 0.51 | 0.37 | 0.04 | — | **cut** | borderline |
+| narrative.harm | T | 0.80 | 0.59 | 0.65 | 0.55 | 0.43 | 0.23 | — | **cut** | borderline |
+| narrative.drive | T | 0.78 | 0.56 | 0.69 | 0.41 | 0.30 | 0.20 | — | **cut** | borderline |
+| narrative.integration | T | 0.94 | 0.98 | 0.90 | 0.95 | 0.90 | 0.91 | — | **pass** | sparse |
+| narrative.meaning | T | 0.99 | 0.82 | 0.79 | 0.96 | 0.73 | 0.79 | — | **pass** | borderline |
+| narrative.identity_link | T | 0.98 | 0.93 | 0.95 | 0.96 | 0.94 | 0.96 | — | **pass** | sparse |
+| narrative.valence_shift | T | 0.80 | 0.58 | 0.86 | 0.68 | 0.55 | 0.35 | — | **cut** | borderline |
+| narrative.self_position | T | 1.00 | 0.93 | 0.95 | 1.00 | 0.92 | 0.96 | — | **pass** | sparse |
+| narrative.summary | S | 0.99 | 0.70 | 1.00 | 0.85 | 0.84 | 0.00 | — | **pass** | borderline |
 | narrative.turning_point | B | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | 1.00 | — | **pass** | sparse |
 | narrative.arc | CL | 0.54 | 0.57 | 0.66 | 0.37 | 0.25 | 0.23 | 0.09 | **cut** | borderline |
 | emotion.primary | C | 0.80 | 0.68 | 0.86 | 0.67 | 0.51 | 0.04 | 0.11 | **cut** | borderline |
@@ -221,14 +221,14 @@ Outcomes: {'pending': 25, 'pass': 11, 'cut': 18, 'interpretive': 2}
 | emotion.appraisal.urgency.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
 | emotion.appraisal.control.text | C | 0.79 | 0.40 | 0.67 | 0.24 | 0.25 | 0.81 | 0.02 | **cut** | borderline |
 | emotion.appraisal.control.value | D | — | — | — | — | — | 1.00 | — | **pending** | sparse |
-| emotion.meta | T | — | — | — | — | — | 0.81 | — | **pending** |  judge pending |
-| emotion.bodily_sensation | T | — | — | — | — | — | 0.81 | — | **pending** |  judge pending |
+| emotion.meta | T | 0.91 | 0.81 | 0.95 | 0.66 | 0.73 | 0.81 | — | **pass** | borderline |
+| emotion.bodily_sensation | T | 0.95 | 0.92 | 0.94 | 0.92 | 0.89 | 0.81 | — | **pass** |  |
 | emotion.temporal_profile | C | 0.75 | 0.48 | 0.63 | 0.53 | 0.06 | 0.65 | 0.14 | **cut** | borderline |
 | emotion.appraisal.attribution | C | 1.00 | 0.65 | 0.58 | -0.00 | 0.09 | 0.83 | 0.11 | **cut** |  |
-| context.event | T | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| context.event | T | 0.59 | 0.46 | 0.75 | 0.51 | 0.19 | 0.00 | — | **cut** |  |
 | context.event_category | C | 0.72 | 0.56 | 0.66 | 0.57 | 0.40 | 0.03 | 0.01 | **cut** | borderline |
-| context.place | T | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
-| context.people | L | — | — | — | — | — | 0.00 | — | **pending** |  judge pending |
+| context.place | T | 0.72 | 0.46 | 0.82 | 0.46 | 0.29 | 0.00 | — | **cut** | borderline |
+| context.people | L | 0.77 | 0.53 | 0.84 | 0.76 | 0.40 | 0.00 | — | **cut** | borderline |
 | context.relationship | C | 0.76 | 0.47 | 0.62 | 0.70 | 0.28 | 0.10 | 0.02 | **cut** | borderline |
 | context.relationship_model | C | 0.65 | 0.33 | 0.79 | 0.48 | 0.18 | 0.70 | 0.00 | **cut** |  |
 | context.life_stage | C | 0.42 | 0.12 | -0.01 | 0.22 | -0.02 | 0.68 | 0.00 | **cut** |  |
@@ -236,16 +236,16 @@ Outcomes: {'pending': 25, 'pass': 11, 'cut': 18, 'interpretive': 2}
 | context.scope.direction | C | 0.70 | 0.42 | 0.68 | 0.60 | 0.16 | 0.23 | — | **cut** | borderline |
 | salience.memory_type | C | 0.83 | 0.56 | 0.57 | 0.49 | -0.01 | 0.21 | 0.00 | **cut** |  |
 | salience.tether.type | C | 0.61 | 0.44 | 0.71 | 0.47 | 0.34 | 0.07 | 0.00 | **cut** | borderline |
-| salience.tether.referent | T | — | — | — | — | — | 0.07 | — | **pending** |  judge pending |
-| salience.tether.stake | T | — | — | — | — | — | 0.26 | — | **pending** |  judge pending |
-| salience.retrieval_cues | L | — | — | — | — | — | 0.29 | — | **pending** |  judge pending |
-| salience.themes | L | — | — | — | — | — | 0.01 | — | **pending** |  judge pending |
+| salience.tether.referent | T | 0.71 | 0.56 | 0.74 | 0.48 | 0.40 | 0.07 | — | **cut** |  |
+| salience.tether.stake | T | 0.61 | 0.42 | 0.72 | 0.29 | 0.22 | 0.26 | — | **cut** |  |
+| salience.retrieval_cues | L | 0.46 | 0.31 | 0.99 | 0.22 | 0.09 | 0.29 | — | **cut** |  |
+| salience.themes | L | 0.45 | 0.21 | 0.53 | 0.26 | 0.03 | 0.01 | — | **cut** |  |
 | salience.recurrence | C | 0.51 | 0.46 | 0.36 | 0.48 | -0.07 | 0.71 | 0.01 | **cut** |  |
 | salience.persistence.text | C | 0.58 | 0.19 | 0.35 | 0.29 | 0.07 | 0.76 | 0.01 | **cut** |  |
 | salience.persistence.decay | C | 0.58 | 0.24 | -0.00 | 0.30 | 0.05 | 0.77 | — | **cut** |  |
 | salience.linkage_strength | N | 0.83 | 0.76 | — | 0.73 | — | 0.44 | — | **pending** | borderline |
 | salience.function | CL | 1.00 | 0.35 | 0.49 | 0.16 | 0.05 | 0.96 | 0.00 | **cut** | sparse |
-| salience.resilience | L | — | — | — | — | — | 0.53 | — | **pending** |  judge pending |
+| salience.resilience | L | 0.74 | 0.71 | 0.77 | 0.43 | 0.46 | 0.53 | — | **cut** | borderline |
 | salience.trajectory | C | 0.69 | 0.64 | 0.70 | 0.37 | 0.19 | 0.70 | 0.00 | **cut** | borderline |
 | motivation.action_tendency | C | 0.76 | 0.50 | 0.59 | 0.59 | 0.20 | 0.29 | 0.04 | **cut** |  |
 | motivation.need | C | 0.83 | 0.67 | 0.67 | 0.62 | 0.23 | 0.54 | 0.00 | **cut** | borderline |
@@ -253,4 +253,4 @@ Outcomes: {'pending': 25, 'pass': 11, 'cut': 18, 'interpretive': 2}
 | motivation.risk_posture | C | 0.81 | 0.44 | 0.80 | 0.72 | 0.13 | 0.57 | 0.00 | **interpretive** | borderline |
 | motivation.coping | C | 0.74 | 0.58 | 0.72 | 0.64 | 0.34 | 0.55 | 0.07 | **cut** | borderline |
 
-Outcomes: {'pending': 25, 'pass': 3, 'cut': 26, 'interpretive': 2}
+Outcomes: {'cut': 39, 'pass': 10, 'pending': 5, 'interpretive': 2}

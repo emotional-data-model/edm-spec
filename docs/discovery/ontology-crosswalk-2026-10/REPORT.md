@@ -124,6 +124,27 @@ Ranking = how often the construct appears in the memory/significance literature 
 | 11 | `social_visibility` / `directionality` | 1 / 3 | — | Duplicates; no test needed |
 | 12 | `narrative.self_position` (proposed replacement for `narrative_archetype`; stated-only free text) | 2 (McAdams imagoes; agency / communion) | Hermans dialogical-self I-positions [KNOWLEDGE] | Does a stated self-position change how raters interpret the rest of the record (arc, valence_shift, trajectory, need)? Present the same artifact with and without it. See `v0.9-proposal.md` §3 |
 
+### 7.1 Outcome of the pre-registered run (2026-10-17; `experiments/2026-10-17/RESULTS.md`)
+
+150 texts (synthetic / conversational / Pepys) × 4 extractors (Claude Sonnet 5.5, Claude Haiku 5.5, gpt-6.1-sol, Kimi K2.6) × 5 repeats; frozen thresholds in `experiment-plan.md` §4.1. Pooled outcome per ranked construct:
+
+| Rank | Construct → v0.9 field(s) | Outcome | Evidence |
+|---|---|---|---|
+| 1 | `wound` / `fuel` / `bridge` → `narrative.harm`, `drive`, `integration` | **harm cut, drive cut; integration pass (null-driven)** | Only Sonnet 5.5 repeats the three slots (0.80–0.88); cross-model equivalence 0.54 / 0.38 / 0.72 (0.40 on populated answers). The slot set does not replicate across models as a comparable record; it survives as an interpretive, model-specific description. |
+| 2 | `meta_emotional_state` → `emotion.meta` | **cut** | Repeatable in Sonnet and GPT (0.87 / 0.91), not in Haiku or Kimi (0.74 / 0.72); cross 0.65 (0.34 populated-only); null 63 %. Stated meta-emotion is extractable by the stronger models but not model-independent. |
+| 3 | `viscosity` + `temporal_decay` → `salience.persistence` | **cut (text and decay)** | Repeat 0.53–0.86, cross 0.26 / 0.25; the persistence component alone does not beat recency in task (a) pooled (1 of 4 extractors). |
+| 4 | `gravity_type` / tether → `salience.tether` | **type pass; referent cut; stake cut** | `tether.type` κ 0.71–0.81 / cross 0.53; `stake` is the least repeatable free-text unit (0.47–0.70, cross 0.33). |
+| 5 | `strength_score` → `salience.linkage_strength` | **interpretive** | ICC within model 0.88–0.96 for three extractors; gpt-6.1-sol leaves it null 90 % of the time (ICC 0.09 on the rest); cross ICC 0.50 (borderline). As a task (a) component alone it beats recency pooled (3 of 4). |
+| 6 | `tether_type = ritual / tradition` | frequency only | 3.0 % / 0.1 % of outputs; 59 of 91 co-occur with `recurrence = cyclical`. |
+| 7 | `temporal_rhythm = spiraling / dragging / suspended` → `emotion.temporal_profile` | **interpretive** | Field κ 0.67–0.80 / cross 0.37; the EDM-specific values appear in 4.4 % (dragging), 2.1 % (suspended), 0.03 % (spiraling) of outputs. |
+| 8 | `coping_style = ritualize` → `motivation.coping` | field **pass**; value rare | `coping` κ 0.69–0.82 / cross 0.54; `ritualize` 1.7 % of outputs, `process` 11.9 %. |
+| 9 | `emotional_density` | not tested | cut before the run (v0.9 proposal §1). |
+| 10 | `narrative_archetype` | replaced | see rank 12. |
+| 11 | `social_visibility` / `directionality` → `context.scope.direction` | **cut** | κ 0.60–0.84 / cross 0.37. `scope.text` passes (0.69–0.86 / 0.47). |
+| 12 | `narrative.self_position` | field **pass**; task (b) **fail** | Stated-only extraction is highly repeatable (0.90–0.96; cross 0.87, 0.81 populated-only; null 79 %). Restoring it to a blanked artifact shifts 12 % of rater readings of arc / trajectory / need against 9 % for a neutral control field (threshold ≥ 20 % and < 10 %): the field is a legitimate stated-only record, but the claim that it changes downstream interpretation is withdrawn. |
+
+Also decided by the run: `emotion.primary`, `emotion.valence.text`, `emotion.intensity.value`, `emotion.appraisal.attribution`, `emotion.bodily_sensation`, `context.event_category`, `context.relationship`, `salience.function`, `motivation.action_tendency / need / temporal_focus / coping`, `narrative.turning_point`, `narrative.summary`, `narrative.meaning` pass; `narrative.subject / trigger`, `narrative.arc`, `emotion.secondary`, `emotion.kind`, `emotion.arousal`, `emotion.appraisal.urgency / control`, `context.event / place / people / relationship_model / life_stage`, `salience.retrieval_cues / themes / recurrence / resilience / trajectory` are cut under the frozen rule; the `value` member of `valence`, `arousal`, `urgency` and `control` was never populated by any extractor. Task (a) passes pooled and in the synthetic and Pepys arms, fails in the conversational arm. Null precision: `bodily_sensation` is clean; `meaning` is inferred on 62–94 % of texts that state none. Full tables, per-arm results and deviations: `experiments/2026-10-17/RESULTS.md`.
+
 ## 8. Theoretical neutrality (summary of `theoretical-conflicts.md`)
 
 Eleven conflicts were identified (basic vs constructed emotion, discrete vs dimensional, appraisal vs affect-program, emotion/mood/feeling, event vs person level, literary vs empirical narrative, memory taxonomies, gradient vs list, coping vs regulation, LLM functional concepts, collective vs individual memory). The single mechanism that keeps EDM neutral in all of them is `text + codings` with an explicit `relation` per coding and the rule that codes never replace the subject's words. This is already EDM's "interpretation only" constraint, made machine-readable.
