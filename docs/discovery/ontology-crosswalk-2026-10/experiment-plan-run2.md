@@ -15,6 +15,8 @@ Run 2 is therefore a **prompt test, not a field test**: the same 150 texts, the 
 
 What run 2 decides (§7): per slot, whether the v0.8.3 text, the v0.9 definition, both or neither yield a repeatable, model-independent answer. What it does not decide: profile membership (R2 holds until the result is read; the decision table in §7 is the pre-registered recommendation, the founder rules).
 
+**Amended 2026-10-18 after the diagnostic on run-1 disagreements** (`experiments/2026-10-18-diagnostic/RESULTS.md`; 645 text × slot items where the four modal answers were not judge-equivalent, each classified by Opus 5.5 as (a) multiple valid referents 42 %, (b) extractor wrong 13 %, (c) granularity only 20 %, (d) null vs populated 24 %; judge calls only, USD 4.33). The diagnostic changes this plan in three places and nothing else: the Arm B field block (§4.3) now carries the selection, specificity and null rules the per-slot recommendations ask for; `retrieval_cues` in Arm B is capped at three ordered cues; and §7 records the pre-registered expectation per slot. Arm A, the corpus, the extractors, the thresholds and the voting rule are unchanged.
+
 ## 1. Questions
 
 | # | Question | Decides |
@@ -41,6 +43,8 @@ The 150 texts of run 1, byte-identical (`experiments/2026-10-17/corpus/corpus_ma
 | Judge | `claude-opus-5-5` | equivalence judge | 4.00 / 0.20 / 20.00 | never an extractor; `output_config.effort = "low"` as in run 1 |
 
 Voting rule (R9, stated openly): a slot **passes** in an arm when all three voting extractors meet the repeatability threshold and the cross-model threshold is met over the three; **interpretive** when all three meet repeatability and cross is missed; **cut** when ≥ 2 of the three miss repeatability (one voting extractor missing = borderline-cut, reported as such). The reported arms never change an outcome.
+
+Caveat recorded from the diagnostic (not a change to R9): on the six slots the per-extractor wrong-rate over the 645 run-1 disagreement items, counting class (b) and the wrong side of class (d), was Sonnet 5.5 0.09, Haiku 5.5 0.12, `gpt-6.1-sol` 0.15, `kimi-k2.6` 0.22, with `gpt-6.1-sol` wrong on 44 of 137 `retrieval_cues` items because it returns an empty list. Two of the three voters carry most of the null-side errors; a cross-model miss in run 2 is therefore read together with the per-extractor null rate per arm (§8) before it is attributed to the text.
 
 Sampling, checkpointing, failed repeats, transport errors, prompt caching: as run 1 (`experiment-plan.md` §3), with the Anthropic cache at the 5-minute TTL (D2). Repeats: **5 per text per extractor per arm**; fresh context per call; arm order per (text, extractor) alternated A/B/A/B… by text index parity so that neither arm is systematically first.
 
@@ -93,26 +97,28 @@ The Arm A block is generated at run time from the crosswalk record and compared 
 ### 4.3 Arm B field block — v0.9 names and shapes, question-framed definitions, referent rule
 
 ~~~text
-Referent rule (applies to subject, trigger, harm, drive, integration, retrieval_cues): each answer names ONE referent that the text itself mentions — a person, object, place, event, feeling or idea — using the text's own noun phrase where it has one. If several candidates qualify, choose the one the text returns to most (mentioned most often, or dwelt on at the end). Do not substitute a category the text does not use (write "the second sandwich", not "food"). Answer in 1–5 words or the text's own phrase; null when no passage supports an answer.
+Referent rule (applies to subject, trigger, harm, drive, integration, retrieval_cues): each answer names ONE referent that the text itself mentions — a person, object, place, event, feeling or idea — using the text's own noun phrase where it has one. If several candidates qualify, choose the one the text returns to most (mentioned most often, or dwelt on at the end). Use the most specific noun phrase the text itself uses that fits in 1–5 words; do not substitute a category the text does not use (write "the second sandwich", not "food") and do not add detail the text does not give. Null when no passage supports an answer; never null when one does.
 
 - `subject` -> string|null
     Who or what is this experience about? Name the central person, object or theme the text keeps returning to.
 - `trigger` -> string|null
-    What set the feeling off? Name the moment, event or perception the text presents as starting the emotional response.
+    What set the feeling off? Name the moment, event or perception the text presents as starting the response it dwells on most. Not the topic of the text and not its subject; if the text states a feeling without an initiating event, null.
 - `harm` -> string|null
-    What hurt? Name the loss, pain or vulnerability the text states. Null if the text states none.
+    What hurt? Name the loss, pain or vulnerability the text states, in the text's own word where it has one. A stated worry, fear, loss or vulnerability counts; one you would have to infer does not. Null if the text states none.
 - `drive` -> string|null
-    What gave the experience its energy? Name what the text says motivated, lifted or pushed the subject.
+    What gave the experience its energy? Name the one thing the text says motivated, lifted or pushed the subject — a stated motive, hope, person or activity. Null if the text names none.
 - `integration` -> string|null
-    What links then and now? Name the connection or shift between past and present understanding that the text states. Null if the text draws none.
+    What links then and now? Name the connection or shift between past and present understanding that the text states: a comparison of then and now, a lesson the text states, a change of mind the text names. Null if the text draws none.
 - `retrieval_cues` -> array of strings
-    What would bring this back? List the cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), 1–5 words each. Empty list if the text names none.
+    What would bring this back? List at most THREE cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), 1–5 words each, the first being the one the text returns to most. Empty list only if the text names nothing that recurs.
 - `summary` -> string|null
     A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation
     Constraints: 3–5 sentences
 ~~~
 
 `summary` is the control: its text is identical in both arms (only the key name differs), so an A / B difference on it measures prompt-wide drift, not a slot effect.
+
+Where each Arm B rule comes from (diagnostic, pooled shares of the slot's disagreement items): the selection clause from (a) multiple valid referents (`subject` 48 %, `trigger` 42 %, `harm` 37 %, `drive` 33 %); the specificity clause from (c) granularity (`subject` 28 %, `harm` 28 %, `drive` 23 %, `integration` 25 %); the `trigger` exclusion from its (b) share (28 %, the highest; extractors named the topic or a later episode); the null clauses from (d), where the text supported the populated answer in 129 of 157 items (extractors under-populate rather than invent); the `retrieval_cues` cap and ordering from its (a) share (53 %, with four or more valid cues in 65 of 73 such items) and the whole-list comparison of run 1.
 
 ### 4.4 User message (both arms, as run 1)
 
@@ -178,11 +184,24 @@ Per slot, with outcomes under Arm A and Arm B over the three voting extractors:
 
 Gate on the control: if `summary` differs between arms by ≥ 0.10 on cross-model agreement, the whole A / B comparison is reported as prompt-wide drift and the table above is advisory only (the per-arm outcomes still stand on their own).
 
+Pre-registered expectations per slot, from the diagnostic (`experiments/2026-10-18-diagnostic/RESULTS.md` §4). They are stated so that the result can be read against them; they do not alter the decision table:
+
+| Slot | Expectation under Arm B | Recommended shape if the expectation holds |
+|---|---|---|
+| `subject` | pass (disagreement was selection and specificity, extractor error 13 %) | single string, selection rule |
+| `trigger` | pass or interpretive (extractor error 28 %, the definition was misread) | single string, selection rule + exclusion |
+| `harm` | pass; null rate falls (under-population in 17 of 25 (d) items) | single string, null threshold |
+| `drive` | **interpretive** (non-error classes 83 %, mixed) | keep `x_comparability: "interpretive"`; no cross-system claim |
+| `integration` | pass; null rate falls | single string, null rule |
+| `retrieval_cues` | Arm B (capped list, first-element rule) passes where the run-1 list did not; Arm A `echo` single string is the comparison | short ordered list, cap 3 |
+
+A result that contradicts an expectation is reported as such; the §7 table decides.
+
 Reported arms (Haiku 5.5, `gpt-5.4-mini`): repeatability, agreement with the voting modal class, and cross-arm equivalence, all descriptive; a sentence per arm in RESULTS.md.
 
 ## 8. Null precision (synthetic arm; descriptive, as run 1 §4.4)
 
-The synthetic design matrix has no ground-truth flags for the six slots, so null precision is not computed for them. `harm` and `integration` are expected to be null on a share of texts (run 1: 36 % and 67 % pooled); their null rate per arm is reported, and a slot whose null rate differs between arms by ≥ 0.20 is flagged (the two definitions are asking different questions).
+The synthetic design matrix has no ground-truth flags for the six slots, so null precision is not computed for them (confirmed by the diagnostic: no authored value exists for any of the six). `harm` and `integration` are expected to be null on a share of texts (run 1: 36 % and 67 % pooled); their null rate per arm is reported, and a slot whose null rate differs between arms by ≥ 0.20 is flagged (the two definitions are asking different questions). Per extractor and arm, the null rate is also reported (the diagnostic found the null side wrong in 129 of 157 null-vs-populated items, concentrated in `kimi-k2.6` and, for `retrieval_cues`, `gpt-6.1-sol`), so that a cross-model miss driven by one extractor's empty answers is visible as such.
 
 ## 9. Cost projection (scaled from `experiments/2026-10-17/spend.json`, list prices in `models.json`)
 
@@ -224,3 +243,4 @@ Scaling assumptions for a 7-field prompt: cached / system tokens × 0.22 (≈ 1,
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-18 | Plan written as a prompt test under R2 / R3 / R8 / R9; Arm A from the audited crosswalk record; Arm B definitions and referent rule written; judge rule 5; LoCoMo evidence-session ground truth fixed from citation counts; cost scaled from `spend.json`; **not run, not frozen** | founder instruction 2026-10-18 step 5 |
+| 2026-10-18 (later) | Arm B referent rule gains a specificity clause; `trigger` gains the topic / subject exclusion and a null clause; `harm`, `drive`, `integration` gain null rules; `retrieval_cues` capped at three ordered cues; §3 caveat on per-extractor wrong-rates; §7 pre-registered expectations per slot; §8 per-extractor null rate. Arm A, corpus, extractors, thresholds, voting rule, cost unchanged; **still not run, not frozen** | diagnostic on run-1 disagreements, `experiments/2026-10-18-diagnostic/RESULTS.md` (founder instruction 2026-10-18, diagnostic) |

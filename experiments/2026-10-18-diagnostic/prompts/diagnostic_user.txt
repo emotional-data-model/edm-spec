@@ -1,0 +1,12 @@
+Source text (id: {text_id}):
+<text>
+{text}
+</text>
+
+Field: `{slot}` (v0.8.3 `core.{old}`), as defined in the extraction prompt the extractors were given:
+{definition}
+
+Modal answers (extractor label: answer — repeats in that modal class / valid repeats):
+{answers_block}
+
+Return the JSON object now.

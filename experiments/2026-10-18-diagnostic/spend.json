@@ -1,0 +1,14 @@
+{
+ "by_model": {
+  "claude-opus-5-5": {
+   "usd": 4.330443600000004,
+   "calls": 646,
+   "input_tokens": 206433,
+   "cached_input_tokens": 862008,
+   "cache_write_tokens": 95746,
+   "output_tokens": 142679
+  }
+ },
+ "total_usd": 4.330443600000004,
+ "calls": 646
+}

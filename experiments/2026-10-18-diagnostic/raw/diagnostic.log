@@ -1,0 +1,34 @@
+645 disagreement items (text x slot) of 900
+  narrative.subject          syn  28  conv  48  pepys  46  total 122
+  narrative.trigger          syn  25  conv  37  pepys  42  total 104
+  narrative.harm             syn  40  conv  21  pepys  36  total  97
+  narrative.drive            syn  36  conv  44  pepys  46  total 126
+  narrative.integration      syn  37  conv  14  pepys   8  total  59
+  salience.retrieval_cues    syn  49  conv  39  pepys  49  total 137
+done 12; to do 633; spent $0.16; mean $0.0075/call; projected total $4.90 (cap 8.0)
+  25 records, $0.25 this run, cumulative $0.41 (bad=0)
+  50 records, $0.43 this run, cumulative $0.58 (bad=0)
+  75 records, $0.64 this run, cumulative $0.79 (bad=0)
+  100 records, $0.86 this run, cumulative $1.02 (bad=0)
+  125 records, $1.07 this run, cumulative $1.22 (bad=0)
+  150 records, $1.26 this run, cumulative $1.41 (bad=0)
+  175 records, $1.40 this run, cumulative $1.56 (bad=0)
+  200 records, $1.53 this run, cumulative $1.69 (bad=0)
+  225 records, $1.70 this run, cumulative $1.85 (bad=0)
+  250 records, $1.84 this run, cumulative $2.00 (bad=0)
+  275 records, $1.99 this run, cumulative $2.15 (bad=0)
+  300 records, $2.15 this run, cumulative $2.30 (bad=0)
+  325 records, $2.27 this run, cumulative $2.42 (bad=0)
+  350 records, $2.39 this run, cumulative $2.55 (bad=0)
+  375 records, $2.52 this run, cumulative $2.68 (bad=0)
+  400 records, $2.68 this run, cumulative $2.83 (bad=0)
+  425 records, $2.87 this run, cumulative $3.02 (bad=0)
+  450 records, $3.03 this run, cumulative $3.19 (bad=0)
+  475 records, $3.17 this run, cumulative $3.32 (bad=0)
+  500 records, $3.30 this run, cumulative $3.46 (bad=0)
+  525 records, $3.46 this run, cumulative $3.62 (bad=0)
+  550 records, $3.63 this run, cumulative $3.78 (bad=0)
+  575 records, $3.76 this run, cumulative $3.92 (bad=0)
+  600 records, $3.92 this run, cumulative $4.08 (bad=0)
+  625 records, $4.09 this run, cumulative $4.25 (bad=0)
+diagnostic done: 633 records, $4.18 this run, bad=0, capped=0, cumulative $4.33
