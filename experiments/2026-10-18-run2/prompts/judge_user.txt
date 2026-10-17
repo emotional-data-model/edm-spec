@@ -1,0 +1,9 @@
+Source text (id: {text_id}):
+<text>
+{text}
+</text>
+
+Answers to judge, per field (index: answer):
+{answers_block}
+
+Return the JSON object now.
