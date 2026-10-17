@@ -1,0 +1,163 @@
+[
+  {
+    "id": "ainsworth_attachment",
+    "name": "Ainsworth Strange Situation attachment classifications (with Main & Solomon D; Hazan & Shaver adult styles)",
+    "family": "context",
+    "citation": {"authors": "Ainsworth, M. D. S., Blehar, M. C., Waters, E., & Wall, S.", "year": 1978, "title": "Patterns of Attachment: A Psychological Study of the Strange Situation", "venue": "Lawrence Erlbaum (Hillsdale, NJ)", "url": "https://labs.psychology.illinois.edu/~rcfraley/attachment.htm", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://labs.psychology.illinois.edu/~rcfraley/attachment.htm"],
+    "summary": "Ainsworth's Strange Situation procedure classifies infant-caregiver attachment from reunion behaviour into three primary patterns (A avoidant, B secure, C ambivalent/resistant), with Main & Solomon adding a fourth, D disorganized/disoriented. Hazan & Shaver (1987) translated the three Ainsworth patterns into adult romantic attachment styles. Unit of analysis: the dyadic attachment relationship (infant-caregiver; adult-partner), scored as a categorical pattern.",
+    "constructs": [
+      {"id": "strange_situation_primary", "label": "Strange Situation primary classifications (Ainsworth et al. 1978)", "type": "category_set", "values": ["A (insecure-avoidant)", "B (secure)", "C (insecure-ambivalent/resistant)"], "value_source": "FETCHED", "notes": "Fraley's lab overview names these 'secure', 'anxious-resistant', 'avoidant' (and once 'anxious-avoidant'). Letter codes A/B/C are the Ainsworth et al. 1978 labels (KNOWLEDGE)."},
+      {"id": "strange_situation_subgroups", "label": "Strange Situation subgroups (Ainsworth et al. 1978)", "type": "category_set", "values": ["A1", "A2", "B1", "B2", "B3", "B4", "C1", "C2"], "value_source": "KNOWLEDGE", "notes": "Eight subgroups in the 1978 coding system; B3 is the prototypically secure group. Not verified against the book text."},
+      {"id": "disorganized_disoriented", "label": "Disorganized/disoriented attachment (Main & Solomon 1986, 1990)", "type": "category_set", "values": ["D (disorganized/disoriented)"], "value_source": "KNOWLEDGE", "notes": "Main, M., & Solomon, J. (1986). Discovery of an insecure-disorganized/disoriented attachment pattern. In T. B. Brazelton & M. W. Yogman (Eds.), Affective Development in Infancy (pp. 95-124). Ablex. Main & Solomon (1990). Procedures for identifying infants as disorganized/disoriented during the Ainsworth Strange Situation. In Greenberg, Cicchetti & Cummings (Eds.), Attachment in the Preschool Years (pp. 121-160). University of Chicago Press. D is assigned alongside a best-fitting A/B/C secondary classification."},
+      {"id": "hazan_shaver_adult_styles", "label": "Adult romantic attachment styles (Hazan & Shaver 1987)", "type": "category_set", "values": ["secure", "avoidant", "anxious/ambivalent"], "value_source": "FETCHED", "notes": "Hazan, C., & Shaver, P. (1987). Romantic love conceptualized as an attachment process. Journal of Personality and Social Psychology, 52(3), 511-524. doi:10.1037/0022-3514.52.3.511. Fraley's page names the third category 'anxious-resistant'; the 1987 paper's own label is 'anxious/ambivalent' (KNOWLEDGE). Single-item forced-choice measure of three prototype paragraphs."}
+    ],
+    "verification_notes": "Primary 1978 book and Hazan & Shaver 1987 abstract were not fetchable (APA PsycNet did not load; Semantic Scholar rate-limited). Three Ainsworth categories, three Hazan & Shaver categories and Brennan et al. dimensions verified on R. C. Fraley's lab page (secondary but authoritative). A/B/C letter codes, subgroups A1-C2 and Main & Solomon D are from knowledge."
+  },
+  {
+    "id": "bartholomew_four_category_attachment",
+    "name": "Bartholomew four-category model of adult attachment (Relationship Questionnaire) + ECR dimensions",
+    "family": "context",
+    "citation": {"authors": "Bartholomew, K., & Horowitz, L. M.", "year": 1991, "title": "Attachment styles among young adults: A test of a four-category model", "venue": "Journal of Personality and Social Psychology, 61(2), 226-244", "url": "https://doi.org/10.1037/0022-3514.61.2.226", "doi": "10.1037/0022-3514.61.2.226", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.93,
+    "fetched_urls": ["https://labs.psychology.illinois.edu/~rcfraley/measures/ecrritems.htm", "https://labs.psychology.illinois.edu/~rcfraley/attachment.htm"],
+    "summary": "Bartholomew (1990) and Bartholomew & Horowitz (1991) cross two internal working models (positive/negative model of self x positive/negative model of other) to yield four adult attachment prototypes, measured by the four-paragraph Relationship Questionnaire (RQ). Brennan, Clark & Shaver (1998) and Fraley, Waller & Brennan (2000) reduce self-report adult attachment to two continuous dimensions (anxiety, avoidance) via the ECR / ECR-R. Unit of analysis: the individual's generalized orientation to close relationships.",
+    "constructs": [
+      {"id": "rq_prototypes", "label": "Four attachment prototypes (Relationship Questionnaire)", "type": "category_set", "values": ["secure", "preoccupied", "dismissing", "fearful"], "value_source": "KNOWLEDGE", "notes": "Secure = positive self / positive other; preoccupied = negative self / positive other; dismissing = positive self / negative other; fearful = negative self / negative other. Corroborated by web-search snippets of secondary literature (Psicothema 4146) but the 1991 abstract itself was not fetched. Bartholomew, K. (1990). Avoidance of intimacy: An attachment perspective. Journal of Social and Personal Relationships, 7(2), 147-178."},
+      {"id": "model_of_self", "label": "Model of self (positive vs negative)", "type": "dimension", "values": ["positive", "negative"], "value_source": "KNOWLEDGE", "notes": "Dependence / anxiety-about-abandonment axis; later mapped onto ECR attachment anxiety."},
+      {"id": "model_of_other", "label": "Model of other (positive vs negative)", "type": "dimension", "values": ["positive", "negative"], "value_source": "KNOWLEDGE", "notes": "Avoidance-of-intimacy axis; later mapped onto ECR attachment avoidance."},
+      {"id": "ecr_dimensions", "label": "ECR / ECR-R dimensions (Brennan, Clark & Shaver 1998; Fraley, Waller & Brennan 2000)", "type": "dimension", "values": ["attachment-related anxiety", "attachment-related avoidance"], "value_source": "FETCHED", "notes": "Labels as on Fraley's ECR-R page and attachment overview. Brennan, K. A., Clark, C. L., & Shaver, P. R. (1998). Self-report measurement of adult attachment: An integrative overview. In J. A. Simpson & W. S. Rholes (Eds.), Attachment Theory and Close Relationships (pp. 46-76). Guilford. Fraley, R. C., Waller, N. G., & Brennan, K. A. (2000). An item response theory analysis of self-report measures of adult romantic attachment. JPSP, 78(2), 350-365."}
+    ],
+    "verification_notes": "ECR dimension labels verified on Fraley's lab pages (FETCHED). Four RQ prototypes and self/other dimensions are from knowledge, corroborated by search-result snippets; APA PsycNet record for 1991 did not load and Bartholomew's SFU page returned 404."
+  },
+  {
+    "id": "fiske_relational_models",
+    "name": "Fiske relational models theory",
+    "family": "context",
+    "citation": {"authors": "Fiske, A. P.", "year": 1992, "title": "The four elementary forms of sociality: Framework for a unified theory of social relations", "venue": "Psychological Review, 99(4), 689-723", "url": "https://doi.org/10.1037/0033-295X.99.4.689", "doi": "10.1037/0033-295X.99.4.689", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.97,
+    "fetched_urls": ["https://iep.utm.edu/r-models/"],
+    "summary": "Relational models theory holds that people coordinate all social relationships using four elementary, innate-but-culturally-parameterized models (communal sharing, authority ranking, equality matching, market pricing); interactions outside these models are 'null' or asocial. Unit of analysis: the relationship/interaction between persons, which may combine models across domains. Also: Fiske, A. P. (1991). Structures of Social Life: The Four Elementary Forms of Human Relations. New York: Free Press.",
+    "constructs": [
+      {"id": "relational_models", "label": "Four elementary relational models", "type": "category_set", "values": ["Communal Sharing", "Authority Ranking", "Equality Matching", "Market Pricing"], "value_source": "FETCHED", "notes": "Verified on the Internet Encyclopedia of Philosophy entry, which cites Fiske 1991 and 1992 with the same labels. Each model corresponds to a measurement scale type (nominal, ordinal, interval, ratio) per Fiske 1992 (KNOWLEDGE)."},
+      {"id": "null_relation", "label": "Null / asocial relation", "type": "category_set", "values": ["Null Relation (asocial)"], "value_source": "FETCHED", "notes": "IEP: brute coercive manipulation is not Authority Ranking but the 'Null Relation', in which people treat each other in non-social ways. Fiske 1991/1992 also describe 'asocial' interaction (treating others as objects or nonentities)."}
+    ],
+    "verification_notes": "Four model labels, the null relation, and both primary citations (1991 Free Press; 1992 Psych Review 99, 689-723) verified on IEP. Fiske's own UCLA relmodov page and the APA record were not reachable."
+  },
+  {
+    "id": "bronfenbrenner_ecological_systems",
+    "name": "Bronfenbrenner ecological systems theory / bioecological PPCT model",
+    "family": "context",
+    "citation": {"authors": "Bronfenbrenner, U.", "year": 1979, "title": "The Ecology of Human Development: Experiments by Nature and Design", "venue": "Harvard University Press (Cambridge, MA)", "url": "https://www.hup.harvard.edu/books/9780674224575", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "KNOWLEDGE",
+    "confidence": 0.92,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1002/9780470147658.chpsy0114?fields=title,abstract,year,authors,venue"],
+    "summary": "Bronfenbrenner conceptualizes the developing person as embedded in nested environmental systems from immediate settings to cultural macrostructures, later adding time (chronosystem). The mature bioecological model (Bronfenbrenner 1994; Bronfenbrenner & Morris 2006) foregrounds proximal processes within a Process-Person-Context-Time (PPCT) design. Unit of analysis: the person-in-context developmental system.",
+    "constructs": [
+      {"id": "ecological_systems", "label": "Nested ecological systems", "type": "category_set", "values": ["microsystem", "mesosystem", "exosystem", "macrosystem", "chronosystem"], "value_source": "KNOWLEDGE", "notes": "The 1979 book defines micro-, meso-, exo- and macrosystem; the chronosystem is introduced in Bronfenbrenner (1986, Developmental Psychology 22(6), 723-742, 'Ecology of the family as a context for human development') and carried into the 1994 and 2006 statements."},
+      {"id": "ppct", "label": "Process-Person-Context-Time (PPCT) model", "type": "component", "values": ["Process", "Person", "Context", "Time"], "value_source": "KNOWLEDGE", "notes": "Bronfenbrenner, U. (1994). Ecological models of human development. In International Encyclopedia of Education (2nd ed., Vol. 3, pp. 1643-1647). Elsevier. Bronfenbrenner, U., & Morris, P. A. (2006). The bioecological model of human development. In R. M. Lerner & W. Damon (Eds.), Handbook of Child Psychology: Vol. 1. Theoretical Models of Human Development (6th ed., pp. 793-828). Wiley. doi:10.1002/9780470147658.chpsy0114. Proximal processes are the primary engines of development; Person characteristics are subdivided into demand, resource and force characteristics (2006)."}
+    ],
+    "verification_notes": "Harvard UP page returned empty; Wiley/Semantic Scholar record confirmed only title and authors of the 2006 chapter (abstract elided). All construct labels are from knowledge; they are highly standard."
+  },
+  {
+    "id": "gross_process_model_emotion_regulation",
+    "name": "Gross process model (and extended process model) of emotion regulation",
+    "family": "motivation",
+    "citation": {"authors": "Gross, J. J.", "year": 1998, "title": "The emerging field of emotion regulation: An integrative review", "venue": "Review of General Psychology, 2(3), 271-299", "url": "https://doi.org/10.1037/1089-2680.2.3.271", "doi": "10.1037/1089-2680.2.3.271", "accessed": "2026-10-17"},
+    "source_status": "KNOWLEDGE",
+    "confidence": 0.95,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/1089-2680.2.3.271?fields=title,abstract,year,authors,venue,externalIds", "https://spl.stanford.edu/resources"],
+    "summary": "The process model locates emotion-regulation strategies at points along the modal emotion-generative sequence (situation -> attention -> appraisal -> response), yielding five families; the first four are antecedent-focused, the last response-focused. The extended process model (Gross 2015) reframes regulation as valuation-system stages (identification, selection, implementation) with monitoring. Unit of analysis: a regulatory episode acting on an emotion-generative process within a person.",
+    "constructs": [
+      {"id": "regulation_families", "label": "Five families of emotion regulation strategies", "type": "stage_sequence", "values": ["situation selection", "situation modification", "attentional deployment", "cognitive change", "response modulation"], "value_source": "KNOWLEDGE", "notes": "Ordered by where they act in the emotion-generative process (Gross 1998; Gross 2015)."},
+      {"id": "antecedent_vs_response_focused", "label": "Antecedent-focused vs response-focused regulation", "type": "dimension", "values": ["antecedent-focused", "response-focused"], "value_source": "KNOWLEDGE", "notes": "Antecedent-focused = situation selection, situation modification, attentional deployment, cognitive change; response-focused = response modulation."},
+      {"id": "erq_strategies", "label": "Emotion Regulation Questionnaire strategies (Gross & John 2003)", "type": "scale", "values": ["cognitive reappraisal", "expressive suppression"], "value_source": "KNOWLEDGE", "notes": "Gross, J. J., & John, O. P. (2003). Individual differences in two emotion regulation processes: Implications for affect, relationships, and well-being. JPSP, 85(2), 348-362. doi:10.1037/0022-3514.85.2.348. The Stanford SPL resources page (fetched) lists the ERQ and its translations but not the subscale names."},
+      {"id": "extended_model_stages", "label": "Extended process model stages (Gross 2015)", "type": "stage_sequence", "values": ["identification", "selection", "implementation"], "value_source": "KNOWLEDGE", "notes": "Gross, J. J. (2015). Emotion regulation: Current status and future prospects. Psychological Inquiry, 26(1), 1-26. doi:10.1080/1047840X.2014.940781. Each stage is a valuation system (perception-valuation-action cycle); a monitoring component governs maintaining, switching or stopping regulation."}
+    ],
+    "verification_notes": "Semantic Scholar confirmed title/author/year of Gross 1998 (abstract elided); Taylor & Francis page for Gross 2015 returned 403. Strategy family labels, ERQ subscales and extended-model stages are from knowledge and are the canonical labels used in the primary papers."
+  },
+  {
+    "id": "elliot_approach_avoidance_motivation",
+    "name": "Elliot hierarchical model of approach-avoidance motivation and 2x2 achievement goal framework",
+    "family": "motivation",
+    "citation": {"authors": "Elliot, A. J., & McGregor, H. A.", "year": 2001, "title": "A 2 x 2 achievement goal framework", "venue": "Journal of Personality and Social Psychology, 80(3), 501-519", "url": "https://doi.org/10.1037/0022-3514.80.3.501", "doi": "10.1037/0022-3514.80.3.501", "accessed": "2026-10-17"},
+    "source_status": "KNOWLEDGE",
+    "confidence": 0.93,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/0022-3514.80.3.501?fields=title,abstract,year,authors,venue"],
+    "summary": "Elliot treats the approach-avoidance distinction (moving toward positive vs away from negative stimuli) as fundamental and hierarchical: approach/avoidance temperaments energize behaviour, and mid-level goals (notably achievement goals) channel it. Achievement goals are crossed by definition of competence (mastery vs performance) and valence (approach vs avoidance), giving the 2x2 framework. Unit of analysis: the motivated individual's goal/temperament profile in competence-relevant settings.",
+    "constructs": [
+      {"id": "approach_avoidance_valence", "label": "Approach vs avoidance motivation (Elliot 1999; Elliot 2006)", "type": "dimension", "values": ["approach", "avoidance"], "value_source": "KNOWLEDGE", "notes": "Elliot, A. J. (1999). Approach and avoidance motivation and achievement goals. Educational Psychologist, 34(3), 169-189. doi:10.1207/s15326985ep3403_3. Elliot, A. J. (2006). The hierarchical model of approach-avoidance motivation. Motivation and Emotion, 30(2), 111-116. doi:10.1007/s11031-006-9028-7."},
+      {"id": "trichotomous_goals", "label": "Trichotomous achievement goal framework (Elliot 1999; Elliot & Church 1997)", "type": "category_set", "values": ["mastery", "performance-approach", "performance-avoidance"], "value_source": "KNOWLEDGE", "notes": "Precursor to the 2x2 model."},
+      {"id": "two_by_two_goals", "label": "2x2 achievement goal framework (Elliot & McGregor 2001)", "type": "category_set", "values": ["mastery-approach", "mastery-avoidance", "performance-approach", "performance-avoidance"], "value_source": "KNOWLEDGE", "notes": "Definition dimension (mastery: absolute/intrapersonal competence; performance: normative competence) x valence dimension (approach: positive possibility; avoidance: negative possibility). Later extended to a 3x2 model (Elliot, Murayama & Pekrun 2011) with task/self/other definitions."},
+      {"id": "approach_avoidance_temperament", "label": "Approach and avoidance temperaments (Elliot & Thrash 2002)", "type": "dimension", "values": ["approach temperament", "avoidance temperament"], "value_source": "KNOWLEDGE", "notes": "Elliot, A. J., & Thrash, T. M. (2002). Approach-avoidance motivation in personality: Approach and avoidance temperaments and goals. JPSP, 82(5), 804-818. doi:10.1037/0022-3514.82.5.804. Approach temperament integrates extraversion, positive emotionality and BAS; avoidance temperament integrates neuroticism, negative emotionality and BIS."}
+    ],
+    "verification_notes": "Semantic Scholar confirmed title, authors, year and venue of Elliot & McGregor 2001 (abstract elided); Springer page for Elliot 2006 redirected to an auth gate; APA records did not load. All construct labels are from knowledge; they match the primary papers' terminology."
+  },
+  {
+    "id": "self_determination_theory",
+    "name": "Self-determination theory (basic psychological needs; motivation continuum)",
+    "family": "motivation",
+    "citation": {"authors": "Deci, E. L., & Ryan, R. M.", "year": 2000, "title": "The \"what\" and \"why\" of goal pursuits: Human needs and the self-determination of behavior", "venue": "Psychological Inquiry, 11(4), 227-268", "url": "https://selfdeterminationtheory.org/theory/", "doi": "10.1207/S15327965PLI1104_01", "accessed": "2026-10-17"},
+    "source_status": "FETCHED",
+    "confidence": 0.97,
+    "fetched_urls": ["https://selfdeterminationtheory.org/theory/", "https://selfdeterminationtheory.org/the-theory/"],
+    "summary": "SDT is a macro-theory of human motivation holding that satisfaction of three basic psychological needs (autonomy, competence, relatedness) supports intrinsic motivation, internalization of extrinsic motivation, and wellness; motivation is arrayed on a continuum of relative autonomy from amotivation through externally to integrated regulation to intrinsic motivation. Unit of analysis: the person's motivational regulation for a given behaviour/domain, and need satisfaction in a social context. Also: Deci & Ryan (1985). Intrinsic Motivation and Self-Determination in Human Behavior. Plenum. Ryan & Deci (2017). Self-Determination Theory: Basic Psychological Needs in Motivation, Development, and Wellness. Guilford.",
+    "constructs": [
+      {"id": "basic_psychological_needs", "label": "Basic psychological needs", "type": "need", "values": ["autonomy", "competence", "relatedness"], "value_source": "FETCHED", "notes": "Verified on selfdeterminationtheory.org/theory/."},
+      {"id": "extrinsic_motivation_subtypes", "label": "Subtypes of extrinsic motivation along the internalization continuum (Organismic Integration Theory)", "type": "stage_sequence", "values": ["external regulation", "introjection", "identification", "integration"], "value_source": "FETCHED", "notes": "Exact labels as used on selfdeterminationtheory.org (OIT section). The commonly cited labels 'introjected regulation', 'identified regulation', 'integrated regulation' (Ryan & Deci 2000, American Psychologist 55(1), 68-78, Figure 1) are KNOWLEDGE."},
+      {"id": "motivation_continuum", "label": "Full self-determination (relative autonomy) continuum", "type": "stage_sequence", "values": ["amotivation", "external regulation", "introjected regulation", "identified regulation", "integrated regulation", "intrinsic motivation"], "value_source": "KNOWLEDGE", "notes": "Per Ryan & Deci 2000 / Deci & Ryan 2000 taxonomy of human motivation. The SDT website (fetched) names 'intrinsic motivation' (CET) and an 'impersonal or amotivated orientation' (COT) but does not lay out amotivation and intrinsic motivation on the OIT continuum as a single list."},
+      {"id": "mini_theories", "label": "Six mini-theories of SDT", "type": "component", "values": ["Cognitive Evaluation Theory (CET)", "Organismic Integration Theory (OIT)", "Causality Orientations Theory (COT)", "Basic Psychological Needs Theory (BPNT)", "Goal Contents Theory (GCT)", "Relationships Motivation Theory (RMT)"], "value_source": "FETCHED", "notes": "Verified on selfdeterminationtheory.org/theory/."}
+    ],
+    "verification_notes": "Needs, extrinsic-regulation subtypes and six mini-theories verified on the official SDT site, which also cites Deci & Ryan 1985 and 2000 (Psychological Inquiry 11, 227-268) and Ryan & Deci 2000 (American Psychologist 55, 68-78). The site does not cite Ryan & Deci 2017. Six-point continuum labels with '-ed regulation' wording are from knowledge."
+  },
+  {
+    "id": "mayer_salovey_ability_ei",
+    "name": "Mayer-Salovey four-branch ability model of emotional intelligence (MSCEIT)",
+    "family": "motivation",
+    "citation": {"authors": "Mayer, J. D., & Salovey, P.", "year": 1997, "title": "What is emotional intelligence?", "venue": "In P. Salovey & D. J. Sluyter (Eds.), Emotional Development and Emotional Intelligence: Educational Implications (pp. 3-31). Basic Books", "url": "https://storefront.mhs.com/collections/msceit", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "KNOWLEDGE",
+    "confidence": 0.95,
+    "fetched_urls": ["https://storefront.mhs.com/collections/msceit"],
+    "summary": "The ability model defines emotional intelligence as a set of cognitive abilities for processing emotional information, organized into four hierarchically arranged branches from basic perception to reflective regulation, and measured with performance (right/wrong) tasks in the MSCEIT. Unit of analysis: the individual's emotion-processing abilities. Also: Salovey, P., & Mayer, J. D. (1990). Emotional intelligence. Imagination, Cognition and Personality, 9(3), 185-211. doi:10.2190/DUGG-P24E-52WK-6CDG.",
+    "constructs": [
+      {"id": "four_branches", "label": "Four branches of emotional intelligence (Mayer & Salovey 1997)", "type": "component", "values": ["Perceiving emotions (perception, appraisal, and expression of emotion)", "Using emotions to facilitate thought (emotional facilitation of thinking)", "Understanding emotions (understanding and analyzing emotions; employing emotional knowledge)", "Managing emotions (reflective regulation of emotions to promote emotional and intellectual growth)"], "value_source": "KNOWLEDGE", "notes": "Short labels: perceiving, using/facilitating, understanding, managing. Parenthetical text gives the 1997 chapter's longer branch headings from memory."},
+      {"id": "salovey_mayer_1990_components", "label": "Original 1990 model components", "type": "component", "values": ["appraisal and expression of emotion", "regulation of emotion", "utilization of emotion"], "value_source": "KNOWLEDGE", "notes": "Three-part conceptualization in Salovey & Mayer 1990, superseded by the four-branch model."},
+      {"id": "msceit", "label": "Mayer-Salovey-Caruso Emotional Intelligence Test (MSCEIT)", "type": "scale", "values": ["Perceiving Emotions", "Facilitating Thought", "Understanding Emotions", "Managing Emotions"], "value_source": "KNOWLEDGE", "notes": "Mayer, J. D., Salovey, P., & Caruso, D. R. (2002). MSCEIT user's manual. Multi-Health Systems (Toronto). MHS storefront (fetched) confirms the current product 'Mayer-Salovey-Caruso Emotional Intelligence Test, Second Edition (MSCEIT 2)' but does not list branch names. MSCEIT branch scores roll up into Experiential and Strategic area scores and a total EI score."}
+    ],
+    "verification_notes": "Mayer's UNH page redirected to a generic USNH site; MHS storefront confirmed only the MSCEIT 2 product name. Branch labels and citations are from knowledge and are the standard formulations."
+  },
+  {
+    "id": "goleman_boyatzis_ei_competencies",
+    "name": "Goleman/Boyatzis emotional and social intelligence competency model (ESCI)",
+    "family": "motivation",
+    "citation": {"authors": "Goleman, D., & Boyatzis, R. E.", "year": 2017, "title": "Emotional intelligence has 12 elements. Which do you need to work on?", "venue": "Harvard Business Review (online), February 6, 2017", "url": "https://keystepmedia.com/what-is-emotional-intelligence", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED",
+    "confidence": 0.95,
+    "fetched_urls": ["https://keystepmedia.com/what-is-emotional-intelligence", "https://hbr.org/2017/02/emotional-intelligence-has-12-elements-which-do-you-need-to-work-on"],
+    "summary": "Goleman's mixed/competency model treats emotional intelligence as a set of learned, behaviourally observable competencies that distinguish outstanding performers, organized into four domains; the current Goleman-Boyatzis model (operationalized in the Korn Ferry Emotional and Social Competency Inventory, ESCI) has 12 competencies. Unit of analysis: the individual's workplace/leadership competencies as rated by self and others. Also: Goleman, D. (1995). Emotional Intelligence. Bantam. Goleman, D. (1998). Working with Emotional Intelligence. Bantam. Boyatzis, R. E., & Goleman, D. (2007). Emotional and Social Competency Inventory. Hay Group (now Korn Ferry).",
+    "constructs": [
+      {"id": "four_domains", "label": "Four domains of EI", "type": "category_set", "values": ["Self Awareness", "Self Management", "Social Awareness", "Relationship Management"], "value_source": "FETCHED", "notes": "Verified on Key Step Media (Goleman's publishing company). Often written 'Self-Awareness' and 'Self-Management' in HBR/ESCI materials."},
+      {"id": "twelve_competencies", "label": "Twelve EI competencies", "type": "competency", "values": ["Emotional Self-Awareness", "Emotional Self-Control", "Adaptability", "Achievement Orientation", "Positive Outlook", "Empathy", "Organizational Awareness", "Influence", "Coach and Mentor", "Conflict Management", "Teamwork", "Inspirational Leadership"], "value_source": "FETCHED", "notes": "Verified on Key Step Media in this order. Domain mapping (KNOWLEDGE; the fetched page lists competencies without assigning domains): Self Awareness = Emotional Self-Awareness; Self Management = Emotional Self-Control, Adaptability, Achievement Orientation, Positive Outlook; Social Awareness = Empathy, Organizational Awareness; Relationship Management = Influence, Coach and Mentor, Conflict Management, Teamwork, Inspirational Leadership. Earlier versions of the model (1998 book: 5 dimensions/25 competencies; 2002 ECI: 4 clusters/18-20 competencies) differ."}
+    ],
+    "verification_notes": "Four domains and 12 competencies verified on keystepmedia.com (page dated 2021-02-16, updated 2022-05-04), crediting Goleman and Boyatzis and the Korn Ferry ESCI. HBR fetch confirmed authors/date/title only (body truncated). Competency-to-domain grouping is from knowledge."
+  },
+  {
+    "id": "bar_on_eqi_model",
+    "name": "Bar-On model of emotional-social intelligence (EQ-i)",
+    "family": "motivation",
+    "citation": {"authors": "Bar-On, R.", "year": 2006, "title": "The Bar-On model of emotional-social intelligence (ESI)", "venue": "Psicothema, 18(Supl. 1), 13-25", "url": "https://www.psicothema.com/pii?pii=3271", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED",
+    "confidence": 1.0,
+    "fetched_urls": ["https://www.psicothema.com/pii?pii=3271", "https://www.psicothema.com/pdf/3271.pdf"],
+    "summary": "Bar-On defines emotional-social intelligence as a cross-section of interrelated emotional and social competencies, skills and facilitators that determine how effectively we understand and express ourselves, understand and relate to others, and cope with daily demands; it is operationalized by the 133-item self-report EQ-i (Bar-On 1997), yielding a total EQ score, 5 composite scale scores and 15 subscale scores. Unit of analysis: the individual's self-reported emotionally and socially intelligent behaviour. Also: Bar-On, R. (1997). The Emotional Quotient Inventory (EQ-i): Technical manual. Multi-Health Systems (Toronto).",
+    "constructs": [
+      {"id": "eqi_composite_scales", "label": "EQ-i composite scales", "type": "scale", "values": ["Intrapersonal", "Interpersonal", "Stress Management", "Adaptability", "General Mood"], "value_source": "FETCHED", "notes": "Verbatim from Bar-On 2006, p. 14 (primary PDF text extracted locally). A total EQ score sits above these."},
+      {"id": "eqi_subscales", "label": "EQ-i 15 subscales, grouped by composite", "type": "scale", "values": ["Intrapersonal: Self-Regard", "Intrapersonal: Emotional Self-Awareness", "Intrapersonal: Assertiveness", "Intrapersonal: Independence", "Intrapersonal: Self-Actualization", "Interpersonal: Empathy", "Interpersonal: Social Responsibility", "Interpersonal: Interpersonal Relationship", "Stress Management: Stress Tolerance", "Stress Management: Impulse Control", "Adaptability: Reality-Testing", "Adaptability: Flexibility", "Adaptability: Problem-Solving", "General Mood: Optimism", "General Mood: Happiness"], "value_source": "FETCHED", "notes": "Verbatim naming and grouping from Bar-On 2006, p. 14. The paper also mentions two validity indices (Positive Impression, Negative Impression) used as a correction factor."}
+    ],
+    "verification_notes": "Primary source fully verified: Psicothema HTML page gave the citation and scale list; the open-access PDF text (extracted locally with pypdf) confirmed the exact composite and subscale names and grouping on p. 14."
+  }
+]

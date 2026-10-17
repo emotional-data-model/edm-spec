@@ -1,0 +1,193 @@
+[
+  {
+    "id": "panksepp_primary_process_emotional_systems",
+    "name": "Panksepp primary-process emotional systems (and ANPS)",
+    "family": "salience",
+    "citation": {"authors": "Panksepp, J.", "year": 1998, "title": "Affective Neuroscience: The Foundations of Human and Animal Emotions", "venue": "Oxford University Press, New York (ISBN 0195096738)", "url": "https://global.oup.com/academic/product/affective-neuroscience-9780195178050", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.85,
+    "fetched_urls": ["https://en.wikipedia.org/wiki/Jaak_Panksepp", "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/15294145.2003.10773410"],
+    "summary": "Panksepp proposes that mammalian brains share a small set of evolutionarily ancient, subcortically organized primary-process emotional systems, each identifiable by localized electrical stimulation and neurochemistry. Unit of analysis is the neural emotional system (and, for the ANPS, the self-reported trait expression of each system in an individual). Panksepp & Biven (2012, The Archaeology of Mind: Neuroevolutionary Origins of Human Emotions, W. W. Norton, ISBN 978-0-393-70731-1) rename PANIC as PANIC/GRIEF.",
+    "constructs": [
+      {"id": "primary_process_emotional_systems", "label": "Primary-process emotional systems", "type": "category_set", "values": ["SEEKING", "RAGE", "FEAR", "LUST", "CARE", "PANIC/GRIEF", "PLAY"], "value_source": "FETCHED", "notes": "Capitalized convention is Panksepp's own. Seven systems confirmed via Wikipedia (secondary) citing the 1998 and 2012 books; the 1998 text labels the separation-distress system PANIC, the 2012 text PANIC/GRIEF."},
+      {"id": "anps_scales", "label": "Affective Neuroscience Personality Scales (ANPS) scales", "type": "dimension", "values": ["PLAY", "SEEK", "CARE", "FEAR", "ANGER", "SADNESS"], "value_source": "KNOWLEDGE", "notes": "Davis, Panksepp & Normansell (2003), 'The Affective Neuroscience Personality Scales: Normative Data and Implications', Neuropsychoanalysis 5(1), 57-69, DOI 10.1080/15294145.2003.10773410 (title/authors/year/DOI verified via Semantic Scholar; abstract and scale list not fetched). Six primary scales map to SEEKING, FEAR, CARE, RAGE (as ANGER), PLAY, PANIC (as SADNESS); LUST is deliberately omitted. A seventh non-affective 'Spirituality' scale is included; later versions (ANPS 2.4) add 'Dominance'. Scale spelling (SEEK vs SEEKING) from knowledge; confidence 0.85."},
+      {"id": "process_levels", "label": "Nested hierarchy of affective processing", "type": "component", "values": ["primary-process (subcortical emotional systems)", "secondary-process (learning and memory)", "tertiary-process (cortical cognition and awareness)"], "value_source": "KNOWLEDGE", "notes": "Panksepp & Biven 2012 / Panksepp 2011; not fetched."}
+    ],
+    "verification_notes": "Seven-system list and book publication details verified from Wikipedia (secondary). Tandfonline publisher page for ANPS returned 403; Semantic Scholar confirmed the bibliographic record but no abstract. ANPS scale names from knowledge."
+  },
+  {
+    "id": "damasio_somatic_marker_and_feeling",
+    "name": "Damasio somatic marker hypothesis / emotions, feelings and the self",
+    "family": "salience",
+    "citation": {"authors": "Damasio, A. R.", "year": 1996, "title": "The somatic marker hypothesis and the possible functions of the prefrontal cortex", "venue": "Philosophical Transactions of the Royal Society of London, Series B, 351(1346), 1413-1420; PMID 8941953", "url": "https://royalsocietypublishing.org/doi/10.1098/rstb.1996.0125", "doi": "10.1098/rstb.1996.0125", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.85,
+    "fetched_urls": ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1098/rstb.1996.0125&resultType=core&format=json"],
+    "summary": "Bodily-state ('somatic') signals associated with prior emotional outcomes mark response options and bias reasoning and decision making, consciously or covertly, with the ventromedial prefrontal cortex as key substrate (Descartes' Error, 1994, Putnam; 1996 paper). The Feeling of What Happens (1999, Harcourt) distinguishes emotion (public, bodily) from feeling (private, mental) and feeling-a-feeling (conscious), and layers proto-self, core self/core consciousness and autobiographical self/extended consciousness. Unit of analysis is the organism's body-state representation in response to a stimulus.",
+    "constructs": [
+      {"id": "somatic_marker", "label": "Somatic marker", "type": "process", "values": null, "value_source": "FETCHED", "notes": "Abstract (Europe PMC): 'marker' signals influence the processes of response to stimuli at multiple levels of operation, some conscious and some not; the hypothesis also posits an 'as-if body loop' (body-state simulation without actual bodily change; from knowledge)."},
+      {"id": "emotion_vs_feeling", "label": "Emotion / feeling / feeling of a feeling", "type": "component", "values": ["emotion (bodily, outwardly directed)", "feeling (private mental image of the body state)", "feeling of a feeling / knowing that one feels (conscious)"], "value_source": "KNOWLEDGE", "notes": "Damasio 1999, ch. 2; not fetched."},
+      {"id": "emotion_classes", "label": "Classes of emotion", "type": "category_set", "values": ["background emotions", "primary (basic) emotions", "secondary (social) emotions"], "value_source": "KNOWLEDGE", "notes": "Damasio 1999 (and Looking for Spinoza 2003). Primary examples given by Damasio: fear, anger, disgust, surprise, sadness, happiness. Secondary/social examples: embarrassment, jealousy, guilt, pride. Background examples: well-being/malaise, calm/tension. Example lists are illustrative in Damasio, not a closed taxonomy."},
+      {"id": "self_and_consciousness_levels", "label": "Levels of self and consciousness", "type": "component", "values": ["proto-self (non-conscious)", "core self / core consciousness", "autobiographical self / extended consciousness"], "value_source": "KNOWLEDGE", "notes": "The Feeling of What Happens (1999). The autobiographical self depends on autobiographical memory and supports the narrative, temporally extended sense of self."}
+    ],
+    "verification_notes": "1996 paper citation and abstract gist verified via Europe PMC. Royal Society page returned 403. Books (1994, 1999) not fetched; their constructs are from knowledge."
+  },
+  {
+    "id": "conway_self_memory_system",
+    "name": "Conway Self-Memory System (SMS)",
+    "family": "salience",
+    "citation": {"authors": "Conway, M. A., & Pleydell-Pearce, C. W.", "year": 2000, "title": "The construction of autobiographical memories in the self-memory system", "venue": "Psychological Review, 107(2), 261-288; PMID 10789197", "url": "https://psycnet.apa.org/doi/10.1037/0033-295X.107.2.261", "doi": "10.1037/0033-295X.107.2.261", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.85,
+    "fetched_urls": ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1037/0033-295X.107.2.261&resultType=core&format=json", "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1016/j.jml.2005.08.005"],
+    "summary": "Autobiographical memories are transitory mental constructions produced within a self-memory system that couples an autobiographical knowledge base with the current goals of the working self; control processes shape retrieval cues and so which memories are constructed. Conway (2005, 'Memory and the self', Journal of Memory and Language 53(4), 594-628, DOI 10.1016/j.jml.2005.08.005) adds the conceptual self, episodic memories, and the correspondence/coherence tension. Unit of analysis is the constructed autobiographical memory and the goal structure that produces it.",
+    "constructs": [
+      {"id": "knowledge_hierarchy", "label": "Autobiographical knowledge base hierarchy (2000)", "type": "component", "values": ["lifetime periods", "general events", "event-specific knowledge (ESK)"], "value_source": "KNOWLEDGE", "notes": "Three-level hierarchy; fetched abstract confirms the knowledge base / working self architecture but does not enumerate the levels. In Conway 2005 ESK is reframed as 'episodic memories' and the top of the hierarchy includes 'the life story' and 'the conceptual self'."},
+      {"id": "working_self", "label": "Working self", "type": "component", "values": null, "value_source": "FETCHED", "notes": "Abstract: a complex set of active goals and associated self-images that modulates access to the knowledge base (goal hierarchy)."},
+      {"id": "retrieval_modes", "label": "Retrieval modes", "type": "process", "values": ["generative retrieval", "direct retrieval"], "value_source": "KNOWLEDGE", "notes": "Conway & Pleydell-Pearce 2000."},
+      {"id": "correspondence_vs_coherence", "label": "Correspondence vs coherence", "type": "dimension", "values": ["correspondence (adaptive accuracy to experience)", "coherence (consistency with current self, goals, beliefs)"], "value_source": "KNOWLEDGE", "notes": "Conway 2005; Semantic Scholar verified title/year/DOI, abstract not available."},
+      {"id": "self_defining_memory_criteria", "label": "Criteria for self-defining memories (as adopted by Conway)", "type": "criteria", "values": ["vividness", "affective intensity", "repeated rehearsal / frequent recall", "linkage to other similar memories", "focus on an enduring concern or unresolved conflict"], "value_source": "KNOWLEDGE", "notes": "These criteria originate with Singer & Salovey (1993) and are adopted/cited by Conway (2000, 2005) when discussing goal-relevant memories; they are not Conway's own invention."}
+    ],
+    "verification_notes": "2000 abstract and citation verified via Europe PMC; APA PsycNet and ScienceDirect pages did not render / returned 403. Hierarchy level labels, retrieval modes, correspondence/coherence and self-defining criteria are from knowledge."
+  },
+  {
+    "id": "singer_blagov_self_defining_memories",
+    "name": "Singer & Blagov self-defining memory classification",
+    "family": "salience",
+    "citation": {"authors": "Blagov, P. S., & Singer, J. A.", "year": 2004, "title": "Four dimensions of self-defining memories (specificity, meaning, content, and affect) and their relationships to self-restraint, distress, and repressive defensiveness", "venue": "Journal of Personality, 72(3), 481-511; PMID 15102036", "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.0022-3506.2004.00270.x", "doi": "10.1111/j.0022-3506.2004.00270.x", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.8,
+    "fetched_urls": ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1111/j.0022-3506.2004.00270.x&resultType=core&format=json"],
+    "summary": "Self-defining memories (Singer & Salovey 1993, The Remembered Self, Free Press) are vivid, affectively intense, repeatedly recalled memories linked to similar memories and to an enduring concern. The Classification System and Scoring Manual for Self-Defining Autobiographical Memories (Singer & Blagov, 2000, paper presented to the Society for Applied Research in Memory and Cognition, Miami Beach; unpublished manual, Connecticut College; revised 2002/2004) scores each narrative on four dimensions: specificity, integrative meaning, content, and affect. Unit of analysis is a single written self-defining memory narrative.",
+    "constructs": [
+      {"id": "self_defining_memory_criteria", "label": "Defining attributes of a self-defining memory", "type": "criteria", "values": ["vivid", "affectively intense", "repeatedly recalled (well-rehearsed)", "linked to other similar memories", "focused on an enduring concern or unresolved conflict"], "value_source": "KNOWLEDGE", "notes": "Singer & Salovey 1993; restated in Singer & Blagov 2004 and in the participant instructions in Blagov & Singer 2004."},
+      {"id": "specificity", "label": "Specificity", "type": "category_set", "values": ["specific (single event, lasting less than a day)", "non-specific / summary (generic or extended)"], "value_source": "KNOWLEDGE", "notes": "Dimension name verified by fetched abstract; category labels from knowledge. The manual distinguishes specific memories from summary/generic and extended ones; confidence 0.8."},
+      {"id": "integrative_meaning", "label": "Integrative meaning (meaning making)", "type": "category_set", "values": ["integrative", "non-integrative"], "value_source": "KNOWLEDGE", "notes": "Integrative = the narrator steps back to draw a lesson or insight about the self or life; dimension name verified by abstract."},
+      {"id": "content", "label": "Content category", "type": "category_set", "values": ["relationships", "life-threatening events", "recreation/exploration", "achievement/mastery", "guilt/shame", "drug/alcohol/tobacco use", "not classifiable"], "value_source": "KNOWLEDGE", "notes": "Content coding follows Thorne & McLean's (2001) manual for self-defining memory content, adopted in Blagov & Singer 2004; dimension name verified by abstract, labels from knowledge (confidence 0.8)."},
+      {"id": "affect", "label": "Affect", "type": "dimension", "values": ["positive", "negative", "mixed", "neutral"], "value_source": "KNOWLEDGE", "notes": "In Blagov & Singer 2004 affect was obtained as participant ratings of emotional response at recall (valence); the four-way categorical labelling is the manual's coder scheme as reported secondarily. Confidence 0.7."}
+    ],
+    "verification_notes": "Journal citation, the four dimension names and the summary of findings verified via Europe PMC abstract. The 2000 manual itself was not retrievable (Geneva French-adaptation link returned 'Fichier invalide'); its category labels are from knowledge."
+  },
+  {
+    "id": "pillemer_momentous_events",
+    "name": "Pillemer momentous events / personal event memories",
+    "family": "salience",
+    "citation": {"authors": "Pillemer, D. B.", "year": 2001, "title": "Momentous events and the life story", "venue": "Review of General Psychology, 5(2), 123-134", "url": "https://journals.sagepub.com/doi/10.1037/1089-2680.5.2.123", "doi": "10.1037/1089-2680.5.2.123", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.8,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/1089-2680.5.2.123", "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1080/741938208&resultType=core&format=json"],
+    "summary": "Specific, vivid memories of single momentous episodes (personal event memories) are retained because they serve directive, self and communicative functions, and a small number of such episodes anchor and organize the life story (Pillemer 1998, Momentous Events, Vivid Memories, Harvard University Press). Pillemer (2003, 'Directive functions of autobiographical memory: the guiding power of the specific episode', Memory 11(2), 193-202, DOI 10.1080/741938208, PMID 12820831) argues vivid personal memories inform, motivate and inspire present action. Unit of analysis is the specific personal event memory.",
+    "constructs": [
+      {"id": "personal_event_memory_features", "label": "Defining features of a personal event memory", "type": "criteria", "values": ["represents a specific event that occurred at a particular time and place (not a general or repeated event)", "contains a detailed account of the rememberer's own personal circumstances at the time of the event", "evokes sensory images or bodily sensations that contribute to a feeling of re-experiencing", "links details and images to a particular moment or moments of phenomenal experience", "is believed to be a truthful representation of what actually transpired"], "value_source": "KNOWLEDGE", "notes": "Pillemer 1998, ch. 2; five features. Confidence 0.85."},
+      {"id": "momentous_event_types", "label": "Types of momentous events in the life story", "type": "category_set", "values": ["originating events", "turning points", "anchoring events", "analogous events"], "value_source": "KNOWLEDGE", "notes": "Pillemer 1998/2001. Originating = perceived beginning of a life path; turning point = redirects a path; anchoring = exemplifies/secures a belief or value; analogous = past episode used as a model for a present situation."},
+      {"id": "memory_functions", "label": "Functions of autobiographical memory", "type": "function", "values": ["directive", "self", "social (communicative)"], "value_source": "FETCHED", "notes": "Pillemer 1992 ('Remembering personal circumstances: A functional analysis') and Bluck (2003, Memory 11(2), 113-123, 'Autobiographical memory: Exploring its functions in everyday life'); the fetched 2003 abstract states directive functions have received less attention than social or self functions and that memories inform, motivate and inspire."}
+    ],
+    "verification_notes": "2001 title/year/DOI verified via Semantic Scholar (abstract unavailable; SAGE page 403). 2003 citation and abstract gist verified via Europe PMC. Five-feature list and event-type list from knowledge."
+  },
+  {
+    "id": "lazarus_cognitive_appraisal",
+    "name": "Lazarus cognitive-motivational-relational appraisal theory and Ways of Coping",
+    "family": "salience",
+    "citation": {"authors": "Lazarus, R. S.", "year": 1991, "title": "Emotion and Adaptation", "venue": "Oxford University Press, New York", "url": "https://global.oup.com/academic/product/emotion-and-adaptation-9780195092660", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://en.wikipedia.org/wiki/Core_relational_theme", "https://www.mindgarden.com/158-ways-of-coping-questionnaire"],
+    "summary": "Emotions arise from appraisal of the person-environment relationship for its significance to well-being: primary appraisal (is this relevant to my goals?) and secondary appraisal (what can be done?). Each emotion corresponds to one core relational theme summarizing the harm or benefit. Coping (Lazarus & Folkman 1984, Stress, Appraisal, and Coping, Springer) is problem-focused or emotion-focused and is measured as process by the Ways of Coping Questionnaire (Folkman & Lazarus 1988, Consulting Psychologists Press). Unit of analysis is the appraised person-environment encounter.",
+    "constructs": [
+      {"id": "primary_appraisal", "label": "Primary appraisal components", "type": "appraisal", "values": ["goal relevance", "goal congruence (or incongruence)", "type of ego-involvement"], "value_source": "FETCHED", "notes": "Lazarus 1991; verified via Wikipedia summary."},
+      {"id": "secondary_appraisal", "label": "Secondary appraisal components", "type": "appraisal", "values": ["blame or credit (accountability)", "coping potential", "future expectancy"], "value_source": "FETCHED", "notes": "Lazarus 1991; verified via Wikipedia summary."},
+      {"id": "core_relational_themes", "label": "Core relational themes (Lazarus 1991, p. 122 table)", "type": "category_set", "values": ["Anger: a demeaning offense against me and mine", "Anxiety: facing uncertain, existential threat", "Fright: facing an immediate, concrete, and overwhelming physical danger", "Guilt: having transgressed a moral imperative", "Shame: having failed to live up to an ego-ideal", "Sadness: having experienced an irrevocable loss", "Envy: wanting what someone else has", "Jealousy: resenting a third party for loss or threat to another's affection", "Disgust: taking in or being too close to an indigestible object or idea (metaphorically speaking)", "Happiness: making reasonable progress toward the realization of a goal", "Pride: enhancement of one's ego-identity by taking credit for a valued object or achievement, either our own or that of someone or group with whom we identify", "Relief: a distressing goal-incongruent condition that has changed for the better or gone away", "Hope: fearing the worst but yearning for the better", "Love: desiring or participating in affection, usually but not necessarily reciprocated", "Compassion: being moved by another's suffering and wanting to help"], "value_source": "FETCHED", "notes": "15 themes reproduced from Wikipedia's transcription of the Lazarus 1991 table (secondary); consistent with the book from knowledge. Lazarus also discusses aesthetic emotions and gratitude as problematic cases outside the table."},
+      {"id": "coping_functions", "label": "Coping functions", "type": "category_set", "values": ["problem-focused coping", "emotion-focused coping"], "value_source": "KNOWLEDGE", "notes": "Lazarus & Folkman 1984; the Mind Garden page states WAYS measures coping processes, not dispositions or styles."},
+      {"id": "ways_of_coping_scales", "label": "Ways of Coping Questionnaire scales", "type": "dimension", "values": ["Confrontive Coping", "Distancing", "Self-Controlling", "Seeking Social Support", "Accepting Responsibility", "Escape-Avoidance", "Planful Problem Solving", "Positive Reappraisal"], "value_source": "FETCHED", "notes": "Eight scales, 66 items; Folkman & Lazarus 1988, Consulting Psychologists Press; fetched from Mind Garden (official distributor)."}
+    ],
+    "verification_notes": "Core relational themes and appraisal components verified from Wikipedia (secondary transcription of Lazarus 1991). WAYS scales verified from the official distributor page. OUP book page not fetched."
+  },
+  {
+    "id": "mcadams_narrative_identity",
+    "name": "McAdams narrative identity / life story model",
+    "family": "narrative",
+    "citation": {"authors": "McAdams, D. P.", "year": 2001, "title": "The psychology of life stories", "venue": "Review of General Psychology, 5(2), 100-122", "url": "https://journals.sagepub.com/doi/10.1037/1089-2680.5.2.100", "doi": "10.1037/1089-2680.5.2.100", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.85,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1177/0963721413475622"],
+    "summary": "Identity in late adolescence and adulthood takes the form of an internalized, evolving life story that integrates the reconstructed past and imagined future to give life unity and purpose (McAdams 2001; McAdams & McLean 2013, 'Narrative Identity', Current Directions in Psychological Science 22(3), 233-238, DOI 10.1177/0963721413475622). Life stories are elicited with the Life Story Interview and coded for recurring themes and sequences. Unit of analysis is the narrated life-story episode (scene) and the themes coded across episodes.",
+    "constructs": [
+      {"id": "coded_narrative_constructs", "label": "Narrative identity constructs listed by McAdams & McLean (2013)", "type": "category_set", "values": ["agency", "communion", "redemption", "contamination", "meaning making", "exploratory narrative processing", "coherent positive resolution"], "value_source": "KNOWLEDGE", "notes": "Table 1 of McAdams & McLean 2013; Semantic Scholar verified title/year/DOI only. Exploratory narrative processing and coherent positive resolution originate in Pals (2006); meaning making in McLean & Pratt (2006)."},
+      {"id": "redemption_sequence", "label": "Redemption sequence", "type": "process", "values": null, "value_source": "KNOWLEDGE", "notes": "A demonstrably bad or emotionally negative scene turns into a good or positive outcome (McAdams, Reynolds, Lewis, Patten & Bowman 2001, Personality and Social Psychology Bulletin 27, 474-485). The Foley Center coding manual lists redemption subtypes: sacrifice, recovery, growth, learning, improvement (knowledge, confidence 0.75)."},
+      {"id": "contamination_sequence", "label": "Contamination sequence", "type": "process", "values": null, "value_source": "KNOWLEDGE", "notes": "A good or positive scene turns bad, spoiled or ruined (same source)."},
+      {"id": "agency_themes", "label": "Agency themes (Foley Center coding)", "type": "category_set", "values": ["self-mastery", "status/victory", "achievement/responsibility", "empowerment"], "value_source": "KNOWLEDGE", "notes": "McAdams' Coding System for Themes of Agency and Communion (Foley Center, 2001 revision); manual page returned 404. Confidence 0.8."},
+      {"id": "communion_themes", "label": "Communion themes (Foley Center coding)", "type": "category_set", "values": ["love/friendship", "dialogue", "caring/help", "unity/togetherness"], "value_source": "KNOWLEDGE", "notes": "Same manual; confidence 0.8."},
+      {"id": "nuclear_episodes", "label": "Nuclear episodes (key scenes in the Life Story Interview)", "type": "category_set", "values": ["high point (peak experience)", "low point (nadir experience)", "turning point", "earliest memory", "important childhood scene", "important adolescent scene", "important adult scene", "one other important scene"], "value_source": "KNOWLEDGE", "notes": "Life Story Interview (McAdams 2008 revision) key-scenes section; the canonical triad high point / low point / turning point is the most-coded subset. Confidence 0.8."},
+      {"id": "imagoes", "label": "Imagoes", "type": "component", "values": null, "value_source": "KNOWLEDGE", "notes": "Idealized personified images of the self functioning as main characters in the life story (McAdams 1985, 1993)."},
+      {"id": "generativity_script", "label": "Generativity script", "type": "component", "values": null, "value_source": "KNOWLEDGE", "notes": "The life story's anticipated ending: plans for leaving a legacy for future generations (McAdams 1985; McAdams & de St. Aubin 1992)."}
+    ],
+    "verification_notes": "McAdams & McLean 2013 bibliographic record verified via Semantic Scholar (no abstract). McAdams 2001 not fetched (SAGE 403). Foley Center pages (sesp.northwestern.edu/foley and /foley/instruments/) returned 404, so coding-manual subcategories are from knowledge."
+  },
+  {
+    "id": "bruner_narrative_construction",
+    "name": "Bruner narrative mode and the narrative construction of reality",
+    "family": "narrative",
+    "citation": {"authors": "Bruner, J.", "year": 1991, "title": "The Narrative Construction of Reality", "venue": "Critical Inquiry, 18(1), 1-21", "url": "https://www.journals.uchicago.edu/doi/10.1086/448619", "doi": "10.1086/448619", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://api.semanticscholar.org/graph/v1/paper/DOI:10.1086/448619"],
+    "summary": "Bruner (1986, Actual Minds, Possible Worlds, Harvard University Press) distinguishes two irreducible modes of thought: the paradigmatic (logico-scientific) mode that seeks truth through argument, and the narrative mode that seeks verisimilitude through story. The 1991 essay argues that narrative is a primary instrument by which humans construct and organize experience and reality, and enumerates ten features of narrative. Unit of analysis is the narrative (story) as a cognitive and cultural form.",
+    "constructs": [
+      {"id": "modes_of_thought", "label": "Two modes of thought", "type": "category_set", "values": ["paradigmatic (logico-scientific) mode", "narrative mode"], "value_source": "KNOWLEDGE", "notes": "Actual Minds, Possible Worlds (1986), ch. 2."},
+      {"id": "ten_features_of_narrative", "label": "Ten features of narrative (1991)", "type": "category_set", "values": ["Narrative diachronicity", "Particularity", "Intentional state entailment", "Hermeneutic composability", "Canonicity and breach", "Referentiality", "Genericness", "Normativeness", "Context sensitivity and negotiability", "Narrative accrual"], "value_source": "KNOWLEDGE", "notes": "Section headings of Bruner 1991 in order; Semantic Scholar verified title/year/venue/DOI, full text not fetched (UChicago page 403). Confidence 0.95."},
+      {"id": "dual_landscape", "label": "Dual landscape of narrative", "type": "component", "values": ["landscape of action", "landscape of consciousness"], "value_source": "KNOWLEDGE", "notes": "Actual Minds, Possible Worlds (1986): action = agent, intention/goal, situation, instrument; consciousness = what protagonists know, think, feel."}
+    ],
+    "verification_notes": "Bibliographic record for the 1991 essay verified via Semantic Scholar. Ten features and dual landscape from knowledge of the primary texts."
+  },
+  {
+    "id": "booker_seven_basic_plots",
+    "name": "Booker The Seven Basic Plots",
+    "family": "narrative",
+    "citation": {"authors": "Booker, C.", "year": 2004, "title": "The Seven Basic Plots: Why We Tell Stories", "venue": "Continuum, London (ISBN 978-0826452092)", "url": "https://en.wikipedia.org/wiki/The_Seven_Basic_Plots", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://en.wikipedia.org/wiki/The_Seven_Basic_Plots"],
+    "summary": "Booker argues from a Jungian standpoint that virtually all stories conform to seven archetypal plots, and that the plots share a common five-stage meta-plot. Unit of analysis is the whole story's plot shape.",
+    "constructs": [
+      {"id": "seven_plots", "label": "The seven basic plots", "type": "category_set", "values": ["Overcoming the Monster", "Rags to Riches", "The Quest", "Voyage and Return", "Comedy", "Tragedy", "Rebirth"], "value_source": "FETCHED", "notes": "Exact labels as listed on the fetched page, matching the book's part titles."},
+      {"id": "meta_plot_stages", "label": "Five-stage meta-plot", "type": "stage_sequence", "values": ["Anticipation stage", "Dream stage", "Frustration stage", "Nightmare stage", "Resolution"], "value_source": "FETCHED", "notes": "Booker's own labels; the fifth is sometimes rendered 'Resolution stage'."}
+    ],
+    "verification_notes": "Plots and stages verified from Wikipedia (secondary); ISBN from page; publisher name (Continuum) from the page's reference entry and knowledge."
+  },
+  {
+    "id": "campbell_hero_journey",
+    "name": "Campbell The Hero with a Thousand Faces (monomyth)",
+    "family": "narrative",
+    "citation": {"authors": "Campbell, J.", "year": 1949, "title": "The Hero with a Thousand Faces", "venue": "Pantheon Books / Bollingen Series XVII (1st ed.); later Princeton University Press editions", "url": "https://en.wikipedia.org/wiki/Hero%27s_journey", "doi": null, "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://en.wikipedia.org/wiki/Hero%27s_journey"],
+    "summary": "Campbell proposes a universal narrative pattern (the monomyth) in which a hero departs the ordinary world, undergoes initiation through trials, and returns transformed with a boon; the pattern is articulated as 17 stages in three parts. Vogler (The Writer's Journey, Michael Wiese Productions, 1st ed. 1998; 3rd ed. 2007) simplifies this to 12 stages for screenwriting. Unit of analysis is the hero's trajectory across a whole story.",
+    "constructs": [
+      {"id": "departure_stages", "label": "Part I: Departure", "type": "stage_sequence", "values": ["The Call to Adventure", "Refusal of the Call", "Supernatural Aid", "The Crossing of the First Threshold", "Belly of the Whale"], "value_source": "FETCHED", "notes": "Chapter titles as fetched."},
+      {"id": "initiation_stages", "label": "Part II: Initiation", "type": "stage_sequence", "values": ["The Road of Trials", "The Meeting with the Goddess", "Woman as a Temptress", "Atonement with the Father", "Apotheosis", "The Ultimate Boon"], "value_source": "FETCHED", "notes": "Fetched page renders stage 4 as 'Atonement with the Father/Abyss'; Campbell's chapter title is 'Atonement with the Father' (the '/Abyss' gloss is a later editorial addition)."},
+      {"id": "return_stages", "label": "Part III: Return", "type": "stage_sequence", "values": ["Refusal of the Return", "The Magic Flight", "Rescue from Without", "The Crossing of the Return Threshold", "Master of the Two Worlds", "Freedom to Live"], "value_source": "FETCHED", "notes": "17 stages total across the three parts."},
+      {"id": "vogler_twelve_stages", "label": "Vogler's 12-stage simplification", "type": "stage_sequence", "values": ["Ordinary World", "Call to Adventure", "Refusal of the Call", "Meeting with the Mentor", "Crossing the First Threshold", "Tests, Allies, and Enemies", "Approach to the Inmost Cave", "The Ordeal", "Reward (Seizing the Sword)", "The Road Back", "The Resurrection", "Return with the Elixir"], "value_source": "FETCHED", "notes": "Fetched page lists these (with 'The inmost cave' and 'Reward' in short form); fuller labels 'Approach to the Inmost Cave' and 'Reward (Seizing the Sword)' are Vogler's own, from knowledge."}
+    ],
+    "verification_notes": "All 17 Campbell stages and 12 Vogler stages verified from Wikipedia (secondary). First-edition publisher (Pantheon/Bollingen) from knowledge; the fetched page cites Princeton University Press."
+  },
+  {
+    "id": "tulving_episodic_semantic_memory",
+    "name": "Tulving episodic vs semantic memory, autonoetic consciousness, encoding specificity",
+    "family": "narrative",
+    "citation": {"authors": "Tulving, E.", "year": 2002, "title": "Episodic memory: from mind to brain", "venue": "Annual Review of Psychology, 53, 1-25; PMID 11752477", "url": "https://www.annualreviews.org/doi/10.1146/annurev.psych.53.100901.135114", "doi": "10.1146/annurev.psych.53.100901.135114", "accessed": "2026-10-17"},
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.9,
+    "fetched_urls": ["https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1146/annurev.psych.53.100901.135114&resultType=core&format=json", "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/h0080017"],
+    "summary": "Tulving (1972, 'Episodic and semantic memory', in Tulving & Donaldson (eds.), Organization of Memory, Academic Press, pp. 381-403) distinguishes episodic memory for personally experienced events located in subjective time from semantic memory for general knowledge. Tulving (1985, 'Memory and consciousness', Canadian Psychology 26(1), 1-12, DOI 10.1037/h0080017) aligns procedural, semantic and episodic systems with anoetic, noetic and autonoetic consciousness; Tulving (2002) defines episodic memory as a uniquely human neurocognitive system enabling mental time travel, with chronesthesia as the capacity for subjective-time awareness. Unit of analysis is the memory system and the kind of conscious awareness accompanying retrieval.",
+    "constructs": [
+      {"id": "memory_systems", "label": "Memory systems (monohierarchical)", "type": "category_set", "values": ["procedural", "semantic", "episodic"], "value_source": "KNOWLEDGE", "notes": "Tulving 1985: episodic is embedded in semantic, which is embedded in procedural."},
+      {"id": "consciousness_kinds", "label": "Kinds of consciousness", "type": "category_set", "values": ["anoetic (non-knowing)", "noetic (knowing)", "autonoetic (self-knowing)"], "value_source": "KNOWLEDGE", "notes": "Tulving 1985; mapped respectively to procedural, semantic, episodic memory. Semantic Scholar verified title/year/DOI; full text (alicekim.ca PDF) returned 404."},
+      {"id": "remember_know", "label": "Remember/know judgments", "type": "dimension", "values": ["remember", "know"], "value_source": "KNOWLEDGE", "notes": "Introduced in Tulving 1985 as the experiential index of autonoetic vs noetic retrieval."},
+      {"id": "episodic_memory_core_properties", "label": "Episodic memory properties (2002)", "type": "component", "values": ["self", "autonoetic awareness", "subjectively sensed time"], "value_source": "KNOWLEDGE", "notes": "Fetched abstract confirms episodic memory as a neurocognitive system 'uniquely different from other memory systems'; the self / autonoetic / subjective-time triad and 'mental time travel' are from the article body (knowledge)."},
+      {"id": "chronesthesia", "label": "Chronesthesia", "type": "component", "values": null, "value_source": "KNOWLEDGE", "notes": "Tulving 2002 (and Tulving 2002, 'Chronesthesia: Conscious awareness of subjective time', in Stuss & Knight (eds.), Principles of Frontal Lobe Function, OUP): the capacity to be aware of subjective time, enabling mental time travel into past and future."},
+      {"id": "encoding_specificity", "label": "Encoding specificity principle", "type": "process", "values": null, "value_source": "KNOWLEDGE", "notes": "Tulving & Thomson (1973), 'Encoding specificity and retrieval processes in episodic memory', Psychological Review 80(5), 352-373, DOI 10.1037/h0020071: a retrieval cue is effective only if its information was encoded together with the target at study."}
+    ],
+    "verification_notes": "2002 citation and abstract gist verified via Europe PMC; 1985 bibliographic record via Semantic Scholar. Annual Reviews and APA PsycNet pages 403 / did not render. 1972 chapter and 1973 paper citations from knowledge."
+  }
+]

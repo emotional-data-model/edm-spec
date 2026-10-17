@@ -1,0 +1,344 @@
+{
+ "rows": 242,
+ "field_rows": 57,
+ "value_rows": 185,
+ "frameworks": 39,
+ "mappings_total": 913,
+ "verification": {
+  "V": 393,
+  "K": 241,
+  "-": 279,
+  "?": 0
+ },
+ "fields_by_grounding": {
+  "strong": 19,
+  "moderate": 1,
+  "weak": 36,
+  "orphan": 1
+ },
+ "affective_fields_by_grounding": {
+  "strong": 19,
+  "moderate": 1,
+  "weak": 34,
+  "orphan": 0
+ },
+ "values_by_grounding": {
+  "strong": 62,
+  "moderate": 0,
+  "weak": 96,
+  "orphan": 27
+ },
+ "pct_fields_grounded_any": 98.2,
+ "pct_fields_grounded_exact": 33.3,
+ "pct_values_grounded_any": 85.4,
+ "pct_values_grounded_exact": 33.5,
+ "by_domain": {
+  "core": {
+   "fields": 7,
+   "fields_strong": 1,
+   "fields_weak": 6,
+   "fields_orphan": 0,
+   "values": 0,
+   "values_strong": 0,
+   "values_orphan": 0
+  },
+  "constellation": {
+   "fields": 19,
+   "fields_strong": 6,
+   "fields_weak": 13,
+   "fields_orphan": 0,
+   "values": 102,
+   "values_strong": 31,
+   "values_orphan": 10
+  },
+  "milky_way": {
+   "fields": 5,
+   "fields_strong": 1,
+   "fields_weak": 3,
+   "fields_orphan": 1,
+   "values": 3,
+   "values_strong": 0,
+   "values_orphan": 3
+  },
+  "gravity": {
+   "fields": 14,
+   "fields_strong": 4,
+   "fields_weak": 10,
+   "fields_orphan": 0,
+   "values": 32,
+   "values_strong": 7,
+   "values_orphan": 9
+  },
+  "impulse": {
+   "fields": 12,
+   "fields_strong": 7,
+   "fields_weak": 4,
+   "fields_orphan": 0,
+   "values": 48,
+   "values_strong": 24,
+   "values_orphan": 5
+  }
+ },
+ "framework_coverage": {
+  "ekman": {
+   "rows_touched": 10,
+   "exact": 5
+  },
+  "plutchik": {
+   "rows_touched": 28,
+   "exact": 11
+  },
+  "cowen_keltner": {
+   "rows_touched": 25,
+   "exact": 7
+  },
+  "goemotions": {
+   "rows_touched": 23,
+   "exact": 15
+  },
+  "russell": {
+   "rows_touched": 19,
+   "exact": 6
+  },
+  "pad": {
+   "rows_touched": 17,
+   "exact": 7
+  },
+  "occ": {
+   "rows_touched": 30,
+   "exact": 17
+  },
+  "scherer": {
+   "rows_touched": 30,
+   "exact": 16
+  },
+  "barrett": {
+   "rows_touched": 8,
+   "exact": 2
+  },
+  "anthropic_2026": {
+   "rows_touched": 17,
+   "exact": 12
+  },
+  "hume": {
+   "rows_touched": 21,
+   "exact": 11
+  },
+  "panksepp": {
+   "rows_touched": 36,
+   "exact": 5
+  },
+  "damasio": {
+   "rows_touched": 6,
+   "exact": 1
+  },
+  "conway": {
+   "rows_touched": 38,
+   "exact": 3
+  },
+  "singer_blagov": {
+   "rows_touched": 36,
+   "exact": 7
+  },
+  "pillemer": {
+   "rows_touched": 25,
+   "exact": 3
+  },
+  "lazarus": {
+   "rows_touched": 58,
+   "exact": 20
+  },
+  "mcadams": {
+   "rows_touched": 82,
+   "exact": 7
+  },
+  "bruner": {
+   "rows_touched": 5,
+   "exact": 0
+  },
+  "booker": {
+   "rows_touched": 20,
+   "exact": 4
+  },
+  "campbell": {
+   "rows_touched": 19,
+   "exact": 3
+  },
+  "tulving": {
+   "rows_touched": 19,
+   "exact": 6
+  },
+  "ainsworth": {
+   "rows_touched": 11,
+   "exact": 6
+  },
+  "bartholomew": {
+   "rows_touched": 7,
+   "exact": 1
+  },
+  "fiske": {
+   "rows_touched": 24,
+   "exact": 0
+  },
+  "bronfenbrenner": {
+   "rows_touched": 28,
+   "exact": 3
+  },
+  "gross": {
+   "rows_touched": 19,
+   "exact": 3
+  },
+  "elliot": {
+   "rows_touched": 12,
+   "exact": 3
+  },
+  "sdt": {
+   "rows_touched": 12,
+   "exact": 4
+  },
+  "mayer_salovey": {
+   "rows_touched": 4,
+   "exact": 0
+  },
+  "goleman": {
+   "rows_touched": 6,
+   "exact": 0
+  },
+  "bar_on": {
+   "rows_touched": 10,
+   "exact": 0
+  },
+  "emotionml": {
+   "rows_touched": 54,
+   "exact": 23
+  },
+  "mfoem": {
+   "rows_touched": 57,
+   "exact": 25
+  },
+  "earl": {
+   "rows_touched": 21,
+   "exact": 19
+  },
+  "wordnet_affect": {
+   "rows_touched": 23,
+   "exact": 14
+  },
+  "nrc": {
+   "rows_touched": 17,
+   "exact": 9
+  },
+  "senticnet": {
+   "rows_touched": 19,
+   "exact": 11
+  },
+  "snomed": {
+   "rows_touched": 16,
+   "exact": 9
+  }
+ },
+ "orphans": [
+  "constellation.memory_type=legacy_artifact",
+  "constellation.narrative_archetype=outlaw",
+  "constellation.narrative_archetype=innocent",
+  "constellation.narrative_archetype=magician",
+  "constellation.narrative_archetype=everyman",
+  "constellation.narrative_archetype=jester",
+  "constellation.narrative_archetype=ruler",
+  "constellation.temporal_rhythm=spiraling",
+  "constellation.temporal_rhythm=dragging",
+  "constellation.temporal_rhythm=suspended",
+  "milky_way.visibility_context",
+  "milky_way.visibility_context=private",
+  "milky_way.visibility_context=family_only",
+  "milky_way.visibility_context=shared_publicly",
+  "gravity.emotional_density=medium",
+  "gravity.viscosity=medium",
+  "gravity.viscosity=fluid",
+  "gravity.tether_type=ritual",
+  "gravity.tether_type=tradition",
+  "gravity.recurrence_pattern=emerging",
+  "gravity.temporal_decay=moderate",
+  "gravity.adaptation_trajectory=stable",
+  "gravity.adaptation_trajectory=emerging",
+  "impulse.social_visibility=private",
+  "impulse.risk_posture=balanced",
+  "impulse.agency_level=medium",
+  "impulse.regulation_state=wavering",
+  "impulse.coping_style=ritualize"
+ ],
+ "weak_fields": [
+  "core.anchor",
+  "core.wound",
+  "core.fuel",
+  "core.bridge",
+  "core.echo",
+  "core.narrative",
+  "constellation.higher_order_emotion",
+  "constellation.meta_emotional_state",
+  "constellation.interpersonal_affect",
+  "constellation.narrative_arc",
+  "constellation.relational_dynamics",
+  "constellation.temporal_context",
+  "constellation.memory_type",
+  "constellation.media_format",
+  "constellation.narrative_archetype",
+  "constellation.symbolic_anchor",
+  "constellation.relational_perspective",
+  "constellation.temporal_rhythm",
+  "constellation.arc_type",
+  "milky_way.event_type",
+  "milky_way.location_context",
+  "milky_way.associated_people",
+  "gravity.emotional_density",
+  "gravity.viscosity",
+  "gravity.gravity_type",
+  "gravity.tether_type",
+  "gravity.nearby_themes",
+  "gravity.recurrence_pattern",
+  "gravity.strength_score",
+  "gravity.temporal_decay",
+  "gravity.resilience_markers",
+  "gravity.adaptation_trajectory",
+  "impulse.primary_energy",
+  "impulse.directionality",
+  "impulse.social_visibility",
+  "impulse.risk_posture"
+ ],
+ "strong_fields": [
+  "core.spark",
+  "constellation.emotion_primary",
+  "constellation.emotion_subtone",
+  "constellation.identity_thread",
+  "constellation.expressed_insight",
+  "constellation.transformational_pivot",
+  "constellation.somatic_signature",
+  "milky_way.tone_shift",
+  "gravity.emotional_weight",
+  "gravity.valence",
+  "gravity.recall_triggers",
+  "gravity.retrieval_keys",
+  "impulse.drive_state",
+  "impulse.motivational_orientation",
+  "impulse.temporal_focus",
+  "impulse.urgency",
+  "impulse.agency_level",
+  "impulse.attachment_style",
+  "impulse.coping_style"
+ ],
+ "gap_decisions": {
+  "add": 15,
+  "covered": 18,
+  "out_of_scope": 16
+ },
+ "orphan_decisions": {
+  "keep": 12,
+  "cut": 15,
+  "merge": 1
+ },
+ "weak_field_decisions": {
+  "keep": 22,
+  "cut": 6,
+  "merge": 8
+ }
+}

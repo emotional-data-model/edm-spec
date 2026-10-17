@@ -1,0 +1,1389 @@
+{
+  "summary": {
+    "spec_version": "0.8.3",
+    "generated": "2026-10-17",
+    "source": "schema/fragments/{core,constellation,milky_way,gravity,impulse}.json + schema/edm.v0.8.{essential,extended,full}.schema.json",
+    "field_count": 57,
+    "by_domain": {
+      "core": 7,
+      "constellation": 19,
+      "milky_way": 5,
+      "gravity": 14,
+      "impulse": 12
+    },
+    "by_vocabulary": {
+      "closed_enum": 22,
+      "canonical_open": 7,
+      "free_text": 19,
+      "free_text_list": 6,
+      "numeric": 2,
+      "boolean": 1
+    },
+    "canonical_value_count": 185,
+    "profile_membership": {
+      "essential": 9,
+      "extended": 36,
+      "full": 57
+    },
+    "note": "edm_kind=administrative marks fields in affective domains that carry no affective content (media_format, visibility_context, associated_people)."
+  },
+  "fields": [
+    {
+      "path": "core.anchor",
+      "domain": "core",
+      "field": "anchor",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Central person, object, or theme of the experience",
+      "constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.spark",
+      "domain": "core",
+      "field": "spark",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "What triggered or initiated the emotional response",
+      "constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.wound",
+      "domain": "core",
+      "field": "wound",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Emotional pain, loss, or vulnerability present in the experience",
+      "constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.fuel",
+      "domain": "core",
+      "field": "fuel",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "What energized or motivated the experience",
+      "constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.bridge",
+      "domain": "core",
+      "field": "bridge",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Connection or shift between past and present understanding",
+      "constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.echo",
+      "domain": "core",
+      "field": "echo",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "What continues to resonate or recur from the experience",
+      "constraints": "1–5 words (e.g., \"her laugh\", \"smell of rain\", \"city lights\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "core.narrative",
+      "domain": "core",
+      "field": "narrative",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
+      "constraints": "3–5 sentences",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "narrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.emotion_primary",
+      "domain": "constellation",
+      "field": "emotion_primary",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "joy",
+        "sadness",
+        "fear",
+        "anger",
+        "wonder",
+        "peace",
+        "tenderness",
+        "reverence",
+        "pride",
+        "anxiety",
+        "gratitude",
+        "longing",
+        "hope",
+        "shame",
+        "disappointment",
+        "relief",
+        "frustration"
+      ],
+      "description": "The dominant emotional quality expressed in the experience",
+      "constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted.",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.emotion_subtone",
+      "domain": "constellation",
+      "field": "emotion_subtone",
+      "json_type": "array",
+      "nullable": false,
+      "required_in_fragment": true,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Secondary emotional nuances that add depth to the primary emotion",
+      "constraints": "0–4 items (e.g., \"bittersweet\", \"grateful\", \"nostalgic\")",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 0,
+      "maxItems": 4
+    },
+    {
+      "path": "constellation.higher_order_emotion",
+      "domain": "constellation",
+      "field": "higher_order_emotion",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Complex or layered emotional state",
+      "constraints": "Free text (e.g., \"awe\", \"bittersweetness\", \"pride\", \"moral elevation\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.meta_emotional_state",
+      "domain": "constellation",
+      "field": "meta_emotional_state",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "How the person relates to their own emotional state",
+      "constraints": "Free text (e.g., \"acceptance\", \"resistance\", \"curiosity\", \"confusion\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.interpersonal_affect",
+      "domain": "constellation",
+      "field": "interpersonal_affect",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Emotional posture in relational context",
+      "constraints": "Free text (e.g., \"warmth\", \"defensiveness\", \"openness\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.narrative_arc",
+      "domain": "constellation",
+      "field": "narrative_arc",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": true,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "overcoming",
+        "transformation",
+        "connection",
+        "reflection",
+        "closure",
+        "loss",
+        "confrontation"
+      ],
+      "description": "The underlying trajectory or story movement represented by the moment",
+      "constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted.",
+      "profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.relational_dynamics",
+      "domain": "constellation",
+      "field": "relational_dynamics",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "parent_child",
+        "grandparent_grandchild",
+        "romantic_partnership",
+        "couple",
+        "sibling_bond",
+        "family",
+        "friendship",
+        "friend",
+        "companionship",
+        "colleague",
+        "mentorship",
+        "reunion",
+        "community_ritual",
+        "grief",
+        "self_reflection",
+        "professional",
+        "therapeutic",
+        "service",
+        "adversarial"
+      ],
+      "description": "The dominant relational configuration influencing the experience",
+      "constraints": "Canonical values: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. Free text accepted.",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.temporal_context",
+      "domain": "constellation",
+      "field": "temporal_context",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "childhood",
+        "early_adulthood",
+        "midlife",
+        "late_life",
+        "recent",
+        "future",
+        "timeless"
+      ],
+      "description": "The life-stage or temporal frame associated with the experience",
+      "constraints": "childhood, early_adulthood, midlife, late_life, recent, future, timeless",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.memory_type",
+      "domain": "constellation",
+      "field": "memory_type",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "legacy_artifact",
+        "fleeting_moment",
+        "milestone",
+        "reflection",
+        "formative_experience"
+      ],
+      "description": "The class of memory the experience represents within personal identity",
+      "constraints": "legacy_artifact, fleeting_moment, milestone, reflection, formative_experience",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.media_format",
+      "domain": "constellation",
+      "field": "media_format",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "photo",
+        "video",
+        "audio",
+        "text",
+        "photo_with_story"
+      ],
+      "description": "The format through which the experience is captured or expressed",
+      "constraints": "photo, video, audio, text, photo_with_story",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "administrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.narrative_archetype",
+      "domain": "constellation",
+      "field": "narrative_archetype",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "hero",
+        "caregiver",
+        "seeker",
+        "sage",
+        "lover",
+        "outlaw",
+        "innocent",
+        "magician",
+        "creator",
+        "everyman",
+        "jester",
+        "ruler"
+      ],
+      "description": "The archetypal identity the subject embodies — which of the 12 canonical identity archetypes the subject expresses, not a structural role or story function (ADR-0030)",
+      "constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.symbolic_anchor",
+      "domain": "constellation",
+      "field": "symbolic_anchor",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "A symbolic or material object, place, or element that concentrates meaning",
+      "constraints": "Free text (e.g., \"rocking chair\", \"wedding ring\", \"grandmother's kitchen\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.relational_perspective",
+      "domain": "constellation",
+      "field": "relational_perspective",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "self",
+        "partner",
+        "family",
+        "friends",
+        "community",
+        "humanity"
+      ],
+      "description": "The perspective through which the experience is narrated or understood",
+      "constraints": "self, partner, family, friends, community, humanity",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.temporal_rhythm",
+      "domain": "constellation",
+      "field": "temporal_rhythm",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "still",
+        "sudden",
+        "rising",
+        "fading",
+        "recurring",
+        "spiraling",
+        "dragging",
+        "suspended",
+        "looping",
+        "cyclic"
+      ],
+      "description": "The perceived temporal movement or cadence of the emotional event",
+      "constraints": "still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.identity_thread",
+      "domain": "constellation",
+      "field": "identity_thread",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "A succinct expression of how the experience connects to personal identity",
+      "constraints": "Short sentence",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.expressed_insight",
+      "domain": "constellation",
+      "field": "expressed_insight",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "The explicit realization or conclusion stated by the subject",
+      "constraints": "Short sentence. Extracted, not inferred",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.transformational_pivot",
+      "domain": "constellation",
+      "field": "transformational_pivot",
+      "json_type": "boolean",
+      "nullable": false,
+      "required_in_fragment": false,
+      "vocabulary": "boolean",
+      "canonical_values": [
+        true,
+        false
+      ],
+      "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
+      "constraints": "true or false",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.somatic_signature",
+      "domain": "constellation",
+      "field": "somatic_signature",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
+      "constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "constellation.arc_type",
+      "domain": "constellation",
+      "field": "arc_type",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "betrayal",
+        "liberation",
+        "grief",
+        "discovery",
+        "resistance",
+        "bond",
+        "moral_awakening",
+        "transformation",
+        "reconciliation",
+        "reckoning",
+        "threshold",
+        "exile",
+        "gratitude",
+        "authenticity"
+      ],
+      "description": "The structural emotional arc pattern of the experience, encoded at capture time",
+      "constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile, gratitude, authenticity — or free text if no canonical value fits",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "emotion",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "milky_way.event_type",
+      "domain": "milky_way",
+      "field": "event_type",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Type of event or situation",
+      "constraints": "Free text (e.g., \"family gathering\", \"farewell\", \"birthday\", \"reunion\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "context",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "milky_way.location_context",
+      "domain": "milky_way",
+      "field": "location_context",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Place or spatial context of the experience",
+      "constraints": "Free text (e.g., \"grandmother's kitchen\", \"beach\", \"hospital\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "context",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "milky_way.associated_people",
+      "domain": "milky_way",
+      "field": "associated_people",
+      "json_type": "array",
+      "nullable": false,
+      "required_in_fragment": false,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Individuals referenced in or connected to the experience",
+      "constraints": "Names or roles, properly cased (e.g., \"Sarah\", \"my father\", \"the nurse\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "administrative",
+      "items": {
+        "type": "string"
+      },
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "milky_way.visibility_context",
+      "domain": "milky_way",
+      "field": "visibility_context",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "private",
+        "family_only",
+        "shared_publicly"
+      ],
+      "description": "Defines the intended visibility or sharing scope of the moment",
+      "constraints": "private, family_only, shared_publicly",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "administrative",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "milky_way.tone_shift",
+      "domain": "milky_way",
+      "field": "tone_shift",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Directional emotional change during the experience",
+      "constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "context",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.emotional_weight",
+      "domain": "gravity",
+      "field": "emotional_weight",
+      "json_type": "number",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "numeric",
+      "canonical_values": null,
+      "description": "The felt intensity of the emotional experience",
+      "constraints": "0.0–1.0",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.emotional_density",
+      "domain": "gravity",
+      "field": "emotional_density",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "How concentrated or layered the emotional content is",
+      "constraints": "low, medium, high",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.valence",
+      "domain": "gravity",
+      "field": "valence",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "positive",
+        "negative",
+        "mixed"
+      ],
+      "description": "The qualitative direction of the emotional experience",
+      "constraints": "positive, negative, mixed",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.viscosity",
+      "domain": "gravity",
+      "field": "viscosity",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "low",
+        "medium",
+        "high",
+        "enduring",
+        "fluid"
+      ],
+      "description": "The perceived \"stickiness\" or persistence of the emotion",
+      "constraints": "low, medium, high, enduring, fluid",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.gravity_type",
+      "domain": "gravity",
+      "field": "gravity_type",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Category or nature of the emotional pull",
+      "constraints": "Free text (e.g., \"symbolic resonance\", \"relational bond\", \"identity anchor\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.tether_type",
+      "domain": "gravity",
+      "field": "tether_type",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "person",
+        "symbol",
+        "event",
+        "place",
+        "ritual",
+        "object",
+        "tradition",
+        "identity",
+        "self"
+      ],
+      "description": "The type of element to which the experience is emotionally anchored",
+      "constraints": "Canonical: person, symbol, event, place, ritual, object, tradition, identity, self. Free text accepted.",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.recall_triggers",
+      "domain": "gravity",
+      "field": "recall_triggers",
+      "json_type": "array",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Sensory or symbolic cues that reactivate the memory",
+      "constraints": "Short phrases, lowercase (e.g., \"smell of bread\", \"old songs\", \"rain sounds\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": {
+        "type": "string"
+      },
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.retrieval_keys",
+      "domain": "gravity",
+      "field": "retrieval_keys",
+      "json_type": "array",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Compact hooks for memory retrieval",
+      "constraints": "3–6 tokens (e.g., \"grandmother\", \"kitchen\", \"warmth\", \"tradition\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": {
+        "type": "string"
+      },
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.nearby_themes",
+      "domain": "gravity",
+      "field": "nearby_themes",
+      "json_type": "array",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Adjacent themes or motifs connected to the experience",
+      "constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": {
+        "type": "string"
+      },
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.recurrence_pattern",
+      "domain": "gravity",
+      "field": "recurrence_pattern",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "cyclical",
+        "isolated",
+        "chronic",
+        "emerging"
+      ],
+      "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
+      "constraints": "Canonical: cyclical, isolated, chronic, emerging. Free text accepted. NULL when pattern cannot be determined.",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.strength_score",
+      "domain": "gravity",
+      "field": "strength_score",
+      "json_type": "number",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "numeric",
+      "canonical_values": null,
+      "description": "The binding strength of the emotion within the broader emotional network",
+      "constraints": "0.0–1.0",
+      "profiles": [
+        "extended",
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.temporal_decay",
+      "domain": "gravity",
+      "field": "temporal_decay",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "fast",
+        "moderate",
+        "slow"
+      ],
+      "description": "How quickly the emotional intensity is expected to diminish over time",
+      "constraints": "fast, moderate, slow",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "gravity.resilience_markers",
+      "domain": "gravity",
+      "field": "resilience_markers",
+      "json_type": "array",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text_list",
+      "canonical_values": null,
+      "description": "Indicators of stabilizing or constructive emotional processing",
+      "constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "maxItems": 3
+    },
+    {
+      "path": "gravity.adaptation_trajectory",
+      "domain": "gravity",
+      "field": "adaptation_trajectory",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "improving",
+        "stable",
+        "declining",
+        "integrative",
+        "emerging"
+      ],
+      "description": "How the emotional state is evolving across time",
+      "constraints": "improving, stable, declining, integrative, emerging",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "salience",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.primary_energy",
+      "domain": "impulse",
+      "field": "primary_energy",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "free_text",
+      "canonical_values": null,
+      "description": "Dominant emotional or motivational energy in the moment",
+      "constraints": "Lowercase (e.g., \"curiosity\", \"fear\", \"compassion\", \"longing\")",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.drive_state",
+      "domain": "impulse",
+      "field": "drive_state",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "explore",
+        "approach",
+        "avoid",
+        "repair",
+        "persevere",
+        "share",
+        "confront",
+        "protect",
+        "process"
+      ],
+      "description": "The behavioral direction or movement expressed through the emotional response",
+      "constraints": "explore, approach, avoid, repair, persevere, share, confront, protect, process",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.motivational_orientation",
+      "domain": "impulse",
+      "field": "motivational_orientation",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "belonging",
+        "safety",
+        "mastery",
+        "meaning",
+        "autonomy",
+        "authenticity"
+      ],
+      "description": "The foundational motivational domain guiding the individual's internal stance",
+      "constraints": "belonging, safety, mastery, meaning, autonomy, authenticity",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.temporal_focus",
+      "domain": "impulse",
+      "field": "temporal_focus",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "past",
+        "present",
+        "future"
+      ],
+      "description": "The temporal direction toward which the motivational energy is oriented",
+      "constraints": "past, present, future",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.directionality",
+      "domain": "impulse",
+      "field": "directionality",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "inward",
+        "outward",
+        "transcendent"
+      ],
+      "description": "Whether the impulse is self-directed, relational, or expansive beyond self",
+      "constraints": "inward, outward, transcendent",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.social_visibility",
+      "domain": "impulse",
+      "field": "social_visibility",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "private",
+        "relational",
+        "collective"
+      ],
+      "description": "The social scope within which the impulse is expressed",
+      "constraints": "private, relational, collective",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.urgency",
+      "domain": "impulse",
+      "field": "urgency",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "calm",
+        "elevated",
+        "pressing",
+        "acute"
+      ],
+      "description": "The intensity or immediacy of the motivational state",
+      "constraints": "calm, elevated, pressing, acute",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.risk_posture",
+      "domain": "impulse",
+      "field": "risk_posture",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "cautious",
+        "balanced",
+        "bold"
+      ],
+      "description": "The stance toward uncertainty or potential risk embedded in the moment",
+      "constraints": "cautious, balanced, bold",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.agency_level",
+      "domain": "impulse",
+      "field": "agency_level",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "low",
+        "medium",
+        "high"
+      ],
+      "description": "The perceived ability to act or influence the situation",
+      "constraints": "low, medium, high",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.regulation_state",
+      "domain": "impulse",
+      "field": "regulation_state",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "regulated",
+        "wavering",
+        "dysregulated"
+      ],
+      "description": "The stability or turbulence of emotional self-regulation",
+      "constraints": "regulated, wavering, dysregulated",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.attachment_style",
+      "domain": "impulse",
+      "field": "attachment_style",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "closed_enum",
+      "canonical_values": [
+        "secure",
+        "anxious",
+        "avoidant",
+        "disorganized"
+      ],
+      "description": "The relational attachment pattern influencing the emotional expression",
+      "constraints": "secure, anxious, avoidant, disorganized",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    },
+    {
+      "path": "impulse.coping_style",
+      "domain": "impulse",
+      "field": "coping_style",
+      "json_type": "string",
+      "nullable": true,
+      "required_in_fragment": false,
+      "vocabulary": "canonical_open",
+      "canonical_values": [
+        "reframe_meaning",
+        "seek_support",
+        "distract",
+        "ritualize",
+        "confront",
+        "detach",
+        "process"
+      ],
+      "description": "The primary strategy used to manage or integrate the emotional experience",
+      "constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process. Free text accepted.",
+      "profiles": [
+        "full"
+      ],
+      "edm_kind": "motivation",
+      "items": null,
+      "minItems": null,
+      "maxItems": null
+    }
+  ]
+}

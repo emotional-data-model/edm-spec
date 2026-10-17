@@ -1,0 +1,619 @@
+[
+  {
+    "id": "ekman_basic_emotions",
+    "name": "Ekman basic (universal) emotions",
+    "family": "emotion",
+    "citation": {
+      "authors": "Ekman, P.",
+      "year": 1992,
+      "title": "An argument for basic emotions",
+      "venue": "Cognition and Emotion, 6(3-4), 169-200",
+      "url": "https://www.paulekman.com/universal-emotions/",
+      "doi": "10.1080/02699939208411068",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 0.95,
+    "fetched_urls": ["https://www.paulekman.com/universal-emotions/"],
+    "summary": "Claims a small set of discrete, biologically basic emotions with universal facial expressions, distinct physiology, and automatic appraisal. Unit of analysis: the discrete emotion episode/family (each basic emotion is a family of related states). Ekman's own site currently lists seven universal emotions (six classic plus contempt).",
+    "constructs": [
+      {
+        "id": "ekman_six",
+        "label": "Six basic emotions (1972/1992 classic set)",
+        "type": "category_set",
+        "values": ["anger", "surprise", "disgust", "enjoyment", "fear", "sadness"],
+        "value_source": "FETCHED",
+        "notes": "Exactly as the paulekman.com FAQ lists them ('anger, surprise, disgust, enjoyment, fear, and sadness'). Ekman's site uses 'enjoyment' where most secondary literature says 'happiness'/'joy'."
+      },
+      {
+        "id": "ekman_seven",
+        "label": "Seven universal emotions (paulekman.com current list)",
+        "type": "category_set",
+        "values": ["Anger", "Contempt", "Disgust", "Enjoyment", "Fear", "Sadness", "Surprise"],
+        "value_source": "FETCHED",
+        "notes": "Page states 'there are seven universal emotions that we all feel' and calls contempt 'a seventh emotion'. Also notes 'most emotion scientists agree that there are at least five core emotions.'"
+      },
+      {
+        "id": "ekman_1999_expanded",
+        "label": "Expanded basic-emotion list (Ekman 1999, 'Basic Emotions', Handbook of Cognition and Emotion, ch. 3)",
+        "type": "category_set",
+        "values": ["amusement", "anger", "contempt", "contentment", "disgust", "embarrassment", "excitement", "fear", "guilt", "pride in achievement", "relief", "sadness/distress", "satisfaction", "sensory pleasure", "shame"],
+        "value_source": "KNOWLEDGE",
+        "notes": "NOT verified from paulekman.com (the universal-emotions page does not mention these). From memory of Ekman (1999) Table 3.1; 15 items. Confidence ~0.75 on completeness and exact wording."
+      }
+    ],
+    "verification_notes": "Six- and seven-item lists verified verbatim from paulekman.com/universal-emotions. The 1999 expanded list is from knowledge only; the 1992 Cognition & Emotion citation metadata is from knowledge (not fetched)."
+  },
+  {
+    "id": "plutchik_wheel",
+    "name": "Plutchik psychoevolutionary wheel of emotions",
+    "family": "emotion",
+    "citation": {
+      "authors": "Plutchik, R.",
+      "year": 2001,
+      "title": "The Nature of Emotions",
+      "venue": "American Scientist, 89(4), 344-350",
+      "url": "https://www.americanscientist.org/article/the-nature-of-emotions",
+      "doi": "10.1511/2001.28.344",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.8,
+    "fetched_urls": ["https://en.wikipedia.org/wiki/Robert_Plutchik"],
+    "summary": "Posits eight primary, evolutionarily adaptive emotions arranged as four bipolar pairs on a circumplex, each varying in intensity (cone model), with mixtures (dyads) of adjacent/near primaries yielding secondary emotions. Unit of analysis: the discrete emotion as an adaptive reaction pattern, plus mixtures.",
+    "constructs": [
+      {
+        "id": "plutchik_primaries",
+        "label": "Eight primary emotions",
+        "type": "category_set",
+        "values": ["anger", "fear", "sadness", "disgust", "surprise", "anticipation", "trust", "joy"],
+        "value_source": "FETCHED",
+        "notes": "Verified via Wikipedia (secondary); American Scientist primary returned HTTP 503 on two attempts. Citation volume/issue/pages verified from the Wikipedia external-links citation. DOI from knowledge."
+      },
+      {
+        "id": "plutchik_opposites",
+        "label": "Four opposition pairs",
+        "type": "category_set",
+        "values": ["joy vs sadness", "anger vs fear", "trust vs disgust", "surprise vs anticipation"],
+        "value_source": "FETCHED",
+        "notes": "Quoted from secondary: 'joy versus sadness; anger versus fear; trust versus disgust; and surprise versus anticipation.'"
+      },
+      {
+        "id": "plutchik_intensity_terms",
+        "label": "Three intensity levels per primary (intense / basic / mild) — 24 terms",
+        "type": "category_set",
+        "values": ["ecstasy", "joy", "serenity", "admiration", "trust", "acceptance", "terror", "fear", "apprehension", "amazement", "surprise", "distraction", "grief", "sadness", "pensiveness", "loathing", "disgust", "boredom", "rage", "anger", "annoyance", "vigilance", "anticipation", "interest"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Ordered as triplets (intense, basic, mild) for joy, trust, fear, surprise, sadness, disgust, anger, anticipation. From memory of the 2001 wheel figure; not fetched. Confidence ~0.9."
+      },
+      {
+        "id": "plutchik_primary_dyads",
+        "label": "Primary dyads (adjacent primaries)",
+        "type": "category_set",
+        "values": ["love = joy + trust", "submission = trust + fear", "awe = fear + surprise", "disapproval = surprise + sadness", "remorse = sadness + disgust", "contempt = disgust + anger", "aggressiveness = anger + anticipation", "optimism = anticipation + joy"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory of the 2001 figure; some editions label 'awe' as 'alarm'. Confidence ~0.85."
+      },
+      {
+        "id": "plutchik_secondary_dyads",
+        "label": "Secondary dyads (one primary apart)",
+        "type": "category_set",
+        "values": ["guilt = joy + fear", "curiosity = trust + surprise", "despair = fear + sadness", "unbelief = surprise + disgust", "envy = sadness + anger", "cynicism = disgust + anticipation", "pride = anger + joy", "hope = anticipation + trust"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory. 'anticipation + trust' is given as 'hope' in some renderings and 'fatalism' in others; unverified. Confidence ~0.7."
+      },
+      {
+        "id": "plutchik_tertiary_dyads",
+        "label": "Tertiary dyads (two primaries apart)",
+        "type": "category_set",
+        "values": ["delight = joy + surprise", "sentimentality = trust + sadness", "shame = fear + disgust", "outrage = surprise + anger", "pessimism = sadness + anticipation", "morbidness = disgust + joy", "dominance = anger + trust", "anxiety = anticipation + fear"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory. Confidence ~0.7."
+      }
+    ],
+    "verification_notes": "Primaries, opposition pairs, and citation volume/issue/pages verified from Wikipedia (secondary). American Scientist primary unreachable (503 x2). Intensity terms and all dyad tables are from knowledge and were not verified against the primary."
+  },
+  {
+    "id": "cowen_keltner_2017",
+    "name": "Cowen & Keltner 27 emotion categories (semantic space of reported experience)",
+    "family": "emotion",
+    "citation": {
+      "authors": "Cowen, A. S., & Keltner, D.",
+      "year": 2017,
+      "title": "Self-report captures 27 distinct categories of emotion bridged by continuous gradients",
+      "venue": "Proceedings of the National Academy of Sciences, 114(38), E7900-E7909",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5617253/",
+      "doi": "10.1073/pnas.1702247114",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 0.9,
+    "fetched_urls": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC5617253/"],
+    "summary": "Using 2,185 short videos rated by 853 participants on 34 categories and 14 affective dimensions, finds that self-reported experience is organized into 27 distinct varieties bridged by continuous gradients, and that categories (e.g., amusement) explain reports better than valence/arousal. Unit of analysis: the reported emotional experience evoked by a stimulus, mapped as a high-dimensional semantic space.",
+    "constructs": [
+      {
+        "id": "ck27_categories",
+        "label": "27 distinct emotion categories",
+        "type": "category_set",
+        "values": ["admiration", "adoration", "aesthetic appreciation", "amusement", "anger", "anxiety", "awe", "awkwardness", "boredom", "calmness", "confusion", "craving", "disgust", "empathic pain", "entrancement", "excitement", "fear", "horror", "interest", "joy", "nostalgia", "relief", "romance", "sadness", "satisfaction", "sexual desire", "surprise"],
+        "value_source": "FETCHED",
+        "notes": "26 of these are unambiguous in the paper. The paper is internally inconsistent on the 27th: the Results text excludes 'pride' ('pride and triumph, which coloaded on experiences of admiration'), whereas the Fig. 1 caption's exclusion list is '(contempt, disappointment, envy, guilt, relief, sympathy, and triumph)', which would exclude 'relief' and include 'pride'. This list follows the Results text (relief in, pride out), which also matches the authors' published interactive map. Flag for crosswalk: pride/relief ambiguity is in the primary source itself."
+      },
+      {
+        "id": "ck34_rated_categories",
+        "label": "34 categories rated (superset)",
+        "type": "category_set",
+        "values": ["admiration", "adoration", "aesthetic appreciation", "amusement", "anger", "anxiety", "awe", "awkwardness", "boredom", "calmness", "confusion", "contempt", "craving", "disappointment", "disgust", "empathic pain", "entrancement", "envy", "excitement", "fear", "guilt", "horror", "interest", "joy", "nostalgia", "pride", "relief", "romance", "sadness", "satisfaction", "sexual desire", "surprise", "sympathy", "triumph"],
+        "value_source": "FETCHED",
+        "notes": "27 distinct + the 7 excluded categories named in the paper (contempt, disappointment, envy, guilt, sympathy, triumph, plus pride or relief depending on passage)."
+      },
+      {
+        "id": "ck_gradients",
+        "label": "Continuous gradients between categories",
+        "type": "dimension",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "Categories are bridged by smooth gradients rather than discrete boundaries; the 14 affective-dimension scales (e.g., valence, arousal) were rated but found less explanatory than categories. The 14 scale names were not extracted."
+      }
+    ],
+    "verification_notes": "Bibliographic metadata and the category list verified from the PMC full text (pnas.org returned 403). The Results-vs-Fig.1 discrepancy on pride/relief was confirmed by direct quotation."
+  },
+  {
+    "id": "goemotions",
+    "name": "GoEmotions taxonomy",
+    "family": "emotion",
+    "citation": {
+      "authors": "Demszky, D., Movshovitz-Attias, D., Ko, J., Cowen, A., Nemade, G., & Ravi, S.",
+      "year": 2020,
+      "title": "GoEmotions: A Dataset of Fine-Grained Emotions",
+      "venue": "Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics (ACL 2020)",
+      "url": "https://github.com/google-research/google-research/tree/master/goemotions",
+      "doi": "10.18653/v1/2020.acl-main.372",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 1.0,
+    "fetched_urls": [
+      "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/emotions.txt",
+      "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/ekman_mapping.json",
+      "https://raw.githubusercontent.com/google-research/google-research/master/goemotions/data/sentiment_mapping.json"
+    ],
+    "summary": "A 58k Reddit-comment corpus manually annotated with 27 fine-grained emotion labels plus neutral, designed (with Cowen) to cover positive, negative and ambiguous states for text. Unit of analysis: a short text (Reddit comment), multi-label. Official repo supplies two coarser mappings: Ekman-level (6) and sentiment-level (3).",
+    "constructs": [
+      {
+        "id": "goemotions_labels",
+        "label": "27 emotion labels + neutral (official emotions.txt order)",
+        "type": "category_set",
+        "values": ["admiration", "amusement", "anger", "annoyance", "approval", "caring", "confusion", "curiosity", "desire", "disappointment", "disapproval", "disgust", "embarrassment", "excitement", "fear", "gratitude", "grief", "joy", "love", "nervousness", "optimism", "pride", "realization", "relief", "remorse", "sadness", "surprise", "neutral"],
+        "value_source": "FETCHED",
+        "notes": "Verbatim from data/emotions.txt (28 lines)."
+      },
+      {
+        "id": "goemotions_ekman_mapping",
+        "label": "Ekman-level grouping (official ekman_mapping.json)",
+        "type": "code_system",
+        "values": [
+          "anger: anger, annoyance, disapproval",
+          "disgust: disgust",
+          "fear: fear, nervousness",
+          "joy: joy, amusement, approval, excitement, gratitude, love, optimism, relief, pride, admiration, desire, caring",
+          "sadness: sadness, disappointment, embarrassment, grief, remorse",
+          "surprise: surprise, realization, confusion, curiosity"
+        ],
+        "value_source": "FETCHED",
+        "notes": "Verbatim from data/ekman_mapping.json. 'neutral' is not in the mapping."
+      },
+      {
+        "id": "goemotions_sentiment_mapping",
+        "label": "Sentiment-level grouping (official sentiment_mapping.json)",
+        "type": "code_system",
+        "values": [
+          "positive: amusement, excitement, joy, love, desire, optimism, caring, pride, admiration, gratitude, relief, approval",
+          "negative: fear, nervousness, remorse, embarrassment, disappointment, sadness, grief, disgust, anger, annoyance, disapproval",
+          "ambiguous: realization, surprise, curiosity, confusion"
+        ],
+        "value_source": "FETCHED",
+        "notes": "Verbatim from data/sentiment_mapping.json. 'neutral' is not in the mapping."
+      }
+    ],
+    "verification_notes": "All three value sets fetched verbatim from the official google-research GitHub repo raw files. ACL DOI from knowledge."
+  },
+  {
+    "id": "russell_circumplex",
+    "name": "Russell circumplex model of affect",
+    "family": "emotion",
+    "citation": {
+      "authors": "Russell, J. A.",
+      "year": 1980,
+      "title": "A circumplex model of affect",
+      "venue": "Journal of Personality and Social Psychology, 39(6), 1161-1178",
+      "url": "https://doi.org/10.1037/h0077714",
+      "doi": "10.1037/h0077714",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.8,
+    "fetched_urls": [
+      "https://psycnet.apa.org/doi/10.1037/h0077714",
+      "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1037/h0077714?fields=title,abstract,year,venue,authors,externalIds"
+    ],
+    "summary": "Affective states are not independent factors but lie on a circle in a two-dimensional bipolar space defined by pleasure-displeasure and degree of arousal; 28 affect words are shown to fall in a circular order. Unit of analysis: the affect word / momentary affective state located by two continuous coordinates.",
+    "constructs": [
+      {
+        "id": "russell_dimensions",
+        "label": "Two bipolar dimensions",
+        "type": "dimension",
+        "values": ["pleasure-displeasure (valence)", "degree of arousal (arousal-sleepiness)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Dimension names from knowledge; PsycNet page did not render and Semantic Scholar had the abstract elided by publisher. Title, author, year and DOI confirmed via Semantic Scholar metadata."
+      },
+      {
+        "id": "russell_octants",
+        "label": "Eight circumplex sector labels (45-degree spacing, from 0 deg pleasure counterclockwise)",
+        "type": "category_set",
+        "values": ["pleasure", "excitement", "arousal", "distress", "displeasure (misery)", "depression", "sleepiness", "contentment (relaxation)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory of Russell 1980 Fig. 1 variable labels. Confidence ~0.8 on wording."
+      },
+      {
+        "id": "russell_28_words",
+        "label": "28 affect words placed on the circumplex",
+        "type": "category_set",
+        "values": ["happy", "delighted", "excited", "astonished", "aroused", "tense", "alarmed", "angry", "afraid", "annoyed", "distressed", "frustrated", "miserable", "sad", "gloomy", "depressed", "bored", "droopy", "tired", "sleepy", "calm", "relaxed", "satisfied", "at ease", "content", "serene", "glad", "pleased"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory of Russell 1980 Fig. 1 (approximately in circular order from 'happy' counterclockwise). Not verified against the primary; confidence ~0.8 on completeness/exact wording."
+      }
+    ],
+    "verification_notes": "Citation metadata (title, author, 1980, DOI) verified via Semantic Scholar. Abstract and all value sets could not be fetched (PsycNet JS-only; abstract elided). Dimensions, octants and the 28 words are from knowledge."
+  },
+  {
+    "id": "pad_model",
+    "name": "PAD (Pleasure-Arousal-Dominance) emotional state model",
+    "family": "emotion",
+    "citation": {
+      "authors": "Mehrabian, A.",
+      "year": 1996,
+      "title": "Pleasure-arousal-dominance: A general framework for describing and measuring individual differences in Temperament",
+      "venue": "Current Psychology, 14(4), 261-292",
+      "url": "https://doi.org/10.1007/BF02686918",
+      "doi": "10.1007/BF02686918",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.85,
+    "fetched_urls": [
+      "https://link.springer.com/article/10.1007/BF02686918",
+      "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1007/BF02686918?fields=title,abstract,year,venue,authors,externalIds"
+    ],
+    "summary": "Any emotional state (and, averaged over time, temperament) can be described by three nearly independent bipolar dimensions: pleasure-displeasure, arousal-nonarousal, dominance-submissiveness. Originally Mehrabian & Russell (1974) 'An Approach to Environmental Psychology' (MIT Press). Unit of analysis: the emotional state as a point in a 3-D space; octants name temperament types.",
+    "constructs": [
+      {
+        "id": "pad_dimensions",
+        "label": "Three dimensions",
+        "type": "dimension",
+        "values": ["pleasure-displeasure (P)", "arousal-nonarousal (A)", "dominance-submissiveness (D)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Title verified via Semantic Scholar confirms the three dimension names; polar labels from knowledge."
+      },
+      {
+        "id": "pad_octants",
+        "label": "Eight octant temperament labels (Mehrabian 1996)",
+        "type": "category_set",
+        "values": ["exuberant (+P +A +D)", "bored (-P -A -D)", "dependent (+P +A -D)", "disdainful (-P -A +D)", "relaxed (+P -A +D)", "anxious (-P +A -D)", "docile (+P -A -D)", "hostile (-P +A +D)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Listed as four opposed pairs. From memory; Springer page redirected to an IdP and the abstract was elided from Semantic Scholar. Confidence ~0.85."
+      }
+    ],
+    "verification_notes": "Title, author, year, DOI verified via Semantic Scholar metadata. Volume/pages and the octant labels are from knowledge; 1974 Mehrabian & Russell citation from knowledge."
+  },
+  {
+    "id": "occ_model",
+    "name": "OCC model (Ortony, Clore & Collins) — cognitive structure of emotions",
+    "family": "emotion",
+    "citation": {
+      "authors": "Ortony, A., Clore, G. L., & Collins, A.",
+      "year": 1988,
+      "title": "The Cognitive Structure of Emotions",
+      "venue": "Cambridge University Press",
+      "url": "https://doi.org/10.1017/CBO9780511571299",
+      "doi": "10.1017/CBO9780511571299",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "KNOWLEDGE",
+    "confidence": 0.9,
+    "fetched_urls": [],
+    "summary": "Emotions are valenced reactions to one of three kinds of eliciting situation — consequences of events (appraised against goals), actions of agents (appraised against standards), and aspects of objects (appraised against attitudes/tastes) — yielding 22 emotion types organized in a branching tree with compound branches. Unit of analysis: the emotion type as a cognitively specified eliciting-condition class, not a feeling word.",
+    "constructs": [
+      {
+        "id": "occ_branches",
+        "label": "Top-level appraisal branches",
+        "type": "appraisal",
+        "values": ["consequences of events (goals; pleased/displeased)", "actions of agents (standards; approving/disapproving)", "aspects of objects (attitudes; liking/disliking)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Both Cambridge URL guesses and the Semantic Scholar DOI lookup failed (500 / 404). Structure from knowledge; confidence ~0.9."
+      },
+      {
+        "id": "occ_well_being",
+        "label": "Well-being (consequences for self, prospects irrelevant)",
+        "type": "category_set",
+        "values": ["joy", "distress"],
+        "value_source": "KNOWLEDGE",
+        "notes": ""
+      },
+      {
+        "id": "occ_fortunes_of_others",
+        "label": "Fortunes-of-others (consequences for other)",
+        "type": "category_set",
+        "values": ["happy-for", "resentment", "gloating", "pity"],
+        "value_source": "KNOWLEDGE",
+        "notes": "happy-for and resentment = desirable for other; gloating and pity = undesirable for other. 'pity' is also written 'sorry-for' in the book."
+      },
+      {
+        "id": "occ_prospect_based",
+        "label": "Prospect-based (consequences for self, prospects relevant)",
+        "type": "category_set",
+        "values": ["hope", "fear", "satisfaction", "fears-confirmed", "relief", "disappointment"],
+        "value_source": "KNOWLEDGE",
+        "notes": "satisfaction/fears-confirmed = confirmed prospect; relief/disappointment = disconfirmed prospect."
+      },
+      {
+        "id": "occ_attribution",
+        "label": "Attribution (actions of agents)",
+        "type": "category_set",
+        "values": ["pride", "shame", "admiration", "reproach"],
+        "value_source": "KNOWLEDGE",
+        "notes": "pride/shame = self agent; admiration/reproach = other agent."
+      },
+      {
+        "id": "occ_attraction",
+        "label": "Attraction (aspects of objects)",
+        "type": "category_set",
+        "values": ["love", "hate"],
+        "value_source": "KNOWLEDGE",
+        "notes": ""
+      },
+      {
+        "id": "occ_compound",
+        "label": "Well-being/attribution compounds",
+        "type": "category_set",
+        "values": ["gratification", "remorse", "gratitude", "anger"],
+        "value_source": "KNOWLEDGE",
+        "notes": "gratification = pride + joy; remorse = shame + distress; gratitude = admiration + joy; anger = reproach + distress. Total across groups = 22 types."
+      }
+    ],
+    "verification_notes": "No primary or secondary page could be fetched (Cambridge 500, Semantic Scholar 404). All content from knowledge; the 22-type structure is standard and widely reproduced, confidence ~0.9. ISBN not recorded."
+  },
+  {
+    "id": "scherer_cpm_grid_gew",
+    "name": "Scherer Component Process Model, GRID instrument, and Geneva Emotion Wheel",
+    "family": "emotion",
+    "citation": {
+      "authors": "Fontaine, J. R. J., Scherer, K. R., Roesch, E. B., & Ellsworth, P. C.",
+      "year": 2007,
+      "title": "The World of Emotions is not Two-Dimensional",
+      "venue": "Psychological Science, 18(12), 1050-1057",
+      "url": "https://doi.org/10.1111/j.1467-9280.2007.02024.x",
+      "doi": "10.1111/j.1467-9280.2007.02024.x",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED_SECONDARY",
+    "confidence": 0.8,
+    "fetched_urls": [
+      "https://journals.sagepub.com/doi/10.1111/j.1467-9280.2007.02024.x",
+      "https://api.semanticscholar.org/graph/v1/paper/DOI:10.1111/j.1467-9280.2007.02024.x?fields=title,abstract,year,venue,authors,externalIds",
+      "https://www.unige.ch/cisa/gew"
+    ],
+    "summary": "Emotion is an episode of synchronized changes across organismic subsystems (components) driven by a sequence of appraisal checks (CPM). The GRID study rated 24 emotion terms on 144 features across six components in three languages and found four dimensions, not two. Companion: Fontaine, Scherer & Soriano (Eds.) 2013, Components of Emotional Meaning: A Sourcebook (OUP); Scherer 2005 'What are emotions? And how can they be measured?' Social Science Information 44(4), 693-727 (GEW). Unit of analysis: the emotion episode / emotion word's component-feature profile.",
+    "constructs": [
+      {
+        "id": "cpm_components",
+        "label": "Five CPM components (organismic subsystems)",
+        "type": "component",
+        "values": ["cognitive component (appraisal)", "neurophysiological component (bodily symptoms)", "motivational component (action tendencies)", "motor expression component (facial and vocal expression)", "subjective feeling component (emotional experience)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Scherer's canonical five. The GRID instrument adds emotion regulation as a sixth feature block (verified: the 2007 abstract names 'six emotion components, including appraisals, physiological changes, expressions, action tendencies, subjective experience, and emotion regulation')."
+      },
+      {
+        "id": "grid_dimensions",
+        "label": "Four GRID dimensions (in order of importance)",
+        "type": "dimension",
+        "values": ["evaluation-pleasantness", "potency-control", "activation-arousal", "unpredictability"],
+        "value_source": "FETCHED",
+        "notes": "Verified from the 2007 abstract via Semantic Scholar: 'evaluation-pleasantness, potency-control, activation-arousal, and unpredictability'."
+      },
+      {
+        "id": "grid_24_terms",
+        "label": "24 GRID emotion terms",
+        "type": "category_set",
+        "values": ["joy", "pleasure", "pride", "happiness", "contentment", "love", "interest", "surprise", "compassion", "anger", "irritation", "contempt", "disgust", "hate", "jealousy", "anxiety", "stress", "fear", "despair", "sadness", "disappointment", "shame", "guilt", "being hurt"],
+        "value_source": "KNOWLEDGE",
+        "notes": "From memory of the GRID term set; not verified (SAGE 403; abstract does not list terms). Confidence ~0.8."
+      },
+      {
+        "id": "cpm_secs",
+        "label": "Stimulus evaluation checks (SECs), four appraisal objectives",
+        "type": "appraisal",
+        "values": ["relevance (novelty: suddenness, familiarity, predictability; intrinsic pleasantness; goal/need relevance)", "implications (causal attribution: agent, motive; outcome probability; discrepancy from expectation; goal/need conduciveness; urgency)", "coping potential (control; power; adjustment)", "normative significance (internal standards compatibility; external standards compatibility)"],
+        "value_source": "KNOWLEDGE",
+        "notes": "Scherer (2001) 'Appraisal considered as a process of multilevel sequential checking'. Sub-checks from memory; confidence ~0.85."
+      },
+      {
+        "id": "gew_20_families",
+        "label": "Geneva Emotion Wheel (v3.0) — 20 emotion families",
+        "type": "category_set",
+        "values": ["Interest", "Amusement", "Pride", "Joy", "Pleasure", "Contentment", "Love", "Admiration", "Relief", "Compassion", "Sadness", "Guilt", "Regret", "Shame", "Disappointment", "Fear", "Disgust", "Contempt", "Hate", "Anger"],
+        "value_source": "KNOWLEDGE",
+        "notes": "unige.ch/cisa/gew confirmed: 20 families plus 'None' and 'Other', arranged by 'two major dimensions of emotional experience' (valence x control/power from knowledge), five intensity degrees shown as circle sizes; labels appear only in gew.png (not readable) and GEW_English_05042013.docx (not fetched). Family labels from memory; confidence ~0.8."
+      }
+    ],
+    "verification_notes": "Verified: 2007 citation metadata, the four dimension names, six GRID components, GEW family count and structure, GEW citations (Scherer 2005; Scherer, Shuman, Fontaine & Soriano 2013 'The GRID meets the Wheel', pp. 281-298). Not verified: 24 GRID terms, 20 GEW labels, SEC sub-checks, five CPM component names, volume/pages."
+  },
+  {
+    "id": "barrett_constructed_emotion",
+    "name": "Barrett theory of constructed emotion",
+    "family": "emotion",
+    "citation": {
+      "authors": "Barrett, L. F.",
+      "year": 2017,
+      "title": "The theory of constructed emotion: an active inference account of interoception and categorization",
+      "venue": "Social Cognitive and Affective Neuroscience, 12(1), 1-23",
+      "url": "https://academic.oup.com/scan/article/12/1/1/2823712",
+      "doi": "10.1093/scan/nsw154",
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 0.95,
+    "fetched_urls": ["https://academic.oup.com/scan/article/12/1/1/2823712"],
+    "summary": "Emotions are not biologically basic categories but are constructed in the moment: the brain's internal model issues predictions (active inference) that regulate the body (allostasis), interoceptive signals are experienced as low-dimensional affect, and conceptual knowledge categorizes these sensations into emotion instances. Unit of analysis: the constructed emotional instance/event; the framework supplies process constructs, NOT a finite value list of emotions.",
+    "constructs": [
+      {
+        "id": "core_affect",
+        "label": "Core affect",
+        "type": "dimension",
+        "values": ["valence (pleasant-unpleasant)", "arousal (activated-deactivated)"],
+        "value_source": "FETCHED",
+        "notes": "Paper: interoceptive sensations are experienced as 'lower dimensional feelings of affect'; valence and arousal are basic features of consciousness not unique to emotion. The term 'core affect' is defined in Barrett's earlier work; the two dimension names are a standard rendering."
+      },
+      {
+        "id": "interoception",
+        "label": "Interoception",
+        "type": "process",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "Verbatim: 'Collectively, the representation and utilization of these internal sensations is called interoception.' Central to the brain's internal model of the body's internal milieu."
+      },
+      {
+        "id": "concepts_categorization",
+        "label": "Concepts / categorization",
+        "type": "process",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "Verbatim: 'a concept is the population of representations that correspond to those events or objects.' Concepts are distributed neural patterns that predict sensory events and guide action; an emotion instance is a categorization of affective/interoceptive sensation."
+      },
+      {
+        "id": "active_inference_prediction",
+        "label": "Active inference / predictive processing / allostasis",
+        "type": "process",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "Paper treats 'predictive coding, active inference, or belief propagation' as names for the same hypothesis: simulations are predictions, prediction error is feedback that updates them."
+      },
+      {
+        "id": "emotional_granularity",
+        "label": "Emotional granularity",
+        "type": "dimension",
+        "values": null,
+        "value_source": "KNOWLEDGE",
+        "notes": "Not found in the first 100k characters of the article; from Barrett's broader work: the degree to which a person differentiates emotional experience with precise, distinct concepts (high vs low granularity). Individual-difference construct, not a value set."
+      }
+    ],
+    "verification_notes": "Citation metadata and definitions of interoception, concept, and active inference verified verbatim from the OUP full text. Emotional granularity not verified in the portion read. No finite emotion-label list exists in this framework by design."
+  },
+  {
+    "id": "anthropic_2026_emotion_concepts",
+    "name": "Anthropic 2026 — Emotion concepts and their function in a large language model",
+    "family": "emotion",
+    "citation": {
+      "authors": "Anthropic Interpretability team (individual authors not listed on the research post)",
+      "year": 2026,
+      "title": "Emotion concepts and their function in a large language model",
+      "venue": "Anthropic research post (Apr 2, 2026); full paper at Transformer Circuits",
+      "url": "https://www.anthropic.com/research/emotion-concepts-function",
+      "doi": null,
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 0.9,
+    "fetched_urls": [
+      "https://www.anthropic.com/research/emotion-concepts-function",
+      "https://transformer-circuits.pub/2026/emotions/index.html"
+    ],
+    "summary": "Reports that Claude Sonnet 4.5 contains 'emotion vectors' — internal activation patterns for 171 emotion concepts, elicited by having the model write stories about characters feeling each emotion — that activate in contexts where a human would feel that emotion, are organized similarly to human emotion similarity structure, and are functional (steering 'desperate' raised blackmail/reward-hacking rates; steering 'calm' lowered them). Explicitly does not claim subjective experience. Unit of analysis: an emotion-concept representation (vector) in model activations.",
+    "constructs": [
+      {
+        "id": "anthropic_171_emotion_concepts",
+        "label": "171 emotion concepts (full list in the paper only)",
+        "type": "category_set",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "The research post states 171 emotion words were compiled ('from happy and afraid to brooding and proud') but does not give the list; the full paper at https://transformer-circuits.pub/2026/emotions/index.html exceeded the fetch size limit (>10 MB) and could not be read. The complete 171-item list is therefore NOT reproduced here and must be extracted from the paper directly. No guessing."
+      },
+      {
+        "id": "anthropic_emotion_words_named_in_post",
+        "label": "Emotion words named verbatim in the research post (examples only, not the taxonomy)",
+        "type": "category_set",
+        "values": ["happy", "sorry", "frustrated", "anxious", "afraid", "brooding", "proud", "guilt", "vindicated", "satisfied", "sad", "calm", "loving", "angry", "surprised", "desperate", "desperation", "panic", "enthusiastic", "exasperated", "broody", "gloomy", "reflective", "nervous", "anger", "gleeful"],
+        "value_source": "FETCHED",
+        "notes": "Every emotion word appearing in the post, as extracted. These are illustrative mentions, not a published subset list. 'blissful' (reported in secondary coverage) does NOT appear in the post."
+      },
+      {
+        "id": "anthropic_emotion_vector",
+        "label": "Emotion vector (functional emotion representation)",
+        "type": "process",
+        "values": null,
+        "value_source": "FETCHED",
+        "notes": "Direction in activation space per emotion concept; activates contextually; causally steers behavior; mainly local (tracks the emotion most relevant to current output); inherited from pretraining, with post-training changing activation frequency. Model studied: Claude Sonnet 4.5 (blackmail case study used an earlier unreleased snapshot)."
+      }
+    ],
+    "verification_notes": "Research post fetched and quoted. The 171-concept list itself was NOT retrieved (paper page too large for the fetch tool); treat the full taxonomy as pending. Secondary coverage (not used) is inconsistent on model version."
+  },
+  {
+    "id": "hume_expression_measurement",
+    "name": "Hume AI Expression Measurement taxonomy (semantic space theory)",
+    "family": "emotion",
+    "citation": {
+      "authors": "Hume AI (Cowen, A. S., et al.)",
+      "year": 2026,
+      "title": "Expression Measurement API — Measurements (video) and Measurements (audio)",
+      "venue": "Hume AI developer documentation (dev.hume.ai)",
+      "url": "https://dev.hume.ai/expression-measurement/docs/video/measurements",
+      "doi": null,
+      "accessed": "2026-10-17"
+    },
+    "source_status": "FETCHED",
+    "confidence": 0.95,
+    "fetched_urls": [
+      "https://dev.hume.ai/docs/expression-measurement/overview",
+      "https://dev.hume.ai/llms.txt",
+      "https://dev.hume.ai/expression-measurement/llms.txt",
+      "https://dev.hume.ai/expression-measurement/docs/video/measurements.md",
+      "https://dev.hume.ai/expression-measurement/docs/audio/measurements.md"
+    ],
+    "summary": "Hume's Expression Measurement API scores expressions along many continuous dimensions derived from semantic space theory (Cowen & Keltner), returning only scores above a cutoff. As of the current docs the taxonomy differs by modality: video/face endpoints use 48 expression names plus 27 facial 'description' names; audio/speech endpoints use 414 expression names plus 190 voice-attribute names. Unit of analysis: a measured face (per frame) or a speech segment, each scored on every dimension.",
+    "constructs": [
+      {
+        "id": "hume_facial_expressions_48",
+        "label": "48 facial expression names (video: image upload and video realtime endpoints)",
+        "type": "dimension",
+        "values": ["admiration", "adoration", "aesthetic appreciation", "amusement", "anger", "anxiety", "awe", "awkwardness", "boredom", "calmness", "concentration", "confusion", "contemplation", "contempt", "contentment", "craving", "determination", "disappointment", "disgust", "distress", "doubt", "ecstasy", "embarrassment", "empathic pain", "entrancement", "envy", "excitement", "fear", "guilt", "horror", "interest", "joy", "love", "nostalgia", "pain", "pride", "realization", "relief", "romance", "sadness", "satisfaction", "sexual desire", "shame", "surprise (negative)", "surprise (positive)", "sympathy", "tiredness", "triumph"],
+        "value_source": "FETCHED",
+        "notes": "Verbatim and complete from the video measurements page. Modality: facial expression (images/video). Each is a continuous score, not a category. This 48-item set is the classic Hume facial-expression taxonomy; the former 53-item speech-prosody set is no longer documented as such (see audio construct)."
+      },
+      {
+        "id": "hume_facial_descriptions_27",
+        "label": "27 facial description names (video endpoints)",
+        "type": "dimension",
+        "values": ["beaming", "biting lip", "cheering", "cringe", "cry", "eyes closed", "face in hands", "frown", "gasp", "glare", "glaring", "grimace", "grin", "jaw drop", "laugh", "licking lip", "pout", "scowl", "smile", "smirk", "snarl", "squint", "sulking", "tongue out", "wide-eyed", "wince", "wrinkled nose"],
+        "value_source": "FETCHED",
+        "notes": "Verbatim and complete. Visible facial actions, not emotion labels."
+      },
+      {
+        "id": "hume_audio_expressions_414",
+        "label": "414 audio expression names (speech endpoints: audio upload and audio realtime)",
+        "type": "dimension",
+        "values": ["abhorrence", "dumbfoundedness", "feeling uplifted", "pondering", "admiration", "eagerness", "feeling upset", "pride", "adoration", "earnestness", "feeling valued", "pride in country", "aesthetic appreciation", "ecstasy", "feeling violated", "pride in family", "affection", "egotism", "feeling vulnerable", "pride in self", "aggression", "elation", "feeling worn out", "puzzlement", "agitation", "elevation", "fierce loyalty", "rage", "agony", "embarrassment", "flinching", "rapture", "alarm", "empathic pain", "focus", "redemption", "amazement", "empowerment", "fondness", "regret", "amusement", "enchantment", "freezing with terror", "relaxation", "anger", "enjoyment", "frustration", "releasing tension", "anguish", "enthusiasm", "fulfillment", "relief", "anticipation", "entrancement", "fuming", "remorse", "anxiety", "envy", "fury", "respect"],
+        "value_source": "FETCHED",
+        "notes": "PARTIAL: only the first 60 of 414 names are reproduced (read row-wise from a four-column table, hence the interleaved alphabetical order). The docs do not separate speech prosody / vocal burst / language; audio 'Expressions' covers what is expressed in the speech, and 'Voice attributes' (190 names, not reproduced) covers manner of speaking, timbre and background sounds. The complete 414-item list is on the audio measurements page."
+      },
+      {
+        "id": "hume_modality_structure",
+        "label": "Modality structure",
+        "type": "code_system",
+        "values": ["video/face: 48 expressions + 27 descriptions", "audio/speech: 414 expressions + 190 voice attributes"],
+        "value_source": "FETCHED",
+        "notes": "Docs state 'The video and audio endpoints use different expression names.' Scores are returned only when above a cutoff. The docs pages fetched do not themselves cite semantic space theory or Cowen & Keltner; that attribution is from Hume's research pages (not fetched)."
+      }
+    ],
+    "verification_notes": "48 facial expressions and 27 descriptions verified complete and verbatim. Audio list verified for count (414/190) and first 60 names only. The older documented 53-dimension prosody list and 48-dimension vocal-burst/language lists are not present in current docs, so they are not reproduced. Attribution to Cowen & Keltner semantic space theory is from knowledge."
+  }
+]
