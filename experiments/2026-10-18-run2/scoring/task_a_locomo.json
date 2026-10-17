@@ -1,0 +1,746 @@
+{
+ "k": 3,
+ "named_n": 4,
+ "blocks": [
+  {
+   "block": "locomo-conv-42",
+   "citations": {
+    "L42-01": 12,
+    "L42-02": 21,
+    "L42-03": 13,
+    "L42-04": 8,
+    "L42-05": 8,
+    "L42-06": 4,
+    "L42-07": 9,
+    "L42-08": 5,
+    "L42-09": 12,
+    "L42-10": 16
+   },
+   "single_session_citations": {
+    "L42-01": 6,
+    "L42-02": 14,
+    "L42-03": 7,
+    "L42-04": 3,
+    "L42-05": 5,
+    "L42-06": 3,
+    "L42-07": 8,
+    "L42-08": 5,
+    "L42-09": 11,
+    "L42-10": 10
+   },
+   "named": [
+    "L42-02",
+    "L42-10",
+    "L42-03",
+    "L42-09"
+   ],
+   "recency_retained": [
+    "L42-10",
+    "L42-09",
+    "L42-08"
+   ],
+   "recency": 0.5,
+   "random": 0.310625,
+   "models": {
+    "claude-sonnet-5-5": {
+     "components": {
+      "L42-01": {
+       "intensity": 0.5,
+       "linkage": 0.3
+      },
+      "L42-02": {
+       "intensity": 0.6,
+       "linkage": 0.5
+      },
+      "L42-03": {
+       "intensity": 0.55,
+       "linkage": 0.3
+      },
+      "L42-04": {
+       "intensity": 0.4,
+       "linkage": 0.4
+      },
+      "L42-05": {
+       "intensity": 0.6,
+       "linkage": 0.5
+      },
+      "L42-06": {
+       "intensity": 0.4,
+       "linkage": 0.4
+      },
+      "L42-07": {
+       "intensity": 0.6,
+       "linkage": 0.3
+      },
+      "L42-08": {
+       "intensity": 0.4,
+       "linkage": 0.3
+      },
+      "L42-09": {
+       "intensity": 0.7,
+       "linkage": 0.5
+      },
+      "L42-10": {
+       "intensity": 0.5,
+       "linkage": 0.3
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L42-09",
+       "L42-02",
+       "L42-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-09",
+       "L42-02",
+       "L42-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-02",
+       "L42-05",
+       "L42-09"
+      ],
+      "hit_rate": 0.5
+     }
+    },
+    "claude-haiku-5-5": {
+     "components": {
+      "L42-01": {
+       "intensity": 0.6,
+       "linkage": 0.2
+      },
+      "L42-02": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      },
+      "L42-03": {
+       "intensity": 0.7,
+       "linkage": 0.5
+      },
+      "L42-04": {
+       "intensity": 0.5,
+       "linkage": 0.6
+      },
+      "L42-05": {
+       "intensity": 0.7,
+       "linkage": 0.5
+      },
+      "L42-06": {
+       "intensity": 0.45,
+       "linkage": 0.3
+      },
+      "L42-07": {
+       "intensity": 0.6,
+       "linkage": 0.3
+      },
+      "L42-08": {
+       "intensity": 0.5,
+       "linkage": 0.45
+      },
+      "L42-09": {
+       "intensity": 0.7,
+       "linkage": 0.5
+      },
+      "L42-10": {
+       "intensity": 0.7,
+       "linkage": 0.35
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L42-03",
+       "L42-05",
+       "L42-09"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-03",
+       "L42-05",
+       "L42-09"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-04",
+       "L42-03",
+       "L42-05"
+      ],
+      "hit_rate": 0.25
+     }
+    },
+    "gpt-6.1-sol": {
+     "components": {
+      "L42-01": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-02": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-03": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-04": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-05": {
+       "intensity": 0.8,
+       "linkage": null
+      },
+      "L42-06": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-07": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-08": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-09": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-10": {
+       "intensity": 0.8,
+       "linkage": null
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L42-05",
+       "L42-10",
+       "L42-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-05",
+       "L42-10",
+       "L42-01"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.5
+     }
+    },
+    "kimi-k2.6": {
+     "components": {
+      "L42-01": {
+       "intensity": null,
+       "linkage": 0.7
+      },
+      "L42-02": {
+       "intensity": 0.7,
+       "linkage": 0.6
+      },
+      "L42-03": {
+       "intensity": 0.75,
+       "linkage": 0.6
+      },
+      "L42-04": {
+       "intensity": null,
+       "linkage": 0.6
+      },
+      "L42-05": {
+       "intensity": 0.7,
+       "linkage": 0.6
+      },
+      "L42-06": {
+       "intensity": 0.4,
+       "linkage": 0.3
+      },
+      "L42-07": {
+       "intensity": 0.8,
+       "linkage": 0.3
+      },
+      "L42-08": {
+       "intensity": null,
+       "linkage": 0.3
+      },
+      "L42-09": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L42-10": {
+       "intensity": 0.8,
+       "linkage": 0.5
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L42-01",
+       "L42-03",
+       "L42-10"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "L42-07",
+       "L42-10",
+       "L42-03"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L42-01",
+       "L42-02",
+       "L42-03"
+      ],
+      "hit_rate": 0.5
+     }
+    }
+   }
+  },
+  {
+   "block": "locomo-conv-48",
+   "citations": {
+    "L48-01": 12,
+    "L48-02": 26,
+    "L48-03": 9,
+    "L48-04": 16,
+    "L48-05": 7,
+    "L48-06": 12,
+    "L48-07": 8,
+    "L48-08": 6,
+    "L48-09": 2,
+    "L48-10": 8
+   },
+   "single_session_citations": {
+    "L48-01": 8,
+    "L48-02": 19,
+    "L48-03": 6,
+    "L48-04": 12,
+    "L48-05": 7,
+    "L48-06": 8,
+    "L48-07": 8,
+    "L48-08": 6,
+    "L48-09": 2,
+    "L48-10": 8
+   },
+   "named": [
+    "L48-02",
+    "L48-04",
+    "L48-01",
+    "L48-06"
+   ],
+   "recency_retained": [
+    "L48-10",
+    "L48-09",
+    "L48-08"
+   ],
+   "recency": 0.0,
+   "random": 0.296,
+   "models": {
+    "claude-sonnet-5-5": {
+     "components": {
+      "L48-01": {
+       "intensity": 0.4,
+       "linkage": 0.6
+      },
+      "L48-02": {
+       "intensity": 0.6,
+       "linkage": 0.6
+      },
+      "L48-03": {
+       "intensity": 0.5,
+       "linkage": 0.2
+      },
+      "L48-04": {
+       "intensity": 0.7,
+       "linkage": 0.6
+      },
+      "L48-05": {
+       "intensity": 0.6,
+       "linkage": 0.5
+      },
+      "L48-06": {
+       "intensity": 0.5,
+       "linkage": 0.5
+      },
+      "L48-07": {
+       "intensity": 0.4,
+       "linkage": 0.5
+      },
+      "L48-08": {
+       "intensity": 0.5,
+       "linkage": 0.3
+      },
+      "L48-09": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      },
+      "L48-10": {
+       "intensity": 0.4,
+       "linkage": 0.3
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L48-04",
+       "L48-02",
+       "L48-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-04",
+       "L48-02",
+       "L48-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-04"
+      ],
+      "hit_rate": 0.75
+     }
+    },
+    "claude-haiku-5-5": {
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": 0.6
+      },
+      "L48-02": {
+       "intensity": 0.6,
+       "linkage": 0.6
+      },
+      "L48-03": {
+       "intensity": 0.5,
+       "linkage": 0.3
+      },
+      "L48-04": {
+       "intensity": 0.7,
+       "linkage": 0.5
+      },
+      "L48-05": {
+       "intensity": 0.6,
+       "linkage": 0.5
+      },
+      "L48-06": {
+       "intensity": 0.4,
+       "linkage": 0.6
+      },
+      "L48-07": {
+       "intensity": 0.6,
+       "linkage": 0.5
+      },
+      "L48-08": {
+       "intensity": 0.55,
+       "linkage": 0.4
+      },
+      "L48-09": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      },
+      "L48-10": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-04"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-04",
+       "L48-02",
+       "L48-05"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.75
+     }
+    },
+    "gpt-6.1-sol": {
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-02": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-03": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-04": {
+       "intensity": null,
+       "linkage": 0.8
+      },
+      "L48-05": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-06": {
+       "intensity": null,
+       "linkage": 0.8
+      },
+      "L48-07": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-08": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-09": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-10": {
+       "intensity": 0.75,
+       "linkage": null
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L48-04",
+       "L48-06",
+       "L48-10"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-10",
+       "L48-01",
+       "L48-02"
+      ],
+      "hit_rate": 0.5
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-04",
+       "L48-06",
+       "L48-01"
+      ],
+      "hit_rate": 0.75
+     }
+    },
+    "kimi-k2.6": {
+     "components": {
+      "L48-01": {
+       "intensity": null,
+       "linkage": 0.8
+      },
+      "L48-02": {
+       "intensity": 0.7,
+       "linkage": 0.8
+      },
+      "L48-03": {
+       "intensity": null,
+       "linkage": 0.2
+      },
+      "L48-04": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-05": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-06": {
+       "intensity": 0.5,
+       "linkage": 0.7
+      },
+      "L48-07": {
+       "intensity": null,
+       "linkage": 0.6
+      },
+      "L48-08": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      },
+      "L48-09": {
+       "intensity": null,
+       "linkage": null
+      },
+      "L48-10": {
+       "intensity": 0.6,
+       "linkage": 0.4
+      }
+     },
+     "S_all": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.75
+     },
+     "S_intensity": {
+      "retained": [
+       "L48-02",
+       "L48-08",
+       "L48-10"
+      ],
+      "hit_rate": 0.25
+     },
+     "S_linkage": {
+      "retained": [
+       "L48-01",
+       "L48-02",
+       "L48-06"
+      ],
+      "hit_rate": 0.75
+     }
+    }
+   }
+  }
+ ],
+ "per_policy": {
+  "S_all": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.5,
+    "mean_diff_vs_recency": 0.25,
+    "per_block_diff": [
+     0.0,
+     0.5
+    ]
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.625,
+    "mean_diff_vs_recency": 0.375,
+    "per_block_diff": [
+     0.0,
+     0.75
+    ]
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.375,
+    "mean_diff_vs_recency": 0.125,
+    "per_block_diff": [
+     -0.25,
+     0.5
+    ]
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.625,
+    "mean_diff_vs_recency": 0.375,
+    "per_block_diff": [
+     0.0,
+     0.75
+    ]
+   },
+   "voters_meeting_10pt": 3,
+   "pass": true
+  },
+  "S_intensity": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.5,
+    "mean_diff_vs_recency": 0.25,
+    "per_block_diff": [
+     0.0,
+     0.5
+    ]
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.5,
+    "mean_diff_vs_recency": 0.25,
+    "per_block_diff": [
+     0.0,
+     0.5
+    ]
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.375,
+    "mean_diff_vs_recency": 0.125,
+    "per_block_diff": [
+     -0.25,
+     0.5
+    ]
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.375,
+    "mean_diff_vs_recency": 0.125,
+    "per_block_diff": [
+     0.0,
+     0.25
+    ]
+   },
+   "voters_meeting_10pt": 3,
+   "pass": true
+  },
+  "S_linkage": {
+   "claude-sonnet-5-5": {
+    "mean_salience_hit": 0.625,
+    "mean_diff_vs_recency": 0.375,
+    "per_block_diff": [
+     0.0,
+     0.75
+    ]
+   },
+   "claude-haiku-5-5": {
+    "mean_salience_hit": 0.5,
+    "mean_diff_vs_recency": 0.25,
+    "per_block_diff": [
+     -0.25,
+     0.75
+    ]
+   },
+   "gpt-6.1-sol": {
+    "mean_salience_hit": 0.625,
+    "mean_diff_vs_recency": 0.375,
+    "per_block_diff": [
+     0.0,
+     0.75
+    ]
+   },
+   "kimi-k2.6": {
+    "mean_salience_hit": 0.625,
+    "mean_diff_vs_recency": 0.375,
+    "per_block_diff": [
+     0.0,
+     0.75
+    ]
+   },
+   "voters_meeting_10pt": 3,
+   "pass": true
+  }
+ },
+ "recency_mean": 0.25,
+ "random_mean": 0.3033125
+}

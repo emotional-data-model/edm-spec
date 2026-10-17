@@ -9,12 +9,15 @@ Usage (repo root; keys from .env):
   python -P experiments/2026-10-18-run2/scripts/run_extraction.py                         # full run, resumes
   python -P experiments/2026-10-18-run2/scripts/run_extraction.py --models gpt-5.4-mini   # one extractor
 """
-import argparse, asyncio, json, os, sys, time, hashlib, random
+import argparse, asyncio, json, os, sys, time, hashlib, random, importlib.util
 from collections import defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__)); EXP = os.path.dirname(HERE); EXPS = os.path.dirname(EXP); ROOT = os.path.dirname(EXPS)
 RUN1 = os.path.join(EXPS, '2026-10-17')
-sys.path.insert(0, os.path.join(RUN1, 'scripts'))
-from run_extraction import Provider, Spend, Checkpoint, price_of, parse_json  # noqa: E402  (run-1 helpers, unchanged)
+# run-1 helpers (Provider, Spend, Checkpoint, price_of, parse_json), unchanged, loaded under a distinct module name so that
+# this file can also be imported (judge.py) without a name collision
+_spec = importlib.util.spec_from_file_location('run1_extraction', os.path.join(RUN1, 'scripts', 'run_extraction.py'))
+_r1 = importlib.util.module_from_spec(_spec); sys.modules['run1_extraction'] = _r1; _spec.loader.exec_module(_r1)
+Provider, Spend, Checkpoint, price_of, parse_json = _r1.Provider, _r1.Spend, _r1.Checkpoint, _r1.price_of, _r1.parse_json
 
 MODELS = json.load(open(os.path.join(EXP, 'models.json'), encoding='utf-8'))
 BUDGET = MODELS['budget_usd']; RESERVE = {'judge': 18.0}
@@ -39,6 +42,25 @@ def load_texts():
         if hashlib.sha256(r['text'].encode('utf-8')).hexdigest() != man[tid]['sha256']: raise SystemExit(f'sha256 mismatch for {tid}; run aborted')
         r['arm'] = man[tid]['arm']
     return rows
+
+
+def parse_json2(text):
+    """run-1 parser first; if the output holds several top-level JSON objects (pilot: Sonnet 5.5 emitted an object, then
+    'Corrected output:' and a second object), take the LAST complete object — the model's own final answer. Never re-sampled.
+    Logged as deviation R2-D1 (RESULTS.md section 0.1)."""
+    try: return parse_json(text)
+    except Exception:
+        dec = json.JSONDecoder(); objs = []; i = 0
+        while True:
+            j = text.find('{', i)
+            if j < 0: break
+            try:
+                o, end = dec.raw_decode(text, j)
+                if isinstance(o, dict): objs.append(o)
+                i = end
+            except ValueError: i = j + 1
+        if not objs: raise
+        return objs[-1]
 
 
 def canon(parsed, arm):
@@ -112,7 +134,7 @@ async def worker(prov, arm, jobs, ck, spend, sem, texts, stats, label):
         if (text_id, repeat) in ck.done: continue
         cost = price_of(prov.entry, usage)
         parsed, perr, cn, missing = None, None, None, None
-        try: parsed = parse_json(raw); cn, missing = canon(parsed, arm)
+        try: parsed = parse_json2(raw); cn, missing = canon(parsed, arm)
         except Exception as e: perr = repr(e)[:200]
         rec = {'text_id': text_id, 'repeat': repeat, 'prompt_arm': arm, 'model': prov.model, 'served_model': served, 'provider': prov.kind, 'request_sha256': req_sha, 'ts': time.time(),
                'latency_s': round(time.time() - t0, 2), 'usage': usage, 'cost_usd': round(cost, 6), 'raw_text': raw, 'parsed': parsed, 'canon': cn, 'missing_keys': missing,

@@ -1,0 +1,6046 @@
+{
+ "counts": {
+  "claude-sonnet-5-5": {
+   "calls": 418,
+   "valid": 416,
+   "invalid": 2
+  },
+  "claude-haiku-5-5": {
+   "calls": 329,
+   "valid": 329
+  },
+  "gpt-6.1-sol": {
+   "calls": 88,
+   "valid": 88
+  },
+  "kimi-k2.6": {
+   "calls": 264,
+   "valid": 264
+  },
+  "gpt-5.4-mini": {
+   "calls": 765,
+   "valid": 765
+  }
+ },
+ "texts_per_arm": {
+  "synthetic": 28,
+  "conversational": 27,
+  "pepys": 26
+ },
+ "judged_units": 0,
+ "thresholds": {
+  "repeat": 0.8,
+  "cross": 0.6
+ },
+ "voters": [
+  "claude-sonnet-5-5",
+  "gpt-6.1-sol",
+  "kimi-k2.6"
+ ],
+ "two_voter_sensitivity": [
+  "claude-sonnet-5-5",
+  "gpt-6.1-sol"
+ ],
+ "reported": [
+  "claude-haiku-5-5",
+  "gpt-5.4-mini"
+ ],
+ "table": {
+  "pooled": {
+   "subject": {
+    "A": {
+     "slot": "subject",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "subject",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "trigger": {
+    "A": {
+     "slot": "trigger",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "trigger",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "harm": {
+    "A": {
+     "slot": "harm",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "harm",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "drive": {
+    "A": {
+     "slot": "drive",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "drive",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "integration": {
+    "A": {
+     "slot": "integration",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "integration",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "retrieval_cues": {
+    "A": {
+     "slot": "retrieval_cues",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "retrieval_cues",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "summary": {
+    "A": {
+     "slot": "summary",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "summary",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "_control_gate": {
+    "summary_cross3_A": null,
+    "summary_cross3_B": null,
+    "abs_diff": null,
+    "prompt_wide_drift": false
+   }
+  },
+  "synthetic": {
+   "subject": {
+    "A": {
+     "slot": "subject",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "subject",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "trigger": {
+    "A": {
+     "slot": "trigger",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "trigger",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "harm": {
+    "A": {
+     "slot": "harm",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "harm",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "drive": {
+    "A": {
+     "slot": "drive",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "drive",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "integration": {
+    "A": {
+     "slot": "integration",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "integration",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "retrieval_cues": {
+    "A": {
+     "slot": "retrieval_cues",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "retrieval_cues",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "summary": {
+    "A": {
+     "slot": "summary",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "summary",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "_control_gate": {
+    "summary_cross3_A": null,
+    "summary_cross3_B": null,
+    "abs_diff": null,
+    "prompt_wide_drift": false
+   }
+  },
+  "conversational": {
+   "subject": {
+    "A": {
+     "slot": "subject",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "subject",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "trigger": {
+    "A": {
+     "slot": "trigger",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "trigger",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "harm": {
+    "A": {
+     "slot": "harm",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "harm",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "drive": {
+    "A": {
+     "slot": "drive",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "drive",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "integration": {
+    "A": {
+     "slot": "integration",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "integration",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "retrieval_cues": {
+    "A": {
+     "slot": "retrieval_cues",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "retrieval_cues",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "summary": {
+    "A": {
+     "slot": "summary",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "summary",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "_control_gate": {
+    "summary_cross3_A": null,
+    "summary_cross3_B": null,
+    "abs_diff": null,
+    "prompt_wide_drift": false
+   }
+  },
+  "pepys": {
+   "subject": {
+    "A": {
+     "slot": "subject",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "subject",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "trigger": {
+    "A": {
+     "slot": "trigger",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "trigger",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "harm": {
+    "A": {
+     "slot": "harm",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "harm",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "drive": {
+    "A": {
+     "slot": "drive",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "drive",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "integration": {
+    "A": {
+     "slot": "integration",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "integration",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "retrieval_cues": {
+    "A": {
+     "slot": "retrieval_cues",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "retrieval_cues",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "summary": {
+    "A": {
+     "slot": "summary",
+     "arm": "A",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "B": {
+     "slot": "summary",
+     "arm": "B",
+     "repeat": {
+      "claude-sonnet-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "claude-haiku-5-5": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-6.1-sol": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "kimi-k2.6": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      },
+      "gpt-5.4-mini": {
+       "rate": null,
+       "texts": 0,
+       "rate_nonnull": null
+      }
+     },
+     "null_rate": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null,
+      "all": null,
+      "voters": null
+     },
+     "cross3": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross3_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross2_nonnull": {
+      "rate": null,
+      "texts": 0
+     },
+     "cross_all5": {
+      "rate": null,
+      "texts": 0
+     },
+     "reported": {
+      "claude-haiku-5-5": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      },
+      "gpt-5.4-mini": {
+       "agree_with_majority": null,
+       "texts_with_majority": 0
+      }
+     },
+     "_voter_disagree": {
+      "claude-sonnet-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null
+     },
+     "stat_repeat": {
+      "claude-sonnet-5-5": null,
+      "claude-haiku-5-5": null,
+      "gpt-6.1-sol": null,
+      "kimi-k2.6": null,
+      "gpt-5.4-mini": null
+     },
+     "voters_fail_repeat": [],
+     "voters_pass_repeat": [],
+     "outcome3": "pending",
+     "outcome2": "pending",
+     "borderline": false,
+     "sparse": false
+    },
+    "cross_arm": {
+     "claude-sonnet-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "claude-haiku-5-5": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-6.1-sol": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "kimi-k2.6": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "gpt-5.4-mini": {
+      "rate": null,
+      "texts": 0,
+      "rate_nonnull": null,
+      "texts_nonnull": 0
+     },
+     "voters_all_ge_0.60": false
+    },
+    "null_rate_arm_diff": null,
+    "null_diff_flag": false
+   },
+   "_control_gate": {
+    "summary_cross3_A": null,
+    "summary_cross3_B": null,
+    "abs_diff": null,
+    "prompt_wide_drift": false
+   }
+  }
+ }
+}
