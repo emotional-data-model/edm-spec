@@ -26,65 +26,10 @@ repo, out_dir = sys.argv[1:3]
 BASE = 'https://deepadata.com/schemas/edm/v0.9.0-draft'
 V08 = 'https://deepadata.com/schemas/edm/v0.8.0/fragments'
 FRAG = BASE + '/fragments'
-D083 = {f['path']: f for f in L.FIELDS_083}
-DEP = {}
-for f, v, to, why in L.DEPRECATED_VALUES: DEP.setdefault(f, []).append({'value': v, 'replaced_by': to, 'reason': why})
+D083 = L.D083
+DEP = L.DEP
+DESC = L.DESC  # moved to v09_layout.py (single source for the draft schema and the crosswalk record; ruling 2026-10-18 step 2)
 
-def desc_of(*paths):
-    return ' / '.join(D083[p]['description'] for p in paths)
-
-# field path -> (description, x_constraints)
-DESC = {
- 'narrative.subject': (desc_of('core.anchor'), D083['core.anchor']['constraints']),
- 'narrative.trigger': (desc_of('core.spark'), D083['core.spark']['constraints']),
- 'narrative.harm': (desc_of('core.wound'), D083['core.wound']['constraints']),
- 'narrative.drive': (desc_of('core.fuel'), D083['core.fuel']['constraints']),
- 'narrative.integration': (desc_of('core.bridge'), D083['core.bridge']['constraints']),
- 'narrative.summary': (desc_of('core.narrative'), D083['core.narrative']['constraints']),
- 'narrative.meaning': (desc_of('constellation.expressed_insight'), D083['constellation.expressed_insight']['constraints']),
- 'narrative.identity_link': (desc_of('constellation.identity_thread'), D083['constellation.identity_thread']['constraints']),
- 'narrative.turning_point': (desc_of('constellation.transformational_pivot'), 'true or false; null when the subject does not say'),
- 'narrative.arc': ('The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.', 'Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.'),
- 'narrative.valence_shift': (desc_of('milky_way.tone_shift'), D083['milky_way.tone_shift']['constraints']),
- 'narrative.self_position': ("The subject's own expressed lens on themselves within the story: the position they say they occupy (e.g. \"the one who holds it together\", \"the person who finally said no\"). STATED-ONLY: recorded only when the subject says it or paraphrases it unmistakably; never assigned from the plot, the emotion or an archetype catalogue.", 'Short phrase in the subject\'s own terms; NULL when not stated. Replaces narrative_archetype (the Mark & Pearson 12 are not used). Optional codings: McAdams imago (open label), agency / communion, Hermans I-position; all relation=related.'),
- 'emotion.primary': (desc_of('constellation.emotion_primary'), D083['constellation.emotion_primary']['constraints']),
- 'emotion.secondary': ('Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)', '0-5 items; free text; each item may carry codings with a per-coding confidence'),
- 'emotion.kind': ('Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.', 'emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199'),
- 'emotion.valence': (desc_of('gravity.valence'), 'text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)'),
- 'emotion.arousal': ('The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.', 'text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed'),
- 'emotion.intensity': (desc_of('gravity.emotional_weight'), 'value in [0, 1] (v0.8.3 emotional_weight carried as-is); text is an optional ordinal label'),
- 'emotion.meta': (desc_of('constellation.meta_emotional_state'), D083['constellation.meta_emotional_state']['constraints']),
- 'emotion.bodily_sensation': (desc_of('constellation.somatic_signature'), D083['constellation.somatic_signature']['constraints']),
- 'emotion.temporal_profile': (desc_of('constellation.temporal_rhythm'), 'Canonical: ' + ', '.join(D083['constellation.temporal_rhythm']['canonical_values']) + '. looping and cyclic are deprecated (code to recurring). Free text accepted.'),
- 'emotion.appraisal.urgency': (desc_of('impulse.urgency'), 'text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text'),
- 'emotion.appraisal.control': (desc_of('impulse.agency_level'), 'text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text'),
- 'emotion.appraisal.attribution': ('To whom or what the subject attributes the cause of the event ("I blamed myself", "it was just bad luck"). Explicit content only.', 'self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature'),
- 'context.event': (desc_of('milky_way.event_type'), D083['milky_way.event_type']['constraints']),
- 'context.event_category': ('Coded companion to context.event: the content category of the event as the subject describes it.', 'Singer & Blagov / Thorne & McLean categories: ' + ', '.join(L.NEW_VOCAB['event_category']) + ' (labels knowledge-reconstructed; REPORT.md section 9)'),
- 'context.place': (desc_of('milky_way.location_context'), D083['milky_way.location_context']['constraints']),
- 'context.people': (desc_of('milky_way.associated_people'), D083['milky_way.associated_people']['constraints']),
- 'context.relationship': (desc_of('constellation.relational_dynamics'), 'Canonical: ' + ', '.join(D083['constellation.relational_dynamics']['canonical_values']) + '. friend, couple, grief, self_reflection are deprecated. Free text accepted.'),
- 'context.relationship_model': ("Coded companion to context.relationship: the relational model the subject's account of the relationship instantiates (Fiske).", ', '.join(L.NEW_VOCAB['relationship_model'])),
- 'context.life_stage': (desc_of('constellation.temporal_context'), 'Canonical: ' + ', '.join(D083['constellation.temporal_context']['canonical_values'])),
- 'context.scope': ('The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)', 'text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)'),
- 'salience.memory_type': (desc_of('constellation.memory_type'), 'Canonical: ' + ', '.join(D083['constellation.memory_type']['canonical_values']) + '. legacy_artifact is deprecated (an object tether, not a memory type).'),
- 'salience.tether': ('What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)', 'type: canonical ' + ', '.join(D083['gravity.tether_type']['canonical_values']) + ', free text accepted; referent and stake: free text'),
- 'salience.retrieval_cues': ('Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration', 'Short phrases; order carries no meaning'),
- 'salience.themes': (desc_of('gravity.nearby_themes'), D083['gravity.nearby_themes']['constraints']),
- 'salience.recurrence': (desc_of('gravity.recurrence_pattern'), 'Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.'),
- 'salience.persistence': ('How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)', 'text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py'),
- 'salience.linkage_strength': (desc_of('gravity.strength_score'), D083['gravity.strength_score']['constraints']),
- 'salience.function': ('Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.', 'Pillemer 1992 / Bluck 2003 memory functions'),
- 'salience.resilience': (desc_of('gravity.resilience_markers'), D083['gravity.resilience_markers']['constraints']),
- 'salience.trajectory': (desc_of('gravity.adaptation_trajectory'), 'Canonical: improving, stable, declining, integrative; emerging is deprecated'),
- 'motivation.action_tendency': (desc_of('impulse.drive_state'), 'Canonical: ' + ', '.join(D083['impulse.drive_state']['canonical_values']) + ' (Frijda action tendencies applied as codes; value words unchanged)'),
- 'motivation.need': (desc_of('impulse.motivational_orientation'), 'Canonical: ' + ', '.join(D083['impulse.motivational_orientation']['canonical_values']) + ' (SDT needs applied as codes)'),
- 'motivation.temporal_focus': (desc_of('impulse.temporal_focus'), 'past / present / future'),
- 'motivation.risk_posture': (desc_of('impulse.risk_posture'), 'cautious / balanced / bold'),
- 'motivation.coping': (desc_of('impulse.coping_style'), 'Canonical: ' + ', '.join(D083['impulse.coping_style']['canonical_values']) + ' (Ways of Coping and Gross families applied as codes). Free text accepted.'),
- 'trait.attachment_style': (desc_of('impulse.attachment_style') + ' - as stated by the subject for this experience; never aggregated into a person-level classification by the artifact', 'secure / anxious / avoidant / disorganized; codings on EDM vocab attachment_style/v1 with Ainsworth / Main letter codes as display'),
- 'trait.regulation_state': (desc_of('impulse.regulation_state') + ' - as stated by the subject for this experience', 'regulated / wavering / dysregulated'),
-}
 VOCAB_OF = {  # coded / dimension field -> EDM vocabulary name
  'narrative.arc': 'arc', 'emotion.primary': 'emotion', 'emotion.secondary': 'emotion', 'emotion.kind': 'kind', 'emotion.valence': 'valence',
  'emotion.arousal': 'arousal', 'emotion.temporal_profile': 'temporal_profile', 'emotion.appraisal.urgency': 'urgency', 'emotion.appraisal.control': 'control',

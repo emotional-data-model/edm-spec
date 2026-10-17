@@ -19,6 +19,21 @@
     "fields_moved_to_trait_profile": 2,
     "affective_field_count_before": 57,
     "affective_field_count_after": 47,
+    "canonical_values_before": 185,
+    "field_dispositions": {
+      "carried": 3,
+      "cut-to-extensions": 7,
+      "merged": 14,
+      "moved-to-trait": 2,
+      "renamed": 27,
+      "reshaped": 4
+    },
+    "value_dispositions": {
+      "carried": 142,
+      "carried (deprecated)": 10,
+      "cut-to-extensions": 26,
+      "moved-to-trait": 7
+    },
     "values_deprecated": 10,
     "values_renamed": 0,
     "text_changes_required": 0
@@ -30,455 +45,3644 @@
     "gravity": "salience",
     "impulse": "motivation"
   },
+  "disposition_rule": "One disposition per v0.8.3 field (carried / renamed / reshaped / merged / cut-to-extensions / moved-to-trait; new v0.9 fields are added) and one per canonical value (carried / carried (deprecated) / cut-to-extensions / moved-to-trait; new vocabulary values are added). carried = field name unchanged (domain rename or move only); renamed = field name changes; reshaped = enum or number becomes a dimension; merged = the v0.9 target has more than one v0.8.3 source. The uniform {text, codings} wrapping is recorded as shape_from / shape_to on each row. Value words never change. Audited by scripts/crosswalk_audit.py (crosswalk-audit-2026-10-18.md).",
   "field_map": [
     {
       "from": "core.anchor",
       "to": "narrative.subject",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "EmotionML reference@targetedAt; OCC object"
+      "note": "EmotionML reference@targetedAt; OCC object",
+      "v083": {
+        "description": "Central person, object, or theme of the experience",
+        "constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
+        "examples": [
+          "grandmother",
+          "dad's toolbox",
+          "childhood home"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Central person, object, or theme of the experience",
+        "constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "anchor",
+        "description": "Central person, object, or theme of the experience",
+        "constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
+        "examples": [
+          "grandmother",
+          "dad's toolbox",
+          "childhood home"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.spark",
       "to": "narrative.trigger",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "EmotionML reference@triggeredBy"
+      "note": "EmotionML reference@triggeredBy",
+      "v083": {
+        "description": "What triggered or initiated the emotional response",
+        "constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+        "examples": [
+          "finding old photos",
+          "first snow",
+          "phone call"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "What triggered or initiated the emotional response",
+        "constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "spark",
+        "description": "What triggered or initiated the emotional response",
+        "constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+        "examples": [
+          "finding old photos",
+          "first snow",
+          "phone call"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.wound",
       "to": "narrative.harm",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Lazarus & Folkman harm/loss appraisal; MFOEM:000106 appraisal of loss"
+      "note": "Lazarus & Folkman harm/loss appraisal; MFOEM:000106 appraisal of loss",
+      "v083": {
+        "description": "Emotional pain, loss, or vulnerability present in the experience",
+        "constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+        "examples": [
+          "abandonment",
+          "regret",
+          "distance",
+          "grief"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Emotional pain, loss, or vulnerability present in the experience",
+        "constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "wound",
+        "description": "Emotional pain, loss, or vulnerability present in the experience",
+        "constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+        "examples": [
+          "abandonment",
+          "regret",
+          "distance",
+          "grief"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.fuel",
       "to": "narrative.drive",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Panksepp SEEKING; SDT intrinsic motivation"
+      "note": "Panksepp SEEKING; SDT intrinsic motivation",
+      "v083": {
+        "description": "What energized or motivated the experience",
+        "constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
+        "examples": [
+          "love",
+          "shared laughter",
+          "curiosity",
+          "hope"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "What energized or motivated the experience",
+        "constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "fuel",
+        "description": "What energized or motivated the experience",
+        "constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
+        "examples": [
+          "love",
+          "shared laughter",
+          "curiosity",
+          "hope"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.bridge",
       "to": "narrative.integration",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Singer & Blagov integrative meaning"
+      "note": "Singer & Blagov integrative meaning",
+      "v083": {
+        "description": "Connection or shift between past and present understanding",
+        "constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
+        "examples": [
+          "forgiveness",
+          "acceptance",
+          "returning home"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Connection or shift between past and present understanding",
+        "constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "bridge",
+        "description": "Connection or shift between past and present understanding",
+        "constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
+        "examples": [
+          "forgiveness",
+          "acceptance",
+          "returning home"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.echo",
       "to": "salience.retrieval_cues",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "free_text",
+      "shape_to": "list",
       "shape": "list",
-      "note": "Tulving retrieval cue; first element of the merged list"
+      "note": "Tulving retrieval cue; first element of the merged list",
+      "v083": {
+        "description": "What continues to resonate or recur from the experience",
+        "constraints": "1–5 words (e.g., \"her laugh\", \"smell of rain\", \"city lights\")",
+        "examples": [
+          "her laugh",
+          "smell of rain",
+          "city lights"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
+        "constraints": "Short phrases; order carries no meaning",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "run2_arm_a": {
+        "name": "echo",
+        "description": "What continues to resonate or recur from the experience",
+        "constraints": "1–5 words (e.g., \"her laugh\", \"smell of rain\", \"city lights\")",
+        "examples": [
+          "her laugh",
+          "smell of rain",
+          "city lights"
+        ],
+        "shape": "string (single value), as in v0.8.3",
+        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+      },
+      "values": []
     },
     {
       "from": "core.narrative",
       "to": "narrative.summary",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "the narrative text itself"
+      "note": "the narrative text itself",
+      "v083": {
+        "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
+        "constraints": "3–5 sentences",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
+        "constraints": "3–5 sentences",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.emotion_primary",
       "to": "emotion.primary",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "canonical_open",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "MFOEM emotion process; EmotionML category"
+      "note": "MFOEM emotion process; EmotionML category",
+      "v083": {
+        "description": "The dominant emotional quality expressed in the experience",
+        "constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted.",
+        "examples": [],
+        "canonical_values": [
+          "joy",
+          "sadness",
+          "fear",
+          "anger",
+          "wonder",
+          "peace",
+          "tenderness",
+          "reverence",
+          "pride",
+          "anxiety",
+          "gratitude",
+          "longing",
+          "hope",
+          "shame",
+          "disappointment",
+          "relief",
+          "frustration"
+        ],
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The dominant emotional quality expressed in the experience",
+        "constraints": "Canonical values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration. Free text accepted.",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "joy",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#joy",
+          "text_change": false
+        },
+        {
+          "value": "sadness",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#sadness",
+          "text_change": false
+        },
+        {
+          "value": "fear",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#fear",
+          "text_change": false
+        },
+        {
+          "value": "anger",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#anger",
+          "text_change": false
+        },
+        {
+          "value": "wonder",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#wonder",
+          "text_change": false
+        },
+        {
+          "value": "peace",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#peace",
+          "text_change": false
+        },
+        {
+          "value": "tenderness",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#tenderness",
+          "text_change": false
+        },
+        {
+          "value": "reverence",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#reverence",
+          "text_change": false
+        },
+        {
+          "value": "pride",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#pride",
+          "text_change": false
+        },
+        {
+          "value": "anxiety",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#anxiety",
+          "text_change": false
+        },
+        {
+          "value": "gratitude",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#gratitude",
+          "text_change": false
+        },
+        {
+          "value": "longing",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#longing",
+          "text_change": false
+        },
+        {
+          "value": "hope",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#hope",
+          "text_change": false
+        },
+        {
+          "value": "shame",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#shame",
+          "text_change": false
+        },
+        {
+          "value": "disappointment",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#disappointment",
+          "text_change": false
+        },
+        {
+          "value": "relief",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#relief",
+          "text_change": false
+        },
+        {
+          "value": "frustration",
+          "disposition": "carried",
+          "to": "emotion.primary.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/emotion/v1#frustration",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.emotion_subtone",
       "to": "emotion.secondary",
+      "disposition": "merged",
       "action": "rename",
+      "shape_from": "free_text_list",
+      "shape_to": "coded_list",
       "shape": "coded_list",
-      "note": "EmotionML multiple categories"
+      "note": "EmotionML multiple categories",
+      "v083": {
+        "description": "Secondary emotional nuances that add depth to the primary emotion",
+        "constraints": "0–4 items (e.g., \"bittersweet\", \"grateful\", \"nostalgic\")",
+        "examples": [
+          "bittersweet",
+          "grateful",
+          "nostalgic"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
+        "constraints": "0-5 items; free text; each item may carry codings with a per-coding confidence",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.higher_order_emotion",
       "to": "emotion.secondary",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "free_text",
+      "shape_to": "coded_list",
       "shape": "coded_list",
-      "note": "appended to secondary[]"
+      "note": "appended to secondary[]",
+      "v083": {
+        "description": "Complex or layered emotional state",
+        "constraints": "Free text (e.g., \"awe\", \"bittersweetness\", \"pride\", \"moral elevation\")",
+        "examples": [
+          "awe",
+          "bittersweetness",
+          "pride",
+          "moral elevation"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
+        "constraints": "0-5 items; free text; each item may carry codings with a per-coding confidence",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.meta_emotional_state",
       "to": "emotion.meta",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "meta-emotion (Gottman et al. 1996)"
+      "note": "meta-emotion (Gottman et al. 1996)",
+      "v083": {
+        "description": "How the person relates to their own emotional state",
+        "constraints": "Free text (e.g., \"acceptance\", \"resistance\", \"curiosity\", \"confusion\")",
+        "examples": [
+          "acceptance",
+          "resistance",
+          "curiosity",
+          "confusion"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "How the person relates to their own emotional state",
+        "constraints": "Free text (e.g., \"acceptance\", \"resistance\", \"curiosity\", \"confusion\")",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.interpersonal_affect",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "free_text",
+      "shape_to": null,
       "shape": null,
-      "note": "no framework home beyond EI competencies; text preserved in extensions"
+      "note": "no framework home beyond EI competencies; text preserved in extensions",
+      "v083": {
+        "description": "Emotional posture in relational context",
+        "constraints": "Free text (e.g., \"warmth\", \"defensiveness\", \"openness\")",
+        "examples": [
+          "warmth",
+          "defensiveness",
+          "openness"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.interpersonal_affect\"]",
+        "text_change": false
+      },
+      "values": []
     },
     {
       "from": "constellation.narrative_arc",
       "to": "narrative.arc",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "canonical_open",
+      "shape_to": "coded_list",
       "shape": "coded_list",
-      "note": "Booker / McAdams; arc becomes a list so both readings survive"
+      "note": "Booker / McAdams; arc becomes a list so both readings survive",
+      "v083": {
+        "description": "The underlying trajectory or story movement represented by the moment",
+        "constraints": "Canonical values: overcoming, transformation, connection, reflection, closure, loss, confrontation. Free text accepted.",
+        "examples": [],
+        "canonical_values": [
+          "overcoming",
+          "transformation",
+          "connection",
+          "reflection",
+          "closure",
+          "loss",
+          "confrontation"
+        ],
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
+        "constraints": "Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "overcoming",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#overcoming",
+          "text_change": false
+        },
+        {
+          "value": "transformation",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#transformation",
+          "text_change": false,
+          "note": "value present in both arc_type and narrative_arc; one arc/v1 code"
+        },
+        {
+          "value": "connection",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#connection",
+          "text_change": false
+        },
+        {
+          "value": "reflection",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#reflection",
+          "text_change": false
+        },
+        {
+          "value": "closure",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#closure",
+          "text_change": false
+        },
+        {
+          "value": "loss",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#loss",
+          "text_change": false
+        },
+        {
+          "value": "confrontation",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#confrontation",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.relational_dynamics",
       "to": "context.relationship",
+      "disposition": "renamed",
       "action": "move",
+      "shape_from": "canonical_open",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "EDM vocab relationship/v1; Fiske as companion code"
+      "note": "EDM vocab relationship/v1; Fiske as companion code",
+      "v083": {
+        "description": "The dominant relational configuration influencing the experience",
+        "constraints": "Canonical values: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. Free text accepted.",
+        "examples": [],
+        "canonical_values": [
+          "parent_child",
+          "grandparent_grandchild",
+          "romantic_partnership",
+          "couple",
+          "sibling_bond",
+          "family",
+          "friendship",
+          "friend",
+          "companionship",
+          "colleague",
+          "mentorship",
+          "reunion",
+          "community_ritual",
+          "grief",
+          "self_reflection",
+          "professional",
+          "therapeutic",
+          "service",
+          "adversarial"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The dominant relational configuration influencing the experience",
+        "constraints": "Canonical: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. friend, couple, grief, self_reflection are deprecated. Free text accepted.",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "parent_child",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#parent_child",
+          "text_change": false
+        },
+        {
+          "value": "grandparent_grandchild",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#grandparent_grandchild",
+          "text_change": false
+        },
+        {
+          "value": "romantic_partnership",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#romantic_partnership",
+          "text_change": false
+        },
+        {
+          "value": "couple",
+          "disposition": "carried (deprecated)",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#couple",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": "romantic_partnership",
+            "reason": "duplicate"
+          }
+        },
+        {
+          "value": "sibling_bond",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#sibling_bond",
+          "text_change": false
+        },
+        {
+          "value": "family",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#family",
+          "text_change": false
+        },
+        {
+          "value": "friendship",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#friendship",
+          "text_change": false
+        },
+        {
+          "value": "friend",
+          "disposition": "carried (deprecated)",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#friend",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": "friendship",
+            "reason": "duplicate"
+          }
+        },
+        {
+          "value": "companionship",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#companionship",
+          "text_change": false
+        },
+        {
+          "value": "colleague",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#colleague",
+          "text_change": false
+        },
+        {
+          "value": "mentorship",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#mentorship",
+          "text_change": false
+        },
+        {
+          "value": "reunion",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#reunion",
+          "text_change": false
+        },
+        {
+          "value": "community_ritual",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#community_ritual",
+          "text_change": false
+        },
+        {
+          "value": "grief",
+          "disposition": "carried (deprecated)",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#grief",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": null,
+            "reason": "an emotion, not a relational configuration"
+          }
+        },
+        {
+          "value": "self_reflection",
+          "disposition": "carried (deprecated)",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#self_reflection",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": null,
+            "reason": "a narrative mode, not a relational configuration"
+          }
+        },
+        {
+          "value": "professional",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#professional",
+          "text_change": false
+        },
+        {
+          "value": "therapeutic",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#therapeutic",
+          "text_change": false
+        },
+        {
+          "value": "service",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#service",
+          "text_change": false
+        },
+        {
+          "value": "adversarial",
+          "disposition": "carried",
+          "to": "context.relationship.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/relationship/v1#adversarial",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.temporal_context",
       "to": "context.life_stage",
+      "disposition": "renamed",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Conway lifetime period"
+      "note": "Conway lifetime period",
+      "v083": {
+        "description": "The life-stage or temporal frame associated with the experience",
+        "constraints": "childhood, early_adulthood, midlife, late_life, recent, future, timeless",
+        "examples": [],
+        "canonical_values": [
+          "childhood",
+          "early_adulthood",
+          "midlife",
+          "late_life",
+          "recent",
+          "future",
+          "timeless"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The life-stage or temporal frame associated with the experience",
+        "constraints": "Canonical: childhood, early_adulthood, midlife, late_life, recent, future, timeless",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "childhood",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#childhood",
+          "text_change": false
+        },
+        {
+          "value": "early_adulthood",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#early_adulthood",
+          "text_change": false
+        },
+        {
+          "value": "midlife",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#midlife",
+          "text_change": false
+        },
+        {
+          "value": "late_life",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#late_life",
+          "text_change": false
+        },
+        {
+          "value": "recent",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#recent",
+          "text_change": false
+        },
+        {
+          "value": "future",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#future",
+          "text_change": false
+        },
+        {
+          "value": "timeless",
+          "disposition": "carried",
+          "to": "context.life_stage.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/life_stage/v1#timeless",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.memory_type",
       "to": "salience.memory_type",
+      "disposition": "carried",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Pillemer momentous-event types as codes"
+      "note": "Pillemer momentous-event types as codes",
+      "v083": {
+        "description": "The class of memory the experience represents within personal identity",
+        "constraints": "legacy_artifact, fleeting_moment, milestone, reflection, formative_experience",
+        "examples": [],
+        "canonical_values": [
+          "legacy_artifact",
+          "fleeting_moment",
+          "milestone",
+          "reflection",
+          "formative_experience"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The class of memory the experience represents within personal identity",
+        "constraints": "Canonical: legacy_artifact, fleeting_moment, milestone, reflection, formative_experience. legacy_artifact is deprecated (an object tether, not a memory type).",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "legacy_artifact",
+          "disposition": "carried (deprecated)",
+          "to": "salience.memory_type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/memory_type/v1#legacy_artifact",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": null,
+            "reason": "an object tether, not a memory type (coded tether/v1#object, related)"
+          }
+        },
+        {
+          "value": "fleeting_moment",
+          "disposition": "carried",
+          "to": "salience.memory_type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/memory_type/v1#fleeting_moment",
+          "text_change": false
+        },
+        {
+          "value": "milestone",
+          "disposition": "carried",
+          "to": "salience.memory_type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/memory_type/v1#milestone",
+          "text_change": false
+        },
+        {
+          "value": "reflection",
+          "disposition": "carried",
+          "to": "salience.memory_type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/memory_type/v1#reflection",
+          "text_change": false
+        },
+        {
+          "value": "formative_experience",
+          "disposition": "carried",
+          "to": "salience.memory_type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/memory_type/v1#formative_experience",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.media_format",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "closed_enum",
+      "shape_to": null,
       "shape": null,
-      "note": "duplicates meta.source_type; text preserved in extensions"
+      "note": "duplicates meta.source_type; text preserved in extensions",
+      "v083": {
+        "description": "The format through which the experience is captured or expressed",
+        "constraints": "photo, video, audio, text, photo_with_story",
+        "examples": [],
+        "canonical_values": [
+          "photo",
+          "video",
+          "audio",
+          "text",
+          "photo_with_story"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+        "text_change": false
+      },
+      "values": [
+        {
+          "value": "photo",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+          "text_change": false
+        },
+        {
+          "value": "video",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+          "text_change": false
+        },
+        {
+          "value": "audio",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+          "text_change": false
+        },
+        {
+          "value": "text",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+          "text_change": false
+        },
+        {
+          "value": "photo_with_story",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.media_format\"]",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.narrative_archetype",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "closed_enum",
+      "shape_to": null,
       "shape": null,
-      "note": "replaced by narrative.self_position (stated-only free text); enum value preserved in extensions, never copied into self_position"
+      "note": "replaced by narrative.self_position (stated-only free text); enum value preserved in extensions, never copied into self_position",
+      "v083": {
+        "description": "The archetypal identity the subject embodies — which of the 12 canonical identity archetypes the subject expresses, not a structural role or story function (ADR-0030)",
+        "constraints": "hero, caregiver, seeker, sage, lover, outlaw, innocent, magician, creator, everyman, jester, ruler",
+        "examples": [],
+        "canonical_values": [
+          "hero",
+          "caregiver",
+          "seeker",
+          "sage",
+          "lover",
+          "outlaw",
+          "innocent",
+          "magician",
+          "creator",
+          "everyman",
+          "jester",
+          "ruler"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+        "text_change": false
+      },
+      "values": [
+        {
+          "value": "hero",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "caregiver",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "seeker",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "sage",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "lover",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "outlaw",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "innocent",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "magician",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "creator",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "everyman",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "jester",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        },
+        {
+          "value": "ruler",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"constellation.narrative_archetype\"]",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.symbolic_anchor",
       "to": "salience.tether",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "free_text",
+      "shape_to": "object",
       "shape": "object",
-      "note": "tether.referent"
+      "note": "tether.referent",
+      "v083": {
+        "description": "A symbolic or material object, place, or element that concentrates meaning",
+        "constraints": "Free text (e.g., \"rocking chair\", \"wedding ring\", \"grandmother's kitchen\")",
+        "examples": [
+          "rocking chair",
+          "wedding ring",
+          "grandmother's kitchen"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
+        "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.relational_perspective",
       "to": "context.scope",
+      "disposition": "merged",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Bronfenbrenner nested systems"
+      "note": "Bronfenbrenner nested systems",
+      "v083": {
+        "description": "The perspective through which the experience is narrated or understood",
+        "constraints": "self, partner, family, friends, community, humanity",
+        "examples": [],
+        "canonical_values": [
+          "self",
+          "partner",
+          "family",
+          "friends",
+          "community",
+          "humanity"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
+        "constraints": "text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "self",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#self",
+          "text_change": false
+        },
+        {
+          "value": "partner",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#partner",
+          "text_change": false
+        },
+        {
+          "value": "family",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#family",
+          "text_change": false
+        },
+        {
+          "value": "friends",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#friends",
+          "text_change": false
+        },
+        {
+          "value": "community",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#community",
+          "text_change": false
+        },
+        {
+          "value": "humanity",
+          "disposition": "carried",
+          "to": "context.scope.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/scope/v1#humanity",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "constellation.temporal_rhythm",
       "to": "emotion.temporal_profile",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "EmotionML trace / Scherer suddenness; EDM-specific shapes kept"
+      "note": "EmotionML trace / Scherer suddenness; EDM-specific shapes kept",
+      "v083": {
+        "description": "The perceived temporal movement or cadence of the emotional event",
+        "constraints": "still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic",
+        "examples": [],
+        "canonical_values": [
+          "still",
+          "sudden",
+          "rising",
+          "fading",
+          "recurring",
+          "spiraling",
+          "dragging",
+          "suspended",
+          "looping",
+          "cyclic"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The perceived temporal movement or cadence of the emotional event",
+        "constraints": "Canonical: still, sudden, rising, fading, recurring, spiraling, dragging, suspended, looping, cyclic. looping and cyclic are deprecated (code to recurring). Free text accepted.",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "still",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#still",
+          "text_change": false
+        },
+        {
+          "value": "sudden",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#sudden",
+          "text_change": false
+        },
+        {
+          "value": "rising",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#rising",
+          "text_change": false
+        },
+        {
+          "value": "fading",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#fading",
+          "text_change": false
+        },
+        {
+          "value": "recurring",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#recurring",
+          "text_change": false
+        },
+        {
+          "value": "spiraling",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#spiraling",
+          "text_change": false
+        },
+        {
+          "value": "dragging",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#dragging",
+          "text_change": false
+        },
+        {
+          "value": "suspended",
+          "disposition": "carried",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#suspended",
+          "text_change": false
+        },
+        {
+          "value": "looping",
+          "disposition": "carried (deprecated)",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#looping",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": "recurring",
+            "reason": "overlaps recurring"
+          }
+        },
+        {
+          "value": "cyclic",
+          "disposition": "carried (deprecated)",
+          "to": "emotion.temporal_profile.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_profile/v1#cyclic",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": "recurring",
+            "reason": "overlaps recurring / salience.recurrence=cyclical"
+          }
+        }
+      ]
     },
     {
       "from": "constellation.identity_thread",
       "to": "narrative.identity_link",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Conway self-memory system"
+      "note": "Conway self-memory system",
+      "v083": {
+        "description": "A succinct expression of how the experience connects to personal identity",
+        "constraints": "Short sentence",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "A succinct expression of how the experience connects to personal identity",
+        "constraints": "Short sentence",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.expressed_insight",
       "to": "narrative.meaning",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "McAdams meaning-making"
+      "note": "McAdams meaning-making",
+      "v083": {
+        "description": "The explicit realization or conclusion stated by the subject",
+        "constraints": "Short sentence. Extracted, not inferred",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The explicit realization or conclusion stated by the subject",
+        "constraints": "Short sentence. Extracted, not inferred",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.transformational_pivot",
       "to": "narrative.turning_point",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "boolean",
+      "shape_to": "bool",
       "shape": "bool",
-      "note": "McAdams / Pillemer turning point"
+      "note": "McAdams / Pillemer turning point",
+      "v083": {
+        "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
+        "constraints": "true or false",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
+        "constraints": "true or false; null when the subject does not say",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.somatic_signature",
       "to": "emotion.bodily_sensation",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "MFOEM:000003 physiological process involved in an emotion"
+      "note": "MFOEM:000003 physiological process involved in an emotion",
+      "v083": {
+        "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
+        "constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
+        "constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "constellation.arc_type",
       "to": "narrative.arc",
+      "disposition": "merged",
       "action": "move",
+      "shape_from": "canonical_open",
+      "shape_to": "coded_list",
       "shape": "coded_list",
-      "note": "Booker / Campbell / McAdams"
+      "note": "Booker / Campbell / McAdams",
+      "v083": {
+        "description": "The structural emotional arc pattern of the experience, encoded at capture time",
+        "constraints": "betrayal, liberation, grief, discovery, resistance, bond, moral_awakening, transformation, reconciliation, reckoning, threshold, exile, gratitude, authenticity — or free text if no canonical value fits",
+        "examples": [],
+        "canonical_values": [
+          "betrayal",
+          "liberation",
+          "grief",
+          "discovery",
+          "resistance",
+          "bond",
+          "moral_awakening",
+          "transformation",
+          "reconciliation",
+          "reckoning",
+          "threshold",
+          "exile",
+          "gratitude",
+          "authenticity"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
+        "constraints": "Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "betrayal",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#betrayal",
+          "text_change": false
+        },
+        {
+          "value": "liberation",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#liberation",
+          "text_change": false
+        },
+        {
+          "value": "grief",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#grief",
+          "text_change": false
+        },
+        {
+          "value": "discovery",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#discovery",
+          "text_change": false
+        },
+        {
+          "value": "resistance",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#resistance",
+          "text_change": false
+        },
+        {
+          "value": "bond",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#bond",
+          "text_change": false
+        },
+        {
+          "value": "moral_awakening",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#moral_awakening",
+          "text_change": false
+        },
+        {
+          "value": "transformation",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#transformation",
+          "text_change": false,
+          "note": "value present in both arc_type and narrative_arc; one arc/v1 code"
+        },
+        {
+          "value": "reconciliation",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#reconciliation",
+          "text_change": false
+        },
+        {
+          "value": "reckoning",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#reckoning",
+          "text_change": false
+        },
+        {
+          "value": "threshold",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#threshold",
+          "text_change": false
+        },
+        {
+          "value": "exile",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#exile",
+          "text_change": false
+        },
+        {
+          "value": "gratitude",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#gratitude",
+          "text_change": false
+        },
+        {
+          "value": "authenticity",
+          "disposition": "carried",
+          "to": "narrative.arc[].text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/arc/v1#authenticity",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "milky_way.event_type",
       "to": "context.event",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Singer & Blagov content category as companion (context.event_category)"
+      "note": "Singer & Blagov content category as companion (context.event_category)",
+      "v083": {
+        "description": "Type of event or situation",
+        "constraints": "Free text (e.g., \"family gathering\", \"farewell\", \"birthday\", \"reunion\")",
+        "examples": [
+          "family gathering",
+          "farewell",
+          "birthday",
+          "reunion"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Type of event or situation",
+        "constraints": "Free text (e.g., \"family gathering\", \"farewell\", \"birthday\", \"reunion\")",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "milky_way.location_context",
       "to": "context.place",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "Tulving episodic where"
+      "note": "Tulving episodic where",
+      "v083": {
+        "description": "Place or spatial context of the experience",
+        "constraints": "Free text (e.g., \"grandmother's kitchen\", \"beach\", \"hospital\")",
+        "examples": [
+          "grandmother's kitchen",
+          "beach",
+          "hospital"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Place or spatial context of the experience",
+        "constraints": "Free text (e.g., \"grandmother's kitchen\", \"beach\", \"hospital\")",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "milky_way.associated_people",
       "to": "context.people",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text_list",
+      "shape_to": "list",
       "shape": "list",
-      "note": ""
+      "note": "",
+      "v083": {
+        "description": "Individuals referenced in or connected to the experience",
+        "constraints": "Names or roles, properly cased (e.g., \"Sarah\", \"my father\", \"the nurse\")",
+        "examples": [
+          "Sarah",
+          "my father",
+          "the nurse"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Individuals referenced in or connected to the experience",
+        "constraints": "Names or roles, properly cased (e.g., \"Sarah\", \"my father\", \"the nurse\")",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "milky_way.visibility_context",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "closed_enum",
+      "shape_to": null,
       "shape": null,
-      "note": "governance; duplicates meta.visibility; text preserved in extensions"
+      "note": "governance; duplicates meta.visibility; text preserved in extensions",
+      "v083": {
+        "description": "Defines the intended visibility or sharing scope of the moment",
+        "constraints": "private, family_only, shared_publicly",
+        "examples": [],
+        "canonical_values": [
+          "private",
+          "family_only",
+          "shared_publicly"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"milky_way.visibility_context\"]",
+        "text_change": false
+      },
+      "values": [
+        {
+          "value": "private",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"milky_way.visibility_context\"]",
+          "text_change": false
+        },
+        {
+          "value": "family_only",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"milky_way.visibility_context\"]",
+          "text_change": false
+        },
+        {
+          "value": "shared_publicly",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"milky_way.visibility_context\"]",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "milky_way.tone_shift",
       "to": "narrative.valence_shift",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text",
+      "shape_to": "text",
       "shape": "text",
-      "note": "McAdams redemption / contamination"
+      "note": "McAdams redemption / contamination",
+      "v083": {
+        "description": "Directional emotional change during the experience",
+        "constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")",
+        "examples": [
+          "loss to gratitude",
+          "fear to relief",
+          "joy to sadness"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Directional emotional change during the experience",
+        "constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.emotional_weight",
       "to": "emotion.intensity",
+      "disposition": "reshaped",
       "action": "move",
+      "shape_from": "numeric",
+      "shape_to": "dimension",
       "shape": "dimension",
-      "note": "EmotionML intensity-dimension; numeric value carried as-is"
+      "note": "EmotionML intensity-dimension; numeric value carried as-is",
+      "v083": {
+        "description": "The felt intensity of the emotional experience",
+        "constraints": "0.0–1.0",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The felt intensity of the emotional experience",
+        "constraints": "value in [0, 1] (v0.8.3 emotional_weight carried as-is); text is an optional ordinal label",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.emotional_density",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "closed_enum",
+      "shape_to": null,
       "shape": null,
-      "note": "no framework construct; text preserved in extensions"
+      "note": "no framework construct; text preserved in extensions",
+      "v083": {
+        "description": "How concentrated or layered the emotional content is",
+        "constraints": "low, medium, high",
+        "examples": [],
+        "canonical_values": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"gravity.emotional_density\"]",
+        "text_change": false
+      },
+      "values": [
+        {
+          "value": "low",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"gravity.emotional_density\"]",
+          "text_change": false
+        },
+        {
+          "value": "medium",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"gravity.emotional_density\"]",
+          "text_change": false
+        },
+        {
+          "value": "high",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"gravity.emotional_density\"]",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "gravity.valence",
       "to": "emotion.valence",
+      "disposition": "reshaped",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "dimension",
       "shape": "dimension",
-      "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence"
+      "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence",
+      "v083": {
+        "description": "The qualitative direction of the emotional experience",
+        "constraints": "positive, negative, mixed",
+        "examples": [],
+        "canonical_values": [
+          "positive",
+          "negative",
+          "mixed"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The qualitative direction of the emotional experience",
+        "constraints": "text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "positive",
+          "disposition": "carried",
+          "to": "emotion.valence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/valence/v1#positive",
+          "text_change": false
+        },
+        {
+          "value": "negative",
+          "disposition": "carried",
+          "to": "emotion.valence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/valence/v1#negative",
+          "text_change": false
+        },
+        {
+          "value": "mixed",
+          "disposition": "carried",
+          "to": "emotion.valence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/valence/v1#mixed",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "gravity.viscosity",
       "to": "salience.persistence",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "closed_enum",
+      "shape_to": "object",
       "shape": "object",
-      "note": "persistence.text"
+      "note": "persistence.text",
+      "v083": {
+        "description": "The perceived \"stickiness\" or persistence of the emotion",
+        "constraints": "low, medium, high, enduring, fluid",
+        "examples": [],
+        "canonical_values": [
+          "low",
+          "medium",
+          "high",
+          "enduring",
+          "fluid"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
+        "constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "low",
+          "disposition": "carried",
+          "to": "salience.persistence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#low",
+          "text_change": false
+        },
+        {
+          "value": "medium",
+          "disposition": "carried",
+          "to": "salience.persistence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#medium",
+          "text_change": false
+        },
+        {
+          "value": "high",
+          "disposition": "carried",
+          "to": "salience.persistence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#high",
+          "text_change": false
+        },
+        {
+          "value": "enduring",
+          "disposition": "carried",
+          "to": "salience.persistence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#enduring",
+          "text_change": false
+        },
+        {
+          "value": "fluid",
+          "disposition": "carried (deprecated)",
+          "to": "salience.persistence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#fluid",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": "transient",
+            "reason": "nominal value inside an ordinal scale"
+          }
+        }
+      ]
     },
     {
       "from": "gravity.gravity_type",
       "to": "salience.tether",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "free_text",
+      "shape_to": "object",
       "shape": "object",
-      "note": "tether.stake (Lazarus ego-involvement)"
+      "note": "tether.stake (Lazarus ego-involvement)",
+      "v083": {
+        "description": "Category or nature of the emotional pull",
+        "constraints": "Free text (e.g., \"symbolic resonance\", \"relational bond\", \"identity anchor\")",
+        "examples": [
+          "symbolic resonance",
+          "relational bond",
+          "identity anchor"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
+        "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.tether_type",
       "to": "salience.tether",
+      "disposition": "merged",
       "action": "rename",
+      "shape_from": "canonical_open",
+      "shape_to": "object",
       "shape": "object",
-      "note": "tether.type (EDM vocab tether/v1; OCC branches)"
+      "note": "tether.type (EDM vocab tether/v1; OCC branches)",
+      "v083": {
+        "description": "The type of element to which the experience is emotionally anchored",
+        "constraints": "Canonical: person, symbol, event, place, ritual, object, tradition, identity, self. Free text accepted.",
+        "examples": [],
+        "canonical_values": [
+          "person",
+          "symbol",
+          "event",
+          "place",
+          "ritual",
+          "object",
+          "tradition",
+          "identity",
+          "self"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
+        "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "person",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#person",
+          "text_change": false
+        },
+        {
+          "value": "symbol",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#symbol",
+          "text_change": false
+        },
+        {
+          "value": "event",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#event",
+          "text_change": false
+        },
+        {
+          "value": "place",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#place",
+          "text_change": false
+        },
+        {
+          "value": "ritual",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#ritual",
+          "text_change": false
+        },
+        {
+          "value": "object",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#object",
+          "text_change": false
+        },
+        {
+          "value": "tradition",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#tradition",
+          "text_change": false
+        },
+        {
+          "value": "identity",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#identity",
+          "text_change": false
+        },
+        {
+          "value": "self",
+          "disposition": "carried",
+          "to": "salience.tether.type.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/tether/v1#self",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "gravity.recall_triggers",
       "to": "salience.retrieval_cues",
+      "disposition": "merged",
       "action": "rename",
+      "shape_from": "free_text_list",
+      "shape_to": "list",
       "shape": "list",
-      "note": "Tulving; Conway sensory-perceptual cue"
+      "note": "Tulving; Conway sensory-perceptual cue",
+      "v083": {
+        "description": "Sensory or symbolic cues that reactivate the memory",
+        "constraints": "Short phrases, lowercase (e.g., \"smell of bread\", \"old songs\", \"rain sounds\")",
+        "examples": [
+          "smell of bread",
+          "old songs",
+          "rain sounds"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
+        "constraints": "Short phrases; order carries no meaning",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.retrieval_keys",
       "to": "salience.retrieval_cues",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "free_text_list",
+      "shape_to": "list",
       "shape": "list",
-      "note": "appended to retrieval_cues"
+      "note": "appended to retrieval_cues",
+      "v083": {
+        "description": "Compact hooks for memory retrieval",
+        "constraints": "3–6 tokens (e.g., \"grandmother\", \"kitchen\", \"warmth\", \"tradition\")",
+        "examples": [
+          "grandmother",
+          "kitchen",
+          "warmth",
+          "tradition"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
+        "constraints": "Short phrases; order carries no meaning",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.nearby_themes",
       "to": "salience.themes",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text_list",
+      "shape_to": "list",
       "shape": "list",
-      "note": "Conway thematic linkage"
+      "note": "Conway thematic linkage",
+      "v083": {
+        "description": "Adjacent themes or motifs connected to the experience",
+        "constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
+        "examples": [
+          "family",
+          "tradition",
+          "loss",
+          "continuity"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Adjacent themes or motifs connected to the experience",
+        "constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.recurrence_pattern",
       "to": "salience.recurrence",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "canonical_open",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Singer & Blagov specificity"
+      "note": "Singer & Blagov specificity",
+      "v083": {
+        "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
+        "constraints": "Canonical: cyclical, isolated, chronic, emerging. Free text accepted. NULL when pattern cannot be determined.",
+        "examples": [],
+        "canonical_values": [
+          "cyclical",
+          "isolated",
+          "chronic",
+          "emerging"
+        ],
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
+        "constraints": "Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "cyclical",
+          "disposition": "carried",
+          "to": "salience.recurrence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/recurrence/v1#cyclical",
+          "text_change": false
+        },
+        {
+          "value": "isolated",
+          "disposition": "carried",
+          "to": "salience.recurrence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/recurrence/v1#isolated",
+          "text_change": false
+        },
+        {
+          "value": "chronic",
+          "disposition": "carried",
+          "to": "salience.recurrence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/recurrence/v1#chronic",
+          "text_change": false
+        },
+        {
+          "value": "emerging",
+          "disposition": "carried (deprecated)",
+          "to": "salience.recurrence.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/recurrence/v1#emerging",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": null,
+            "reason": "not a recurrence structure"
+          }
+        }
+      ]
     },
     {
       "from": "gravity.strength_score",
       "to": "salience.linkage_strength",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "numeric",
+      "shape_to": "number",
       "shape": "number",
-      "note": "SDM criterion: linked to similar memories"
+      "note": "SDM criterion: linked to similar memories",
+      "v083": {
+        "description": "The binding strength of the emotion within the broader emotional network",
+        "constraints": "0.0–1.0",
+        "examples": [],
+        "canonical_values": null,
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The binding strength of the emotion within the broader emotional network",
+        "constraints": "0.0–1.0",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.temporal_decay",
       "to": "salience.persistence",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "closed_enum",
+      "shape_to": "object",
       "shape": "object",
-      "note": "persistence.decay"
+      "note": "persistence.decay",
+      "v083": {
+        "description": "How quickly the emotional intensity is expected to diminish over time",
+        "constraints": "fast, moderate, slow",
+        "examples": [],
+        "canonical_values": [
+          "fast",
+          "moderate",
+          "slow"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
+        "constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "fast",
+          "disposition": "carried",
+          "to": "salience.persistence.decay",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        },
+        {
+          "value": "moderate",
+          "disposition": "carried",
+          "to": "salience.persistence.decay",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        },
+        {
+          "value": "slow",
+          "disposition": "carried",
+          "to": "salience.persistence.decay",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        }
+      ]
     },
     {
       "from": "gravity.resilience_markers",
       "to": "salience.resilience",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "free_text_list",
+      "shape_to": "list",
       "shape": "list",
-      "note": "Lazarus positive reappraisal; Bar-On optimism"
+      "note": "Lazarus positive reappraisal; Bar-On optimism",
+      "v083": {
+        "description": "Indicators of stabilizing or constructive emotional processing",
+        "constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
+        "examples": [
+          "acceptance",
+          "optimism",
+          "continuity"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "Indicators of stabilizing or constructive emotional processing",
+        "constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": []
     },
     {
       "from": "gravity.adaptation_trajectory",
       "to": "salience.trajectory",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "McAdams redemption / contamination"
+      "note": "McAdams redemption / contamination",
+      "v083": {
+        "description": "How the emotional state is evolving across time",
+        "constraints": "improving, stable, declining, integrative, emerging",
+        "examples": [],
+        "canonical_values": [
+          "improving",
+          "stable",
+          "declining",
+          "integrative",
+          "emerging"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "How the emotional state is evolving across time",
+        "constraints": "Canonical: improving, stable, declining, integrative; emerging is deprecated",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "improving",
+          "disposition": "carried",
+          "to": "salience.trajectory.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/trajectory/v1#improving",
+          "text_change": false
+        },
+        {
+          "value": "stable",
+          "disposition": "carried",
+          "to": "salience.trajectory.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/trajectory/v1#stable",
+          "text_change": false
+        },
+        {
+          "value": "declining",
+          "disposition": "carried",
+          "to": "salience.trajectory.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/trajectory/v1#declining",
+          "text_change": false
+        },
+        {
+          "value": "integrative",
+          "disposition": "carried",
+          "to": "salience.trajectory.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/trajectory/v1#integrative",
+          "text_change": false
+        },
+        {
+          "value": "emerging",
+          "disposition": "carried (deprecated)",
+          "to": "salience.trajectory.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/trajectory/v1#emerging",
+          "text_change": false,
+          "deprecated": {
+            "coded_to": null,
+            "reason": "not a trajectory direction"
+          }
+        }
+      ]
     },
     {
       "from": "impulse.primary_energy",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "free_text",
+      "shape_to": null,
       "shape": null,
-      "note": "duplicates emotion.primary; text preserved in extensions"
+      "note": "duplicates emotion.primary; text preserved in extensions",
+      "v083": {
+        "description": "Dominant emotional or motivational energy in the moment",
+        "constraints": "Lowercase (e.g., \"curiosity\", \"fear\", \"compassion\", \"longing\")",
+        "examples": [
+          "curiosity",
+          "fear",
+          "compassion",
+          "longing"
+        ],
+        "canonical_values": null,
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"impulse.primary_energy\"]",
+        "text_change": false
+      },
+      "values": []
     },
     {
       "from": "impulse.drive_state",
       "to": "motivation.action_tendency",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Frijda action tendency (EmotionML frijda-action-tendencies)"
+      "note": "Frijda action tendency (EmotionML frijda-action-tendencies)",
+      "v083": {
+        "description": "The behavioral direction or movement expressed through the emotional response",
+        "constraints": "explore, approach, avoid, repair, persevere, share, confront, protect, process",
+        "examples": [],
+        "canonical_values": [
+          "explore",
+          "approach",
+          "avoid",
+          "repair",
+          "persevere",
+          "share",
+          "confront",
+          "protect",
+          "process"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The behavioral direction or movement expressed through the emotional response",
+        "constraints": "Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "explore",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#explore",
+          "text_change": false
+        },
+        {
+          "value": "approach",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#approach",
+          "text_change": false
+        },
+        {
+          "value": "avoid",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#avoid",
+          "text_change": false
+        },
+        {
+          "value": "repair",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#repair",
+          "text_change": false
+        },
+        {
+          "value": "persevere",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#persevere",
+          "text_change": false
+        },
+        {
+          "value": "share",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#share",
+          "text_change": false
+        },
+        {
+          "value": "confront",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#confront",
+          "text_change": false
+        },
+        {
+          "value": "protect",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#protect",
+          "text_change": false
+        },
+        {
+          "value": "process",
+          "disposition": "carried",
+          "to": "motivation.action_tendency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/action_tendency/v1#process",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.motivational_orientation",
       "to": "motivation.need",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "SDT basic psychological needs"
+      "note": "SDT basic psychological needs",
+      "v083": {
+        "description": "The foundational motivational domain guiding the individual's internal stance",
+        "constraints": "belonging, safety, mastery, meaning, autonomy, authenticity",
+        "examples": [],
+        "canonical_values": [
+          "belonging",
+          "safety",
+          "mastery",
+          "meaning",
+          "autonomy",
+          "authenticity"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The foundational motivational domain guiding the individual's internal stance",
+        "constraints": "Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "belonging",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#belonging",
+          "text_change": false
+        },
+        {
+          "value": "safety",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#safety",
+          "text_change": false
+        },
+        {
+          "value": "mastery",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#mastery",
+          "text_change": false
+        },
+        {
+          "value": "meaning",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#meaning",
+          "text_change": false
+        },
+        {
+          "value": "autonomy",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#autonomy",
+          "text_change": false
+        },
+        {
+          "value": "authenticity",
+          "disposition": "carried",
+          "to": "motivation.need.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/need/v1#authenticity",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.temporal_focus",
       "to": "motivation.temporal_focus",
+      "disposition": "carried",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Tulving chronesthesia"
+      "note": "Tulving chronesthesia",
+      "v083": {
+        "description": "The temporal direction toward which the motivational energy is oriented",
+        "constraints": "past, present, future",
+        "examples": [],
+        "canonical_values": [
+          "past",
+          "present",
+          "future"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The temporal direction toward which the motivational energy is oriented",
+        "constraints": "past / present / future",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "past",
+          "disposition": "carried",
+          "to": "motivation.temporal_focus.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_focus/v1#past",
+          "text_change": false
+        },
+        {
+          "value": "present",
+          "disposition": "carried",
+          "to": "motivation.temporal_focus.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_focus/v1#present",
+          "text_change": false
+        },
+        {
+          "value": "future",
+          "disposition": "carried",
+          "to": "motivation.temporal_focus.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/temporal_focus/v1#future",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.directionality",
       "to": "context.scope",
+      "disposition": "merged",
       "action": "merge",
+      "shape_from": "closed_enum",
+      "shape_to": "object",
       "shape": "object",
-      "note": "scope.direction"
+      "note": "scope.direction",
+      "v083": {
+        "description": "Whether the impulse is self-directed, relational, or expansive beyond self",
+        "constraints": "inward, outward, transcendent",
+        "examples": [],
+        "canonical_values": [
+          "inward",
+          "outward",
+          "transcendent"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
+        "constraints": "text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)",
+        "profiles": [
+          "extended",
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "inward",
+          "disposition": "carried",
+          "to": "context.scope.direction",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        },
+        {
+          "value": "outward",
+          "disposition": "carried",
+          "to": "context.scope.direction",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        },
+        {
+          "value": "transcendent",
+          "disposition": "carried",
+          "to": "context.scope.direction",
+          "edm_code": null,
+          "text_change": false,
+          "note": "plain string sub-field; no EDM vocabulary minted"
+        }
+      ]
     },
     {
       "from": "impulse.social_visibility",
       "to": null,
+      "disposition": "cut-to-extensions",
       "action": "cut",
+      "shape_from": "closed_enum",
+      "shape_to": null,
       "shape": null,
-      "note": "duplicates context.scope and meta.visibility; text preserved in extensions"
+      "note": "duplicates context.scope and meta.visibility; text preserved in extensions",
+      "v083": {
+        "description": "The social scope within which the impulse is expressed",
+        "constraints": "private, relational, collective",
+        "examples": [],
+        "canonical_values": [
+          "private",
+          "relational",
+          "collective"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": null,
+        "preserved_at": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"impulse.social_visibility\"]",
+        "text_change": false
+      },
+      "values": [
+        {
+          "value": "private",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"impulse.social_visibility\"]",
+          "text_change": false
+        },
+        {
+          "value": "relational",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"impulse.social_visibility\"]",
+          "text_change": false
+        },
+        {
+          "value": "collective",
+          "disposition": "cut-to-extensions",
+          "to": "extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields[\"impulse.social_visibility\"]",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.urgency",
       "to": "emotion.appraisal.urgency",
+      "disposition": "reshaped",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "dimension",
       "shape": "dimension",
-      "note": "EmotionML ema-appraisals#urgency; MFOEM:000089/000090"
+      "note": "EmotionML ema-appraisals#urgency; MFOEM:000089/000090",
+      "v083": {
+        "description": "The intensity or immediacy of the motivational state",
+        "constraints": "calm, elevated, pressing, acute",
+        "examples": [],
+        "canonical_values": [
+          "calm",
+          "elevated",
+          "pressing",
+          "acute"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The intensity or immediacy of the motivational state",
+        "constraints": "text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "calm",
+          "disposition": "carried",
+          "to": "emotion.appraisal.urgency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/urgency/v1#calm",
+          "text_change": false
+        },
+        {
+          "value": "elevated",
+          "disposition": "carried",
+          "to": "emotion.appraisal.urgency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/urgency/v1#elevated",
+          "text_change": false
+        },
+        {
+          "value": "pressing",
+          "disposition": "carried",
+          "to": "emotion.appraisal.urgency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/urgency/v1#pressing",
+          "text_change": false
+        },
+        {
+          "value": "acute",
+          "disposition": "carried",
+          "to": "emotion.appraisal.urgency.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/urgency/v1#acute",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.risk_posture",
       "to": "motivation.risk_posture",
+      "disposition": "carried",
       "action": "rename",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Lazarus threat / challenge"
+      "note": "Lazarus threat / challenge",
+      "v083": {
+        "description": "The stance toward uncertainty or potential risk embedded in the moment",
+        "constraints": "cautious, balanced, bold",
+        "examples": [],
+        "canonical_values": [
+          "cautious",
+          "balanced",
+          "bold"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The stance toward uncertainty or potential risk embedded in the moment",
+        "constraints": "cautious / balanced / bold",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "cautious",
+          "disposition": "carried",
+          "to": "motivation.risk_posture.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/risk_posture/v1#cautious",
+          "text_change": false
+        },
+        {
+          "value": "balanced",
+          "disposition": "carried",
+          "to": "motivation.risk_posture.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/risk_posture/v1#balanced",
+          "text_change": false
+        },
+        {
+          "value": "bold",
+          "disposition": "carried",
+          "to": "motivation.risk_posture.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/risk_posture/v1#bold",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.agency_level",
       "to": "emotion.appraisal.control",
+      "disposition": "reshaped",
       "action": "move",
+      "shape_from": "closed_enum",
+      "shape_to": "dimension",
       "shape": "dimension",
-      "note": "EmotionML scherer-appraisals#control; MFOEM:000110/000116"
+      "note": "EmotionML scherer-appraisals#control; MFOEM:000110/000116",
+      "v083": {
+        "description": "The perceived ability to act or influence the situation",
+        "constraints": "low, medium, high",
+        "examples": [],
+        "canonical_values": [
+          "low",
+          "medium",
+          "high"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The perceived ability to act or influence the situation",
+        "constraints": "text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "low",
+          "disposition": "carried",
+          "to": "emotion.appraisal.control.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/control/v1#low",
+          "text_change": false
+        },
+        {
+          "value": "medium",
+          "disposition": "carried",
+          "to": "emotion.appraisal.control.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/control/v1#medium",
+          "text_change": false
+        },
+        {
+          "value": "high",
+          "disposition": "carried",
+          "to": "emotion.appraisal.control.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/control/v1#high",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.regulation_state",
       "to": "trait.regulation_state",
+      "disposition": "moved-to-trait",
       "action": "trait",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Gross; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile"
+      "note": "Gross; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile",
+      "v083": {
+        "description": "The stability or turbulence of emotional self-regulation",
+        "constraints": "regulated, wavering, dysregulated",
+        "examples": [],
+        "canonical_values": [
+          "regulated",
+          "wavering",
+          "dysregulated"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The stability or turbulence of emotional self-regulation - as stated by the subject for this experience",
+        "constraints": "regulated / wavering / dysregulated",
+        "profiles": [
+          "opt-in (partner manifest)"
+        ]
+      },
+      "values": [
+        {
+          "value": "regulated",
+          "disposition": "moved-to-trait",
+          "to": "trait.regulation_state.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/regulation_state/v1#regulated",
+          "text_change": false
+        },
+        {
+          "value": "wavering",
+          "disposition": "moved-to-trait",
+          "to": "trait.regulation_state.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/regulation_state/v1#wavering",
+          "text_change": false
+        },
+        {
+          "value": "dysregulated",
+          "disposition": "moved-to-trait",
+          "to": "trait.regulation_state.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/regulation_state/v1#dysregulated",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.attachment_style",
       "to": "trait.attachment_style",
+      "disposition": "moved-to-trait",
       "action": "trait",
+      "shape_from": "closed_enum",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Ainsworth / Main; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile"
+      "note": "Ainsworth / Main; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile",
+      "v083": {
+        "description": "The relational attachment pattern influencing the emotional expression",
+        "constraints": "secure, anxious, avoidant, disorganized",
+        "examples": [],
+        "canonical_values": [
+          "secure",
+          "anxious",
+          "avoidant",
+          "disorganized"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The relational attachment pattern influencing the emotional expression - as stated by the subject for this experience; never aggregated into a person-level classification by the artifact",
+        "constraints": "secure / anxious / avoidant / disorganized; codings on EDM vocab attachment_style/v1 with Ainsworth / Main letter codes as display",
+        "profiles": [
+          "opt-in (partner manifest)"
+        ]
+      },
+      "values": [
+        {
+          "value": "secure",
+          "disposition": "moved-to-trait",
+          "to": "trait.attachment_style.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/attachment_style/v1#secure",
+          "text_change": false
+        },
+        {
+          "value": "anxious",
+          "disposition": "moved-to-trait",
+          "to": "trait.attachment_style.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/attachment_style/v1#anxious",
+          "text_change": false
+        },
+        {
+          "value": "avoidant",
+          "disposition": "moved-to-trait",
+          "to": "trait.attachment_style.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/attachment_style/v1#avoidant",
+          "text_change": false
+        },
+        {
+          "value": "disorganized",
+          "disposition": "moved-to-trait",
+          "to": "trait.attachment_style.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/attachment_style/v1#disorganized",
+          "text_change": false
+        }
+      ]
     },
     {
       "from": "impulse.coping_style",
       "to": "motivation.coping",
+      "disposition": "renamed",
       "action": "rename",
+      "shape_from": "canonical_open",
+      "shape_to": "coded",
       "shape": "coded",
-      "note": "Lazarus & Folkman Ways of Coping; Gross family as second coding"
+      "note": "Lazarus & Folkman Ways of Coping; Gross family as second coding",
+      "v083": {
+        "description": "The primary strategy used to manage or integrate the emotional experience",
+        "constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process. Free text accepted.",
+        "examples": [],
+        "canonical_values": [
+          "reframe_meaning",
+          "seek_support",
+          "distract",
+          "ritualize",
+          "confront",
+          "detach",
+          "process"
+        ],
+        "profiles": [
+          "full"
+        ]
+      },
+      "v09": {
+        "description": "The primary strategy used to manage or integrate the emotional experience",
+        "constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.",
+        "profiles": [
+          "full"
+        ]
+      },
+      "values": [
+        {
+          "value": "reframe_meaning",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#reframe_meaning",
+          "text_change": false
+        },
+        {
+          "value": "seek_support",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#seek_support",
+          "text_change": false
+        },
+        {
+          "value": "distract",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#distract",
+          "text_change": false
+        },
+        {
+          "value": "ritualize",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#ritualize",
+          "text_change": false
+        },
+        {
+          "value": "confront",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#confront",
+          "text_change": false
+        },
+        {
+          "value": "detach",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#detach",
+          "text_change": false
+        },
+        {
+          "value": "process",
+          "disposition": "carried",
+          "to": "motivation.coping.text",
+          "edm_code": "https://emotionaldatamodel.org/vocab/coping/v1#process",
+          "text_change": false
+        }
+      ]
     }
   ],
   "new_fields": [
     {
       "path": "narrative.self_position",
       "shape": "text",
+      "disposition": "added",
       "note": "stated-only: the subject's expressed lens on themselves in the story; codes to McAdams imago (open) and agency/communion; Hermans I-positions",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "The subject's own expressed lens on themselves within the story: the position they say they occupy (e.g. \"the one who holds it together\", \"the person who finally said no\"). STATED-ONLY: recorded only when the subject says it or paraphrases it unmistakably; never assigned from the plot, the emotion or an archetype catalogue.",
+        "constraints": "Short phrase in the subject's own terms; NULL when not stated. Replaces narrative_archetype (the Mark & Pearson 12 are not used). Optional codings: McAdams imago (open label), agency / communion, Hermans I-position; all relation=related.",
+        "profiles": [
+          "essential",
+          "extended",
+          "full"
+        ]
+      }
     },
     {
       "path": "emotion.kind",
       "shape": "coded",
+      "disposition": "added",
       "note": "MFOEM:000001 emotion process | MFOEM:000193 mood process | MFOEM:000006 subjective affective feeling | MFOEM:000199 emotion disposition",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.",
+        "constraints": "emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "emotion.arousal",
       "shape": "dimension",
+      "disposition": "added",
       "note": "Russell; PAD; GRID; EmotionML pad-dimensions#arousal",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.",
+        "constraints": "text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "emotion.appraisal.attribution",
       "shape": "coded",
+      "disposition": "added",
       "note": "Scherer agent-self / agent-other / agent-nature; MFOEM:000076 / 000078 / 000077",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "To whom or what the subject attributes the cause of the event (\"I blamed myself\", \"it was just bad luck\"). Explicit content only.",
+        "constraints": "self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "context.event_category",
       "shape": "coded",
+      "disposition": "added",
       "note": "Singer & Blagov / Thorne & McLean content categories",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "Coded companion to context.event: the content category of the event as the subject describes it.",
+        "constraints": "Singer & Blagov / Thorne & McLean categories: relationships, life_threatening_events, recreation_exploration, achievement_mastery, guilt_shame, drug_alcohol_tobacco_use, not_classifiable (labels knowledge-reconstructed; REPORT.md section 9)",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "context.relationship_model",
       "shape": "coded",
+      "disposition": "added",
       "note": "Fiske relational models",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "Coded companion to context.relationship: the relational model the subject's account of the relationship instantiates (Fiske).",
+        "constraints": "communal_sharing, authority_ranking, equality_matching, market_pricing, null_relation",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "salience.function",
       "shape": "coded_list",
+      "disposition": "added",
       "note": "Pillemer / Bluck memory functions: directive, self, social",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": {
+        "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
+        "constraints": "Pillemer 1992 / Bluck 2003 memory functions",
+        "profiles": [
+          "full"
+        ]
+      }
     },
     {
       "path": "telemetry.field_confidence",
       "shape": "object",
+      "disposition": "added",
       "note": "EmotionML confidence attribute, per field path (infrastructure, not an affective field)",
-      "populated_by_migration": false
+      "populated_by_migration": false,
+      "v09": null
+    }
+  ],
+  "new_values": [
+    {
+      "vocabulary": "kind",
+      "value": "emotion",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/kind/v1#emotion"
+    },
+    {
+      "vocabulary": "kind",
+      "value": "mood",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/kind/v1#mood"
+    },
+    {
+      "vocabulary": "kind",
+      "value": "feeling",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/kind/v1#feeling"
+    },
+    {
+      "vocabulary": "kind",
+      "value": "disposition",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/kind/v1#disposition"
+    },
+    {
+      "vocabulary": "arousal",
+      "value": "low",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/arousal/v1#low"
+    },
+    {
+      "vocabulary": "arousal",
+      "value": "medium",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/arousal/v1#medium"
+    },
+    {
+      "vocabulary": "arousal",
+      "value": "high",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/arousal/v1#high"
+    },
+    {
+      "vocabulary": "attribution",
+      "value": "self",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/attribution/v1#self"
+    },
+    {
+      "vocabulary": "attribution",
+      "value": "other",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/attribution/v1#other"
+    },
+    {
+      "vocabulary": "attribution",
+      "value": "chance",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/attribution/v1#chance"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "relationships",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#relationships"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "life_threatening_events",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#life_threatening_events"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "recreation_exploration",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#recreation_exploration"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "achievement_mastery",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#achievement_mastery"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "guilt_shame",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#guilt_shame"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "drug_alcohol_tobacco_use",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#drug_alcohol_tobacco_use"
+    },
+    {
+      "vocabulary": "event_category",
+      "value": "not_classifiable",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/event_category/v1#not_classifiable"
+    },
+    {
+      "vocabulary": "relationship_model",
+      "value": "communal_sharing",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/relationship_model/v1#communal_sharing"
+    },
+    {
+      "vocabulary": "relationship_model",
+      "value": "authority_ranking",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/relationship_model/v1#authority_ranking"
+    },
+    {
+      "vocabulary": "relationship_model",
+      "value": "equality_matching",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/relationship_model/v1#equality_matching"
+    },
+    {
+      "vocabulary": "relationship_model",
+      "value": "market_pricing",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/relationship_model/v1#market_pricing"
+    },
+    {
+      "vocabulary": "relationship_model",
+      "value": "null_relation",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/relationship_model/v1#null_relation"
+    },
+    {
+      "vocabulary": "function",
+      "value": "directive",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/function/v1#directive"
+    },
+    {
+      "vocabulary": "function",
+      "value": "self",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/function/v1#self"
+    },
+    {
+      "vocabulary": "function",
+      "value": "social",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/function/v1#social"
+    },
+    {
+      "vocabulary": "persistence",
+      "value": "transient",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#transient",
+      "note": "code only, reached from viscosity / temporal_decay by the fixed recode table; never written into text by migration"
+    },
+    {
+      "vocabulary": "persistence",
+      "value": "short",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#short",
+      "note": "code only, reached from viscosity / temporal_decay by the fixed recode table; never written into text by migration"
+    },
+    {
+      "vocabulary": "persistence",
+      "value": "enduring",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#enduring",
+      "note": "code only, reached from viscosity / temporal_decay by the fixed recode table; never written into text by migration"
+    },
+    {
+      "vocabulary": "persistence",
+      "value": "chronic",
+      "disposition": "added",
+      "edm_code": "https://emotionaldatamodel.org/vocab/persistence/v1#chronic",
+      "note": "code only, reached from viscosity / temporal_decay by the fixed recode table; never written into text by migration"
     }
   ],
   "trait_profile": {
