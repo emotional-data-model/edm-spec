@@ -190,8 +190,8 @@
       "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "meaning": {
-      "description": "The explicit realization or conclusion stated by the subject",
-      "x_constraints": "Short sentence. Extracted, not inferred",
+      "description": "The realization or conclusion the subject draws from the experience, as the text supports it. Interpretive, attributed: an interpretation attributable to a passage, not a quotation; null only when the text offers no basis. (R6 2026-10-18; v0.8.3: \"The explicit realization or conclusion stated by the subject\")",
+      "x_constraints": "Short sentence. Interpretive, attributed (R6 2026-10-18); v0.8.3 read 'Extracted, not inferred'.",
       "x_profiles": [
         "extended",
         "full"
