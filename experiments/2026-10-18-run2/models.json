@@ -1,0 +1,103 @@
+{
+ "pinned_at": "2026-10-18",
+ "pinned_from": "run 1 pins carried verbatim (experiments/2026-10-17/models.json, 2026-10-17); M5 added from the live OpenAI /models listing of 2026-10-18 (newest general *-mini still gpt-5.4-mini, created 2026-03-14; no gpt-6*-mini) and developers.openai.com/api/docs/pricing read 2026-10-18",
+ "list_prices_usd_per_million_tokens": {
+  "note": "input / cached-input / output; Anthropic cache write = 1.25 x input (5-minute TTL); cached-input = cache read"
+ },
+ "extractors": {
+  "M1": {
+   "slot": "Claude Sonnet 5.5",
+   "model": "claude-sonnet-5-5",
+   "provider": "anthropic",
+   "price": {
+    "input": 2.0,
+    "cache_write": 2.5,
+    "cached_input": 0.2,
+    "output": 10.0
+   },
+   "source": "claude-api skill price table 2026-10-06; models.list 2026-10-17",
+   "role": "voting (R9)"
+  },
+  "M2": {
+   "slot": "Claude Haiku 5.5",
+   "model": "claude-haiku-5-5",
+   "provider": "anthropic",
+   "price": {
+    "input": 0.1,
+    "cache_write": 0.125,
+    "cached_input": 0.01,
+    "output": 0.5
+   },
+   "source": "claude-api skill price table 2026-10-06 (prompts <= 100K tokens); models.list 2026-10-17",
+   "role": "reported, no vote (R9)"
+  },
+  "M3": {
+   "slot": "OpenAI current flagship general model",
+   "model": "gpt-6.1-sol",
+   "provider": "openai",
+   "price": {
+    "input": 2.0,
+    "cached_input": 0.1,
+    "output": 10.0
+   },
+   "source": "developers.openai.com/api/docs/pricing 2026-10-17 (standard tier, <= 272K input). gpt-6-astra ($10 / $50) is the premium tier and was excluded: it alone would exceed the USD 80 budget. Founder may re-pin.",
+   "created_unix": 1790552874,
+   "role": "voting (R9)"
+  },
+  "M4": {
+   "slot": "Kimi K2 (latest)",
+   "model": "kimi-k2.6",
+   "provider": "kimi",
+   "base_url": "https://api.moonshot.ai/v1",
+   "price": {
+    "input": 0.95,
+    "cached_input": 0.16,
+    "output": 4.0
+   },
+   "source": "platform.kimi.ai/docs/pricing/chat 2026-10-17; models.list 2026-10-17 also lists kimi-k3 ($3 / $15) and kimi-k2.7-code; K2 latest = kimi-k2.6",
+   "role": "voting (R9)"
+  },
+  "M5": {
+   "slot": "OpenAI current mini model",
+   "model": "gpt-5.4-mini",
+   "provider": "openai",
+   "price": {
+    "input": 0.75,
+    "cached_input": 0.075,
+    "output": 4.5
+   },
+   "source": "developers.openai.com/api/docs/pricing 2026-10-18 (standard tier); models.list 2026-10-18",
+   "role": "reported, no vote (R9)"
+  }
+ },
+ "judge": {
+  "slot": "Claude Opus 5.5",
+  "model": "claude-opus-5-5",
+  "provider": "anthropic",
+  "price": {
+   "input": 4.0,
+   "cache_write": 5.0,
+   "cached_input": 0.2,
+   "output": 20.0
+  },
+  "source": "claude-api skill price table 2026-10-06; models.list 2026-10-17",
+  "rule": "never used for extraction or as a task (b) rater"
+ },
+ "sampling": "provider defaults for every extractor (no temperature, top_p or effort set); kimi-k2.6 thinking disabled as in run 1 (D1); fresh context per call; two system prompts (Arm A, Arm B), 5-minute Anthropic cache",
+ "env_keys": {
+  "anthropic": "ANTHROPIC_API_KEY",
+  "openai": "OPENAI_API_KEY",
+  "kimi": "KIMI_API_KEY"
+ },
+ "budget_usd": 60,
+ "voting": [
+  "claude-sonnet-5-5",
+  "gpt-6.1-sol",
+  "kimi-k2.6"
+ ],
+ "reported": [
+  "claude-haiku-5-5",
+  "gpt-5.4-mini"
+ ],
+ "run": "2026-10-18-run2"
+}

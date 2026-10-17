@@ -1,6 +1,6 @@
-# Run 2 — prompt test on the six core slots (PRE-REGISTRATION DRAFT, 2026-10-18; NOT RUN)
+# Run 2 — prompt test on the six core slots (PRE-REGISTRATION FROZEN 2026-10-18)
 
-Discovery output, branch `discovery/ontology-crosswalk`. Written under rulings R2, R3, R8 and R9 of `rulings-2026-10-18.md` (*ruling under delegation, veto by exception*). **No extraction, judge or rater call has been made for this plan.** It is frozen by a commit titled `run 2 pre-registration frozen` only when the founder authorises the spend; until then it is a draft and may be edited. Run directory when authorised: `experiments/<run-date>/` with the same layout as `experiments/2026-10-17/`.
+Discovery output, branch `discovery/ontology-crosswalk`. Written under rulings R2, R3, R8 and R9 of `rulings-2026-10-18.md` (*ruling under delegation, veto by exception*). **Frozen 2026-10-18 by the commit `run 2 pre-registration frozen` on the founder's authorisation of the same date (hard stop USD 60); no extraction, judge or rater call was made before that commit.** Run directory: `experiments/2026-10-18-run2/` with the same layout as `experiments/2026-10-17/`; its `models.json` carries the run-1 pins verbatim plus the `gpt-5.4-mini` price. After the freeze this file changes only in §12 (deviations), as in run 1.
 
 ## 0. What run 2 is
 
@@ -39,7 +39,7 @@ The 150 texts of run 1, byte-identical (`experiments/2026-10-17/corpus/corpus_ma
 | M3 | `gpt-6.1-sol` | **voting** | 2.00 / 0.10 / 10.00 | `gpt-6-astra` stays excluded (budget; R9) |
 | M4 | `kimi-k2.6` | **voting** | 0.95 / 0.16 / 4.00 | `thinking: {type: disabled}` as in run 1 (D1); `kimi-k3` not chosen |
 | M2 | `claude-haiku-5-5` | reported, cheap tier, **no vote** | 0.10 / 0.01 / 0.50 | run-1 repeatability 15 / 52 units |
-| M5 | OpenAI current mini model: `gpt-5.4-mini` | reported, **no vote** | **to pin at run time** from developers.openai.com pricing; not in `models.json` | newest `*-mini` general model in the 2026-10-17 OpenAI listing (`experiments/2026-10-17/_model_lists_raw.json`: `gpt-5.4-mini`, created 2026-03-17; no `gpt-6*-mini` listed). Re-check the listing on the run date; if a newer mini exists, pin it and record both |
+| M5 | `gpt-5.4-mini` | reported, **no vote** | 0.75 / 0.075 / 4.50 (developers.openai.com/api/docs/pricing, standard tier, read 2026-10-18; pinned in `experiments/2026-10-18-run2/models.json`) | newest general `*-mini` in the 2026-10-17 listing and again in the live listing of 2026-10-18 (`gpt-5.4-mini`, created 2026-03-14; no `gpt-6*-mini`; `gpt-realtime-2.1-mini` is a realtime model, not an extractor candidate) |
 | Judge | `claude-opus-5-5` | equivalence judge | 4.00 / 0.20 / 20.00 | never an extractor; `output_config.effort = "low"` as in run 1 |
 
 Voting rule (R9, stated openly): a slot **passes** in an arm when all three voting extractors meet the repeatability threshold and the cross-model threshold is met over the three; **interpretive** when all three meet repeatability and cross is missed; **cut** when ≥ 2 of the three miss repeatability (one voting extractor missing = borderline-cut, reported as such). The reported arms never change an outcome.
@@ -184,9 +184,9 @@ Per slot, with outcomes under Arm A and Arm B over the three voting extractors:
 
 Gate on the control: if `summary` differs between arms by ≥ 0.10 on cross-model agreement, the whole A / B comparison is reported as prompt-wide drift and the table above is advisory only (the per-arm outcomes still stand on their own).
 
-Pre-registered expectations per slot, from the diagnostic (`experiments/2026-10-18-diagnostic/RESULTS.md` §4). They are stated so that the result can be read against them; they do not alter the decision table:
+**Pre-registered predictions** per slot (frozen 2026-10-18 with this plan), from the diagnostic (`experiments/2026-10-18-diagnostic/RESULTS.md` §4). RESULTS.md reports every slot × arm outcome against them; they do not alter the decision table:
 
-| Slot | Expectation under Arm B | Recommended shape if the expectation holds |
+| Slot | Prediction under Arm B | Recommended shape if the prediction holds |
 |---|---|---|
 | `subject` | pass (disagreement was selection and specificity, extractor error 13 %) | single string, selection rule |
 | `trigger` | pass or interpretive (extractor error 28 %, the definition was misread) | single string, selection rule + exclusion |
@@ -195,7 +195,7 @@ Pre-registered expectations per slot, from the diagnostic (`experiments/2026-10-
 | `integration` | pass; null rate falls | single string, null rule |
 | `retrieval_cues` | Arm B (capped list, first-element rule) passes where the run-1 list did not; Arm A `echo` single string is the comparison | short ordered list, cap 3 |
 
-A result that contradicts an expectation is reported as such; the §7 table decides.
+A result that contradicts a prediction is reported as such; the §7 table decides.
 
 Reported arms (Haiku 5.5, `gpt-5.4-mini`): repeatability, agreement with the voting modal class, and cross-arm equivalence, all descriptive; a sentence per arm in RESULTS.md.
 
@@ -207,7 +207,7 @@ The synthetic design matrix has no ground-truth flags for the six slots, so null
 
 Measured run-1 per-call usage (extraction, 47 fields): Sonnet 5.5 in 618 / cached 6,588 / out 1,347 tokens = USD 0.0160; Haiku 5.5 618 / 6,588 / 2,894 = 0.0016; gpt-6.1-sol 87 / 4,569 / 1,382 = 0.0145; Kimi K2.6 595 / 4,085 / 965 = 0.0051. Judge (Opus 5.5) 2,480 in / 344 out = 0.0168 per call.
 
-Scaling assumptions for a 7-field prompt: cached / system tokens × 0.22 (≈ 1,000-token system prompt against ≈ 4,600); uncached input unchanged (same texts); **output × 0.35** (7 of 47 fields, but Claude thinking tokens are not expected to shrink in proportion — this is the assumption the pilot checks). Mini priced at **one fifth of gpt-6.1-sol per token** as a placeholder (0.40 / 0.02 / 2.00) until pinned.
+Scaling assumptions for a 7-field prompt: cached / system tokens × 0.22 (≈ 1,000-token system prompt against ≈ 4,600); uncached input unchanged (same texts); **output × 0.35** (7 of 47 fields, but Claude thinking tokens are not expected to shrink in proportion — this is the assumption the pilot checks). Mini priced at its pinned list price (0.75 / 0.075 / 4.50) on gpt-6.1-sol's measured run-1 token usage. Re-projected 2026-10-18 at freeze from `experiments/2026-10-17/spend.json` per-call means (Sonnet 618 / 6,588 / 1,347; Haiku 618 / 6,588 / 2,894; sol 87 / 4,569 / 1,382; Kimi 595 / 4,085 / 965 tokens in / cached / out).
 
 | Call set | Calls | Projected USD | Upper bound (run-1 per-call cost, no shrink) |
 |---|---|---|---|
@@ -215,11 +215,11 @@ Scaling assumptions for a 7-field prompt: cached / system tokens × 0.22 (≈ 1,
 | M3 gpt-6.1-sol | 1,500 | 7.7 | 21.7 |
 | M4 Kimi K2.6 | 1,500 | 3.1 | 7.6 |
 | M2 Haiku 5.5 (reported) | 1,500 | 0.9 | 2.4 |
-| M5 gpt-5.4-mini (reported; price unpinned) | 1,500 | 1.5 | ≤ 21.7 (if it cost as much as sol) |
+| M5 gpt-5.4-mini (reported; pinned 0.75 / 0.075 / 4.50) | 1,500 | 3.5 | 9.9 |
 | Pilot: 3 texts × 5 extractors × 2 arms | 30 | 0.5 | 1.0 |
 | Judge Opus 5.5: 600 calls, ≈ 3,000 in / 600 out | 600 | 14.4 | 18 |
 | Task (a) re-analysis | 0 | 0 | 0 |
-| **Total** | **7,530 + 600** | **≈ 38** | ≈ 97 without any shrink |
+| **Total** | **7,530 + 600** | **≈ 39** | ≈ 85 without any shrink |
 
 **Budget: USD 60, hard stop.** Pilot gate (as run 1): after the 30 pilot calls, project total = measured per-call cost × remaining calls + judge reserve 18; if > 60, apply in order (pre-registered now): (1) drop the `gpt-5.4-mini` arm; (2) run the two Claude extractors with `output_config.effort = "low"` (the only cost lever that does not alter sampling; logged as a deviation); (3) do not start. Re-project after every 1,000 calls.
 
@@ -243,4 +243,5 @@ Scaling assumptions for a 7-field prompt: cached / system tokens × 0.22 (≈ 1,
 | Date | Change | Reason |
 |---|---|---|
 | 2026-10-18 | Plan written as a prompt test under R2 / R3 / R8 / R9; Arm A from the audited crosswalk record; Arm B definitions and referent rule written; judge rule 5; LoCoMo evidence-session ground truth fixed from citation counts; cost scaled from `spend.json`; **not run, not frozen** | founder instruction 2026-10-18 step 5 |
+| 2026-10-18 (freeze) | `gpt-5.4-mini` price pinned from the OpenAI pricing page (0.75 / 0.075 / 4.50) into `experiments/2026-10-18-run2/models.json`; §9 re-projected from `spend.json` (≈ USD 39, upper bound ≈ 85, hard stop 60 unchanged); §7 diagnostic expectations recorded as the **pre-registered predictions**; no other change. **Frozen**: commit `run 2 pre-registration frozen` | founder instruction 2026-10-18 step 2 |
 | 2026-10-18 (later) | Arm B referent rule gains a specificity clause; `trigger` gains the topic / subject exclusion and a null clause; `harm`, `drive`, `integration` gain null rules; `retrieval_cues` capped at three ordered cues; §3 caveat on per-extractor wrong-rates; §7 pre-registered expectations per slot; §8 per-extractor null rate. Arm A, corpus, extractors, thresholds, voting rule, cost unchanged; **still not run, not frozen** | diagnostic on run-1 disagreements, `experiments/2026-10-18-diagnostic/RESULTS.md` (founder instruction 2026-10-18, diagnostic) |
