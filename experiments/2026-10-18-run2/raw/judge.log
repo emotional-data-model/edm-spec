@@ -1,0 +1,30 @@
+outputs: {'claude-sonnet-5-5': {'calls': 1500, 'valid': 1492, 'invalid': 8}, 'claude-haiku-5-5': {'calls': 1500, 'valid': 1497, 'invalid': 3}, 'gpt-6.1-sol': {'calls': 1500, 'valid': 1500}, 'kimi-k2.6': {'calls': 1500, 'valid': 1500}, 'gpt-5.4-mini': {'calls': 1500, 'valid': 1496, 'invalid': 4}}
+g1_subject_trigger: 150 texts to judge
+g2_harm_drive: 150 texts to judge
+g3_integration_cues: 150 texts to judge
+g4_summary: 150 texts to judge
+  judge 25 records, $0.37 this run (bad=0); cumulative $0.37
+  judge 50 records, $0.66 this run (bad=0); cumulative $0.66
+  judge 75 records, $1.04 this run (bad=0); cumulative $1.04
+  judge 100 records, $1.39 this run (bad=0); cumulative $1.39
+  judge 125 records, $1.76 this run (bad=0); cumulative $1.76
+  judge 150 records, $2.16 this run (bad=0); cumulative $2.16
+  judge 175 records, $2.48 this run (bad=0); cumulative $2.48
+  judge 200 records, $2.73 this run (bad=0); cumulative $2.73
+  judge 225 records, $3.08 this run (bad=0); cumulative $3.08
+  judge 250 records, $3.41 this run (bad=0); cumulative $3.41
+  judge 275 records, $3.74 this run (bad=0); cumulative $3.74
+  judge 300 records, $4.11 this run (bad=0); cumulative $4.11
+  judge 325 records, $4.44 this run (bad=0); cumulative $4.44
+  judge 350 records, $4.76 this run (bad=0); cumulative $4.76
+  judge 375 records, $5.06 this run (bad=0); cumulative $5.06
+  judge 400 records, $5.46 this run (bad=0); cumulative $5.46
+  judge 425 records, $5.91 this run (bad=0); cumulative $5.91
+  judge 450 records, $6.82 this run (bad=0); cumulative $6.82
+  judge 475 records, $7.86 this run (bad=0); cumulative $7.86
+  judge 500 records, $9.09 this run (bad=0); cumulative $9.09
+  judge 525 records, $10.46 this run (bad=0); cumulative $10.46
+  judge 550 records, $11.65 this run (bad=0); cumulative $11.65
+  judge 575 records, $12.78 this run (bad=0); cumulative $12.78
+  judge 600 records, $13.15 this run (bad=0); cumulative $13.15
+judge done: 600 records, $13.15 this run, bad=0, cumulative spend $13.15
