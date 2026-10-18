@@ -120,7 +120,7 @@ def score_unit(unit, shape, vocab, outputs, out1, judge, texts):
             alll = [l for tid in texts for l in lab3[m][tid]]
             nulls = sum(1 for l in alll if l == 'null'); nn = [l for l in alll if l != 'null']
             noncan = (sum(1 for l in nn if l not in canon_set) / len(nn)) if (canon_set and nn) else None
-            res['arms'][m] = {'repeat': rep, 'repeat_subjects': info.get('subjects'), 'agree': ck, 'agree_raw': po, 'agree_texts': n, 'coverage': cov, 'null_rate': (nulls / len(alll)) if alll else None,
+            res['arms'][m] = {'repeat': rep, 'repeat_subjects': info.get('subjects'), 'agree': ck, 'agree_raw': po, 'agree_texts': n, 'coverage': cov, 'coverage_valid': n / len(texts), 'null_rate': (nulls / len(alll)) if alll else None,
                               'noncanonical_rate': noncan, 'n_valid_outputs': len(alll), 'modal_dist': dict(Counter(mod3[m].values()).most_common(6))}
         # framing bound: Sonnet run 1 vs run 3
         pairs = [(mod1[SON_R1][tid], mod3[SON][tid]) for tid in texts if tid in mod1[SON_R1] and tid in mod3[SON]]
@@ -146,7 +146,7 @@ def score_unit(unit, shape, vocab, outputs, out1, judge, texts):
             both = [(mean3[m][tid], maj[tid]) for tid in texts if tid in maj and tid in mean3[m]]
             x = icc2_1([[a, b] for a, b in both]) if len(both) >= 2 else None
             alln = [x for tid in texts for x in num3[m][tid]]; n_valid = sum(len(num3[m][tid]) for tid in texts)
-            res['arms'][m] = {'repeat': icc, 'repeat_texts_complete': len(full), 'agree': x, 'agree_texts': len(both), 'coverage': len(both) / len(texts), 'null_rate': (sum(1 for v in alln if v is None) / n_valid) if n_valid else None,
+            res['arms'][m] = {'repeat': icc, 'repeat_texts_complete': len(full), 'agree': x, 'agree_texts': len(both), 'coverage': len(both) / len(texts), 'coverage_valid': len(both) / len(texts), 'null_rate': (sum(1 for v in alln if v is None) / n_valid) if n_valid else None,
                               'texts_with_number': len(mean3[m]), 'n_valid_outputs': n_valid}
         both = [(mean1[SON_R1][tid], mean3[SON][tid]) for tid in texts if tid in mean1[SON_R1] and tid in mean3[SON]]
         res['framing'] = {'icc': icc2_1([[a, b] for a, b in both]) if len(both) >= 2 else None, 'texts': len(both)}
@@ -182,7 +182,7 @@ def score_unit(unit, shape, vocab, outputs, out1, judge, texts):
             inc_nn = [tid for tid in inc if rep3[m][tid] != 'null' and maj[tid] != 'null']
             res['arms'][m] = {'repeat': mean(rates[m]), 'repeat_nonnull': mean(nn_rates[m]), 'repeat_texts': len(rates[m]), 'agree': (agree / len(inc)) if inc else None, 'agree_texts': len(inc),
                               'agree_nonnull': (sum(1 for tid in inc_nn if rep3[m][tid] == maj[tid]) / len(inc_nn)) if inc_nn else None, 'agree_nonnull_texts': len(inc_nn),
-                              'coverage': covered / len(texts), 'null_rate': (nulls[m][0] / nulls[m][1]) if nulls[m][1] else None, 'n_valid_outputs': nulls[m][1]}
+                              'coverage': covered / len(texts), 'coverage_valid': len(inc) / len(texts), 'null_rate': (nulls[m][0] / nulls[m][1]) if nulls[m][1] else None, 'n_valid_outputs': nulls[m][1]}
         fb = []; fb_nn = []
         for tid in texts:
             g = judge.get((tid, unit))
@@ -206,10 +206,19 @@ def score_unit(unit, shape, vocab, outputs, out1, judge, texts):
         elif r >= lo_r: d = 'repeats only'
         else: d = 'does not hold'
         a['decision'] = d; a['repeat_met'] = r is not None and r >= lo_r; a['agree_met'] = x is not None and x >= lo_x
+        covv = a.get('coverage_valid') or 0
+        if r is None or x is None: da = d
+        elif covv < 0.5: da = 'uncovered'
+        elif r >= lo_r and x >= lo_x: da = 'holds'
+        elif r >= lo_r: da = 'repeats only'
+        else: da = 'does not hold'
+        a['decision_alt'] = da  # sensitivity reading (null-valued answers count as covered), reported beside the frozen decision, never deciding
         a['borderline'] = (r is not None and abs(r - lo_r) < 0.05) or (x is not None and abs(x - lo_x) < 0.05)
         a['sparse'] = a.get('null_rate') is not None and a['null_rate'] >= 0.90
     arms_run = [m for m in NEW_ARMS if res['arms'].get(m, {}).get('n_valid_outputs')]
     n_hold_new = sum(1 for m in arms_run if res['arms'][m]['decision'] == 'holds')
+    n_hold_alt = sum(1 for m in arms_run if res['arms'][m]['decision_alt'] == 'holds')
+    res['verdict_alt'] = {'new_arms_hold': n_hold_alt, 'total_hold': 3 + n_hold_alt, 'holds_across_market': (3 + n_hold_alt) >= 5, 'reading': 'sensitivity: null-valued answers count as covered (run-1 convention: null is a category); not deciding'}
     res['verdict'] = {'new_arms_run': len(arms_run), 'new_arms_hold': n_hold_new, 'new_arms_repeat_only': sum(1 for m in arms_run if res['arms'][m]['decision'] == 'repeats only'),
                       'total_hold_of': 3 + len(arms_run), 'total_hold': 3 + n_hold_new, 'holds_across_market': (3 + n_hold_new) >= 5,
                       'recommendation': None if (3 + n_hold_new) >= 5 else 're-class interpretive (R17: Essential -> Extended); founder rules'}
@@ -232,7 +241,8 @@ def main():
         rep_met = sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('repeat_met')); holds = sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('decision') == 'holds')
         agree_met = sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('agree_met'))
         band = 'cheap-tier' if rep_met <= BAND_CHEAP else ('voting' if rep_met >= BAND_VOTING else 'between')
-        bands[m] = {'repeat_met': rep_met, 'agree_met': agree_met, 'holds': holds, 'repeats_only': sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('decision') == 'repeats only'),
+        holds_alt = sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('decision_alt') == 'holds')
+        bands[m] = {'repeat_met': rep_met, 'agree_met': agree_met, 'holds': holds, 'holds_alt': holds_alt, 'repeats_only': sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('decision') == 'repeats only'),
                     'uncovered': sum(1 for u, s, v in UNITS if P[u]['arms'].get(m, {}).get('decision') == 'uncovered'), 'band': band, 'in_p1_set': m in P1_SET, 'is_new_arm': m in NEW_ARMS}
     # predictions
     p1_arms = {m: (bands[m]['band'] == 'cheap-tier' and bands[m]['holds'] <= 10) for m in P1_SET if bands[m]['repeat_met'] or counts[m]['valid']}
