@@ -101,7 +101,7 @@
         "extended",
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "tether": {
       "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
@@ -172,10 +172,10 @@
             ],
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
-          "x_comparability": "comparable",
+          "x_comparability": "interpretive",
           "x_comparability_basis": {
             "run": "run 1",
-            "ruling": "R17 rule (R4 annotation)",
+            "ruling": "R17 rule (R4 annotation); run 3 R26",
             "outcome": "pass",
             "repeat": {
               "claude-sonnet-5-5": 0.81,
@@ -190,11 +190,72 @@
               "borderline"
             ],
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-            "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 fails across the market under both readings (4 of 8; pre-registered recommendation: interpretive; R26)",
+            "run3": {
+              "holds_a": 4,
+              "holds_b": 4,
+              "of": 8,
+              "verdict_a": "fails",
+              "verdict_b": "fails",
+              "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+              "arms": {
+                "gemini-4-argon": {
+                  "repeat": 0.81,
+                  "agree": 0.47,
+                  "coverage_a": 0.95,
+                  "coverage_b": 0.95,
+                  "a": "holds",
+                  "b": "holds",
+                  "borderline": false
+                },
+                "qwen3.8-2.4t": {
+                  "repeat": 0.7,
+                  "agree": 0.65,
+                  "coverage_a": 0.88,
+                  "coverage_b": 0.95,
+                  "a": "does not hold",
+                  "b": "does not hold",
+                  "borderline": true
+                },
+                "llama-4-maverick": {
+                  "repeat": 0.81,
+                  "agree": 0.32,
+                  "coverage_a": 0.91,
+                  "coverage_b": 0.95,
+                  "a": "repeats only",
+                  "b": "repeats only",
+                  "borderline": false
+                },
+                "mistral-large-4": {
+                  "repeat": 0.47,
+                  "agree": 0.51,
+                  "coverage_a": 0.85,
+                  "coverage_b": 0.94,
+                  "a": "does not hold",
+                  "b": "does not hold",
+                  "borderline": false
+                },
+                "gpt-oss-120b": {
+                  "repeat": 0.87,
+                  "agree": 0.22,
+                  "coverage_a": 0.65,
+                  "coverage_b": 0.95,
+                  "a": "repeats only",
+                  "b": "repeats only",
+                  "borderline": false
+                }
+              },
+              "majority_texts": 142,
+              "majority_null_share": 0.11,
+              "texts_without_judge": 0,
+              "framing_bound": 0.66,
+              "flags": [],
+              "ruling": "R26",
+              "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+            }
           },
           "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
           "x_profiles": [
-            "essential",
             "extended",
             "full"
           ]
@@ -243,7 +304,6 @@
           },
           "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
           "x_profiles": [
-            "essential",
             "extended",
             "full"
           ]
@@ -288,7 +348,6 @@
           },
           "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
           "x_profiles": [
-            "essential",
             "extended",
             "full"
           ]
@@ -306,10 +365,10 @@
         "symbol",
         "tradition"
       ],
-      "x_comparability": "comparable",
+      "x_comparability": "interpretive",
       "x_comparability_basis": {
         "run": "run 1",
-        "ruling": "R17 rule (R4 annotation)",
+        "ruling": "R17 rule (R4 annotation); run 3 R26",
         "outcome": "pass",
         "repeat": {
           "claude-sonnet-5-5": 0.81,
@@ -324,16 +383,77 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 fails across the market under both readings (4 of 8; pre-registered recommendation: interpretive; R26)",
+        "run3": {
+          "holds_a": 4,
+          "holds_b": 4,
+          "of": 8,
+          "verdict_a": "fails",
+          "verdict_b": "fails",
+          "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+          "arms": {
+            "gemini-4-argon": {
+              "repeat": 0.81,
+              "agree": 0.47,
+              "coverage_a": 0.95,
+              "coverage_b": 0.95,
+              "a": "holds",
+              "b": "holds",
+              "borderline": false
+            },
+            "qwen3.8-2.4t": {
+              "repeat": 0.7,
+              "agree": 0.65,
+              "coverage_a": 0.88,
+              "coverage_b": 0.95,
+              "a": "does not hold",
+              "b": "does not hold",
+              "borderline": true
+            },
+            "llama-4-maverick": {
+              "repeat": 0.81,
+              "agree": 0.32,
+              "coverage_a": 0.91,
+              "coverage_b": 0.95,
+              "a": "repeats only",
+              "b": "repeats only",
+              "borderline": false
+            },
+            "mistral-large-4": {
+              "repeat": 0.47,
+              "agree": 0.51,
+              "coverage_a": 0.85,
+              "coverage_b": 0.94,
+              "a": "does not hold",
+              "b": "does not hold",
+              "borderline": false
+            },
+            "gpt-oss-120b": {
+              "repeat": 0.87,
+              "agree": 0.22,
+              "coverage_a": 0.65,
+              "coverage_b": 0.95,
+              "a": "repeats only",
+              "b": "repeats only",
+              "borderline": false
+            }
+          },
+          "majority_texts": 142,
+          "majority_null_share": 0.11,
+          "texts_without_judge": 0,
+          "framing_bound": 0.66,
+          "flags": [],
+          "ruling": "R26",
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+        },
         "lead_unit": "salience.tether.type",
         "lead_unit_why": "type is the coded member; referent and stake are free-text companions"
       },
       "x_profiles": [
-        "essential",
         "extended",
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
       "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "retrieval_cues": {
@@ -419,7 +539,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "themes": {
       "description": "Adjacent themes or motifs connected to the experience",
@@ -469,7 +589,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "recurrence": {
       "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
@@ -564,7 +684,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "persistence": {
       "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
@@ -762,7 +882,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
       "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "linkage_strength": {
@@ -818,7 +938,7 @@
         "extended",
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "function": {
       "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
@@ -889,7 +1009,7 @@
       "x_comparability": "comparable",
       "x_comparability_basis": {
         "run": "run 1",
-        "ruling": "R17 rule (R4 annotation)",
+        "ruling": "R17 rule (R4 annotation); run 3 R27",
         "outcome": "pass",
         "repeat": {
           "claude-sonnet-5-5": 0.92,
@@ -904,7 +1024,69 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 3 of 8)",
+        "run3": {
+          "holds_a": 3,
+          "holds_b": 7,
+          "of": 8,
+          "verdict_a": "fails",
+          "verdict_b": "holds",
+          "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+          "arms": {
+            "gemini-4-argon": {
+              "repeat": 0.79,
+              "agree": 0.55,
+              "coverage_a": 0.33,
+              "coverage_b": 0.97,
+              "a": "uncovered",
+              "b": "holds",
+              "borderline": false
+            },
+            "qwen3.8-2.4t": {
+              "repeat": 0.74,
+              "agree": 0.69,
+              "coverage_a": 0.28,
+              "coverage_b": 0.97,
+              "a": "uncovered",
+              "b": "holds",
+              "borderline": true
+            },
+            "llama-4-maverick": {
+              "repeat": 0.9,
+              "agree": 0.47,
+              "coverage_a": 0.11,
+              "coverage_b": 0.97,
+              "a": "uncovered",
+              "b": "holds",
+              "borderline": false
+            },
+            "mistral-large-4": {
+              "repeat": 0.6,
+              "agree": 0.42,
+              "coverage_a": 0.42,
+              "coverage_b": 0.97,
+              "a": "uncovered",
+              "b": "does not hold",
+              "borderline": true
+            },
+            "gpt-oss-120b": {
+              "repeat": 0.8,
+              "agree": 0.4,
+              "coverage_a": 0.41,
+              "coverage_b": 0.97,
+              "a": "uncovered",
+              "b": "holds",
+              "borderline": true
+            }
+          },
+          "majority_texts": 146,
+          "majority_null_share": 0.82,
+          "texts_without_judge": 0,
+          "framing_bound": 0.92,
+          "flags": [],
+          "ruling": "R27",
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+        },
         "lead_unit": "salience.function",
         "lead_unit_why": "the field is itself the scored unit"
       },
@@ -914,7 +1096,7 @@
         "extended",
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "resilience": {
       "description": "Indicators of stabilizing or constructive emotional processing",
@@ -964,7 +1146,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "trajectory": {
       "description": "How the emotional state is evolving across time",
@@ -1061,7 +1243,7 @@
       "x_profiles": [
         "full"
       ],
-      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     }
   },
   "additionalProperties": false

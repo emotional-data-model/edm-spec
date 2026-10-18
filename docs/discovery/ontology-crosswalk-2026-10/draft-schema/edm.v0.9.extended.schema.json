@@ -34,7 +34,7 @@
     "motivation.risk_posture",
     "motivation.coping"
   ],
-  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
   "x_comparability_classes": [
     "comparable",
     "interpretive",
@@ -341,7 +341,6 @@
             ]
           },
           "required": [
-            "tether",
             "function"
           ]
         }

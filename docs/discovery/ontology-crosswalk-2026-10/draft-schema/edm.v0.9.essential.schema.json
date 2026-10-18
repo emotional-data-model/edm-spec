@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.essential.schema.json",
   "title": "EDM v0.9.0 Essential Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 19 affective fields over 5 affective domains, derived by R17 (2026-10-18) as every field whose comparability class is comparable; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
-  "x_affective_field_count": 19,
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 18 affective fields over 5 affective domains, derived by R17 (2026-10-18) as every field whose comparability class is comparable; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 18,
   "x_affective_fields": [
     "narrative.harm",
     "narrative.summary",
@@ -18,14 +18,13 @@
     "context.event_category",
     "context.relationship",
     "context.scope",
-    "salience.tether",
     "salience.function",
     "motivation.action_tendency",
     "motivation.need",
     "motivation.temporal_focus",
     "motivation.coping"
   ],
-  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
   "x_comparability_classes": [
     "comparable"
   ],
@@ -272,18 +271,15 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "tether",
               "function"
             ]
           },
           "required": [
-            "tether",
             "function"
           ]
         }
       ],
       "x_fields": [
-        "salience.tether",
         "salience.function"
       ]
     },

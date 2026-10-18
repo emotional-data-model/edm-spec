@@ -76,14 +76,6 @@
     }
   },
   "salience": {
-    "tether": {
-      "type": {
-        "text": null,
-        "codings": []
-      },
-      "referent": null,
-      "stake": null
-    },
     "function": []
   },
   "motivation": {

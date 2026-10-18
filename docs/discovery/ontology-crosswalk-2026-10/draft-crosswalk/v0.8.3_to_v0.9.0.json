@@ -35,13 +35,13 @@
       "moved-to-trait": 7
     },
     "comparability_classes": {
-      "comparable": 19,
+      "comparable": 18,
       "extractor-bound": 19,
-      "interpretive": 7,
+      "interpretive": 8,
       "null-driven": 2
     },
     "profile_sizes": {
-      "essential": 19,
+      "essential": 18,
       "extended": 28,
       "full": 47
     },
@@ -396,7 +396,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 2",
-              "ruling": "R11",
+              "ruling": "R11; run 3 R19",
               "arm": "B",
               "outcome": "pass",
               "repeat": {
@@ -408,8 +408,70 @@
               "cross_populated_only": 0.61,
               "null_rate": 0.33,
               "two_voter": "pass",
-              "why": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61)",
-              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+              "why": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61); run 3 holds across the market under reading (b) (6 of 8; literal reading 3 of 8)",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 6,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.88,
+                    "agree": 0.74,
+                    "coverage_a": 0.49,
+                    "coverage_b": 0.75,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.81,
+                    "agree": 0.73,
+                    "coverage_a": 0.45,
+                    "coverage_b": 0.75,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.97,
+                    "agree": 0.56,
+                    "coverage_a": 0.26,
+                    "coverage_b": 0.75,
+                    "a": "uncovered",
+                    "b": "repeats only",
+                    "borderline": true
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.64,
+                    "agree": 0.73,
+                    "coverage_a": 0.51,
+                    "coverage_b": 0.75,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.99,
+                    "agree": 0.66,
+                    "coverage_a": 0.35,
+                    "coverage_b": 0.75,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 113,
+                "majority_null_share": 0.38,
+                "texts_without_judge": 23,
+                "framing_bound": 0.75,
+                "flags": [],
+                "ruling": "R19",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -863,7 +925,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R20",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.98,
@@ -878,7 +940,71 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60)"
+              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60); run 3 fails under both readings (3 of 8) but the judge reached only 69 of 150 texts: class unchanged until the judge completes (R20)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 3,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "fails",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.99,
+                    "agree": 0.99,
+                    "coverage_a": 0.46,
+                    "coverage_b": 0.46,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.97,
+                    "agree": 0.97,
+                    "coverage_a": 0.45,
+                    "coverage_b": 0.46,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.89,
+                    "agree": 0.88,
+                    "coverage_a": 0.46,
+                    "coverage_b": 0.46,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.87,
+                    "agree": 0.93,
+                    "coverage_a": 0.44,
+                    "coverage_b": 0.46,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.95,
+                    "agree": 0.75,
+                    "coverage_a": 0.41,
+                    "coverage_b": 0.46,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 69,
+                "majority_null_share": 0.0,
+                "texts_without_judge": 81,
+                "framing_bound": 0.99,
+                "flags": [
+                  "judge_incomplete"
+                ],
+                "ruling": "R20",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -952,7 +1078,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.86,
@@ -965,7 +1091,69 @@
               "null_rate": 0.11,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.87,
+                    "agree": 0.7,
+                    "coverage_a": 0.75,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.83,
+                    "agree": 0.78,
+                    "coverage_a": 0.74,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.85,
+                    "agree": 0.59,
+                    "coverage_a": 0.77,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.61,
+                    "agree": 0.72,
+                    "coverage_a": 0.71,
+                    "coverage_b": 0.82,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.93,
+                    "agree": 0.5,
+                    "coverage_a": 0.61,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 124,
+                "majority_null_share": 0.13,
+                "texts_without_judge": 0,
+                "framing_bound": 0.84,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -1547,7 +1735,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.85,
@@ -1562,7 +1750,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.86,
+                    "agree": 0.62,
+                    "coverage_a": 0.75,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.72,
+                    "agree": 0.73,
+                    "coverage_a": 0.69,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.88,
+                    "agree": 0.66,
+                    "coverage_a": 0.73,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.57,
+                    "agree": 0.6,
+                    "coverage_a": 0.77,
+                    "coverage_b": 0.87,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.88,
+                    "agree": 0.49,
+                    "coverage_a": 0.63,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 132,
+                "majority_null_share": 0.23,
+                "texts_without_judge": 0,
+                "framing_bound": 0.76,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -2168,7 +2418,6 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -2190,10 +2439,10 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_comparability": "comparable",
+            "x_comparability": "interpretive",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R26",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.81,
@@ -2208,7 +2457,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 fails across the market under both readings (4 of 8; pre-registered recommendation: interpretive; R26)",
+              "run3": {
+                "holds_a": 4,
+                "holds_b": 4,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "fails",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.81,
+                    "agree": 0.47,
+                    "coverage_a": 0.95,
+                    "coverage_b": 0.95,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.7,
+                    "agree": 0.65,
+                    "coverage_a": 0.88,
+                    "coverage_b": 0.95,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.81,
+                    "agree": 0.32,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.47,
+                    "agree": 0.51,
+                    "coverage_a": 0.85,
+                    "coverage_b": 0.94,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.87,
+                    "agree": 0.22,
+                    "coverage_a": 0.65,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 142,
+                "majority_null_share": 0.11,
+                "texts_without_judge": 0,
+                "framing_bound": 0.66,
+                "flags": [],
+                "ruling": "R26",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -2287,7 +2598,7 @@
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "comparability": "comparable"
+        "comparability": "interpretive"
       },
       "values": []
     },
@@ -2346,7 +2657,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.86,
@@ -2361,7 +2672,71 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 5 of 8) [at_minimum]",
+              "run3": {
+                "holds_a": 5,
+                "holds_b": 5,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.87,
+                    "agree": 0.65,
+                    "coverage_a": 0.96,
+                    "coverage_b": 0.96,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.68,
+                    "agree": 0.54,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.96,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.89,
+                    "agree": 0.59,
+                    "coverage_a": 0.92,
+                    "coverage_b": 0.96,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.35,
+                    "agree": 0.36,
+                    "coverage_a": 0.92,
+                    "coverage_b": 0.95,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.9,
+                    "agree": 0.08,
+                    "coverage_a": 0.79,
+                    "coverage_b": 0.96,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 144,
+                "majority_null_share": 0.03,
+                "texts_without_judge": 0,
+                "framing_bound": 0.8,
+                "flags": [
+                  "at_minimum"
+                ],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -2732,7 +3107,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R21",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.93,
@@ -2747,7 +3122,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass on populated answers (populated-only cross 0.67 >= 0.60)"
+              "why": "run-1 pass on populated answers (populated-only cross 0.67 >= 0.60); run 3 holds across the market under reading (b) (6 of 8; literal reading 5 of 8)",
+              "run3": {
+                "holds_a": 5,
+                "holds_b": 6,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.9,
+                    "agree": 0.61,
+                    "coverage_a": 0.7,
+                    "coverage_b": 0.79,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.82,
+                    "agree": 0.85,
+                    "coverage_a": 0.51,
+                    "coverage_b": 0.79,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.8,
+                    "agree": 0.55,
+                    "coverage_a": 0.69,
+                    "coverage_b": 0.79,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": true
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.7,
+                    "agree": 0.74,
+                    "coverage_a": 0.6,
+                    "coverage_b": 0.79,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.95,
+                    "agree": 0.72,
+                    "coverage_a": 0.49,
+                    "coverage_b": 0.79,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 119,
+                "majority_null_share": 0.45,
+                "texts_without_judge": 23,
+                "framing_bound": 0.76,
+                "flags": [],
+                "ruling": "R21",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -2802,7 +3239,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R22",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.83,
@@ -2815,7 +3252,69 @@
               "null_rate": 0.89,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 3 of 8)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.85,
+                    "agree": 0.61,
+                    "coverage_a": 0.12,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.76,
+                    "agree": 0.73,
+                    "coverage_a": 0.17,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.85,
+                    "agree": 0.5,
+                    "coverage_a": 0.23,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.63,
+                    "agree": 0.69,
+                    "coverage_a": 0.13,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.94,
+                    "agree": 0.45,
+                    "coverage_a": 0.16,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 149,
+                "majority_null_share": 0.87,
+                "texts_without_judge": 0,
+                "framing_bound": 0.65,
+                "flags": [],
+                "ruling": "R22",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -2870,7 +3369,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R24",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.98,
@@ -2883,7 +3382,69 @@
               "null_rate": 0.79,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60)"
+              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60); run 3 holds across the market under reading (b) (8 of 8; literal reading 3 of 8)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 8,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.99,
+                    "agree": 0.97,
+                    "coverage_a": 0.22,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.97,
+                    "agree": 0.98,
+                    "coverage_a": 0.21,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.99,
+                    "agree": 0.94,
+                    "coverage_a": 0.19,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.92,
+                    "agree": 0.98,
+                    "coverage_a": 0.21,
+                    "coverage_b": 0.84,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.99,
+                    "agree": 0.98,
+                    "coverage_a": 0.17,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 127,
+                "majority_null_share": 0.77,
+                "texts_without_judge": 23,
+                "framing_bound": 0.98,
+                "flags": [],
+                "ruling": "R24",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -3504,7 +4065,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.98,
@@ -3517,7 +4078,69 @@
               "null_rate": 0.46,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.97,
+                    "agree": 0.75,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.91,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.94,
+                    "agree": 0.91,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.91,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.87,
+                    "agree": 0.58,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.91,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.89,
+                    "agree": 0.52,
+                    "coverage_a": 0.9,
+                    "coverage_b": 0.9,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.98,
+                    "agree": 0.55,
+                    "coverage_a": 0.49,
+                    "coverage_b": 0.49,
+                    "a": "uncovered",
+                    "b": "uncovered",
+                    "borderline": true
+                  }
+                },
+                "majority_texts": 137,
+                "majority_null_share": null,
+                "texts_without_judge": 0,
+                "framing_bound": 0.97,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
@@ -3626,7 +4249,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.95,
@@ -3639,7 +4262,69 @@
               "null_rate": 0.11,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (8 of 8; literal reading 8 of 8)",
+              "run3": {
+                "holds_a": 8,
+                "holds_b": 8,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.94,
+                    "agree": 0.8,
+                    "coverage_a": 0.93,
+                    "coverage_b": 0.99,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.88,
+                    "agree": 0.81,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.99,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.92,
+                    "agree": 0.55,
+                    "coverage_a": 0.95,
+                    "coverage_b": 0.99,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.72,
+                    "agree": 0.83,
+                    "coverage_a": 0.85,
+                    "coverage_b": 0.98,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.97,
+                    "agree": 0.46,
+                    "coverage_a": 0.73,
+                    "coverage_b": 0.99,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 148,
+                "majority_null_share": 0.11,
+                "texts_without_judge": 0,
+                "framing_bound": 0.9,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -3872,7 +4557,6 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -3894,10 +4578,10 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_comparability": "comparable",
+            "x_comparability": "interpretive",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R26",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.81,
@@ -3912,7 +4596,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 fails across the market under both readings (4 of 8; pre-registered recommendation: interpretive; R26)",
+              "run3": {
+                "holds_a": 4,
+                "holds_b": 4,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "fails",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.81,
+                    "agree": 0.47,
+                    "coverage_a": 0.95,
+                    "coverage_b": 0.95,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.7,
+                    "agree": 0.65,
+                    "coverage_a": 0.88,
+                    "coverage_b": 0.95,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.81,
+                    "agree": 0.32,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.47,
+                    "agree": 0.51,
+                    "coverage_a": 0.85,
+                    "coverage_b": 0.94,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.87,
+                    "agree": 0.22,
+                    "coverage_a": 0.65,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 142,
+                "majority_null_share": 0.11,
+                "texts_without_judge": 0,
+                "framing_bound": 0.66,
+                "flags": [],
+                "ruling": "R26",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -3991,7 +4737,7 @@
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "comparability": "comparable"
+        "comparability": "interpretive"
       },
       "values": []
     },
@@ -4028,7 +4774,6 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -4050,10 +4795,10 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_comparability": "comparable",
+            "x_comparability": "interpretive",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R26",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.81,
@@ -4068,7 +4813,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 fails across the market under both readings (4 of 8; pre-registered recommendation: interpretive; R26)",
+              "run3": {
+                "holds_a": 4,
+                "holds_b": 4,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "fails",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.81,
+                    "agree": 0.47,
+                    "coverage_a": 0.95,
+                    "coverage_b": 0.95,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.7,
+                    "agree": 0.65,
+                    "coverage_a": 0.88,
+                    "coverage_b": 0.95,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.81,
+                    "agree": 0.32,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.47,
+                    "agree": 0.51,
+                    "coverage_a": 0.85,
+                    "coverage_b": 0.94,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.87,
+                    "agree": 0.22,
+                    "coverage_a": 0.65,
+                    "coverage_b": 0.95,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 142,
+                "majority_null_share": 0.11,
+                "texts_without_judge": 0,
+                "framing_bound": 0.66,
+                "flags": [],
+                "ruling": "R26",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -4147,7 +4954,7 @@
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "comparability": "comparable"
+        "comparability": "interpretive"
       },
       "values": [
         {
@@ -5092,7 +5899,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.82,
@@ -5107,7 +5914,72 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 5 of 8) [at_minimum, borderline]",
+              "run3": {
+                "holds_a": 5,
+                "holds_b": 5,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.84,
+                    "agree": 0.57,
+                    "coverage_a": 0.82,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.65,
+                    "agree": 0.58,
+                    "coverage_a": 0.77,
+                    "coverage_b": 0.83,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.84,
+                    "agree": 0.42,
+                    "coverage_a": 0.77,
+                    "coverage_b": 0.83,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.56,
+                    "agree": 0.72,
+                    "coverage_a": 0.71,
+                    "coverage_b": 0.83,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.84,
+                    "agree": 0.15,
+                    "coverage_a": 0.55,
+                    "coverage_b": 0.83,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 125,
+                "majority_null_share": 0.14,
+                "texts_without_judge": 0,
+                "framing_bound": 0.73,
+                "flags": [
+                  "at_minimum",
+                  "borderline"
+                ],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -5234,7 +6106,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.85,
@@ -5249,7 +6121,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.86,
+                    "agree": 0.54,
+                    "coverage_a": 0.89,
+                    "coverage_b": 0.9,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.76,
+                    "agree": 0.6,
+                    "coverage_a": 0.78,
+                    "coverage_b": 0.9,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.88,
+                    "agree": 0.44,
+                    "coverage_a": 0.85,
+                    "coverage_b": 0.9,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.55,
+                    "agree": 0.7,
+                    "coverage_a": 0.71,
+                    "coverage_b": 0.89,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.84,
+                    "agree": 0.46,
+                    "coverage_a": 0.53,
+                    "coverage_b": 0.9,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 135,
+                "majority_null_share": 0.35,
+                "texts_without_judge": 0,
+                "framing_bound": 0.77,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -5350,7 +6284,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.86,
@@ -5363,7 +6297,69 @@
               "null_rate": 0.12,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.9,
+                    "agree": 0.73,
+                    "coverage_a": 0.97,
+                    "coverage_b": 0.97,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.75,
+                    "agree": 0.64,
+                    "coverage_a": 0.93,
+                    "coverage_b": 0.97,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.91,
+                    "agree": 0.66,
+                    "coverage_a": 0.94,
+                    "coverage_b": 0.97,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.53,
+                    "agree": 0.65,
+                    "coverage_a": 0.9,
+                    "coverage_b": 0.96,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.89,
+                    "agree": 0.5,
+                    "coverage_a": 0.71,
+                    "coverage_b": 0.97,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 145,
+                "majority_null_share": 0.03,
+                "texts_without_judge": 0,
+                "framing_bound": 0.81,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -5445,7 +6441,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.86,
@@ -5460,7 +6456,71 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 5 of 8) [at_minimum]",
+              "run3": {
+                "holds_a": 5,
+                "holds_b": 5,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.87,
+                    "agree": 0.65,
+                    "coverage_a": 0.96,
+                    "coverage_b": 0.96,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.68,
+                    "agree": 0.54,
+                    "coverage_a": 0.91,
+                    "coverage_b": 0.96,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.89,
+                    "agree": 0.59,
+                    "coverage_a": 0.92,
+                    "coverage_b": 0.96,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.35,
+                    "agree": 0.36,
+                    "coverage_a": 0.92,
+                    "coverage_b": 0.95,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.9,
+                    "agree": 0.08,
+                    "coverage_a": 0.79,
+                    "coverage_b": 0.96,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 144,
+                "majority_null_share": 0.03,
+                "texts_without_judge": 0,
+                "framing_bound": 0.8,
+                "flags": [
+                  "at_minimum"
+                ],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
@@ -6090,7 +7150,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R28",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.82,
@@ -6105,7 +7165,72 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 4 of 8) [at_minimum, borderline]",
+              "run3": {
+                "holds_a": 4,
+                "holds_b": 5,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.81,
+                    "agree": 0.51,
+                    "coverage_a": 0.61,
+                    "coverage_b": 0.86,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.67,
+                    "agree": 0.63,
+                    "coverage_a": 0.49,
+                    "coverage_b": 0.86,
+                    "a": "uncovered",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.79,
+                    "agree": 0.4,
+                    "coverage_a": 0.66,
+                    "coverage_b": 0.86,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": true
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.47,
+                    "agree": 0.51,
+                    "coverage_a": 0.56,
+                    "coverage_b": 0.85,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.8,
+                    "agree": 0.44,
+                    "coverage_a": 0.49,
+                    "coverage_b": 0.86,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  }
+                },
+                "majority_texts": 129,
+                "majority_null_share": 0.51,
+                "texts_without_judge": 0,
+                "framing_bound": 0.81,
+                "flags": [
+                  "at_minimum",
+                  "borderline"
+                ],
+                "ruling": "R28",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -6200,7 +7325,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R23",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.96,
@@ -6213,7 +7338,69 @@
               "null_rate": 0.79,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass on populated answers (populated-only cross 0.81 >= 0.60)"
+              "why": "run-1 pass on populated answers (populated-only cross 0.81 >= 0.60); run 3 holds across the market under reading (b) (8 of 8; literal reading 3 of 8)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 8,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.97,
+                    "agree": 0.95,
+                    "coverage_a": 0.17,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.9,
+                    "agree": 0.91,
+                    "coverage_a": 0.21,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.98,
+                    "agree": 0.9,
+                    "coverage_a": 0.16,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.89,
+                    "agree": 0.94,
+                    "coverage_a": 0.18,
+                    "coverage_b": 0.84,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.99,
+                    "agree": 0.91,
+                    "coverage_a": 0.13,
+                    "coverage_b": 0.85,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 127,
+                "majority_null_share": 0.83,
+                "texts_without_judge": 23,
+                "framing_bound": 0.97,
+                "flags": [],
+                "ruling": "R23",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -6389,7 +7576,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R25",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.98,
@@ -6402,7 +7589,72 @@
               "null_rate": 0.78,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 3 of 8) [at_minimum, borderline]",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 5,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.89,
+                    "agree": 0.39,
+                    "coverage_a": 0.49,
+                    "coverage_b": 1.0,
+                    "a": "uncovered",
+                    "b": "repeats only",
+                    "borderline": true
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.78,
+                    "agree": 0.44,
+                    "coverage_a": 0.43,
+                    "coverage_b": 1.0,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.93,
+                    "agree": 0.23,
+                    "coverage_a": 0.7,
+                    "coverage_b": 1.0,
+                    "a": "repeats only",
+                    "b": "repeats only",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.61,
+                    "agree": 0.39,
+                    "coverage_a": 0.48,
+                    "coverage_b": 0.99,
+                    "a": "uncovered",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.89,
+                    "agree": 0.44,
+                    "coverage_a": 0.43,
+                    "coverage_b": 1.0,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  }
+                },
+                "majority_texts": 150,
+                "majority_null_share": 0.84,
+                "texts_without_judge": 0,
+                "framing_bound": 0.86,
+                "flags": [
+                  "at_minimum",
+                  "borderline"
+                ],
+                "ruling": "R25",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -6445,7 +7697,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 held under both readings; not re-ruled (R18-R28 addendum)",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.86,
@@ -6460,7 +7712,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+              "run3": {
+                "holds_a": 7,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "holds",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.91,
+                    "agree": 0.77,
+                    "coverage_a": 0.88,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.78,
+                    "agree": 0.82,
+                    "coverage_a": 0.88,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.91,
+                    "agree": 0.61,
+                    "coverage_a": 0.87,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.65,
+                    "agree": 0.75,
+                    "coverage_a": 0.84,
+                    "coverage_b": 0.87,
+                    "a": "does not hold",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.9,
+                    "agree": 0.59,
+                    "coverage_a": 0.78,
+                    "coverage_b": 0.88,
+                    "a": "holds",
+                    "b": "holds",
+                    "borderline": false
+                  }
+                },
+                "majority_texts": 132,
+                "majority_null_share": 0.0,
+                "texts_without_judge": 0,
+                "framing_bound": 0.76,
+                "flags": [],
+                "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -6559,7 +7873,7 @@
             "x_comparability": "comparable",
             "x_comparability_basis": {
               "run": "run 1",
-              "ruling": "R17 rule (R4 annotation)",
+              "ruling": "R17 rule (R4 annotation); run 3 R27",
               "outcome": "pass",
               "repeat": {
                 "claude-sonnet-5-5": 0.92,
@@ -6574,7 +7888,69 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 3 of 8)",
+              "run3": {
+                "holds_a": 3,
+                "holds_b": 7,
+                "of": 8,
+                "verdict_a": "fails",
+                "verdict_b": "holds",
+                "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
+                "arms": {
+                  "gemini-4-argon": {
+                    "repeat": 0.79,
+                    "agree": 0.55,
+                    "coverage_a": 0.33,
+                    "coverage_b": 0.97,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "qwen3.8-2.4t": {
+                    "repeat": 0.74,
+                    "agree": 0.69,
+                    "coverage_a": 0.28,
+                    "coverage_b": 0.97,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  },
+                  "llama-4-maverick": {
+                    "repeat": 0.9,
+                    "agree": 0.47,
+                    "coverage_a": 0.11,
+                    "coverage_b": 0.97,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": false
+                  },
+                  "mistral-large-4": {
+                    "repeat": 0.6,
+                    "agree": 0.42,
+                    "coverage_a": 0.42,
+                    "coverage_b": 0.97,
+                    "a": "uncovered",
+                    "b": "does not hold",
+                    "borderline": true
+                  },
+                  "gpt-oss-120b": {
+                    "repeat": 0.8,
+                    "agree": 0.4,
+                    "coverage_a": 0.41,
+                    "coverage_b": 0.97,
+                    "a": "uncovered",
+                    "b": "holds",
+                    "borderline": true
+                  }
+                },
+                "majority_texts": 146,
+                "majority_null_share": 0.82,
+                "texts_without_judge": 0,
+                "framing_bound": 0.92,
+                "flags": [],
+                "ruling": "R27",
+                "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+              }
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -6793,7 +8169,6 @@
       "context.event_category",
       "context.relationship",
       "context.scope",
-      "salience.tether",
       "salience.function",
       "motivation.action_tendency",
       "motivation.need",
@@ -6916,7 +8291,7 @@
       "context.life_stage": "extractor-bound",
       "context.scope": "comparable",
       "salience.memory_type": "interpretive",
-      "salience.tether": "comparable",
+      "salience.tether": "interpretive",
       "salience.retrieval_cues": "extractor-bound",
       "salience.themes": "extractor-bound",
       "salience.recurrence": "extractor-bound",
@@ -6941,7 +8316,7 @@
       "salience.tether": "salience.tether.type",
       "salience.persistence": "salience.persistence.text"
     },
-    "rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
+    "rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
   },
   "coding_shape": {
     "coded": {

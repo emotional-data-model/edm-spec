@@ -13,7 +13,7 @@ Discovery only. Nothing here is normative; the crosswalk is written with status 
 
 Rulings applied here (rulings-2026-10-18.md, ruling under delegation, veto by exception): R5 (value member of valence / arousal /
 urgency / control deleted), R6 (meaning interpretive-attributed), R11-R16 (core-slot text, shape, class), R17 (profiles derived from
-comparability class; see section 3e). `python -I scripts/v09_layout.py --membership` prints the R17 membership table.
+comparability class; see section 3e; run 3 applied under R18-R28, 2026-10-18 close). `python -I scripts/v09_layout.py --membership` prints the R17 membership table.
 """
 import json, sys, os, re
 from collections import Counter
@@ -388,6 +388,13 @@ CANONICAL_VALUES_083 = sum(len(f['canonical_values']) for f in FIELDS_083 if f['
 #     section 1; scoring/field_table.json), with the arm and the comparability class that rulings R11-R16 fixed for the slot.
 #     R5 (applied 2026-10-18): the value member of valence / arousal / urgency / control is deleted from the draft; the four
 #     'pending' value units stay in RUN1_POOLED as the record of why (never populated).
+#     RUN3: run-3 pooled outcome per comparable-tier lead unit (experiments/2026-10-18-run3/RESULTS.md sections 1-2;
+#     scoring/field_table.json; thresholds frozen in experiment-plan-run3.md section 7 at 974408e): holds of 8 under the
+#     literal coverage reading (a, frozen) and under R18's reading (b, null-valued answers count as covered; decides
+#     prospectively), per new arm repeat / agree / coverage / decision, the majority's text count and null share, texts the
+#     judge has not reached (free text; the judge pass is incomplete: four-field group 127 of 150, summary 69 of 150), the
+#     framing bound (Sonnet 47-field vs 19-field prompt) and the ruling (R19-R28). Regenerate from field_table.json when the
+#     judge completes (see the close instruction in rulings-2026-10-18.md R20).
 # ---------------------------------------------------------------------------
 SIX_SLOTS = ['narrative.subject', 'narrative.trigger', 'narrative.harm', 'narrative.drive', 'narrative.integration', 'salience.retrieval_cues']
 VALUE_REMOVED = ['emotion.valence.value', 'emotion.arousal.value', 'emotion.appraisal.urgency.value', 'emotion.appraisal.control.value']
@@ -719,6 +726,163 @@ RUN1_POOLED = {'narrative.subject': {'outcome': 'cut',
                        'null': 0.45,
                        'flags': ['borderline']}}
 
+RUN3_SOURCE = 'experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)'
+RUN3_RULE_MIN = 5  # a field holds across the market when >= 5 of the 8 models hold it (three voters by their classing run + >= 2 of the five new arms)
+RUN3 = {
+ 'narrative.harm': {'holds_a': 3, 'holds_b': 6, 'of': 8, 'majority_texts': 113, 'majority_null_share': 0.38, 'texts_without_judge': 23, 'framing_bound': 0.75, 'ruling': 'R19',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.88, 'agree': 0.74, 'coverage_a': 0.49, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.81, 'agree': 0.73, 'coverage_a': 0.45, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.97, 'agree': 0.56, 'coverage_a': 0.26, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'repeats only', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.64, 'agree': 0.73, 'coverage_a': 0.51, 'coverage_b': 0.75, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.66, 'coverage_a': 0.35, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+    }},
+ 'narrative.summary': {'holds_a': 3, 'holds_b': 3, 'of': 8, 'majority_texts': 69, 'majority_null_share': 0.0, 'texts_without_judge': 81, 'framing_bound': 0.99, 'ruling': 'R20',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.99, 'agree': 0.99, 'coverage_a': 0.46, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.97, 'agree': 0.97, 'coverage_a': 0.45, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.89, 'agree': 0.88, 'coverage_a': 0.46, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.87, 'agree': 0.93, 'coverage_a': 0.44, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.95, 'agree': 0.75, 'coverage_a': 0.41, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False}
+    }},
+ 'narrative.meaning': {'holds_a': 5, 'holds_b': 6, 'of': 8, 'majority_texts': 119, 'majority_null_share': 0.45, 'texts_without_judge': 23, 'framing_bound': 0.76, 'ruling': 'R21',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.9, 'agree': 0.61, 'coverage_a': 0.7, 'coverage_b': 0.79, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'qwen3.8-2.4t': {'repeat': 0.82, 'agree': 0.85, 'coverage_a': 0.51, 'coverage_b': 0.79, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.8, 'agree': 0.55, 'coverage_a': 0.69, 'coverage_b': 0.79, 'a': 'repeats only', 'b': 'repeats only', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.7, 'agree': 0.74, 'coverage_a': 0.6, 'coverage_b': 0.79, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.95, 'agree': 0.72, 'coverage_a': 0.49, 'coverage_b': 0.79, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+    }},
+ 'narrative.turning_point': {'holds_a': 3, 'holds_b': 7, 'of': 8, 'majority_texts': 149, 'majority_null_share': 0.87, 'texts_without_judge': 0, 'framing_bound': 0.65, 'ruling': 'R22',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.85, 'agree': 0.61, 'coverage_a': 0.12, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.76, 'agree': 0.73, 'coverage_a': 0.17, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.85, 'agree': 0.5, 'coverage_a': 0.23, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.63, 'agree': 0.69, 'coverage_a': 0.13, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.94, 'agree': 0.45, 'coverage_a': 0.16, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+    }},
+ 'narrative.self_position': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 127, 'majority_null_share': 0.83, 'texts_without_judge': 23, 'framing_bound': 0.97, 'ruling': 'R23',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.97, 'agree': 0.95, 'coverage_a': 0.17, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.9, 'agree': 0.91, 'coverage_a': 0.21, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.98, 'agree': 0.9, 'coverage_a': 0.16, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.89, 'agree': 0.94, 'coverage_a': 0.18, 'coverage_b': 0.84, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.91, 'coverage_a': 0.13, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+    }},
+ 'emotion.primary': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 124, 'majority_null_share': 0.13, 'texts_without_judge': 0, 'framing_bound': 0.84, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.87, 'agree': 0.7, 'coverage_a': 0.75, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.83, 'agree': 0.78, 'coverage_a': 0.74, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.85, 'agree': 0.59, 'coverage_a': 0.77, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.61, 'agree': 0.72, 'coverage_a': 0.71, 'coverage_b': 0.82, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.93, 'agree': 0.5, 'coverage_a': 0.61, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'emotion.valence.text': {'holds_a': 8, 'holds_b': 8, 'of': 8, 'majority_texts': 148, 'majority_null_share': 0.11, 'texts_without_judge': 0, 'framing_bound': 0.9, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.94, 'agree': 0.8, 'coverage_a': 0.93, 'coverage_b': 0.99, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.88, 'agree': 0.81, 'coverage_a': 0.91, 'coverage_b': 0.99, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.92, 'agree': 0.55, 'coverage_a': 0.95, 'coverage_b': 0.99, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.72, 'agree': 0.83, 'coverage_a': 0.85, 'coverage_b': 0.98, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.97, 'agree': 0.46, 'coverage_a': 0.73, 'coverage_b': 0.99, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'emotion.intensity.value': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 137, 'majority_null_share': None, 'texts_without_judge': 0, 'framing_bound': 0.97, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.97, 'agree': 0.75, 'coverage_a': 0.91, 'coverage_b': 0.91, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.94, 'agree': 0.91, 'coverage_a': 0.91, 'coverage_b': 0.91, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.87, 'agree': 0.58, 'coverage_a': 0.91, 'coverage_b': 0.91, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.89, 'agree': 0.52, 'coverage_a': 0.9, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.98, 'agree': 0.55, 'coverage_a': 0.49, 'coverage_b': 0.49, 'a': 'uncovered', 'b': 'uncovered', 'borderline': True}
+    }},
+ 'emotion.bodily_sensation': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 127, 'majority_null_share': 0.77, 'texts_without_judge': 23, 'framing_bound': 0.98, 'ruling': 'R24',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.99, 'agree': 0.97, 'coverage_a': 0.22, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.97, 'agree': 0.98, 'coverage_a': 0.21, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.99, 'agree': 0.94, 'coverage_a': 0.19, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.92, 'agree': 0.98, 'coverage_a': 0.21, 'coverage_b': 0.84, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.98, 'coverage_a': 0.17, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+    }},
+ 'emotion.appraisal.attribution': {'holds_a': 3, 'holds_b': 5, 'of': 8, 'majority_texts': 150, 'majority_null_share': 0.84, 'texts_without_judge': 0, 'framing_bound': 0.86, 'ruling': 'R25',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.89, 'agree': 0.39, 'coverage_a': 0.49, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'repeats only', 'borderline': True},
+             'qwen3.8-2.4t': {'repeat': 0.78, 'agree': 0.44, 'coverage_a': 0.43, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.93, 'agree': 0.23, 'coverage_a': 0.7, 'coverage_b': 1.0, 'a': 'repeats only', 'b': 'repeats only', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.61, 'agree': 0.39, 'coverage_a': 0.48, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'does not hold', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.89, 'agree': 0.44, 'coverage_a': 0.43, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': True}
+    }},
+ 'context.event_category': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 132, 'majority_null_share': 0.0, 'texts_without_judge': 0, 'framing_bound': 0.76, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.91, 'agree': 0.77, 'coverage_a': 0.88, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.78, 'agree': 0.82, 'coverage_a': 0.88, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.91, 'agree': 0.61, 'coverage_a': 0.87, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.65, 'agree': 0.75, 'coverage_a': 0.84, 'coverage_b': 0.87, 'a': 'does not hold', 'b': 'does not hold', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.9, 'agree': 0.59, 'coverage_a': 0.78, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'context.relationship': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 132, 'majority_null_share': 0.23, 'texts_without_judge': 0, 'framing_bound': 0.76, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.86, 'agree': 0.62, 'coverage_a': 0.75, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.72, 'agree': 0.73, 'coverage_a': 0.69, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.88, 'agree': 0.66, 'coverage_a': 0.73, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.57, 'agree': 0.6, 'coverage_a': 0.77, 'coverage_b': 0.87, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.88, 'agree': 0.49, 'coverage_a': 0.63, 'coverage_b': 0.88, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'context.scope.text': {'holds_a': 5, 'holds_b': 5, 'of': 8, 'majority_texts': 144, 'majority_null_share': 0.03, 'texts_without_judge': 0, 'framing_bound': 0.8, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.87, 'agree': 0.65, 'coverage_a': 0.96, 'coverage_b': 0.96, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.68, 'agree': 0.54, 'coverage_a': 0.91, 'coverage_b': 0.96, 'a': 'does not hold', 'b': 'does not hold', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.89, 'agree': 0.59, 'coverage_a': 0.92, 'coverage_b': 0.96, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.35, 'agree': 0.36, 'coverage_a': 0.92, 'coverage_b': 0.95, 'a': 'does not hold', 'b': 'does not hold', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.9, 'agree': 0.08, 'coverage_a': 0.79, 'coverage_b': 0.96, 'a': 'repeats only', 'b': 'repeats only', 'borderline': False}
+    }},
+ 'salience.tether.type': {'holds_a': 4, 'holds_b': 4, 'of': 8, 'majority_texts': 142, 'majority_null_share': 0.11, 'texts_without_judge': 0, 'framing_bound': 0.66, 'ruling': 'R26',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.81, 'agree': 0.47, 'coverage_a': 0.95, 'coverage_b': 0.95, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.7, 'agree': 0.65, 'coverage_a': 0.88, 'coverage_b': 0.95, 'a': 'does not hold', 'b': 'does not hold', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.81, 'agree': 0.32, 'coverage_a': 0.91, 'coverage_b': 0.95, 'a': 'repeats only', 'b': 'repeats only', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.47, 'agree': 0.51, 'coverage_a': 0.85, 'coverage_b': 0.94, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.87, 'agree': 0.22, 'coverage_a': 0.65, 'coverage_b': 0.95, 'a': 'repeats only', 'b': 'repeats only', 'borderline': False}
+    }},
+ 'salience.function': {'holds_a': 3, 'holds_b': 7, 'of': 8, 'majority_texts': 146, 'majority_null_share': 0.82, 'texts_without_judge': 0, 'framing_bound': 0.92, 'ruling': 'R27',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.79, 'agree': 0.55, 'coverage_a': 0.33, 'coverage_b': 0.97, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.74, 'agree': 0.69, 'coverage_a': 0.28, 'coverage_b': 0.97, 'a': 'uncovered', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.9, 'agree': 0.47, 'coverage_a': 0.11, 'coverage_b': 0.97, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.6, 'agree': 0.42, 'coverage_a': 0.42, 'coverage_b': 0.97, 'a': 'uncovered', 'b': 'does not hold', 'borderline': True},
+             'gpt-oss-120b': {'repeat': 0.8, 'agree': 0.4, 'coverage_a': 0.41, 'coverage_b': 0.97, 'a': 'uncovered', 'b': 'holds', 'borderline': True}
+    }},
+ 'motivation.action_tendency': {'holds_a': 5, 'holds_b': 5, 'of': 8, 'majority_texts': 125, 'majority_null_share': 0.14, 'texts_without_judge': 0, 'framing_bound': 0.73, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.84, 'agree': 0.57, 'coverage_a': 0.82, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.65, 'agree': 0.58, 'coverage_a': 0.77, 'coverage_b': 0.83, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.84, 'agree': 0.42, 'coverage_a': 0.77, 'coverage_b': 0.83, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.56, 'agree': 0.72, 'coverage_a': 0.71, 'coverage_b': 0.83, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.84, 'agree': 0.15, 'coverage_a': 0.55, 'coverage_b': 0.83, 'a': 'repeats only', 'b': 'repeats only', 'borderline': False}
+    }},
+ 'motivation.need': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 135, 'majority_null_share': 0.35, 'texts_without_judge': 0, 'framing_bound': 0.77, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.86, 'agree': 0.54, 'coverage_a': 0.89, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.76, 'agree': 0.6, 'coverage_a': 0.78, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.88, 'agree': 0.44, 'coverage_a': 0.85, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.55, 'agree': 0.7, 'coverage_a': 0.71, 'coverage_b': 0.89, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.84, 'agree': 0.46, 'coverage_a': 0.53, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'motivation.temporal_focus': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 145, 'majority_null_share': 0.03, 'texts_without_judge': 0, 'framing_bound': 0.81, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.9, 'agree': 0.73, 'coverage_a': 0.97, 'coverage_b': 0.97, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.75, 'agree': 0.64, 'coverage_a': 0.93, 'coverage_b': 0.97, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.91, 'agree': 0.66, 'coverage_a': 0.94, 'coverage_b': 0.97, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.53, 'agree': 0.65, 'coverage_a': 0.9, 'coverage_b': 0.96, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.89, 'agree': 0.5, 'coverage_a': 0.71, 'coverage_b': 0.97, 'a': 'holds', 'b': 'holds', 'borderline': False}
+    }},
+ 'motivation.coping': {'holds_a': 4, 'holds_b': 5, 'of': 8, 'majority_texts': 129, 'majority_null_share': 0.51, 'texts_without_judge': 0, 'framing_bound': 0.81, 'ruling': 'R28',
+    'arms': {
+             'gemini-4-argon': {'repeat': 0.81, 'agree': 0.51, 'coverage_a': 0.61, 'coverage_b': 0.86, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.67, 'agree': 0.63, 'coverage_a': 0.49, 'coverage_b': 0.86, 'a': 'uncovered', 'b': 'does not hold', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.79, 'agree': 0.4, 'coverage_a': 0.66, 'coverage_b': 0.86, 'a': 'repeats only', 'b': 'repeats only', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.47, 'agree': 0.51, 'coverage_a': 0.56, 'coverage_b': 0.85, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.8, 'agree': 0.44, 'coverage_a': 0.49, 'coverage_b': 0.86, 'a': 'uncovered', 'b': 'holds', 'borderline': True}
+    }},
+}
+
 # ---------------------------------------------------------------------------
 # 3e. Comparability class per unit and per field, and the profile manifests derived from it (R17, 2026-10-18).
 #     Unit class: a core slot takes the class its run-2 ruling fixed (RUN2); any other scored unit takes it from run 1 pooled:
@@ -726,6 +890,10 @@ RUN1_POOLED = {'narrative.subject': {'outcome': 'cut',
 #     agreement is a kappa or an ICC over all answers) -> comparable; pass with populated-only cross < 0.60 -> null-driven;
 #     interpretive -> interpretive; cut -> extractor-bound. Field class = class of the field's lead unit (LEAD_UNIT: the member
 #     that carries the field's claim); the other members keep their own unit class as an annotation and ride with the field.
+#     Run 3 (R18-R28, 2026-10-18 close): a comparable-tier lead unit that fails the market rule under R18 reading (b) re-classes
+#     interpretive (the pre-registered recommendation; R26 tether), unless the judge has not reached every text for it (R20
+#     summary: the class moves only on the completed judge); a hold at the minimum resting on cells within 0.05 of a threshold
+#     carries the flags at_minimum / borderline (R25 attribution, R28 coping; action_tendency by the same rule).
 #     Profiles: Essential = every affective field classed comparable; Extended = Essential + interpretive + null-driven;
 #     Full = all 47; partner profiles select freely. Nothing is hand-listed: a change of class moves a field.
 # ---------------------------------------------------------------------------
@@ -739,7 +907,34 @@ LEAD_WHY = {'emotion.intensity': 'value is the salience weight EDM carries (R5 k
 for _p in ('emotion.valence', 'emotion.arousal', 'emotion.appraisal.urgency', 'emotion.appraisal.control'): LEAD_WHY[_p] = 'text is the only scored member left after R5'
 
 def unit_class(unit):
-    """(class, basis) for one scored unit; class is None for a unit without an outcome (the R5-removed value members)."""
+    """(class, basis) for one scored unit; class is None for a unit without an outcome (the R5-removed value members).
+    The class before run 3 comes from _unit_class_runs_1_2; run 3 (RUN3) then re-classes a comparable-tier unit that fails the
+    market rule under R18 reading (b) as interpretive, unless its judge coverage is incomplete (R20)."""
+    cls, basis = _unit_class_runs_1_2(unit)
+    r3 = RUN3.get(unit)
+    if r3 is None or cls is None: return cls, basis
+    verdict_b = r3['holds_b'] >= RUN3_RULE_MIN; verdict_a = r3['holds_a'] >= RUN3_RULE_MIN
+    pending = (not verdict_b) and r3['texts_without_judge'] > 0
+    flags = []
+    if verdict_b and r3['holds_b'] == RUN3_RULE_MIN:
+        flags.append('at_minimum')
+        if any(a['b'] == 'holds' and a['borderline'] for a in r3['arms'].values()): flags.append('borderline')
+    if pending: flags.append('judge_incomplete')
+    run3 = {'holds_a': r3['holds_a'], 'holds_b': r3['holds_b'], 'of': r3['of'], 'verdict_a': 'holds' if verdict_a else 'fails', 'verdict_b': 'holds' if verdict_b else 'fails',
+            'reading': 'R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside', 'arms': r3['arms'],
+            'majority_texts': r3['majority_texts'], 'majority_null_share': r3['majority_null_share'], 'texts_without_judge': r3['texts_without_judge'], 'framing_bound': r3['framing_bound'],
+            'flags': flags, 'ruling': r3['ruling'], 'source': RUN3_SOURCE}
+    if verdict_b:
+        why3 = f"run 3 holds across the market under reading (b) ({r3['holds_b']} of {r3['of']}; literal reading {r3['holds_a']} of {r3['of']})" + (f" [{', '.join(flags)}]" if flags else '')
+    elif pending:
+        why3 = f"run 3 fails under both readings ({r3['holds_b']} of {r3['of']}) but the judge reached only {150 - r3['texts_without_judge']} of 150 texts: class unchanged until the judge completes (R20)"
+    else:
+        cls = 'interpretive'; why3 = f"run 3 fails across the market under both readings ({r3['holds_b']} of {r3['of']}; pre-registered recommendation: interpretive; {r3['ruling']})"
+    basis = {**basis, 'run3': run3, 'why': basis['why'] + '; ' + why3, 'ruling': basis['ruling'] + f"; run 3 {r3['ruling']}"}
+    return cls, basis
+
+def _unit_class_runs_1_2(unit):
+    """(class, basis) from runs 1-2 only (R17 rule as written on 2026-10-18); run 3 is applied on top by unit_class."""
     if unit in RUN2:
         r = RUN2[unit]; a = r[r['arm_adopted']]
         return r['class'], {'run': 'run 2', 'ruling': r['ruling'], 'arm': r['arm_adopted'], 'outcome': a['outcome'], 'repeat': a['repeat'], 'cross': a['cross'],
@@ -767,7 +962,7 @@ assert not _bad, f'fields without a comparability class: {_bad}'
 PROFILE_CLASSES = {'essential': ('comparable',), 'extended': ('comparable', 'interpretive', 'null-driven'), 'full': tuple(CLASSES)}
 PROFILES_09 = {prof: [p for p in ALL_09 if COMPARABILITY[p] in cls] for prof, cls in PROFILE_CLASSES.items()}
 PROFILE_RULE = ('R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed '
-                '"comparable" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + "interpretive" + "null-driven"; Full = all 47; '
+                '"comparable" (run-1 pass on populated answers, or run-2 pass, and - for the 19 comparable-tier fields tested across vendors in run 3 - holding the market rule under R18 reading (b), R19-R28); Extended = Essential + "interpretive" + "null-driven"; Full = all 47; '
                 'partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. '
                 'Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.')
 PARTNER_BASE = {'partner:com.deepadata.journaling.v1': 'extended', 'partner:com.deepadata.therapy.v1': 'full',
@@ -818,7 +1013,9 @@ def membership_table():
         cp = f", populated-only {b['cross_populated_only']:.2f}" if b.get('cross_populated_only') is not None else ''
         cross = f"{b['cross']:.2f}" if b['cross'] is not None else 'n/a'
         head = (f"run 2 Arm {b['arm']} {b['outcome']} ({b['ruling']})" if b['run'] == 'run 2' else f"run 1 {b['outcome']}")
-        return f"{head}: rep {who} {rep}; cross {cross}{cp}; null {b['null_rate']:.2f}"
+        r3 = b.get('run3')
+        tail = (f"; run 3 (b) {r3['holds_b']} of {r3['of']} {r3['verdict_b']} (a: {r3['holds_a']})" + (f" [{', '.join(r3['flags'])}]" if r3['flags'] else '')) if r3 else ''
+        return f"{head}: rep {who} {rep}; cross {cross}{cp}; null {b['null_rate']:.2f}{tail}"
     lines = ['| Field | Class | Profiles | Lead unit | Figure |', '|---|---|---|---|---|']
     for p in ALL_09:
         cls, b = field_class(p)
