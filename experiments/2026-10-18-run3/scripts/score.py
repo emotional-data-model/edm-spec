@@ -29,6 +29,10 @@ FIELD_OF = {u: (u.rsplit('.', 1)[0] if u.endswith(('.text', '.value', '.type')) 
 P1_SET = [e['model'] for e in MODELS['extractors'].values() if e.get('p1_open_weight_set') and e['model'] not in J.DROPPED]
 GEMINI = 'google/gemini-4-argon'
 BAND_CHEAP, BAND_VOTING = 13, 17
+MISTRAL = 'mistralai/mistral-large-4-0'
+# R29: the probe's else-branch ('reasoning-cap artefact, excluded from the 8') is applied by listing the arm in levers.json
+# r29_probe.excluded_arms; the re-run branch leaves the arm in. Either way a sensitivity verdict WITHOUT Mistral is reported.
+EXCLUDED = set((J.LEVERS.get('r29_probe') or {}).get('excluded_arms') or [])
 
 
 def get_unit3(canon, unit):
@@ -215,7 +219,11 @@ def score_unit(unit, shape, vocab, outputs, out1, judge, texts):
         a['decision_alt'] = da  # sensitivity reading (null-valued answers count as covered), reported beside the frozen decision, never deciding
         a['borderline'] = (r is not None and abs(r - lo_r) < 0.05) or (x is not None and abs(x - lo_x) < 0.05)
         a['sparse'] = a.get('null_rate') is not None and a['null_rate'] >= 0.90
-    arms_run = [m for m in NEW_ARMS if res['arms'].get(m, {}).get('n_valid_outputs')]
+    arms_run = [m for m in NEW_ARMS if res['arms'].get(m, {}).get('n_valid_outputs') and m not in EXCLUDED]
+    wo = [m for m in arms_run if m != MISTRAL]
+    res['verdict_wo_mistral'] = {'reading': 'R29 sensitivity: Mistral Large 4 left out (reasoning-cap artefact); not deciding unless levers.json r29_probe.excluded_arms names it',
+                                'total_hold': 3 + sum(1 for m in wo if res['arms'][m]['decision'] == 'holds'), 'total_hold_b': 3 + sum(1 for m in wo if res['arms'][m]['decision_alt'] == 'holds'), 'of': 3 + len(wo)}
+    res['verdict_wo_mistral']['holds_across_market'] = res['verdict_wo_mistral']['total_hold'] >= 5; res['verdict_wo_mistral']['holds_across_market_b'] = res['verdict_wo_mistral']['total_hold_b'] >= 5
     n_hold_new = sum(1 for m in arms_run if res['arms'][m]['decision'] == 'holds')
     n_hold_alt = sum(1 for m in arms_run if res['arms'][m]['decision_alt'] == 'holds')
     res['verdict_alt'] = {'new_arms_hold': n_hold_alt, 'total_hold': 3 + n_hold_alt, 'holds_across_market': (3 + n_hold_alt) >= 5, 'reading': 'sensitivity: null-valued answers count as covered (run-1 convention: null is a category); not deciding'}
@@ -264,7 +272,7 @@ def main():
     arm_stats = raw_arm_stats()
     json.dump({'counts': {m: dict(c) for m, c in counts.items()}, 'providers': {m: dict(p) for m, p in providers.items()}, 'texts_per_arm': {c: len(v) for c, v in by_arm.items()}, 'judged_units': len(judge),
                'thresholds': THRESH, 'units': UNITS, 'arms': ARMS, 'new_arms': NEW_ARMS, 'dropped_arms': DROPPED, 'reference': REF, 'voter_rerun': SON, 'p1_set': P1_SET, 'bands': bands, 'predictions': predictions,
-               'arm_stats': arm_stats, 'levers': J.LEVERS, 'table': table}, open(os.path.join(SCORING, 'field_table.json'), 'w', encoding='utf-8'), indent=1, default=str)
+               'arm_stats': arm_stats, 'levers': J.LEVERS, 'excluded_arms_R29': sorted(EXCLUDED), 'table': table}, open(os.path.join(SCORING, 'field_table.json'), 'w', encoding='utf-8'), indent=1, default=str)
     # markdown summary
     def f(x): return '—' if x is None else f'{x:.2f}'
     short = {'google/gemini-4-argon': 'gemini', 'deepseek/deepseek-v4-pro-0813': 'deepseek', 'qwen/qwen3.8-2.4t-a95b': 'qwen', 'meta-llama/llama-4-maverick': 'llama', 'mistralai/mistral-large-4-0': 'mistral', 'openai/gpt-oss-120b': 'gpt-oss', REF: 'haiku', SON: 'sonnet-rerun'}

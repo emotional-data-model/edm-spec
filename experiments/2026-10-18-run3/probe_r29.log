@@ -1,0 +1,13 @@
+R29 probe: mistralai/mistral-large-4-0 @ mistral; max_tokens 32000; reasoning {'max_tokens': 8000}; texts ['S21', 'L42-10', 'P1665-06-15', 'S13', 'S19', 'P1665-12-01', 'S26', 'M9aaed6a3-06', 'S15', 'P1665-09-07']
+  S21: finish stop, reasoning 14060, out 14679, USD 0.0326, parsed yes
+  L42-10: finish stop, reasoning 8655, out 9221, USD 0.0214, parsed yes
+  P1665-06-15: finish stop, reasoning 9754, out 10205, USD 0.0232, parsed yes
+  S13: finish stop, reasoning 7824, out 8472, USD 0.0196, parsed yes
+  S19: finish stop, reasoning 10810, out 11256, USD 0.0254, parsed yes
+  P1665-12-01: finish stop, reasoning 12518, out 13126, USD 0.0293, parsed yes
+  S26: finish stop, reasoning 11617, out 12290, USD 0.0276, parsed yes
+  M9aaed6a3-06: finish stop, reasoning 8007, out 8464, USD 0.0196, parsed yes
+  S15: finish stop, reasoning 7437, out 8092, USD 0.0188, parsed yes
+  P1665-09-07: finish stop, reasoning 12322, out 13003, USD 0.0294, parsed yes
+R29 probe: {"when": "2026-10-18 22:28:19", "arm": "mistralai/mistral-large-4-0", "calls": 10, "parsed": 10, "max_tokens": 32000, "reasoning_budget": 8000, "mean_reasoning_tokens": 10300.4, "finish_reasons": {"stop": 10}, "usd": 0.2469, "branch": "re-run the arm under these parameters (>= 9 of 10 parsed)"}
+exit 0

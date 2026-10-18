@@ -1,0 +1,14 @@
+{
+ "by_model": {
+  "deepseek/deepseek-v4-pro-0813": {
+   "usd": 1.2697342679999994,
+   "calls": 750,
+   "input_tokens": 536696,
+   "cached_input_tokens": 1676544,
+   "cache_write_tokens": 0,
+   "output_tokens": 443753
+  }
+ },
+ "total_usd": 1.2697342679999994,
+ "calls": 750
+}

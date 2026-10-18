@@ -1,0 +1,25 @@
+prompt check OK; corpus OK (150 texts, sha256 verified)
+levers: {"stop_usd": 70, "reasoning_low": ["qwen/qwen3.8-2.4t-a95b", "mistralai/mistral-large-4-0", "openai/gpt-oss-120b", "deepseek/deepseek-v4-pro-0813"], "thinking_disabled": []} | endpoint overrides: ['deepseek/deepseek-v4-pro-0813']
+R30 extension: ['deepseek/deepseek-v4-pro-0813']; reasoning {'enabled': False}; cap USD 8.0 on the arm's own spend
+projection before run: {"spent_usd": 0.0, "completed_calls": 0, "projected_extraction_usd": 13.32, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 22.32, "stop_usd": 17.0, "per_arm": {"deepseek/deepseek-v4-pro-0813": {"done": 0, "mean_usd": 0.01776, "projected_usd": 13.32}}}
+deepseek/deepseek-v4-pro-0813 @ streamlake / synthetic: 250 planned, 250 to do [reasoning {'enabled': False}]
+deepseek/deepseek-v4-pro-0813 @ streamlake / conversational: 250 planned, 250 to do [reasoning {'enabled': False}]
+deepseek/deepseek-v4-pro-0813 @ streamlake / pepys: 250 planned, 250 to do [reasoning {'enabled': False}]
+  [deepseek__deepseek-v4-pro-0813/synthetic] 50 calls, $0.09 this run, total $0.09, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 100 calls, $0.17 this run, total $0.17, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/conversational] 150 calls, $0.26 this run, total $0.26, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/pepys] 200 calls, $0.35 this run, total $0.35, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/conversational] 250 calls, $0.44 this run, total $0.44, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 300 calls, $0.53 this run, total $0.53, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 350 calls, $0.61 this run, total $0.61, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/pepys] 400 calls, $0.69 this run, total $0.69, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 450 calls, $0.77 this run, total $0.77, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/pepys] 500 calls, $0.86 this run, total $0.86, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 550 calls, $0.94 this run, total $0.94, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/synthetic] 600 calls, $1.02 this run, total $1.02, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/conversational] 650 calls, $1.10 this run, total $1.10, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/pepys] 700 calls, $1.18 this run, total $1.18, parse_fail=0 missing_keys=0 mismatch=0
+  [deepseek__deepseek-v4-pro-0813/pepys] 750 calls, $1.27 this run, total $1.27, parse_fail=0 missing_keys=0 mismatch=0
+done in 1660s: 750 calls, $1.27 this run; cumulative $1.27; parse_fail=0 missing_keys=0 transport_fail=0 provider_mismatch=0
+final projection: {"spent_usd": 1.27, "completed_calls": 750, "projected_extraction_usd": 1.27, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 10.27, "stop_usd": 70.0, "per_arm": {"deepseek/deepseek-v4-pro-0813": {"done": 750, "mean_usd": 0.00169, "projected_usd": 1.27}}}
+exit 0
