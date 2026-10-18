@@ -33,10 +33,10 @@
 
 ## Founder decisions now open
 
-1. **Ruling drafts per slot** (RESULTS.md §7): adopt Arm B for `harm` and `trigger` (the latter interpretive); adopt Arm A for `subject` (interpretive) and `integration`; move `drive` and `retrieval_cues` out of Essential (pre-registered recommendation under the frozen table). R2 holds until ruled.
+1. **Rulings R11–R16 recorded** (`docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md`, from the drafts in RESULTS.md §7, ruling under delegation, veto by exception): R11 `harm` Arm B, Essential; R12 `trigger` Arm B, Essential, interpretive; R13 `subject` Arm A, interpretive, **membership founder-only** (stays in Essential until ruled; pre-registered recommendation is to move); R14 `integration` Arm A, Essential (a stated departure from the pre-registered move); R15 `drive` and R16 `retrieval_cues` to Extended (pre-registered). Veto window open; nothing applied to the draft layout yet.
 2. **Voting rule for run 3** (R9): Kimi K2.6 is the voter below 0.80 in 8 of 12 cells; the two-voter sensitivity changes only `harm` A and `integration` A.
 3. **Publish v0.8.4** (R1, still open) and **push** (`deepadata-com` `6a1f597`, `536db0f`, this session's commit; `edm-spec` branches) — founder-only.
-4. **Run-2 → v0.9 draft**: apply the rulings to `v09_layout.py` / `draft_schema_build.py` only after the founder rules (nothing applied in this session).
+4. **Run-2 → v0.9 draft**: apply R11–R16 to `v09_layout.py` (`ESSENTIAL_09`, `DESC`) / `draft_schema_build.py` / crosswalk record / `v0.9-proposal.md` after the veto window and the R13 membership decision (nothing applied in this session).
 
 ## Files to read first
 
