@@ -243,28 +243,37 @@
         "cross_populated_only": 0.61,
         "null_rate": 0.33,
         "two_voter": "pass",
-        "why": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61); run 3 holds across the market under reading (b) (6 of 8; literal reading 5 of 8)",
+        "why": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61); run 3 holds across the market under reading (b) (6 of 9; literal reading 5 of 9)",
         "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)",
         "run3": {
           "holds_a": 5,
           "holds_b": 6,
-          "of": 8,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
           "arms": {
             "gemini-4-argon": {
               "repeat": 0.88,
-              "agree": 0.77,
+              "agree": 0.78,
               "coverage_a": 0.59,
               "coverage_b": 0.89,
               "a": "holds",
               "b": "holds",
               "borderline": false
             },
+            "deepseek-v4-pro": {
+              "repeat": 0.62,
+              "agree": 0.71,
+              "coverage_a": 0.53,
+              "coverage_b": 0.89,
+              "a": "does not hold",
+              "b": "does not hold",
+              "borderline": false
+            },
             "qwen3.8-2.4t": {
               "repeat": 0.81,
-              "agree": 0.74,
+              "agree": 0.75,
               "coverage_a": 0.56,
               "coverage_b": 0.89,
               "a": "holds",
@@ -273,15 +282,15 @@
             },
             "llama-4-maverick": {
               "repeat": 0.97,
-              "agree": 0.55,
+              "agree": 0.56,
               "coverage_a": 0.3,
               "coverage_b": 0.89,
               "a": "uncovered",
               "b": "repeats only",
-              "borderline": false
+              "borderline": true
             },
             "mistral-large-4": {
-              "repeat": 0.64,
+              "repeat": 0.63,
               "agree": 0.73,
               "coverage_a": 0.61,
               "coverage_b": 0.88,
@@ -291,8 +300,8 @@
             },
             "gpt-oss-120b": {
               "repeat": 0.98,
-              "agree": 0.64,
-              "coverage_a": 0.41,
+              "agree": 0.65,
+              "coverage_a": 0.42,
               "coverage_b": 0.89,
               "a": "uncovered",
               "b": "holds",
@@ -302,10 +311,10 @@
           "majority_texts": 133,
           "majority_null_share": 0.36,
           "texts_without_judge": 0,
-          "framing_bound": 0.75,
+          "framing_bound": 0.76,
           "flags": [],
           "ruling": "R19",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "narrative.harm",
         "lead_unit_why": "the field is itself the scored unit"
@@ -528,46 +537,55 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60); run 3 holds across the market under reading (b) (8 of 8; literal reading 8 of 8)",
+        "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60); run 3 holds across the market under reading (b) (9 of 9; literal reading 9 of 9)",
         "run3": {
-          "holds_a": 8,
-          "holds_b": 8,
-          "of": 8,
+          "holds_a": 9,
+          "holds_b": 9,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
           "arms": {
             "gemini-4-argon": {
-              "repeat": 1.0,
-              "agree": 0.99,
-              "coverage_a": 1.0,
-              "coverage_b": 1.0,
+              "repeat": 0.99,
+              "agree": 1.0,
+              "coverage_a": 0.99,
+              "coverage_b": 0.99,
+              "a": "holds",
+              "b": "holds",
+              "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.94,
+              "agree": 0.96,
+              "coverage_a": 0.95,
+              "coverage_b": 0.99,
               "a": "holds",
               "b": "holds",
               "borderline": false
             },
             "qwen3.8-2.4t": {
               "repeat": 0.96,
-              "agree": 0.98,
-              "coverage_a": 0.99,
-              "coverage_b": 1.0,
+              "agree": 0.99,
+              "coverage_a": 0.98,
+              "coverage_b": 0.99,
               "a": "holds",
               "b": "holds",
               "borderline": false
             },
             "llama-4-maverick": {
               "repeat": 0.92,
-              "agree": 0.86,
-              "coverage_a": 0.99,
-              "coverage_b": 1.0,
+              "agree": 0.87,
+              "coverage_a": 0.98,
+              "coverage_b": 0.99,
               "a": "holds",
               "b": "holds",
               "borderline": false
             },
             "mistral-large-4": {
               "repeat": 0.89,
-              "agree": 0.95,
-              "coverage_a": 0.97,
+              "agree": 0.96,
+              "coverage_a": 0.96,
               "coverage_b": 0.99,
               "a": "holds",
               "b": "holds",
@@ -575,21 +593,21 @@
             },
             "gpt-oss-120b": {
               "repeat": 0.96,
-              "agree": 0.73,
+              "agree": 0.77,
               "coverage_a": 0.85,
-              "coverage_b": 1.0,
+              "coverage_b": 0.99,
               "a": "holds",
               "b": "holds",
               "borderline": false
             }
           },
-          "majority_texts": 150,
+          "majority_texts": 149,
           "majority_null_share": 0.0,
           "texts_without_judge": 0,
-          "framing_bound": 0.99,
+          "framing_bound": 1.0,
           "flags": [],
           "ruling": "R20 (closed on the completed judge, 2026-10-18)",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "narrative.summary",
         "lead_unit_why": "the field is itself the scored unit"
@@ -643,45 +661,54 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass on populated answers (populated-only cross 0.67 >= 0.60); run 3 holds across the market under reading (b) (6 of 8; literal reading 6 of 8)",
+        "why": "run-1 pass on populated answers (populated-only cross 0.67 >= 0.60); run 3 holds across the market under reading (b) (6 of 9; literal reading 6 of 9)",
         "run3": {
           "holds_a": 6,
           "holds_b": 6,
-          "of": 8,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
           "arms": {
             "gemini-4-argon": {
               "repeat": 0.92,
-              "agree": 0.6,
+              "agree": 0.61,
               "coverage_a": 0.84,
               "coverage_b": 0.93,
               "a": "holds",
               "b": "holds",
               "borderline": true
             },
+            "deepseek-v4-pro": {
+              "repeat": 0.72,
+              "agree": 0.63,
+              "coverage_a": 0.79,
+              "coverage_b": 0.93,
+              "a": "does not hold",
+              "b": "does not hold",
+              "borderline": true
+            },
             "qwen3.8-2.4t": {
-              "repeat": 0.83,
-              "agree": 0.82,
-              "coverage_a": 0.61,
+              "repeat": 0.84,
+              "agree": 0.84,
+              "coverage_a": 0.62,
               "coverage_b": 0.93,
               "a": "holds",
               "b": "holds",
               "borderline": true
             },
             "llama-4-maverick": {
-              "repeat": 0.8,
-              "agree": 0.53,
+              "repeat": 0.82,
+              "agree": 0.54,
               "coverage_a": 0.83,
               "coverage_b": 0.93,
-              "a": "does not hold",
-              "b": "does not hold",
+              "a": "repeats only",
+              "b": "repeats only",
               "borderline": true
             },
             "mistral-large-4": {
               "repeat": 0.69,
-              "agree": 0.71,
+              "agree": 0.73,
               "coverage_a": 0.71,
               "coverage_b": 0.93,
               "a": "does not hold",
@@ -690,8 +717,8 @@
             },
             "gpt-oss-120b": {
               "repeat": 0.95,
-              "agree": 0.71,
-              "coverage_a": 0.6,
+              "agree": 0.74,
+              "coverage_a": 0.61,
               "coverage_b": 0.93,
               "a": "holds",
               "b": "holds",
@@ -701,10 +728,10 @@
           "majority_texts": 140,
           "majority_null_share": 0.44,
           "texts_without_judge": 0,
-          "framing_bound": 0.73,
+          "framing_bound": 0.75,
           "flags": [],
           "ruling": "R21",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "narrative.meaning",
         "lead_unit_why": "the field is itself the scored unit"
@@ -806,11 +833,11 @@
         "null_rate": 0.89,
         "flags": [],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 3 of 8)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 9; literal reading 3 of 9)",
         "run3": {
           "holds_a": 3,
           "holds_b": 7,
-          "of": 8,
+          "of": 9,
           "verdict_a": "fails",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -822,6 +849,15 @@
               "coverage_b": 0.99,
               "a": "uncovered",
               "b": "holds",
+              "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.38,
+              "agree": 0.34,
+              "coverage_a": 0.45,
+              "coverage_b": 0.99,
+              "a": "uncovered",
+              "b": "does not hold",
               "borderline": false
             },
             "qwen3.8-2.4t": {
@@ -867,7 +903,7 @@
           "framing_bound": 0.65,
           "flags": [],
           "ruling": "R22",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "narrative.turning_point",
         "lead_unit_why": "the field is itself the scored unit"
@@ -1096,11 +1132,11 @@
         "null_rate": 0.79,
         "flags": [],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass on populated answers (populated-only cross 0.81 >= 0.60); run 3 holds across the market under reading (b) (8 of 8; literal reading 3 of 8)",
+        "why": "run-1 pass on populated answers (populated-only cross 0.81 >= 0.60); run 3 holds across the market under reading (b) (9 of 9; literal reading 3 of 9)",
         "run3": {
           "holds_a": 3,
-          "holds_b": 8,
-          "of": 8,
+          "holds_b": 9,
+          "of": 9,
           "verdict_a": "fails",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -1114,8 +1150,17 @@
               "b": "holds",
               "borderline": false
             },
+            "deepseek-v4-pro": {
+              "repeat": 0.86,
+              "agree": 0.95,
+              "coverage_a": 0.2,
+              "coverage_b": 1.0,
+              "a": "uncovered",
+              "b": "holds",
+              "borderline": false
+            },
             "qwen3.8-2.4t": {
-              "repeat": 0.9,
+              "repeat": 0.89,
               "agree": 0.89,
               "coverage_a": 0.28,
               "coverage_b": 1.0,
@@ -1157,7 +1202,7 @@
           "framing_bound": 0.97,
           "flags": [],
           "ruling": "R23",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "narrative.self_position",
         "lead_unit_why": "the field is itself the scored unit"

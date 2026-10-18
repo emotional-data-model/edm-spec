@@ -1,0 +1,21 @@
+outputs: {'google/gemini-4-argon': {'calls': 810, 'valid': 750, 'invalid': 60, 'transport': 60}, 'deepseek/deepseek-v4-pro-0813': {'calls': 750, 'valid': 750}, 'qwen/qwen3.8-2.4t-a95b': {'calls': 750, 'valid': 747, 'invalid': 3, 'parse': 3}, 'meta-llama/llama-4-maverick': {'calls': 750, 'valid': 750}, 'mistralai/mistral-large-4-0': {'calls': 750, 'valid': 661, 'invalid': 89, 'parse': 89, 'missing_keys': 26}, 'openai/gpt-oss-120b': {'calls': 750, 'valid': 743, 'invalid': 7, 'parse': 7}, 'anthropic/claude-haiku-5.5': {'calls': 750, 'valid': 750, 'missing_keys': 4}, 'anthropic/claude-sonnet-5.5': {'calls': 837, 'valid': 750, 'invalid': 87, 'transport': 87, 'missing_keys': 7}}
+representatives per unit (texts with all three voters): {'narrative.harm': 144, 'narrative.meaning': 150, 'narrative.self_position': 150, 'emotion.bodily_sensation': 150, 'narrative.summary': 150}
+stop 70.0; spent so far 44.23 + judge 8.34; remaining 17.43; reserve rule: start only if remaining >= 9
+g2_harm_meaning_self_body: 150 texts to judge
+g1_summary: 150 texts to judge
+  judge: endpoint refuses reasoning disabled; falling back to the gateway default for the remaining calls
+  judge 10 records, $0.27 this run (bad=0); cumulative $8.61; projected judge total $16.49 of remaining $17.43
+  judge 25 records, $0.56 this run (bad=0); cumulative $8.90; projected judge total $15.09 of remaining $17.43
+  judge 50 records, $1.04 this run (bad=0); cumulative $9.38; projected judge total $14.55 of remaining $17.43
+  judge 75 records, $1.63 this run (bad=0); cumulative $9.97; projected judge total $14.85 of remaining $17.43
+  judge 100 records, $2.35 this run (bad=0); cumulative $10.69; projected judge total $15.40 of remaining $17.43
+  judge 125 records, $3.14 this run (bad=0); cumulative $11.48; projected judge total $15.88 of remaining $17.43
+  judge 150 records, $3.97 this run (bad=0); cumulative $12.31; projected judge total $16.27 of remaining $17.43
+  judge 175 records, $4.71 this run (bad=0); cumulative $13.05; projected judge total $16.42 of remaining $17.43
+  judge 200 records, $5.72 this run (bad=0); cumulative $14.06; projected judge total $16.93 of remaining $17.43
+  judge 225 records, $6.67 this run (bad=0); cumulative $15.01; projected judge total $17.23 of remaining $17.43
+  judge 250 records, $7.55 this run (bad=0); cumulative $15.89; projected judge total $17.40 of remaining $17.43
+  judge 275 records, $8.54 this run (bad=0); cumulative $16.88; projected judge total $17.65 of remaining $17.43
+  judge 300 records, $8.82 this run (bad=0); cumulative $17.16; projected judge total $17.16 of remaining $17.43
+judge done: 300 records, $8.82 this run, bad=0, cumulative judge spend $17.16
+exit 0

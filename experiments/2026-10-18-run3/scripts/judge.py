@@ -224,6 +224,7 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, reps, c
 async def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--limit', type=int, default=None); ap.add_argument('--concurrency', type=int, default=4); ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--cap-usd', type=float, default=None, help='hard cap on the judge spend of this invocation (lever 4 / Phase A ledger): the pass stops checkpointed once reached')
+    ap.add_argument('--rejudge-missing', action='store_true', help='after --rejudge: judge again only the texts whose latest groups record does not cover every arm that has outputs for the text (rate-limit failures of the supplement)')
     ap.add_argument('--rejudge', action='store_true', help='R30 supplement: judge every text again with all answers (an extension arm included); the new record supersedes the old in load_judge (last record per text wins)')
     a = ap.parse_args()
     outputs, counts, arm_of, providers = load_outputs()
@@ -244,10 +245,16 @@ async def main():
     for gname, units in GROUPS.items():
         ck_path = os.path.join(jd, f'{gname}.jsonl'); done = set()
         if os.path.exists(ck_path) and not a.rejudge:
+            latest = {}
             for l in open(ck_path, encoding='utf-8'):
                 if l.strip():
                     r = json.loads(l)
-                    if r.get('groups'): done.add(r['text_id'])
+                    if r.get('groups'): latest[r['text_id']] = r
+            for tid, r in latest.items():
+                if not a.rejudge_missing: done.add(tid); continue
+                keys = {k for u in r['groups'].values() for k in u}
+                arms_with_outputs = [m for m in ARMS if m not in DROPPED and any(v is not None for v in outputs[m].get(tid, {}).values())]
+                if all(any(k.startswith(m + '#') for k in keys) for m in arms_with_outputs): done.add(tid)
         todo = [t for t in sorted(arm_of) if t not in done][:a.limit]
         print(f'{gname}: {len(todo)} texts to judge')
         stats['planned'] += len(todo)

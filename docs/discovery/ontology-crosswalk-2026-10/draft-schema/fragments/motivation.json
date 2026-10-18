@@ -94,11 +94,11 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 5 of 8) [at_minimum, borderline]",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 9; literal reading 5 of 9) [at_minimum, borderline]",
         "run3": {
           "holds_a": 5,
           "holds_b": 5,
-          "of": 8,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -110,6 +110,15 @@
               "coverage_b": 0.83,
               "a": "holds",
               "b": "holds",
+              "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.51,
+              "agree": 0.55,
+              "coverage_a": 0.81,
+              "coverage_b": 0.83,
+              "a": "does not hold",
+              "b": "does not hold",
               "borderline": false
             },
             "qwen3.8-2.4t": {
@@ -158,7 +167,7 @@
             "borderline"
           ],
           "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "motivation.action_tendency",
         "lead_unit_why": "the field is itself the scored unit"
@@ -254,11 +263,11 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 9; literal reading 7 of 9)",
         "run3": {
           "holds_a": 7,
           "holds_b": 7,
-          "of": 8,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -271,6 +280,15 @@
               "a": "holds",
               "b": "holds",
               "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.69,
+              "agree": 0.54,
+              "coverage_a": 0.87,
+              "coverage_b": 0.9,
+              "a": "does not hold",
+              "b": "does not hold",
+              "borderline": true
             },
             "qwen3.8-2.4t": {
               "repeat": 0.76,
@@ -315,7 +333,7 @@
           "framing_bound": 0.77,
           "flags": [],
           "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "motivation.need",
         "lead_unit_why": "the field is itself the scored unit"
@@ -401,11 +419,11 @@
         "null_rate": 0.12,
         "flags": [],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 8; literal reading 7 of 8)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (7 of 9; literal reading 7 of 9)",
         "run3": {
           "holds_a": 7,
           "holds_b": 7,
-          "of": 8,
+          "of": 9,
           "verdict_a": "holds",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -417,6 +435,15 @@
               "coverage_b": 0.97,
               "a": "holds",
               "b": "holds",
+              "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.58,
+              "agree": 0.7,
+              "coverage_a": 0.95,
+              "coverage_b": 0.97,
+              "a": "does not hold",
+              "b": "does not hold",
               "borderline": false
             },
             "qwen3.8-2.4t": {
@@ -462,7 +489,7 @@
           "framing_bound": 0.81,
           "flags": [],
           "ruling": "held under both readings; not re-ruled (R18-R28 addendum)",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "motivation.temporal_focus",
         "lead_unit_why": "the field is itself the scored unit"
@@ -648,11 +675,11 @@
           "borderline"
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
-        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 8; literal reading 4 of 8) [at_minimum, borderline]",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape); run 3 holds across the market under reading (b) (5 of 9; literal reading 4 of 9) [at_minimum, borderline]",
         "run3": {
           "holds_a": 4,
           "holds_b": 5,
-          "of": 8,
+          "of": 9,
           "verdict_a": "fails",
           "verdict_b": "holds",
           "reading": "R18: reading (b) decides prospectively (a null-valued answer counts as covered); reading (a), the frozen literal clause, is reported beside",
@@ -664,6 +691,15 @@
               "coverage_b": 0.86,
               "a": "holds",
               "b": "holds",
+              "borderline": false
+            },
+            "deepseek-v4-pro": {
+              "repeat": 0.4,
+              "agree": 0.34,
+              "coverage_a": 0.77,
+              "coverage_b": 0.86,
+              "a": "does not hold",
+              "b": "does not hold",
               "borderline": false
             },
             "qwen3.8-2.4t": {
@@ -712,7 +748,7 @@
             "borderline"
           ],
           "ruling": "R28",
-          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
+          "source": "experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-9 rule (R30 extension scored: DeepSeek V4 Pro the ninth model), thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)"
         },
         "lead_unit": "motivation.coping",
         "lead_unit_why": "the field is itself the scored unit"
