@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/reading.json",
+  "title": "EDM READING layer (discovery sketch, 2026-10-18; not part of the draft schema build)",
+  "description": "Additive, optional, infrastructure: where each populated affective field was read from (evidence spans in the source text) and which catalogued cues licensed which readings. An artifact without this block is unchanged in meaning and validity; an artifact with it carries nothing a consumer must understand to use the affective fields. Keyed by field path like telemetry.field_confidence. Excluded from the seal hash together with telemetry until a ruling says otherwise (see schema-sketch.md section 4).",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "source": {
+      "description": "Identity of the text the offsets index. Offsets are Unicode code-point positions in the text after NFC normalisation and LF line endings; sha256 is of that normalised text (UTF-8). A consumer that cannot reproduce the hash must treat every span as unverified.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sha256", "length"],
+      "properties": {
+        "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "length": {"type": "integer", "minimum": 0, "description": "Code points in the normalised text"},
+        "normalisation": {"type": "string", "enum": ["nfc-lf"], "default": "nfc-lf"},
+        "turns": {
+          "description": "Optional turn index for conversational sources: each turn's speaker, span and timestamp, so turn-level cues (delayed reply, going quiet) can be checked.",
+          "type": "array",
+          "items": {
+            "type": "object", "additionalProperties": false, "required": ["span"],
+            "properties": {"speaker": {"type": ["string", "null"]}, "span": {"$ref": "#/definitions/span"}, "ts": {"type": ["string", "null"], "format": "date-time"}}
+          }
+        }
+      }
+    },
+    "evidence": {
+      "description": "Per populated affective field: the span(s) of the source text the value is attributable to. Key = dotted field path (narrative.harm, emotion.primary, salience.tether.type ...). Every quote must equal the normalised text at its span; a mismatch invalidates the entry, not the field.",
+      "type": "object",
+      "propertyNames": {"pattern": "^(narrative|emotion|context|salience|motivation)\\.[a-z_.]+$"},
+      "additionalProperties": {
+        "type": "array",
+        "minItems": 1,
+        "items": {"$ref": "#/definitions/evidence_span"}
+      }
+    },
+    "readings": {
+      "description": "Cue-licensed readings: each names the cue(s) from the catalogue (cues/v1), the span(s) the cue rests on, the field and label the cue licenses (a candidate or hypothesis, never a populated value by itself), the licence strength and the extractor that read it.",
+      "type": "array",
+      "items": {"$ref": "#/definitions/reading"}
+    },
+    "cue_vocabulary": {
+      "description": "The cue catalogue the codes come from.",
+      "type": "string",
+      "const": "https://emotionaldatamodel.org/vocab/cues/v1"
+    }
+  },
+  "definitions": {
+    "span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": {"type": "integer", "minimum": 0, "description": "Inclusive code-point offset"},
+        "end": {"type": "integer", "minimum": 0, "description": "Exclusive code-point offset; end >= start; end == start only for a null second span (absent party)"}
+      }
+    },
+    "evidence_span": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["span", "quote"],
+      "properties": {
+        "span": {"$ref": "#/definitions/span"},
+        "quote": {"type": "string", "description": "The text at the span, verbatim"},
+        "role": {"type": "string", "enum": ["stated", "interpreted", "contrast", "status"], "default": "stated", "description": "stated: the value is in the span's words; interpreted: the span supports the interpretation; contrast / status: a second span a cue needs (minimising vs weight; tense vs stated status)"},
+        "extractor": {"type": ["string", "null"], "description": "telemetry.extraction_model that produced this span; null when the artifact has one extractor"}
+      }
+    },
+    "reading": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["cues", "spans", "field", "label_licensed", "licence", "extractor"],
+      "properties": {
+        "cues": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^rl:[a-z-]+$"}, "description": "Catalogue codes (cues-v1.md)"},
+        "spans": {"type": "array", "minItems": 1, "items": {"$ref": "#/definitions/evidence_span"}, "description": "The span(s) the cue rests on; a pair cue carries two"},
+        "field": {"type": "string", "pattern": "^(narrative|emotion|context|salience|motivation)\\.[a-z_.]+$"},
+        "label_licensed": {"type": ["string", "boolean", "number", "null"], "description": "The value the cue licenses for the field, in the field's value words; null when the cue licenses only that the field's referent lies in the span (a pointer)"},
+        "licence": {"type": "string", "enum": ["pointer", "hypothesis", "candidate"], "description": "pointer: the span is where the field should be read from; hypothesis: one cue, not a value; candidate: two or more cues on the same referent, still not a value until the field rule populates it"},
+        "norm": {"type": ["string", "null"], "description": "What the cue departs from, in this text (the writer's reply pace, the stated status of the person, the baseline pronoun regime)"},
+        "flags": {"type": "array", "items": {"type": "string", "enum": ["typo_risk", "unscorable", "negated", "model_authored_risk", "comparative"]}},
+        "extractor": {"type": "string"},
+        "populated": {"type": "boolean", "description": "Whether the field's value in this artifact equals label_licensed (the reading was taken up by the field rule). Recorded, never inferred"}
+      }
+    }
+  }
+}
