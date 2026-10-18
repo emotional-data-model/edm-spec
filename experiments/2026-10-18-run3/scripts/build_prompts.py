@@ -15,8 +15,17 @@ DISC = os.path.join(ROOT, 'docs', 'discovery', 'ontology-crosswalk-2026-10'); DR
 sys.path.insert(0, os.path.join(DISC, 'scripts'))
 import v09_layout as L  # noqa: E402
 
-FIELDS = list(L.PROFILES_09['essential'])
+# R3-D5 (2026-10-18, post-close): the field list is the R17 comparable tier AS FROZEN (commit 974408e): the live
+# `L.PROFILES_09['essential']` lost `salience.tether` when R26 (applied bf97e22) re-classed it interpretive, so deriving the
+# list from the live draft breaks every run-3 script after the close. The frozen 19 are pinned here; the live tier is only
+# checked to be a subset (a field that later LEAVES the comparable tier is expected; one that ENTERS it is not run-3's).
+FIELDS_FROZEN = ['narrative.harm', 'narrative.summary', 'narrative.meaning', 'narrative.turning_point', 'narrative.self_position',
+                 'emotion.primary', 'emotion.valence', 'emotion.intensity', 'emotion.bodily_sensation', 'emotion.appraisal.attribution',
+                 'context.event_category', 'context.relationship', 'context.scope', 'salience.tether', 'salience.function',
+                 'motivation.action_tendency', 'motivation.need', 'motivation.temporal_focus', 'motivation.coping']
+FIELDS = list(FIELDS_FROZEN)
 assert len(FIELDS) == 19, FIELDS
+assert set(L.PROFILES_09['essential']) <= set(FIELDS), sorted(set(L.PROFILES_09['essential']) - set(FIELDS))
 ORDERED = [f'{d}.{f}' for d, fs in L.LAYOUT_ORDER.items() for f in fs if f'{d}.{f}' in FIELDS]
 assert sorted(ORDERED) == sorted(FIELDS)
 FRAG = {d: json.load(open(os.path.join(DRAFT, 'fragments', f'{d}.json'), encoding='utf-8')) for d in L.LAYOUT_ORDER}

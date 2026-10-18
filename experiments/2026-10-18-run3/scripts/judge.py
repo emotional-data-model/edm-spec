@@ -212,6 +212,8 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, reps, c
                 await asyncio.sleep(5 * attempt)
     with open(ck_path, 'a', encoding='utf-8', newline='\n') as fh: fh.write(json.dumps(rec, ensure_ascii=False) + '\n')
     stats['calls'] += 1
+    if budget.get('cap_usd') is not None and stats['usd'] >= budget['cap_usd'] and not stats.get('abort'):
+        stats['abort'] = True; stats['cap_stop'] = True; print(f"  judge: cap USD {budget['cap_usd']} on this run reached after {stats['calls']} records (USD {stats['usd']:.2f}); pass stops checkpointed")
     if stats['calls'] == 10 or stats['calls'] % 25 == 0:
         mean = stats['usd'] / max(1, stats['calls']); proj = spend.data['total_usd'] + mean * max(0, stats['planned'] - stats['calls'])
         print(f"  judge {stats['calls']} records, ${stats['usd']:.2f} this run (bad={stats['bad']}); cumulative ${spend.data['total_usd']:.2f}; projected judge total ${proj:.2f} of remaining ${budget['remaining']:.2f}")
@@ -221,6 +223,7 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, reps, c
 
 async def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--limit', type=int, default=None); ap.add_argument('--concurrency', type=int, default=4); ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--cap-usd', type=float, default=None, help='hard cap on the judge spend of this invocation (lever 4 / Phase A ledger): the pass stops checkpointed once reached')
     ap.add_argument('--rejudge', action='store_true', help='R30 supplement: judge every text again with all answers (an extension arm included); the new record supersedes the old in load_judge (last record per text wins)')
     a = ap.parse_args()
     outputs, counts, arm_of, providers = load_outputs()
@@ -230,7 +233,7 @@ async def main():
     texts = {tid: r['text'] for tid, r in load_texts().items()}
     stop = float(LEVERS.get('stop_usd', MODELS['budget_usd']))
     spent = sum(json.load(open(os.path.join(EXP, f), encoding='utf-8'))['total_usd'] for f in ('spend.json', 'spend_pilot.json') if os.path.exists(os.path.join(EXP, f)))
-    sj = Spend(os.path.join(EXP, 'spend_judge.json')); budget = {'remaining': stop - spent - sj.data['total_usd']}
+    sj = Spend(os.path.join(EXP, 'spend_judge.json')); budget = {'remaining': stop - spent - sj.data['total_usd'], 'cap_usd': a.cap_usd}
     print(f'stop {stop}; spent so far {spent:.2f} + judge {sj.data["total_usd"]:.2f}; remaining {budget["remaining"]:.2f}; reserve rule: start only if remaining >= 9')
     if budget['remaining'] < 9.0: print('judge pass NOT started: remaining budget below the 9 reserve'); return 2
     e = dict(JUDGE); e['endpoint'] = JUDGE['endpoint']

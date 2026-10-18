@@ -1,0 +1,13 @@
+outputs: {'google/gemini-4-argon': {'calls': 810, 'valid': 750, 'invalid': 60, 'transport': 60}, 'qwen/qwen3.8-2.4t-a95b': {'calls': 750, 'valid': 747, 'invalid': 3, 'parse': 3}, 'meta-llama/llama-4-maverick': {'calls': 750, 'valid': 750}, 'mistralai/mistral-large-4-0': {'calls': 750, 'valid': 661, 'invalid': 89, 'parse': 89, 'missing_keys': 26}, 'openai/gpt-oss-120b': {'calls': 750, 'valid': 743, 'invalid': 7, 'parse': 7}, 'anthropic/claude-haiku-5.5': {'calls': 750, 'valid': 750, 'missing_keys': 4}, 'anthropic/claude-sonnet-5.5': {'calls': 837, 'valid': 750, 'invalid': 87, 'transport': 87, 'missing_keys': 7}}
+representatives per unit (texts with all three voters): {'narrative.harm': 144, 'narrative.meaning': 150, 'narrative.self_position': 150, 'emotion.bodily_sensation': 150, 'narrative.summary': 150}
+stop 60.0; spent so far 44.23 + judge 5.12; remaining 10.65; reserve rule: start only if remaining >= 9
+g2_harm_meaning_self_body: 23 texts to judge
+g1_summary: 81 texts to judge
+  judge: endpoint refuses reasoning disabled; falling back to the gateway default for the remaining calls
+  judge 10 records, $0.24 this run (bad=0); cumulative $5.36; projected judge total $7.62 of remaining $10.65
+  judge 25 records, $0.70 this run (bad=0); cumulative $5.83; projected judge total $8.05 of remaining $10.65
+  judge 50 records, $1.57 this run (bad=0); cumulative $6.70; projected judge total $8.40 of remaining $10.65
+  judge 75 records, $2.27 this run (bad=0); cumulative $7.40; projected judge total $8.28 of remaining $10.65
+  judge 100 records, $2.94 this run (bad=0); cumulative $8.06; projected judge total $8.18 of remaining $10.65
+judge done: 104 records, $3.01 this run, bad=0, cumulative judge spend $8.13
+exit 0

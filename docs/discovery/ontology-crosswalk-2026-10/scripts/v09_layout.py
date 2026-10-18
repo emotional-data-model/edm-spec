@@ -727,31 +727,31 @@ RUN1_POOLED = {'narrative.subject': {'outcome': 'cut',
                        'flags': ['borderline']}}
 
 RUN3_SOURCE = 'experiments/2026-10-18-run3/RESULTS.md sections 1-2 (pooled, 150 texts, 5-of-8 rule after lever 3, thresholds frozen in experiment-plan-run3.md section 7 at 974408e; R18 reading (b) decides, reading (a) frozen beside)'
-RUN3_RULE_MIN = 5  # a field holds across the market when >= 5 of the 8 models hold it (three voters by their classing run + >= 2 of the five new arms)
+RUN3_RULE_MIN = 5  # a field holds across the market when >= 5 of the 8 models hold it (three voters by their classing run + >= 2 of the 5 new arms)
 RUN3 = {
- 'narrative.harm': {'holds_a': 3, 'holds_b': 6, 'of': 8, 'majority_texts': 113, 'majority_null_share': 0.38, 'texts_without_judge': 23, 'framing_bound': 0.75, 'ruling': 'R19',
+ 'narrative.harm': {'holds_a': 5, 'holds_b': 6, 'of': 8, 'majority_texts': 133, 'majority_null_share': 0.36, 'texts_without_judge': 0, 'framing_bound': 0.75, 'ruling': 'R19',
     'arms': {
-             'gemini-4-argon': {'repeat': 0.88, 'agree': 0.74, 'coverage_a': 0.49, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'qwen3.8-2.4t': {'repeat': 0.81, 'agree': 0.73, 'coverage_a': 0.45, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': True},
-             'llama-4-maverick': {'repeat': 0.97, 'agree': 0.56, 'coverage_a': 0.26, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'repeats only', 'borderline': True},
-             'mistral-large-4': {'repeat': 0.64, 'agree': 0.73, 'coverage_a': 0.51, 'coverage_b': 0.75, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
-             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.66, 'coverage_a': 0.35, 'coverage_b': 0.75, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+             'gemini-4-argon': {'repeat': 0.88, 'agree': 0.77, 'coverage_a': 0.59, 'coverage_b': 0.89, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.81, 'agree': 0.74, 'coverage_a': 0.56, 'coverage_b': 0.89, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.97, 'agree': 0.55, 'coverage_a': 0.3, 'coverage_b': 0.89, 'a': 'uncovered', 'b': 'repeats only', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.64, 'agree': 0.73, 'coverage_a': 0.61, 'coverage_b': 0.88, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.98, 'agree': 0.64, 'coverage_a': 0.41, 'coverage_b': 0.89, 'a': 'uncovered', 'b': 'holds', 'borderline': True}
     }},
- 'narrative.summary': {'holds_a': 3, 'holds_b': 3, 'of': 8, 'majority_texts': 69, 'majority_null_share': 0.0, 'texts_without_judge': 81, 'framing_bound': 0.99, 'ruling': 'R20',
+ 'narrative.summary': {'holds_a': 8, 'holds_b': 8, 'of': 8, 'majority_texts': 150, 'majority_null_share': 0.0, 'texts_without_judge': 0, 'framing_bound': 0.99, 'ruling': 'R20 (closed on the completed judge, 2026-10-18)',
     'arms': {
-             'gemini-4-argon': {'repeat': 0.99, 'agree': 0.99, 'coverage_a': 0.46, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
-             'qwen3.8-2.4t': {'repeat': 0.97, 'agree': 0.97, 'coverage_a': 0.45, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
-             'llama-4-maverick': {'repeat': 0.89, 'agree': 0.88, 'coverage_a': 0.46, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
-             'mistral-large-4': {'repeat': 0.87, 'agree': 0.93, 'coverage_a': 0.44, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False},
-             'gpt-oss-120b': {'repeat': 0.95, 'agree': 0.75, 'coverage_a': 0.41, 'coverage_b': 0.46, 'a': 'uncovered', 'b': 'uncovered', 'borderline': False}
+             'gemini-4-argon': {'repeat': 1.0, 'agree': 0.99, 'coverage_a': 1.0, 'coverage_b': 1.0, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.96, 'agree': 0.98, 'coverage_a': 0.99, 'coverage_b': 1.0, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.92, 'agree': 0.86, 'coverage_a': 0.99, 'coverage_b': 1.0, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.89, 'agree': 0.95, 'coverage_a': 0.97, 'coverage_b': 0.99, 'a': 'holds', 'b': 'holds', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.96, 'agree': 0.73, 'coverage_a': 0.85, 'coverage_b': 1.0, 'a': 'holds', 'b': 'holds', 'borderline': False}
     }},
- 'narrative.meaning': {'holds_a': 5, 'holds_b': 6, 'of': 8, 'majority_texts': 119, 'majority_null_share': 0.45, 'texts_without_judge': 23, 'framing_bound': 0.76, 'ruling': 'R21',
+ 'narrative.meaning': {'holds_a': 6, 'holds_b': 6, 'of': 8, 'majority_texts': 140, 'majority_null_share': 0.44, 'texts_without_judge': 0, 'framing_bound': 0.73, 'ruling': 'R21',
     'arms': {
-             'gemini-4-argon': {'repeat': 0.9, 'agree': 0.61, 'coverage_a': 0.7, 'coverage_b': 0.79, 'a': 'holds', 'b': 'holds', 'borderline': True},
-             'qwen3.8-2.4t': {'repeat': 0.82, 'agree': 0.85, 'coverage_a': 0.51, 'coverage_b': 0.79, 'a': 'holds', 'b': 'holds', 'borderline': True},
-             'llama-4-maverick': {'repeat': 0.8, 'agree': 0.55, 'coverage_a': 0.69, 'coverage_b': 0.79, 'a': 'repeats only', 'b': 'repeats only', 'borderline': True},
-             'mistral-large-4': {'repeat': 0.7, 'agree': 0.74, 'coverage_a': 0.6, 'coverage_b': 0.79, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
-             'gpt-oss-120b': {'repeat': 0.95, 'agree': 0.72, 'coverage_a': 0.49, 'coverage_b': 0.79, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+             'gemini-4-argon': {'repeat': 0.92, 'agree': 0.6, 'coverage_a': 0.84, 'coverage_b': 0.93, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'qwen3.8-2.4t': {'repeat': 0.83, 'agree': 0.82, 'coverage_a': 0.61, 'coverage_b': 0.93, 'a': 'holds', 'b': 'holds', 'borderline': True},
+             'llama-4-maverick': {'repeat': 0.8, 'agree': 0.53, 'coverage_a': 0.83, 'coverage_b': 0.93, 'a': 'does not hold', 'b': 'does not hold', 'borderline': True},
+             'mistral-large-4': {'repeat': 0.69, 'agree': 0.71, 'coverage_a': 0.71, 'coverage_b': 0.93, 'a': 'does not hold', 'b': 'does not hold', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.95, 'agree': 0.71, 'coverage_a': 0.6, 'coverage_b': 0.93, 'a': 'holds', 'b': 'holds', 'borderline': False}
     }},
  'narrative.turning_point': {'holds_a': 3, 'holds_b': 7, 'of': 8, 'majority_texts': 149, 'majority_null_share': 0.87, 'texts_without_judge': 0, 'framing_bound': 0.65, 'ruling': 'R22',
     'arms': {
@@ -761,13 +761,13 @@ RUN3 = {
              'mistral-large-4': {'repeat': 0.63, 'agree': 0.69, 'coverage_a': 0.13, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'does not hold', 'borderline': False},
              'gpt-oss-120b': {'repeat': 0.94, 'agree': 0.45, 'coverage_a': 0.16, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
     }},
- 'narrative.self_position': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 127, 'majority_null_share': 0.83, 'texts_without_judge': 23, 'framing_bound': 0.97, 'ruling': 'R23',
+ 'narrative.self_position': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 150, 'majority_null_share': 0.82, 'texts_without_judge': 0, 'framing_bound': 0.97, 'ruling': 'R23',
     'arms': {
-             'gemini-4-argon': {'repeat': 0.97, 'agree': 0.95, 'coverage_a': 0.17, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'qwen3.8-2.4t': {'repeat': 0.9, 'agree': 0.91, 'coverage_a': 0.21, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'llama-4-maverick': {'repeat': 0.98, 'agree': 0.9, 'coverage_a': 0.16, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'mistral-large-4': {'repeat': 0.89, 'agree': 0.94, 'coverage_a': 0.18, 'coverage_b': 0.84, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.91, 'coverage_a': 0.13, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+             'gemini-4-argon': {'repeat': 0.97, 'agree': 0.96, 'coverage_a': 0.21, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.9, 'agree': 0.89, 'coverage_a': 0.28, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.97, 'agree': 0.91, 'coverage_a': 0.19, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.89, 'agree': 0.95, 'coverage_a': 0.21, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.91, 'coverage_a': 0.15, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
     }},
  'emotion.primary': {'holds_a': 7, 'holds_b': 7, 'of': 8, 'majority_texts': 124, 'majority_null_share': 0.13, 'texts_without_judge': 0, 'framing_bound': 0.84, 'ruling': 'held under both readings; not re-ruled (R18-R28 addendum)',
     'arms': {
@@ -793,13 +793,13 @@ RUN3 = {
              'mistral-large-4': {'repeat': 0.89, 'agree': 0.52, 'coverage_a': 0.9, 'coverage_b': 0.9, 'a': 'holds', 'b': 'holds', 'borderline': True},
              'gpt-oss-120b': {'repeat': 0.98, 'agree': 0.55, 'coverage_a': 0.49, 'coverage_b': 0.49, 'a': 'uncovered', 'b': 'uncovered', 'borderline': True}
     }},
- 'emotion.bodily_sensation': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 127, 'majority_null_share': 0.77, 'texts_without_judge': 23, 'framing_bound': 0.98, 'ruling': 'R24',
+ 'emotion.bodily_sensation': {'holds_a': 3, 'holds_b': 8, 'of': 8, 'majority_texts': 150, 'majority_null_share': 0.78, 'texts_without_judge': 0, 'framing_bound': 0.98, 'ruling': 'R24',
     'arms': {
-             'gemini-4-argon': {'repeat': 0.99, 'agree': 0.97, 'coverage_a': 0.22, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'qwen3.8-2.4t': {'repeat': 0.97, 'agree': 0.98, 'coverage_a': 0.21, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'llama-4-maverick': {'repeat': 0.99, 'agree': 0.94, 'coverage_a': 0.19, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'mistral-large-4': {'repeat': 0.92, 'agree': 0.98, 'coverage_a': 0.21, 'coverage_b': 0.84, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
-             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.98, 'coverage_a': 0.17, 'coverage_b': 0.85, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
+             'gemini-4-argon': {'repeat': 0.99, 'agree': 0.97, 'coverage_a': 0.25, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'qwen3.8-2.4t': {'repeat': 0.97, 'agree': 0.97, 'coverage_a': 0.25, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'llama-4-maverick': {'repeat': 0.99, 'agree': 0.95, 'coverage_a': 0.21, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'mistral-large-4': {'repeat': 0.91, 'agree': 0.95, 'coverage_a': 0.25, 'coverage_b': 0.99, 'a': 'uncovered', 'b': 'holds', 'borderline': False},
+             'gpt-oss-120b': {'repeat': 0.99, 'agree': 0.97, 'coverage_a': 0.2, 'coverage_b': 1.0, 'a': 'uncovered', 'b': 'holds', 'borderline': False}
     }},
  'emotion.appraisal.attribution': {'holds_a': 3, 'holds_b': 5, 'of': 8, 'majority_texts': 150, 'majority_null_share': 0.84, 'texts_without_judge': 0, 'framing_bound': 0.86, 'ruling': 'R25',
     'arms': {

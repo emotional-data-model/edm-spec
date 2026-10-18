@@ -1,14 +1,14 @@
 {
  "by_model": {
   "anthropic/claude-opus-5.5": {
-   "usd": 5.1238736000000005,
-   "calls": 194,
-   "input_tokens": 711023,
-   "cached_input_tokens": 97008,
-   "cache_write_tokens": 3096,
-   "output_tokens": 112245
+   "usd": 8.340165600000002,
+   "calls": 298,
+   "input_tokens": 1263481,
+   "cached_input_tokens": 148608,
+   "cache_write_tokens": 5160,
+   "output_tokens": 161536
   }
  },
- "total_usd": 5.1238736000000005,
- "calls": 194
+ "total_usd": 8.340165600000002,
+ "calls": 298
 }
