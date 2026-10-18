@@ -36,6 +36,22 @@ RAW = os.path.join(EXP, 'raw')
 FIELDS = list(_bp.ORDERED)  # the 19 dotted paths in prompt order
 CORPUS_ARMS = ('synthetic', 'conversational', 'pepys')
 GATEWAY = MODELS['gateway']
+LEVERS_PATH = os.path.join(EXP, 'levers.json')
+LEVERS = json.load(open(LEVERS_PATH, encoding='utf-8')) if os.path.exists(LEVERS_PATH) else {}
+
+
+def apply_levers(entry):
+    """pilot-gate levers and logged deviations (levers.json): endpoint override (R3-D1), reasoning effort low (lever 1),
+    thinking disabled on the Claude arms (R3-D2). Returns (entry, reasoning param or None)."""
+    e = dict(entry)
+    ov = (LEVERS.get('endpoint_overrides') or {}).get(e['model'])
+    if ov:
+        e['endpoint'] = {k: ov[k] for k in ('tag', 'provider_name', 'quantization', 'max_completion_tokens')}; e['price'] = ov['price']; e['endpoint_override'] = True
+    if e['model'] in (LEVERS.get('thinking_disabled') or []): return e, {'enabled': False}
+    cap = (LEVERS.get('reasoning_max_tokens') or {}).get(e['model'])
+    if cap: return e, {'max_tokens': int(cap)}  # lever 1, token-cap form (supersedes effort low for that arm)
+    if e['model'] in (LEVERS.get('reasoning_low') or []): return e, {'effort': 'low'}
+    return e, None
 
 
 def arm_dir(model_id): return model_id.replace('/', '__')
@@ -160,7 +176,7 @@ async def worker(prov, jobs, ck, spend, sem, texts, stats, label, stop_box):
                     raw, usage, stop, served, provider, gen_id = await prov.call(SYSTEM, user)
                 break
             except Exception as e:
-                msg = repr(e)[:300]
+                msg = repr(e)[:1500]
                 if attempt >= 6:
                     ck.append({**base, 'ts': time.time(), 'latency_s': round(time.time() - t0, 2), 'served_model': None, 'provider': None, 'gen_id': None, 'usage': None, 'cost_usd': 0.0, 'cost_list_usd': 0.0,
                                'raw_text': None, 'parsed': None, 'canon': None, 'missing_keys': None, 'field_confidence': None, 'parse_error': None, 'transport_error': msg, 'provider_mismatch': None, 'stop_reason': None})
@@ -228,14 +244,15 @@ async def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--pilot', action='store_true'); ap.add_argument('--dry-run', action='store_true'); ap.add_argument('--models', default=None)
     ap.add_argument('--corpus', default=','.join(CORPUS_ARMS)); ap.add_argument('--repeats', type=int, default=5); ap.add_argument('--concurrency', type=int, default=8)
-    ap.add_argument('--stop', type=float, default=None, help='stop in force (USD); default models.json budget_usd; 60 only under plan section 9 lever 2')
-    ap.add_argument('--reasoning-low', default='', help='comma-separated model ids given reasoning effort low (plan section 9 lever 1; logged)')
+    ap.add_argument('--repilot', action='store_true', help='pilot only: re-request the pilot texts for the selected models (after a lever); later records supersede earlier ones in the projection')
     a = ap.parse_args()
     check_prompts(); texts = load_texts()
     print(f'prompt check OK; corpus OK ({len(texts)} texts, sha256 verified)')
-    stop = a.stop if a.stop is not None else float(MODELS['budget_usd'])
-    low = set(x for x in a.reasoning_low.split(',') if x)
-    extractors = [e for e in MODELS['extractors'].values() if not a.models or e['model'] in a.models.split(',')]
+    stop = float(LEVERS.get('stop_usd', MODELS['budget_usd']))
+    print('levers:', json.dumps({k: LEVERS.get(k) for k in ('stop_usd', 'reasoning_low', 'thinking_disabled')}), '| endpoint overrides:', list((LEVERS.get('endpoint_overrides') or {}).keys()))
+    dropped = set(LEVERS.get('dropped_arms') or [])
+    extractors = [e for e in MODELS['extractors'].values() if (not a.models or e['model'] in a.models.split(',')) and (a.pilot or e['model'] not in dropped)]
+    if dropped and not a.pilot: print('dropped by the pilot gate (lever 3), not run:', sorted(dropped))
     corpus_arms = a.corpus.split(',')
     ids_by_arm = defaultdict(list)
     for tid, r in texts.items(): ids_by_arm[r['arm']].append(tid)
@@ -258,12 +275,15 @@ async def main():
         print('dry run (pilot plan):', {m: len(j['pilot']) for m, j in plan.items()}); return 0
     tasks = []
     for e in extractors:
-        reasoning = {'effort': 'low'} if e['model'] in low else None
+        e, reasoning = apply_levers(e)
         prov = ProviderOR(e, reasoning); sem = asyncio.Semaphore(a.concurrency)
         for carm, jobs in plan[e['model']].items():
             path = os.path.join(raw_dir, f"{arm_dir(e['model'])}.jsonl") if a.pilot else os.path.join(raw_dir, arm_dir(e['model']), f'{carm}.jsonl')
-            ck = Checkpoint3(path); todo = [j for j in jobs if j not in ck.done]
-            print(f"{e['model']} @ {e['endpoint']['tag']} / {carm}: {len(jobs)} planned, {len(todo)} to do" + (' [reasoning low]' if reasoning else ''))
+            ck = Checkpoint3(path)
+            if a.pilot and a.repilot: todo = list(jobs); ck.done = {}  # re-request; the new records are appended and supersede the old in pilot_means()
+            elif a.pilot: todo = [j for j in jobs if j not in ck.done or ck.done[j].get('transport_error')]  # a pilot transport failure is re-requested
+            else: todo = [j for j in jobs if j not in ck.done]
+            print(f"{e['model']} @ {e['endpoint']['tag']} / {carm}: {len(jobs)} planned, {len(todo)} to do" + (f' [reasoning {reasoning}]' if reasoning else ''))
             lanes = max(1, min(a.concurrency, len(todo)))
             for i in range(lanes): tasks.append(worker(prov, todo[i::lanes], ck, spend, sem, texts, stats, f"{arm_dir(e['model'])}/{carm}", stop_box))
     t0 = time.time()

@@ -1,0 +1,33 @@
+{
+ "written": "2026-10-18 after the pilot (plan section 9 gate), revised after each re-pilot; every entry is a deviation logged in RESULTS.md section 0.1 and plan section 12",
+ "stop_usd": 60,
+ "stop_why": "lever 2: after lever 1 the projection was USD 70.0 (> 50), so the stop is raised to 60 and no arm is dropped for being over 50; lever 3 then applied because 70.0 > 60 (see dropped_arms)",
+ "dropped_arms": ["deepseek/deepseek-v4-pro-0813"],
+ "dropped_why": "lever 3: projection after levers 1-2 = 70.0 > 60. The costliest open-weight arm by projection among N2 / N3 / N4 / N6 (N1 never; N5 not open-weight at freeze): N2 DeepSeek V4 Pro 13.32 (mean 0.017762 per call over re-pilot 2) against N3 Qwen3.8 13.31 (0.017741) - a near tie of USD 0.01 on three calls each, decided by the rule as written. Projection without N2: 56.7 <= 60, so no further drop. The 5-of-9 rule reads 5-of-8 (three voters + 5 new arms); the P1 open-weight set is N3, N4, N6",
+ "reasoning_low": [
+  "qwen/qwen3.8-2.4t-a95b",
+  "mistralai/mistral-large-4-0",
+  "openai/gpt-oss-120b",
+  "deepseek/deepseek-v4-pro-0813"
+ ],
+ "reasoning_low_why": "lever 1: measured per-call cost exceeded 1.5 x the section-9 line on arms that expose a reasoning parameter: Qwen 0.0878 vs 0.0103 (reasoning 9.5k-17k tokens per call, 267-450 s), Mistral 0.0229 vs 0.0035 (reasoning 9k-11k; one of three calls hit max_tokens 12,000 with no JSON), gpt-oss-120b 0.00045 vs 0.00022 (reasoning ~1.7k), DeepSeek (first served in re-pilot 1, via StreamLake) 0.0221 vs 0.0033 (reasoning 8.2k-11.6k; one of three hit max_tokens with no JSON). Gemini 0.0128 vs 0.0127 did not qualify. reasoning = {effort: low} sent on every call of these arms and recorded per record. Re-pilot 1: Qwen 0.0177 (reasoning 1.7k-2.1k), gpt-oss 0.00027; Mistral unchanged at 0.0204 (reasoning 8.2k-9.7k: the endpoint ignores effort), so Mistral also got the token-cap form below. Re-pilot 2: DeepSeek at effort low 0.0178 (reasoning 5.8k-10.5k, partly honoured)",
+ "reasoning_max_tokens": {
+  "mistralai/mistral-large-4-0": 2400
+ },
+ "reasoning_max_tokens_why": "lever 1, token-cap form ('where only a token cap is supported'): Mistral's endpoint lists reasoning_effort but re-pilot 1 shows effort low leaves its reasoning at 8.2k-9.7k tokens; reasoning = {max_tokens: 2400} (the budget OpenRouter would derive from effort low at max_tokens 12,000) is sent instead. Re-pilot 2: the budget is ignored too (reasoning 5.8k-8.5k, 0.0180 per call); Mistral runs at its measured cost (13.5 projected) and, not being open-weight at freeze, is outside the lever-3 drop set",
+ "thinking_disabled": [],
+ "thinking_disabled_withdrawn": "Attempted as R3-D2 after pilot 1 (the two Claude arms returned reasoning tokens through the gateway, Haiku 649-1,203 per call, Sonnet 509 on one of three, where the direct API of runs 1-2 billed none). Haiku accepted reasoning = {enabled: false} (3 pilot calls, 0 reasoning tokens, USD 0.0004-0.0009 per call, records kept in raw/pilot); the Sonnet endpoint refused every call with 400 'Reasoning is mandatory for this endpoint and cannot be disabled.' Withdrawn for both Claude arms so that they share one regime, which is the frozen plan's 'provider defaults' through the gateway; reasoning tokens are recorded per call and the framing bound (Q5) is read with the caveat that a thinking-regime difference between run 1 and run 3 may be part of it. The judge tries {enabled: false} first and falls back to the default if the Opus endpoint refuses likewise (recorded per record)",
+ "endpoint_overrides": {
+  "deepseek/deepseek-v4-pro-0813": {
+   "tag": "streamlake", "provider_name": "StreamLake", "quantization": "unknown", "max_completion_tokens": 384000,
+   "price": {"input": 0.66, "cached_input": 0.022, "output": 1.98},
+   "why": "R3-D1: the pinned first-party endpoint `deepseek` is removed at routing time by the OpenRouter account's data-policy guardrail ('Paid model training violation (account settings)'), which the /endpoints listing does not show; all three pilot calls failed with 404 before any token was served. Re-pinned by the freeze's own rule for the no-first-party case: no quantisation stated and the model's listed price (0.66 / 1.98), status 0, uptime 100 at pin time (StreamLake); served 3 of 3 in re-pilots 1 and 2 (provider StreamLake). Moot for the main run: the arm was dropped by lever 3"
+  }
+ },
+ "pilot_history": [
+  {"when": "pilot 1 (24 calls, 21 served, USD 0.43)", "projected_total_usd": 117.49, "note": "DeepSeek 0 of 3 served (guardrail); Qwen 65.9, Mistral 17.2, Sonnet 14.0 (cache written on every concurrent pilot call, never read), Gemini 9.6, Haiku 1.0, Llama 0.5, gpt-oss 0.3; + judge 9"},
+  {"when": "re-pilot 1 (15 calls: DeepSeek via StreamLake; Qwen, Mistral, gpt-oss at effort low; Haiku thinking off; Sonnet thinking off refused, 0 served; USD 0.18)", "note": "DeepSeek 0.0221 -> 16.6 projected; Qwen 0.0177 -> 13.3; Mistral 0.0204 -> 15.3 (effort ignored); gpt-oss 0.00027 -> 0.2; Haiku (no thinking) 0.0006 -> 0.45"},
+  {"when": "re-pilot 2 (12 calls: DeepSeek at effort low; Mistral at reasoning budget 2,400; Haiku and Sonnet at gateway defaults, Sonnet sequential so the cache is read; USD 0.15)", "projected_total_usd": 70.0, "note": "Gemini 9.56, DeepSeek 13.32, Qwen 13.31, Llama 0.50, Mistral 13.49 (budget ignored), gpt-oss 0.20, Haiku 1.09, Sonnet 9.53 (cache read on 2 of 3 sequential calls: 0.0075 / 0.0124 against 0.0183 on the write) + judge 9 = 70.0. Gate: lever 2 -> stop 60; lever 3 -> drop DeepSeek (costliest open-weight by 0.01); projection 56.7 <= 60; run starts with 7 arms. Pilot spend total USD 0.77"}
+ ],
+ "credit_ceiling_note": "OpenRouter credit USD 50.00 at freeze (0 used). The projection in force (56.7) exceeds the credit, so by the plan's credit-ceiling paragraph (section 9) the run keeps every retained arm and, if the credit runs out, stops checkpointed for the founder to top up and resume; the judge pass starts only if the stop rule allows and stops on its own projection or on exhausted credit"
+}

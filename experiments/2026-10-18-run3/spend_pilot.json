@@ -1,0 +1,70 @@
+{
+ "by_model": {
+  "anthropic/claude-sonnet-5.5": {
+   "usd": 0.09429119999999999,
+   "calls": 6,
+   "input_tokens": 3858,
+   "cached_input_tokens": 7352,
+   "cache_write_tokens": 14704,
+   "output_tokens": 4908
+  },
+  "anthropic/claude-haiku-5.5": {
+   "usd": 0.010191074999999999,
+   "calls": 9,
+   "input_tokens": 5787,
+   "cached_input_tokens": 7350,
+   "cache_write_tokens": 25731,
+   "output_tokens": 12645
+  },
+  "google/gemini-4-argon": {
+   "usd": 0.038236,
+   "calls": 3,
+   "input_tokens": 9133,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 1997
+  },
+  "meta-llama/llama-4-maverick": {
+   "usd": 0.00200803,
+   "calls": 3,
+   "input_tokens": 3715,
+   "cached_input_tokens": 4736,
+   "cache_write_tokens": 0,
+   "output_tokens": 1647
+  },
+  "openai/gpt-oss-120b": {
+   "usd": 0.002158748,
+   "calls": 6,
+   "input_tokens": 17154,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 8965
+  },
+  "mistralai/mistral-large-4-0": {
+   "usd": 0.18371517,
+   "calls": 9,
+   "input_tokens": 10964,
+   "cached_input_tokens": 15220,
+   "cache_write_tokens": 0,
+   "output_tokens": 83825
+  },
+  "qwen/qwen3.8-2.4t-a95b": {
+   "usd": 0.316738,
+   "calls": 6,
+   "input_tokens": 9610,
+   "cached_input_tokens": 8192,
+   "cache_write_tokens": 0,
+   "output_tokens": 49245
+  },
+  "deepseek/deepseek-v4-pro-0813": {
+   "usd": 0.119478656,
+   "calls": 6,
+   "input_tokens": 15909,
+   "cached_input_tokens": 2048,
+   "cache_write_tokens": 0,
+   "output_tokens": 55017
+  }
+ },
+ "total_usd": 0.7668168789999998,
+ "calls": 48
+}
