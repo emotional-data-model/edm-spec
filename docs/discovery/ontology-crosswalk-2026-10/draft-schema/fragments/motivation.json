@@ -8,9 +8,6 @@
     "action_tendency": {
       "description": "The behavioral direction or movement expressed through the emotional response",
       "x_constraints": "Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -79,14 +76,39 @@
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "claude-haiku-5-5": 0.66,
+          "gpt-6.1-sol": 0.73,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.4,
+        "cross_populated_only": null,
+        "null_rate": 0.2,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "motivation.action_tendency",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "need": {
       "description": "The foundational motivational domain guiding the individual's internal stance",
       "x_constraints": "Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -149,14 +171,39 @@
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.68,
+          "gpt-6.1-sol": 0.8,
+          "kimi-k2.6": 0.73
+        },
+        "cross": 0.5,
+        "cross_populated_only": null,
+        "null_rate": 0.43,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "motivation.need",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "temporal_focus": {
       "description": "The temporal direction toward which the motivational energy is oriented",
       "x_constraints": "past / present / future",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -211,14 +258,37 @@
         "flags": [],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.86,
+          "claude-haiku-5-5": 0.61,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.82
+        },
+        "cross": 0.56,
+        "cross_populated_only": null,
+        "null_rate": 0.12,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "motivation.temporal_focus",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "risk_posture": {
       "description": "The stance toward uncertainty or potential risk embedded in the moment",
       "x_constraints": "cautious / balanced / bold",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -276,14 +346,37 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "interpretive",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.8,
+          "claude-haiku-5-5": 0.46,
+          "gpt-6.1-sol": 0.83,
+          "kimi-k2.6": 0.73
+        },
+        "cross": 0.18,
+        "cross_populated_only": null,
+        "null_rate": 0.62,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)",
+        "lead_unit": "motivation.risk_posture",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "coping": {
       "description": "The primary strategy used to manage or integrate the emotional experience",
       "x_constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -348,7 +441,35 @@
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "claude-haiku-5-5": 0.69,
+          "gpt-6.1-sol": 0.73,
+          "kimi-k2.6": 0.74
+        },
+        "cross": 0.54,
+        "cross_populated_only": null,
+        "null_rate": 0.45,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "motivation.coping",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     }
   },
   "additionalProperties": false

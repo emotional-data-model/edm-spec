@@ -2,13 +2,12 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/trait.json",
   "title": "EDM TRAIT Domain (v0.9 DRAFT)",
-  "description": "OPT-IN. Person-level readings that no canonical profile includes (theoretical-conflicts.md section 5). A partner profile opts in by listing trait.* in its included_fields; a validator for a profile that has not opted in rejects this block. Values are recorded only as stated for this experience; the artifact never aggregates them into a classification of the person.",
+  "description": "OPT-IN. Person-level readings that no canonical profile includes (theoretical-conflicts.md section 5). A partner profile opts in by listing trait.* in its included_fields; a validator for a profile that has not opted in rejects this block. Values are recorded only as stated for this experience; the artifact never aggregates them into a classification of the person. Not tested in any run; no comparability class.",
   "type": "object",
   "properties": {
     "attachment_style": {
       "description": "The relational attachment pattern influencing the emotional expression - as stated by the subject for this experience; never aggregated into a person-level classification by the artifact",
       "x_constraints": "secure / anxious / avoidant / disorganized; codings on EDM vocab attachment_style/v1 with Ainsworth / Main letter codes as display",
-      "x_profiles": [],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -50,12 +49,14 @@
         "avoidant",
         "disorganized",
         "secure"
+      ],
+      "x_profiles": [
+        "opt-in (partner manifest)"
       ]
     },
     "regulation_state": {
       "description": "The stability or turbulence of emotional self-regulation - as stated by the subject for this experience",
       "x_constraints": "regulated / wavering / dysregulated",
-      "x_profiles": [],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -95,6 +96,9 @@
         "dysregulated",
         "regulated",
         "wavering"
+      ],
+      "x_profiles": [
+        "opt-in (partner manifest)"
       ]
     }
   },

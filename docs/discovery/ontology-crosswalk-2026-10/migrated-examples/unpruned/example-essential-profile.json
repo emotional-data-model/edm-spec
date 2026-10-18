@@ -93,12 +93,10 @@
     },
     "valence": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "arousal": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "intensity": {
@@ -115,12 +113,10 @@
     "appraisal": {
       "urgency": {
         "text": null,
-        "value": null,
         "codings": []
       },
       "control": {
         "text": null,
-        "value": null,
         "codings": []
       },
       "attribution": {

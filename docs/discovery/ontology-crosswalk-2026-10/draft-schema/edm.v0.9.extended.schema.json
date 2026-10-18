@@ -2,8 +2,8 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.extended.schema.json",
   "title": "EDM v0.9.0 Extended Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 30 affective fields over 4 affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
-  "x_affective_field_count": 30,
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 28 affective fields over 5 affective domains, derived by R17 (2026-10-18) as every field whose comparability class is comparable + interpretive + null-driven; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 28,
   "x_affective_fields": [
     "narrative.subject",
     "narrative.trigger",
@@ -14,27 +14,31 @@
     "narrative.meaning",
     "narrative.identity_link",
     "narrative.turning_point",
-    "narrative.arc",
-    "narrative.valence_shift",
     "narrative.self_position",
     "emotion.primary",
-    "emotion.secondary",
     "emotion.valence",
     "emotion.intensity",
-    "emotion.meta",
     "emotion.bodily_sensation",
     "emotion.temporal_profile",
-    "context.event",
-    "context.place",
-    "context.people",
+    "emotion.appraisal.attribution",
+    "context.event_category",
     "context.relationship",
-    "context.life_stage",
     "context.scope",
     "salience.memory_type",
     "salience.tether",
-    "salience.retrieval_cues",
-    "salience.recurrence",
-    "salience.linkage_strength"
+    "salience.linkage_strength",
+    "salience.function",
+    "motivation.action_tendency",
+    "motivation.need",
+    "motivation.temporal_focus",
+    "motivation.risk_posture",
+    "motivation.coping"
+  ],
+  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+  "x_comparability_classes": [
+    "comparable",
+    "interpretive",
+    "null-driven"
   ],
   "type": "object",
   "required": [
@@ -43,6 +47,7 @@
     "emotion",
     "context",
     "salience",
+    "motivation",
     "governance",
     "telemetry"
   ],
@@ -217,18 +222,14 @@
               "meaning",
               "identity_link",
               "turning_point",
-              "arc",
-              "valence_shift",
               "self_position"
             ]
           },
           "required": [
-            "subject",
-            "trigger",
             "harm",
-            "drive",
-            "integration",
-            "arc",
+            "summary",
+            "meaning",
+            "turning_point",
             "self_position"
           ]
         }
@@ -243,8 +244,6 @@
         "narrative.meaning",
         "narrative.identity_link",
         "narrative.turning_point",
-        "narrative.arc",
-        "narrative.valence_shift",
         "narrative.self_position"
       ]
     },
@@ -258,30 +257,45 @@
           "propertyNames": {
             "enum": [
               "primary",
-              "secondary",
               "valence",
               "intensity",
-              "meta",
               "bodily_sensation",
-              "temporal_profile"
+              "temporal_profile",
+              "appraisal"
             ]
           },
           "required": [
             "primary",
-            "secondary",
             "valence",
-            "intensity"
-          ]
+            "intensity",
+            "bodily_sensation",
+            "appraisal"
+          ],
+          "properties": {
+            "appraisal": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "propertyNames": {
+                "enum": [
+                  "attribution"
+                ]
+              },
+              "required": [
+                "attribution"
+              ]
+            }
+          }
         }
       ],
       "x_fields": [
         "emotion.primary",
-        "emotion.secondary",
         "emotion.valence",
         "emotion.intensity",
-        "emotion.meta",
         "emotion.bodily_sensation",
-        "emotion.temporal_profile"
+        "emotion.temporal_profile",
+        "emotion.appraisal.attribution"
       ]
     },
     "context": {
@@ -293,22 +307,21 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "event",
-              "place",
-              "people",
+              "event_category",
               "relationship",
-              "life_stage",
               "scope"
             ]
-          }
+          },
+          "required": [
+            "event_category",
+            "relationship",
+            "scope"
+          ]
         }
       ],
       "x_fields": [
-        "context.event",
-        "context.place",
-        "context.people",
+        "context.event_category",
         "context.relationship",
-        "context.life_stage",
         "context.scope"
       ]
     },
@@ -323,22 +336,53 @@
             "enum": [
               "memory_type",
               "tether",
-              "retrieval_cues",
-              "recurrence",
-              "linkage_strength"
+              "linkage_strength",
+              "function"
             ]
           },
           "required": [
-            "retrieval_cues"
+            "tether",
+            "function"
           ]
         }
       ],
       "x_fields": [
         "salience.memory_type",
         "salience.tether",
-        "salience.retrieval_cues",
-        "salience.recurrence",
-        "salience.linkage_strength"
+        "salience.linkage_strength",
+        "salience.function"
+      ]
+    },
+    "motivation": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/motivation.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "action_tendency",
+              "need",
+              "temporal_focus",
+              "risk_posture",
+              "coping"
+            ]
+          },
+          "required": [
+            "action_tendency",
+            "need",
+            "temporal_focus",
+            "coping"
+          ]
+        }
+      ],
+      "x_fields": [
+        "motivation.action_tendency",
+        "motivation.need",
+        "motivation.temporal_focus",
+        "motivation.risk_posture",
+        "motivation.coping"
       ]
     },
     "governance": {

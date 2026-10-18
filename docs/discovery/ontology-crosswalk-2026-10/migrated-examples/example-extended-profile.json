@@ -29,39 +29,6 @@
     "meaning": "everyone needs an hour a week that is only theirs",
     "identity_link": "performer despite limits",
     "turning_point": true,
-    "arc": [
-      {
-        "text": "overcoming",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "overcoming",
-            "display": "overcoming",
-            "relation": "exact"
-          },
-          {
-            "system": "https://emotionaldatamodel.org/xref/v1/booker",
-            "code": "overcoming_the_monster",
-            "display": "Overcoming the Monster",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "authenticity",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "authenticity",
-            "display": "authenticity",
-            "relation": "exact"
-          }
-        ]
-      }
-    ],
-    "valence_shift": "effort to ease",
     "self_position": null
   },
   "emotion": {
@@ -91,79 +58,8 @@
         }
       ]
     },
-    "secondary": [
-      {
-        "text": "pride",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "pride",
-            "display": "pride",
-            "relation": "exact"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000041",
-            "display": "pride",
-            "relation": "exact"
-          },
-          {
-            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-            "version": "2014-04-01",
-            "code": "pride",
-            "display": "pride",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "gratitude",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "gratitude",
-            "display": "gratitude",
-            "relation": "exact"
-          },
-          {
-            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-            "version": "2014-04-01",
-            "code": "gratitude",
-            "display": "gratitude",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "relief",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "relief",
-            "display": "relief",
-            "relation": "exact"
-          },
-          {
-            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-            "version": "2014-04-01",
-            "code": "relief",
-            "display": "relief",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "quiet triumph",
-        "codings": []
-      }
-    ],
     "valence": {
       "text": "positive",
-      "value": null,
       "codings": [
         {
           "system": "https://emotionaldatamodel.org/vocab/valence/v1",
@@ -194,7 +90,6 @@
         }
       ]
     },
-    "meta": "grateful acceptance",
     "bodily_sensation": "breath held, then easy",
     "temporal_profile": {
       "text": "rising",
@@ -207,15 +102,19 @@
           "relation": "exact"
         }
       ]
+    },
+    "appraisal": {
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
     }
   },
   "context": {
-    "event": "annual concert performance",
-    "place": "community hall",
-    "people": [
-      "choir members",
-      "a neighbour"
-    ],
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
     "relationship": {
       "text": "community_ritual",
       "codings": [
@@ -224,18 +123,6 @@
           "version": "1",
           "code": "community_ritual",
           "display": "community_ritual",
-          "relation": "exact"
-        }
-      ]
-    },
-    "life_stage": {
-      "text": "midlife",
-      "codings": [
-        {
-          "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
-          "version": "1",
-          "code": "midlife",
-          "display": "midlife",
           "relation": "exact"
         }
       ]
@@ -289,22 +176,30 @@
       "referent": "the solo verse",
       "stake": null
     },
-    "retrieval_cues": [
-      "the hall going quiet"
-    ],
-    "recurrence": {
-      "text": "cyclical",
-      "codings": [
-        {
-          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
-          "version": "1",
-          "code": "cyclical",
-          "display": "cyclical",
-          "relation": "exact"
-        }
-      ]
+    "linkage_strength": 0.9,
+    "function": []
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
     },
-    "linkage_strength": 0.9
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
   },
   "governance": {
     "jurisdiction": "GDPR",
@@ -338,6 +233,145 @@
         "constellation.media_format": "audio",
         "constellation.narrative_archetype": "hero",
         "milky_way.visibility_context": "shared_publicly"
+      },
+      "out_of_profile_fields": {
+        "narrative.arc": [
+          {
+            "text": "overcoming",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "overcoming",
+                "display": "overcoming",
+                "relation": "exact"
+              },
+              {
+                "system": "https://emotionaldatamodel.org/xref/v1/booker",
+                "code": "overcoming_the_monster",
+                "display": "Overcoming the Monster",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "authenticity",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "authenticity",
+                "display": "authenticity",
+                "relation": "exact"
+              }
+            ]
+          }
+        ],
+        "narrative.valence_shift": "effort to ease",
+        "emotion.secondary": [
+          {
+            "text": "pride",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "pride",
+                "display": "pride",
+                "relation": "exact"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000041",
+                "display": "pride",
+                "relation": "exact"
+              },
+              {
+                "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+                "version": "2014-04-01",
+                "code": "pride",
+                "display": "pride",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "gratitude",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "gratitude",
+                "display": "gratitude",
+                "relation": "exact"
+              },
+              {
+                "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+                "version": "2014-04-01",
+                "code": "gratitude",
+                "display": "gratitude",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "relief",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "relief",
+                "display": "relief",
+                "relation": "exact"
+              },
+              {
+                "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+                "version": "2014-04-01",
+                "code": "relief",
+                "display": "relief",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "quiet triumph",
+            "codings": []
+          }
+        ],
+        "emotion.meta": "grateful acceptance",
+        "context.event": "annual concert performance",
+        "context.place": "community hall",
+        "context.people": [
+          "choir members",
+          "a neighbour"
+        ],
+        "context.life_stage": {
+          "text": "midlife",
+          "codings": [
+            {
+              "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
+              "version": "1",
+              "code": "midlife",
+              "display": "midlife",
+              "relation": "exact"
+            }
+          ]
+        },
+        "salience.retrieval_cues": [
+          "the hall going quiet"
+        ],
+        "salience.recurrence": {
+          "text": "cyclical",
+          "codings": [
+            {
+              "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+              "version": "1",
+              "code": "cyclical",
+              "display": "cyclical",
+              "relation": "exact"
+            }
+          ]
+        }
       }
     }
   }

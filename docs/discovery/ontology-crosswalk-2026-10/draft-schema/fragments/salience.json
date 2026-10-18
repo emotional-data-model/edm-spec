@@ -8,10 +8,6 @@
     "memory_type": {
       "description": "The class of memory the experience represents within personal identity",
       "x_constraints": "Canonical: legacy_artifact, fleeting_moment, milestone, reflection, formative_experience. legacy_artifact is deprecated (an object tether, not a memory type).",
-      "x_profiles": [
-        "extended",
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -79,15 +75,37 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "interpretive",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
-    },
-    "tether": {
-      "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
-      "x_constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.85,
+          "claude-haiku-5-5": 0.73,
+          "gpt-6.1-sol": 0.8,
+          "kimi-k2.6": 0.72
+        },
+        "cross": 0.36,
+        "cross_populated_only": null,
+        "null_rate": 0.26,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)",
+        "lead_unit": "salience.memory_type",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
       "x_profiles": [
         "extended",
         "full"
       ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
+    },
+    "tether": {
+      "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
+      "x_constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
       "type": [
         "object",
         "null"
@@ -154,7 +172,32 @@
             ],
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
-          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          "x_comparability": "comparable",
+          "x_comparability_basis": {
+            "run": "run 1",
+            "ruling": "R17 rule (R4 annotation)",
+            "outcome": "pass",
+            "repeat": {
+              "claude-sonnet-5-5": 0.81,
+              "claude-haiku-5-5": 0.71,
+              "gpt-6.1-sol": 0.81,
+              "kimi-k2.6": 0.71
+            },
+            "cross": 0.53,
+            "cross_populated_only": null,
+            "null_rate": 0.14,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+            "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+          "x_profiles": [
+            "essential",
+            "extended",
+            "full"
+          ]
         },
         "referent": {
           "type": [
@@ -179,7 +222,31 @@
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
           "x_comparability": "extractor-bound",
-          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          "x_comparability_basis": {
+            "run": "run 1",
+            "ruling": "R17 rule (R4 annotation)",
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.81,
+              "claude-haiku-5-5": 0.71,
+              "gpt-6.1-sol": 0.79,
+              "kimi-k2.6": 0.66
+            },
+            "cross": 0.52,
+            "cross_populated_only": 0.51,
+            "null_rate": 0.14,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+            "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+          "x_profiles": [
+            "essential",
+            "extended",
+            "full"
+          ]
         },
         "stake": {
           "type": [
@@ -187,9 +254,6 @@
             "null"
           ],
           "description": "What is at stake in the tether (v0.8.3 gravity_type; Lazarus ego-involvement)",
-          "x_profiles": [
-            "full"
-          ],
           "x_run1": {
             "outcome": "cut",
             "repeat": {
@@ -205,7 +269,29 @@
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
           "x_comparability": "extractor-bound",
-          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          "x_comparability_basis": {
+            "run": "run 1",
+            "ruling": "R17 rule (R4 annotation)",
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.67,
+              "claude-haiku-5-5": 0.5,
+              "gpt-6.1-sol": 0.7,
+              "kimi-k2.6": 0.47
+            },
+            "cross": 0.33,
+            "cross_populated_only": 0.18,
+            "null_rate": 0.27,
+            "flags": [],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+            "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+          "x_profiles": [
+            "essential",
+            "extended",
+            "full"
+          ]
         }
       },
       "x_edm_vocabulary": "https://emotionaldatamodel.org/vocab/tether/v1",
@@ -219,16 +305,40 @@
         "self",
         "symbol",
         "tradition"
-      ]
-    },
-    "retrieval_cues": {
-      "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
-      "x_constraints": "Short phrases; order carries no meaning",
+      ],
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.81,
+          "claude-haiku-5-5": 0.71,
+          "gpt-6.1-sol": 0.81,
+          "kimi-k2.6": 0.71
+        },
+        "cross": 0.53,
+        "cross_populated_only": null,
+        "null_rate": 0.14,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "salience.tether.type",
+        "lead_unit_why": "type is the coded member; referent and stake are free-text companions"
+      },
       "x_profiles": [
         "essential",
         "extended",
         "full"
       ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+    },
+    "retrieval_cues": {
+      "description": "What would bring this back? At most three cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), the first being the one the text returns to most. Carries v0.8.3 core.echo (first), then recall_triggers and retrieval_keys by migration. (R16 2026-10-18: short ordered list adopted; the single-string echo did no better in run 2.)",
+      "x_constraints": "Short ordered list, 1-5 words per cue, at most 3 items; order carries meaning (first = the cue the text returns to most); empty list only if the text names nothing that recurs. Migration keeps the first three merged values here and preserves any further v0.8.3 values verbatim in extensions.org.emotionaldatamodel.migration.retrieval_cues_overflow.",
       "type": [
         "array",
         "null"
@@ -236,6 +346,7 @@
       "items": {
         "type": "string"
       },
+      "maxItems": 3,
       "x_run1": {
         "outcome": "cut",
         "repeat": {
@@ -250,15 +361,69 @@
         "flags": [],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_status": "pending run 2 (prompt test)",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_run2": {
+        "ruling": "R16",
+        "arm_adopted": "B",
+        "A_v083_text": {
+          "repeat": {
+            "claude-sonnet-5-5": 0.85,
+            "gpt-6.1-sol": 0.8,
+            "kimi-k2.6": 0.68
+          },
+          "cross": 0.4,
+          "cross_populated_only": 0.43,
+          "null_rate": 0.31,
+          "outcome": "borderline-cut",
+          "two_voter": "interpretive"
+        },
+        "B_v09_rules": {
+          "repeat": {
+            "claude-sonnet-5-5": 0.82,
+            "gpt-6.1-sol": 0.77,
+            "kimi-k2.6": 0.7
+          },
+          "cross": 0.4,
+          "cross_populated_only": 0.42,
+          "null_rate": 0.07,
+          "outcome": "cut",
+          "two_voter": "cut"
+        },
+        "voters": [
+          "claude-sonnet-5-5",
+          "gpt-6.1-sol",
+          "kimi-k2.6"
+        ],
+        "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+      },
+      "x_comparability": "extractor-bound",
+      "x_comparability_basis": {
+        "run": "run 2",
+        "ruling": "R16",
+        "arm": "B",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.82,
+          "gpt-6.1-sol": 0.77,
+          "kimi-k2.6": 0.7
+        },
+        "cross": 0.4,
+        "cross_populated_only": 0.42,
+        "null_rate": 0.07,
+        "two_voter": "cut",
+        "why": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85",
+        "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)",
+        "lead_unit": "salience.retrieval_cues",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "themes": {
       "description": "Adjacent themes or motifs connected to the experience",
       "x_constraints": "Concepts or emotions (e.g., \"family\", \"tradition\", \"loss\", \"continuity\")",
-      "x_profiles": [
-        "full"
-      ],
       "type": [
         "array",
         "null"
@@ -281,15 +446,34 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "extractor-bound",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.53,
+          "claude-haiku-5-5": 0.32,
+          "gpt-6.1-sol": 0.59,
+          "kimi-k2.6": 0.41
+        },
+        "cross": 0.06,
+        "cross_populated_only": 0.05,
+        "null_rate": 0.05,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)",
+        "lead_unit": "salience.themes",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "recurrence": {
       "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
       "x_constraints": "Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.",
-      "x_profiles": [
-        "extended",
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -355,14 +539,36 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "extractor-bound",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.72,
+          "claude-haiku-5-5": 0.51,
+          "gpt-6.1-sol": 0.55,
+          "kimi-k2.6": 0.67
+        },
+        "cross": 0.2,
+        "cross_populated_only": null,
+        "null_rate": 0.63,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)",
+        "lead_unit": "salience.recurrence",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "persistence": {
       "description": "How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)",
       "x_constraints": "text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py",
-      "x_profiles": [
-        "full"
-      ],
       "type": [
         "object",
         "null"
@@ -400,7 +606,29 @@
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
           "x_comparability": "extractor-bound",
-          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          "x_comparability_basis": {
+            "run": "run 1",
+            "ruling": "R17 rule (R4 annotation)",
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.71,
+              "claude-haiku-5-5": 0.53,
+              "gpt-6.1-sol": 0.55,
+              "kimi-k2.6": 0.57
+            },
+            "cross": 0.26,
+            "cross_populated_only": null,
+            "null_rate": 0.68,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+            "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+          "x_profiles": [
+            "full"
+          ]
         },
         "decay": {
           "type": [
@@ -429,7 +657,29 @@
             "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
           },
           "x_comparability": "extractor-bound",
-          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+          "x_comparability_basis": {
+            "run": "run 1",
+            "ruling": "R17 rule (R4 annotation)",
+            "outcome": "cut",
+            "repeat": {
+              "claude-sonnet-5-5": 0.75,
+              "claude-haiku-5-5": 0.52,
+              "gpt-6.1-sol": 0.86,
+              "kimi-k2.6": 0.59
+            },
+            "cross": 0.25,
+            "cross_populated_only": null,
+            "null_rate": 0.72,
+            "flags": [
+              "borderline"
+            ],
+            "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+            "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+          },
+          "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+          "x_profiles": [
+            "full"
+          ]
         },
         "codings": {
           "type": "array",
@@ -486,15 +736,38 @@
           "replaced_by": "transient",
           "reason": "nominal value inside an ordinal scale"
         }
-      ]
+      ],
+      "x_comparability": "extractor-bound",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.71,
+          "claude-haiku-5-5": 0.53,
+          "gpt-6.1-sol": 0.55,
+          "kimi-k2.6": 0.57
+        },
+        "cross": 0.26,
+        "cross_populated_only": null,
+        "null_rate": 0.68,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)",
+        "lead_unit": "salience.persistence.text",
+        "lead_unit_why": "text is the v0.8.3 viscosity; decay is the merged temporal_decay"
+      },
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
     },
     "linkage_strength": {
       "description": "The binding strength of the emotion within the broader emotional network",
       "x_constraints": "0.0–1.0",
-      "x_profiles": [
-        "extended",
-        "full"
-      ],
       "type": [
         "number",
         "null"
@@ -518,15 +791,38 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "interpretive",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "interpretive",
+        "repeat": {
+          "claude-sonnet-5-5": 0.96,
+          "claude-haiku-5-5": 0.88,
+          "gpt-6.1-sol": 0.09,
+          "kimi-k2.6": 0.94
+        },
+        "cross": 0.5,
+        "cross_populated_only": null,
+        "null_rate": 0.43,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)",
+        "lead_unit": "salience.linkage_strength",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
       "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "function": {
       "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
       "x_constraints": "Pillemer 1992 / Bluck 2003 memory functions",
-      "x_profiles": [
-        "full"
-      ],
       "type": [
         "array",
         "null"
@@ -590,14 +886,39 @@
         ],
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability": "comparable",
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "pass",
+        "repeat": {
+          "claude-sonnet-5-5": 0.92,
+          "claude-haiku-5-5": 0.68,
+          "gpt-6.1-sol": 0.87,
+          "kimi-k2.6": 0.76
+        },
+        "cross": 0.52,
+        "cross_populated_only": null,
+        "null_rate": 0.73,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)",
+        "lead_unit": "salience.function",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "essential",
+        "extended",
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "resilience": {
       "description": "Indicators of stabilizing or constructive emotional processing",
       "x_constraints": "1–3 items (e.g., \"acceptance\", \"optimism\", \"continuity\")",
-      "x_profiles": [
-        "full"
-      ],
       "type": [
         "array",
         "null"
@@ -620,14 +941,34 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "extractor-bound",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.7,
+          "claude-haiku-5-5": 0.62,
+          "gpt-6.1-sol": 0.71,
+          "kimi-k2.6": 0.57
+        },
+        "cross": 0.38,
+        "cross_populated_only": 0.11,
+        "null_rate": 0.39,
+        "flags": [],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)",
+        "lead_unit": "salience.resilience",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     },
     "trajectory": {
       "description": "How the emotional state is evolving across time",
       "x_constraints": "Canonical: improving, stable, declining, integrative; emerging is deprecated",
-      "x_profiles": [
-        "full"
-      ],
       "allOf": [
         {
           "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/common.json#/definitions/coded"
@@ -695,7 +1036,32 @@
         "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
       },
       "x_comparability": "extractor-bound",
-      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
+      "x_comparability_basis": {
+        "run": "run 1",
+        "ruling": "R17 rule (R4 annotation)",
+        "outcome": "cut",
+        "repeat": {
+          "claude-sonnet-5-5": 0.81,
+          "claude-haiku-5-5": 0.67,
+          "gpt-6.1-sol": 0.84,
+          "kimi-k2.6": 0.65
+        },
+        "cross": 0.42,
+        "cross_populated_only": null,
+        "null_rate": 0.54,
+        "flags": [
+          "borderline"
+        ],
+        "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+        "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)",
+        "lead_unit": "salience.trajectory",
+        "lead_unit_why": "the field is itself the scored unit"
+      },
+      "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md",
+      "x_profiles": [
+        "full"
+      ],
+      "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed."
     }
   },
   "additionalProperties": false

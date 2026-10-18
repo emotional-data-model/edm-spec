@@ -10,31 +10,10 @@
     "pii_tier": "moderate"
   },
   "narrative": {
-    "subject": "choir winter concert",
-    "trigger": "concert recording arrived",
     "harm": "stamina lost to illness",
-    "drive": "choir of every age",
-    "integration": "performing through limits",
-    "arc": [
-      {
-        "text": "overcoming",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "overcoming",
-            "display": "overcoming",
-            "relation": "exact"
-          },
-          {
-            "system": "https://emotionaldatamodel.org/xref/v1/booker",
-            "code": "overcoming_the_monster",
-            "display": "Overcoming the Monster",
-            "relation": "exact"
-          }
-        ]
-      }
-    ],
+    "summary": null,
+    "meaning": null,
+    "turning_point": null,
     "self_position": null
   },
   "emotion": {
@@ -64,39 +43,66 @@
         }
       ]
     },
-    "secondary": [
-      {
-        "text": "proud",
-        "codings": []
-      },
-      {
-        "text": "grateful",
-        "codings": []
-      },
-      {
-        "text": "nostalgic",
-        "codings": []
-      },
-      {
-        "text": "supported",
-        "codings": []
-      }
-    ],
     "valence": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "intensity": {
       "text": null,
       "value": null,
       "codings": []
+    },
+    "bodily_sensation": null,
+    "appraisal": {
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
+    }
+  },
+  "context": {
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
+    "relationship": {
+      "text": null,
+      "codings": []
+    },
+    "scope": {
+      "text": null,
+      "direction": null,
+      "codings": []
     }
   },
   "salience": {
-    "retrieval_cues": [
-      "the hall going quiet"
-    ]
+    "tether": {
+      "type": {
+        "text": null,
+        "codings": []
+      },
+      "referent": null,
+      "stake": null
+    },
+    "function": []
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
+    },
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
   },
   "governance": {
     "jurisdiction": "GDPR",
@@ -116,5 +122,56 @@
     "extraction_model": "synthetic-hand-written",
     "extraction_provider": null,
     "field_confidence": {}
+  },
+  "extensions": {
+    "org.emotionaldatamodel.migration": {
+      "out_of_profile_fields": {
+        "narrative.subject": "choir winter concert",
+        "narrative.trigger": "concert recording arrived",
+        "narrative.drive": "choir of every age",
+        "narrative.integration": "performing through limits",
+        "narrative.arc": [
+          {
+            "text": "overcoming",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "overcoming",
+                "display": "overcoming",
+                "relation": "exact"
+              },
+              {
+                "system": "https://emotionaldatamodel.org/xref/v1/booker",
+                "code": "overcoming_the_monster",
+                "display": "Overcoming the Monster",
+                "relation": "exact"
+              }
+            ]
+          }
+        ],
+        "emotion.secondary": [
+          {
+            "text": "proud",
+            "codings": []
+          },
+          {
+            "text": "grateful",
+            "codings": []
+          },
+          {
+            "text": "nostalgic",
+            "codings": []
+          },
+          {
+            "text": "supported",
+            "codings": []
+          }
+        ],
+        "salience.retrieval_cues": [
+          "the hall going quiet"
+        ]
+      }
+    }
   }
 }

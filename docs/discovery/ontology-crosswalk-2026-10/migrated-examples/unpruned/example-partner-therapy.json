@@ -160,12 +160,10 @@
     },
     "valence": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "arousal": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "intensity": {
@@ -190,12 +188,10 @@
     "appraisal": {
       "urgency": {
         "text": null,
-        "value": null,
         "codings": []
       },
       "control": {
         "text": "medium",
-        "value": null,
         "codings": [
           {
             "system": "https://emotionaldatamodel.org/vocab/control/v1",
@@ -286,12 +282,7 @@
     "retrieval_cues": [
       "managing everyone's mood",
       "family dinners",
-      "raised voices",
-      "being asked to smooth things over",
-      "sibling",
-      "peacekeeper",
-      "apology",
-      "family role"
+      "raised voices"
     ],
     "themes": [
       "self-worth",
@@ -438,7 +429,14 @@
     "org.emotionaldatamodel.migration": {
       "v0_8_3_cut_fields": {
         "milky_way.visibility_context": "private"
-      }
+      },
+      "retrieval_cues_overflow": [
+        "being asked to smooth things over",
+        "sibling",
+        "peacekeeper",
+        "apology",
+        "family role"
+      ]
     }
   }
 }

@@ -129,7 +129,6 @@
     },
     "valence": {
       "text": "mixed",
-      "value": null,
       "codings": [
         {
           "system": "https://emotionaldatamodel.org/vocab/valence/v1",
@@ -148,7 +147,6 @@
     },
     "arousal": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "intensity": {
@@ -181,12 +179,10 @@
     "appraisal": {
       "urgency": {
         "text": null,
-        "value": null,
         "codings": []
       },
       "control": {
         "text": null,
-        "value": null,
         "codings": []
       },
       "attribution": {

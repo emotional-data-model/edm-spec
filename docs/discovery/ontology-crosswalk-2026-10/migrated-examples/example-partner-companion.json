@@ -19,45 +19,6 @@
     "meaning": null,
     "identity_link": "capable but self-doubting",
     "turning_point": null,
-    "arc": [
-      {
-        "text": "overcoming",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "overcoming",
-            "display": "overcoming",
-            "relation": "exact"
-          },
-          {
-            "system": "https://emotionaldatamodel.org/xref/v1/booker",
-            "code": "overcoming_the_monster",
-            "display": "Overcoming the Monster",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "threshold",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "threshold",
-            "display": "threshold",
-            "relation": "exact"
-          },
-          {
-            "system": "https://emotionaldatamodel.org/xref/v1/campbell",
-            "code": "crossing_of_the_first_threshold",
-            "display": "The Crossing of the First Threshold",
-            "relation": "exact"
-          }
-        ]
-      }
-    ],
-    "valence_shift": "dread to confidence",
     "self_position": null
   },
   "emotion": {
@@ -87,45 +48,8 @@
         }
       ]
     },
-    "secondary": [
-      {
-        "text": "hope",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "hope",
-            "display": "hope",
-            "relation": "exact"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000177",
-            "display": "hope",
-            "relation": "exact"
-          },
-          {
-            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-            "version": "2014-04-01",
-            "code": "hope",
-            "display": "hope",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "vulnerability",
-        "codings": []
-      },
-      {
-        "text": "determination",
-        "codings": []
-      }
-    ],
     "valence": {
       "text": "mixed",
-      "value": null,
       "codings": [
         {
           "system": "https://emotionaldatamodel.org/vocab/valence/v1",
@@ -155,7 +79,6 @@
         }
       ]
     },
-    "meta": null,
     "bodily_sensation": null,
     "temporal_profile": {
       "text": "rising",
@@ -168,12 +91,19 @@
           "relation": "exact"
         }
       ]
+    },
+    "appraisal": {
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
     }
   },
   "context": {
-    "event": "pre-presentation support conversation",
-    "place": null,
-    "people": null,
+    "event_category": {
+      "text": null,
+      "codings": []
+    },
     "relationship": {
       "text": "companionship",
       "codings": [
@@ -185,10 +115,6 @@
           "relation": "exact"
         }
       ]
-    },
-    "life_stage": {
-      "text": null,
-      "codings": []
     },
     "scope": {
       "text": null,
@@ -223,22 +149,30 @@
       "referent": null,
       "stake": null
     },
-    "retrieval_cues": [
-      "tougher rooms before"
-    ],
-    "recurrence": {
-      "text": "cyclical",
-      "codings": [
-        {
-          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
-          "version": "1",
-          "code": "cyclical",
-          "display": "cyclical",
-          "relation": "exact"
-        }
-      ]
+    "linkage_strength": 0.66,
+    "function": []
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
     },
-    "linkage_strength": 0.66
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
   },
   "governance": {
     "jurisdiction": null,
@@ -263,6 +197,99 @@
       "v0_8_3_cut_fields": {
         "constellation.interpersonal_affect": "openness",
         "milky_way.visibility_context": "private"
+      },
+      "out_of_profile_fields": {
+        "narrative.arc": [
+          {
+            "text": "overcoming",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "overcoming",
+                "display": "overcoming",
+                "relation": "exact"
+              },
+              {
+                "system": "https://emotionaldatamodel.org/xref/v1/booker",
+                "code": "overcoming_the_monster",
+                "display": "Overcoming the Monster",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "threshold",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "threshold",
+                "display": "threshold",
+                "relation": "exact"
+              },
+              {
+                "system": "https://emotionaldatamodel.org/xref/v1/campbell",
+                "code": "crossing_of_the_first_threshold",
+                "display": "The Crossing of the First Threshold",
+                "relation": "exact"
+              }
+            ]
+          }
+        ],
+        "narrative.valence_shift": "dread to confidence",
+        "emotion.secondary": [
+          {
+            "text": "hope",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "hope",
+                "display": "hope",
+                "relation": "exact"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000177",
+                "display": "hope",
+                "relation": "exact"
+              },
+              {
+                "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+                "version": "2014-04-01",
+                "code": "hope",
+                "display": "hope",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "vulnerability",
+            "codings": []
+          },
+          {
+            "text": "determination",
+            "codings": []
+          }
+        ],
+        "context.event": "pre-presentation support conversation",
+        "salience.retrieval_cues": [
+          "tougher rooms before"
+        ],
+        "salience.recurrence": {
+          "text": "cyclical",
+          "codings": [
+            {
+              "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+              "version": "1",
+              "code": "cyclical",
+              "display": "cyclical",
+              "relation": "exact"
+            }
+          ]
+        }
       }
     }
   }

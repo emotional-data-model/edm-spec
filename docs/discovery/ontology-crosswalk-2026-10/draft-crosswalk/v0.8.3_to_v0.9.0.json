@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "EDM v0.8.3 to v0.9.0 Migration Crosswalk (DRAFT, discovery)",
-  "description": "Draft record of the v0.9 relayout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. Five affective domains are renamed (core->narrative, constellation->emotion, milky_way->context, gravity->salience, impulse->motivation); 57 affective fields become 47 (39 carried by rename/move, 9 merged into others, 7 cut with text preserved in extensions, 2 moved to an opt-in trait profile, 7 new); every categorical field becomes text + codings; four fields become dimensions with a numeric value beside the ordinal text. No artifact text changes: scripts/v09_layout.py in the discovery folder proves the scalar multiset of the affective domains is identical before and after.",
+  "description": "Draft record of the v0.9 relayout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. Five affective domains are renamed (core->narrative, constellation->emotion, milky_way->context, gravity->salience, impulse->motivation); 57 affective fields become 47 (39 carried by rename/move, 9 merged into others, 7 cut with text preserved in extensions, 2 moved to an opt-in trait profile, 7 new); every categorical field becomes text + codings; emotion.intensity is a dimension with the v0.8.3 numeric weight beside an ordinal text (the value member of valence / arousal / urgency / control was removed by R5, 2026-10-18, never populated in run 1). Profile membership is derived from the comparability class of each field (R17). No artifact text changes: scripts/v09_layout.py in the discovery folder proves the scalar multiset of the affective domains is identical before and after.",
   "status": "draft",
   "discovery_only": true,
   "version_from": "0.8.3",
@@ -21,18 +21,29 @@
     "affective_field_count_after": 47,
     "canonical_values_before": 185,
     "field_dispositions": {
-      "carried": 3,
+      "carried": 5,
       "cut-to-extensions": 7,
       "merged": 14,
       "moved-to-trait": 2,
-      "renamed": 27,
-      "reshaped": 4
+      "renamed": 28,
+      "reshaped": 1
     },
     "value_dispositions": {
       "carried": 142,
       "carried (deprecated)": 10,
       "cut-to-extensions": 26,
       "moved-to-trait": 7
+    },
+    "comparability_classes": {
+      "comparable": 19,
+      "extractor-bound": 19,
+      "interpretive": 7,
+      "null-driven": 2
+    },
+    "profile_sizes": {
+      "essential": 19,
+      "extended": 28,
+      "full": 47
     },
     "values_deprecated": 10,
     "values_renamed": 0,
@@ -75,7 +86,6 @@
         "description": "Central person, object, or theme of the experience",
         "constraints": "1–5 words (e.g., \"grandmother\", \"dad's toolbox\", \"childhood home\")",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -95,9 +105,67 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R13",
+              "arm_adopted": "A",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.91,
+                  "gpt-6.1-sol": 0.85,
+                  "kimi-k2.6": 0.76
+                },
+                "cross": 0.53,
+                "cross_populated_only": 0.58,
+                "null_rate": 0.05,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.94,
+                  "gpt-6.1-sol": 0.84,
+                  "kimi-k2.6": 0.72
+                },
+                "cross": 0.41,
+                "cross_populated_only": 0.42,
+                "null_rate": 0.01,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R13",
+              "arm": "A",
+              "outcome": "borderline-cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.91,
+                "gpt-6.1-sol": 0.85,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.53,
+              "cross_populated_only": 0.58,
+              "null_rate": 0.05,
+              "two_voter": "interpretive",
+              "why": "neither arm passes; Arm A text kept (Arm B selection rule lowered cross 0.53 -> 0.41); classed interpretive on the two-voter reading (Sonnet 0.91 / GPT 0.85 repeat, cross2 0.58), Kimi 0.76 the one voter short",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "interpretive",
+        "run2": {
+          "ruling": "R13",
+          "arm_adopted": "A",
+          "class": "interpretive",
+          "class_basis": "neither arm passes; Arm A text kept (Arm B selection rule lowered cross 0.53 -> 0.41); classed interpretive on the two-voter reading (Sonnet 0.91 / GPT 0.85 repeat, cross2 0.58), Kimi 0.76 the one voter short"
         }
       },
       "run2_arm_a": {
@@ -110,7 +178,7 @@
           "childhood home"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -139,10 +207,9 @@
         ]
       },
       "v09": {
-        "description": "What triggered or initiated the emotional response",
-        "constraints": "1–5 words (e.g., \"finding old photos\", \"first snow\", \"phone call\")",
+        "description": "What set the feeling off? Name the moment, event or perception the text presents as starting the response it dwells on most. Not the topic of the text and not its subject; if the text states a feeling without an initiating event, null.",
+        "constraints": "1-5 words, single string. Referent rule: name ONE referent that the text itself mentions, using the text's own noun phrase where it has one; if several candidates qualify, choose the one the text returns to most; use the most specific noun phrase the text itself uses; do not substitute a category the text does not use and do not add detail the text does not give. Null when no passage supports an answer; never null when one does. Arm B definition adopted by R12 (2026-10-18); v0.8.3 spark read: 'What triggered or initiated the emotional response'.",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -164,9 +231,67 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R12",
+              "arm_adopted": "B",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.93,
+                  "gpt-6.1-sol": 0.87,
+                  "kimi-k2.6": 0.74
+                },
+                "cross": 0.53,
+                "cross_populated_only": 0.57,
+                "null_rate": 0.09,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.9,
+                  "gpt-6.1-sol": 0.83,
+                  "kimi-k2.6": 0.8
+                },
+                "cross": 0.56,
+                "cross_populated_only": 0.61,
+                "null_rate": 0.19,
+                "outcome": "interpretive",
+                "two_voter": "interpretive"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R12",
+              "arm": "B",
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.9,
+                "gpt-6.1-sol": 0.83,
+                "kimi-k2.6": 0.8
+              },
+              "cross": 0.56,
+              "cross_populated_only": 0.61,
+              "null_rate": 0.19,
+              "two_voter": "interpretive",
+              "why": "Arm B is interpretive under the frozen rule (all three voters >= 0.80, cross 0.56 < 0.60; populated-only 0.61)",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "interpretive",
+        "run2": {
+          "ruling": "R12",
+          "arm_adopted": "B",
+          "class": "interpretive",
+          "class_basis": "Arm B is interpretive under the frozen rule (all three voters >= 0.80, cross 0.56 < 0.60; populated-only 0.61)"
         }
       },
       "run2_arm_a": {
@@ -179,7 +304,7 @@
           "phone call"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -209,8 +334,8 @@
         ]
       },
       "v09": {
-        "description": "Emotional pain, loss, or vulnerability present in the experience",
-        "constraints": "1–5 words (e.g., \"abandonment\", \"regret\", \"distance\", \"grief\")",
+        "description": "What hurt? Name the loss, pain or vulnerability the text states, in the text's own word where it has one. A stated worry, fear, loss or vulnerability counts; one you would have to infer does not. Null if the text states none.",
+        "constraints": "1-5 words, single string. Referent rule: name ONE referent that the text itself mentions, using the text's own noun phrase where it has one; if several candidates qualify, choose the one the text returns to most; use the most specific noun phrase the text itself uses; do not substitute a category the text does not use and do not add detail the text does not give. Null when no passage supports an answer; never null when one does. Arm B definition adopted by R11 (2026-10-18); v0.8.3 wound read: 'Emotional pain, loss, or vulnerability present in the experience'.",
         "profiles": [
           "essential",
           "extended",
@@ -234,9 +359,67 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R11",
+              "arm_adopted": "B",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.93,
+                  "gpt-6.1-sol": 0.89,
+                  "kimi-k2.6": 0.79
+                },
+                "cross": 0.66,
+                "cross_populated_only": 0.63,
+                "null_rate": 0.35,
+                "outcome": "borderline-cut",
+                "two_voter": "pass"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.9,
+                  "gpt-6.1-sol": 0.85,
+                  "kimi-k2.6": 0.82
+                },
+                "cross": 0.64,
+                "cross_populated_only": 0.61,
+                "null_rate": 0.33,
+                "outcome": "pass",
+                "two_voter": "pass"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R11",
+              "arm": "B",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.9,
+                "gpt-6.1-sol": 0.85,
+                "kimi-k2.6": 0.82
+              },
+              "cross": 0.64,
+              "cross_populated_only": 0.61,
+              "null_rate": 0.33,
+              "two_voter": "pass",
+              "why": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61)",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "comparable",
+        "run2": {
+          "ruling": "R11",
+          "arm_adopted": "B",
+          "class": "comparable",
+          "class_basis": "Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61)"
         }
       },
       "run2_arm_a": {
@@ -250,7 +433,7 @@
           "grief"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -283,7 +466,6 @@
         "description": "What energized or motivated the experience",
         "constraints": "1–5 words (e.g., \"love\", \"shared laughter\", \"curiosity\", \"hope\")",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -305,9 +487,67 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R15",
+              "arm_adopted": "A",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.85,
+                  "gpt-6.1-sol": 0.86,
+                  "kimi-k2.6": 0.68
+                },
+                "cross": 0.39,
+                "cross_populated_only": 0.48,
+                "null_rate": 0.27,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.82,
+                  "gpt-6.1-sol": 0.78,
+                  "kimi-k2.6": 0.7
+                },
+                "cross": 0.46,
+                "cross_populated_only": 0.51,
+                "null_rate": 0.27,
+                "outcome": "cut",
+                "two_voter": "cut"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R15",
+              "arm": "A",
+              "outcome": "borderline-cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.68
+              },
+              "cross": 0.39,
+              "cross_populated_only": 0.48,
+              "null_rate": 0.27,
+              "two_voter": "interpretive",
+              "why": "not comparable under either text (cross 0.39 / 0.46); Arm A kept as the better of two failing texts; repeatable in Sonnet and GPT (0.85 / 0.86), Kimi 0.68",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "interpretive",
+        "run2": {
+          "ruling": "R15",
+          "arm_adopted": "A",
+          "class": "interpretive",
+          "class_basis": "not comparable under either text (cross 0.39 / 0.46); Arm A kept as the better of two failing texts; repeatable in Sonnet and GPT (0.85 / 0.86), Kimi 0.68"
         }
       },
       "run2_arm_a": {
@@ -321,7 +561,7 @@
           "hope"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -353,7 +593,6 @@
         "description": "Connection or shift between past and present understanding",
         "constraints": "1–5 words (e.g., \"forgiveness\", \"acceptance\", \"returning home\")",
         "profiles": [
-          "essential",
           "extended",
           "full"
         ],
@@ -376,10 +615,67 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_run2": {
+              "ruling": "R14",
+              "arm_adopted": "A",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.89,
+                  "gpt-6.1-sol": 0.88,
+                  "kimi-k2.6": 0.75
+                },
+                "cross": 0.67,
+                "cross_populated_only": 0.6,
+                "null_rate": 0.48,
+                "outcome": "borderline-cut",
+                "two_voter": "pass"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.89,
+                  "gpt-6.1-sol": 0.79,
+                  "kimi-k2.6": 0.83
+                },
+                "cross": 0.62,
+                "cross_populated_only": 0.62,
+                "null_rate": 0.48,
+                "outcome": "borderline-cut",
+                "two_voter": "cut"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_comparability": "null-driven",
-            "x_status": "pending run 2 (prompt test)",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R14",
+              "arm": "A",
+              "outcome": "borderline-cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.89,
+                "gpt-6.1-sol": 0.88,
+                "kimi-k2.6": 0.75
+              },
+              "cross": 0.67,
+              "cross_populated_only": 0.6,
+              "null_rate": 0.48,
+              "two_voter": "pass",
+              "why": "cross above the bar in both arms (0.67 / 0.62; populated-only 0.60 / 0.62) with one voter short in each (Kimi 0.75 in A, GPT 0.79 in B); null 0.48 unchanged by the Arm B null clause; the R4 null-driven annotation stays until a run passes it with all three voters",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "null-driven",
+        "run2": {
+          "ruling": "R14",
+          "arm_adopted": "A",
+          "class": "null-driven",
+          "class_basis": "cross above the bar in both arms (0.67 / 0.62; populated-only 0.60 / 0.62) with one voter short in each (Kimi 0.75 in A, GPT 0.79 in B); null 0.48 unchanged by the Arm B null clause; the R4 null-driven annotation stays until a run passes it with all three voters"
         }
       },
       "run2_arm_a": {
@@ -392,7 +688,7 @@
           "returning home"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -421,11 +717,9 @@
         ]
       },
       "v09": {
-        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
-        "constraints": "Short phrases; order carries no meaning",
+        "description": "What would bring this back? At most three cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), the first being the one the text returns to most. Carries v0.8.3 core.echo (first), then recall_triggers and retrieval_keys by migration. (R16 2026-10-18: short ordered list adopted; the single-string echo did no better in run 2.)",
+        "constraints": "Short ordered list, 1-5 words per cue, at most 3 items; order carries meaning (first = the cue the text returns to most); empty list only if the text names nothing that recurs. Migration keeps the first three merged values here and preserves any further v0.8.3 values verbatim in extensions.org.emotionaldatamodel.migration.retrieval_cues_overflow.",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -444,9 +738,67 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R16",
+              "arm_adopted": "B",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.85,
+                  "gpt-6.1-sol": 0.8,
+                  "kimi-k2.6": 0.68
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.43,
+                "null_rate": 0.31,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.82,
+                  "gpt-6.1-sol": 0.77,
+                  "kimi-k2.6": 0.7
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.42,
+                "null_rate": 0.07,
+                "outcome": "cut",
+                "two_voter": "cut"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R16",
+              "arm": "B",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "gpt-6.1-sol": 0.77,
+                "kimi-k2.6": 0.7
+              },
+              "cross": 0.4,
+              "cross_populated_only": 0.42,
+              "null_rate": 0.07,
+              "two_voter": "cut",
+              "why": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "extractor-bound",
+        "run2": {
+          "ruling": "R16",
+          "arm_adopted": "B",
+          "class": "extractor-bound",
+          "class_basis": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85"
         }
       },
       "run2_arm_a": {
@@ -459,7 +811,7 @@
           "city lights"
         ],
         "shape": "string (single value), as in v0.8.3",
-        "note": "verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18"
+        "note": "verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts"
       },
       "values": []
     },
@@ -486,6 +838,7 @@
         "description": "A compressed, faithful account of the experience as described by the source, preserving emotional sequence, temporal markers, and stated context without interpretation",
         "constraints": "3–5 sentences",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -507,9 +860,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.79,
+                "gpt-6.1-sol": 1.0,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.78,
+              "cross_populated_only": 0.84,
+              "null_rate": 0.04,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -575,9 +949,28 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.76,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.78
+              },
+              "cross": 0.57,
+              "cross_populated_only": null,
+              "null_rate": 0.11,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -729,8 +1122,6 @@
         "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
         "constraints": "0-5 items; free text; each item may carry codings with a per-coding confidence",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -752,9 +1143,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.57,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.64
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -786,8 +1197,6 @@
         "description": "Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)",
         "constraints": "0-5 items; free text; each item may carry codings with a per-coding confidence",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -809,9 +1218,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.57,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.64
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -843,7 +1272,6 @@
         "description": "How the person relates to their own emotional state",
         "constraints": "Free text (e.g., \"acceptance\", \"resistance\", \"curiosity\", \"confusion\")",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -865,9 +1293,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.87,
+                "claude-haiku-5-5": 0.74,
+                "gpt-6.1-sol": 0.91,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.65,
+              "cross_populated_only": 0.34,
+              "null_rate": 0.63,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -933,8 +1381,6 @@
         "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
         "constraints": "Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -956,9 +1402,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.74,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.48,
+              "cross_populated_only": null,
+              "null_rate": 0.22,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -1056,6 +1522,7 @@
         "description": "The dominant relational configuration influencing the experience",
         "constraints": "Canonical: parent_child, grandparent_grandchild, romantic_partnership, couple, sibling_bond, family, friendship, friend, companionship, colleague, mentorship, reunion, community_ritual, grief, self_reflection, professional, therapeutic, service, adversarial. friend, couple, grief, self_reflection are deprecated. Free text accepted.",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -1077,9 +1544,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.72,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.6,
+              "cross_populated_only": null,
+              "null_rate": 0.24,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -1264,7 +1752,6 @@
         "description": "The life-stage or temporal frame associated with the experience",
         "constraints": "Canonical: childhood, early_adulthood, midlife, late_life, recent, future, timeless",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -1286,9 +1773,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.79,
+                "claude-haiku-5-5": 0.47,
+                "gpt-6.1-sol": 0.91,
+                "kimi-k2.6": 0.56
+              },
+              "cross": 0.44,
+              "cross_populated_only": null,
+              "null_rate": 0.39,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -1393,9 +1900,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.73,
+                "gpt-6.1-sol": 0.8,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.26,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "interpretive"
       },
       "values": [
         {
@@ -1641,6 +2168,7 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -1662,6 +2190,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.referent": {
@@ -1682,6 +2230,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.stake": {
@@ -1700,9 +2267,27 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -1736,6 +2321,7 @@
         "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
         "constraints": "text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -1757,6 +2343,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.82,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.47,
+              "cross_populated_only": null,
+              "null_rate": 0.06,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "context.scope.direction": {
@@ -1777,9 +2383,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.84,
+                "claude-haiku-5-5": 0.6,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.68
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.18,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -1882,9 +2508,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.8,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.75,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.56,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "interpretive"
       },
       "values": [
         {
@@ -2012,9 +2658,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "null-driven",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.91,
+                "claude-haiku-5-5": 0.85,
+                "gpt-6.1-sol": 0.92,
+                "kimi-k2.6": 0.9
+              },
+              "cross": 0.82,
+              "cross_populated_only": 0.59,
+              "null_rate": 0.72,
+              "flags": [
+                "null-driven"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass carried by agreement on null (populated-only cross 0.59 < 0.60; null 0.72)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "null-driven"
       },
       "values": []
     },
@@ -2041,6 +2707,7 @@
         "description": "The realization or conclusion the subject draws from the experience, as the text supports it. Interpretive, attributed: an interpretation attributable to a passage, not a quotation; null only when the text offers no basis. (R6 2026-10-18; v0.8.3: \"The explicit realization or conclusion stated by the subject\")",
         "constraints": "Short sentence. Interpretive, attributed (R6 2026-10-18); v0.8.3 read 'Extracted, not inferred'.",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -2062,9 +2729,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.93,
+                "claude-haiku-5-5": 0.83,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.91
+              },
+              "cross": 0.71,
+              "cross_populated_only": 0.67,
+              "null_rate": 0.54,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass on populated answers (populated-only cross 0.67 >= 0.60)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -2091,6 +2779,7 @@
         "description": "Marks experiences the subject explicitly identifies as life-changing or trajectory-altering at time of extraction",
         "constraints": "true or false; null when the subject does not say",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -2110,9 +2799,28 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.83,
+                "claude-haiku-5-5": 0.84,
+                "gpt-6.1-sol": 0.96,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.58,
+              "cross_populated_only": null,
+              "null_rate": 0.89,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -2139,6 +2847,7 @@
         "description": "Bodily or interoceptive sensations explicitly described by the subject as part of the emotional experience",
         "constraints": "Short phrases extracted from stated physical sensations only; NULL when not mentioned",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -2158,9 +2867,28 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.95,
+                "gpt-6.1-sol": 0.97,
+                "kimi-k2.6": 0.95
+              },
+              "cross": 0.94,
+              "cross_populated_only": 0.84,
+              "null_rate": 0.79,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass on populated answers (populated-only cross 0.84 >= 0.60)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -2202,8 +2930,6 @@
         "description": "The story movement(s) the experience represents. A list so that a structural reading (v0.8.3 arc_type) and a trajectory reading (v0.8.3 narrative_arc) of the same memory can both be stored; order carries no meaning.",
         "constraints": "Each item is text + codings; EDM vocab arc/v1 unites the former arc_type and narrative_arc value sets. Free text accepted.",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -2225,9 +2951,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.74,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.48,
+              "cross_populated_only": null,
+              "null_rate": 0.22,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -2359,7 +3105,6 @@
         "description": "Type of event or situation",
         "constraints": "Free text (e.g., \"family gathering\", \"farewell\", \"birthday\", \"reunion\")",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -2381,9 +3126,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.79,
+                "claude-haiku-5-5": 0.65,
+                "gpt-6.1-sol": 0.85,
+                "kimi-k2.6": 0.67
+              },
+              "cross": 0.41,
+              "cross_populated_only": 0.44,
+              "null_rate": 0.03,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -2414,7 +3179,6 @@
         "description": "Place or spatial context of the experience",
         "constraints": "Free text (e.g., \"grandmother's kitchen\", \"beach\", \"hospital\")",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -2436,9 +3200,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.73,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.56,
+              "cross_populated_only": 0.5,
+              "null_rate": 0.26,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -2469,7 +3253,6 @@
         "description": "Individuals referenced in or connected to the experience",
         "constraints": "Names or roles, properly cased (e.g., \"Sarah\", \"my father\", \"the nurse\")",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -2491,9 +3274,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.87,
+                "kimi-k2.6": 0.79
+              },
+              "cross": 0.55,
+              "cross_populated_only": 0.52,
+              "null_rate": 0.15,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -2573,7 +3376,6 @@
         "description": "Directional emotional change during the experience",
         "constraints": "Free text (e.g., \"loss to gratitude\", \"fear to relief\", \"joy to sadness\")",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -2595,9 +3397,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.83,
+                "claude-haiku-5-5": 0.65,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.58,
+              "cross_populated_only": 0.38,
+              "null_rate": 0.45,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -2645,6 +3467,23 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.54,
+                "gpt-6.1-sol": 0.59,
+                "kimi-k2.6": 0.49
+              },
+              "cross": 0.16,
+              "cross_populated_only": null,
+              "null_rate": 0.33,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "emotion.intensity.value": {
@@ -2662,10 +3501,29 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.91,
+                "gpt-6.1-sol": 0.0,
+                "kimi-k2.6": 0.98
+              },
+              "cross": 0.77,
+              "cross_populated_only": null,
+              "null_rate": 0.46,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
+        "comparability": "comparable",
         "value_member": "kept (R5 2026-10-18)"
       },
       "values": []
@@ -2721,12 +3579,12 @@
     {
       "from": "gravity.valence",
       "to": "emotion.valence",
-      "disposition": "reshaped",
+      "disposition": "carried",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension (value removed, R5)",
-      "shape": "dimension (value removed, R5)",
-      "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence",
+      "shape_to": "coded (value removed, R5)",
+      "shape": "coded (value removed, R5)",
+      "note": "MFOEM:000207/000208; EmotionML fsre-dimensions#valence as a coding; numeric value member removed (R5, applied 2026-10-18)",
       "v083": {
         "description": "The qualitative direction of the emotional experience",
         "constraints": "positive, negative, mixed",
@@ -2743,7 +3601,7 @@
       },
       "v09": {
         "description": "The qualitative direction of the emotional experience",
-        "constraints": "text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)",
+        "constraints": "text positive / negative / mixed; codings on EDM vocab valence/v1, MFOEM and EmotionML fsre-dimensions#valence. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).",
         "profiles": [
           "essential",
           "extended",
@@ -2765,6 +3623,24 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.95,
+                "claude-haiku-5-5": 0.84,
+                "gpt-6.1-sol": 0.95,
+                "kimi-k2.6": 0.83
+              },
+              "cross": 0.74,
+              "cross_populated_only": null,
+              "null_rate": 0.11,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "emotion.valence.value": {
@@ -2785,11 +3661,12 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member deleted from the draft 2026-10-18",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
+        "comparability": "comparable",
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); deleted from the draft schema 2026-10-18: the field is coded text + codings"
       },
       "values": [
         {
@@ -2864,6 +3741,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.53,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.68,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.persistence.decay": {
@@ -2884,9 +3780,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.52,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.25,
+              "cross_populated_only": null,
+              "null_rate": 0.72,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -2956,6 +3872,7 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -2977,6 +3894,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.referent": {
@@ -2997,6 +3934,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.stake": {
@@ -3015,9 +3971,27 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": []
     },
@@ -3054,6 +4028,7 @@
         "description": "What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)",
         "constraints": "type: canonical person, symbol, event, place, ritual, object, tradition, identity, self, free text accepted; referent and stake: free text",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -3075,6 +4050,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.71
+              },
+              "cross": 0.53,
+              "cross_populated_only": null,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.referent": {
@@ -3095,6 +4090,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.71,
+                "gpt-6.1-sol": 0.79,
+                "kimi-k2.6": 0.66
+              },
+              "cross": 0.52,
+              "cross_populated_only": 0.51,
+              "null_rate": 0.14,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.tether.stake": {
@@ -3113,9 +4127,27 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.67,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.33,
+              "cross_populated_only": 0.18,
+              "null_rate": 0.27,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -3206,11 +4238,9 @@
         ]
       },
       "v09": {
-        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
-        "constraints": "Short phrases; order carries no meaning",
+        "description": "What would bring this back? At most three cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), the first being the one the text returns to most. Carries v0.8.3 core.echo (first), then recall_triggers and retrieval_keys by migration. (R16 2026-10-18: short ordered list adopted; the single-string echo did no better in run 2.)",
+        "constraints": "Short ordered list, 1-5 words per cue, at most 3 items; order carries meaning (first = the cue the text returns to most); empty list only if the text names nothing that recurs. Migration keeps the first three merged values here and preserves any further v0.8.3 values verbatim in extensions.org.emotionaldatamodel.migration.retrieval_cues_overflow.",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -3229,9 +4259,67 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R16",
+              "arm_adopted": "B",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.85,
+                  "gpt-6.1-sol": 0.8,
+                  "kimi-k2.6": 0.68
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.43,
+                "null_rate": 0.31,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.82,
+                  "gpt-6.1-sol": 0.77,
+                  "kimi-k2.6": 0.7
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.42,
+                "null_rate": 0.07,
+                "outcome": "cut",
+                "two_voter": "cut"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R16",
+              "arm": "B",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "gpt-6.1-sol": 0.77,
+                "kimi-k2.6": 0.7
+              },
+              "cross": 0.4,
+              "cross_populated_only": 0.42,
+              "null_rate": 0.07,
+              "two_voter": "cut",
+              "why": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "extractor-bound",
+        "run2": {
+          "ruling": "R16",
+          "arm_adopted": "B",
+          "class": "extractor-bound",
+          "class_basis": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85"
         }
       },
       "values": []
@@ -3260,11 +4348,9 @@
         ]
       },
       "v09": {
-        "description": "Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration",
-        "constraints": "Short phrases; order carries no meaning",
+        "description": "What would bring this back? At most three cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), the first being the one the text returns to most. Carries v0.8.3 core.echo (first), then recall_triggers and retrieval_keys by migration. (R16 2026-10-18: short ordered list adopted; the single-string echo did no better in run 2.)",
+        "constraints": "Short ordered list, 1-5 words per cue, at most 3 items; order carries meaning (first = the cue the text returns to most); empty list only if the text names nothing that recurs. Migration keeps the first three merged values here and preserves any further v0.8.3 values verbatim in extensions.org.emotionaldatamodel.migration.retrieval_cues_overflow.",
         "profiles": [
-          "essential",
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -3283,9 +4369,67 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "pending run 2 (prompt test)",
+            "x_run2": {
+              "ruling": "R16",
+              "arm_adopted": "B",
+              "A_v083_text": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.85,
+                  "gpt-6.1-sol": 0.8,
+                  "kimi-k2.6": 0.68
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.43,
+                "null_rate": 0.31,
+                "outcome": "borderline-cut",
+                "two_voter": "interpretive"
+              },
+              "B_v09_rules": {
+                "repeat": {
+                  "claude-sonnet-5-5": 0.82,
+                  "gpt-6.1-sol": 0.77,
+                  "kimi-k2.6": 0.7
+                },
+                "cross": 0.4,
+                "cross_populated_only": 0.42,
+                "null_rate": 0.07,
+                "outcome": "cut",
+                "two_voter": "cut"
+              },
+              "voters": [
+                "claude-sonnet-5-5",
+                "gpt-6.1-sol",
+                "kimi-k2.6"
+              ],
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
+            "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 2",
+              "ruling": "R16",
+              "arm": "B",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "gpt-6.1-sol": 0.77,
+                "kimi-k2.6": 0.7
+              },
+              "cross": 0.4,
+              "cross_populated_only": 0.42,
+              "null_rate": 0.07,
+              "two_voter": "cut",
+              "why": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85",
+              "source": "experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
+        },
+        "comparability": "extractor-bound",
+        "run2": {
+          "ruling": "R16",
+          "arm_adopted": "B",
+          "class": "extractor-bound",
+          "class_basis": "no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85"
         }
       },
       "values": []
@@ -3336,9 +4480,27 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.53,
+                "claude-haiku-5-5": 0.32,
+                "gpt-6.1-sol": 0.59,
+                "kimi-k2.6": 0.41
+              },
+              "cross": 0.06,
+              "cross_populated_only": 0.05,
+              "null_rate": 0.05,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -3370,7 +4532,6 @@
         "description": "The temporal recurrence structure extracted from the experience's context, framing, and temporal markers",
         "constraints": "Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.",
         "profiles": [
-          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -3392,9 +4553,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.72,
+                "claude-haiku-5-5": 0.51,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.67
+              },
+              "cross": 0.2,
+              "cross_populated_only": null,
+              "null_rate": 0.63,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -3476,10 +4657,30 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.96,
+                "claude-haiku-5-5": 0.88,
+                "gpt-6.1-sol": 0.09,
+                "kimi-k2.6": 0.94
+              },
+              "cross": 0.5,
+              "cross_populated_only": null,
+              "null_rate": 0.43,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)"
+            },
             "x_status": "kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "interpretive"
       },
       "values": []
     },
@@ -3530,6 +4731,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.71,
+                "claude-haiku-5-5": 0.53,
+                "gpt-6.1-sol": 0.55,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.68,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "salience.persistence.decay": {
@@ -3550,9 +4770,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.52,
+                "gpt-6.1-sol": 0.86,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.25,
+              "cross_populated_only": null,
+              "null_rate": 0.72,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -3626,9 +4866,27 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.7,
+                "claude-haiku-5-5": 0.62,
+                "gpt-6.1-sol": 0.71,
+                "kimi-k2.6": 0.57
+              },
+              "cross": 0.38,
+              "cross_populated_only": 0.11,
+              "null_rate": 0.39,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": []
     },
@@ -3681,9 +4939,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.81,
+                "claude-haiku-5-5": 0.67,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.65
+              },
+              "cross": 0.42,
+              "cross_populated_only": null,
+              "null_rate": 0.54,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "extractor-bound"
       },
       "values": [
         {
@@ -3789,6 +5067,8 @@
         "description": "The behavioral direction or movement expressed through the emotional response",
         "constraints": "Canonical: explore, approach, avoid, repair, persevere, share, confront, protect, process (Frijda action tendencies applied as codes; value words unchanged)",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -3809,9 +5089,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.66,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.72
+              },
+              "cross": 0.4,
+              "cross_populated_only": null,
+              "null_rate": 0.2,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -3908,6 +5209,8 @@
         "description": "The foundational motivational domain guiding the individual's internal stance",
         "constraints": "Canonical: belonging, safety, mastery, meaning, autonomy, authenticity (SDT needs applied as codes)",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -3928,9 +5231,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.85,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.8,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.5,
+              "cross_populated_only": null,
+              "null_rate": 0.43,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -4003,6 +5327,8 @@
         "description": "The temporal direction toward which the motivational energy is oriented",
         "constraints": "past / present / future",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -4021,9 +5347,28 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.61,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.82
+              },
+              "cross": 0.56,
+              "cross_populated_only": null,
+              "null_rate": 0.12,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -4075,6 +5420,7 @@
         "description": "The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)",
         "constraints": "text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)",
         "profiles": [
+          "essential",
           "extended",
           "full"
         ],
@@ -4096,6 +5442,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.82,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.47,
+              "cross_populated_only": null,
+              "null_rate": 0.06,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "context.scope.direction": {
@@ -4116,9 +5482,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.84,
+                "claude-haiku-5-5": 0.6,
+                "gpt-6.1-sol": 0.78,
+                "kimi-k2.6": 0.68
+              },
+              "cross": 0.37,
+              "cross_populated_only": null,
+              "null_rate": 0.18,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -4198,12 +5584,12 @@
     {
       "from": "impulse.urgency",
       "to": "emotion.appraisal.urgency",
-      "disposition": "reshaped",
+      "disposition": "carried",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension (value removed, R5)",
-      "shape": "dimension (value removed, R5)",
-      "note": "EmotionML ema-appraisals#urgency; MFOEM:000089/000090",
+      "shape_to": "coded (value removed, R5)",
+      "shape": "coded (value removed, R5)",
+      "note": "EmotionML ema-appraisals#urgency as a coding; MFOEM:000089/000090; numeric value member removed (R5, applied 2026-10-18)",
       "v083": {
         "description": "The intensity or immediacy of the motivational state",
         "constraints": "calm, elevated, pressing, acute",
@@ -4220,7 +5606,7 @@
       },
       "v09": {
         "description": "The intensity or immediacy of the motivational state",
-        "constraints": "text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text",
+        "constraints": "text calm / elevated / pressing / acute; codings on EDM vocab urgency/v1, EmotionML ema-appraisals#urgency and MFOEM. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).",
         "profiles": [
           "full"
         ],
@@ -4243,6 +5629,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.76,
+                "claude-haiku-5-5": 0.5,
+                "gpt-6.1-sol": 0.7,
+                "kimi-k2.6": 0.36
+              },
+              "cross": 0.15,
+              "cross_populated_only": null,
+              "null_rate": 0.8,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "emotion.appraisal.urgency.value": {
@@ -4263,11 +5668,12 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member deleted from the draft 2026-10-18",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
+        "comparability": "extractor-bound",
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); deleted from the draft schema 2026-10-18: the field is coded text + codings"
       },
       "values": [
         {
@@ -4326,6 +5732,7 @@
         "description": "The stance toward uncertainty or potential risk embedded in the moment",
         "constraints": "cautious / balanced / bold",
         "profiles": [
+          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -4347,9 +5754,29 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "interpretive",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "interpretive",
+              "repeat": {
+                "claude-sonnet-5-5": 0.8,
+                "claude-haiku-5-5": 0.46,
+                "gpt-6.1-sol": 0.83,
+                "kimi-k2.6": 0.73
+              },
+              "cross": 0.18,
+              "cross_populated_only": null,
+              "null_rate": 0.62,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 interpretive (repeatability met by >= 3 of 4, cross missed)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "interpretive"
       },
       "values": [
         {
@@ -4378,12 +5805,12 @@
     {
       "from": "impulse.agency_level",
       "to": "emotion.appraisal.control",
-      "disposition": "reshaped",
+      "disposition": "renamed",
       "action": "move",
       "shape_from": "closed_enum",
-      "shape_to": "dimension (value removed, R5)",
-      "shape": "dimension (value removed, R5)",
-      "note": "EmotionML scherer-appraisals#control; MFOEM:000110/000116",
+      "shape_to": "coded (value removed, R5)",
+      "shape": "coded (value removed, R5)",
+      "note": "EmotionML scherer-appraisals#control as a coding; MFOEM:000110/000116; numeric value member removed (R5, applied 2026-10-18)",
       "v083": {
         "description": "The perceived ability to act or influence the situation",
         "constraints": "low, medium, high",
@@ -4399,7 +5826,7 @@
       },
       "v09": {
         "description": "The perceived ability to act or influence the situation",
-        "constraints": "text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text",
+        "constraints": "text low / medium / high; codings on EDM vocab control/v1, EmotionML scherer-appraisals#control and MFOEM. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).",
         "profiles": [
           "full"
         ],
@@ -4422,6 +5849,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.78,
+                "claude-haiku-5-5": 0.55,
+                "gpt-6.1-sol": 0.68,
+                "kimi-k2.6": 0.42
+              },
+              "cross": 0.36,
+              "cross_populated_only": null,
+              "null_rate": 0.79,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "emotion.appraisal.control.value": {
@@ -4442,11 +5888,12 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member deleted from the draft 2026-10-18",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         },
-        "value_member": "removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut"
+        "comparability": "extractor-bound",
+        "value_member": "removed (R5 2026-10-18; never populated in run 1); deleted from the draft schema 2026-10-18: the field is coded text + codings"
       },
       "values": [
         {
@@ -4499,7 +5946,8 @@
         "constraints": "regulated / wavering / dysregulated",
         "profiles": [
           "opt-in (partner manifest)"
-        ]
+        ],
+        "comparability": null
       },
       "values": [
         {
@@ -4553,7 +6001,8 @@
         "constraints": "secure / anxious / avoidant / disorganized; codings on EDM vocab attachment_style/v1 with Ainsworth / Main letter codes as display",
         "profiles": [
           "opt-in (partner manifest)"
-        ]
+        ],
+        "comparability": null
       },
       "values": [
         {
@@ -4616,6 +6065,8 @@
         "description": "The primary strategy used to manage or integrate the emotional experience",
         "constraints": "Canonical: reframe_meaning, seek_support, distract, ritualize, confront, detach, process (Ways of Coping and Gross families applied as codes). Free text accepted.",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
         "run1_annotations": {
@@ -4636,9 +6087,30 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.82,
+                "claude-haiku-5-5": 0.69,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.74
+              },
+              "cross": 0.54,
+              "cross_populated_only": null,
+              "null_rate": 0.45,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
-        }
+        },
+        "comparability": "comparable"
       },
       "values": [
         {
@@ -4708,6 +6180,7 @@
           "extended",
           "full"
         ],
+        "comparability": "comparable",
         "run1_annotations": {
           "narrative.self_position": {
             "x_run1": {
@@ -4723,6 +6196,24 @@
               "null_rate": 0.79,
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.96,
+                "claude-haiku-5-5": 0.9,
+                "gpt-6.1-sol": 0.93,
+                "kimi-k2.6": 0.96
+              },
+              "cross": 0.87,
+              "cross_populated_only": 0.81,
+              "null_rate": 0.79,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass on populated answers (populated-only cross 0.81 >= 0.60)"
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -4741,6 +6232,7 @@
         "profiles": [
           "full"
         ],
+        "comparability": "extractor-bound",
         "run1_annotations": {
           "emotion.kind": {
             "x_run1": {
@@ -4760,6 +6252,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 1.0,
+                "claude-haiku-5-5": 0.61,
+                "gpt-6.1-sol": 0.84,
+                "kimi-k2.6": 0.6
+              },
+              "cross": 0.24,
+              "cross_populated_only": null,
+              "null_rate": 0.98,
+              "flags": [
+                "sparse"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         }
@@ -4767,16 +6278,17 @@
     },
     {
       "path": "emotion.arousal",
-      "shape": "dimension (value removed, R5)",
+      "shape": "coded (value removed, R5)",
       "disposition": "added",
-      "note": "Russell; PAD; GRID; EmotionML pad-dimensions#arousal",
+      "note": "Russell; PAD; GRID; EmotionML pad-dimensions#arousal as a coding; born without a numeric value member (R5, applied 2026-10-18)",
       "populated_by_migration": false,
       "v09": {
         "description": "The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.",
-        "constraints": "text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed",
+        "constraints": "text low / medium / high; codings on EDM vocab arousal/v1 and EmotionML pad-dimensions#arousal; NULL when not expressed. No numeric value member (R5, 2026-10-18).",
         "profiles": [
           "full"
         ],
+        "comparability": "extractor-bound",
         "run1_annotations": {
           "emotion.arousal.text": {
             "x_run1": {
@@ -4797,6 +6309,26 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.7,
+                "claude-haiku-5-5": 0.59,
+                "gpt-6.1-sol": 0.73,
+                "kimi-k2.6": 0.47
+              },
+              "cross": 0.26,
+              "cross_populated_only": null,
+              "null_rate": 0.91,
+              "flags": [
+                "borderline",
+                "sparse"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           },
           "emotion.arousal.value": {
@@ -4817,7 +6349,7 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
-            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut",
+            "x_status": "removed by R5 (2026-10-18): never populated in run 1; member deleted from the draft 2026-10-18",
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         }
@@ -4833,8 +6365,11 @@
         "description": "To whom or what the subject attributes the cause of the event (\"I blamed myself\", \"it was just bad luck\"). Explicit content only.",
         "constraints": "self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
+        "comparability": "comparable",
         "run1_annotations": {
           "emotion.appraisal.attribution": {
             "x_run1": {
@@ -4851,6 +6386,24 @@
               "flags": [],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.98,
+                "claude-haiku-5-5": 0.8,
+                "gpt-6.1-sol": 0.77,
+                "kimi-k2.6": 0.78
+              },
+              "cross": 0.55,
+              "cross_populated_only": null,
+              "null_rate": 0.78,
+              "flags": [],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         }
@@ -4866,8 +6419,11 @@
         "description": "Coded companion to context.event: the content category of the event as the subject describes it.",
         "constraints": "Singer & Blagov / Thorne & McLean categories: relationships, life_threatening_events, recreation_exploration, achievement_mastery, guilt_shame, drug_alcohol_tobacco_use, not_classifiable (labels knowledge-reconstructed; REPORT.md section 9)",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
+        "comparability": "comparable",
         "run1_annotations": {
           "context.event_category": {
             "x_run1": {
@@ -4886,6 +6442,26 @@
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.86,
+                "claude-haiku-5-5": 0.79,
+                "gpt-6.1-sol": 0.81,
+                "kimi-k2.6": 0.74
+              },
+              "cross": 0.6,
+              "cross_populated_only": null,
+              "null_rate": 0.05,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         }
@@ -4903,6 +6479,7 @@
         "profiles": [
           "full"
         ],
+        "comparability": "extractor-bound",
         "run1_annotations": {
           "context.relationship_model": {
             "x_run1": {
@@ -4922,6 +6499,25 @@
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
             },
             "x_comparability": "extractor-bound",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "cut",
+              "repeat": {
+                "claude-sonnet-5-5": 0.75,
+                "claude-haiku-5-5": 0.48,
+                "gpt-6.1-sol": 0.63,
+                "kimi-k2.6": 0.59
+              },
+              "cross": 0.2,
+              "cross_populated_only": null,
+              "null_rate": 0.73,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)"
+            },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
         }
@@ -4937,8 +6533,11 @@
         "description": "Why the subject says the memory matters: to guide action (directive), to define the self (self), or to connect with others (social). Multi-valued; stated-only.",
         "constraints": "Pillemer 1992 / Bluck 2003 memory functions",
         "profiles": [
+          "essential",
+          "extended",
           "full"
         ],
+        "comparability": "comparable",
         "run1_annotations": {
           "salience.function": {
             "x_run1": {
@@ -4956,6 +6555,26 @@
                 "borderline"
               ],
               "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)"
+            },
+            "x_comparability": "comparable",
+            "x_comparability_basis": {
+              "run": "run 1",
+              "ruling": "R17 rule (R4 annotation)",
+              "outcome": "pass",
+              "repeat": {
+                "claude-sonnet-5-5": 0.92,
+                "claude-haiku-5-5": 0.68,
+                "gpt-6.1-sol": 0.87,
+                "kimi-k2.6": 0.76
+              },
+              "cross": 0.52,
+              "cross_populated_only": null,
+              "null_rate": 0.73,
+              "flags": [
+                "borderline"
+              ],
+              "source": "experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)",
+              "why": "run-1 pass; agreement measured over all answers (no populated-only figure for this shape)"
             },
             "x_rulings": "docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md"
           }
@@ -5161,18 +6780,25 @@
   },
   "profiles": {
     "essential": [
-      "narrative.subject",
-      "narrative.trigger",
       "narrative.harm",
-      "narrative.drive",
-      "narrative.integration",
-      "narrative.arc",
+      "narrative.summary",
+      "narrative.meaning",
+      "narrative.turning_point",
       "narrative.self_position",
       "emotion.primary",
-      "emotion.secondary",
       "emotion.valence",
       "emotion.intensity",
-      "salience.retrieval_cues"
+      "emotion.bodily_sensation",
+      "emotion.appraisal.attribution",
+      "context.event_category",
+      "context.relationship",
+      "context.scope",
+      "salience.tether",
+      "salience.function",
+      "motivation.action_tendency",
+      "motivation.need",
+      "motivation.temporal_focus",
+      "motivation.coping"
     ],
     "extended": [
       "narrative.subject",
@@ -5184,27 +6810,25 @@
       "narrative.meaning",
       "narrative.identity_link",
       "narrative.turning_point",
-      "narrative.arc",
-      "narrative.valence_shift",
       "narrative.self_position",
       "emotion.primary",
-      "emotion.secondary",
       "emotion.valence",
       "emotion.intensity",
-      "emotion.meta",
       "emotion.bodily_sensation",
       "emotion.temporal_profile",
-      "context.event",
-      "context.place",
-      "context.people",
+      "emotion.appraisal.attribution",
+      "context.event_category",
       "context.relationship",
-      "context.life_stage",
       "context.scope",
       "salience.memory_type",
       "salience.tether",
-      "salience.retrieval_cues",
-      "salience.recurrence",
-      "salience.linkage_strength"
+      "salience.linkage_strength",
+      "salience.function",
+      "motivation.action_tendency",
+      "motivation.need",
+      "motivation.temporal_focus",
+      "motivation.risk_posture",
+      "motivation.coping"
     ],
     "full": [
       "narrative.subject",
@@ -5258,7 +6882,66 @@
     "trait_opt_in_partner_profiles": [
       "partner:com.deepadata.therapy.v1"
     ],
-    "rule": "Essential = 7 narrative + 4 emotion + salience.retrieval_cues (12; ruling 2026-10-17). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
+    "comparability": {
+      "narrative.subject": "interpretive",
+      "narrative.trigger": "interpretive",
+      "narrative.harm": "comparable",
+      "narrative.drive": "interpretive",
+      "narrative.integration": "null-driven",
+      "narrative.summary": "comparable",
+      "narrative.meaning": "comparable",
+      "narrative.identity_link": "null-driven",
+      "narrative.turning_point": "comparable",
+      "narrative.arc": "extractor-bound",
+      "narrative.valence_shift": "extractor-bound",
+      "narrative.self_position": "comparable",
+      "emotion.primary": "comparable",
+      "emotion.secondary": "extractor-bound",
+      "emotion.kind": "extractor-bound",
+      "emotion.valence": "comparable",
+      "emotion.arousal": "extractor-bound",
+      "emotion.intensity": "comparable",
+      "emotion.meta": "extractor-bound",
+      "emotion.bodily_sensation": "comparable",
+      "emotion.temporal_profile": "interpretive",
+      "emotion.appraisal.urgency": "extractor-bound",
+      "emotion.appraisal.control": "extractor-bound",
+      "emotion.appraisal.attribution": "comparable",
+      "context.event": "extractor-bound",
+      "context.event_category": "comparable",
+      "context.place": "extractor-bound",
+      "context.people": "extractor-bound",
+      "context.relationship": "comparable",
+      "context.relationship_model": "extractor-bound",
+      "context.life_stage": "extractor-bound",
+      "context.scope": "comparable",
+      "salience.memory_type": "interpretive",
+      "salience.tether": "comparable",
+      "salience.retrieval_cues": "extractor-bound",
+      "salience.themes": "extractor-bound",
+      "salience.recurrence": "extractor-bound",
+      "salience.persistence": "extractor-bound",
+      "salience.linkage_strength": "interpretive",
+      "salience.function": "comparable",
+      "salience.resilience": "extractor-bound",
+      "salience.trajectory": "extractor-bound",
+      "motivation.action_tendency": "comparable",
+      "motivation.need": "comparable",
+      "motivation.temporal_focus": "comparable",
+      "motivation.risk_posture": "interpretive",
+      "motivation.coping": "comparable"
+    },
+    "lead_units": {
+      "emotion.valence": "emotion.valence.text",
+      "emotion.arousal": "emotion.arousal.text",
+      "emotion.intensity": "emotion.intensity.value",
+      "emotion.appraisal.urgency": "emotion.appraisal.urgency.text",
+      "emotion.appraisal.control": "emotion.appraisal.control.text",
+      "context.scope": "context.scope.text",
+      "salience.tether": "salience.tether.type",
+      "salience.persistence": "salience.persistence.text"
+    },
+    "rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/."
   },
   "coding_shape": {
     "coded": {
@@ -5276,7 +6959,8 @@
     "dimension": {
       "text": "ordinal label or null",
       "value": "number or null (never derived from text by migration)",
-      "codings": "[...]"
+      "codings": "[...]",
+      "note": "emotion.intensity only (R5)"
     },
     "edm_vocabulary": "https://emotionaldatamodel.org/vocab/<field>/v1#<value>",
     "xref_namespace": "https://emotionaldatamodel.org/xref/v1/<framework_id>#<slug> (placeholder for frameworks that publish no concept URIs)"
@@ -5363,11 +7047,11 @@
     "steps": [
       "1. Rename domains and fields per field_map.",
       "2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.",
-      "3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.",
-      "4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].",
+      "3. Carry numeric intensity into emotion.intensity.value; valence / urgency / control carry text + codings only (R5: no value member).",
+      "4. Concatenate echo + recall_triggers + retrieval_keys, in that order, into salience.retrieval_cues, keeping at most three (R16); preserve any further value verbatim in extensions.org.emotionaldatamodel.migration.retrieval_cues_overflow; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].",
       "5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.",
       "6. Copy cut-field values into extensions.org.emotionaldatamodel.migration.v0_8_3_cut_fields.",
-      "7. Prune to the target profile manifest; any populated field outside it goes to extensions.org.emotionaldatamodel.migration.out_of_profile_fields (nothing for the seven synthetic examples once Essential carries salience.retrieval_cues).",
+      "7. Prune to the target profile manifest (derived from comparability class, R17); any populated field outside it goes to extensions.org.emotionaldatamodel.migration.out_of_profile_fields.",
       "8. Set meta.version."
     ],
     "reference_implementation": "docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py"

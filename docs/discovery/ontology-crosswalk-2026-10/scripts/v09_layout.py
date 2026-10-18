@@ -10,6 +10,10 @@ from example-full-profile.json; with <migrated-out-dir> every artifact in the di
 <migrated-out-dir>/unpruned/ so the profile-agnostic relayout can be validated too).
 
 Discovery only. Nothing here is normative; the crosswalk is written with status "draft".
+
+Rulings applied here (rulings-2026-10-18.md, ruling under delegation, veto by exception): R5 (value member of valence / arousal /
+urgency / control deleted), R6 (meaning interpretive-attributed), R11-R16 (core-slot text, shape, class), R17 (profiles derived from
+comparability class; see section 3e). `python -I scripts/v09_layout.py --membership` prints the R17 membership table.
 """
 import json, sys, os, re
 from collections import Counter
@@ -30,7 +34,7 @@ MF = {c['label']: c['id'] for c in mfoem['classes'] if c.get('label') and c['id'
 # ---------------------------------------------------------------------------
 # 1. Field map. One row per v0.8.3 field (57) plus the new v0.9 fields.
 #    action: rename | move | merge | cut | trait
-#    shape : text | list | coded (text+codings) | coded_list | dimension (text+value+codings) | bool | number | object
+#    shape : text | list | coded (text+codings) | coded_list | dimension (text+value+codings; emotion.intensity only after R5) | bool | number | object
 # ---------------------------------------------------------------------------
 FIELD_MAP = [
  # core -> narrative
@@ -70,7 +74,7 @@ FIELD_MAP = [
  # gravity -> emotion / salience
  ('gravity.emotional_weight',     'emotion.intensity',          'move',   'dimension', 'EmotionML intensity-dimension; numeric value carried as-is'),
  ('gravity.emotional_density',    None,                         'cut',    None,        'no framework construct; text preserved in extensions'),
- ('gravity.valence',              'emotion.valence',            'move',   'dimension', 'MFOEM:000207/000208; EmotionML fsre-dimensions#valence'),
+ ('gravity.valence',              'emotion.valence',            'move',   'coded',     'MFOEM:000207/000208; EmotionML fsre-dimensions#valence as a coding; numeric value member removed (R5, applied 2026-10-18)'),
  ('gravity.viscosity',            'salience.persistence',       'merge',  'object',    'persistence.text'),
  ('gravity.gravity_type',         'salience.tether',            'merge',  'object',    'tether.stake (Lazarus ego-involvement)'),
  ('gravity.tether_type',          'salience.tether',            'rename', 'object',    'tether.type (EDM vocab tether/v1; OCC branches)'),
@@ -89,9 +93,9 @@ FIELD_MAP = [
  ('impulse.temporal_focus',       'motivation.temporal_focus',  'rename', 'coded',  'Tulving chronesthesia'),
  ('impulse.directionality',       'context.scope',              'merge',  'object', 'scope.direction'),
  ('impulse.social_visibility',    None,                         'cut',    None,     'duplicates context.scope and meta.visibility; text preserved in extensions'),
- ('impulse.urgency',              'emotion.appraisal.urgency',  'move',   'dimension', 'EmotionML ema-appraisals#urgency; MFOEM:000089/000090'),
+ ('impulse.urgency',              'emotion.appraisal.urgency',  'move',   'coded',     'EmotionML ema-appraisals#urgency as a coding; MFOEM:000089/000090; numeric value member removed (R5, applied 2026-10-18)'),
  ('impulse.risk_posture',         'motivation.risk_posture',    'rename', 'coded',  'Lazarus threat / challenge'),
- ('impulse.agency_level',         'emotion.appraisal.control',  'move',   'dimension', 'EmotionML scherer-appraisals#control; MFOEM:000110/000116'),
+ ('impulse.agency_level',         'emotion.appraisal.control',  'move',   'coded',     'EmotionML scherer-appraisals#control as a coding; MFOEM:000110/000116; numeric value member removed (R5, applied 2026-10-18)'),
  ('impulse.regulation_state',     'trait.regulation_state',     'trait',  'coded',  'Gross; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile'),
  ('impulse.attachment_style',     'trait.attachment_style',     'trait',  'coded',  'Ainsworth / Main; person-level reading (theoretical-conflicts section 5) -> opt-in trait profile'),
  ('impulse.coping_style',         'motivation.coping',          'rename', 'coded',  'Lazarus & Folkman Ways of Coping; Gross family as second coding'),
@@ -99,7 +103,7 @@ FIELD_MAP = [
 NEW_FIELDS = [
  ('narrative.self_position',        'text',   "stated-only: the subject's expressed lens on themselves in the story; codes to McAdams imago (open) and agency/communion; Hermans I-positions"),
  ('emotion.kind',                   'coded',  'MFOEM:000001 emotion process | MFOEM:000193 mood process | MFOEM:000006 subjective affective feeling | MFOEM:000199 emotion disposition'),
- ('emotion.arousal',                'dimension', 'Russell; PAD; GRID; EmotionML pad-dimensions#arousal'),
+ ('emotion.arousal',                'coded',  'Russell; PAD; GRID; EmotionML pad-dimensions#arousal as a coding; born without a numeric value member (R5, applied 2026-10-18)'),
  ('emotion.appraisal.attribution',  'coded',  'Scherer agent-self / agent-other / agent-nature; MFOEM:000076 / 000078 / 000077'),
  ('context.event_category',         'coded',  'Singer & Blagov / Thorne & McLean content categories'),
  ('context.relationship_model',     'coded',  'Fiske relational models'),
@@ -218,11 +222,23 @@ for f, v, to, why in DEPRECATED_VALUES: DEP.setdefault(f, []).append({'value': v
 def desc_of(*paths):
     return ' / '.join(D083[p]['description'] for p in paths)
 
+# Run-2 Arm B field texts, verbatim from experiment-plan-run2.md section 4.3 (frozen b1354ee), for the slots whose ruling adopted
+# Arm B (R11 harm, R12 trigger). The referent rule of that block is carried as the constraint. R13 / R14 / R15 keep the v0.8.3
+# wording (Arm A) under the v0.9 name, which desc_of() already provides.
+ARM_B_RULES = {
+ 'trigger': 'What set the feeling off? Name the moment, event or perception the text presents as starting the response it dwells on most. Not the topic of the text and not its subject; if the text states a feeling without an initiating event, null.',
+ 'harm': "What hurt? Name the loss, pain or vulnerability the text states, in the text's own word where it has one. A stated worry, fear, loss or vulnerability counts; one you would have to infer does not. Null if the text states none.",
+}
+ARM_B_CONSTRAINT = ('1-5 words, single string. Referent rule: name ONE referent that the text itself mentions, using the text\'s own noun phrase where it has one; '
+                    'if several candidates qualify, choose the one the text returns to most; use the most specific noun phrase the text itself uses; '
+                    'do not substitute a category the text does not use and do not add detail the text does not give. Null when no passage supports an answer; never null when one does.')
+RETRIEVAL_CUES_MAX = 3  # R16
+
 # field path -> (description, x_constraints)
 DESC = {
  'narrative.subject': (desc_of('core.anchor'), D083['core.anchor']['constraints']),
- 'narrative.trigger': (desc_of('core.spark'), D083['core.spark']['constraints']),
- 'narrative.harm': (desc_of('core.wound'), D083['core.wound']['constraints']),
+ 'narrative.trigger': (ARM_B_RULES['trigger'], ARM_B_CONSTRAINT + " Arm B definition adopted by R12 (2026-10-18); v0.8.3 spark read: '" + desc_of('core.spark') + "'."),
+ 'narrative.harm': (ARM_B_RULES['harm'], ARM_B_CONSTRAINT + " Arm B definition adopted by R11 (2026-10-18); v0.8.3 wound read: '" + desc_of('core.wound') + "'."),
  'narrative.drive': (desc_of('core.fuel'), D083['core.fuel']['constraints']),
  'narrative.integration': (desc_of('core.bridge'), D083['core.bridge']['constraints']),
  'narrative.summary': (desc_of('core.narrative'), D083['core.narrative']['constraints']),
@@ -236,14 +252,14 @@ DESC = {
  'emotion.primary': (desc_of('constellation.emotion_primary'), D083['constellation.emotion_primary']['constraints']),
  'emotion.secondary': ('Secondary emotional nuances that add depth to the primary emotion, including any complex or layered state (v0.8.3 emotion_subtone + higher_order_emotion)', '0-5 items; free text; each item may carry codings with a per-coding confidence'),
  'emotion.kind': ('Whether the subject describes the affect as an episode with an object (emotion), a diffuse state without one (mood), a felt bodily quality (feeling), or a standing disposition. Stated-only; NULL when the subject does not distinguish.', 'emotion -> MFOEM:000001; mood -> MFOEM:000193; feeling -> MFOEM:000006; disposition -> MFOEM:000199'),
- 'emotion.valence': (desc_of('gravity.valence'), 'text positive / negative / mixed; value in [-1, 1] on EmotionML fsre-dimensions#valence, populated only by an extraction that produces it (never derived from text)'),
- 'emotion.arousal': ('The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.', 'text low / medium / high; value in [0, 1] on EmotionML pad-dimensions#arousal; NULL when not expressed'),
+ 'emotion.valence': (desc_of('gravity.valence'), 'text positive / negative / mixed; codings on EDM vocab valence/v1, MFOEM and EmotionML fsre-dimensions#valence. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).'),
+ 'emotion.arousal': ('The stated activation level of the experience (keyed up vs calm), independent of valence and of intensity. Stated-only.', 'text low / medium / high; codings on EDM vocab arousal/v1 and EmotionML pad-dimensions#arousal; NULL when not expressed. No numeric value member (R5, 2026-10-18).'),
  'emotion.intensity': (desc_of('gravity.emotional_weight'), 'value in [0, 1] (v0.8.3 emotional_weight carried as-is); text is an optional ordinal label'),
  'emotion.meta': (desc_of('constellation.meta_emotional_state'), D083['constellation.meta_emotional_state']['constraints']),
  'emotion.bodily_sensation': (desc_of('constellation.somatic_signature'), D083['constellation.somatic_signature']['constraints']),
  'emotion.temporal_profile': (desc_of('constellation.temporal_rhythm'), 'Canonical: ' + ', '.join(D083['constellation.temporal_rhythm']['canonical_values']) + '. looping and cyclic are deprecated (code to recurring). Free text accepted.'),
- 'emotion.appraisal.urgency': (desc_of('impulse.urgency'), 'text calm / elevated / pressing / acute; value in [0, 1] on EmotionML ema-appraisals#urgency, never derived from text'),
- 'emotion.appraisal.control': (desc_of('impulse.agency_level'), 'text low / medium / high; value in [0, 1] on EmotionML scherer-appraisals#control, never derived from text'),
+ 'emotion.appraisal.urgency': (desc_of('impulse.urgency'), 'text calm / elevated / pressing / acute; codings on EDM vocab urgency/v1, EmotionML ema-appraisals#urgency and MFOEM. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).'),
+ 'emotion.appraisal.control': (desc_of('impulse.agency_level'), 'text low / medium / high; codings on EDM vocab control/v1, EmotionML scherer-appraisals#control and MFOEM. No numeric value member: removed by R5 (2026-10-18; never populated in run 1).'),
  'emotion.appraisal.attribution': ('To whom or what the subject attributes the cause of the event ("I blamed myself", "it was just bad luck"). Explicit content only.', 'self -> MFOEM:000076 / EmotionML agent-self; other -> MFOEM:000078 / agent-other; chance -> MFOEM:000077 / agent-nature'),
  'context.event': (desc_of('milky_way.event_type'), D083['milky_way.event_type']['constraints']),
  'context.event_category': ('Coded companion to context.event: the content category of the event as the subject describes it.', 'Singer & Blagov / Thorne & McLean categories: ' + ', '.join(NEW_VOCAB['event_category']) + ' (labels knowledge-reconstructed; REPORT.md section 9)'),
@@ -255,7 +271,7 @@ DESC = {
  'context.scope': ('The perspective through which the experience is narrated (v0.8.3 relational_perspective) and whether the impulse is self-directed, relational or expansive beyond self (v0.8.3 directionality)', 'text: self / partner / family / friends / community / humanity; direction: inward / outward / transcendent; codings on EDM vocab scope/v1 (Bronfenbrenner nested systems as companion codes)'),
  'salience.memory_type': (desc_of('constellation.memory_type'), 'Canonical: ' + ', '.join(D083['constellation.memory_type']['canonical_values']) + '. legacy_artifact is deprecated (an object tether, not a memory type).'),
  'salience.tether': ('What the experience is emotionally anchored to: its kind (v0.8.3 tether_type), the concrete referent (v0.8.3 symbolic_anchor) and what is at stake in it (v0.8.3 gravity_type)', 'type: canonical ' + ', '.join(D083['gravity.tether_type']['canonical_values']) + ', free text accepted; referent and stake: free text'),
- 'salience.retrieval_cues': ('Cues that reactivate the memory: what continues to resonate (v0.8.3 core.echo), sensory or symbolic triggers (recall_triggers) and compact retrieval hooks (retrieval_keys), concatenated in that order by migration', 'Short phrases; order carries no meaning'),
+ 'salience.retrieval_cues': ('What would bring this back? At most three cues the text says still resonate or would re-evoke the experience (a sensory detail, a phrase, an object), the first being the one the text returns to most. Carries v0.8.3 core.echo (first), then recall_triggers and retrieval_keys by migration. (R16 2026-10-18: short ordered list adopted; the single-string echo did no better in run 2.)', 'Short ordered list, 1-5 words per cue, at most 3 items; order carries meaning (first = the cue the text returns to most); empty list only if the text names nothing that recurs. Migration keeps the first three merged values here and preserves any further v0.8.3 values verbatim in extensions.' + LEGACY_EXT + '.retrieval_cues_overflow.'),
  'salience.themes': (desc_of('gravity.nearby_themes'), D083['gravity.nearby_themes']['constraints']),
  'salience.recurrence': (desc_of('gravity.recurrence_pattern'), 'Canonical: cyclical, isolated, chronic; emerging is deprecated. Free text accepted. NULL when the pattern cannot be determined.'),
  'salience.persistence': ('How long the emotion is expected to stay: the perceived stickiness (v0.8.3 viscosity) and the expected decay rate (v0.8.3 temporal_decay)', 'text: low / medium / high / enduring (fluid deprecated); decay: fast / moderate / slow; codings on EDM vocab persistence/v1 (transient / short / enduring / chronic) by the fixed recode table in v09_layout.py'),
@@ -342,12 +358,14 @@ def field_rows():
             row['v09'] = {'description': d, 'constraints': c, 'profiles': profiles_of_09(new)}
             ann = run1_for_field(new)
             if ann: row['v09']['run1_annotations'] = ann
-            if new + '.value' in VALUE_REMOVED: row['v09']['value_member'] = 'removed (R5 2026-10-18; never populated in run 1); shape becomes coded text + codings when the v0.9 schema is cut'; row['shape_to'] = row['shape'] = 'dimension (value removed, R5)'
+            row['v09']['comparability'] = COMPARABILITY.get(new)
+            if new in RUN2: row['v09']['run2'] = {'ruling': RUN2[new]['ruling'], 'arm_adopted': RUN2[new]['arm_adopted'], 'class': RUN2[new]['class'], 'class_basis': RUN2[new]['class_basis']}
+            if new + '.value' in VALUE_REMOVED: row['v09']['value_member'] = 'removed (R5 2026-10-18; never populated in run 1); deleted from the draft schema 2026-10-18: the field is coded text + codings'; row['shape_to'] = row['shape'] = 'coded (value removed, R5)'
             elif new + '.value' in VALUE_KEPT: row['v09']['value_member'] = 'kept (R5 2026-10-18)'
         if old in CORE_SLOTS:
             row['run2_arm_a'] = {'name': old.split('.')[1], 'description': f['description'], 'constraints': f['constraints'],
                                  'examples': examples_of(f['constraints']), 'shape': 'string (single value), as in v0.8.3',
-                                 'note': 'verbatim v0.8.3 field text for experiment-plan-run2.md Arm A; x_status pending run 2 (prompt test), ruling R2/R3 2026-10-18'}
+                                 'note': 'verbatim v0.8.3 field text; was Arm A of run 2 (experiment-plan-run2.md section 4.2); the slot ruling R11-R16 says which arm the v0.9 text adopts'}
         row['values'] = value_dispositions(old, new, action)
         rows.append(row)
     return rows
@@ -363,15 +381,43 @@ def new_value_rows():
 CANONICAL_VALUES_083 = sum(len(f['canonical_values']) for f in FIELDS_083 if f['vocabulary'] in ('closed_enum', 'canonical_open'))
 
 # ---------------------------------------------------------------------------
-# 3d. Run-1 pooled outcomes (experiments/2026-10-17/RESULTS.md section 1.1; scoring/field_table.json "pooled") and the
-#     annotations ruled on 2026-10-18 (rulings-2026-10-18.md R2, R4, R5). Annotations only: no profile membership changes,
-#     no field removed, no shape changed. Embedded as a literal so the draft schema build does not read experiment files.
+# 3d. Evidence, embedded as literals so the draft schema build reads no experiment file.
+#     RUN1_POOLED: run-1 pooled outcome per scored unit (experiments/2026-10-17/RESULTS.md section 1.1; scoring/field_table.json
+#     "pooled"; thresholds frozen in experiment-plan.md section 4.1; outcome rule section 4.3).
+#     RUN2: run-2 pooled outcome per core slot and prompt arm under the R9 three-voter rule (experiments/2026-10-18-run2/RESULTS.md
+#     section 1; scoring/field_table.json), with the arm and the comparability class that rulings R11-R16 fixed for the slot.
+#     R5 (applied 2026-10-18): the value member of valence / arousal / urgency / control is deleted from the draft; the four
+#     'pending' value units stay in RUN1_POOLED as the record of why (never populated).
 # ---------------------------------------------------------------------------
 SIX_SLOTS = ['narrative.subject', 'narrative.trigger', 'narrative.harm', 'narrative.drive', 'narrative.integration', 'salience.retrieval_cues']
-NULL_DRIVEN = ['narrative.integration', 'narrative.identity_link']
 VALUE_REMOVED = ['emotion.valence.value', 'emotion.arousal.value', 'emotion.appraisal.urgency.value', 'emotion.appraisal.control.value']
 VALUE_KEPT = ['emotion.intensity.value', 'salience.linkage_strength']
 RUN1_SOURCE = 'experiments/2026-10-17/RESULTS.md section 1.1 (pooled, 150 texts, frozen thresholds of experiment-plan.md section 4.1)'
+RUN2_SOURCE = 'experiments/2026-10-18-run2/RESULTS.md section 1 (pooled, 150 texts, R9 three-voter rule, thresholds frozen in experiment-plan-run2.md section 7 at b1354ee)'
+RULINGS = 'docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md'
+VOTERS = ['claude-sonnet-5-5', 'gpt-6.1-sol', 'kimi-k2.6']
+def _arm(rep, cross, cross_nn, null, outcome, two_voter):
+    return {'repeat': dict(zip(VOTERS, rep)), 'cross': cross, 'cross_populated_only': cross_nn, 'null_rate': null, 'outcome': outcome, 'two_voter': two_voter}
+RUN2 = {
+ 'narrative.harm':         {'ruling': 'R11', 'arm_adopted': 'B', 'class': 'comparable',
+                            'class_basis': 'Arm B passes the frozen three-voter rule (all three voters >= 0.80, cross 0.64 >= 0.60; populated-only 0.61)',
+                            'A': _arm((0.93, 0.89, 0.79), 0.66, 0.63, 0.35, 'borderline-cut', 'pass'), 'B': _arm((0.90, 0.85, 0.82), 0.64, 0.61, 0.33, 'pass', 'pass')},
+ 'narrative.trigger':      {'ruling': 'R12', 'arm_adopted': 'B', 'class': 'interpretive',
+                            'class_basis': 'Arm B is interpretive under the frozen rule (all three voters >= 0.80, cross 0.56 < 0.60; populated-only 0.61)',
+                            'A': _arm((0.93, 0.87, 0.74), 0.53, 0.57, 0.09, 'borderline-cut', 'interpretive'), 'B': _arm((0.90, 0.83, 0.80), 0.56, 0.61, 0.19, 'interpretive', 'interpretive')},
+ 'narrative.subject':      {'ruling': 'R13', 'arm_adopted': 'A', 'class': 'interpretive',
+                            'class_basis': 'neither arm passes; Arm A text kept (Arm B selection rule lowered cross 0.53 -> 0.41); classed interpretive on the two-voter reading (Sonnet 0.91 / GPT 0.85 repeat, cross2 0.58), Kimi 0.76 the one voter short',
+                            'A': _arm((0.91, 0.85, 0.76), 0.53, 0.58, 0.05, 'borderline-cut', 'interpretive'), 'B': _arm((0.94, 0.84, 0.72), 0.41, 0.42, 0.01, 'borderline-cut', 'interpretive')},
+ 'narrative.integration':  {'ruling': 'R14', 'arm_adopted': 'A', 'class': 'null-driven',
+                            'class_basis': 'cross above the bar in both arms (0.67 / 0.62; populated-only 0.60 / 0.62) with one voter short in each (Kimi 0.75 in A, GPT 0.79 in B); null 0.48 unchanged by the Arm B null clause; the R4 null-driven annotation stays until a run passes it with all three voters',
+                            'A': _arm((0.89, 0.88, 0.75), 0.67, 0.60, 0.48, 'borderline-cut', 'pass'), 'B': _arm((0.89, 0.79, 0.83), 0.62, 0.62, 0.48, 'borderline-cut', 'cut')},
+ 'narrative.drive':        {'ruling': 'R15', 'arm_adopted': 'A', 'class': 'interpretive',
+                            'class_basis': 'not comparable under either text (cross 0.39 / 0.46); Arm A kept as the better of two failing texts; repeatable in Sonnet and GPT (0.85 / 0.86), Kimi 0.68',
+                            'A': _arm((0.85, 0.86, 0.68), 0.39, 0.48, 0.27, 'borderline-cut', 'interpretive'), 'B': _arm((0.82, 0.78, 0.70), 0.46, 0.51, 0.27, 'cut', 'cut')},
+ 'salience.retrieval_cues': {'ruling': 'R16', 'arm_adopted': 'B', 'class': 'extractor-bound',
+                            'class_basis': 'no arm and no corpus passes (cross 0.40 / 0.40); the capped list removed empty lists (null 0.31 -> 0.07) without raising agreement; Sonnet alone repeats it at 0.82-0.85',
+                            'A': _arm((0.85, 0.80, 0.68), 0.40, 0.43, 0.31, 'borderline-cut', 'interpretive'), 'B': _arm((0.82, 0.77, 0.70), 0.40, 0.42, 0.07, 'cut', 'cut')},
+}
 RUN1_POOLED = {'narrative.subject': {'outcome': 'cut',
                        'repeat': {'claude-sonnet-5-5': 0.86, 'claude-haiku-5-5': 0.7, 'gpt-6.1-sol': 0.71, 'kimi-k2.6': 0.67},
                        'cross': 0.4,
@@ -673,46 +719,115 @@ RUN1_POOLED = {'narrative.subject': {'outcome': 'cut',
                        'null': 0.45,
                        'flags': ['borderline']}}
 
-def run1_annotations(unit):
-    """x_ annotations for one scored unit (a field path, or <field>.text / .value / .direction / .type / .referent / .stake / .decay)."""
-    r = RUN1_POOLED.get(unit); out = {}
-    if r:
-        out['x_run1'] = {'outcome': r['outcome'], 'repeat': r['repeat'], 'cross': r['cross'], 'cross_populated_only': r.get('cross_populated'),
-                         'null_rate': r['null'], 'flags': r['flags'], 'source': RUN1_SOURCE}
-    if unit in NULL_DRIVEN: out['x_comparability'] = 'null-driven'
-    elif r and r['outcome'] == 'interpretive': out['x_comparability'] = 'interpretive'
-    elif r and r['outcome'] == 'cut' and unit not in SIX_SLOTS: out['x_comparability'] = 'extractor-bound'
-    if unit in SIX_SLOTS: out['x_status'] = 'pending run 2 (prompt test)'
-    if unit in VALUE_REMOVED: out['x_status'] = 'removed by R5 (2026-10-18): never populated in run 1; member to be deleted when the v0.9 schema is cut'
-    if unit in VALUE_KEPT: out['x_status'] = 'kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)'
-    if out: out['x_rulings'] = 'docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md'
-    return out
-
-def run1_for_field(path):
-    """annotations for every scored unit under a v0.9 field path (for the crosswalk record)."""
-    return {u: run1_annotations(u) for u in RUN1_POOLED if u == path or u.startswith(path + '.')}
-
 # ---------------------------------------------------------------------------
-# 3b. Profile manifests for the v0.9 draft. Essential is fixed by direction (7 narrative + 4 emotion + salience.retrieval_cues,
-#     ruling 2026-10-17 so that core.echo survives an Essential migration without the legacy extension); Extended and Full
-#     are derived: a carried field is in a profile when any of its v0.8.3 sources was; the six new coded fields are
-#     Full-only; self_position is Essential. trait.* belongs to no canonical profile (opt-in via partner manifest).
+# 3e. Comparability class per unit and per field, and the profile manifests derived from it (R17, 2026-10-18).
+#     Unit class: a core slot takes the class its run-2 ruling fixed (RUN2); any other scored unit takes it from run 1 pooled:
+#     pass with populated-only cross >= 0.60, or pass with no populated-only figure (coded / numeric / boolean units, where
+#     agreement is a kappa or an ICC over all answers) -> comparable; pass with populated-only cross < 0.60 -> null-driven;
+#     interpretive -> interpretive; cut -> extractor-bound. Field class = class of the field's lead unit (LEAD_UNIT: the member
+#     that carries the field's claim); the other members keep their own unit class as an annotation and ride with the field.
+#     Profiles: Essential = every affective field classed comparable; Extended = Essential + interpretive + null-driven;
+#     Full = all 47; partner profiles select freely. Nothing is hand-listed: a change of class moves a field.
 # ---------------------------------------------------------------------------
-ESSENTIAL_09 = ['narrative.subject', 'narrative.trigger', 'narrative.harm', 'narrative.drive', 'narrative.integration', 'narrative.arc',
-                'narrative.self_position', 'emotion.primary', 'emotion.secondary', 'emotion.valence', 'emotion.intensity',
-                'salience.retrieval_cues']
-_P083 = {x['path']: set(x['profiles']) for x in FIELDS_083}
-def _derived(profile):
-    keep = set(ESSENTIAL_09)
-    for old, new, action, shape, note in FIELD_MAP:
-        if new and action != 'trait' and profile in _P083[old]: keep.add(new)
-    return [p for p in ALL_09 if p in keep]
-PROFILES_09 = {'essential': [p for p in ALL_09 if p in set(ESSENTIAL_09)], 'extended': _derived('extended'), 'full': list(ALL_09)}
+CLASSES = ['comparable', 'interpretive', 'null-driven', 'extractor-bound']
+POPULATED_CROSS_MIN = 0.60
+LEAD_UNIT = {'emotion.valence': 'emotion.valence.text', 'emotion.arousal': 'emotion.arousal.text', 'emotion.intensity': 'emotion.intensity.value',
+             'emotion.appraisal.urgency': 'emotion.appraisal.urgency.text', 'emotion.appraisal.control': 'emotion.appraisal.control.text',
+             'context.scope': 'context.scope.text', 'salience.tether': 'salience.tether.type', 'salience.persistence': 'salience.persistence.text'}
+LEAD_WHY = {'emotion.intensity': 'value is the salience weight EDM carries (R5 kept it, R8)', 'salience.tether': 'type is the coded member; referent and stake are free-text companions',
+            'context.scope': 'text is the v0.8.3 relational_perspective; direction is the merged directionality', 'salience.persistence': 'text is the v0.8.3 viscosity; decay is the merged temporal_decay'}
+for _p in ('emotion.valence', 'emotion.arousal', 'emotion.appraisal.urgency', 'emotion.appraisal.control'): LEAD_WHY[_p] = 'text is the only scored member left after R5'
+
+def unit_class(unit):
+    """(class, basis) for one scored unit; class is None for a unit without an outcome (the R5-removed value members)."""
+    if unit in RUN2:
+        r = RUN2[unit]; a = r[r['arm_adopted']]
+        return r['class'], {'run': 'run 2', 'ruling': r['ruling'], 'arm': r['arm_adopted'], 'outcome': a['outcome'], 'repeat': a['repeat'], 'cross': a['cross'],
+                            'cross_populated_only': a['cross_populated_only'], 'null_rate': a['null_rate'], 'two_voter': a['two_voter'], 'why': r['class_basis'], 'source': RUN2_SOURCE}
+    r = RUN1_POOLED[unit]
+    cp = r.get('cross_populated')
+    basis = {'run': 'run 1', 'ruling': 'R17 rule (R4 annotation)', 'outcome': r['outcome'], 'repeat': r['repeat'], 'cross': r['cross'], 'cross_populated_only': cp, 'null_rate': r['null'], 'flags': r['flags'], 'source': RUN1_SOURCE}
+    if r['outcome'] == 'pass':
+        if cp is None: cls, why = 'comparable', 'run-1 pass; agreement measured over all answers (no populated-only figure for this shape)'
+        elif cp >= POPULATED_CROSS_MIN: cls, why = 'comparable', f'run-1 pass on populated answers (populated-only cross {cp:.2f} >= {POPULATED_CROSS_MIN:.2f})'
+        else: cls, why = 'null-driven', f'run-1 pass carried by agreement on null (populated-only cross {cp:.2f} < {POPULATED_CROSS_MIN:.2f}; null {r["null"]:.2f})'
+    elif r['outcome'] == 'interpretive': cls, why = 'interpretive', 'run-1 interpretive (repeatability met by >= 3 of 4, cross missed)'
+    elif r['outcome'] == 'cut': cls, why = 'extractor-bound', 'run-1 cut (repeatability missed by >= 2 of 4; Sonnet 5.5 alone meets the bar on most such units)'
+    else: cls, why = None, 'no outcome (value member never populated; removed by R5)'
+    basis['why'] = why
+    return cls, basis
+
+def field_class(path):
+    cls, basis = unit_class(LEAD_UNIT.get(path, path))
+    return cls, {**basis, 'lead_unit': LEAD_UNIT.get(path, path), 'lead_unit_why': LEAD_WHY.get(path, 'the field is itself the scored unit')}
+
+COMPARABILITY = {p: field_class(p)[0] for p in ALL_09}
+_bad = [p for p in ALL_09 if COMPARABILITY[p] not in CLASSES]
+assert not _bad, f'fields without a comparability class: {_bad}'
+PROFILE_CLASSES = {'essential': ('comparable',), 'extended': ('comparable', 'interpretive', 'null-driven'), 'full': tuple(CLASSES)}
+PROFILES_09 = {prof: [p for p in ALL_09 if COMPARABILITY[p] in cls] for prof, cls in PROFILE_CLASSES.items()}
+PROFILE_RULE = ('R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed '
+                '"comparable" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + "interpretive" + "null-driven"; Full = all 47; '
+                'partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. '
+                'Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.')
 PARTNER_BASE = {'partner:com.deepadata.journaling.v1': 'extended', 'partner:com.deepadata.therapy.v1': 'full',
                 'partner:com.deepadata.companion.v1': 'extended', 'partner:com.deepadata.wiki.v1': 'extended'}
 TRAIT_OPT_IN = {'partner:com.deepadata.therapy.v1'}  # discovery assumption for the draft manifests
 def profile_fields(profile):
     return PROFILES_09[PARTNER_BASE.get(profile, profile)]
+
+def unit_annotations(unit):
+    """x_ annotations for one scored unit (a field path, or <field>.text / .value / .direction / .type / .referent / .stake / .decay)."""
+    r = RUN1_POOLED.get(unit); out = {}
+    if r:
+        out['x_run1'] = {'outcome': r['outcome'], 'repeat': r['repeat'], 'cross': r['cross'], 'cross_populated_only': r.get('cross_populated'),
+                         'null_rate': r['null'], 'flags': r['flags'], 'source': RUN1_SOURCE}
+    if unit in RUN2:
+        r2 = RUN2[unit]
+        out['x_run2'] = {'ruling': r2['ruling'], 'arm_adopted': r2['arm_adopted'], 'A_v083_text': r2['A'], 'B_v09_rules': r2['B'], 'voters': VOTERS, 'source': RUN2_SOURCE}
+    if r or unit in RUN2:
+        cls, basis = unit_class(unit)
+        if cls: out['x_comparability'] = cls; out['x_comparability_basis'] = basis
+    if unit in VALUE_REMOVED: out['x_status'] = 'removed by R5 (2026-10-18): never populated in run 1; member deleted from the draft 2026-10-18'
+    if unit in VALUE_KEPT: out['x_status'] = 'kept by R5 (2026-10-18): per-extractor numeric salience weight (R8)'
+    if out: out['x_rulings'] = RULINGS
+    return out
+
+def field_annotations(path):
+    """annotations for a v0.9 affective field: its own unit statistics when the field is itself a scored unit, plus the field-level
+    class from its lead unit and the profiles that class derives (R17). trait.* and infrastructure paths get none."""
+    if path not in COMPARABILITY: return {}
+    out = unit_annotations(path) if (path in RUN1_POOLED or path in RUN2) else {}
+    cls, basis = field_class(path)
+    out['x_comparability'] = cls
+    out['x_comparability_basis'] = basis
+    out['x_profiles'] = [prof for prof in PROFILES_09 if path in PROFILES_09[prof]]
+    out['x_profile_rule'] = PROFILE_RULE
+    out['x_rulings'] = RULINGS
+    return out
+
+def run1_for_field(path):
+    """annotations for every scored unit under a v0.9 field path (for the crosswalk record)."""
+    return {u: unit_annotations(u) for u in RUN1_POOLED if u == path or u.startswith(path + '.')}
+
+def membership_table():
+    """R17 membership as markdown: one row per affective field with its class, lead unit and the figure behind it."""
+    def fig(b):
+        rep = ' / '.join(f'{v:.2f}' if v is not None else 'n/a' for v in b['repeat'].values())
+        who = 'S / H / G / K' if len(b['repeat']) == 4 else 'S / G / K'
+        cp = f", populated-only {b['cross_populated_only']:.2f}" if b.get('cross_populated_only') is not None else ''
+        cross = f"{b['cross']:.2f}" if b['cross'] is not None else 'n/a'
+        head = (f"run 2 Arm {b['arm']} {b['outcome']} ({b['ruling']})" if b['run'] == 'run 2' else f"run 1 {b['outcome']}")
+        return f"{head}: rep {who} {rep}; cross {cross}{cp}; null {b['null_rate']:.2f}"
+    lines = ['| Field | Class | Profiles | Lead unit | Figure |', '|---|---|---|---|---|']
+    for p in ALL_09:
+        cls, b = field_class(p)
+        profs = ', '.join(prof for prof in PROFILES_09 if p in PROFILES_09[prof])
+        lead = b['lead_unit'] if b['lead_unit'] != p else '(field)'
+        lines.append(f"| `{p}` | {cls} | {profs} | `{lead}` | {fig(b)} |")
+    counts = Counter(COMPARABILITY.values())
+    lines += ['', f"Counts: {', '.join(f'{c} {counts[c]}' for c in CLASSES)}; Essential {len(PROFILES_09['essential'])}, Extended {len(PROFILES_09['extended'])}, Full {len(PROFILES_09['full'])}."]
+    return '\n'.join(lines)
 
 def coded(field, value, extra=None):
     if value is None: return {'text': None, 'codings': []}
@@ -752,15 +867,15 @@ def migrate(a, profile=None):
         'primary': coded('emotion', g('constellation', 'emotion_primary'), PRIMARY_CODES),
         'secondary': secondary,
         'kind': {'text': None, 'codings': []},
-        'valence': dimension(val, None, ([edm('valence', val)] + VALENCE_CODES.get(val, [])) if val else []),
-        'arousal': {'text': None, 'value': None, 'codings': []},
+        'valence': {'text': val, 'codings': ([edm('valence', val)] + VALENCE_CODES.get(val, [])) if val else []},  # R5: no value member
+        'arousal': {'text': None, 'codings': []},  # R5: born as coded text
         'intensity': dimension(None, w, [eml('intensity-dimension', 'intensity')] if w is not None else []),
         'meta': g('constellation', 'meta_emotional_state'),
         'bodily_sensation': g('constellation', 'somatic_signature'),
         'temporal_profile': coded('temporal_profile', g('constellation', 'temporal_rhythm'), PROFILE_CODES),
         'appraisal': {
-            'urgency': dimension(urg, None, ([edm('urgency', urg), eml('ema-appraisals', 'urgency')] + URGENCY_CODES.get(urg, [])) if urg else []),
-            'control': dimension(ctl, None, ([edm('control', ctl), eml('scherer-appraisals', 'control')] + CONTROL_CODES.get(ctl, [])) if ctl else []),
+            'urgency': {'text': urg, 'codings': ([edm('urgency', urg), eml('ema-appraisals', 'urgency')] + URGENCY_CODES.get(urg, [])) if urg else []},  # R5
+            'control': {'text': ctl, 'codings': ([edm('control', ctl), eml('scherer-appraisals', 'control')] + CONTROL_CODES.get(ctl, [])) if ctl else []},  # R5
             'attribution': {'text': None, 'codings': []},
         },
     }
@@ -774,6 +889,7 @@ def migrate(a, profile=None):
         'scope': {'text': persp, 'direction': g('impulse', 'directionality'), 'codings': [edm('scope', persp)] if persp else []},
     }
     cues = ([g('core', 'echo')] if g('core', 'echo') else []) + (g('gravity', 'recall_triggers') or []) + (g('gravity', 'retrieval_keys') or [])
+    cues, cues_overflow = cues[:RETRIEVAL_CUES_MAX], cues[RETRIEVAL_CUES_MAX:]  # R16: echo first, cap 3; the rest preserved verbatim below
     visc, decay = g('gravity', 'viscosity'), g('gravity', 'temporal_decay')
     recode = PERSISTENCE_RECODE.get(visc) or DECAY_RECODE.get(decay)
     out['salience'] = {
@@ -800,7 +916,10 @@ def migrate(a, profile=None):
         if d in a: out[d] = a[d]
     out.setdefault('telemetry', {})['field_confidence'] = {}
     ext = dict(a.get('extensions') or {})
-    if legacy: ext[LEGACY_EXT] = {'v0_8_3_cut_fields': legacy}
+    leg = {}
+    if legacy: leg['v0_8_3_cut_fields'] = legacy
+    if cues_overflow: leg['retrieval_cues_overflow'] = cues_overflow
+    if leg: ext[LEGACY_EXT] = leg
     if ext: out['extensions'] = ext
     if profile: prune_to_profile(out, profile)
     return out
@@ -819,7 +938,14 @@ def prune_to_profile(out, profile):
         for k in list(out[dom].keys()):
             path = f'{dom}.{k}'
             if dom == 'trait': keep = profile in TRAIT_OPT_IN
-            elif k == 'appraisal': keep = any(p.startswith('emotion.appraisal.') for p in allowed)
+            elif k == 'appraisal':
+                sub = out[dom][k]
+                for sk in list(sub.keys()):
+                    if f'{path}.{sk}' in allowed: continue
+                    v = sub.pop(sk)
+                    if not is_empty(v): moved[f'{path}.{sk}'] = v
+                if not sub: out[dom].pop(k)
+                continue
             else: keep = path in allowed
             if keep: continue
             v = out[dom].pop(k)
@@ -860,7 +986,7 @@ def crosswalk():
     return {
      '$schema': 'http://json-schema.org/draft-07/schema#',
      'title': 'EDM v0.8.3 to v0.9.0 Migration Crosswalk (DRAFT, discovery)',
-     'description': 'Draft record of the v0.9 relayout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. Five affective domains are renamed (core->narrative, constellation->emotion, milky_way->context, gravity->salience, impulse->motivation); 57 affective fields become %d (%d carried by rename/move, %d merged into others, %d cut with text preserved in extensions, %d moved to an opt-in trait profile, %d new); every categorical field becomes text + codings; four fields become dimensions with a numeric value beside the ordinal text. No artifact text changes: scripts/v09_layout.py in the discovery folder proves the scalar multiset of the affective domains is identical before and after.' % (AFFECTIVE_COUNT, len(renamed), len(merged), len(cut), len(trait), n_new),
+     'description': 'Draft record of the v0.9 relayout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. Five affective domains are renamed (core->narrative, constellation->emotion, milky_way->context, gravity->salience, impulse->motivation); 57 affective fields become %d (%d carried by rename/move, %d merged into others, %d cut with text preserved in extensions, %d moved to an opt-in trait profile, %d new); every categorical field becomes text + codings; emotion.intensity is a dimension with the v0.8.3 numeric weight beside an ordinal text (the value member of valence / arousal / urgency / control was removed by R5, 2026-10-18, never populated in run 1). Profile membership is derived from the comparability class of each field (R17). No artifact text changes: scripts/v09_layout.py in the discovery folder proves the scalar multiset of the affective domains is identical before and after.' % (AFFECTIVE_COUNT, len(renamed), len(merged), len(cut), len(trait), n_new),
      'status': 'draft',
      'discovery_only': True,
      'version_from': '0.8.3',
@@ -881,6 +1007,8 @@ def crosswalk():
         'canonical_values_before': CANONICAL_VALUES_083,
         'field_dispositions': dict(sorted(Counter(r['disposition'] for r in field_rows()).items())),
         'value_dispositions': dict(sorted(Counter(v['disposition'] for r in field_rows() for v in r['values']).items())),
+        'comparability_classes': dict(sorted(Counter(COMPARABILITY.values()).items())),
+        'profile_sizes': {k: len(v) for k, v in PROFILES_09.items()},
         'values_deprecated': len(DEPRECATED_VALUES),
         'values_renamed': 0,
         'text_changes_required': 0,
@@ -888,7 +1016,7 @@ def crosswalk():
      'domain_renames': {'core': 'narrative', 'constellation': 'emotion', 'milky_way': 'context', 'gravity': 'salience', 'impulse': 'motivation'},
      'disposition_rule': 'One disposition per v0.8.3 field (carried / renamed / reshaped / merged / cut-to-extensions / moved-to-trait; new v0.9 fields are added) and one per canonical value (carried / carried (deprecated) / cut-to-extensions / moved-to-trait; new vocabulary values are added). carried = field name unchanged (domain rename or move only); renamed = field name changes; reshaped = enum or number becomes a dimension; merged = the v0.9 target has more than one v0.8.3 source. The uniform {text, codings} wrapping is recorded as shape_from / shape_to on each row. Value words never change. Audited by scripts/crosswalk_audit.py (crosswalk-audit-2026-10-18.md).',
      'field_map': field_rows(),
-     'new_fields': [{'path': p, 'shape': s if p + '.value' not in VALUE_REMOVED else 'dimension (value removed, R5)', 'disposition': 'added', 'note': n, 'populated_by_migration': False, 'v09': {'description': DESC[p][0], 'constraints': DESC[p][1], 'profiles': profiles_of_09(p), 'run1_annotations': run1_for_field(p)} if p in DESC else None} for p, s, n in NEW_FIELDS],
+     'new_fields': [{'path': p, 'shape': s if p + '.value' not in VALUE_REMOVED else 'coded (value removed, R5)', 'disposition': 'added', 'note': n, 'populated_by_migration': False, 'v09': {'description': DESC[p][0], 'constraints': DESC[p][1], 'profiles': profiles_of_09(p), 'comparability': COMPARABILITY.get(p), 'run1_annotations': run1_for_field(p)} if p in DESC else None} for p, s, n in NEW_FIELDS],
      'new_values': new_value_rows(),
      'trait_profile': {
         'fields': TRAIT_FIELDS,
@@ -896,10 +1024,11 @@ def crosswalk():
         'migration': 'A v0.8.3 artifact carrying attachment_style or regulation_state keeps them in trait.* only when the target profile opts in; otherwise they are preserved verbatim in extensions.' + LEGACY_EXT + '.out_of_profile_fields.',
      },
      'profiles': {'essential': PROFILES_09['essential'], 'extended': PROFILES_09['extended'], 'full': PROFILES_09['full'], 'trait_opt_in_partner_profiles': sorted(TRAIT_OPT_IN),
-                  'rule': 'Essential = 7 narrative + 4 emotion + salience.retrieval_cues (12; ruling 2026-10-17). A carried field is in Extended when any of its v0.8.3 sources was; the six new coded fields are Full-only. extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/.'},
+                  'comparability': COMPARABILITY, 'lead_units': LEAD_UNIT,
+                  'rule': PROFILE_RULE + ' extensions is allowed in all three composites. text of coded fields is a recommended vocabulary (string; canonical list documented, not an enum); codings on the EDM vocabulary are enumerated. Draft schema: docs/discovery/ontology-crosswalk-2026-10/draft-schema/.'},
      'coding_shape': {
         'coded': {'text': 'string (the interpretation; mandatory when the field is populated)', 'codings': [{'system': 'URI', 'version': 'string', 'code': 'string', 'display': 'string', 'relation': 'exact | broader | narrower | related (default exact)'}]},
-        'dimension': {'text': 'ordinal label or null', 'value': 'number or null (never derived from text by migration)', 'codings': '[...]'},
+        'dimension': {'text': 'ordinal label or null', 'value': 'number or null (never derived from text by migration)', 'codings': '[...]', 'note': 'emotion.intensity only (R5)'},
         'edm_vocabulary': VOCAB.format(field='<field>') + '#<value>',
         'xref_namespace': XREF.format(fw='<framework_id>') + '#<slug> (placeholder for frameworks that publish no concept URIs)',
      },
@@ -910,12 +1039,14 @@ def crosswalk():
      },
      'migration_notes': {
         'automatic_upgrade': True, 'data_loss_risk': 'none (cut-field text preserved in extensions)',
-        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; leave valence/urgency/control value null.', '4. Concatenate echo + recall_triggers + retrieval_keys into salience.retrieval_cues; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.v0_8_3_cut_fields.', '7. Prune to the target profile manifest; any populated field outside it goes to extensions.' + LEGACY_EXT + '.out_of_profile_fields (nothing for the seven synthetic examples once Essential carries salience.retrieval_cues).', '8. Set meta.version.'],
+        'steps': ['1. Rename domains and fields per field_map.', '2. Wrap categorical values as {text, codings} and apply codes from the vocabulary files; text is copied, never translated.', '3. Carry numeric intensity into emotion.intensity.value; valence / urgency / control carry text + codings only (R5: no value member).', '4. Concatenate echo + recall_triggers + retrieval_keys, in that order, into salience.retrieval_cues, keeping at most three (R16); preserve any further value verbatim in extensions.' + LEGACY_EXT + '.retrieval_cues_overflow; append higher_order_emotion to emotion.secondary; collect narrative_arc and arc_type into narrative.arc[].', '5. Move attachment_style and regulation_state to trait.* only if the target profile opts in; otherwise preserve them in extensions.', '6. Copy cut-field values into extensions.' + LEGACY_EXT + '.v0_8_3_cut_fields.', '7. Prune to the target profile manifest (derived from comparability class, R17); any populated field outside it goes to extensions.' + LEGACY_EXT + '.out_of_profile_fields.', '8. Set meta.version.'],
         'reference_implementation': 'docs/discovery/ontology-crosswalk-2026-10/scripts/v09_layout.py',
      },
     }
 
 if __name__ == '__main__':
+    if sys.argv[1:2] == ['--membership']:
+        print(membership_table()); sys.exit(0)
     ex_dir, out_crosswalk, out_example = sys.argv[1:4]
     migrated_dir = sys.argv[4] if len(sys.argv) > 4 else None
     ex_path = os.path.join(ex_dir, 'example-full-profile.json')
@@ -926,7 +1057,8 @@ if __name__ == '__main__':
     json.dump({'source': os.path.basename(os.path.normpath(ex_dir)) + '/example-full-profile.json', 'proof': p, 'migrated': new},
               open(out_example, 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
     print('affective fields v0.9:', AFFECTIVE_COUNT, {k: len(v) for k, v in LAYOUT_ORDER.items()})
-    print('profiles:', {k: len(v) for k, v in PROFILES_09.items()})
+    print('comparability (R17):', dict(Counter(COMPARABILITY.values())))
+    print('profiles (derived):', {k: len(v) for k, v in PROFILES_09.items()})
     print('proof:', json.dumps(p))
     if migrated_dir:
         os.makedirs(os.path.join(migrated_dir, 'unpruned'), exist_ok=True)

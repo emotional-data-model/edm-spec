@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.full.schema.json",
   "title": "EDM v0.9.0 Full Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 47 affective fields over 5 affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 47 affective fields over 5 affective domains, derived by R17 (2026-10-18) as every field whose comparability class is comparable + interpretive + null-driven + extractor-bound; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
   "x_affective_field_count": 47,
   "x_affective_fields": [
     "narrative.subject",
@@ -52,6 +52,13 @@
     "motivation.temporal_focus",
     "motivation.risk_posture",
     "motivation.coping"
+  ],
+  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+  "x_comparability_classes": [
+    "comparable",
+    "interpretive",
+    "null-driven",
+    "extractor-bound"
   ],
   "type": "object",
   "required": [
@@ -259,12 +266,10 @@
             ]
           },
           "required": [
-            "subject",
-            "trigger",
             "harm",
-            "drive",
-            "integration",
-            "arc",
+            "summary",
+            "meaning",
+            "turning_point",
             "self_position"
           ]
         }
@@ -307,10 +312,29 @@
           },
           "required": [
             "primary",
-            "secondary",
             "valence",
-            "intensity"
-          ]
+            "intensity",
+            "bodily_sensation",
+            "appraisal"
+          ],
+          "properties": {
+            "appraisal": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "propertyNames": {
+                "enum": [
+                  "urgency",
+                  "control",
+                  "attribution"
+                ]
+              },
+              "required": [
+                "attribution"
+              ]
+            }
+          }
         }
       ],
       "x_fields": [
@@ -346,7 +370,12 @@
               "life_stage",
               "scope"
             ]
-          }
+          },
+          "required": [
+            "event_category",
+            "relationship",
+            "scope"
+          ]
         }
       ],
       "x_fields": [
@@ -382,7 +411,8 @@
             ]
           },
           "required": [
-            "retrieval_cues"
+            "tether",
+            "function"
           ]
         }
       ],
@@ -414,7 +444,13 @@
               "risk_posture",
               "coping"
             ]
-          }
+          },
+          "required": [
+            "action_tendency",
+            "need",
+            "temporal_focus",
+            "coping"
+          ]
         }
       ],
       "x_fields": [

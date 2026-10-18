@@ -19,40 +19,6 @@
     "meaning": null,
     "identity_link": "apprentice who keeps the craft",
     "turning_point": null,
-    "arc": [
-      {
-        "text": "reflection",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "reflection",
-            "display": "reflection",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "grief",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/arc/v1",
-            "version": "1",
-            "code": "grief",
-            "display": "grief",
-            "relation": "exact"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000016",
-            "display": "grief",
-            "relation": "exact"
-          }
-        ]
-      }
-    ],
-    "valence_shift": "grief to gratitude",
     "self_position": null
   },
   "emotion": {
@@ -74,75 +40,8 @@
         }
       ]
     },
-    "secondary": [
-      {
-        "text": "tenderness",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "tenderness",
-            "display": "tenderness",
-            "relation": "exact"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000048",
-            "display": "love",
-            "relation": "related"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000052",
-            "display": "compassion",
-            "relation": "related"
-          }
-        ]
-      },
-      {
-        "text": "gratitude",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "gratitude",
-            "display": "gratitude",
-            "relation": "exact"
-          },
-          {
-            "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
-            "version": "2014-04-01",
-            "code": "gratitude",
-            "display": "gratitude",
-            "relation": "exact"
-          }
-        ]
-      },
-      {
-        "text": "peace",
-        "codings": [
-          {
-            "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
-            "version": "1",
-            "code": "peace",
-            "display": "peace",
-            "relation": "exact"
-          },
-          {
-            "system": "http://purl.obolibrary.org/obo/mfoem.owl",
-            "version": "2025-07-31",
-            "code": "MFOEM:000043",
-            "display": "serenity",
-            "relation": "exact"
-          }
-        ]
-      }
-    ],
     "valence": {
       "text": "mixed",
-      "value": null,
       "codings": [
         {
           "system": "https://emotionaldatamodel.org/vocab/valence/v1",
@@ -172,34 +71,26 @@
         }
       ]
     },
-    "meta": null,
     "bodily_sensation": null,
     "temporal_profile": {
       "text": null,
       "codings": []
+    },
+    "appraisal": {
+      "attribution": {
+        "text": null,
+        "codings": []
+      }
     }
   },
   "context": {
-    "event": "morning journaling after a dream",
-    "place": "mentor's workshop (dreamed)",
-    "people": [
-      "my late mentor"
-    ],
-    "relationship": {
+    "event_category": {
       "text": null,
       "codings": []
     },
-    "life_stage": {
-      "text": "midlife",
-      "codings": [
-        {
-          "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
-          "version": "1",
-          "code": "midlife",
-          "display": "midlife",
-          "relation": "exact"
-        }
-      ]
+    "relationship": {
+      "text": null,
+      "codings": []
     },
     "scope": {
       "text": null,
@@ -249,22 +140,30 @@
       "referent": null,
       "stake": null
     },
-    "retrieval_cues": [
-      "the next piece handed over"
-    ],
-    "recurrence": {
-      "text": "cyclical",
-      "codings": [
-        {
-          "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
-          "version": "1",
-          "code": "cyclical",
-          "display": "cyclical",
-          "relation": "exact"
-        }
-      ]
+    "linkage_strength": 0.75,
+    "function": []
+  },
+  "motivation": {
+    "action_tendency": {
+      "text": null,
+      "codings": []
     },
-    "linkage_strength": 0.75
+    "need": {
+      "text": null,
+      "codings": []
+    },
+    "temporal_focus": {
+      "text": null,
+      "codings": []
+    },
+    "risk_posture": {
+      "text": null,
+      "codings": []
+    },
+    "coping": {
+      "text": null,
+      "codings": []
+    }
   },
   "governance": {
     "jurisdiction": null,
@@ -288,6 +187,140 @@
     "org.emotionaldatamodel.migration": {
       "v0_8_3_cut_fields": {
         "milky_way.visibility_context": "private"
+      },
+      "out_of_profile_fields": {
+        "narrative.arc": [
+          {
+            "text": "reflection",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "reflection",
+                "display": "reflection",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "grief",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/arc/v1",
+                "version": "1",
+                "code": "grief",
+                "display": "grief",
+                "relation": "exact"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000016",
+                "display": "grief",
+                "relation": "exact"
+              }
+            ]
+          }
+        ],
+        "narrative.valence_shift": "grief to gratitude",
+        "emotion.secondary": [
+          {
+            "text": "tenderness",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "tenderness",
+                "display": "tenderness",
+                "relation": "exact"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000048",
+                "display": "love",
+                "relation": "related"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000052",
+                "display": "compassion",
+                "relation": "related"
+              }
+            ]
+          },
+          {
+            "text": "gratitude",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "gratitude",
+                "display": "gratitude",
+                "relation": "exact"
+              },
+              {
+                "system": "http://www.w3.org/TR/emotion-voc/xml#occ-categories",
+                "version": "2014-04-01",
+                "code": "gratitude",
+                "display": "gratitude",
+                "relation": "exact"
+              }
+            ]
+          },
+          {
+            "text": "peace",
+            "codings": [
+              {
+                "system": "https://emotionaldatamodel.org/vocab/emotion/v1",
+                "version": "1",
+                "code": "peace",
+                "display": "peace",
+                "relation": "exact"
+              },
+              {
+                "system": "http://purl.obolibrary.org/obo/mfoem.owl",
+                "version": "2025-07-31",
+                "code": "MFOEM:000043",
+                "display": "serenity",
+                "relation": "exact"
+              }
+            ]
+          }
+        ],
+        "context.event": "morning journaling after a dream",
+        "context.place": "mentor's workshop (dreamed)",
+        "context.people": [
+          "my late mentor"
+        ],
+        "context.life_stage": {
+          "text": "midlife",
+          "codings": [
+            {
+              "system": "https://emotionaldatamodel.org/vocab/life_stage/v1",
+              "version": "1",
+              "code": "midlife",
+              "display": "midlife",
+              "relation": "exact"
+            }
+          ]
+        },
+        "salience.retrieval_cues": [
+          "the next piece handed over"
+        ],
+        "salience.recurrence": {
+          "text": "cyclical",
+          "codings": [
+            {
+              "system": "https://emotionaldatamodel.org/vocab/recurrence/v1",
+              "version": "1",
+              "code": "cyclical",
+              "display": "cyclical",
+              "relation": "exact"
+            }
+          ]
+        }
       }
     }
   }

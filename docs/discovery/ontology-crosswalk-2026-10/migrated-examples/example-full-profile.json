@@ -121,7 +121,6 @@
     },
     "valence": {
       "text": "positive",
-      "value": null,
       "codings": [
         {
           "system": "https://emotionaldatamodel.org/vocab/valence/v1",
@@ -141,7 +140,6 @@
     },
     "arousal": {
       "text": null,
-      "value": null,
       "codings": []
     },
     "intensity": {
@@ -174,7 +172,6 @@
     "appraisal": {
       "urgency": {
         "text": "elevated",
-        "value": null,
         "codings": [
           {
             "system": "https://emotionaldatamodel.org/vocab/urgency/v1",
@@ -194,7 +191,6 @@
       },
       "control": {
         "text": "high",
-        "value": null,
         "codings": [
           {
             "system": "https://emotionaldatamodel.org/vocab/control/v1",
@@ -316,12 +312,7 @@
     "retrieval_cues": [
       "the hall going quiet",
       "the recording",
-      "stage lights",
-      "the quiet before the first note",
-      "choir",
-      "solo verse",
-      "stamina",
-      "community hall"
+      "stage lights"
     ],
     "themes": [
       "chronic illness",
@@ -502,6 +493,13 @@
         "impulse.primary_energy": "empowerment",
         "impulse.social_visibility": "collective"
       },
+      "retrieval_cues_overflow": [
+        "the quiet before the first note",
+        "choir",
+        "solo verse",
+        "stamina",
+        "community hall"
+      ],
       "out_of_profile_fields": {
         "trait.attachment_style": {
           "text": "secure",

@@ -2,28 +2,41 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://deepadata.com/schemas/edm/v0.9.0-draft/edm.essential.schema.json",
   "title": "EDM v0.9.0 Essential Profile (DRAFT, discovery)",
-  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 12 affective fields over 3 affective domains; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
-  "x_affective_field_count": 12,
+  "description": "DRAFT composite for the v0.9 layout proposed in docs/discovery/ontology-crosswalk-2026-10/v0.9-proposal.md. 19 affective fields over 5 affective domains, derived by R17 (2026-10-18) as every field whose comparability class is comparable; the trait block is not included (opt-in via partner manifest); extensions allowed; text of coded fields is a recommended vocabulary (string), codings on the EDM vocabulary are enumerated. Not normative; not under VERSIONING_POLICY until adopted.",
+  "x_affective_field_count": 19,
   "x_affective_fields": [
-    "narrative.subject",
-    "narrative.trigger",
     "narrative.harm",
-    "narrative.drive",
-    "narrative.integration",
-    "narrative.arc",
+    "narrative.summary",
+    "narrative.meaning",
+    "narrative.turning_point",
     "narrative.self_position",
     "emotion.primary",
-    "emotion.secondary",
     "emotion.valence",
     "emotion.intensity",
-    "salience.retrieval_cues"
+    "emotion.bodily_sensation",
+    "emotion.appraisal.attribution",
+    "context.event_category",
+    "context.relationship",
+    "context.scope",
+    "salience.tether",
+    "salience.function",
+    "motivation.action_tendency",
+    "motivation.need",
+    "motivation.temporal_focus",
+    "motivation.coping"
+  ],
+  "x_profile_rule": "R17 (2026-10-18): profile membership is derived from the comparability class, not chosen. Essential = every affective field classed \"comparable\" (run-1 pass on populated answers, or run-2 pass); Extended = Essential + \"interpretive\" + \"null-driven\"; Full = all 47; partner profiles select freely from their base. Field class = class of the lead unit (LEAD_UNIT); sub-members ride with their field. Computed in scripts/v09_layout.py (COMPARABILITY, PROFILES_09); nothing hand-listed.",
+  "x_comparability_classes": [
+    "comparable"
   ],
   "type": "object",
   "required": [
     "meta",
     "narrative",
     "emotion",
+    "context",
     "salience",
+    "motivation",
     "governance",
     "telemetry"
   ],
@@ -150,33 +163,27 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "subject",
-              "trigger",
               "harm",
-              "drive",
-              "integration",
-              "arc",
+              "summary",
+              "meaning",
+              "turning_point",
               "self_position"
             ]
           },
           "required": [
-            "subject",
-            "trigger",
             "harm",
-            "drive",
-            "integration",
-            "arc",
+            "summary",
+            "meaning",
+            "turning_point",
             "self_position"
           ]
         }
       ],
       "x_fields": [
-        "narrative.subject",
-        "narrative.trigger",
         "narrative.harm",
-        "narrative.drive",
-        "narrative.integration",
-        "narrative.arc",
+        "narrative.summary",
+        "narrative.meaning",
+        "narrative.turning_point",
         "narrative.self_position"
       ]
     },
@@ -190,24 +197,70 @@
           "propertyNames": {
             "enum": [
               "primary",
-              "secondary",
               "valence",
-              "intensity"
+              "intensity",
+              "bodily_sensation",
+              "appraisal"
             ]
           },
           "required": [
             "primary",
-            "secondary",
             "valence",
-            "intensity"
-          ]
+            "intensity",
+            "bodily_sensation",
+            "appraisal"
+          ],
+          "properties": {
+            "appraisal": {
+              "type": [
+                "object",
+                "null"
+              ],
+              "propertyNames": {
+                "enum": [
+                  "attribution"
+                ]
+              },
+              "required": [
+                "attribution"
+              ]
+            }
+          }
         }
       ],
       "x_fields": [
         "emotion.primary",
-        "emotion.secondary",
         "emotion.valence",
-        "emotion.intensity"
+        "emotion.intensity",
+        "emotion.bodily_sensation",
+        "emotion.appraisal.attribution"
+      ]
+    },
+    "context": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/context.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "event_category",
+              "relationship",
+              "scope"
+            ]
+          },
+          "required": [
+            "event_category",
+            "relationship",
+            "scope"
+          ]
+        }
+      ],
+      "x_fields": [
+        "context.event_category",
+        "context.relationship",
+        "context.scope"
       ]
     },
     "salience": {
@@ -219,16 +272,49 @@
           "type": "object",
           "propertyNames": {
             "enum": [
-              "retrieval_cues"
+              "tether",
+              "function"
             ]
           },
           "required": [
-            "retrieval_cues"
+            "tether",
+            "function"
           ]
         }
       ],
       "x_fields": [
-        "salience.retrieval_cues"
+        "salience.tether",
+        "salience.function"
+      ]
+    },
+    "motivation": {
+      "allOf": [
+        {
+          "$ref": "https://deepadata.com/schemas/edm/v0.9.0-draft/fragments/motivation.json"
+        },
+        {
+          "type": "object",
+          "propertyNames": {
+            "enum": [
+              "action_tendency",
+              "need",
+              "temporal_focus",
+              "coping"
+            ]
+          },
+          "required": [
+            "action_tendency",
+            "need",
+            "temporal_focus",
+            "coping"
+          ]
+        }
+      ],
+      "x_fields": [
+        "motivation.action_tendency",
+        "motivation.need",
+        "motivation.temporal_focus",
+        "motivation.coping"
       ]
     },
     "governance": {
