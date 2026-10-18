@@ -1,41 +1,53 @@
-# STATUS — run 3 (2026-10-18), closed
+# STATUS — run 3 (2026-10-18), finished under Phase A of the overnight instruction
 
-**Nothing was pushed.** All work is in local commits on `discovery/ontology-crosswalk` of `edm-spec` plus docs-only commits in `deepadata-com` (`planning/STATE.md` + session handoffs). `schema/` and `examples/` untouched on every branch.
+**Nothing was pushed.** All work is in local commits on `discovery/ontology-crosswalk` of `edm-spec` plus docs-only commits in `deepadata-com` (`planning/STATE.md` + session handoffs). `schema/` and `examples/` untouched on every branch. The founder's archive was not used.
 
-**Closed 2026-10-18 on the founder's instruction** ("Close run 3. No push."): judge resumed as far as the credit allowed, re-scored, rulings R18–R30 recorded (`docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md`), R18–R28 applied to the v0.9 draft (Essential 18 / Extended 28 / Full 47), docs and state brought in line. One item of the close could not be finished: **the judge pass** (below).
+**Phase A (2026-10-18 night, delegated; "finish run 3, cap USD 15"): done.** Judge completed, R20 closed, R29 probe run, R30 extension and its free-text supplement run, nine-model scoring, draft rebuilt, docs in line. One item is deferred to the founder: the **Mistral re-run** that the R29 probe authorised (over the cap).
+
+## Phase A ledger (OpenRouter billed cost; cap USD 15)
+
+| Step | Calls | USD |
+|---|---|---|
+| 1. Judge completion (104 + 7 rate-limited summary texts) | 111 | 3.22 |
+| 2. R29 Mistral probe | 10 | 0.25 |
+| 3a. R30 DeepSeek V4 Pro extension (reasoning off) | 750 | 1.27 |
+| 3b. R30 free-text supplement (`--rejudge` 300 + `--rejudge-missing` 13) | 313 | 9.35 |
+| **Total** | 1,184 | **14.09** |
+
+Run-3 total since the freeze: USD 63.44 (extraction 43.46, pilot 0.77, judge 17.69, extension 1.27, probe 0.25) against the stop in force USD 72 (lever 4, twice amended so that the judge's 9-reserve start rule did not refuse the last calls; the Phase A cap was the binding limit). OpenRouter credit: 100 total, ≈ 65 used after Phase A and the Phase B pilot.
 
 ## Gates
 
-| Gate | Requirement | Result |
-|---|---|---|
-| Freeze before any call | commit `run 3 pre-registration frozen` before the first call | **Passed.** `974408e` (plan amended per the founder's run-3 instruction; Anthropic direct key found capped and the three Claude models pinned through OpenRouter at freeze). Scaffold `cc96aee`; first call (pilot) after both |
-| Prompt check | committed prompt equals the draft-schema generation (`build_prompts.py --check`) | **Passed** before every run, including the close's dry runs |
-| Corpus identity | every text's sha256 equals the manifest | **Passed** (150 / 150) |
-| Pilot | 24 calls, projection against the stop | **Three passes, 51 calls, USD 0.77.** Lever 1 (effort low; token cap for Mistral) → 70.0; lever 2 → stop 60; lever 3 → DeepSeek dropped (13.32 vs Qwen 13.31) → 56.7 ≤ 60 |
-| Hard stop (USD 60 in force; credit USD 50) | projection every 1,000 calls | **Passed** against the stop (final extraction 43.46); the credit ceiling bit during the judge pass |
-| Extraction | 7 arms × 750 calls, checkpointed, provider recorded | **Passed.** 5,250 / 5,250 records; 0 provider mismatches; 147 OpenRouter 429 transport failures re-requested once (R3-D3); Mistral 89 unparsable (115 truncated) stay failed repeats; Qwen 3, gpt-oss 7 unparsable |
-| Judge | 300 Opus 5.5 calls (2 per text) | **Incomplete: credit exhausted, twice.** 194 of 300 calls: the four-field group (`harm`, `meaning`, `self_position`, `bodily_sensation`) on **127 of 150** texts, `summary` on **69 of 150**; 0 malformed; USD 5.12. The resume at the close served 6 calls before OpenRouter refused every call (402) with USD 0.52 of the credit left (the gateway reserves a call's maximum cost). **104 calls remain (23 four-field, 81 summary; ≈ USD 2.7).** `judge.py` resumes from the checkpoints once credit is added; then `score.py`, `results_md.py`, and regenerate the draft (`v09_layout.py` `RUN3` from `field_table.json`) |
-| Scoring | frozen thresholds, 5-of-8 rule, bands, P1–P4; reading (b) beside | **Done** (`scoring/field_table.{json,md}`, `RESULTS.md`) |
-| Rulings | R18–R30 from the drafts | **Recorded** (ruling under delegation, veto by exception); R18–R28 **applied** to the draft; R29 / R30 **procedures ready, not executed** (credit) |
+| Gate | Result |
+|---|---|
+| Freeze before any call | **Passed** (`974408e`; unchanged) |
+| Prompt check | **Passed** on every invocation after R3-D5 (the frozen 19-field list is now pinned in `build_prompts.py`; the live draft tier has 18 since R26) |
+| Corpus identity | **Passed** (150 / 150 sha256) |
+| Judge | **Complete**: both groups on 150 of 150 texts, eight arms (`scoring/8arm/`, `RESULTS.8arm.md`), then re-judged with all nine arms' answers (the latest record per text supersedes); 0 malformed in 912 judge records; 15 texts needed a second supplement call after OpenRouter 429s |
+| R29 probe | **10 of 10 parsed** at max_tokens 32,000 / reasoning budget 8,000 (budget not honoured: mean 10,300 reasoning tokens; every call finished `stop`; USD 0.0247 per call) → branch 1 **"re-run the arm"**. The re-run (750 calls ≈ USD 18.5) exceeds the Phase A cap and is **deferred to the founder** (R29: the founder sets the stop). Mistral's run-3 figures stand flagged *reasoning-cap artefact confirmed*; the verdict without Mistral is reported beside (RESULTS.md §2) and changes nothing |
+| R30 extension | **Executed**: 750 / 750 valid via StreamLake, reasoning off honoured (0 reasoning tokens), 0 parse / transport / provider failures, USD 1.27 of the 8 cap; ninth model; rule **5-of-9** |
+| Scoring | `scoring/field_table.{json,md}`, `RESULTS.md` (nine models); 8-arm state kept |
+| Draft | RUN3 re-embedded (`scripts/embed_run3.py`, new); **Essential 18 / Extended 28 / Full 47 unchanged**; audit 57 / 185 / 0; validate 7 / 7 (strict 6 / 7, therapy trait opt-in as designed) |
 
-**Spend:** USD 49.35 of the 50 credit (extraction 43.46, pilot 0.77, judge 5.12); OpenRouter reports 49.48 used, 0.52 left. Stop in force 60 (lever 2). Zero Anthropic-direct spend (key capped until 2026-11-01).
+## Headline (nine models, 5-of-9; RESULTS.md §1–§3)
 
-## Headline (RESULTS.md §1–§3; rulings R18–R28)
+- **Reading (a), frozen literal:** **12 of 19 hold** — `summary` 9, `valence` 9, `intensity` 8, `primary` 7, `event_category` 7, `relationship` 7, `need` 7, `temporal_focus` 7, `meaning` 6, `harm` 5, `scope` 5, `action_tendency` 5 (the last three at the minimum).
+- **Reading (b), R18 (decides):** **18 of 19 hold** — `self_position` 9, `bodily_sensation` 9, `summary` 9, `valence` 9, `intensity` 8, `turning_point` 7, `function` 7, `primary` / `event_category` / `relationship` / `need` / `temporal_focus` 7, `meaning` 6, `harm` 6, `attribution` 5, `coping` 5, `scope` 5, `action_tendency` 5. Only **`tether`** fails (4 of 9 under both) — R26 stands.
+- **R20 closed:** `summary` holds 9 of 9 under both readings on the completed judge → comparable, Essential (no change of class; the ruling's condition is met).
+- **DeepSeek V4 Pro 0813, reasoning off:** cheap-tier band (repeat met 5 / 19; agree met 15 / 19; holds `summary`, `valence`, `intensity`, plus `self_position` and `bodily_sensation` under (b)). It agrees with the majority on most fields but does not repeat its own answers without reasoning. Mean 592 output tokens, 26 s, USD 0.0017 per call.
+- **Bands** (repeat met / 19; holds (a) / (b)): Gemini 4 Argon voting (19; 14 / 18), Llama 4 Maverick voting (19; 10 / 14), gpt-oss-120b voting (19; 8 / 15), Qwen3.8 between (15; 10 / 15), DeepSeek cheap-tier (5; 3 / 5), Mistral cheap-tier (5; 3 / 5; artefact), Haiku reference cheap-tier (13; 9 / 13), Sonnet re-run voting (19; 13 / 19). **P1–P4 not held** (DeepSeek now fits P1's cheap-tier picture of an open-weight arm; Llama and gpt-oss still do not).
+- **R29 sensitivity (without Mistral, 5-of-8):** every verdict identical under both readings.
 
-Frozen rule (reading (a), literal coverage clause), 5-of-8: **10 of 19 hold** (`primary` 7, `valence` 8, `intensity` 7, `meaning` 5, `event_category` 7, `relationship` 7, `need` 7, `temporal_focus` 7; `scope` and `action_tendency` at the minimum 5). Under **R18 reading (b)** (a null-valued answer counts as covered; adopted prospectively, deviation R3-D4): **17 of 19 hold**; `tether` (type) fails genuinely at 4 of 8 (**R26 → interpretive → Extended**) and `summary` fails on judge coverage only (every arm ≥ 0.87 / ≥ 0.75 on the 69 judged texts; **R20: class per the completed judge**, comparable until then). `attribution`, `coping` (and `action_tendency` by the same rule) hold at the minimum on cells within 0.05 of a threshold and carry `at_minimum` / `borderline` in `x_comparability_basis`.
+## Deviations logged this phase (`levers.json`, RESULTS.md §0.1)
 
-Bands (repeat met / 19; holds frozen / (b)): Gemini 4 Argon voting (19; 12 / 17), Llama 4 Maverick voting (19; 9 / 13), gpt-oss-120b voting (19; 6 / 14), Qwen3.8 2.4T between (15; 8 / 14), Mistral Large 4 cheap-tier (5; 2 / 4), Haiku 5.5 reference cheap-tier (13; 7 / 12), Sonnet 5.5 re-run voting (19; 10 / 18). **P1–P4 none held**; framing bound κ 0.65–0.97 coded, 0.75–0.99 free text.
-
-**Applied to the draft** (commit `bf97e22`): `scripts/v09_layout.py` §3d `RUN3` + §3e; Essential 18 / Extended 28 / Full 47 (the profiles nest, so only Essential shrinks); audit 57 / 185 / 0; 7 / 7 valid (6 / 7 strict, therapy's trait opt-in as designed); the synthetic Essential example relocates seven fields as before (v0.8.3 Essential carries no `tether`).
+R3-D5 (frozen field list pinned); lever 4 (stop 60 → 70 → 72 for the judge start rule; Phase A cap binding); judge completion note; `r29_probe` + `status_after`; `extension_plan_R30.executed` + note; `judge.py --cap-usd` and `--rejudge-missing`.
 
 ## Founder actions now open
 
-1. **Top up OpenRouter by ≈ USD 3** and run, from the repo root: `python -P experiments/2026-10-18-run3/scripts/judge.py` (104 calls) → `score.py` → `results_md.py` → regenerate the draft (`docs/discovery/ontology-crosswalk-2026-10/`: `python -I scripts/v09_layout.py --membership`, the regeneration order in its README). R20 (`summary`) closes mechanically; R19 / R21 / R23 / R24 cannot fall below 5 of 8 on the 23 unjudged texts.
-2. **R29 Mistral probe** (≈ USD 0.3): `python -P experiments/2026-10-18-run3/scripts/probe_mistral.py`; ≥ 9 of 10 parse → re-run the arm (founder sets the stop), else report "reasoning-cap artefact, excluded from the 8". No field verdict changes either way.
-3. **R30 DeepSeek V4 Pro extension** (≈ USD 3–6 under the USD 8 cap): `python -P experiments/2026-10-18-run3/scripts/run_extraction.py --extension`; then set `levers.json` `extension_plan_R30.executed` true and re-score (5-of-9). The free-text supplement (`judge.py --rejudge`, ≈ USD 7.7) is outside the cap: founder's call.
-4. **Veto window** on R18–R30 (`rulings-2026-10-18.md`).
-5. **Anthropic direct key** capped until 2026-11-01; **publish v0.8.4** (R1); **push** (`deepadata-com` docs commits; `edm-spec` branches) — founder-only.
+1. **R29 re-run** (authorised by the probe): `probe_mistral.py`'s parameters on the whole arm — 750 calls ≈ USD 18.5; the founder sets the stop. The runner needs a one-line change to write to a separate raw directory (`raw/rerun_r29/`) and a `score.py` switch to read it; not done, because the run was not authorised within the cap.
+2. **Veto window** on R18–R30 and on the two Phase A applications (R20 closed on the completed judge; R30 scored 5-of-9 with the supplement).
+3. Extractor-bound tier at the cut; **v0.8.4 publish** (R1); **Anthropic direct key** capped until 2026-11-01; **push** — founder-only.
 
 ## Files to read first
 
-`experiments/2026-10-18-run3/RESULTS.md` → `docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md` (addendum R18–R30) → `levers.json` (every deviation, R3-D4, the R29 / R30 plans) → `REPORT.md` §7.4 → `v0.9-proposal.md` §10.6.
+`RESULTS.md` (nine models) → `RESULTS.8arm.md` (the pre-registered eight) → `levers.json` → `docs/discovery/ontology-crosswalk-2026-10/rulings-2026-10-18.md` (R18–R30 + Phase A notes) → `REPORT.md` §7.4 → `v0.9-proposal.md` §10.6.
