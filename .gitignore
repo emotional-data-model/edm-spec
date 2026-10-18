@@ -21,3 +21,4 @@ __pycache__/
 
 # experiment runtime caches (resolved third-party texts; never commit)
 experiments/**/.resolved_texts.jsonl
+experiments/2026-10-18-anchor/data/goemotions_raw/

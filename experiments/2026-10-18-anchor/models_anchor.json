@@ -1,0 +1,75 @@
+{
+ "pinned_at": "2026-10-18 (carried verbatim from experiments/2026-10-18-run3/models.json; endpoints re-listed 2026-10-18 at freeze: anthropic, google-vertex/global, deepinfra/bf16 all status 0)",
+ "gateway": {
+  "base_url": "https://openrouter.ai/api/v1",
+  "env_key": "OPENROUTER_API_KEY",
+  "provider_pin": "provider = {order: [endpoint.tag], allow_fallbacks: false} on every call; the response's top-level `provider` (hosting provider name) is recorded on every record; a record whose provider differs from endpoint.provider_name is logged as a failed repeat and never re-sampled",
+  "usage": "OpenRouter returns usage.cost (USD charged), prompt_tokens_details.cached_tokens and completion_tokens_details.reasoning_tokens on every response; spend for the gateway arms is the reported cost; the pinned-price figure is recorded beside it",
+  "max_tokens": 12000
+ },
+ "cap_usd": 10.0,
+ "batch_size": 20,
+ "repeats": 3,
+ "seed": 20261018,
+ "max_tokens": 8000,
+ "reasoning": {
+  "openai/gpt-oss-120b": {
+   "effort": "low"
+  }
+ },
+ "reasoning_note": "gpt-oss-120b at effort low as run 3 lever 1; Sonnet 5.5 and Gemini 4 Argon at the gateway default (the Anthropic endpoint refuses reasoning off, run 3 R3-D2)",
+ "extractors": {
+  "GEM": {
+   "slot": "Gemini, current pro-class",
+   "model": "google/gemini-4-argon",
+   "endpoint": {
+    "tag": "google-vertex/global",
+    "provider_name": "Google",
+    "quantization": "unknown",
+    "max_completion_tokens": 65536,
+    "why": "first-party Google Vertex endpoint at the model's listed price; status 0, uptime 100 at pin time"
+   },
+   "price": {
+    "input": 2.0,
+    "cached_input": 0.1,
+    "output": 10.0
+   },
+   "weights": "closed"
+  },
+  "OSS": {
+   "slot": "OpenAI open-weight (within-vendor contrast with gpt-6.1-sol)",
+   "model": "openai/gpt-oss-120b",
+   "endpoint": {
+    "tag": "deepinfra/bf16",
+    "provider_name": "DeepInfra",
+    "quantization": "bf16",
+    "max_completion_tokens": 117964,
+    "why": "least-quantised endpoint (bf16) with status 0 and uptime 100 at pin time; its price (0.037 / 0.17) is below the model's listed top price (0.15 / 0.60)"
+   },
+   "price": {
+    "input": 0.037,
+    "cached_input": 0.037,
+    "output": 0.17
+   },
+   "weights": "open-weight (Apache 2.0)"
+  },
+  "SON": {
+   "slot": "Claude Sonnet 5.5 (voter re-run under the 19-field prompt: Sonnet component of the Q2 majority; framing bound)",
+   "model": "anthropic/claude-sonnet-5.5",
+   "endpoint": {
+    "tag": "anthropic",
+    "provider_name": "Anthropic",
+    "quantization": "n/a (first-party)",
+    "max_completion_tokens": 128000,
+    "why": "as REF: Anthropic direct key at its usage cap at freeze; first-party endpoint through OpenRouter at the same list price"
+   },
+   "price": {
+    "input": 2.0,
+    "cache_write": 2.5,
+    "cached_input": 0.2,
+    "output": 10.0
+   },
+   "weights": "closed"
+  }
+ }
+}
