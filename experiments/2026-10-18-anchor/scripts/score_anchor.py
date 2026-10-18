@@ -23,7 +23,7 @@ SENT = {'positive': ['amusement', 'excitement', 'joy', 'love', 'desire', 'optimi
         'mixed': ['realization', 'surprise', 'curiosity', 'confusion'], 'neutral': ['neutral']}
 G2V = {l: s for s, ls in SENT.items() for l in ls}
 MIN_RATER_ITEMS = 30
-SHORT = {k: e['slot'] for k, e in M['extractors'].items()}
+SHORT = {'SON': 'Claude Sonnet 5.5', 'GEM': 'Gemini 4 Argon', 'OSS': 'gpt-oss-120b'}
 
 
 def norm_primary(v):

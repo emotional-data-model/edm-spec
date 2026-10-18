@@ -1,0 +1,27 @@
+{
+ "by_model": {
+  "anthropic/claude-sonnet-5.5": {
+   "usd": 1.123436,
+   "calls": 150,
+   "input_tokens": 180693,
+   "output_tokens": 76205,
+   "reasoning_tokens": 0
+  },
+  "google/gemini-4-argon": {
+   "usd": 0.9892959999999998,
+   "calls": 150,
+   "input_tokens": 139038,
+   "output_tokens": 71122,
+   "reasoning_tokens": 0
+  },
+  "openai/gpt-oss-120b": {
+   "usd": 0.031223867999999995,
+   "calls": 150,
+   "input_tokens": 127954,
+   "output_tokens": 155821,
+   "reasoning_tokens": 99667
+  }
+ },
+ "total_usd": 2.143955868000001,
+ "calls": 450
+}

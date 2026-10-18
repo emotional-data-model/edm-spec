@@ -1,0 +1,10 @@
+arms ['GEM', 'OSS', 'SON']; repeats 3; batch 20; jobs per arm [1, 1, 1]; cap USD 10.0
+projection: {"spent": 0.0, "per_arm": {"GEM": {"done": 0, "mean_usd": null, "todo": 1, "projected_usd": null}, "OSS": {"done": 0, "mean_usd": null, "todo": 1, "projected_usd": null}, "SON": {"done": 0, "mean_usd": null, "todo": 1, "projected_usd": null}}, "projected_total_usd": 0.0}
+GEM google/gemini-4-argon @ google-vertex/global: 1 planned, 1 to do
+OSS openai/gpt-oss-120b @ deepinfra/bf16: 1 planned, 1 to do [reasoning {'effort': 'low'}]
+SON anthropic/claude-sonnet-5.5 @ anthropic: 1 planned, 1 to do
+  1 calls, USD 0.01 this run, cumulative USD 0.01; parse_fail=0 missing_ids=0 transport=0
+  2 calls, USD 0.01 this run, cumulative USD 0.01; parse_fail=0 missing_ids=0 transport=0
+  3 calls, USD 0.01 this run, cumulative USD 0.01; parse_fail=0 missing_ids=0 transport=0
+done in 30s: 3 calls, USD 0.01 this run; cumulative USD 0.01; parse_fail=0 missing_ids=0 transport=0 provider_mismatch=0
+exit 0

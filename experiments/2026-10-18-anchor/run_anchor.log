@@ -1,0 +1,27 @@
+arms ['GEM', 'OSS', 'SON']; repeats 3; batch 20; jobs per arm [150, 150, 150]; cap USD 10.0
+projection: {"spent": 0.0135, "per_arm": {"GEM": {"done": 1, "mean_usd": 0.005632, "todo": 149, "projected_usd": 0.839168}, "OSS": {"done": 1, "mean_usd": 0.00023, "todo": 149, "projected_usd": 0.03427}, "SON": {"done": 1, "mean_usd": 0.007676, "todo": 149, "projected_usd": 1.143724}}, "projected_total_usd": 2.03}
+GEM google/gemini-4-argon @ google-vertex/global: 150 planned, 149 to do
+OSS openai/gpt-oss-120b @ deepinfra/bf16: 150 planned, 149 to do [reasoning {'effort': 'low'}]
+SON anthropic/claude-sonnet-5.5 @ anthropic: 150 planned, 149 to do
+  1 calls, USD 0.01 this run, cumulative USD 0.02; parse_fail=0 missing_ids=0 transport=0
+  2 calls, USD 0.01 this run, cumulative USD 0.03; parse_fail=0 missing_ids=0 transport=0
+  3 calls, USD 0.02 this run, cumulative USD 0.03; parse_fail=0 missing_ids=0 transport=0
+  25 calls, USD 0.13 this run, cumulative USD 0.15; parse_fail=0 missing_ids=0 transport=0
+  50 calls, USD 0.27 this run, cumulative USD 0.28; parse_fail=0 missing_ids=0 transport=0
+  75 calls, USD 0.39 this run, cumulative USD 0.41; parse_fail=0 missing_ids=1 transport=0
+  100 calls, USD 0.53 this run, cumulative USD 0.54; parse_fail=0 missing_ids=1 transport=0
+  125 calls, USD 0.65 this run, cumulative USD 0.66; parse_fail=0 missing_ids=1 transport=0
+  150 calls, USD 0.79 this run, cumulative USD 0.80; parse_fail=0 missing_ids=1 transport=0
+  175 calls, USD 0.92 this run, cumulative USD 0.93; parse_fail=0 missing_ids=1 transport=0
+  200 calls, USD 1.04 this run, cumulative USD 1.05; parse_fail=0 missing_ids=1 transport=0
+  225 calls, USD 1.18 this run, cumulative USD 1.19; parse_fail=1 missing_ids=21 transport=0
+  250 calls, USD 1.32 this run, cumulative USD 1.33; parse_fail=2 missing_ids=41 transport=0
+  275 calls, USD 1.44 this run, cumulative USD 1.45; parse_fail=2 missing_ids=41 transport=0
+  300 calls, USD 1.57 this run, cumulative USD 1.59; parse_fail=2 missing_ids=41 transport=0
+  325 calls, USD 1.70 this run, cumulative USD 1.71; parse_fail=2 missing_ids=41 transport=0
+  350 calls, USD 1.82 this run, cumulative USD 1.84; parse_fail=3 missing_ids=61 transport=0
+  375 calls, USD 1.96 this run, cumulative USD 1.97; parse_fail=4 missing_ids=82 transport=0
+  400 calls, USD 2.08 this run, cumulative USD 2.09; parse_fail=4 missing_ids=82 transport=0
+  425 calls, USD 2.13 this run, cumulative USD 2.14; parse_fail=4 missing_ids=82 transport=0
+done in 1581s: 447 calls, USD 2.13 this run; cumulative USD 2.14; parse_fail=4 missing_ids=83 transport=0 provider_mismatch=0
+exit 0
