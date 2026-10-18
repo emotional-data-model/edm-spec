@@ -12,6 +12,7 @@ Usage (repo root; keys from .env):
   python -P experiments/2026-10-18-run3/scripts/run_extraction.py --pilot                        # 3 texts x 8 arms x 1 repeat -> raw/pilot/
   python -P experiments/2026-10-18-run3/scripts/run_extraction.py --dry-run                      # plan, prompt check, corpus check; no call
   python -P experiments/2026-10-18-run3/scripts/run_extraction.py [--stop 60] [--reasoning-low <model,...>] [--models <id,...>]
+  python -P experiments/2026-10-18-run3/scripts/run_extraction.py --extension [--dry-run]   # R30: levers.json extension_arms, reasoning off, per-arm cap, spend_extension.json
 """
 import argparse, asyncio, json, os, sys, time, hashlib, random, importlib.util
 from collections import defaultdict
@@ -178,7 +179,10 @@ async def worker(prov, jobs, ck, spend, sem, texts, stats, label, stop_box):
             except Exception as e:
                 msg = repr(e)[:1500]
                 if 'Error code: 402' in msg or 'Insufficient credits' in msg:  # credit ceiling (plan section 9): stop checkpointed, never churn
-                    if not stats.get('abort'): write_status(f'OpenRouter credit exhausted at {text_id} r{repeat} ({label}); run stopped checkpointed for the founder to top up and resume', project(spend, stats, stop_box['stop']))
+                    if not stats.get('abort'): write_status(f'OpenRouter credit exhausted at {text_id} r{repeat} ({label}); run stopped checkpointed for the founder to top up and resume', project(spend, stats, stop_box['stop']), stop_box.get('status_file'))
+                    stats['abort'] = True; return
+                if stop_box.get('extension') and 'Reasoning is mandatory' in msg:  # R30: reasoning off is the condition of the extension; no fallback
+                    if not stats.get('abort'): write_status(f'extension stopped before any further call: the endpoint refuses reasoning disabled at {text_id} r{repeat} ({label}): {msg[:300]}', None, stop_box.get('status_file'))
                     stats['abort'] = True; return
                 if attempt >= 6:
                     ck.append({**base, 'ts': time.time(), 'latency_s': round(time.time() - t0, 2), 'served_model': None, 'provider': None, 'gen_id': None, 'usage': None, 'cost_usd': 0.0, 'cost_list_usd': 0.0,
@@ -199,6 +203,9 @@ async def worker(prov, jobs, ck, spend, sem, texts, stats, label, stop_box):
                'raw_text': raw, 'parsed': parsed, 'canon': cn, 'missing_keys': missing, 'field_confidence': fc, 'parse_error': perr, 'transport_error': None, 'provider_mismatch': mismatch, 'stop_reason': stop}
         ck.append(rec); spend.add(prov.model, cost, usage)
         stats['calls'] += 1; stats['usd'] += cost
+        if stop_box.get('cap_usd') is not None and spend.data['total_usd'] >= stop_box['cap_usd']:  # R30: hard cap on the extension arm's own spend
+            if not stats.get('abort'): write_status(f"extension cap USD {stop_box['cap_usd']} reached after {stats['calls']} calls this run (arm spend USD {spend.data['total_usd']:.2f}); stopped checkpointed", None, stop_box.get('status_file'))
+            stats['abort'] = True
         if perr: stats['parse_fail'] += 1
         if missing: stats['missing_keys'] += 1
         if stats['calls'] % 50 == 0:
@@ -221,8 +228,8 @@ def project(spend, stats, stop):
             'projected_total_usd': round(ext + sum(RESERVE.values()), 2), 'stop_usd': stop, 'per_arm': per_arm}
 
 
-def write_status(reason, extra=None):
-    p = os.path.join(EXP, 'STATUS.md')
+def write_status(reason, extra=None, filename=None):
+    p = os.path.join(EXP, filename or 'STATUS.md')
     body = f"# STATUS (written by run_extraction.py at {time.strftime('%Y-%m-%d %H:%M:%S')})\n\n**Run stopped.** {reason}\n\n"
     if extra: body += '```json\n' + json.dumps(extra, indent=1) + '\n```\n'
     open(p, 'w', encoding='utf-8', newline='\n').write(body); print('STATUS.md written:', reason)
@@ -248,14 +255,19 @@ async def main():
     ap.add_argument('--pilot', action='store_true'); ap.add_argument('--dry-run', action='store_true'); ap.add_argument('--models', default=None)
     ap.add_argument('--corpus', default=','.join(CORPUS_ARMS)); ap.add_argument('--repeats', type=int, default=5); ap.add_argument('--concurrency', type=int, default=8)
     ap.add_argument('--repilot', action='store_true', help='pilot only: re-request the pilot texts for the selected models (after a lever); later records supersede earlier ones in the projection')
+    ap.add_argument('--extension', action='store_true', help='R30: run levers.json extension_arms (dropped at the gate) as a one-arm extension: reasoning {enabled: false}, hard cap extension_cap_usd on the arm, spend_extension.json, STATUS_extension.md')
     a = ap.parse_args()
+    ext = LEVERS.get('extension_plan_R30') or {}
+    if a.extension and not ext.get('extension_arms'): raise SystemExit('--extension: levers.json has no extension_plan_R30.extension_arms')
     check_prompts(); texts = load_texts()
     print(f'prompt check OK; corpus OK ({len(texts)} texts, sha256 verified)')
     stop = float(LEVERS.get('stop_usd', MODELS['budget_usd']))
     print('levers:', json.dumps({k: LEVERS.get(k) for k in ('stop_usd', 'reasoning_low', 'thinking_disabled')}), '| endpoint overrides:', list((LEVERS.get('endpoint_overrides') or {}).keys()))
     dropped = set(LEVERS.get('dropped_arms') or [])
-    extractors = [e for e in MODELS['extractors'].values() if (not a.models or e['model'] in a.models.split(',')) and (a.pilot or e['model'] not in dropped)]
-    if dropped and not a.pilot: print('dropped by the pilot gate (lever 3), not run:', sorted(dropped))
+    if a.extension: extractors = [e for e in MODELS['extractors'].values() if e['model'] in ext['extension_arms'] and (not a.models or e['model'] in a.models.split(','))]
+    else: extractors = [e for e in MODELS['extractors'].values() if (not a.models or e['model'] in a.models.split(',')) and (a.pilot or e['model'] not in dropped)]
+    if dropped and not a.pilot and not a.extension: print('dropped by the pilot gate (lever 3), not run:', sorted(dropped))
+    if a.extension: print(f"R30 extension: {[e['model'] for e in extractors]}; reasoning {ext.get('reasoning')}; cap USD {ext.get('cap_usd')} on the arm's own spend")
     corpus_arms = a.corpus.split(',')
     ids_by_arm = defaultdict(list)
     for tid, r in texts.items(): ids_by_arm[r['arm']].append(tid)
@@ -266,19 +278,22 @@ async def main():
         raw_dir = os.path.join(RAW, 'pilot'); spend = Spend(os.path.join(EXP, 'spend_pilot.json')); print('pilot texts:', pilot_ids)
     else:
         plan = {e['model']: {carm: [(t, r) for t in ids_by_arm[carm] for r in range(1, a.repeats + 1)] for carm in corpus_arms} for e in extractors}
-        raw_dir = RAW; spend = Spend(os.path.join(EXP, 'spend.json'))
+        raw_dir = RAW; spend = Spend(os.path.join(EXP, 'spend_extension.json' if a.extension else 'spend.json'))
     stats = {'calls': 0, 'usd': 0.0, 'parse_fail': 0, 'transport_fail': 0, 'missing_keys': 0, 'provider_mismatch': 0, 'pilot_mean': pilot_means(),
              'planned_by_model': {m: sum(len(j) for j in jobs.values()) for m, jobs in plan.items()}}
     stop_box = {'stop': stop}
+    if a.extension: stop_box.update({'extension': True, 'cap_usd': float(ext.get('cap_usd', 8.0)), 'status_file': 'STATUS_extension.md', 'stop': float(ext.get('cap_usd', 8.0)) + sum(RESERVE.values())})
     if not a.pilot:
-        proj = project(spend, stats, stop); print('projection before run:', json.dumps(proj))
+        proj = project(spend, stats, stop_box['stop']); print('projection before run:', json.dumps(proj))
         if a.dry_run: print('dry run: no call'); return 0
-        if proj['projected_total_usd'] > stop: write_status(f"projected total USD {proj['projected_total_usd']:.2f} exceeds the USD {stop} stop before the run", proj); return 2
+        if a.extension and spend.data['total_usd'] >= stop_box['cap_usd']: print(f"extension cap USD {stop_box['cap_usd']} already reached (spend_extension.json {spend.data['total_usd']:.2f}); no call"); return 2
+        if not a.extension and proj['projected_total_usd'] > stop: write_status(f"projected total USD {proj['projected_total_usd']:.2f} exceeds the USD {stop} stop before the run", proj); return 2
     elif a.dry_run:
         print('dry run (pilot plan):', {m: len(j['pilot']) for m, j in plan.items()}); return 0
     tasks = []
     for e in extractors:
         e, reasoning = apply_levers(e)
+        if a.extension: reasoning = dict(ext.get('reasoning') or {'enabled': False})  # R30: reasoning off; the lever-1 effort low of the pilot does not apply
         prov = ProviderOR(e, reasoning); sem = asyncio.Semaphore(a.concurrency)
         for carm, jobs in plan[e['model']].items():
             path = os.path.join(raw_dir, f"{arm_dir(e['model'])}.jsonl") if a.pilot else os.path.join(raw_dir, arm_dir(e['model']), f'{carm}.jsonl')

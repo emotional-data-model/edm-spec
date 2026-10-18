@@ -31,8 +31,9 @@ ARMS = [e['model'] for e in MODELS['extractors'].values()]  # 6 new + REF + SON,
 NEW_ARMS = MODELS['new_arms']
 REF = next(e['model'] for e in MODELS['extractors'].values() if e['role'].startswith('reference'))
 SON = next(e['model'] for e in MODELS['extractors'].values() if e['role'].startswith('voter re-run'))
-DROPPED = set(LEVERS.get('dropped_arms') or [])
-NEW_ARMS_RUN = [m for m in NEW_ARMS if m not in DROPPED]  # the new arms actually run (lever 3 may drop one)
+EXTENSION = [m for m in ((LEVERS.get('extension_plan_R30') or {}).get('extension_arms') or []) if (LEVERS.get('extension_plan_R30') or {}).get('executed')]  # R30: a dropped arm re-admitted once its extension has run
+DROPPED = set(LEVERS.get('dropped_arms') or []) - set(EXTENSION)
+NEW_ARMS_RUN = [m for m in NEW_ARMS if m not in DROPPED]  # the new arms actually run (lever 3 may drop one; R30 may re-admit it)
 CORPUS_ARMS = ('synthetic', 'conversational', 'pepys')
 FREE = ['narrative.harm', 'narrative.meaning', 'narrative.self_position', 'emotion.bodily_sensation', 'narrative.summary']
 # order matters under the credit ceiling (plan section 9): the four-field group runs for every text before the summary control
@@ -220,6 +221,7 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, reps, c
 
 async def main():
     ap = argparse.ArgumentParser(); ap.add_argument('--limit', type=int, default=None); ap.add_argument('--concurrency', type=int, default=4); ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--rejudge', action='store_true', help='R30 supplement: judge every text again with all answers (an extension arm included); the new record supersedes the old in load_judge (last record per text wins)')
     a = ap.parse_args()
     outputs, counts, arm_of, providers = load_outputs()
     print('outputs:', {m: dict(c) for m, c in counts.items()})
@@ -238,7 +240,7 @@ async def main():
     tasks = []
     for gname, units in GROUPS.items():
         ck_path = os.path.join(jd, f'{gname}.jsonl'); done = set()
-        if os.path.exists(ck_path):
+        if os.path.exists(ck_path) and not a.rejudge:
             for l in open(ck_path, encoding='utf-8'):
                 if l.strip():
                     r = json.loads(l)
