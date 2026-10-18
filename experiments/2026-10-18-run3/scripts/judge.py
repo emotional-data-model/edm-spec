@@ -28,10 +28,15 @@ parse_json = R3._r1.parse_json; price_of = R3.price_of
 
 JUDGE = MODELS['judge']
 ARMS = [e['model'] for e in MODELS['extractors'].values()]  # 6 new + REF + SON, in models.json order
-NEW_ARMS = MODELS['new_arms']; REF = MODELS['reference'][0]; SON = MODELS['voter_rerun'][0]
+NEW_ARMS = MODELS['new_arms']
+REF = next(e['model'] for e in MODELS['extractors'].values() if e['role'].startswith('reference'))
+SON = next(e['model'] for e in MODELS['extractors'].values() if e['role'].startswith('voter re-run'))
+DROPPED = set(LEVERS.get('dropped_arms') or [])
+NEW_ARMS_RUN = [m for m in NEW_ARMS if m not in DROPPED]  # the new arms actually run (lever 3 may drop one)
 CORPUS_ARMS = ('synthetic', 'conversational', 'pepys')
 FREE = ['narrative.harm', 'narrative.meaning', 'narrative.self_position', 'emotion.bodily_sensation', 'narrative.summary']
-GROUPS = {'g1_summary': ['narrative.summary'], 'g2_harm_meaning_self_body': ['narrative.harm', 'narrative.meaning', 'narrative.self_position', 'emotion.bodily_sensation']}
+# order matters under the credit ceiling (plan section 9): the four-field group runs for every text before the summary control
+GROUPS = {'g2_harm_meaning_self_body': ['narrative.harm', 'narrative.meaning', 'narrative.self_position', 'emotion.bodily_sensation'], 'g1_summary': ['narrative.summary']}
 VOTERS_OTHER = ['gpt-6.1-sol', 'kimi-k2.6']; VOTER_SON = 'claude-sonnet-5-5'
 REP_KEYS = {'gpt-6.1-sol': 'rep:gpt-6.1-sol', 'kimi-k2.6': 'rep:kimi-k2.6', 'claude-sonnet-5-5': 'rep:claude-sonnet-5-5@classing-run'}
 SYS = open(os.path.join(EXP, 'prompts', 'judge_system.txt'), encoding='utf-8').read()
@@ -194,6 +199,9 @@ async def judge_text(prov, sem, spend, tid, text, gname, units, outputs, reps, c
                 if attempt == 3: stats['bad'] += 1
             except Exception as e:
                 msg = repr(e)
+                if 'Error code: 402' in msg or 'Insufficient credits' in msg:  # credit ceiling: stop the pass checkpointed (plan section 9)
+                    rec['error'] = f'credit exhausted: {msg[:200]}'; stats['abort'] = True; stats['credit_stop'] = stats.get('credit_stop', 0) + 1
+                    print('  judge: OpenRouter credit exhausted; pass stops checkpointed'); break
                 if 'Reasoning is mandatory' in msg and prov.reasoning is not None:
                     # the Opus endpoint refuses reasoning = {enabled: false} (as the Sonnet endpoint did in the pilot): fall back to the
                     # gateway default for the rest of the pass; recorded per record and in RESULTS.md section 0.1
@@ -238,7 +246,8 @@ async def main():
         todo = [t for t in sorted(arm_of) if t not in done][:a.limit]
         print(f'{gname}: {len(todo)} texts to judge')
         stats['planned'] += len(todo)
-        for tid in todo: tasks.append(judge_text(prov, sem, sj, tid, texts[tid], gname, units, outputs, reps, ck_path, stats, budget))
+        if not a.dry_run:
+            for tid in todo: tasks.append(judge_text(prov, sem, sj, tid, texts[tid], gname, units, outputs, reps, ck_path, stats, budget))
     if a.dry_run:
         tid = sorted(arm_of)[0]; ans = answers_for(outputs, reps, tid, GROUPS['g2_harm_meaning_self_body'])
         print('dry run; example block for', tid, {u: (len(x['items']), len(x['null'])) for u, x in ans.items()}); print(build_block(ans)[:3000]); return 0

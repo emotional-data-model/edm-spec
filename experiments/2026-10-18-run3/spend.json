@@ -1,0 +1,62 @@
+{
+ "by_model": {
+  "anthropic/claude-sonnet-5.5": {
+   "usd": 6.1359448000000025,
+   "calls": 750,
+   "input_tokens": 463150,
+   "cached_input_tokens": 2749648,
+   "cache_write_tokens": 7352,
+   "output_tokens": 491630
+  },
+  "anthropic/claude-haiku-5.5": {
+   "usd": 0.6586233999999995,
+   "calls": 750,
+   "input_tokens": 463150,
+   "cached_input_tokens": 2720240,
+   "cache_write_tokens": 36760,
+   "output_tokens": 1161022
+  },
+  "google/gemini-4-argon": {
+   "usd": 8.506181900000001,
+   "calls": 750,
+   "input_tokens": 1777006,
+   "cached_input_tokens": 505399,
+   "cache_write_tokens": 0,
+   "output_tokens": 490163
+  },
+  "openai/gpt-oss-120b": {
+   "usd": 0.1843120360000003,
+   "calls": 750,
+   "input_tokens": 2125388,
+   "cached_input_tokens": 0,
+   "cache_write_tokens": 0,
+   "output_tokens": 621604
+  },
+  "meta-llama/llama-4-maverick": {
+   "usd": 0.3755222749999999,
+   "calls": 750,
+   "input_tokens": 89721,
+   "cached_input_tokens": 2023744,
+   "cache_write_tokens": 0,
+   "output_tokens": 394655
+  },
+  "qwen/qwen3.8-2.4t-a95b": {
+   "usd": 12.050061999999985,
+   "calls": 750,
+   "input_tokens": 534605,
+   "cached_input_tokens": 1685504,
+   "cache_write_tokens": 0,
+   "output_tokens": 1763080
+  },
+  "mistralai/mistral-large-4-0": {
+   "usd": 15.553059310000014,
+   "calls": 750,
+   "input_tokens": 446852,
+   "cached_input_tokens": 1730428,
+   "cache_write_tokens": 0,
+   "output_tokens": 7238311
+  }
+ },
+ "total_usd": 43.46370572100005,
+ "calls": 5250
+}

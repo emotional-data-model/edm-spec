@@ -1,0 +1,18 @@
+prompt check OK; corpus OK (150 texts, sha256 verified)
+levers: {"stop_usd": 60, "reasoning_low": ["qwen/qwen3.8-2.4t-a95b", "mistralai/mistral-large-4-0", "openai/gpt-oss-120b", "deepseek/deepseek-v4-pro-0813"], "thinking_disabled": []} | endpoint overrides: ['deepseek/deepseek-v4-pro-0813']
+dropped by the pilot gate (lever 3), not run: ['deepseek/deepseek-v4-pro-0813']
+projection before run: {"spent_usd": 32.98, "completed_calls": 4661, "projected_extraction_usd": 42.39, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 51.39, "stop_usd": 60.0, "per_arm": {"mistralai/mistral-large-4-0": {"done": 308, "mean_usd": 0.02129, "projected_usd": 15.97}}}
+mistralai/mistral-large-4-0 @ mistral / synthetic: 250 planned, 144 to do [reasoning {'max_tokens': 2400}]
+mistralai/mistral-large-4-0 @ mistral / conversational: 250 planned, 147 to do [reasoning {'max_tokens': 2400}]
+mistralai/mistral-large-4-0 @ mistral / pepys: 250 planned, 151 to do [reasoning {'max_tokens': 2400}]
+  [mistralai__mistral-large-4-0/pepys] 50 calls, $0.91 this run, total $33.89, parse_fail=2 missing_keys=1 mismatch=0
+  [mistralai__mistral-large-4-0/synthetic] 100 calls, $1.97 this run, total $34.95, parse_fail=15 missing_keys=2 mismatch=0
+  [mistralai__mistral-large-4-0/synthetic] 150 calls, $2.99 this run, total $35.97, parse_fail=22 missing_keys=3 mismatch=0
+  [mistralai__mistral-large-4-0/pepys] 200 calls, $4.01 this run, total $36.99, parse_fail=25 missing_keys=4 mismatch=0
+  [mistralai__mistral-large-4-0/conversational] 250 calls, $5.07 this run, total $38.05, parse_fail=32 missing_keys=5 mismatch=0
+  [mistralai__mistral-large-4-0/pepys] 300 calls, $6.10 this run, total $39.08, parse_fail=40 missing_keys=10 mismatch=0
+  [mistralai__mistral-large-4-0/pepys] 350 calls, $7.07 this run, total $40.05, parse_fail=43 missing_keys=13 mismatch=0
+  [mistralai__mistral-large-4-0/conversational] 400 calls, $8.04 this run, total $41.02, parse_fail=44 missing_keys=14 mismatch=0
+done in 2370s: 442 calls, $9.00 this run; cumulative $41.98; parse_fail=57 missing_keys=16 transport_fail=0 provider_mismatch=0
+final projection: {"spent_usd": 41.98, "completed_calls": 5103, "projected_extraction_usd": 41.98, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 50.98, "stop_usd": 60.0, "per_arm": {"mistralai/mistral-large-4-0": {"done": 750, "mean_usd": 0.02074, "projected_usd": 15.55}}}
+EXIT 0

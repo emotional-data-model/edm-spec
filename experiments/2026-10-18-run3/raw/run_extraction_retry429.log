@@ -1,0 +1,15 @@
+prompt check OK; corpus OK (150 texts, sha256 verified)
+levers: {"stop_usd": 60, "reasoning_low": ["qwen/qwen3.8-2.4t-a95b", "mistralai/mistral-large-4-0", "openai/gpt-oss-120b", "deepseek/deepseek-v4-pro-0813"], "thinking_disabled": []} | endpoint overrides: ['deepseek/deepseek-v4-pro-0813']
+dropped by the pilot gate (lever 3), not run: ['deepseek/deepseek-v4-pro-0813']
+projection before run: {"spent_usd": 41.98, "completed_calls": 5103, "projected_extraction_usd": 43.36, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 52.36, "stop_usd": 60.0, "per_arm": {"google/gemini-4-argon": {"done": 690, "mean_usd": 0.01125, "projected_usd": 8.44}, "anthropic/claude-sonnet-5.5": {"done": 663, "mean_usd": 0.00813, "projected_usd": 6.1}}}
+google/gemini-4-argon @ google-vertex/global / synthetic: 250 planned, 22 to do
+google/gemini-4-argon @ google-vertex/global / conversational: 250 planned, 20 to do
+google/gemini-4-argon @ google-vertex/global / pepys: 250 planned, 18 to do
+anthropic/claude-sonnet-5.5 @ anthropic / synthetic: 250 planned, 35 to do
+anthropic/claude-sonnet-5.5 @ anthropic / conversational: 250 planned, 27 to do
+anthropic/claude-sonnet-5.5 @ anthropic / pepys: 250 planned, 25 to do
+  [anthropic__claude-sonnet-5.5/synthetic] 50 calls, $0.50 this run, total $42.47, parse_fail=0 missing_keys=0 mismatch=0
+  [anthropic__claude-sonnet-5.5/synthetic] 100 calls, $1.03 this run, total $43.00, parse_fail=0 missing_keys=0 mismatch=0
+done in 239s: 147 calls, $1.49 this run; cumulative $43.46; parse_fail=0 missing_keys=0 transport_fail=0 provider_mismatch=0
+final projection: {"spent_usd": 43.46, "completed_calls": 5250, "projected_extraction_usd": 43.46, "reserves_usd": {"judge": 9.0}, "projected_total_usd": 52.46, "stop_usd": 60.0, "per_arm": {"google/gemini-4-argon": {"done": 750, "mean_usd": 0.01134, "projected_usd": 8.51}, "anthropic/claude-sonnet-5.5": {"done": 750, "mean_usd": 0.00818, "projected_usd": 6.14}}}
+EXIT 0

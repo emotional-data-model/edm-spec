@@ -16,7 +16,8 @@ sys.path.insert(0, os.path.join(RUN1, 'scripts')); sys.path.insert(0, HERE)
 from stats import fleiss_kappa, icc2_1, pairwise_same_rate, modal  # noqa: E402
 import judge as J  # noqa: E402
 R1S = J.R1S; MODELS = J.MODELS; RAW = J.RAW
-ARMS, NEW_ARMS, REF, SON = J.ARMS, J.NEW_ARMS, J.REF, J.SON
+ARMS, NEW_ARMS, REF, SON = [m for m in J.ARMS if m not in J.DROPPED], J.NEW_ARMS_RUN, J.REF, J.SON
+DROPPED = sorted(J.DROPPED)
 VOTERS_R1 = ['gpt-6.1-sol', 'kimi-k2.6']; SON_R1 = 'claude-sonnet-5-5'
 SCORING = os.path.join(EXP, 'scoring')
 THRESH = {'C': (0.70, 0.40), 'CL': (0.70, 0.40), 'B': (0.70, 0.40), 'T': (0.80, 0.60), 'S': (0.80, 0.60), 'D': (0.75, 0.50)}
@@ -25,7 +26,7 @@ UNITS = [('narrative.harm', 'T', None), ('narrative.summary', 'S', None), ('narr
          ('context.event_category', 'C', 'event_category'), ('context.relationship', 'C', 'relationship'), ('context.scope.text', 'C', 'scope'), ('salience.tether.type', 'C', 'tether'), ('salience.function', 'CL', 'function'),
          ('motivation.action_tendency', 'C', 'action_tendency'), ('motivation.need', 'C', 'need'), ('motivation.temporal_focus', 'C', 'temporal_focus'), ('motivation.coping', 'C', 'coping')]
 FIELD_OF = {u: (u.rsplit('.', 1)[0] if u.endswith(('.text', '.value', '.type')) else u) for u, s, v in UNITS}
-P1_SET = [e['model'] for e in MODELS['extractors'].values() if e.get('p1_open_weight_set')]
+P1_SET = [e['model'] for e in MODELS['extractors'].values() if e.get('p1_open_weight_set') and e['model'] not in J.DROPPED]
 GEMINI = 'google/gemini-4-argon'
 BAND_CHEAP, BAND_VOTING = 13, 17
 
@@ -252,7 +253,7 @@ def main():
     }
     arm_stats = raw_arm_stats()
     json.dump({'counts': {m: dict(c) for m, c in counts.items()}, 'providers': {m: dict(p) for m, p in providers.items()}, 'texts_per_arm': {c: len(v) for c, v in by_arm.items()}, 'judged_units': len(judge),
-               'thresholds': THRESH, 'units': UNITS, 'arms': ARMS, 'new_arms': NEW_ARMS, 'reference': REF, 'voter_rerun': SON, 'p1_set': P1_SET, 'bands': bands, 'predictions': predictions,
+               'thresholds': THRESH, 'units': UNITS, 'arms': ARMS, 'new_arms': NEW_ARMS, 'dropped_arms': DROPPED, 'reference': REF, 'voter_rerun': SON, 'p1_set': P1_SET, 'bands': bands, 'predictions': predictions,
                'arm_stats': arm_stats, 'levers': J.LEVERS, 'table': table}, open(os.path.join(SCORING, 'field_table.json'), 'w', encoding='utf-8'), indent=1, default=str)
     # markdown summary
     def f(x): return '—' if x is None else f'{x:.2f}'

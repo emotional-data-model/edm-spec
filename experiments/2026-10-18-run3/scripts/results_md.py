@@ -10,7 +10,7 @@ import json, os
 HERE = os.path.dirname(os.path.abspath(__file__)); EXP = os.path.dirname(HERE)
 FT = json.load(open(os.path.join(EXP, 'scoring', 'field_table.json'), encoding='utf-8'))
 MODELS = json.load(open(os.path.join(EXP, 'models.json'), encoding='utf-8'))
-T = FT['table']; P = T['pooled']; UNITS = [tuple(u) for u in FT['units']]; ARMS = FT['arms']; NEW = FT['new_arms']; REF = FT['reference']; SON = FT['voter_rerun']
+T = FT['table']; P = T['pooled']; UNITS = [tuple(u) for u in FT['units']]; ARMS = FT['arms']; NEW = FT['new_arms']; DROPPED = FT.get('dropped_arms', []); REF = FT['reference']; SON = FT['voter_rerun']
 SHORT = {'google/gemini-4-argon': 'Gemini 4 Argon', 'deepseek/deepseek-v4-pro-0813': 'DeepSeek V4 Pro', 'qwen/qwen3.8-2.4t-a95b': 'Qwen3.8 2.4T', 'meta-llama/llama-4-maverick': 'Llama 4 Maverick', 'mistralai/mistral-large-4-0': 'Mistral Large 4', 'openai/gpt-oss-120b': 'gpt-oss-120b', REF: 'Haiku 5.5 (ref)', SON: 'Sonnet 5.5 (re-run)'}
 TAG = {'google/gemini-4-argon': 'N1', 'deepseek/deepseek-v4-pro-0813': 'N2', 'qwen/qwen3.8-2.4t-a95b': 'N3', 'meta-llama/llama-4-maverick': 'N4', 'mistralai/mistral-large-4-0': 'N5', 'openai/gpt-oss-120b': 'N6', REF: 'Ref', SON: 'Son'}
 FIELD_OF = {u: (u.rsplit('.', 1)[0] if u.endswith(('.text', '.value', '.type')) else u) for u, s, v in UNITS}
@@ -47,7 +47,8 @@ def main():
     L.append(f"| R3-D2 (withdrawn) | thinking disabled on the two Claude arms — attempted, then withdrawn | {lev.get('thinking_disabled_withdrawn', '')} | `levers.json`; the Haiku no-thinking pilot records stay in `raw/pilot/` |")
     L.append(f"| lever 1 | `reasoning: {{effort: low}}` on {', '.join('`' + m + '`' for m in lev.get('reasoning_low', []))}; `reasoning: {{max_tokens: N}}` on {', '.join(f'`{m}` ({n})' for m, n in lev.get('reasoning_max_tokens', {}).items()) or 'none'} | {lev.get('reasoning_low_why', '')} {lev.get('reasoning_max_tokens_why', '')} | pilot gate, plan §9 |")
     for h in lev.get('pilot_history', []): L.append(f"| pilot | {h['when']}{': projected total USD ' + str(h['projected_total_usd']) if h.get('projected_total_usd') else ''} | {h['note']} | `spend_pilot.json`, `raw/pilot/` |")
-    L.append(f"| stop | stop in force USD {stop} | plan §9 levers 2–3 as applied (see STATUS.md) | `levers.json` |")
+    L.append(f"| lever 2 | stop in force USD {stop} | {lev.get('stop_why', '')} | `levers.json` |")
+    L.append(f"| lever 3 | dropped: {', '.join('`' + m + '`' for m in DROPPED) or 'none'} | {lev.get('dropped_why', '')} | `levers.json`; the 5-of-9 rule reads 5-of-{3 + len(NEW)} |")
     L.append('')
     L.append('## 1. Model × field capability table (pooled, 150 texts; frozen thresholds and decision rule, plan §7)\n')
     L.append('Cell = repeatability / agreement with the voting majority / coverage → decision. **H** holds (both thresholds met), R repeats only (repeatability met, agreement not), × does not hold, U uncovered (< 50 % of texts with a non-null answer and a majority; counts as not held). Thresholds: coded / boolean κ ≥ 0.70 repeat, Cohen κ ≥ 0.40 agreement; free text judge-equivalence ≥ 0.80 / ≥ 0.60; `intensity.value` ICC ≥ 0.75 / ≥ 0.50. Majority = Sonnet 5.5 (this run) + gpt-6.1-sol + Kimi K2.6 (run 1; run-2 Arm B for `harm`); texts with no two voters agreeing are excluded (exclusion rate in §2). ᵇ borderline (within 0.05 of a threshold), ˢ sparse (null ≥ 90 %). The three voters count as holding by the run that classed the field; the Haiku reference and the Sonnet re-run are reported, never counted.\n')

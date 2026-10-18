@@ -177,6 +177,9 @@ async def worker(prov, jobs, ck, spend, sem, texts, stats, label, stop_box):
                 break
             except Exception as e:
                 msg = repr(e)[:1500]
+                if 'Error code: 402' in msg or 'Insufficient credits' in msg:  # credit ceiling (plan section 9): stop checkpointed, never churn
+                    if not stats.get('abort'): write_status(f'OpenRouter credit exhausted at {text_id} r{repeat} ({label}); run stopped checkpointed for the founder to top up and resume', project(spend, stats, stop_box['stop']))
+                    stats['abort'] = True; return
                 if attempt >= 6:
                     ck.append({**base, 'ts': time.time(), 'latency_s': round(time.time() - t0, 2), 'served_model': None, 'provider': None, 'gen_id': None, 'usage': None, 'cost_usd': 0.0, 'cost_list_usd': 0.0,
                                'raw_text': None, 'parsed': None, 'canon': None, 'missing_keys': None, 'field_confidence': None, 'parse_error': None, 'transport_error': msg, 'provider_mismatch': None, 'stop_reason': None})
@@ -282,7 +285,9 @@ async def main():
             ck = Checkpoint3(path)
             if a.pilot and a.repilot: todo = list(jobs); ck.done = {}  # re-request; the new records are appended and supersede the old in pilot_means()
             elif a.pilot: todo = [j for j in jobs if j not in ck.done or ck.done[j].get('transport_error')]  # a pilot transport failure is re-requested
-            else: todo = [j for j in jobs if j not in ck.done]
+            else:
+                todo = [j for j in jobs if j not in ck.done or ck.done[j].get('transport_error')]  # R3-D3: a transport failure (no model answer) is re-requested; the failed record stays, the new one supersedes it
+                for j in todo: ck.done.pop(j, None)
             print(f"{e['model']} @ {e['endpoint']['tag']} / {carm}: {len(jobs)} planned, {len(todo)} to do" + (f' [reasoning {reasoning}]' if reasoning else ''))
             lanes = max(1, min(a.concurrency, len(todo)))
             for i in range(lanes): tasks.append(worker(prov, todo[i::lanes], ck, spend, sem, texts, stats, f"{arm_dir(e['model'])}/{carm}", stop_box))
