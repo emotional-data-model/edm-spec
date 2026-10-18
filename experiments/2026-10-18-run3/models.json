@@ -1,0 +1,87 @@
+{
+ "pinned_at": "2026-10-18",
+ "pinned_from": "OpenRouter https://openrouter.ai/api/v1/models and /models/{id}/endpoints read 2026-10-18 at freeze (pin record: _openrouter_listing_2026-10-18/); Anthropic pins carried verbatim from runs 1-2; vendor weights status from the vendor model cards read 2026-10-18 (see each entry)",
+ "list_prices_usd_per_million_tokens": {
+  "note": "input / cached-input / output. OpenRouter arms: the PINNED HOSTING ENDPOINT's price (OpenRouter bills the hosting provider's price); the model's top-listed price is kept beside it as listed_price. Anthropic: cache write = 1.25 x input (5-minute TTL); cached-input = cache read"
+ },
+ "extractors": {
+  "N1": {
+   "slot": "Gemini, current pro-class", "model": "google/gemini-4-argon", "provider": "openrouter",
+   "endpoint": {"tag": "google-vertex/global", "provider_name": "Google", "quantization": "unknown", "max_completion_tokens": 65536, "why": "first-party Google Vertex endpoint at the model's listed price; status 0, uptime 100 at pin time"},
+   "price": {"input": 2.0, "cached_input": 0.1, "output": 10.0}, "listed_price": {"input": 2.0, "cached_input": 0.1, "output": 10.0},
+   "reasoning_param": true, "reasoning_effort": null, "weights": "closed",
+   "weights_source": "Google; no weights published", "created_unix": 1791907477, "role": "new arm (one of the 9)", "p1_open_weight_set": false
+  },
+  "N2": {
+   "slot": "DeepSeek, current chat (GA)", "model": "deepseek/deepseek-v4-pro-0813", "provider": "openrouter",
+   "endpoint": {"tag": "deepseek", "provider_name": "DeepSeek", "quantization": "unknown (vendor-served)", "max_completion_tokens": 393216, "why": "first-party DeepSeek endpoint at the listed price; status 0, uptime 100"},
+   "price": {"input": 0.66, "cached_input": 0.022, "output": 1.98}, "listed_price": {"input": 0.66, "cached_input": 0.022, "output": 1.98},
+   "reasoning_param": true, "reasoning_effort": null, "weights": "open-weight (MIT)",
+   "weights_source": "huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813 model card read 2026-10-18: 'This repository and the model weights are licensed under the MIT License'", "created_unix": 1786549364, "role": "new arm (one of the 9)", "p1_open_weight_set": true
+  },
+  "N3": {
+   "slot": "Qwen, largest current", "model": "qwen/qwen3.8-2.4t-a95b", "provider": "openrouter",
+   "endpoint": {"tag": "alibaba", "provider_name": "Alibaba", "quantization": "unknown (vendor-served)", "max_completion_tokens": 131072, "why": "first-party Alibaba endpoint at the listed price; status 0, uptime 100"},
+   "price": {"input": 2.0, "cached_input": 0.25, "output": 6.0}, "listed_price": {"input": 2.0, "cached_input": 0.25, "output": 6.0},
+   "reasoning_param": true, "reasoning_effort": null, "weights": "open-weight",
+   "weights_source": "OpenRouter listing (2.4T total / 95B active, the open-weight variant of Qwen3.8 Max), as in the draft of 2026-10-18", "created_unix": 1786551702, "role": "new arm (one of the 9)", "p1_open_weight_set": true
+  },
+  "N4": {
+   "slot": "Llama, largest current", "model": "meta-llama/llama-4-maverick", "provider": "openrouter",
+   "endpoint": {"tag": "digitalocean", "provider_name": "DigitalOcean", "quantization": "unknown", "max_completion_tokens": 16384, "why": "the endpoint at the model's listed price with no stated quantisation; status 0, uptime 100; the alternatives at pin time were fp8 (Novita, Parasail) or Vertex us-east5 (uptime unknown)"},
+   "price": {"input": 0.1875, "cached_input": 0.05, "output": 0.6525}, "listed_price": {"input": 0.1875, "cached_input": 0.05, "output": 0.6525},
+   "reasoning_param": false, "reasoning_effort": null, "weights": "open-weight (Llama 4 community licence)",
+   "weights_source": "Meta; weights public since 2025-04", "created_unix": 1743881822, "role": "new arm (one of the 9)", "p1_open_weight_set": true
+  },
+  "N5": {
+   "slot": "Mistral Large, current", "model": "mistralai/mistral-large-4-0", "provider": "openrouter",
+   "endpoint": {"tag": "mistral", "provider_name": "Mistral", "quantization": "unknown (vendor-served)", "max_completion_tokens": 262144, "why": "first-party Mistral endpoint at the listed price; status 0, uptime 100 (mistral/zdr is the same endpoint under zero-data-retention)"},
+   "price": {"input": 0.68, "cached_input": 0.07, "output": 2.09}, "listed_price": {"input": 0.68, "cached_input": 0.07, "output": 2.09},
+   "reasoning_param": true, "reasoning_effort": null, "weights": "announced open-weight, NOT released at freeze",
+   "weights_source": "docs.mistral.ai/getting-started/models read 2026-10-18 labels Large 4 'Open' / 'open-weight' with no licence named (the Large 3 row says Apache 2.0); huggingface.co/mistralai/Mistral-Large-4 returns 401 (gated or absent); secondary reports of 2026-10-09..15 find no weight files. Treated as closed for P1 until weights and a licence are public", "created_unix": 1791294122, "role": "new arm (one of the 9)", "p1_open_weight_set": false
+  },
+  "N6": {
+   "slot": "OpenAI open-weight (within-vendor contrast with gpt-6.1-sol)", "model": "openai/gpt-oss-120b", "provider": "openrouter",
+   "endpoint": {"tag": "deepinfra/bf16", "provider_name": "DeepInfra", "quantization": "bf16", "max_completion_tokens": 117964, "why": "least-quantised endpoint (bf16) with status 0 and uptime 100 at pin time; its price (0.037 / 0.17) is below the model's listed top price (0.15 / 0.60)"},
+   "price": {"input": 0.037, "cached_input": 0.037, "output": 0.17}, "listed_price": {"input": 0.15, "cached_input": 0.075, "output": 0.6},
+   "reasoning_param": true, "reasoning_effort": null, "weights": "open-weight (Apache 2.0)",
+   "weights_source": "OpenAI, 2025-08; 117B MoE, 5.1B active", "created_unix": 1754414231, "role": "new arm (one of the 9)", "p1_open_weight_set": true
+  },
+  "REF": {
+   "slot": "Claude Haiku 5.5 (cheap-tier reference, reported, not one of the 9)", "model": "anthropic/claude-haiku-5.5", "canonical_model": "claude-haiku-5-5", "provider": "openrouter",
+   "endpoint": {"tag": "anthropic", "provider_name": "Anthropic", "quantization": "n/a (first-party)", "max_completion_tokens": 128000, "why": "the Anthropic direct key is at its console usage cap at freeze (API answer 2026-10-18: 'You have reached your specified API usage limits. You will regain access on 2026-11-01 at 00:00 UTC.'); the same model is served first-party through OpenRouter at the same list price"},
+   "price": {"input": 0.1, "cache_write": 0.125, "cached_input": 0.01, "output": 0.5}, "listed_price": {"input": 0.1, "cache_write": 0.125, "cached_input": 0.01, "output": 0.5},
+   "source": "claude-api skill price table 2026-10-06; runs 1-2 pins; OpenRouter anthropic endpoint 2026-10-18 (same figures)", "reasoning_param": false, "reasoning_effort": null, "weights": "closed", "role": "reference (reported; never changes a verdict)", "p1_open_weight_set": false, "max_tokens": 16000
+  },
+  "SON": {
+   "slot": "Claude Sonnet 5.5 (voter re-run under the 19-field prompt: Sonnet component of the Q2 majority; framing bound)", "model": "anthropic/claude-sonnet-5.5", "canonical_model": "claude-sonnet-5-5", "provider": "openrouter",
+   "endpoint": {"tag": "anthropic", "provider_name": "Anthropic", "quantization": "n/a (first-party)", "max_completion_tokens": 128000, "why": "as REF: Anthropic direct key at its usage cap at freeze; first-party endpoint through OpenRouter at the same list price"},
+   "price": {"input": 2.0, "cache_write": 2.5, "cached_input": 0.2, "output": 10.0}, "listed_price": {"input": 2.0, "cache_write": 2.5, "cached_input": 0.2, "output": 10.0},
+   "source": "claude-api skill price table 2026-10-06; runs 1-2 pins; OpenRouter anthropic endpoint 2026-10-18 (same figures)", "reasoning_param": false, "reasoning_effort": null, "weights": "closed", "role": "voter re-run (majority component; reported; not one of the 9; never changes a verdict)", "p1_open_weight_set": false, "max_tokens": 16000
+  }
+ },
+ "judge": {
+  "slot": "Claude Opus 5.5", "model": "anthropic/claude-opus-5.5", "canonical_model": "claude-opus-5-5", "provider": "openrouter",
+  "endpoint": {"tag": "anthropic", "provider_name": "Anthropic", "quantization": "n/a (first-party)", "max_completion_tokens": 128000, "why": "as REF: Anthropic direct key at its usage cap at freeze"},
+  "price": {"input": 4.0, "cache_write": 5.0, "cached_input": 0.2, "output": 20.0},
+  "source": "claude-api skill price table 2026-10-06; runs 1-2 pins; OpenRouter anthropic endpoint 2026-10-18 (same figures)",
+  "rule": "never an extractor; rules 1-5; runs 1-2 sent output_config.effort = low with no thinking block through the direct API; through the gateway's chat-completions route the native effort parameter cannot be sent, so the judge is called with reasoning = {enabled: false} (no extended thinking, as in runs 1-2) and the native effort at its default; reasoning tokens are recorded per call (plan section 12, freeze entry d)",
+  "max_tokens": 16000
+ },
+ "gateway": {
+  "base_url": "https://openrouter.ai/api/v1", "env_key": "OPENROUTER_API_KEY",
+  "provider_pin": "provider = {order: [endpoint.tag], allow_fallbacks: false} on every call; the response's top-level `provider` (hosting provider name) is recorded on every record; a record whose provider differs from endpoint.provider_name is logged as a failed repeat and never re-sampled",
+  "usage": "OpenRouter returns usage.cost (USD charged), prompt_tokens_details.cached_tokens and completion_tokens_details.reasoning_tokens on every response; spend for the gateway arms is the reported cost; the pinned-price figure is recorded beside it",
+  "max_tokens": 12000
+ },
+ "sampling": "provider defaults for every extractor (no temperature, top_p, effort or reasoning parameter set unless the pilot gate lever 1 is applied and logged); response_format json_object on every arm as on the OpenAI-compatible arms of runs 1-2; fresh context per call; one shared 19-field system prompt; Anthropic 5-minute prompt cache on the three Claude models via cache_control on the system text part (OpenRouter forwards it to the anthropic endpoint)",
+ "env_keys": {"anthropic": "ANTHROPIC_API_KEY", "openrouter": "OPENROUTER_API_KEY"},
+ "budget_usd": 50,
+ "budget_rule": "hard stop USD 50; the pilot gate may raise it to 60 (plan section 9, lever 2) before dropping any arm. OpenRouter credit balance at freeze: USD 50.00 total, 0 used (key limit 100): the balance, not the stop, is the ceiling this session can spend; under lever 2 the run keeps every arm and, if credits run out, stops checkpointed for the founder to top up and resume",
+ "anthropic_direct_status_at_freeze": "ANTHROPIC_API_KEY answers 400 invalid_request_error 'You have reached your specified API usage limits. You will regain access on 2026-11-01 at 00:00 UTC.' (count_tokens probe, 2026-10-18); no direct Anthropic call is possible this session",
+ "new_arms": ["google/gemini-4-argon", "deepseek/deepseek-v4-pro-0813", "qwen/qwen3.8-2.4t-a95b", "meta-llama/llama-4-maverick", "mistralai/mistral-large-4-0", "openai/gpt-oss-120b"],
+ "reference": ["claude-haiku-5-5"],
+ "voter_rerun": ["claude-sonnet-5-5"],
+ "voters_classing_runs": {"claude-sonnet-5-5": "run 3 (this run, 19-field prompt) for the Q2 majority; run 1 / run 2 Arm B for the framing bound", "gpt-6.1-sol": "run 1 (run 2 Arm B for narrative.harm)", "kimi-k2.6": "run 1 (run 2 Arm B for narrative.harm)"},
+ "run": "2026-10-18-run3"
+}
