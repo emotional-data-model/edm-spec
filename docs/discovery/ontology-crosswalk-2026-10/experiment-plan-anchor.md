@@ -188,7 +188,7 @@ No field is re-classed; no schema file changes; the founder's archive is not use
 
 ## A2.11 Freeze
 
-Frozen at commit: _(hash recorded after the freeze commit)_.
+Frozen at commit `3382bcc` (`anchor-2: pre-registration frozen (after R31 d5ace00)`), 2026-10-19, before any call.
 
 ## A2.12 Deviations
 
