@@ -1,0 +1,29 @@
+Reading guidance (cues v1, content subset)
+
+A short comment can carry signals beyond its stated words. The cues below are departures from a norm; each is a reason to look again at what the text expresses, not a licence to invent. Rule 1 still holds: `primary` must be attributable to the text. Where a cue is marked "content hypothesis", the named word is a candidate for `primary` only if the surrounding text supports it; where a cue is marked "weight only", it bears on how strongly something is felt, never on which emotion it is.
+
+- rl:over-explaining: justification or background supplied for a statement nobody questioned. Weight only; the defended statement is where the feeling sits.
+- rl:unasked-denial: a negation of a state or feeling nothing attributed to the writer ("not that I care", "I'm not upset"). Content hypothesis: the denied feeling is a candidate, read as negated, never as stated.
+- rl:counting: precise counts or dates where none were asked for. Weight only; the counted thing is what matters to the writer.
+- rl:trailing-list: an enumeration that does not close ("and, and everything"). Weight only.
+- rl:unfinished: a clause abandoned before completion, where the completion is recoverable. Content hypothesis: the recoverable completion, cited from the fragment, never from an imagined ending.
+- rl:hedge: softeners concentrated on one claim ("I guess", "sort of", "kind of"). Weight only; a hedge says nothing about which emotion.
+- rl:minimising: downgraders on an event the text elsewhere treats as consequential ("just", "nothing really", "no big deal"). Weight only; read intensity from the contrasting span, not from the minimiser.
+- rl:abstraction: a concrete event or person named by a vague category ("the situation", "what happened"). Weight only; distance from the referent.
+- rl:agentless-passive: an act reported without its agent ("things were said"). Weight only; the attribution is what is withheld.
+- rl:register-shift: a move into formal or clinical register on one topic in an informal text. Weight only; distance.
+- rl:joke-at-weight: humour or a flippant aside exactly where the text reaches its most consequential content. Weight only; the joke manages the weighted content, it is not the feeling.
+- rl:meta-comment: a remark about the act of saying it ("I don't know why I'm telling you this", "sorry, long post"). Weight only; the told content is marked as significant.
+- rl:repetition: the same word or clause repeated beyond the needs of the sentence ("it's fine, it's fine"). Weight only; not a word for the feeling.
+- rl:self-repair: a word replaced within the same turn with the first version left visible ("furious - no, disappointed"). Content pair: the replacement is the stated value; the replaced word is a hypothesis only.
+- rl:tense-shift-person: a person referred to in a tense that does not match the status the text gives them (present tense for someone said to be dead). Content hypothesis for loss; not a word for the feeling from the tense alone.
+- rl:pronoun-distance: the writer's own experience told in the second person or the generic ("you just get on with it") while "I" is used elsewhere. Weight only; distance from the "you"-told content.
+- rl:slip: a wrong name, word or pronoun the text itself makes identifiable as wrong, not a typo. Hypothesis only; a single slip licenses nothing.
+- rl:precise-detail: a detail of unusual precision that plays no role in the event told. Weight only; the surrounding event is the trigger.
+- rl:counterfactual: what did not happen, could have, or should have ("if I'd gone", "it should have been me"). Content hypothesis for harm or regret; the device alone does not name the emotion (regret, guilt and relief all use it).
+- rl:intensifier-stack: two or more intensifiers on one assessment ("so, so tired"), or a superlative with no comparison class. Weight only; the intensified assessment is stated content and is read as such.
+- rl:open-coda: a closer that does not resolve ("anyway.", "it is what it is."). Weight only; unresolved.
+- rl:unprompted-contrast: "but" or "though" introducing a qualification nothing called for, typically after a positive statement. Content only via what the qualification itself states; it often carries the dominant quality.
+- rl:explicative-overload: causal connectives stacked on one event beyond what one reason needs. Weight only; sense-making in progress.
+
+How to use them here: a cue tells you where to look and how much the writer is managing; the word you write must still be the quality the text expresses. If a cue points at a feeling the text never names, prefer the nearest recommended value that the text does support, or null.

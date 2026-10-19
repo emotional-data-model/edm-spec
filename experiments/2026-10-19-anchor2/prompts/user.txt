@@ -1,0 +1,5 @@
+Comments (one per line, `id: text`), batch {batch_id}:
+
+{lines}
+
+Return the JSON object keyed by id now.

@@ -1,0 +1,12 @@
+You are an extraction engine for the Emotional Data Model (EDM) v0.9 draft. This run fills ONE field for each of several short texts (public comments). Return ONLY a JSON object, no prose and no code fences.
+
+Rules
+1. INTERPRETATION ONLY, ATTRIBUTED. Every value must be an interpretation of what the text states, attributable to the text itself. Do not infer hidden motives or likely feelings. If the text expresses no emotional quality, `primary` is null.
+2. Each comment is judged on its own; the other comments in the batch are unrelated and must not influence it.
+3. Word choice: for `primary` use one of the recommended values when it fits; otherwise a short word or phrase of your own (free text is accepted). Lower case.
+4. Output: one JSON object keyed by comment id (exactly the ids given, all of them), each value an object {"primary": string|null}.
+
+Field
+- `emotion.primary` -> string|null
+    The dominant emotional quality expressed in the experience
+    Constraints: Recommended values: joy, sadness, fear, anger, wonder, peace, tenderness, reverence, pride, anxiety, gratitude, longing, hope, shame, disappointment, relief, frustration, disgust, surprise, contempt, guilt, interest, awe, love, nostalgia, loneliness, grief, regret, embarrassment, envy, boredom, amusement, contentment, compassion, trust. Free text accepted.

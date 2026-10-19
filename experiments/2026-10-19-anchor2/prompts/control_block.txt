@@ -1,0 +1,23 @@
+Reference material (W3C Emotion Markup Language 1.0, structural excerpt; not used by this task)
+
+EmotionML 1.0 is a W3C Recommendation (22 May 2014; editors Burkhardt and Schröder, Multimodal Interaction Working Group) for representing and annotating emotion-related states in technological contexts. Its elements live in the namespace http://www.w3.org/2009/10/emotionml. The following describes the element model and the attribute conventions. Nothing in it changes the rules or the field definition above.
+
+- <emotionml>: the root element. Attributes: version (required, "1.0"), category-set, dimension-set, appraisal-set, action-tendency-set. A set attribute names, by URI, the vocabulary from which descriptor names in the document are drawn.
+- <emotion>: one annotated state. Attributes: id, version, category-set, dimension-set, appraisal-set, action-tendency-set, start, end, duration, time-ref-uri, time-ref-anchor-point, offset-to-start, expressed-through. Set attributes on <emotion> override those on the root for that element.
+- <category>: a categorical descriptor. Attributes: name (required), value, confidence. The name must be an item of the active category vocabulary.
+- <dimension>: a dimensional descriptor. Attributes: name (required), value or a child <trace>, confidence.
+- <appraisal>: an appraisal descriptor. Attributes: name (required), value, confidence.
+- <action-tendency>: an action-tendency descriptor. Attributes: name (required), value, confidence.
+- Intensity is not an element: it is a dimension name, written <dimension name="intensity"/>, drawn from the vocabulary intensity-dimension.
+- <reference>: a link to an external resource. Attributes: uri (required), role, media-type. The role attribute takes one of expressedBy (the observable behaviour expressing the state; the default), experiencedBy (the subject), triggeredBy (the eliciting event), targetedAt (the object of the state).
+- <info>: an arbitrary metadata container with an optional id attribute.
+- <trace>: a time series for a descriptor. Attributes: freq (required), samples (required). It is a child of <category>, <dimension>, <appraisal> or <action-tendency> in place of a single value.
+- <vocabulary>: defines a vocabulary inline. Attributes: type (required: category, dimension, appraisal or action-tendency), id (required). Its children are <item> elements, each with a required name attribute.
+
+Attribute conventions: value is a float in [0, 1] for category, dimension, appraisal and action-tendency; confidence is a float in [0, 1]; start and end are absolute timestamps in milliseconds; duration is in milliseconds; offset-to-start is in milliseconds relative to the resource named by time-ref-uri and the anchor point time-ref-anchor-point, which is start (the default) or end; expressed-through is a space-separated list of modalities such as face, voice, text or gesture.
+
+Published vocabularies (Working Group Note, 1 April 2014) are referenced by URI plus fragment, for example dimension-set="http://www.w3.org/TR/emotion-voc/xml#pad-dimensions". Dimension vocabularies: pad-dimensions (pleasure, arousal, dominance; 0.5 is neutral), fsre-dimensions (valence, potency, arousal, unpredictability), intensity-dimension (intensity). Appraisal vocabularies: ema-appraisals (relevance, desirability, agency, blame, likelihood, unexpectedness, urgency, ego-involvement, controllability, changeability, power, adaptability); scherer-appraisals (twenty items grouped under novelty, goal significance, coping potential and compatibility with standards, such as suddenness, familiarity, predictability, outcome-probability, goal-conduciveness, urgency, agent-self, agent-other, agent-nature, control, power, adjustment-possible, norm-compatibility, self-compatibility). Action-tendency vocabulary: frijda-action-tendencies (approach, avoidance, being-with, attending, rejecting, nonattending, agonistic, interrupting, dominating, submitting). A document may also define its own vocabulary inline and reference it by fragment identifier.
+
+A minimal document: <emotionml version="1.0" xmlns="http://www.w3.org/2009/10/emotionml" dimension-set="http://www.w3.org/TR/emotion-voc/xml#pad-dimensions"><emotion><dimension name="arousal" value="0.3"/><reference uri="http://example.org/clip.wav" role="expressedBy"/></emotion></emotionml>.
+
+Conformance: a document conforms when the root carries version "1.0", every descriptor name is an item of the vocabulary that the governing set attribute names, every value and confidence lies in [0, 1], and foreign-namespace content appears only inside <info>.
