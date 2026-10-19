@@ -102,7 +102,7 @@ None at freeze. Logged here and in `levers_anchor.json` if any arise.
 
 # Anchor-2 — wider vocabulary, content cues, prompt-length control (pre-registration, 2026-10-19)
 
-**Status: frozen by the commit `anchor-2: pre-registration frozen (after R31 d5ace00)` before any call (hash recorded in §A2.11 after the commit). Hard cap USD 11 on OpenRouter for the whole run. Branch `discovery/ontology-crosswalk`; nothing pushed.** Depends on R31 (`lexical-familiarity.md`, commit `d5ace00`): the 18 MFOEM additions have never been offered in a prompt, so arm A is their first test. Files: `experiments/2026-10-19-anchor2/` (`mapping.json`, `models_anchor2.json`, `prompts/`, `scripts/run_anchor2.py`, `scripts/score_anchor2.py`, `levers_anchor2.json`, `spend_anchor2.json`, `raw/<arm>/`, `scoring/`, `RESULTS.md`).
+**Status: frozen by the commit `anchor-2: pre-registration frozen (after R31 d5ace00)` (`3382bcc`) before any call; executed 2026-10-19 (1,350 calls, USD 6.68 of the USD 11 cap, no deviation, no lever; ruling R32). Hard cap USD 11 on OpenRouter for the whole run. Branch `discovery/ontology-crosswalk`; nothing pushed.** Depends on R31 (`lexical-familiarity.md`, commit `d5ace00`): the 18 MFOEM additions have never been offered in a prompt, so arm A is their first test. Files: `experiments/2026-10-19-anchor2/` (`mapping.json`, `models_anchor2.json`, `prompts/`, `scripts/run_anchor2.py`, `scripts/score_anchor2.py`, `levers_anchor2.json`, `spend_anchor2.json`, `raw/<arm>/`, `scoring/`, `RESULTS.md`).
 
 ## A2.1 Question
 
@@ -192,4 +192,4 @@ Frozen at commit `3382bcc` (`anchor-2: pre-registration frozen (after R31 d5ace0
 
 ## A2.12 Deviations
 
-None at freeze.
+None at freeze. **None in execution** (2026-10-19): no lever applied (projection USD 1.62 → 4.15 → 6.58 before each arm; actual USD 1.66 / 2.48 / 2.53); parse failures 1 (A, Sonnet) and 2 (C, Sonnet) and the missing ids they imply were handled as the plan says (missing repeats, never re-sampled); 0 transport failures, 0 provider mismatches; coverage 1,000 of 1,000 for every arm and model. Post-run edit to `scripts/score_anchor2.py`: a §0 verdict paragraph in RESULTS.md (prose only; no scoring rule, threshold or mapping changed).

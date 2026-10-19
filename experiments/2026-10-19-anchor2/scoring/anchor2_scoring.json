@@ -1,0 +1,6575 @@
+{
+ "spend": {
+  "by_arm": {
+   "A": {
+    "usd": 1.6637003579999994,
+    "calls": 450,
+    "input_tokens": 434161,
+    "output_tokens": 225942,
+    "reasoning_tokens": 81202
+   },
+   "B": {
+    "usd": 2.4795074880000008,
+    "calls": 450,
+    "input_tokens": 989272,
+    "output_tokens": 242835,
+    "reasoning_tokens": 98673
+   },
+   "C": {
+    "usd": 2.5340384279999983,
+    "calls": 450,
+    "input_tokens": 1002385,
+    "output_tokens": 235194,
+    "reasoning_tokens": 87056
+   }
+  },
+  "by_model": {
+   "anthropic/claude-sonnet-5.5": {
+    "usd": 3.642808,
+    "calls": 450,
+    "input_tokens": 1009479,
+    "output_tokens": 162385,
+    "reasoning_tokens": 0
+   },
+   "google/gemini-4-argon": {
+    "usd": 2.9421740000000005,
+    "calls": 450,
+    "input_tokens": 730977,
+    "output_tokens": 148022,
+    "reasoning_tokens": 0
+   },
+   "openai/gpt-oss-120b": {
+    "usd": 0.09226427400000001,
+    "calls": 450,
+    "input_tokens": 685362,
+    "output_tokens": 393564,
+    "reasoning_tokens": 266931
+   }
+  },
+  "total_usd": 6.677246273999992,
+  "calls": 1350
+ },
+ "levers": {},
+ "human_range_frozen": [
+  0.25,
+  0.43
+ ],
+ "tolerance": 0.05,
+ "results": {
+  "human": {
+   "fine": {
+    "raters_scored": 31,
+    "rater_vs_rest_range": {
+     "n": 31,
+     "min": 0.0924690181124881,
+     "q1": 0.2688841782034841,
+     "median": 0.3552690084481992,
+     "q3": 0.43130966190814224,
+     "max": 0.555440414507772
+    },
+    "rater_vs_rest_range_graded": {
+     "n": 31,
+     "min": 0.08838133068520357,
+     "q1": 0.2835581098090708,
+     "median": 0.3916705662143191,
+     "q3": 0.4590394304034642,
+     "max": 0.5728155339805825
+    },
+    "majority_distribution": {
+     "neutral": 206,
+     "other": 120,
+     "reverence": 61,
+     "gratitude": 51,
+     "amusement": 42,
+     "love": 39,
+     "contempt": 38,
+     "interest": 38,
+     "frustration": 38,
+     "anger": 32,
+     "hope": 30,
+     "joy": 29,
+     "sadness": 28,
+     "surprise": 27,
+     "disappointment": 26,
+     "tenderness": 26,
+     "disgust": 23,
+     "fear": 22,
+     "longing": 21,
+     "shame": 21,
+     "embarrassment": 18,
+     "anxiety": 16,
+     "pride": 16,
+     "relief": 16,
+     "grief": 16
+    }
+   },
+   "ekman": {
+    "raters_scored": 31,
+    "rater_vs_rest_range": {
+     "n": 31,
+     "min": 0.16022099447513813,
+     "q1": 0.31945089791273157,
+     "median": 0.4317180616740089,
+     "q3": 0.5092956311013063,
+     "max": 0.6332179930795846
+    },
+    "rater_vs_rest_range_graded": {
+     "n": 31,
+     "min": 0.14184897671136204,
+     "q1": 0.3419773517902296,
+     "median": 0.44863861386138615,
+     "q3": 0.5182625362025531,
+     "max": 0.6443836978131212
+    },
+    "majority_distribution": {
+     "joy": 399,
+     "neutral": 206,
+     "surprise": 117,
+     "sadness": 109,
+     "anger": 108,
+     "fear": 38,
+     "disgust": 23
+    }
+   },
+   "valence": {
+    "raters_scored": 31,
+    "rater_vs_rest_range": {
+     "n": 31,
+     "min": 0.12265512265512266,
+     "q1": 0.36561043317413516,
+     "median": 0.4769613947696139,
+     "q3": 0.5291132206004105,
+     "max": 0.6556721639180411
+    },
+    "rater_vs_rest_range_graded": {
+     "n": 31,
+     "min": 0.15091210613598674,
+     "q1": 0.3450823241271388,
+     "median": 0.46044303797468344,
+     "q3": 0.5313112746562644,
+     "max": 0.7049742710120068
+    },
+    "majority_distribution": {
+     "positive": 399,
+     "negative": 278,
+     "neutral": 206,
+     "ambiguous": 117
+    }
+   }
+  },
+  "seam_n": 430,
+  "arms": {
+   "A1": {
+    "GEM": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 20,
+     "repeat_fleiss_fine": 0.7802351534729333,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.9892959999999998,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 139038,
+      "missing_ids": 0
+     },
+     "modal_distribution_fine": {
+      "neutral": 240,
+      "other": 229,
+      "joy": 71,
+      "amusement": 62,
+      "frustration": 49,
+      "gratitude": 45,
+      "contempt": 38,
+      "disappointment": 34,
+      "relief": 24,
+      "hope": 24,
+      "anger": 23,
+      "surprise": 20,
+      "sadness": 19,
+      "anxiety": 17,
+      "disgust": 16,
+      "pride": 14,
+      "fear": 13,
+      "wonder": 12,
+      "longing": 12,
+      "tenderness": 11,
+      "regret": 10,
+      "shame": 8,
+      "interest": 5,
+      "reverence": 2,
+      "peace": 1,
+      "embarrassment": 1
+     },
+     "raw_modal_distribution": {
+      "null": 243,
+      "joy": 72,
+      "amusement": 62,
+      "frustration": 50,
+      "gratitude": 45,
+      "contempt": 39,
+      "disappointment": 35,
+      "relief": 24,
+      "hope": 24,
+      "anger": 23,
+      "admiration": 23,
+      "surprise": 20,
+      "sadness": 20,
+      "disapproval": 18,
+      "anxiety": 18,
+      "disgust": 16,
+      "confusion": 14,
+      "fear": 14,
+      "pride": 14,
+      "wonder": 12,
+      "longing": 12,
+      "tenderness": 12,
+      "enthusiasm": 11,
+      "excitement": 11,
+      "regret": 10,
+      "approval": 9,
+      "annoyance": 9,
+      "shame": 8,
+      "curiosity": 8,
+      "sympathy": 8,
+      "skepticism": 7,
+      "dislike": 6,
+      "disbelief": 6,
+      "disdain": 5,
+      "cynicism": 5,
+      "interest": 5,
+      "mockery": 4,
+      "shock": 4,
+      "dread": 3,
+      "caution": 2
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.2655767207669761,
+        "graded": 0.3104108131318316,
+        "raw_agreement": 0.334
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.10978411756258676,
+        "graded": 0.15904515386827728,
+        "raw_agreement": 0.19534883720930232
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3651898513903874,
+        "graded": 0.4050060799624947,
+        "raw_agreement": 0.43859649122807015
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.021965317919075137,
+         "q1": 0.14591097020598104,
+         "median": 0.18940840060777214,
+         "q3": 0.2524693681389412,
+         "max": 0.46052631578947373
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.05927112535042052,
+         "q1": 0.18518939483633667,
+         "median": 0.2232133374438463,
+         "q3": 0.2798550487459961,
+         "max": 0.4451566951566952
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 44
+        },
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 42
+        },
+        {
+         "human": "love",
+         "model": "joy",
+         "n": 24
+        },
+        {
+         "human": "reverence",
+         "model": "other",
+         "n": 21
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 16
+        },
+        {
+         "human": "frustration",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 14
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "tenderness",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "interest",
+         "model": "other",
+         "n": 12
+        },
+        {
+         "human": "contempt",
+         "model": "other",
+         "n": 12
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3347655201035081,
+        "graded": 0.33850004886079177,
+        "raw_agreement": 0.455
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.17265336678005277,
+        "graded": 0.1789642164545865,
+        "raw_agreement": 0.3186046511627907
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4460983171630855,
+        "graded": 0.44921119296391765,
+        "raw_agreement": 0.5578947368421052
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.03764393268379096,
+         "q1": 0.2192469986683927,
+         "median": 0.25639774863981035,
+         "q3": 0.3089113605381946,
+         "max": 0.42748091603053445
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.0655515370705244,
+         "q1": 0.22622969729988412,
+         "median": 0.26237854338985545,
+         "q3": 0.31068221033292787,
+         "max": 0.4382314694408323
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 83
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 54
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 44
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 36
+        },
+        {
+         "human": "anger",
+         "model": "other",
+         "n": 34
+        },
+        {
+         "human": "surprise",
+         "model": "other",
+         "n": 32
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 24
+        },
+        {
+         "human": "sadness",
+         "model": "other",
+         "n": 23
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 22
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 20
+        },
+        {
+         "human": "sadness",
+         "model": "neutral",
+         "n": 20
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 17
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3424371261800101,
+        "graded": 0.33333061500760447,
+        "raw_agreement": 0.489
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.18542005347234355,
+        "graded": 0.1486588023142234,
+        "raw_agreement": 0.34418604651162793
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.45259652845634146,
+        "graded": 0.45529861961834284,
+        "raw_agreement": 0.5982456140350877
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.0946445060018467,
+         "q1": 0.22691340105865182,
+         "median": 0.26722474545076735,
+         "q3": 0.31717971947753987,
+         "max": 0.449468085106383
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.09659090909090906,
+         "q1": 0.20997897783866318,
+         "median": 0.2624077608457711,
+         "q3": 0.3074182989379811,
+         "max": 0.4385171790235081
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 83
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 71
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 54
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 44
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 42
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 36
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 34
+        },
+        {
+         "human": "ambiguous",
+         "model": "other",
+         "n": 32
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 29
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 24
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 20
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 20
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 16,
+       "kappa": 0.3466443654610066,
+       "recall": 0.30434782608695654,
+       "precision": 0.4375
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 20,
+       "kappa": 0.4555749128919851,
+       "recall": 0.4074074074074074,
+       "precision": 0.55
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 38,
+       "kappa": -0.012145748987854256,
+       "recall": 0.02631578947368421,
+       "precision": 0.02631578947368421
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 5,
+       "kappa": 0.13186297512904643,
+       "recall": 0.07894736842105263,
+       "precision": 0.6
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 10,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 1,
+       "kappa": -0.0018983336848785088,
+       "recall": 0.0,
+       "precision": 0.0
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 62,
+       "kappa": 0.4331524819823462,
+       "recall": 0.5714285714285714,
+       "precision": 0.3870967741935484
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      }
+     }
+    },
+    "OSS": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 65,
+     "repeat_fleiss_fine": 0.6666602240423112,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.031221999999999996,
+      "reasoning_tokens": 99667,
+      "prompt_tokens": 127954,
+      "missing_ids": 3
+     },
+     "modal_distribution_fine": {
+      "neutral": 212,
+      "joy": 181,
+      "frustration": 102,
+      "anger": 92,
+      "disappointment": 70,
+      "sadness": 56,
+      "gratitude": 48,
+      "anxiety": 37,
+      "hope": 33,
+      "pride": 31,
+      "fear": 29,
+      "shame": 25,
+      "wonder": 22,
+      "relief": 19,
+      "tenderness": 16,
+      "longing": 11,
+      "peace": 7,
+      "disgust": 4,
+      "other": 3,
+      "reverence": 1,
+      "regret": 1
+     },
+     "raw_modal_distribution": {
+      "null": 212,
+      "joy": 181,
+      "frustration": 102,
+      "anger": 92,
+      "disappointment": 70,
+      "sadness": 56,
+      "gratitude": 48,
+      "anxiety": 37,
+      "hope": 33,
+      "pride": 31,
+      "fear": 29,
+      "shame": 25,
+      "wonder": 22,
+      "relief": 19,
+      "tenderness": 16,
+      "longing": 11,
+      "peace": 7,
+      "disgust": 4,
+      "nausea": 1,
+      "reverence": 1,
+      "shock": 1,
+      "regret": 1,
+      "jealousy": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.22567627484957986,
+        "graded": 0.2959625560659844,
+        "raw_agreement": 0.277
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.016167684150030906,
+        "graded": 0.09916290857144565,
+        "raw_agreement": 0.018604651162790697
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4044197284012331,
+        "graded": 0.4537128689972895,
+        "raw_agreement": 0.47192982456140353
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.07348004475941812,
+         "q1": 0.12861448887017318,
+         "median": 0.16856549252025732,
+         "q3": 0.20901129936543886,
+         "max": 0.3475546305931322
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.1276483450199804,
+         "q1": 0.19201644521793654,
+         "median": 0.22862152227597626,
+         "q3": 0.270269670570958,
+         "max": 0.346636021730046
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 41
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 35
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 31
+        },
+        {
+         "human": "love",
+         "model": "joy",
+         "n": 30
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 22
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 21
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 21
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 19
+        },
+        {
+         "human": "amusement",
+         "model": "joy",
+         "n": 18
+        },
+        {
+         "human": "frustration",
+         "model": "anger",
+         "n": 15
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 14
+        },
+        {
+         "human": "other",
+         "model": "frustration",
+         "n": 12
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3984374799157813,
+        "graded": 0.40624957782250976,
+        "raw_agreement": 0.532
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.23236676837291337,
+        "graded": 0.2521247286997318,
+        "raw_agreement": 0.41627906976744183
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.5099697717629441,
+        "graded": 0.5111502684619461,
+        "raw_agreement": 0.6192982456140351
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.16458973944003888,
+         "q1": 0.26885963794307616,
+         "median": 0.30257449570917383,
+         "q3": 0.3672490451421439,
+         "max": 0.4825662482566248
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.1634924560969577,
+         "q1": 0.2618114907923253,
+         "median": 0.3195100622808892,
+         "q3": 0.3758953719313691,
+         "max": 0.48515343520934273
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 52
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 49
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 45
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 40
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 34
+        },
+        {
+         "human": "joy",
+         "model": "sadness",
+         "n": 24
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 20
+        },
+        {
+         "human": "neutral",
+         "model": "sadness",
+         "n": 20
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 18
+        },
+        {
+         "human": "anger",
+         "model": "sadness",
+         "n": 16
+        },
+        {
+         "human": "surprise",
+         "model": "sadness",
+         "n": 14
+        },
+        {
+         "human": "joy",
+         "model": "fear",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.41490164368506616,
+        "graded": 0.4145423980404841,
+        "raw_agreement": 0.589
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.27299915089306515,
+        "graded": 0.24975457385095934,
+        "raw_agreement": 0.47674418604651164
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.5125203461372226,
+        "graded": 0.513015723878741,
+        "raw_agreement": 0.6736842105263158
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.14957983193277313,
+         "q1": 0.25235375542118593,
+         "median": 0.3419439158930597,
+         "q3": 0.3849522967576082,
+         "max": 0.5315315315315317
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.12737027102025716,
+         "q1": 0.2662846367355583,
+         "median": 0.33635528639226964,
+         "q3": 0.39522280349756245,
+         "max": 0.5588833963361443
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 80
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 72
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 49
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 45
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 42
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 40
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 35
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 19
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 11
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 6
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 6
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 2
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 4,
+       "kappa": 0.142303102625296,
+       "recall": 0.08695652173913043,
+       "precision": 0.5
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      }
+     }
+    },
+    "SON": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 83,
+     "repeat_fleiss_fine": 0.6443278351356406,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 1.123436,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 180693,
+      "missing_ids": 80,
+      "parse_fail": 4
+     },
+     "modal_distribution_fine": {
+      "neutral": 247,
+      "other": 157,
+      "joy": 91,
+      "frustration": 76,
+      "amusement": 51,
+      "gratitude": 50,
+      "anger": 46,
+      "disappointment": 37,
+      "hope": 30,
+      "sadness": 29,
+      "contempt": 24,
+      "anxiety": 20,
+      "tenderness": 20,
+      "relief": 19,
+      "longing": 16,
+      "disgust": 15,
+      "fear": 15,
+      "pride": 13,
+      "surprise": 11,
+      "wonder": 10,
+      "shame": 10,
+      "regret": 6,
+      "embarrassment": 4,
+      "interest": 2,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 252,
+      "joy": 92,
+      "frustration": 78,
+      "amusement": 52,
+      "gratitude": 50,
+      "anger": 47,
+      "disappointment": 37,
+      "hope": 30,
+      "sadness": 29,
+      "contempt": 25,
+      "relief": 20,
+      "anxiety": 20,
+      "tenderness": 20,
+      "disgust": 16,
+      "longing": 16,
+      "fear": 15,
+      "sarcasm": 14,
+      "pride": 13,
+      "surprise": 11,
+      "admiration": 11,
+      "wonder": 10,
+      "shame": 10,
+      "curiosity": 8,
+      "disapproval": 8,
+      "confusion": 7,
+      "sympathy": 6,
+      "regret": 6,
+      "disbelief": 6,
+      "excitement": 5,
+      "mockery": 5,
+      "embarrassment": 4,
+      "disdain": 4,
+      "unease": 4,
+      "empathy": 4,
+      "enthusiasm": 4,
+      "distrust": 3,
+      "suspicion": 3,
+      "shock": 3,
+      "dread": 2,
+      "interest": 2
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.23902090280191624,
+        "graded": 0.2912046370967742,
+        "raw_agreement": 0.306
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.08010992069013495,
+        "graded": 0.14047542453080641,
+        "raw_agreement": 0.14186046511627906
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.35364002721515675,
+        "graded": 0.3959917069799585,
+        "raw_agreement": 0.4298245614035088
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.04936854190585533,
+         "q1": 0.12891783129901457,
+         "median": 0.17184290174344738,
+         "q3": 0.21078493869658524,
+         "max": 0.415282392026578
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.07517084282460137,
+         "q1": 0.16457074166819627,
+         "median": 0.20852533667614498,
+         "q3": 0.26320071190675454,
+         "max": 0.4140893470790378
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 45
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 36
+        },
+        {
+         "human": "love",
+         "model": "joy",
+         "n": 24
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 21
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 17
+        },
+        {
+         "human": "reverence",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 14
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 12
+        },
+        {
+         "human": "interest",
+         "model": "other",
+         "n": 12
+        },
+        {
+         "human": "anger",
+         "model": "frustration",
+         "n": 12
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 11
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3357382759049633,
+        "graded": 0.338782859246855,
+        "raw_agreement": 0.466
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.1841755943202692,
+        "graded": 0.19074731400528863,
+        "raw_agreement": 0.34186046511627904
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4420721363641681,
+        "graded": 0.4439844909134131,
+        "raw_agreement": 0.5596491228070175
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.09403043308622706,
+         "q1": 0.2015145794979058,
+         "median": 0.2669033098126322,
+         "q3": 0.3182527008488382,
+         "max": 0.48335049776862354
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.10213776722090259,
+         "q1": 0.20017384588837653,
+         "median": 0.26606233440808447,
+         "q3": 0.3278569816353442,
+         "max": 0.4880952380952381
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 61
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 59
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 43
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 37
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 32
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 29
+        },
+        {
+         "human": "surprise",
+         "model": "other",
+         "n": 26
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 25
+        },
+        {
+         "human": "sadness",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 18
+        },
+        {
+         "human": "sadness",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "joy",
+         "model": "sadness",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3420361787056323,
+        "graded": 0.33480856760939626,
+        "raw_agreement": 0.505
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.19752275759104765,
+        "graded": 0.16612258856814188,
+        "raw_agreement": 0.37209302325581395
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.44610241814624624,
+        "graded": 0.4480596846798058,
+        "raw_agreement": 0.6052631578947368
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.09287257019438443,
+         "q1": 0.1987228243076839,
+         "median": 0.2773462726685634,
+         "q3": 0.33812944361696656,
+         "max": 0.4931860036832412
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.08096280087527352,
+         "q1": 0.18155640635577724,
+         "median": 0.25982222936532756,
+         "q3": 0.33756518904823996,
+         "max": 0.46396571873782627
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 61
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 59
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 47
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 47
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 43
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 40
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 37
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 36
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 32
+        },
+        {
+         "human": "ambiguous",
+         "model": "other",
+         "n": 26
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 23
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 22
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 15,
+       "kappa": 0.35674082015545294,
+       "recall": 0.30434782608695654,
+       "precision": 0.4666666666666667
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 11,
+       "kappa": 0.4118590600438435,
+       "recall": 0.2962962962962963,
+       "precision": 0.7272727272727273
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 24,
+       "kappa": 0.03616059558627951,
+       "recall": 0.05263157894736842,
+       "precision": 0.08333333333333333
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 2,
+       "kappa": 0.046376229672755495,
+       "recall": 0.02631578947368421,
+       "precision": 0.5
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 0,
+       "kappa": 0.0,
+       "recall": 0.0,
+       "precision": null
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 6,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 4,
+       "kappa": 0.17642752562225353,
+       "recall": 0.1111111111111111,
+       "precision": 0.5
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 51,
+       "kappa": 0.2898687948058982,
+       "recall": 0.35714285714285715,
+       "precision": 0.29411764705882354
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      }
+     }
+    }
+   },
+   "A": {
+    "GEM": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 29,
+     "repeat_fleiss_fine": 0.799534364702858,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.7462180000000002,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 134814,
+      "missing_ids": 0
+     },
+     "modal_distribution_fine": {
+      "neutral": 222,
+      "amusement": 97,
+      "contempt": 95,
+      "other": 84,
+      "interest": 45,
+      "joy": 44,
+      "gratitude": 43,
+      "surprise": 43,
+      "frustration": 40,
+      "disappointment": 30,
+      "compassion": 25,
+      "disgust": 24,
+      "relief": 24,
+      "hope": 22,
+      "love": 21,
+      "anxiety": 17,
+      "anger": 16,
+      "regret": 16,
+      "fear": 14,
+      "pride": 14,
+      "sadness": 13,
+      "longing": 11,
+      "embarrassment": 9,
+      "contentment": 9,
+      "wonder": 4,
+      "tenderness": 4,
+      "awe": 3,
+      "nostalgia": 2,
+      "grief": 2,
+      "loneliness": 2,
+      "guilt": 1,
+      "trust": 1,
+      "boredom": 1,
+      "shame": 1,
+      "reverence": 1
+     },
+     "raw_modal_distribution": {
+      "null": 222,
+      "amusement": 97,
+      "contempt": 96,
+      "interest": 45,
+      "joy": 44,
+      "gratitude": 43,
+      "surprise": 43,
+      "frustration": 40,
+      "disappointment": 30,
+      "compassion": 25,
+      "disgust": 24,
+      "relief": 24,
+      "hope": 22,
+      "love": 21,
+      "admiration": 18,
+      "anxiety": 17,
+      "anger": 16,
+      "regret": 16,
+      "fear": 14,
+      "pride": 14,
+      "sadness": 13,
+      "longing": 11,
+      "confusion": 9,
+      "embarrassment": 9,
+      "contentment": 9,
+      "excitement": 8,
+      "skepticism": 6,
+      "disapproval": 5,
+      "wonder": 4,
+      "tenderness": 4,
+      "enthusiasm": 4,
+      "cynicism": 3,
+      "awe": 3,
+      "distrust": 2,
+      "indignation": 2,
+      "nostalgia": 2,
+      "curiosity": 2,
+      "insecurity": 2,
+      "annoyance": 2,
+      "grief": 2
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.28181308075107403,
+        "graded": 0.3242969152937222,
+        "raw_agreement": 0.337
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.19016949940710084,
+        "graded": 0.2218845743452786,
+        "raw_agreement": 0.24651162790697675
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3345959813357668,
+        "graded": 0.38577699155401984,
+        "raw_agreement": 0.4052631578947368
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.07943416757344939,
+         "q1": 0.1641175993175394,
+         "median": 0.19759570104023444,
+         "q3": 0.2789742680960775,
+         "max": 0.417312661498708
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.08517350157728706,
+         "q1": 0.202405479485467,
+         "median": 0.23937624468867894,
+         "q3": 0.32223529547454205,
+         "max": 0.38267148014440433
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 37
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 24
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 21
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 18
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 16
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 15
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 13
+        },
+        {
+         "human": "reverence",
+         "model": "other",
+         "n": 13
+        },
+        {
+         "human": "tenderness",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 9
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 9
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 8
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3579470419613081,
+        "graded": 0.3651024943145449,
+        "raw_agreement": 0.49
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.23379967982181388,
+        "graded": 0.24050543480180728,
+        "raw_agreement": 0.4046511627906977
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.43271137163321755,
+        "graded": 0.4405484818805094,
+        "raw_agreement": 0.5543859649122806
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.05711610486891385,
+         "q1": 0.20138430082803382,
+         "median": 0.2683160608126971,
+         "q3": 0.32393544623760445,
+         "max": 0.5073848827106864
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.08838987099856666,
+         "q1": 0.20747549334498175,
+         "median": 0.28069158615875867,
+         "q3": 0.33163636278824066,
+         "max": 0.5176418043769541
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 59
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 47
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 38
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 33
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 30
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 25
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 25
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "sadness",
+         "model": "neutral",
+         "n": 20
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 18
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 17
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 12
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.372752981778878,
+        "graded": 0.36009801497533017,
+        "raw_agreement": 0.534
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.2474159511666774,
+        "graded": 0.1935525690333175,
+        "raw_agreement": 0.4325581395348837
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4492537898076697,
+        "graded": 0.45337243141962386,
+        "raw_agreement": 0.6105263157894737
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.12097560975609756,
+         "q1": 0.20856625374536028,
+         "median": 0.2907809165920197,
+         "q3": 0.3528151797997685,
+         "max": 0.5284926470588235
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.10600255427841632,
+         "q1": 0.21563517846772767,
+         "median": 0.2839281062776765,
+         "q3": 0.34351188670249655,
+         "max": 0.5229226361031519
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 59
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 47
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 47
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 44
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 43
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 38
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 38
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 25
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 24
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 22
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 17
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 24,
+       "kappa": 0.3245598744988671,
+       "recall": 0.34782608695652173,
+       "precision": 0.3333333333333333
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 43,
+       "kappa": 0.5271727887939948,
+       "recall": 0.7037037037037037,
+       "precision": 0.4418604651162791
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 95,
+       "kappa": 0.038002862140244925,
+       "recall": 0.15789473684210525,
+       "precision": 0.06315789473684211
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 45,
+       "kappa": 0.2586076903744651,
+       "recall": 0.3157894736842105,
+       "precision": 0.26666666666666666
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 21,
+       "kappa": 0.45169802268599407,
+       "recall": 0.358974358974359,
+       "precision": 0.6666666666666666
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 2,
+       "kappa": 0.10793933987510833,
+       "recall": 0.0625,
+       "precision": 0.5
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 16,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 9,
+       "kappa": 0.3627230469335735,
+       "recall": 0.2777777777777778,
+       "precision": 0.5555555555555556
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 97,
+       "kappa": 0.35041115152997293,
+       "recall": 0.6428571428571429,
+       "precision": 0.27835051546391754
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 9,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 25,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    },
+    "OSS": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 72,
+     "repeat_fleiss_fine": 0.6319413908697162,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.025698999999999996,
+      "reasoning_tokens": 81202,
+      "prompt_tokens": 123604,
+      "missing_ids": 2
+     },
+     "modal_distribution_fine": {
+      "neutral": 149,
+      "joy": 82,
+      "frustration": 74,
+      "amusement": 73,
+      "contempt": 56,
+      "disgust": 55,
+      "interest": 48,
+      "sadness": 43,
+      "gratitude": 42,
+      "anger": 38,
+      "disappointment": 36,
+      "anxiety": 35,
+      "surprise": 32,
+      "love": 27,
+      "pride": 27,
+      "hope": 26,
+      "fear": 25,
+      "compassion": 22,
+      "embarrassment": 18,
+      "relief": 16,
+      "regret": 13,
+      "longing": 13,
+      "contentment": 9,
+      "wonder": 7,
+      "nostalgia": 6,
+      "tenderness": 5,
+      "shame": 4,
+      "peace": 4,
+      "grief": 3,
+      "boredom": 2,
+      "trust": 2,
+      "awe": 2,
+      "guilt": 2,
+      "reverence": 1,
+      "loneliness": 1,
+      "other": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 149,
+      "joy": 82,
+      "frustration": 74,
+      "amusement": 73,
+      "contempt": 56,
+      "disgust": 55,
+      "interest": 49,
+      "sadness": 43,
+      "gratitude": 42,
+      "anger": 38,
+      "disappointment": 36,
+      "anxiety": 35,
+      "surprise": 32,
+      "love": 27,
+      "pride": 27,
+      "hope": 26,
+      "fear": 25,
+      "compassion": 22,
+      "embarrassment": 18,
+      "relief": 16,
+      "regret": 13,
+      "longing": 13,
+      "contentment": 9,
+      "wonder": 7,
+      "nostalgia": 6,
+      "tenderness": 5,
+      "shame": 4,
+      "peace": 4,
+      "grief": 3,
+      "boredom": 2,
+      "trust": 2,
+      "awe": 2,
+      "guilt": 2,
+      "reverence": 1,
+      "loneliness": 1,
+      "envy": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.27709568162574094,
+        "graded": 0.32935390057343944,
+        "raw_agreement": 0.317
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.1798496578032088,
+        "graded": 0.2323145094364468,
+        "raw_agreement": 0.20930232558139536
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.34126914601850417,
+        "graded": 0.3910508320938405,
+        "raw_agreement": 0.39824561403508774
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.06354515050167224,
+         "q1": 0.15063240190223692,
+         "median": 0.2106918652458291,
+         "q3": 0.2542434043086784,
+         "max": 0.4258434118395926
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.10841456136860951,
+         "q1": 0.20652867891412868,
+         "median": 0.2531159390773634,
+         "q3": 0.3099745676159631,
+         "max": 0.4066360748323332
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 30
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 22
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 18
+        },
+        {
+         "human": "neutral",
+         "model": "disgust",
+         "n": 14
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 14
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 13
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 12
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 11
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 11
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 10
+        },
+        {
+         "human": "anger",
+         "model": "frustration",
+         "n": 10
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.39904074250730326,
+        "graded": 0.40879557893476803,
+        "raw_agreement": 0.525
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.30935093509350936,
+        "graded": 0.32113174780382736,
+        "raw_agreement": 0.4906976744186046
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4397303087780193,
+        "graded": 0.4466214160182328,
+        "raw_agreement": 0.5508771929824562
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.11749116607773853,
+         "q1": 0.2572721606564259,
+         "median": 0.30405752439650746,
+         "q3": 0.370430335231701,
+         "max": 0.48327566320645904
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.14703832752613236,
+         "q1": 0.2576351693900038,
+         "median": 0.3147401719874693,
+         "q3": 0.3795079601742678,
+         "max": 0.5219875776397516
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 44
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 40
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 36
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 31
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 27
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "joy",
+         "model": "sadness",
+         "n": 20
+        },
+        {
+         "human": "neutral",
+         "model": "sadness",
+         "n": 18
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 18
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 14
+        },
+        {
+         "human": "sadness",
+         "model": "anger",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.41960474241806117,
+        "graded": 0.4146885089306827,
+        "raw_agreement": 0.586
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.3335184028500706,
+        "graded": 0.30507001542878337,
+        "raw_agreement": 0.5325581395348837
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4546826505450478,
+        "graded": 0.4547285172213825,
+        "raw_agreement": 0.6263157894736842
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.1482701812191104,
+         "q1": 0.26329996759678603,
+         "median": 0.322276613977621,
+         "q3": 0.39687685969519254,
+         "max": 0.5851063829787234
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.1482701812191104,
+         "q1": 0.2499792673748639,
+         "median": 0.32379023068547264,
+         "q3": 0.39154899345570654,
+         "max": 0.6121814791796146
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 82
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 65
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 40
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 36
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 34
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 27
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 27
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "neutral",
+         "model": "ambiguous",
+         "n": 13
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 13
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 55,
+       "kappa": 0.23148270836093782,
+       "recall": 0.43478260869565216,
+       "precision": 0.18181818181818182
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 32,
+       "kappa": 0.4587232853750518,
+       "recall": 0.5185185185185185,
+       "precision": 0.4375
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 56,
+       "kappa": 0.019433054020325347,
+       "recall": 0.07894736842105263,
+       "precision": 0.05357142857142857
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 48,
+       "kappa": 0.2714202448027969,
+       "recall": 0.34210526315789475,
+       "precision": 0.2708333333333333
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 27,
+       "kappa": 0.6243778758568876,
+       "recall": 0.5384615384615384,
+       "precision": 0.7777777777777778
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 6,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 3,
+       "kappa": 0.31231485399915415,
+       "recall": 0.1875,
+       "precision": 1.0
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 13,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 18,
+       "kappa": 0.26453948857207554,
+       "recall": 0.2777777777777778,
+       "precision": 0.2777777777777778
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 73,
+       "kappa": 0.3845758165852227,
+       "recall": 0.5714285714285714,
+       "precision": 0.3287671232876712
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 9,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 22,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    },
+    "SON": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 39,
+     "repeat_fleiss_fine": 0.7552784925543242,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.891786,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 175743,
+      "missing_ids": 20,
+      "parse_fail": 1
+     },
+     "modal_distribution_fine": {
+      "neutral": 160,
+      "amusement": 141,
+      "contempt": 116,
+      "joy": 52,
+      "frustration": 50,
+      "gratitude": 47,
+      "interest": 43,
+      "other": 39,
+      "compassion": 38,
+      "disgust": 34,
+      "surprise": 31,
+      "disappointment": 26,
+      "hope": 24,
+      "anger": 22,
+      "anxiety": 22,
+      "relief": 17,
+      "fear": 17,
+      "love": 16,
+      "sadness": 14,
+      "embarrassment": 13,
+      "pride": 13,
+      "longing": 12,
+      "regret": 11,
+      "contentment": 10,
+      "tenderness": 7,
+      "shame": 5,
+      "trust": 4,
+      "nostalgia": 3,
+      "loneliness": 3,
+      "wonder": 3,
+      "guilt": 2,
+      "awe": 2,
+      "boredom": 1,
+      "grief": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 160,
+      "amusement": 141,
+      "contempt": 116,
+      "joy": 52,
+      "frustration": 50,
+      "gratitude": 47,
+      "interest": 43,
+      "compassion": 38,
+      "disgust": 34,
+      "surprise": 31,
+      "disappointment": 26,
+      "hope": 24,
+      "anger": 22,
+      "anxiety": 22,
+      "relief": 17,
+      "fear": 17,
+      "love": 16,
+      "sadness": 14,
+      "embarrassment": 13,
+      "pride": 13,
+      "longing": 12,
+      "regret": 11,
+      "contentment": 10,
+      "tenderness": 7,
+      "confusion": 6,
+      "admiration": 6,
+      "shame": 5,
+      "trust": 4,
+      "nostalgia": 3,
+      "loneliness": 3,
+      "wonder": 3,
+      "disbelief": 3,
+      "enthusiasm": 3,
+      "guilt": 2,
+      "awe": 2,
+      "disapproval": 2,
+      "discomfort": 2,
+      "urgency": 1,
+      "dread": 1,
+      "sarcasm": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.23869315388954224,
+        "graded": 0.2859441744464914,
+        "raw_agreement": 0.286
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.1550659379690418,
+        "graded": 0.1979950660317918,
+        "raw_agreement": 0.20232558139534884
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.28990923651895356,
+        "graded": 0.33836750019857464,
+        "raw_agreement": 0.34912280701754383
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.02036282858200665,
+         "q1": 0.13416751152054746,
+         "median": 0.17763024312049158,
+         "q3": 0.22506345484770357,
+         "max": 0.3951250801796023
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.00943396226415095,
+         "q1": 0.17385406165341905,
+         "median": 0.20638540893680796,
+         "q3": 0.2595560111494075,
+         "max": 0.3658273381294964
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 34
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 32
+        },
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 30
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 18
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 16
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 12
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 12
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 12
+        },
+        {
+         "human": "other",
+         "model": "amusement",
+         "n": 11
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "contempt",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 10
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3387870586788042,
+        "graded": 0.3500643930041839,
+        "raw_agreement": 0.484
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.2541502270527805,
+        "graded": 0.2665238236344434,
+        "raw_agreement": 0.45813953488372094
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3763025112610435,
+        "graded": 0.385495854022153,
+        "raw_agreement": 0.5035087719298246
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": -0.013443640124095125,
+         "q1": 0.1997332865176024,
+         "median": 0.2470502448574719,
+         "q3": 0.30452922377706404,
+         "max": 0.4377967711301044
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": -0.00886917960088695,
+         "q1": 0.1997480114285604,
+         "median": 0.2705009694650743,
+         "q3": 0.327424241927061,
+         "max": 0.4543443529556348
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 53
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 47
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 40
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 33
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 27
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 27
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 26
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "surprise",
+         "model": "joy",
+         "n": 18
+        },
+        {
+         "human": "sadness",
+         "model": "anger",
+         "n": 16
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 15
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.36231771058134904,
+        "graded": 0.3557002862103735,
+        "raw_agreement": 0.542
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.2794190665342602,
+        "graded": 0.23525630802391262,
+        "raw_agreement": 0.49767441860465117
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3959087863433519,
+        "graded": 0.4021271952289541,
+        "raw_agreement": 0.5754385964912281
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": -0.0035842293906810465,
+         "q1": 0.1983932516397749,
+         "median": 0.29521700600779316,
+         "q3": 0.3473056537102473,
+         "max": 0.4721019108280255
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": -0.020625889046941636,
+         "q1": 0.21353573719097174,
+         "median": 0.2744799323381959,
+         "q3": 0.33586507412937044,
+         "max": 0.48821453775582224
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 63
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 61
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 53
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 46
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 33
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 31
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 28
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 27
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 26
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 18
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 15
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 34,
+       "kappa": 0.26040839887437756,
+       "recall": 0.34782608695652173,
+       "precision": 0.23529411764705882
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 31,
+       "kappa": 0.3608635443667216,
+       "recall": 0.4074074074074074,
+       "precision": 0.3548387096774194
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 116,
+       "kappa": 0.035706413929909406,
+       "recall": 0.18421052631578946,
+       "precision": 0.0603448275862069
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 43,
+       "kappa": 0.2924406936654141,
+       "recall": 0.34210526315789475,
+       "precision": 0.3023255813953488
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 16,
+       "kappa": 0.46048519124869747,
+       "recall": 0.3333333333333333,
+       "precision": 0.8125
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 1,
+       "kappa": 0.11598302687411431,
+       "recall": 0.0625,
+       "precision": 1.0
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 11,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 13,
+       "kappa": 0.3121970391720157,
+       "recall": 0.2777777777777778,
+       "precision": 0.38461538461538464
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 141,
+       "kappa": 0.2579868657832619,
+       "recall": 0.6666666666666666,
+       "precision": 0.19858156028368795
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 10,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 38,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 4,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    }
+   },
+   "B": {
+    "GEM": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 22,
+     "repeat_fleiss_fine": 0.8220384474750855,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 1.0927,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 297675,
+      "missing_ids": 0
+     },
+     "modal_distribution_fine": {
+      "neutral": 214,
+      "amusement": 114,
+      "contempt": 107,
+      "joy": 58,
+      "interest": 50,
+      "other": 44,
+      "frustration": 42,
+      "gratitude": 41,
+      "surprise": 40,
+      "disappointment": 34,
+      "compassion": 27,
+      "disgust": 24,
+      "relief": 24,
+      "hope": 23,
+      "sadness": 19,
+      "anger": 18,
+      "love": 17,
+      "anxiety": 17,
+      "fear": 14,
+      "regret": 14,
+      "pride": 13,
+      "longing": 12,
+      "embarrassment": 7,
+      "contentment": 7,
+      "wonder": 4,
+      "tenderness": 4,
+      "loneliness": 3,
+      "trust": 2,
+      "awe": 2,
+      "grief": 2,
+      "guilt": 1,
+      "nostalgia": 1,
+      "boredom": 1
+     },
+     "raw_modal_distribution": {
+      "null": 216,
+      "amusement": 114,
+      "contempt": 107,
+      "joy": 58,
+      "interest": 50,
+      "frustration": 42,
+      "gratitude": 41,
+      "surprise": 40,
+      "disappointment": 34,
+      "compassion": 27,
+      "disgust": 24,
+      "relief": 24,
+      "hope": 23,
+      "admiration": 20,
+      "sadness": 19,
+      "anger": 18,
+      "love": 17,
+      "anxiety": 17,
+      "fear": 14,
+      "regret": 14,
+      "pride": 13,
+      "longing": 12,
+      "embarrassment": 7,
+      "contentment": 7,
+      "confusion": 6,
+      "wonder": 4,
+      "tenderness": 4,
+      "loneliness": 3,
+      "trust": 2,
+      "disapproval": 2,
+      "discomfort": 2,
+      "awe": 2,
+      "grief": 2,
+      "distrust": 1,
+      "guilt": 1,
+      "nostalgia": 1,
+      "curiosity": 1,
+      "boredom": 1,
+      "unease": 1,
+      "doubt": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.25850083526432077,
+        "graded": 0.2974479157911334,
+        "raw_agreement": 0.312
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.1560087666592276,
+        "graded": 0.18492220301308962,
+        "raw_agreement": 0.20232558139534884
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3267117237412437,
+        "graded": 0.3734099030868101,
+        "raw_agreement": 0.39473684210526316
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.06197654941373534,
+         "q1": 0.14106515364786204,
+         "median": 0.18844123087270892,
+         "q3": 0.23857962798856192,
+         "max": 0.4195624195624196
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.057027391109115394,
+         "q1": 0.18253977257593113,
+         "median": 0.22582335460175296,
+         "q3": 0.30296272076892383,
+         "max": 0.39216378397458523
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 40
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 28
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 25
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 19
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 15
+        },
+        {
+         "human": "tenderness",
+         "model": "neutral",
+         "n": 14
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 12
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 12
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "contempt",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 10
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 10
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.34618321682965264,
+        "graded": 0.35218117752154704,
+        "raw_agreement": 0.488
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.22619680191573321,
+        "graded": 0.23102438742987352,
+        "raw_agreement": 0.40930232558139534
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4204920261499723,
+        "graded": 0.42806631946103496,
+        "raw_agreement": 0.5473684210526316
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.05357142857142858,
+         "q1": 0.19114875389408104,
+         "median": 0.26277933278188925,
+         "q3": 0.3335974880382775,
+         "max": 0.46218487394957986
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.08003857280617163,
+         "q1": 0.1846924043378593,
+         "median": 0.27572334180890906,
+         "q3": 0.3493453067352923,
+         "max": 0.4562631210636809
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 59
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 46
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 36
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 36
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 29
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 29
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 28
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 17
+        },
+        {
+         "human": "sadness",
+         "model": "neutral",
+         "n": 17
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 17
+        },
+        {
+         "human": "surprise",
+         "model": "joy",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.35863189453546135,
+        "graded": 0.3515092768304504,
+        "raw_agreement": 0.533
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.23602698793765464,
+        "graded": 0.19333991562696343,
+        "raw_agreement": 0.4372093023255814
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4365114235500878,
+        "graded": 0.4411714557495917,
+        "raw_agreement": 0.6052631578947368
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.10672853828306267,
+         "q1": 0.21042266362081152,
+         "median": 0.28674970007215345,
+         "q3": 0.34828845922724005,
+         "max": 0.48276693179079294
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.07016348773841961,
+         "q1": 0.19739242021546388,
+         "median": 0.29418276093460577,
+         "q3": 0.34461146147541866,
+         "max": 0.46517739816031534
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 59
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 55
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 47
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 46
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 46
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 29
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 29
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 28
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 25
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 14
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 24,
+       "kappa": 0.3681366567892628,
+       "recall": 0.391304347826087,
+       "precision": 0.375
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 40,
+       "kappa": 0.39851943244910504,
+       "recall": 0.5185185185185185,
+       "precision": 0.35
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 107,
+       "kappa": 0.04287342549025327,
+       "recall": 0.18421052631578946,
+       "precision": 0.06542056074766354
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 50,
+       "kappa": 0.23990498812351654,
+       "recall": 0.3157894736842105,
+       "precision": 0.24
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 17,
+       "kappa": 0.4147126604967621,
+       "recall": 0.3076923076923077,
+       "precision": 0.7058823529411765
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 2,
+       "kappa": 0.10793933987510833,
+       "recall": 0.0625,
+       "precision": 0.5
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 14,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 7,
+       "kappa": 0.31307580410538144,
+       "recall": 0.2222222222222222,
+       "precision": 0.5714285714285714
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 114,
+       "kappa": 0.27607496038900736,
+       "recall": 0.5952380952380952,
+       "precision": 0.21929824561403508
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 7,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 27,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    },
+    "OSS": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 84,
+     "repeat_fleiss_fine": 0.640733521949449,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.034191000000000006,
+      "reasoning_tokens": 98673,
+      "prompt_tokens": 281554,
+      "missing_ids": 7
+     },
+     "modal_distribution_fine": {
+      "neutral": 208,
+      "joy": 86,
+      "amusement": 67,
+      "frustration": 61,
+      "disgust": 51,
+      "contempt": 46,
+      "anger": 45,
+      "gratitude": 40,
+      "disappointment": 39,
+      "sadness": 37,
+      "surprise": 33,
+      "anxiety": 30,
+      "love": 29,
+      "hope": 28,
+      "fear": 26,
+      "interest": 25,
+      "pride": 22,
+      "compassion": 20,
+      "relief": 17,
+      "embarrassment": 14,
+      "regret": 14,
+      "longing": 12,
+      "contentment": 10,
+      "shame": 8,
+      "grief": 6,
+      "wonder": 5,
+      "nostalgia": 5,
+      "peace": 4,
+      "guilt": 4,
+      "tenderness": 2,
+      "trust": 1,
+      "boredom": 1,
+      "awe": 1,
+      "reverence": 1,
+      "loneliness": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 208,
+      "joy": 86,
+      "amusement": 67,
+      "frustration": 61,
+      "disgust": 51,
+      "contempt": 46,
+      "anger": 45,
+      "gratitude": 40,
+      "disappointment": 39,
+      "sadness": 37,
+      "surprise": 33,
+      "anxiety": 30,
+      "love": 29,
+      "hope": 28,
+      "fear": 26,
+      "interest": 25,
+      "pride": 22,
+      "compassion": 20,
+      "relief": 17,
+      "embarrassment": 14,
+      "regret": 14,
+      "longing": 12,
+      "contentment": 10,
+      "shame": 8,
+      "grief": 6,
+      "wonder": 5,
+      "nostalgia": 5,
+      "peace": 4,
+      "guilt": 4,
+      "tenderness": 2,
+      "trust": 1,
+      "boredom": 1,
+      "awe": 1,
+      "reverence": 1,
+      "loneliness": 1,
+      "envy": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.290686055294392,
+        "graded": 0.3449868221690933,
+        "raw_agreement": 0.337
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.1698100573622302,
+        "graded": 0.21734461408719025,
+        "raw_agreement": 0.19534883720930232
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.378285942360098,
+        "graded": 0.4357470210815765,
+        "raw_agreement": 0.443859649122807
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.08976510067114093,
+         "q1": 0.1639354941443854,
+         "median": 0.21926699884945283,
+         "q3": 0.27770331830688144,
+         "max": 0.48437499999999994
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.1325742171614478,
+         "q1": 0.21643669444747718,
+         "median": 0.263658986096838,
+         "q3": 0.330919271608627,
+         "max": 0.46688206785137315
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 38
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 21
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 17
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 16
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 16
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 14
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 12
+        },
+        {
+         "human": "neutral",
+         "model": "disgust",
+         "n": 12
+        },
+        {
+         "human": "neutral",
+         "model": "disappointment",
+         "n": 10
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 9
+        },
+        {
+         "human": "anger",
+         "model": "frustration",
+         "n": 9
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 9
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.41683998419496604,
+        "graded": 0.42382461887497264,
+        "raw_agreement": 0.541
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.28749219921238944,
+        "graded": 0.29538498844501926,
+        "raw_agreement": 0.4627906976744186
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4922882190239557,
+        "graded": 0.4992882316067096,
+        "raw_agreement": 0.6
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.14634146341463417,
+         "q1": 0.2828438984359032,
+         "median": 0.3344614028735201,
+         "q3": 0.3849105725998413,
+         "max": 0.47192028985507245
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.16864045476077688,
+         "q1": 0.2913514401460415,
+         "median": 0.3471295302848865,
+         "q3": 0.3905407633870843,
+         "max": 0.48527592180153434
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 47
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 35
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 34
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 28
+        },
+        {
+         "human": "joy",
+         "model": "sadness",
+         "n": 20
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 19
+        },
+        {
+         "human": "neutral",
+         "model": "sadness",
+         "n": 17
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 15
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 15
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "neutral",
+         "model": "disgust",
+         "n": 12
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.43152223224137054,
+        "graded": 0.4267617101378764,
+        "raw_agreement": 0.594
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.30367257170402506,
+        "graded": 0.26685068361220043,
+        "raw_agreement": 0.5
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.5073956264224533,
+        "graded": 0.5085824837749207,
+        "raw_agreement": 0.6649122807017543
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.16606498194945848,
+         "q1": 0.2986723750216226,
+         "median": 0.3441201193009539,
+         "q3": 0.41556481050568467,
+         "max": 0.5310344827586209
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.13114754098360656,
+         "q1": 0.30084560128205806,
+         "median": 0.3387239744029866,
+         "q3": 0.419806848499548,
+         "max": 0.5806390262457207
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 69
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 64
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 47
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 35
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 32
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 32
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 24
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 19
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 12
+        },
+        {
+         "human": "neutral",
+         "model": "ambiguous",
+         "n": 8
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 51,
+       "kappa": 0.1905546096519377,
+       "recall": 0.34782608695652173,
+       "precision": 0.1568627450980392
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 33,
+       "kappa": 0.4846954550139127,
+       "recall": 0.5555555555555556,
+       "precision": 0.45454545454545453
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 46,
+       "kappa": 0.08079101659544946,
+       "recall": 0.13157894736842105,
+       "precision": 0.10869565217391304
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 4,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 25,
+       "kappa": 0.1980360065466447,
+       "recall": 0.18421052631578946,
+       "precision": 0.28
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 29,
+       "kappa": 0.6044905534089866,
+       "recall": 0.5384615384615384,
+       "precision": 0.7241379310344828
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 5,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 6,
+       "kappa": 0.4497432134996339,
+       "recall": 0.3125,
+       "precision": 0.8333333333333334
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 14,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 14,
+       "kappa": 0.30149860299720466,
+       "recall": 0.2777777777777778,
+       "precision": 0.35714285714285715
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 67,
+       "kappa": 0.37120303370351804,
+       "recall": 0.5238095238095238,
+       "precision": 0.3283582089552239
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 10,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 20,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    },
+    "SON": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 37,
+     "repeat_fleiss_fine": 0.768540975228468,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 1.352616,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 410043,
+      "missing_ids": 0
+     },
+     "modal_distribution_fine": {
+      "neutral": 173,
+      "contempt": 120,
+      "amusement": 116,
+      "joy": 61,
+      "frustration": 56,
+      "compassion": 44,
+      "gratitude": 43,
+      "interest": 43,
+      "disgust": 36,
+      "other": 35,
+      "surprise": 33,
+      "disappointment": 28,
+      "hope": 27,
+      "anxiety": 22,
+      "anger": 21,
+      "relief": 18,
+      "love": 17,
+      "fear": 14,
+      "sadness": 13,
+      "longing": 12,
+      "embarrassment": 11,
+      "pride": 11,
+      "regret": 11,
+      "contentment": 8,
+      "tenderness": 7,
+      "trust": 3,
+      "guilt": 3,
+      "wonder": 3,
+      "loneliness": 3,
+      "nostalgia": 2,
+      "shame": 2,
+      "boredom": 1,
+      "awe": 1,
+      "grief": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 173,
+      "contempt": 120,
+      "amusement": 116,
+      "joy": 61,
+      "frustration": 56,
+      "compassion": 44,
+      "gratitude": 43,
+      "interest": 43,
+      "disgust": 36,
+      "surprise": 33,
+      "disappointment": 28,
+      "hope": 27,
+      "anxiety": 22,
+      "anger": 21,
+      "relief": 18,
+      "love": 17,
+      "fear": 14,
+      "sadness": 13,
+      "longing": 12,
+      "embarrassment": 11,
+      "pride": 11,
+      "regret": 11,
+      "contentment": 8,
+      "tenderness": 7,
+      "admiration": 7,
+      "confusion": 6,
+      "trust": 3,
+      "guilt": 3,
+      "wonder": 3,
+      "loneliness": 3,
+      "disapproval": 3,
+      "nostalgia": 2,
+      "unease": 2,
+      "shame": 2,
+      "discomfort": 2,
+      "warmth": 2,
+      "dread": 1,
+      "curiosity": 1,
+      "enjoyment": 1,
+      "boredom": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.24057609406175368,
+        "graded": 0.28563927206757234,
+        "raw_agreement": 0.289
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.15189801051909443,
+        "graded": 0.19537536862098268,
+        "raw_agreement": 0.19767441860465115
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.2943038938106981,
+        "graded": 0.3384059840082537,
+        "raw_agreement": 0.35789473684210527
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.03589315525876461,
+         "q1": 0.13541621177414037,
+         "median": 0.1772045422482305,
+         "q3": 0.21713421342134212,
+         "max": 0.373
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": -0.00900900900900901,
+         "q1": 0.18125200747875975,
+         "median": 0.20115680467736852,
+         "q3": 0.2646595738857164,
+         "max": 0.39370629370629373
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 32
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 30
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 30
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 17
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 16
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 13
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 13
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 12
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 11
+        },
+        {
+         "human": "anger",
+         "model": "frustration",
+         "n": 10
+        },
+        {
+         "human": "other",
+         "model": "contempt",
+         "n": 10
+        },
+        {
+         "human": "neutral",
+         "model": "compassion",
+         "n": 10
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3283722429680574,
+        "graded": 0.33817428077272976,
+        "raw_agreement": 0.475
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.23269206662881498,
+        "graded": 0.23970250209730756,
+        "raw_agreement": 0.4372093023255814
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.37281051342366694,
+        "graded": 0.38393150523568326,
+        "raw_agreement": 0.5035087719298246
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": -0.03889457523029684,
+         "q1": 0.1907206503237687,
+         "median": 0.2556996316926917,
+         "q3": 0.30632061617570727,
+         "max": 0.4616287256512555
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": -0.038461538461538436,
+         "q1": 0.21569453485064768,
+         "median": 0.2658385796256786,
+         "q3": 0.32407534938915455,
+         "max": 0.47906299308168465
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 52
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 47
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 46
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 40
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 27
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 25
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 24
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 23
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 19
+        },
+        {
+         "human": "surprise",
+         "model": "joy",
+         "n": 18
+        },
+        {
+         "human": "sadness",
+         "model": "anger",
+         "n": 16
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 15
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3488351384142745,
+        "graded": 0.34133051236502254,
+        "raw_agreement": 0.532
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.24700460829493087,
+        "graded": 0.20431892103280205,
+        "raw_agreement": 0.4697674418604651
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.396548681935279,
+        "graded": 0.3984965782336142,
+        "raw_agreement": 0.5789473684210527
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": -0.03795966785290634,
+         "q1": 0.21286615053076863,
+         "median": 0.271401458481162,
+         "q3": 0.35147424040189595,
+         "max": 0.4977375565610859
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": -0.04080221300138305,
+         "q1": 0.2212474018745157,
+         "median": 0.2622981583983328,
+         "q3": 0.3227389286877239,
+         "max": 0.5047406581148912
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 71
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 59
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 52
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 47
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 40
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 32
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 30
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 25
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 24
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 23
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 18
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 16
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 36,
+       "kappa": 0.2850167410714273,
+       "recall": 0.391304347826087,
+       "precision": 0.25
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 33,
+       "kappa": 0.34728090968428943,
+       "recall": 0.4074074074074074,
+       "precision": 0.3333333333333333
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 120,
+       "kappa": 0.0193444384739387,
+       "recall": 0.15789473684210525,
+       "precision": 0.05
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 43,
+       "kappa": 0.24098183502289874,
+       "recall": 0.2894736842105263,
+       "precision": 0.2558139534883721
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 17,
+       "kappa": 0.48787357793466685,
+       "recall": 0.358974358974359,
+       "precision": 0.8235294117647058
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 1,
+       "kappa": 0.11598302687411431,
+       "recall": 0.0625,
+       "precision": 1.0
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 11,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 11,
+       "kappa": 0.33575723675010344,
+       "recall": 0.2777777777777778,
+       "precision": 0.45454545454545453
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 116,
+       "kappa": 0.27153032592272863,
+       "recall": 0.5952380952380952,
+       "precision": 0.21551724137931033
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 8,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 44,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    }
+   },
+   "C": {
+    "GEM": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 27,
+     "repeat_fleiss_fine": 0.8135538420362705,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 1.1032560000000002,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 298488,
+      "missing_ids": 0
+     },
+     "modal_distribution_fine": {
+      "neutral": 233,
+      "amusement": 98,
+      "contempt": 82,
+      "joy": 60,
+      "other": 59,
+      "interest": 47,
+      "frustration": 46,
+      "surprise": 42,
+      "gratitude": 41,
+      "disappointment": 31,
+      "relief": 25,
+      "compassion": 25,
+      "disgust": 23,
+      "hope": 22,
+      "anger": 20,
+      "anxiety": 18,
+      "love": 17,
+      "sadness": 17,
+      "regret": 16,
+      "fear": 15,
+      "pride": 14,
+      "longing": 12,
+      "embarrassment": 9,
+      "contentment": 7,
+      "wonder": 6,
+      "tenderness": 4,
+      "trust": 2,
+      "grief": 2,
+      "loneliness": 2,
+      "guilt": 1,
+      "boredom": 1,
+      "shame": 1,
+      "awe": 1,
+      "reverence": 1
+     },
+     "raw_modal_distribution": {
+      "null": 234,
+      "amusement": 98,
+      "contempt": 82,
+      "joy": 60,
+      "interest": 47,
+      "frustration": 46,
+      "surprise": 42,
+      "gratitude": 41,
+      "disappointment": 31,
+      "relief": 25,
+      "compassion": 25,
+      "disgust": 23,
+      "hope": 22,
+      "admiration": 21,
+      "anger": 20,
+      "anxiety": 18,
+      "love": 17,
+      "sadness": 17,
+      "regret": 16,
+      "fear": 15,
+      "pride": 14,
+      "longing": 12,
+      "confusion": 10,
+      "embarrassment": 9,
+      "contentment": 7,
+      "wonder": 6,
+      "skepticism": 6,
+      "discomfort": 4,
+      "tenderness": 4,
+      "disapproval": 2,
+      "trust": 2,
+      "annoyance": 2,
+      "grief": 2,
+      "excitement": 2,
+      "loneliness": 2,
+      "distrust": 1,
+      "guilt": 1,
+      "caution": 1,
+      "suspicion": 1,
+      "confidence": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.2702018205974167,
+        "graded": 0.3158776726611024,
+        "raw_agreement": 0.326
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.15679022963791175,
+        "graded": 0.19660975006186587,
+        "raw_agreement": 0.20465116279069767
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.34387124287928333,
+        "graded": 0.3926956715090424,
+        "raw_agreement": 0.41754385964912283
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.07439824945295404,
+         "q1": 0.1542196897189709,
+         "median": 0.2005084668406478,
+         "q3": 0.24982374041378547,
+         "max": 0.42068079640333983
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.09728506787330317,
+         "q1": 0.18986206594671376,
+         "median": 0.2428794426900395,
+         "q3": 0.3097287955873984,
+         "max": 0.4047450424929178
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 26
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 18
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 16
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 15
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 13
+        },
+        {
+         "human": "tenderness",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 12
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 11
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 11
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 11
+        },
+        {
+         "human": "love",
+         "model": "joy",
+         "n": 10
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.36598449647860926,
+        "graded": 0.3719352278640016,
+        "raw_agreement": 0.501
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.23489705425480834,
+        "graded": 0.23965323682690898,
+        "raw_agreement": 0.413953488372093
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4428880077874593,
+        "graded": 0.45038787941896186,
+        "raw_agreement": 0.5666666666666667
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.07017543859649121,
+         "q1": 0.22966521128552653,
+         "median": 0.2740526687774261,
+         "q3": 0.34730413189943216,
+         "max": 0.484375
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.101271785209609,
+         "q1": 0.2299465022293762,
+         "median": 0.28303367062178064,
+         "q3": 0.3624157370264534,
+         "max": 0.49397590361445787
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 63
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 42
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 31
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 31
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 30
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 28
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 24
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 23
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "sadness",
+         "model": "neutral",
+         "n": 18
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 14
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 13
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.37830657240143717,
+        "graded": 0.3710437528920756,
+        "raw_agreement": 0.543
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.24456367228220066,
+        "graded": 0.19673713378374175,
+        "raw_agreement": 0.43953488372093025
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4587203960239339,
+        "graded": 0.46432646996961374,
+        "raw_agreement": 0.6210526315789474
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.1336538461538461,
+         "q1": 0.22455787644029143,
+         "median": 0.2946129466260937,
+         "q3": 0.38418900513932913,
+         "max": 0.5041322314049587
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.11976047904191618,
+         "q1": 0.21359511618844412,
+         "median": 0.2684357808375998,
+         "q3": 0.3729112551769665,
+         "max": 0.49809342230695897
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 63
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 49
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 48
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 42
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 41
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 36
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 30
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 28
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 24
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 23
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 20
+        },
+        {
+         "human": "neutral",
+         "model": "other",
+         "n": 14
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 23,
+       "kappa": 0.37697476747808284,
+       "recall": 0.391304347826087,
+       "precision": 0.391304347826087
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 42,
+       "kappa": 0.44554336749984974,
+       "recall": 0.5925925925925926,
+       "precision": 0.38095238095238093
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 82,
+       "kappa": -0.0020392377469939703,
+       "recall": 0.07894736842105263,
+       "precision": 0.036585365853658534
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 47,
+       "kappa": 0.25087193594340895,
+       "recall": 0.3157894736842105,
+       "precision": 0.2553191489361702
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 17,
+       "kappa": 0.37813220177780976,
+       "recall": 0.28205128205128205,
+       "precision": 0.6470588235294118
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 2,
+       "kappa": 0.10793933987510833,
+       "recall": 0.0625,
+       "precision": 0.5
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 16,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 9,
+       "kappa": 0.3627230469335735,
+       "recall": 0.2777777777777778,
+       "precision": 0.5555555555555556
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 98,
+       "kappa": 0.31698136118025644,
+       "recall": 0.5952380952380952,
+       "precision": 0.25510204081632654
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 7,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 25,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    },
+    "OSS": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 79,
+     "repeat_fleiss_fine": 0.6395154722166888,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 0.03238099999999999,
+      "reasoning_tokens": 87056,
+      "prompt_tokens": 280204,
+      "missing_ids": 3
+     },
+     "modal_distribution_fine": {
+      "neutral": 163,
+      "joy": 87,
+      "amusement": 65,
+      "frustration": 63,
+      "disgust": 57,
+      "contempt": 57,
+      "anger": 45,
+      "sadness": 44,
+      "gratitude": 42,
+      "disappointment": 42,
+      "surprise": 41,
+      "interest": 30,
+      "fear": 30,
+      "hope": 30,
+      "pride": 28,
+      "love": 26,
+      "anxiety": 26,
+      "relief": 19,
+      "compassion": 17,
+      "longing": 13,
+      "embarrassment": 12,
+      "contentment": 11,
+      "shame": 10,
+      "regret": 10,
+      "tenderness": 5,
+      "peace": 5,
+      "wonder": 4,
+      "nostalgia": 4,
+      "grief": 4,
+      "guilt": 3,
+      "awe": 3,
+      "other": 1,
+      "reverence": 1,
+      "loneliness": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 163,
+      "joy": 87,
+      "amusement": 65,
+      "frustration": 63,
+      "disgust": 57,
+      "contempt": 57,
+      "anger": 45,
+      "sadness": 44,
+      "gratitude": 42,
+      "disappointment": 42,
+      "surprise": 41,
+      "interest": 30,
+      "fear": 30,
+      "hope": 30,
+      "pride": 28,
+      "love": 26,
+      "anxiety": 26,
+      "relief": 19,
+      "compassion": 17,
+      "longing": 13,
+      "embarrassment": 12,
+      "contentment": 11,
+      "shame": 10,
+      "regret": 10,
+      "tenderness": 5,
+      "peace": 5,
+      "wonder": 4,
+      "nostalgia": 4,
+      "grief": 4,
+      "guilt": 3,
+      "awe": 3,
+      "confusion": 1,
+      "reverence": 1,
+      "loneliness": 1,
+      "envy": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.28262846627876254,
+        "graded": 0.33944216004699335,
+        "raw_agreement": 0.324
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.17707493956486703,
+        "graded": 0.2321873883993297,
+        "raw_agreement": 0.20465116279069767
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.35536955020112965,
+        "graded": 0.41173706289661705,
+        "raw_agreement": 0.41403508771929826
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.08438818565400842,
+         "q1": 0.15364096641028588,
+         "median": 0.21929028977270298,
+         "q3": 0.26180504868672627,
+         "max": 0.37839545167403665
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.11030413073082161,
+         "q1": 0.20886979160945834,
+         "median": 0.2688167284017867,
+         "q3": 0.31041443856909157,
+         "max": 0.39339112953888683
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 32
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 23
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 21
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 16
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 13
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 13
+        },
+        {
+         "human": "neutral",
+         "model": "disgust",
+         "n": 12
+        },
+        {
+         "human": "interest",
+         "model": "neutral",
+         "n": 11
+        },
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 10
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 10
+        },
+        {
+         "human": "neutral",
+         "model": "surprise",
+         "n": 9
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 9
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.4129572878880283,
+        "graded": 0.4240952162575787,
+        "raw_agreement": 0.537
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.31223509055086623,
+        "graded": 0.3231327026946375,
+        "raw_agreement": 0.4883720930232558
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.465571392192118,
+        "graded": 0.4765916338592901,
+        "raw_agreement": 0.5736842105263158
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.10440122824974407,
+         "q1": 0.26388443964863184,
+         "median": 0.336191053080271,
+         "q3": 0.36376803518569123,
+         "max": 0.5128805620608899
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.12645590682196342,
+         "q1": 0.25745494910661215,
+         "median": 0.34556025660577583,
+         "q3": 0.39092588402220674,
+         "max": 0.5297124600638977
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 49
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 36
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 29
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 29
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 17
+        },
+        {
+         "human": "joy",
+         "model": "sadness",
+         "n": 16
+        },
+        {
+         "human": "neutral",
+         "model": "surprise",
+         "n": 15
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "anger",
+         "model": "neutral",
+         "n": 14
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 14
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 13
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.4364407792014323,
+        "graded": 0.43150887343878797,
+        "raw_agreement": 0.599
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.33461517837307814,
+        "graded": 0.30692455520426504,
+        "raw_agreement": 0.5302325581395348
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.4894473176067084,
+        "graded": 0.48746402112286136,
+        "raw_agreement": 0.6508771929824562
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.14262023217247102,
+         "q1": 0.2630958466345519,
+         "median": 0.3528023911572299,
+         "q3": 0.4119448619994366,
+         "max": 0.5862068965517242
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.1404821280133001,
+         "q1": 0.27307939939919856,
+         "median": 0.3283419067803558,
+         "q3": 0.4050026363816581,
+         "max": 0.6220472440944882
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 80
+        },
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 62
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 39
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 37
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 36
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 29
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 24
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 22
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 17
+        },
+        {
+         "human": "neutral",
+         "model": "ambiguous",
+         "n": 15
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 15
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 12
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 57,
+       "kappa": 0.2504329395952326,
+       "recall": 0.4782608695652174,
+       "precision": 0.19298245614035087
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 41,
+       "kappa": 0.42236950110965815,
+       "recall": 0.5555555555555556,
+       "precision": 0.36585365853658536
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 57,
+       "kappa": 0.06251378656196241,
+       "recall": 0.13157894736842105,
+       "precision": 0.08771929824561403
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 30,
+       "kappa": 0.2087644552647589,
+       "recall": 0.21052631578947367,
+       "precision": 0.26666666666666666
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 26,
+       "kappa": 0.5712380105443687,
+       "recall": 0.48717948717948717,
+       "precision": 0.7307692307692307
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 4,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 4,
+       "kappa": 0.3961352657004826,
+       "recall": 0.25,
+       "precision": 1.0
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 10,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 12,
+       "kappa": 0.25595238095238126,
+       "recall": 0.2222222222222222,
+       "precision": 0.3333333333333333
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 65,
+       "kappa": 0.3795548552294665,
+       "recall": 0.5238095238095238,
+       "precision": 0.3384615384615385
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 11,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 17,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      }
+     }
+    },
+    "SON": {
+     "coverage": 1000,
+     "coverage_rate": 1.0,
+     "modal_ties": 42,
+     "repeat_fleiss_fine": 0.7674811272781417,
+     "counts": {
+      "records": 150,
+      "calls": 150,
+      "usd": 1.3984060000000011,
+      "reasoning_tokens": 0,
+      "prompt_tokens": 423693,
+      "missing_ids": 41,
+      "parse_fail": 2
+     },
+     "modal_distribution_fine": {
+      "neutral": 152,
+      "amusement": 141,
+      "contempt": 117,
+      "joy": 50,
+      "frustration": 48,
+      "gratitude": 45,
+      "interest": 43,
+      "compassion": 40,
+      "other": 38,
+      "disgust": 36,
+      "surprise": 29,
+      "hope": 28,
+      "disappointment": 27,
+      "anger": 22,
+      "anxiety": 21,
+      "love": 18,
+      "relief": 18,
+      "fear": 16,
+      "regret": 16,
+      "sadness": 15,
+      "longing": 13,
+      "embarrassment": 12,
+      "pride": 12,
+      "contentment": 11,
+      "tenderness": 9,
+      "trust": 4,
+      "wonder": 4,
+      "shame": 3,
+      "loneliness": 3,
+      "grief": 3,
+      "guilt": 2,
+      "nostalgia": 2,
+      "boredom": 1,
+      "envy": 1
+     },
+     "raw_modal_distribution": {
+      "null": 152,
+      "amusement": 141,
+      "contempt": 117,
+      "joy": 50,
+      "frustration": 48,
+      "gratitude": 45,
+      "interest": 43,
+      "compassion": 40,
+      "disgust": 36,
+      "surprise": 29,
+      "hope": 28,
+      "disappointment": 27,
+      "anger": 22,
+      "anxiety": 21,
+      "love": 18,
+      "relief": 18,
+      "fear": 16,
+      "regret": 16,
+      "sadness": 15,
+      "longing": 13,
+      "embarrassment": 12,
+      "pride": 12,
+      "contentment": 11,
+      "tenderness": 9,
+      "confusion": 6,
+      "admiration": 6,
+      "trust": 4,
+      "wonder": 4,
+      "disbelief": 4,
+      "shame": 3,
+      "disapproval": 3,
+      "loneliness": 3,
+      "grief": 3,
+      "guilt": 2,
+      "nostalgia": 2,
+      "enthusiasm": 2,
+      "urgency": 1,
+      "dread": 1,
+      "boredom": 1,
+      "unease": 1
+     },
+     "grains": {
+      "fine": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.25285447904161024,
+        "graded": 0.3002756821591625,
+        "raw_agreement": 0.298
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.17490118577075098,
+        "graded": 0.22259673129044222,
+        "raw_agreement": 0.22325581395348837
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.2956322888928438,
+        "graded": 0.3409021405344369,
+        "raw_agreement": 0.3543859649122807
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.017817371937639194,
+         "q1": 0.13781224936914377,
+         "median": 0.18969009540282217,
+         "q3": 0.22428019480129738,
+         "max": 0.4229046705054383
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.026032315978456004,
+         "q1": 0.173173239056159,
+         "median": 0.22281178028684234,
+         "q3": 0.282095586288051,
+         "max": 0.3992137240886347
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "amusement",
+         "n": 36
+        },
+        {
+         "human": "neutral",
+         "model": "contempt",
+         "n": 32
+        },
+        {
+         "human": "other",
+         "model": "neutral",
+         "n": 28
+        },
+        {
+         "human": "frustration",
+         "model": "contempt",
+         "n": 17
+        },
+        {
+         "human": "reverence",
+         "model": "amusement",
+         "n": 16
+        },
+        {
+         "human": "other",
+         "model": "amusement",
+         "n": 12
+        },
+        {
+         "human": "reverence",
+         "model": "joy",
+         "n": 12
+        },
+        {
+         "human": "contempt",
+         "model": "neutral",
+         "n": 11
+        },
+        {
+         "human": "neutral",
+         "model": "frustration",
+         "n": 10
+        },
+        {
+         "human": "other",
+         "model": "interest",
+         "n": 10
+        },
+        {
+         "human": "other",
+         "model": "joy",
+         "n": 9
+        },
+        {
+         "human": "tenderness",
+         "model": "compassion",
+         "n": 9
+        }
+       ]
+      },
+      "ekman": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.34969819326405327,
+        "graded": 0.35839341711645967,
+        "raw_agreement": 0.493
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.2721212211600125,
+        "graded": 0.28150846302872523,
+        "raw_agreement": 0.4720930232558139
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.379565306971338,
+        "graded": 0.38622018113500806,
+        "raw_agreement": 0.5087719298245614
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.027777777777777762,
+         "q1": 0.22364587467196448,
+         "median": 0.2649445946849959,
+         "q3": 0.31543772592836017,
+         "max": 0.4774011299435028
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.027777777777777735,
+         "q1": 0.2223316002169951,
+         "median": 0.27439105788288154,
+         "q3": 0.3437550375580518,
+         "max": 0.495434067941069
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "neutral",
+         "model": "joy",
+         "n": 58
+        },
+        {
+         "human": "neutral",
+         "model": "anger",
+         "n": 45
+        },
+        {
+         "human": "joy",
+         "model": "anger",
+         "n": 41
+        },
+        {
+         "human": "joy",
+         "model": "neutral",
+         "n": 30
+        },
+        {
+         "human": "joy",
+         "model": "surprise",
+         "n": 26
+        },
+        {
+         "human": "sadness",
+         "model": "joy",
+         "n": 24
+        },
+        {
+         "human": "joy",
+         "model": "other",
+         "n": 24
+        },
+        {
+         "human": "surprise",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "surprise",
+         "model": "joy",
+         "n": 17
+        },
+        {
+         "human": "surprise",
+         "model": "anger",
+         "n": 17
+        },
+        {
+         "human": "anger",
+         "model": "joy",
+         "n": 14
+        },
+        {
+         "human": "sadness",
+         "model": "anger",
+         "n": 14
+        }
+       ]
+      },
+      "valence": {
+       "overall": {
+        "n": 1000,
+        "strict": 0.3678534648049277,
+        "graded": 0.3607792639873819,
+        "raw_agreement": 0.547
+       },
+       "seam": {
+        "n": 430,
+        "strict": 0.2912951200740113,
+        "graded": 0.25051264524948735,
+        "raw_agreement": 0.5069767441860465
+       },
+       "off_seam": {
+        "n": 570,
+        "strict": 0.3937749063323316,
+        "graded": 0.3978398081020597,
+        "raw_agreement": 0.5771929824561404
+       },
+       "vs_rater": {
+        "n_raters": 38,
+        "strict_quartiles": {
+         "n": 38,
+         "min": 0.027777777777777783,
+         "q1": 0.2179189147820763,
+         "median": 0.290653352793601,
+         "q3": 0.37186435062911655,
+         "max": 0.5147540983606558
+        },
+        "graded_quartiles": {
+         "n": 38,
+         "min": 0.012301013024601976,
+         "q1": 0.22075861440676853,
+         "median": 0.2792089201766227,
+         "q3": 0.3546230756408577,
+         "max": 0.5048405466970387
+        }
+       },
+       "top_confusions_human_to_model": [
+        {
+         "human": "positive",
+         "model": "negative",
+         "n": 66
+        },
+        {
+         "human": "neutral",
+         "model": "negative",
+         "n": 60
+        },
+        {
+         "human": "neutral",
+         "model": "positive",
+         "n": 58
+        },
+        {
+         "human": "negative",
+         "model": "positive",
+         "n": 46
+        },
+        {
+         "human": "positive",
+         "model": "neutral",
+         "n": 30
+        },
+        {
+         "human": "ambiguous",
+         "model": "negative",
+         "n": 30
+        },
+        {
+         "human": "negative",
+         "model": "neutral",
+         "n": 29
+        },
+        {
+         "human": "positive",
+         "model": "ambiguous",
+         "n": 26
+        },
+        {
+         "human": "positive",
+         "model": "other",
+         "n": 24
+        },
+        {
+         "human": "ambiguous",
+         "model": "neutral",
+         "n": 22
+        },
+        {
+         "human": "negative",
+         "model": "other",
+         "n": 18
+        },
+        {
+         "human": "ambiguous",
+         "model": "positive",
+         "n": 17
+        }
+       ]
+      }
+     },
+     "additions_per_word": {
+      "disgust": {
+       "n_human": 23,
+       "n_model_modal": 36,
+       "kappa": 0.2501395089285701,
+       "recall": 0.34782608695652173,
+       "precision": 0.2222222222222222
+      },
+      "surprise": {
+       "n_human": 27,
+       "n_model_modal": 29,
+       "kappa": 0.448873865598706,
+       "recall": 0.48148148148148145,
+       "precision": 0.4482758620689655
+      },
+      "contempt": {
+       "n_human": 38,
+       "n_model_modal": 117,
+       "kappa": 0.03496044022230132,
+       "recall": 0.18421052631578946,
+       "precision": 0.05982905982905983
+      },
+      "guilt": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "interest": {
+       "n_human": 38,
+       "n_model_modal": 43,
+       "kappa": 0.31817012298667174,
+       "recall": 0.3684210526315789,
+       "precision": 0.32558139534883723
+      },
+      "awe": {
+       "n_human": 0,
+       "n_model_modal": 0,
+       "kappa": null,
+       "recall": null,
+       "precision": null
+      },
+      "love": {
+       "n_human": 39,
+       "n_model_modal": 18,
+       "kappa": 0.5143535506151515,
+       "recall": 0.38461538461538464,
+       "precision": 0.8333333333333334
+      },
+      "nostalgia": {
+       "n_human": 0,
+       "n_model_modal": 2,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "loneliness": {
+       "n_human": 0,
+       "n_model_modal": 3,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "grief": {
+       "n_human": 16,
+       "n_model_modal": 3,
+       "kappa": 0.20651713922979328,
+       "recall": 0.125,
+       "precision": 0.6666666666666666
+      },
+      "regret": {
+       "n_human": 0,
+       "n_model_modal": 16,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "embarrassment": {
+       "n_human": 18,
+       "n_model_modal": 12,
+       "kappa": 0.3235930735930739,
+       "recall": 0.2777777777777778,
+       "precision": 0.4166666666666667
+      },
+      "envy": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "boredom": {
+       "n_human": 0,
+       "n_model_modal": 1,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "amusement": {
+       "n_human": 42,
+       "n_model_modal": 141,
+       "kappa": 0.2579868657832619,
+       "recall": 0.6666666666666666,
+       "precision": 0.19858156028368795
+      },
+      "contentment": {
+       "n_human": 0,
+       "n_model_modal": 11,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "compassion": {
+       "n_human": 0,
+       "n_model_modal": 40,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      },
+      "trust": {
+       "n_human": 0,
+       "n_model_modal": 4,
+       "kappa": null,
+       "recall": null,
+       "precision": 0.0
+      }
+     }
+    }
+   }
+  }
+ },
+ "predictions": {
+  "P1": {
+   "rule": "arm A fine strict kappa vs majority within [0.25, 0.43] for >= 2 of 3 models, and seam lift (A - before) > off-seam lift for >= 2 of 3",
+   "in_range": {
+    "SON": false,
+    "GEM": true,
+    "OSS": true
+   },
+   "seam_lift_exceeds_off_seam": {
+    "SON": true,
+    "GEM": true,
+    "OSS": true
+   },
+   "kappa_A": {
+    "SON": 0.23869315388954224,
+    "GEM": 0.28181308075107403,
+    "OSS": 0.27709568162574094
+   },
+   "kappa_before": {
+    "SON": 0.23902090280191624,
+    "GEM": 0.2655767207669761,
+    "OSS": 0.22567627484957986
+   },
+   "held": true
+  },
+  "P2": {
+   "rule": "seam subset, fine strict: B exceeds both A and C by >= 0.05 and |C - A| <= 0.05, for >= 2 of 3 models",
+   "per_model": {
+    "SON": false,
+    "GEM": false,
+    "OSS": false
+   },
+   "seam_kappa": {
+    "SON": {
+     "A1": 0.08010992069013495,
+     "A": 0.1550659379690418,
+     "B": 0.15189801051909443,
+     "C": 0.17490118577075098
+    },
+    "GEM": {
+     "A1": 0.10978411756258676,
+     "A": 0.19016949940710084,
+     "B": 0.1560087666592276,
+     "C": 0.15679022963791175
+    },
+    "OSS": {
+     "A1": 0.016167684150030906,
+     "A": 0.1798496578032088,
+     "B": 0.1698100573622302,
+     "C": 0.17707493956486703
+    }
+   },
+   "held": false
+  },
+  "P3": {
+   "rule": "|C - A| <= 0.05 strict at every grain, overall and seam, for every model",
+   "per_model": {
+    "SON": true,
+    "GEM": true,
+    "OSS": true
+   },
+   "abs_diff": {
+    "SON": {
+     "fine/overall": 0.014161325152068,
+     "fine/seam": 0.01983524780170917,
+     "ekman/overall": 0.01091113458524906,
+     "ekman/seam": 0.01797099410723202,
+     "valence/overall": 0.005535754223578659,
+     "valence/seam": 0.01187605353975113
+    },
+    "GEM": {
+     "fine/overall": 0.011611260153657321,
+     "fine/seam": 0.03337926976918909,
+     "ekman/overall": 0.008037454517301146,
+     "ekman/seam": 0.001097374432994458,
+     "valence/overall": 0.005553590622559168,
+     "valence/seam": 0.0028522788844767277
+    },
+    "OSS": {
+     "fine/overall": 0.005532784653021594,
+     "fine/seam": 0.0027747182383417723,
+     "ekman/overall": 0.013916545380725065,
+     "ekman/seam": 0.002884155457356874,
+     "valence/overall": 0.016836036783371144,
+     "valence/seam": 0.0010967755230075205
+    }
+   },
+   "held": true
+  },
+  "P4": {
+   "rule": "graded kappa > strict kappa at every grain, every arm and model (overall)",
+   "cells": {
+    "A/SON/fine": true,
+    "A/SON/ekman": true,
+    "A/SON/valence": false,
+    "A/GEM/fine": true,
+    "A/GEM/ekman": true,
+    "A/GEM/valence": false,
+    "A/OSS/fine": true,
+    "A/OSS/ekman": true,
+    "A/OSS/valence": false,
+    "B/SON/fine": true,
+    "B/SON/ekman": true,
+    "B/SON/valence": false,
+    "B/GEM/fine": true,
+    "B/GEM/ekman": true,
+    "B/GEM/valence": false,
+    "B/OSS/fine": true,
+    "B/OSS/ekman": true,
+    "B/OSS/valence": false,
+    "C/SON/fine": true,
+    "C/SON/ekman": true,
+    "C/SON/valence": false,
+    "C/GEM/fine": true,
+    "C/GEM/ekman": true,
+    "C/GEM/valence": false,
+    "C/OSS/fine": true,
+    "C/OSS/ekman": true,
+    "C/OSS/valence": false
+   },
+   "held": false
+  }
+ },
+ "disconfirmations": {
+  "length_not_reading": {
+   "rule": "|B - C| <= 0.05 on the seam subset (fine strict) for >= 2 of 3 models: the B lift is prompt length",
+   "per_model": {
+    "SON": true,
+    "GEM": true,
+    "OSS": true
+   },
+   "triggered": true
+  },
+  "priming": {
+   "rule": "B - A >= 0.05 off the seams and the off-seam lift >= the seam lift (fine strict), for >= 2 of 3 models: priming, not reading",
+   "per_model": {
+    "SON": false,
+    "GEM": false,
+    "OSS": false
+   },
+   "triggered": false
+  },
+  "flat_B": {
+   "rule": "|B - A| <= 0.05 strict at every grain, overall and seam, for every model: evidence about content cues on this corpus only, not about the catalogue",
+   "per_model": {
+    "SON": true,
+    "GEM": true,
+    "OSS": true
+   },
+   "triggered": true
+  }
+ }
+}

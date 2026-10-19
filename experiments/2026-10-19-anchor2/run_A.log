@@ -1,0 +1,26 @@
+arm A; extractors ['GEM', 'OSS', 'SON']; repeats 3; batch 20; jobs per extractor [150, 150, 150]; cap USD 11.0
+projection: {"spent": 0.0108, "per_extractor": {"GEM": {"done": 1, "mean_usd": 0.004424, "todo": 149, "projected_usd": 0.659176}, "OSS": {"done": 1, "mean_usd": 0.000164, "todo": 149, "projected_usd": 0.024436}, "SON": {"done": 1, "mean_usd": 0.00621, "todo": 149, "projected_usd": 0.9252900000000001}}, "projected_total_usd_after_this_arm": 1.62}
+GEM google/gemini-4-argon @ google-vertex/global: 150 planned, 149 to do
+OSS openai/gpt-oss-120b @ deepinfra/bf16: 150 planned, 149 to do [reasoning {'effort': 'low'}]
+SON anthropic/claude-sonnet-5.5 @ anthropic: 150 planned, 149 to do
+  A/GEM: 1 calls, USD 0.00 this run, cumulative USD 0.02; parse_fail=0 missing_ids=0 transport=0
+  A/GEM: 2 calls, USD 0.01 this run, cumulative USD 0.02; parse_fail=0 missing_ids=0 transport=0
+  A/GEM: 3 calls, USD 0.02 this run, cumulative USD 0.03; parse_fail=0 missing_ids=0 transport=0
+  A/GEM: 25 calls, USD 0.10 this run, cumulative USD 0.11; parse_fail=0 missing_ids=0 transport=0
+  A/SON: 50 calls, USD 0.20 this run, cumulative USD 0.21; parse_fail=0 missing_ids=0 transport=0
+  A/OSS: 75 calls, USD 0.30 this run, cumulative USD 0.31; parse_fail=0 missing_ids=0 transport=0
+  A/SON: 100 calls, USD 0.41 this run, cumulative USD 0.42; parse_fail=0 missing_ids=1 transport=0
+  A/OSS: 125 calls, USD 0.51 this run, cumulative USD 0.52; parse_fail=0 missing_ids=2 transport=0
+  A/OSS: 150 calls, USD 0.61 this run, cumulative USD 0.62; parse_fail=0 missing_ids=2 transport=0
+  A/OSS: 175 calls, USD 0.71 this run, cumulative USD 0.72; parse_fail=0 missing_ids=2 transport=0
+  A/GEM: 200 calls, USD 0.82 this run, cumulative USD 0.83; parse_fail=0 missing_ids=2 transport=0
+  A/SON: 225 calls, USD 0.92 this run, cumulative USD 0.93; parse_fail=0 missing_ids=2 transport=0
+  A/OSS: 250 calls, USD 1.02 this run, cumulative USD 1.03; parse_fail=0 missing_ids=2 transport=0
+  A/OSS: 275 calls, USD 1.13 this run, cumulative USD 1.14; parse_fail=1 missing_ids=22 transport=0
+  A/SON: 300 calls, USD 1.23 this run, cumulative USD 1.25; parse_fail=1 missing_ids=22 transport=0
+  A/OSS: 325 calls, USD 1.35 this run, cumulative USD 1.36; parse_fail=1 missing_ids=22 transport=0
+  A/SON: 350 calls, USD 1.46 this run, cumulative USD 1.47; parse_fail=1 missing_ids=22 transport=0
+  A/GEM: 375 calls, USD 1.56 this run, cumulative USD 1.57; parse_fail=1 missing_ids=22 transport=0
+  A/OSS: 400 calls, USD 1.64 this run, cumulative USD 1.65; parse_fail=1 missing_ids=22 transport=0
+  A/OSS: 425 calls, USD 1.65 this run, cumulative USD 1.66; parse_fail=1 missing_ids=22 transport=0
+done in 1037s: 447 calls, USD 1.65 this run; cumulative USD 1.66; parse_fail=1 missing_ids=22 transport=0 provider_mismatch=0
