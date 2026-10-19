@@ -1,3 +1,5 @@
+Read docs/VISION.md first; it states what EDM is for and the test of success.
+
 # deepadata-edm-spec
 
 The schema that defines significance artifacts.
