@@ -1,5 +1,7 @@
 # Pre-registration — run 4, spans, cues and reconciliation (2026-10-18)
 
+**Absorbed into sigbench (R-bench-2026-11-07 and R-bench-2026-11-07b, `deepadata-com/planning/STATE.md`). Not to be run.** Run 4 is closed as a standalone experiment. Its questions Q1–Q4 and measures M1–M4 become descriptives of the EDM arm's records in sigbench (reported, not hypotheses); span overlap becomes sigbench's span-accuracy axis; the reconciliation arm (§7, P5) is dropped, replaced by sigbench's A→B / B→A direction swap; the call plan (§8) and the freeze trigger in the status line below are void; there is one freeze only, sigbench's. §9(b) is amended by R-bench-2026-11-07b: the private arm may use any vendor's direct API under its no-training terms, never a gateway. The sections below are kept verbatim as the record of the design as pre-registered on 2026-10-18. See `sigbench/DEFINITION.md`.
+
 **Status: pre-registered, NOT frozen, NOT run.** No call has been made under this plan. It becomes binding only with a commit `run 4 pre-registration frozen` after the founder's review of the open items in §11; the private arm (§9) is deferred until Anthropic direct access is restored (the key's console cap lifts 2026-11-01) and is never run through a gateway.
 
 ## 1. Questions

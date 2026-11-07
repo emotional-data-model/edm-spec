@@ -21,6 +21,18 @@ to 39 frameworks, MFOEM, EmotionML). The signs are old (Darwin, Goffman,
 Grice, conversation analysis). The reading layer, unsaid cues mapped to
 labels with evidence and recorded with provenance, is the contribution.
 
+EDM captures what matters to an individual beyond a model's pretraining,
+so that it can be interpreted by future models and by other vendors.
+
+The reading is explicit, not inferred: not what a model read, which is
+unknowable, but what it reports having read, with the span it points to,
+so that a reading can be checked and compared across models — agreement
+makes a reading more credible, never certain.
+
+EDM is an LLM-first, open-source emotional and affective context
+framework, complete with its predecessors through the crosswalks, and
+portable.
+
 ## Design principles earned by evidence
 
 From runs 1–3 and anchors 1–2 (October 2026):
