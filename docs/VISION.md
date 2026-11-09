@@ -64,7 +64,8 @@ rulings R-bench-2026-11-09c) measured the test of success above on two real
 corpora (the founder's archive, n = 1; REALTALK) with LoCoMo as a synthetic
 comparator. What it changed:
 
-- **The loss is at selection, not storage.** The whole transcript retains
+- **The loss is at the writer's selection, not in the form the selection is
+  stored in** (wording per R-bench-2026-11-09f). The whole transcript retains
   every item a later session returned to (retention 1.00). A long note
   written by the model (≈ 7,000 tokens) retains 0.89 of them and matches
   or beats the transcript on needed-later recall (0.69 against 0.67) at
