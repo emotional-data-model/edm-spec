@@ -56,3 +56,48 @@ evidence.
 
 Benchmarks (GoEmotions) are validity checks, used once. The target corpora
 are conversational and longitudinal.
+
+## What the benchmark changed (2026-11)
+
+sigbench full run 1 (2026-11-08 → 09; `sigbench/RESULTS-full1-2026-11-08.md`;
+rulings R-bench-2026-11-09c) measured the test of success above on two real
+corpora (the founder's archive, n = 1; REALTALK) with LoCoMo as a synthetic
+comparator. What it changed:
+
+- **The loss is at selection, not storage.** The whole transcript retains
+  every item a later session returned to (retention 1.00). A long note
+  written by the model (≈ 7,000 tokens) retains 0.89 of them and matches
+  or beats the transcript on needed-later recall (0.69 against 0.67) at
+  0.58 of its tokens. The short note retains 0.56, the per-session EDM
+  record 0.44. Recall is lost where the writer chooses what to keep, not
+  in how it is stored.
+- **Significance-typed capture is not a recall advantage on conversation.**
+  On REALTALK, with view, length and intent each controlled (a timestamped
+  note, a long note, an intent-instructed note), the typed record gives no
+  gain a plain note does not give at the same or fewer tokens; the
+  per-session record is below the note (−0.18 recall, −0.14 forward
+  questions), the sidecar matches the note at 3.4 × its tokens and its
+  cues reach no prevalence, and the whole-window record loses most of what
+  the per-session form kept. This is a result on daily chat. It is
+  **untested on affect-dense substrates**: journal, memoir, companion text.
+- **Intent moves H2 on n = 1.** One added sentence of intent in the note
+  prompt raises retained-unvindicated significance recovery from 0.17 to
+  0.30 (+0.12 [+0.05, +0.24]) on the one archive where H2 is measured, and
+  passes the per-session record. The record's one dev advantage was an
+  instruction effect. A dev reading, not a benchmark result.
+- **Synthetic dialogue flatters structure.** On LoCoMo the per-session
+  record nearly matches the note on recall and beats it on forward
+  questions (0.86 against 0.79); on REALTALK it is far below on both.
+  Model-authored sessions carry the fields a typed record asks for; people
+  do not. Any claim about structured capture made on synthetic dialogue is
+  suspect until it is made on real text.
+- **EDM's live role is the measurement vocabulary**: the H2 definition
+  (retained-unvindicated significance, `y` / `u` / `n`), the coding rubric
+  and the evidence standard (located span, two-grader agreement, provenance).
+  These are what sigbench runs on. **The record format is held as a
+  hypothesis** for journal, memoir and companion text, where significance
+  is dense and the writer's selection problem is different; it is not
+  claimed for conversation.
+
+The design principles above stand. The test of success stands, and it has
+now been run.
